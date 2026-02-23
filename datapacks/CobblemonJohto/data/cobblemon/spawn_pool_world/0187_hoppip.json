@@ -1,0 +1,132 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "hoppip-1",
+          "pokemon": "hoppip",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "4-6",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+                "timeRange": "dawn,dusk,day",
+              "minX": 106, "maxX": 203, "minZ": -548, "maxZ": -232
+          }
+      },
+
+      {
+          "id": "hoppip-2",
+          "pokemon": "hoppip",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "6-8",
+          "weight": 35,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+                "timeRange": "dawn,dusk,day",
+              "minX": 125, "maxX": 227, "minZ": -787, "maxZ": -688
+          }
+      },
+
+      {
+          "id": "hoppip-3",
+          "pokemon": "hoppip",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "21-24",
+          "weight": 11,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 1575, "maxX": 1618, "minZ": -296, "maxZ": -248
+          }
+      },
+
+      {
+          "id": "hoppip-4",
+          "pokemon": "hoppip",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "22-25",
+          "weight": 19,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": -3290, "maxX": -3198, "minZ": -354, "maxZ": -258
+          }
+      },
+
+      {
+          "id": "hoppip-5",
+          "pokemon": "hoppip",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "23-26",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": -2931, "maxX": -2899, "minZ": -427, "maxZ": -389
+          }
+      },
+
+      {
+          "id": "hoppip-6",
+          "pokemon": "hoppip",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "23-26",
+          "weight": 19,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": -2847, "maxX": -2610, "minZ": -565, "maxZ": -533
+          }
+      },
+
+      {
+        "id": "hoppip-7",
+        "pokemon": "hoppip",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:sunflower_plains"
+            ]
+            }
+        }
+    ]
+}

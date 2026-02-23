@@ -1,0 +1,112 @@
+{   "initializationAction": [              
+    "c.npc.set_chatting();",
+    "q.run_command('scoreboard players add ' + q.player.username + ' BattlePoints 2');",
+    "q.run_command('tellraw ' + q.player.username + ' [\"\",{\"text\":\"You got 2 Battle Points for winning! You now have \",\"italic\":true,\"color\":\"gray\"},{\"score\":{\"name\":\"*\",\"objective\":\"BattlePoints\"},\"italic\":true,\"color\":\"gray\"},{\"text\":\"BP.\",\"italic\":true,\"color\":\"gray\"}]');",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' BattleStreak 1');",
+    "q.run_command('execute as ' + q.player.username + ' run pokeheal');"
+        ],
+    "speakers": {
+        "npc": {
+          "name": "Nurse Joy",
+          "face": {
+            "type": "artificial",
+            "modelType": "npc",
+            "identifier": "cobblemon:nursejoy",
+            "isLeftSide": true
+          }
+        }
+      },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "I'll heal your Pokémon! Ready to battle another trainer?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": "q.dialogue.set_page('yes');"
+                    },
+                    {
+                        "text": "Give Up",
+                        "value": "giveup",
+                        "action": "q.dialogue.set_page('giveup');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "yes",
+            "speaker": "npc",
+            "lines": [
+                "I'll get your next battle set up!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 1');",
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "giveup",
+            "speaker": "npc",
+            "lines": [
+                "Are you sure you want to leave the Tower?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Give Up",
+                        "value": "giveup",
+                        "action": "q.dialogue.set_page('giveupconfirm');"
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": "q.dialogue.set_page('greeting');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "giveupconfirm",
+            "speaker": "npc",
+            "lines": [
+                "We hope to see you again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tp @s 902 64 67 180 ~');",
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        }
+        ]
+    }

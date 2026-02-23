@@ -1,0 +1,58 @@
+{   "initializationAction": [              
+    "c.npc.set_chatting();",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+    "q.run_command('execute as ' + q.player.username + ' run pokegive tyrogue level=10 ');",
+    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $816 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 816');"
+        ],
+  "speakers": {
+    "npc": {
+      "name": "Kiyo",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:blackbelt",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["I... I'm crushed... My training is still not enough... But a loss is a loss. I admit it."],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+          "id": "page2",
+          "speaker": "npc",
+          "lines": ["As proof that you defeated me, I'll give you a rare Fighting-type Pokémon."],
+                "input": {
+                    "type": "option",
+                    "vertical": false,
+                    "options": [
+                        {
+                            "text": "Close",
+                            "value": "close",
+                            "action": [              
+                                "q.dialogue.close();"]
+                        }
+                    ]
+                }
+            }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}

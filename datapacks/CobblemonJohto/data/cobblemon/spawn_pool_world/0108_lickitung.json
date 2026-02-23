@@ -1,0 +1,43 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "lickitung-1",
+            "pokemon": "lickitung",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "22-26",
+            "weight": 15,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -406, "maxX": -351, "minZ": 177, "maxZ": 202
+            }
+        },
+
+        {
+            "id": "lickitung-2",
+            "pokemon": "lickitung",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:forest",
+                    "minecraft:windswept_hills"
+                ]
+                }
+            }
+    ]
+}

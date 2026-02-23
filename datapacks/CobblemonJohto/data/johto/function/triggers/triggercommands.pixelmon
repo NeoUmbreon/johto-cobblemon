@@ -1,0 +1,176 @@
+
+#Command to activate in tellraws:
+#/trigger TriggerCommand set 1
+#/scoreboard players enable @p TriggerCommand
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+#10 Guide Gent Yes
+execute as @a[scores={TriggerCommand=10}] run tellraw @s {"text":"<Guide Gent> OK, then! Follow me!"}
+execute as @a[scores={TriggerCommand=10}] run scoreboard players set @e[x=-270,y=63,z=-505,dy=3,nbt=!{cobblemon:npc_chatting}] DialogueTrigger 1
+execute as @a[scores={TriggerCommand=10}] run tag @e[x=-792,y=65,z=-284,dy=3] add GuideGentMove
+execute as @a[scores={TriggerCommand=10}] run scoreboard players set @s TriggerCommand 0
+
+
+#11 Guide Gent No
+execute as @a[scores={TriggerCommand=11}] run tellraw @a[x=-270,y=64,z=-505,distance=..15,scores={GuideGent=0}] {"text":"<Guide Gent> <Guide Gent> Alright! Maybe some other time!"}
+execute as @a[scores={TriggerCommand=11}] run scoreboard players set @s TriggerCommand 0
+
+#12 Arceus Pick - Dialga
+#Stays on player, removed during dialogue
+
+#13 Arceus Pick - Palkia
+#Stays on player, removed during dialogue
+
+#14 Arceus Pick - Giratina
+#Stays on player, removed during dialogue
+
+
+
+
+#28 - Begin Bug Catching Contest
+execute as @a[scores={TriggerCommand=28}] run scoreboard players set @s DialogueTrigger 198
+execute as @a[scores={TriggerCommand=28}] run scoreboard players set @s TriggerCommand 0
+
+#32 - Bug Catching Contest force judging
+execute as @a[scores={TriggerCommand=32}] run scoreboard players set @s TalkTime 1704
+execute as @a[scores={TriggerCommand=32}] run scoreboard players set @s TriggerCommand 0
+
+#33 - Bug Catching Contest skip judging and cancel
+execute as @a[scores={TriggerCommand=33}] run scoreboard players set @s TalkTime 30
+execute as @a[scores={TriggerCommand=33}] run scoreboard players set @s DialogueTrigger 199
+execute as @a[scores={TriggerCommand=33}] run scoreboard players set @s TriggerCommand 0
+
+
+
+#27 - Bug Catching Contest Submit to be judged
+execute as @a[scores={TriggerCommand=27}] run scoreboard players set @s DialogueTrigger 199
+scoreboard players set @a[scores={TriggerCommand=27}] TriggerCommand 0
+
+
+
+
+#41 - Celebi Time Travel event start
+execute as @a[scores={TriggerCommand=41}] run scoreboard players set @s DialogueTrigger 162
+execute as @a[scores={TriggerCommand=41}] run scoreboard players set @s TriggerCommand 0
+
+
+#42 - Celebi Time Travel Giovanni Cave Leave
+execute as @a[scores={TriggerCommand=42}] run scoreboard players set @s DialogueTrigger 165
+scoreboard players set @a[scores={TriggerCommand=42}] TriggerCommand 0
+
+
+
+#43 - Hall of Fame Yes
+execute as @e[x=-803,y=64,z=-284,dy=3,type=armor_stand,scores={HOFCount=10..}] run tellraw @a[scores={TriggerCommand=43}] ["",{"text":"<Lance> I have to apologize, our Hall of Fame is currently full of statues at the moment.","color":"white"}]
+execute as @e[x=-803,y=64,z=-284,dy=3,type=armor_stand,scores={HOFCount=0..9}] run scoreboard players set @a[scores={TriggerCommand=43}] DialogueTrigger 97
+scoreboard players set @a[scores={TriggerCommand=43}] TriggerCommand 0
+
+
+#44 - Hall of Fame No
+tellraw @a[scores={TriggerCommand=44}] {"text":"<Lance> Very well! Just press the button above the healer, and you are good to go!"}
+scoreboard players set @a[scores={TriggerCommand=44}] TriggerCommand 0
+
+
+#47 Mr. Pokémon exchanging a red scale for EXP Share
+execute as @a[scores={TriggerCommand=47}] run clear @s pixelmon:red_scale
+execute as @a[scores={TriggerCommand=47}] run give @s pixelmon:exp_share
+execute as @a[scores={TriggerCommand=47}] run tellraw @s {"text":"<Mr. Pokémon> Life is delightful! Always, new discoveries to be made!"}
+scoreboard players set @a[scores={TriggerCommand=47}] TriggerCommand 0
+
+
+
+#48 - Randy's Spearow sidequest Yes
+execute as @a[scores={TriggerCommand=48}] run scoreboard players set @s DialogueTrigger 147
+scoreboard players set @a[scores={TriggerCommand=48}] TriggerCommand 0
+
+
+#49 - Randy's Spearow sidequest No
+execute as @a[scores={TriggerCommand=49}] run tellraw @s {"text":"<Randy> Oh... Never mind, then... "}
+execute as @a[scores={TriggerCommand=49}] run scoreboard players set @s Cooldown 30
+execute as @a[scores={TriggerCommand=49}] run tag @s remove Dialogue146
+scoreboard players set @a[scores={TriggerCommand=49}] TriggerCommand 0
+
+
+#50 - Kyogre Spawn
+execute as @a[scores={TriggerCommand=50}] run scoreboard players set @e[x=-801,y=64,z=-287,dy=3,type=armor_stand,scores={DialogueTrigger=0,TalkTime=0}] DialogueTrigger 150
+
+#51 - Groudon Spawn
+execute as @a[scores={TriggerCommand=51}] run scoreboard players set @e[x=-801,y=64,z=-287,dy=3,type=armor_stand,scores={DialogueTrigger=0,TalkTime=0}] DialogueTrigger 151
+
+#53 - Rayquaza Spawn
+execute as @a[scores={TriggerCommand=52}] run scoreboard players set @e[x=-801,y=64,z=-287,dy=3,type=armor_stand,scores={DialogueTrigger=0,TalkTime=0}] DialogueTrigger 152
+
+
+#57-75, previous Legendary Resets
+
+#76 - Runs Lucky Number Show
+execute as @a[scores={TriggerCommand=76}] run scoreboard players set @s DialogueTrigger 185
+execute as @a[scores={TriggerCommand=76}] run tag @s remove Dialogue185
+execute as @a[scores={TriggerCommand=76}] run scoreboard players set @s TriggerCommand 0
+
+#----------------------------------------------------------------------------
+
+
+
+#Languages
+
+execute as @a[scores={TriggerCommand=87..92}] run tag @s remove Japanese
+execute as @a[scores={TriggerCommand=87..92}] run tag @s remove English
+execute as @a[scores={TriggerCommand=87..92}] run tag @s remove German
+execute as @a[scores={TriggerCommand=87..92}] run tag @s remove Spanish
+execute as @a[scores={TriggerCommand=87..92}] run tag @s remove French
+execute as @a[scores={TriggerCommand=87..92}] run tag @s remove Italian
+
+#Japanese
+execute as @a[scores={TriggerCommand=87}] run tellraw @s {"text":"日本語!"}
+execute as @a[scores={TriggerCommand=87}] run tag @s add Japanese
+execute as @a[scores={TriggerCommand=87}] run scoreboard players set @s TriggerCommand 0
+
+#English
+execute as @a[scores={TriggerCommand=88}] run tellraw @s {"text":"English!"}
+execute as @a[scores={TriggerCommand=88}] run tag @s add English
+execute as @a[scores={TriggerCommand=88}] run scoreboard players set @s TriggerCommand 0
+
+#German
+execute as @a[scores={TriggerCommand=89}] run tellraw @s {"text":"Deutsche!"}
+execute as @a[scores={TriggerCommand=89}] run tag @s add German
+execute as @a[scores={TriggerCommand=89}] run scoreboard players set @s TriggerCommand 0
+
+#Spanish
+execute as @a[scores={TriggerCommand=90}] run tellraw @s {"text":"¡Español!"}
+execute as @a[scores={TriggerCommand=90}] run tag @s add Spanish
+execute as @a[scores={TriggerCommand=90}] run scoreboard players set @s TriggerCommand 0
+
+#French
+execute as @a[scores={TriggerCommand=91}] run tellraw @s {"text":"Français!"}
+execute as @a[scores={TriggerCommand=91}] run tag @s add French
+execute as @a[scores={TriggerCommand=91}] run scoreboard players set @s TriggerCommand 0
+
+#Italian
+execute as @a[scores={TriggerCommand=92}] run tellraw @s {"text":"Italiano!"}
+execute as @a[scores={TriggerCommand=92}] run tag @s add Italian
+execute as @a[scores={TriggerCommand=92}] run scoreboard players set @s TriggerCommand 0
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#tellraw @a[scores={TriggerCommand=0..1000}] {"text":"Success!"}
+scoreboard players set @a[scores={TriggerCommand=0..11}] TriggerCommand 0
+scoreboard players set @a[scores={TriggerCommand=15..49}] TriggerCommand 0
+scoreboard players set @a[scores={TriggerCommand=53..1000}] TriggerCommand 0
+
+
+
+
+#
+
+
+
+
+#

@@ -1,0 +1,245 @@
+{
+    "resourceIdentifier": "cobblemon:random_skin",
+    "hitbox": "player",
+    "names": [
+        "Battle Tower Trainer"
+    ],
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:battle_tower_trainer_interaction"
+    },
+    "HideNPCNameTag": 1,
+    "skill": 5,
+    "party": {
+        "type": "script",
+        "script": "cobblemon:battle_tower_pool1",
+        "isStatic": false
+    },
+    "variation": {
+        "net": {
+            "type": "weighted",
+            "options": [
+                {
+                    "aspect": "youngster",
+                    "weight": 1
+                },
+                {
+                    "aspect": "acetrainerm",
+                    "weight": 0.5
+                },
+                {
+                    "aspect": "acetrainerf",
+                    "weight": 0.5
+                },
+                {
+                    "aspect": "beauty",
+                    "weight": 1
+                },
+                {
+                    "aspect": "biker",
+                    "weight": 1
+                },
+                {
+                    "aspect": "birdkeeper",
+                    "weight": 1
+                },
+                {
+                    "aspect": "blackbelt",
+                    "weight": 1
+                },
+                {
+                    "aspect": "boarder",
+                    "weight": 1
+                },
+                {
+                    "aspect": "bugcatcher",
+                    "weight": 1
+                },
+                {
+                    "aspect": "bugcatcher2",
+                    "weight": 1
+                },
+                {
+                    "aspect": "burglar",
+                    "weight": 1
+                },
+                {
+                    "aspect": "camper",
+                    "weight": 1
+                },
+                {
+                    "aspect": "firebreather",
+                    "weight": 1
+                },
+                {
+                    "aspect": "fisherman",
+                    "weight": 1
+                },
+                {
+                    "aspect": "gentleman",
+                    "weight": 1
+                },
+                {
+                    "aspect": "guitarist",
+                    "weight": 1
+                },
+                {
+                    "aspect": "hiker",
+                    "weight": 1
+                },
+                {
+                    "aspect": "juggler",
+                    "weight": 1
+                },
+                {
+                    "aspect": "kimono",
+                    "weight": 1
+                },
+                {
+                    "aspect": "lass",
+                    "weight": 1
+                },
+                {
+                    "aspect": "lass2",
+                    "weight": 1
+                },
+                {
+                    "aspect": "medium",
+                    "weight": 1
+                },
+                {
+                    "aspect": "picknicker",
+                    "weight": 1
+                },
+                {
+                    "aspect": "pokemaniac",
+                    "weight": 1
+                },
+                {
+                    "aspect": "pokefan",
+                    "weight": 1
+                },
+                {
+                    "aspect": "policeman",
+                    "weight": 1
+                },
+                {
+                    "aspect": "psychic",
+                    "weight": 1
+                },
+                {
+                    "aspect": "sage",
+                    "weight": 1
+                },
+                {
+                    "aspect": "sailor",
+                    "weight": 1
+                },
+                {
+                    "aspect": "schoolkid",
+                    "weight": 1
+                },
+                {
+                    "aspect": "scientistm",
+                    "weight": 0.5
+                },
+                {
+                    "aspect": "scientistf",
+                    "weight": 0.5
+                },
+                {
+                    "aspect": "skier",
+                    "weight": 1
+                },
+                {
+                    "aspect": "supernerd",
+                    "weight": 1
+                },
+                {
+                    "aspect": "swimmerm",
+                    "weight": 1
+                },
+                {
+                    "aspect": "swimmerf",
+                    "weight": 1
+                },
+                {
+                    "aspect": "teacher",
+                    "weight": 1
+                },
+                {
+                    "aspect": "twin",
+                    "weight": 1
+                },
+                {
+                    "aspect": "youngcouplem",
+                    "weight": 1
+                },
+                {
+                    "aspect": "youngcouplef",
+                    "weight": 1
+                }
+            ]
+        }
+    },
+    "ai": [
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ],
+    "config": [
+        {
+            "variableName": "challenge_cooldown",
+            "displayName": "Cooldown",
+            "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+            "type": "NUMBER",
+            "defaultValue": "0"
+        },
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue battletower_group1_end @s');"
+        }
+    ]
+}

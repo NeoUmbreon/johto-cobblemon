@@ -1,0 +1,65 @@
+{   "initializationAction": [              
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 7');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');"
+        ],
+    "escapeAction": [              
+        ],
+    "names": ["Rocket Grunt"],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+          "id": "greeting",
+          "speaker": "npc",
+          "lines": ["Stop taking SlowpokeTails? What?! You want us to disobey a direct order from Executive Proton?"],
+                "input": {
+                    "type": "option",
+                    "vertical": false,
+                    "options": [
+                        {
+                            "text": "Next",
+                            "value": "next",
+                            "action": "q.dialogue.set_page('page2');"
+                        }
+                    ]
+                }
+            },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "If you want to stop us, you'll have to defeat us all! Go ahead and try!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "action": [                           
+                                    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 11');",
+                                    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                                    "v.battle = q.npc.start_battle(q.player);"
+                            ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [              
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.dialogue.close();"]
+                        }
+                    ]
+                }
+            }
+        ]
+    }

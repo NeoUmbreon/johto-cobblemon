@@ -1,0 +1,81 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "wobbuffet-1",
+            "pokemon": "wobbuffet",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "23-25",
+            "weight": 15,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -437, "maxX": -280, "minZ": -10, "maxZ": 128
+            }
+        },
+
+        {
+            "id": "wobbuffet-2",
+            "pokemon": "wobbuffet",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "38-40",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -2667, "maxX": -2535, "minY": 62, "maxY": 71, "minZ": 822, "maxZ": 897
+            }
+        },
+
+        {
+            "id": "wobbuffet-3",
+            "pokemon": "wobbuffet",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "40-42",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -2667, "maxX": -2535, "minY": 72, "maxY": 87, "minZ": 822, "maxZ": 897
+            }
+        },
+
+        {
+            "id": "wobbuffet-4",
+            "pokemon": "wobbuffet",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "45-47",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -2667, "maxX": -2535, "minY": 47, "maxY": 61, "minZ": 822, "maxZ": 897
+            }
+        },
+
+        {
+            "id": "wobbuffet-5",
+            "pokemon": "wobbuffet",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:jagged_peaks"
+                ]
+            }
+        }
+    ]
+}

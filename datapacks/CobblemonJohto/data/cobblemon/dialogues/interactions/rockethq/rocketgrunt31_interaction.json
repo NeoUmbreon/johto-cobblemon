@@ -1,0 +1,52 @@
+{   "initializationAction": [              
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 7');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');"
+        ],
+    "escapeAction": [              
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+        "q.dialogue.close();"
+        ],
+    "names": ["Rocket Grunt"],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Pokémon are tools. What use is treating them well?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "action": [                           
+                                    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 11');",
+                                    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                                    "v.battle = q.npc.start_battle(q.player);"
+                            ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [              
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.dialogue.close();"]
+                        }
+                    ]
+                }
+            }
+        ]
+    }

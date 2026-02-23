@@ -1,0 +1,26 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "luvdisc-1",
+            "pokemon": "luvdisc",
+            "type": "pokemon",
+            "presets": [
+                "water"
+            ],
+            "context": "surface",
+            "bucket": "common",
+            "level": "40",
+            "weight": 10000,
+            "condition": {
+                "minX": -1289, "maxX": -1061, "minZ": -552, "maxZ": -483,
+                "biomes": [
+                    "minecraft:bamboo_jungle"
+                ]
+                
+            }
+        }
+    ]
+}

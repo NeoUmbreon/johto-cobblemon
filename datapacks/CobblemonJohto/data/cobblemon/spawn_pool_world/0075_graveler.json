@@ -1,0 +1,98 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "graveler-1",
+            "pokemon": "graveler",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "23-25",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -437, "maxX": -280, "minZ": -10, "maxZ": 128
+            }
+        },
+
+        {
+            "id": "graveler-2",
+            "pokemon": "graveler",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "28-30",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -22, "maxX": 206, "minY": 69, "maxY": 82, "minZ": 217, "maxZ": 565
+            }
+        },
+
+        {
+            "id": "graveler-3",
+            "pokemon": "graveler",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "23-27",
+            "weight": 40,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -650, "maxX": -535, "minZ": -298, "maxZ": 95
+            }
+        },
+
+        {
+            "id": "graveler-4",
+            "pokemon": "graveler",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "41-45",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -1014, "maxX": -941, "maxY": 98, "minZ": 101, "maxZ": 232
+            }
+        },
+
+        {
+            "id": "graveler-5",
+            "pokemon": "graveler",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "32-36",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -1534, "maxX": -1320, "minY": 1, "maxY": 55, "minZ": 366, "maxZ": 546
+            }
+        },
+
+        {
+            "id": "graveler-6",
+            "pokemon": "graveler",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:jagged_peaks"
+                ]
+            }
+        }
+    ]
+}

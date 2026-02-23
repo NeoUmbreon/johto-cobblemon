@@ -1,0 +1,53 @@
+{   
+    "speakers": {
+        "npc": {
+          "name": "    ",
+          "face": {
+            "type": "artificial",
+            "modelType": "npc",
+            "identifier": "cobblemon:schoolkid",
+            "isLeftSide": true
+          }
+        }
+      },
+      "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "When I grow up, I'm going to help my Dad!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I'm going to be a great Pokemon professor!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        }
+        ]
+    }

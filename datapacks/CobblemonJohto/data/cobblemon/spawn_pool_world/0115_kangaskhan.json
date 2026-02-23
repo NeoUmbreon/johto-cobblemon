@@ -1,0 +1,39 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "kangaskhan-1",
+          "pokemon": "kangaskhan",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "10-13",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -3401, "maxX": -3191, "minY": 28, "maxY": 54, "minZ": 528, "maxZ": 701
+          }
+      },
+
+      {
+        "id": "kangaskhan-2",
+        "pokemon": "kangaskhan",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:badlands"
+            ]
+            }
+        }
+    ]
+}

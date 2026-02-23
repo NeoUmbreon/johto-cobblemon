@@ -1,0 +1,44 @@
+{
+    "initializationAction": [
+        "q.run_command('playsound minecraft:moltres ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "pokemon": {
+            "name": "Moltres",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:moltres",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "pokemon",
+            "lines": [
+                "SKREEEE-FWOOOSH!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_command('data merge entity @e[x=-965,y=100,z=303,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:moltres\"}}] {Pokemon:{PokemonData:[\"catchable\"]}}');",
+                            "q.run_command('data merge entity @e[x=-965,y=100,z=303,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:moltres\"}}] {NoAI:0b}');",
+                            "q.run_command('data modify entity @e[x=-965,y=100,z=303,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:moltres\"}}] Unbattleable set value 0b');",
+                            "q.run_command('kill @e[x=-965,y=100,z=303,distance=..5,type=minecraft:interaction]');",
+                            "q.run_command('tag ' + q.player.username + ' add MoltresEncounter');"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

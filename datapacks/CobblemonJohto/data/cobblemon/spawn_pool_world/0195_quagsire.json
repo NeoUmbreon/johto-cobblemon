@@ -1,0 +1,257 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "quagsire-1",
+          "pokemon": "quagsire",
+          "presets": [
+              "water"
+          ],
+          "type": "pokemon",
+          "context": "surface",
+          "bucket": "common",
+          "level": "4-6",
+          "weight": 30.0,
+          "condition": {
+              "minX": 106, "maxX": 203, "minZ": -548, "maxZ": -232
+          }
+      },
+
+      {
+          "id": "quagsire-2",
+          "pokemon": "quagsire",
+          "presets": [
+              "water"
+          ],
+          "type": "pokemon",
+          "context": "surface",
+          "bucket": "common",
+          "level": "5-6",
+          "weight": 40.0,
+          "condition": {
+              "minX": 183, "maxX": 256, "minZ": -231, "maxZ": -103
+          }
+      },
+
+      {
+          "id": "quagsire-3",
+          "pokemon": "quagsire",
+          "presets": [
+              "water"
+          ],
+          "type": "pokemon",
+          "context": "surface",
+          "bucket": "common",
+          "level": "4-7",
+          "weight": 40.0,
+          "condition": {
+              "minX": 79, "maxX": 225, "minY": 40, "maxY": 55, "minZ": -880, "maxZ": -585
+          }
+      },
+      {
+          "id": "quagsire-4",
+          "pokemon": "quagsire",
+          "presets": [
+              "water"
+          ],
+          "type": "pokemon",
+          "context": "surface",
+          "bucket": "common",
+          "level": "4-7",
+          "weight": 40.0,
+          "condition": {
+              "minX": 79, "maxX": 225, "minY": 26, "maxY": 39, "minZ": -880, "maxZ": -585
+          }
+      },
+      {
+          "id": "quagsire-5",
+          "pokemon": "quagsire",
+          "presets": [
+              "water"
+          ],
+          "type": "pokemon",
+          "context": "surface",
+          "bucket": "common",
+          "level": "10-25",
+          "weight": 30.0,
+          "condition": {
+              "minX": 79, "maxX": 225, "minY": 10, "maxY": 25, "minZ": -880, "maxZ": -585
+          }
+      },
+
+      {
+          "id": "quagsire-6",
+          "pokemon": "quagsire",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 50,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": -1088, "maxX": -1015, "minZ": -528, "maxZ": -482
+          }
+      },
+
+      {
+          "id": "quagsire-7",
+          "pokemon": "quagsire",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": -1321, "maxX": -1216, "minZ": -482, "maxZ": -284
+          }
+      },
+
+      {
+          "id": "quagsire-8",
+          "pokemon": "quagsire",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "45-48",
+          "weight": 35,
+          "condition": {
+              "canSeeSky": false,
+              "timeRange": "dawn,dusk,day",
+              "minX": -1039, "maxX": -932, "maxY": 98, "minZ": 233, "maxZ": 364
+          }
+      },
+      {
+          "id": "quagsire-9",
+          "pokemon": "quagsire",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "45-48",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": false,
+              "timeRange": "night",
+              "minX": -1039, "maxX": -932, "maxY": 98, "minZ": 233, "maxZ": 364
+          }
+      },
+
+      {
+          "id": "quagsire-10",
+          "pokemon": "quagsire",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-18",
+          "weight": 40,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": -3319, "maxX": -3300, "minZ": 588, "maxZ": 626
+          }
+      },
+
+      {
+          "id": "quagsire-11",
+          "pokemon": "quagsire",
+          "presets": [
+              "water"
+          ],
+          "type": "pokemon",
+          "context": "surface",
+          "bucket": "common",
+          "level": "25-25",
+          "weight": 30.0,
+          "condition": {
+              "minX": -3352, "maxX": -3248, "minZ": -262, "maxZ": 272
+          }
+      },
+
+      {
+          "id": "quagsire-12",
+          "pokemon": "quagsire",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "22-25",
+          "weight": 19,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": -3290, "maxX": -3198, "minZ": -354, "maxZ": -258
+          }
+      },
+
+      {
+          "id": "quagsire-13",
+          "pokemon": "quagsire",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "23-26",
+          "weight": 19,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": -2931, "maxX": -2899, "minZ": -427, "maxZ": -389
+          }
+      },
+
+      {
+          "id": "quagsire-14",
+          "pokemon": "quagsire",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "23-26",
+          "weight": 19,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": -2847, "maxX": -2610, "minZ": -565, "maxZ": -533
+          }
+      },
+
+      {
+        "id": "quagsire-15",
+        "pokemon": "quagsire",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:mangrove_swamp",
+                "minecraft:river"
+            ]
+            }
+        }
+    ]
+}

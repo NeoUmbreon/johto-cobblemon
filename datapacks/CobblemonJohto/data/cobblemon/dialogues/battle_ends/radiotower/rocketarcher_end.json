@@ -1,0 +1,315 @@
+{
+    "initializationAction": [
+        "c.npc.set_chatting();",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $3,040 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 3040');"
+    ],
+    "speakers": {
+        "archer": {
+            "name": "Rocket Admin Archer",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:archer",
+                "isLeftSide": true
+            }
+        },
+        "director": {
+            "name": "Radio Tower Director",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:gentleman",
+                "isLeftSide": false
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "archer",
+            "lines": [
+                "How could this be...? Our dreams have come to naught."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "archer",
+            "lines": [
+                "I was not up to the task after all."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "archer",
+            "lines": [
+                "Like Giovanni has done before me, I will disband Team Rocket here today."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "archer",
+            "lines": [
+                "Farewell..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:story/rocket4');",
+                            "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 3 1 true');",
+                            "q.run_command('execute as ' + q.player.username + ' at @s run tp @s ~ ~ ~-26');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s click 1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "director",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'' + q.player.username + ', thank you!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "director",
+            "lines": [
+                "Your courageous actions have saved Pokémon nationwide."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "director",
+            "lines": [
+                "I know it's not much, but please take one of these."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Rainbow Wing",
+                        "value": "rainbow",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/rainbowfeather');",
+                            "q.run_command('tag ' + q.player.username + ' add GoldPick');",
+                            "q.dialogue.set_page('pickrainbow1');"
+                        ]
+                    },
+                    {
+                        "text": "Silver Wing",
+                        "value": "silver",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/silverfeather');",
+                            "q.run_command('tag ' + q.player.username + ' add SilverPick');",
+                            "q.dialogue.set_page('picksilver1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickrainbow1",
+            "speaker": "director",
+            "lines": [
+                "There used to be a tower right here."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('pickrainbow2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickrainbow2",
+            "speaker": "director",
+            "lines": [
+                "When the tower was replaced with the Radio Tower, that Rainbow Wing was found at the top of the tower."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('pickrainbow3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pickrainbow3",
+            "speaker": "director",
+            "lines": [
+                "I heard from a friend from Cianwood City that you can climb the Bell Tower in  Ecruteak City when you have a Rainbow Wing."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('ending');"
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "picksilver1",
+            "speaker": "director",
+            "lines": [
+                "There used to be a tower right here."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('picksilver2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksilver2",
+            "speaker": "director",
+            "lines": [
+                "When the tower was replaced with the Radio Tower, that Silver Wing was found at the top of the tower."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('picksilver3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "picksilver3",
+            "speaker": "director",
+            "lines": [
+                "I heard from a friend from Cianwood City that you can go down the cave at Whirl Islands when you have a Silver Wing."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('ending');"
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "ending",
+            "speaker": "director",
+            "lines": [
+                "I have to get back to my office. See you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue72');",
+                            "q.run_command('execute as ' + q.player.username + ' run particle cloud 503 55 -271 1 1 1 1 100');",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:rocket4');"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": []
+}

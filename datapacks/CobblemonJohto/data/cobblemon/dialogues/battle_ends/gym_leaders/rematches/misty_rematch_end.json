@@ -1,0 +1,41 @@
+{   "initializationAction": [              
+    "c.npc.set_chatting();",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $7,200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 7200');"
+        ],
+  "speakers": {
+    "npc": {
+      "name": "Misty",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:misty",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["Wow! You are getting stronger by the battle!"],
+                "input": {
+                    "type": "option",
+                    "vertical": false,
+                    "options": [
+                        {
+                            "text": "Close",
+                            "value": "close",
+                            "action": [              
+                                "q.dialogue.close();"]
+                        }
+                    ]
+                }
+            }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}

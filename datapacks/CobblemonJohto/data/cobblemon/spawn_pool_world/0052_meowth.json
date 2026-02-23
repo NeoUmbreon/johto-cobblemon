@@ -1,0 +1,180 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "meowth-1",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-16",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": 489, "maxX": 703, "minZ": 178, "maxZ": 292
+          }
+      },
+      {
+          "id": "meowth-2",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-16",
+          "weight": 40,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": 489, "maxX": 703, "minZ": 178, "maxZ": 292
+          }
+      },
+
+      {
+          "id": "meowth-3",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-16",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": 704, "maxX": 822, "minZ": 57, "maxZ": 296
+          }
+      },
+      {
+          "id": "meowth-4",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-16",
+          "weight": 40,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": 704, "maxX": 822, "minZ": 57, "maxZ": 296
+          }
+      },
+
+      {
+          "id": "meowth-5",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-15",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": -2775, "maxX": -2724, "minZ": 542, "maxZ": 614
+          }
+      },
+      {
+          "id": "meowth-6",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-15",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": -2775, "maxX": -2724, "minZ": 542, "maxZ": 614
+          }
+      },
+
+      {
+          "id": "meowth-7",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-19",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -3103, "maxX": -3034, "minZ": 293, "maxZ": 344
+          }
+      },
+
+      {
+          "id": "meowth-8",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-14",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": -2816, "maxX": -2686, "minZ": 52, "maxZ": 235
+          }
+      },
+      {
+          "id": "meowth-9",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-14",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": -2816, "maxX": -2686, "minZ": 52, "maxZ": 235
+          }
+      },
+
+      {
+          "id": "meowth-10",
+          "pokemon": "meowth",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-19",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -2611, "maxX": -2570, "minZ": 349, "maxZ": 379
+          }
+      }
+    ]
+}

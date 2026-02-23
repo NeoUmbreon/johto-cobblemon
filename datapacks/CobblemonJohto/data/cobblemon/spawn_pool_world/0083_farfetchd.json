@@ -1,0 +1,97 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "farfetchd-1",
+            "pokemon": "farfetchd",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "13-16",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "dawn,dusk,day",
+                "minX": 489, "maxX": 703, "minZ": 178, "maxZ": 292
+            }
+        },
+
+        {
+            "id": "farfetchd-2",
+            "pokemon": "farfetchd",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "13-16",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "dawn,dusk,day",
+                "minX": 704, "maxX": 822, "minZ": 57, "maxZ": 296
+            }
+        },
+
+        {
+            "id": "farfetchd-3",
+            "pokemon": "farfetchd",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "31-35",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "dawn,dusk,day",
+                "minX": 1406, "maxX": 1436, "minZ": -373, "maxZ": -349
+            }
+        },
+
+        {
+            "id": "farfetchd-4",
+            "pokemon": "farfetchd",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "21-24",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "dawn,dusk,day",
+                "minX": 1575, "maxX": 1618, "minZ": -296, "maxZ": -248
+            }
+        },
+
+        {
+            "id": "farfetchd-5",
+            "pokemon": "farfetchd",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:river"
+                ]
+                }
+            }
+    ]
+}

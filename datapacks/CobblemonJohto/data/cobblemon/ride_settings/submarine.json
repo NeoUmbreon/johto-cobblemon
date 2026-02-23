@@ -1,0 +1,10 @@
+{
+    "infiniteStamina": "false",
+    "staminaRegenTime": "5.0",
+    "hitboxBreachPercentage": "0.5",
+    "jumpExpr": "q.get_ride_stats('JUMP', 'LIQUID', 10.0, 1.0)",
+    "handlingExpr": "q.get_ride_stats('SKILL', 'LIQUID', 90.0, 30.0)",
+    "speedExpr": "q.get_ride_stats('SPEED', 'LIQUID', 12.0, 2.0)",
+    "accelerationExpr": "q.get_ride_stats('ACCELERATION', 'LIQUID', 1.2, 8.0)",
+    "staminaExpr": "q.get_ride_stats('STAMINA', 'LIQUID', 180.0, 10.0)"
+}

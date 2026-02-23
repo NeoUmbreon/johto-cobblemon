@@ -1,0 +1,59 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "marill-1",
+            "pokemon": "marill",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "14-16",
+            "weight": 1,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -22, "maxX": 206, "minY": 42, "maxY": 66, "minZ": 217, "maxZ": 301
+            }
+        },
+
+        {
+            "id": "marill-2",
+            "pokemon": "abra",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:sunflower_plains"
+                ]
+                }
+            },
+
+            {
+                "id": "marill-3",
+                "pokemon": "marill",
+                "presets": [
+                    "natural"
+                ],
+                "type": "pokemon",
+                "context": "grounded",
+                "bucket": "common",
+                "level": "15",
+                "weight": 10000.0,
+                "condition": {
+                    "minX": -6, "maxX": 197, "minZ": 230, "maxZ": 298,
+                    "biomes": [
+                        "minecraft:bamboo_jungle"
+                    ],
+                    "canSeeSky": false
+                }
+            }
+    ]
+}

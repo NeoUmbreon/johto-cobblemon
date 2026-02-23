@@ -1,0 +1,73 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "sandslash-1",
+          "pokemon": "sandslash",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -1088, "maxX": -1015, "minZ": -528, "maxZ": -482
+          }
+      },
+
+      {
+          "id": "sandslash-2",
+          "pokemon": "sandslash",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -1321, "maxX": -1216, "minZ": -482, "maxZ": -284
+          }
+      },
+
+      {
+          "id": "sandslash-3",
+          "pokemon": "sandslash",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "6-12",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -2261, "maxX": -2159, "minZ": 769, "maxZ": 853
+          }
+      },
+
+      {
+        "id": "sandslash-4",
+        "pokemon": "sandslash",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:desert"
+            ]
+        }
+    }
+    ]
+}

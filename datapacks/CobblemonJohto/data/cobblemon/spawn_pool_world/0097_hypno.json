@@ -1,0 +1,42 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "hypno-1",
+          "pokemon": "hypno",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "14-15",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -3176, "maxX": -2921, "minZ": -122, "maxZ": -5
+          }
+      },
+
+      {
+        "id": "hypno-2",
+        "pokemon": "hypno",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:swamp"
+            ]
+            }
+        }
+    ]
+}

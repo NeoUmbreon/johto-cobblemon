@@ -1,0 +1,49 @@
+{
+    "initializationAction": [
+        "q.run_command('playsound minecraft:gyarados ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
+        "q.run_command('playsound minecraft:shiny ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "pokemon": {
+            "name": "Gyarados",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:gyarados",
+                "isLeftSide": true,
+                "aspects": [
+                    "shiny"
+                ]
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "pokemon",
+            "lines": [
+                "GRRAAAAUUUGH-SHRAAAAH!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_command('data merge entity @e[x=-169,y=63,z=645,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:gyarados\"}}] {Pokemon:{PokemonData:[\"catchable\"]}}');",
+                            "q.run_command('data merge entity @e[x=-169,y=63,z=645,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:gyarados\"}}] {NoAI:0b}');",
+                            "q.run_command('data modify entity @e[x=-169,y=63,z=645,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:gyarados\"}}] Unbattleable set value 0b');",
+                            "q.run_command('kill @e[x=-169,y=63,z=645,distance=..5,type=minecraft:interaction]');",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:story/rocket2');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue49');"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

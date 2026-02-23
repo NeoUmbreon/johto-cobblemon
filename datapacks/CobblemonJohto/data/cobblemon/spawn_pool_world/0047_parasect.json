@@ -1,0 +1,82 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+            "id": "parasect-1",
+            "pokemon": "parasect",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "38-40",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+              "timeRange": "dawn,dusk,day",
+                "minX": -2667, "maxX": -2535, "minY": 62, "maxY": 71, "minZ": 822, "maxZ": 897
+            }
+        },
+        {
+            "id": "parasect-2",
+            "pokemon": "parasect",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "38-40",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": false,
+              "timeRange": "night",
+                "minX": -2667, "maxX": -2535, "minY": 62, "maxY": 71, "minZ": 822, "maxZ": 897
+            }
+        },
+
+        {
+            "id": "parasect-3",
+            "pokemon": "parasect",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "40-42",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -2667, "maxX": -2535, "minY": 72, "maxY": 87, "minZ": 822, "maxZ": 897
+            }
+        },
+
+        {
+            "id": "parasect-4",
+            "pokemon": "parasect",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "45-47",
+            "weight": 25,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -2667, "maxX": -2535, "minY": 47, "maxY": 61, "minZ": 822, "maxZ": 897
+            }
+        },
+
+        {
+            "id": "parasect-5",
+            "pokemon": "parasect",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:swamp"
+                ]
+                }
+            }
+    ]
+}

@@ -1,0 +1,1 @@
+give @s rabbit_foot[custom_name='["",{"text":"Squirt Bottle","italic":false,"color":"aqua"}]',lore=['["",{"text":"A bottle used for watering plants.","italic":false}]']]

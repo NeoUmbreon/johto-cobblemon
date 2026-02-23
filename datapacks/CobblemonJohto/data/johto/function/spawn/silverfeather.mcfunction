@@ -1,0 +1,1 @@
+give @s prismarine_shard[custom_name='["",{"text":"Silver Feather","italic":false,"color":"#8080ff"}]',lore=['["",{"text":"A strange, silvery feather that sparkles.","italic":false}]']]

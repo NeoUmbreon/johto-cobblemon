@@ -1,0 +1,39 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "clefairy-1",
+          "pokemon": "clefairy",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "6-12",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -2261, "maxX": -2159, "minZ": 769, "maxZ": 853
+          }
+      },
+
+      {
+        "id": "clefairy-2",
+        "pokemon": "clefairy",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:sunflower_plains"
+            ]
+        }
+    }
+    ]
+}

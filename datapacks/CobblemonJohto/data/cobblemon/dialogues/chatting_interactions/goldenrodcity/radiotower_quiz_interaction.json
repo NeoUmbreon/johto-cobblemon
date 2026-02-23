@@ -1,0 +1,320 @@
+{
+    "speakers": {
+        "npc": {
+            "name": "     ",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:oldlady",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "We have a special Quiz campaign!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('intro2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "intro2",
+            "speaker": "npc",
+            "lines": [
+                "Answer five questions correctly in a row to win a Radio Card!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('intro3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "intro3",
+            "speaker": "npc",
+            "lines": [
+                "When you load it into the Pokégear, you will be able to listen to more radio stations... anytime, anywhere!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('intro4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "intro4",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to try our Quiz?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Quiz",
+                        "value": "quiz",
+                        "action": "q.dialogue.set_page('quiz1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz1",
+            "speaker": "npc",
+            "lines": [
+                "The first question! Can a player pick up a Town Map in Cherrygrove City?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "True",
+                        "value": "true",
+                        "action": [
+                            "q.dialogue.set_page('quiz2');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    },
+                    {
+                        "text": "False",
+                        "value": "false",
+                        "action": [
+                            "q.dialogue.set_page('wronganswer');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz2",
+            "speaker": "npc",
+            "lines": [
+                "You are correct. The second question! Nidorina can only be female. True?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "True",
+                        "value": "true",
+                        "action": [
+                            "q.dialogue.set_page('quiz3');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    },
+                    {
+                        "text": "False",
+                        "value": "false",
+                        "action": [
+                            "q.dialogue.set_page('wronganswer');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz3",
+            "speaker": "npc",
+            "lines": [
+                "You are correct. The third question! Kurt, the Poké Ball creator, uses apricots as ingredients?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "True",
+                        "value": "true",
+                        "action": [
+                            "q.dialogue.set_page('wronganswer');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    },
+                    {
+                        "text": "False",
+                        "value": "false",
+                        "action": [
+                            "q.dialogue.set_page('quiz4');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz4",
+            "speaker": "npc",
+            "lines": [
+                "You are correct again. The fourth question! It's impossible to use a TM on Magikarp. True?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "True",
+                        "value": "true",
+                        "action": [
+                            "q.dialogue.set_page('quiz5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    },
+                    {
+                        "text": "False",
+                        "value": "false",
+                        "action": [
+                            "q.dialogue.set_page('wronganswer');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quiz5",
+            "speaker": "npc",
+            "lines": [
+                "Wow! I have only one more question to go. In Professor Oak's popular show, Pokémon Talk, is he on with Whitney?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "True",
+                        "value": "true",
+                        "action": [
+                            "q.dialogue.set_page('wronganswer');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    },
+                    {
+                        "text": "False",
+                        "value": "false",
+                        "action": [
+                            "q.dialogue.set_page('quizend1');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "quizend1",
+            "speaker": "npc",
+            "lines": [
+                "Bingo! You got it! Congratulations! Here's your prize, a Radio Card!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RadioCard');",
+                            "q.dialogue.set_page('quizend2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "quizend2",
+            "speaker": "npc",
+            "lines": [
+                "Please tune in to our radio shows!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "wronganswer",
+            "speaker": "npc",
+            "lines": [
+                "Oh, dear. Sorry, but you got it wrong. Please try again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Oh. I see. Please see me if you change your mind."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Side Quests",
+            "color": "gray"
+        },
+        "description": {
+            "text": "Explore the region"
+        },
+        "icon": {
+            "id": "cobblemon:wide_lens"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+
+        "commandonly": {
+
+            "trigger": "minecraft:impossible"
+
+        }
+
+    },
+    "parent": "johto:root"
+}

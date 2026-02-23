@@ -1,0 +1,339 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:root_fossil\"}]}] add RootHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:claw_fossil\"}]}] add ClawHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:helix_fossil\"}]}] add HelixHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:dome_fossil\"}]}] add DomeHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:old_amber_fossil\"}]}] add AmberHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:armor_fossil\"}]}] add ArmorHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:skull_fossil\"}]}] add SkullHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:cover_fossil\"}]}] add CoverHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:plume_fossil\"}]}] add PlumeHave');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "npc": {
+            "name": "Fossil Researcher",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": true
+            }
+        },
+        "player": {
+         "face": "q.player.face(true);",
+         "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Did you know that you can extract Pokémon from Fossils?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('greeting2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "If you ever need to, let me take care of it for you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Reanimate",
+                        "value": "reanimate",
+                        "action": [
+                            "q.dialogue.set_page('fossilpick1');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.dialogue.set_page('bye1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "fossilpick1",
+            "speaker": "npc",
+            "lines": [
+                "Which Fossil should I restore for you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('RootHave')",
+                        "text": "Root Fossil",
+                        "value": "root",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:root_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive lileep level=20');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('ClawHave')",
+                        "text": "Claw Fossil",
+                        "value": "claw",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:claw_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive anorith  level=20');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('HelixHave')",
+                        "text": "Helix Fossil",
+                        "value": "helix",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:helix_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive omanyte level=20');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('DomeHave')",
+                        "text": "Dome Fossil",
+                        "value": "dome",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:dome_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive kabuto level=20');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('AmberHave')",
+                        "text": "Old Amber",
+                        "value": "oldamber",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:old_amber_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive aerodactyl level=20');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "text": "More >>",
+                        "value": "more",
+                        "action": [
+                            "q.dialogue.set_page('fossilpick2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "fossilpick2",
+            "speaker": "npc",
+            "lines": [
+                "Which Fossil should I restore for you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('ArmorHave')",
+                        "text": "Armor Fossil",
+                        "value": "armor",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:armor_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive shieldon level=20');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('SkullHave')",
+                        "text": "Skull Fossil",
+                        "value": "skull",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:skull_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive cranidos level=20');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('CoverHave')",
+                        "text": "Cover Fossil",
+                        "value": "cover",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:cover_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive tirtouga level=20');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('PlumeHave')",
+                        "text": "Plume Fossil",
+                        "value": "plume",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:plume_fossil 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive archen level=20');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "text": "<< Back",
+                        "value": "more",
+                        "action": [
+                            "q.dialogue.set_page('fossilpick1');"
+                        ]
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": [
+                            "q.dialogue.set_page('bye1');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I'll extract it for you. Just one second!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "There we go! I have extracted a Pokémon from your Fossil!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "Take good care of it!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove RootHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove ClawHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove HelixHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove DomeHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove AmberHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove ArmorHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove SkullHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove CoverHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove PlumeHave');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "bye1",
+            "speaker": "npc",
+            "lines": [
+                "Please come by again if you ever want to extract Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove RootHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove ClawHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove HelixHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove DomeHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove AmberHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove ArmorHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove SkullHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove CoverHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove PlumeHave');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

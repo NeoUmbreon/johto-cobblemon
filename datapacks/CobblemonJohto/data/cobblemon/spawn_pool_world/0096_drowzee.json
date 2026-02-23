@@ -1,0 +1,76 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "drowzee-1",
+          "pokemon": "drowzee",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "10-13",
+          "weight": 50,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 422, "maxX": 512, "minZ": -721, "maxZ": -488
+          }
+      },
+
+      {
+        "id": "drowzee-2",
+        "pokemon": "drowzee",
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "14-16",
+        "weight": 20,
+        "condition": {
+            "canSeeSky": true,
+            "neededNearbyBlocks": [
+                "minecraft:short_grass"
+            ],
+            "minX": 426, "maxX": 492, "minZ": -252, "maxZ": -94
+        }
+    },
+
+    {
+        "id": "drowzee-3",
+        "pokemon": "drowzee",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:swamp"
+            ]
+            }
+        },
+
+        {
+            "id": "drowzee-4",
+            "pokemon": "drowzee",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "14-16",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -3176, "maxX": -2921, "minZ": -122, "maxZ": -5
+            }
+        }
+    ]
+}

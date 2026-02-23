@@ -1,0 +1,67 @@
+{   "initializationAction": [              
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 2');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');"
+        ],
+    "escapeAction": [              
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+        "q.dialogue.close();"
+        ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        },
+        "player": {
+            "face": "q.player.face();",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Let's battle!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Battle",
+                        "value": "battle",
+                        "isSelectable": "q.player.party.count == 3.0",
+                        "action": [                           
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 11');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "v.battle = q.npc.start_battle(q.player);"
+                    ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [              
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.dialogue.close();"]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "okbye",
+            "speaker": "npc",
+            "lines": [
+                "Alright, see you later!"
+            ],
+            "input": "q.dialogue.close();"
+        }
+    ]
+}

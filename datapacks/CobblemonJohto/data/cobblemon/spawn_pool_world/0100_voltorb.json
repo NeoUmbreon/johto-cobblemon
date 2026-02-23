@@ -1,0 +1,41 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "voltorb-1",
+          "pokemon": "voltorb",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-18",
+          "weight": 30,
+          "condition": {
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -3319, "maxX": -3300, "minZ": 588, "maxZ": 626
+          }
+      },
+
+      {
+        "id": "voltorb-2",
+        "pokemon": "voltorb",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:swamp"
+            ]
+            }
+        }
+    ]
+}

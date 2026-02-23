@@ -1,0 +1,26 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "relicanth-1",
+            "pokemon": "relicanth",
+            "type": "pokemon",
+            "presets": [
+                "water"
+            ],
+            "context": "surface",
+            "bucket": "common",
+            "level": "40",
+            "weight": 10000,
+            "condition": {
+                "minX": -3350, "maxX": -3262, "minZ": -214, "maxZ": 4,
+                "biomes": [
+                    "minecraft:bamboo_jungle"
+                ]
+                
+            }
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "wingull-1",
+            "pokemon": "wingull",
+            "type": "pokemon",
+            "presets": [
+                "water"
+            ],
+            "context": "surface",
+            "bucket": "common",
+            "level": "35",
+            "weight": 10000,
+            "condition": {
+                "minX": -2849, "maxX": -2634, "minZ": -148, "maxZ": 11,
+                "biomes": [
+                    "minecraft:bamboo_jungle"
+                ]
+                
+            }
+        }
+    ]
+}

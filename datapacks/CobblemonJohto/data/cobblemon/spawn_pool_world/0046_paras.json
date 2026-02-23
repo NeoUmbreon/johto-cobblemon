@@ -1,0 +1,67 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "paras-1",
+          "pokemon": "paras",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "5-6",
+          "weight": 15,
+          "condition": {
+              "timeRange": "dawn,dusk,night",
+              "minX": 538, "maxX": 688, "maxY": 67, "minZ": -778, "maxZ": -584
+          }
+      },
+      {
+          "id": "paras-2",
+          "pokemon": "paras",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "5-6",
+          "weight": 5,
+          "condition": {
+              "timeRange": "day",
+              "minX": 538, "maxX": 688, "maxY": 67, "minZ": -778, "maxZ": -584
+          }
+      },
+
+      {
+          "id": "paras-3",
+          "pokemon": "paras",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "6-12",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -2261, "maxX": -2159, "minZ": 769, "maxZ": 853
+          }
+      },
+
+      {
+        "id": "paras-4",
+        "pokemon": "paras",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:jagged_peaks",
+                "minecraft:swamp"
+            ]
+        }
+    }
+    ]
+}

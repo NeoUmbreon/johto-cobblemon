@@ -1,0 +1,79 @@
+{
+    "hitbox": "player",
+    "resourceIdentifier": "cobblemon:red",
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:red_interaction"
+    },
+    "config": [
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue red_end @s');"
+          }
+    ],
+    "ai": [
+
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ],
+    "names": [
+        "Red"
+    ],
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "party": {
+        "type": "simple",
+        "pokemon": [
+            "Pikachu level=88 moves=volttackel,irontail,quickattack,thunderbolt",
+            "Lapras level=80 moves=bodyslam,brine,blizzard,psychic",
+            "Snorlax level=82 moves=shadowball,crunhc,blizzard,gigaimpact",
+            "Venusaur level=84 moves=frenzyplant,gigadrain,sludgebomb,sleeppowder",
+            "Charizard level=84 moves=blastburn,flareblitz,airslash,dragonpulse",
+            "Blastoise level=84 moves=hydrocannon,blizzard,flashcannon,focusblast"
+        ]
+    }
+}

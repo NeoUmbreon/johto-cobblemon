@@ -1,0 +1,43 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "skiploom-1",
+          "pokemon": "skiploom",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "23-26",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": -2931, "maxX": -2899, "minZ": -427, "maxZ": -389
+          }
+      },
+
+      {
+        "id": "skiploom-2",
+        "pokemon": "skiploom",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:sunflower_plains"
+            ]
+            }
+        }
+    ]
+}

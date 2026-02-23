@@ -1,0 +1,77 @@
+{   "initializationAction": [              
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 7');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');"
+        ],
+    "escapeAction": [              
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+        "q.dialogue.close();"
+        ],
+    "names": ["Rocket Admin Proton"],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Now, wait just one second! Aren't you the one who got in our way at the Slowpoke Well?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('battle_prompt');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_prompt",
+            "speaker": "npc",
+            "lines": [
+                "I see... You're doing all this because you want to make me angry."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "action": "q.dialogue.set_page('battle_start');"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.close();"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "npc",
+            "lines": [
+                "Be careful! But since you seem to wish it, I'll show you the full extent of a Team Rocket Executive's wrath!"
+            ],
+            "escapeAction": "0",
+            "input": [
+                "q.run_command('scoreboard players set @s BattleStart 11');",
+                "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                "q.dialogue.close();",
+                "v.battle = q.npc.start_battle(q.player);"
+            ]
+        }
+    ]
+}

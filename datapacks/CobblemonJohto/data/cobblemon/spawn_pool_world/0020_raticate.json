@@ -1,0 +1,276 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "raticate-1",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-16",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 489, "maxX": 703, "minZ": 178, "maxZ": 292
+          }
+      },
+
+      {
+          "id": "raticate-2",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-16",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 704, "maxX": 822, "minZ": 57, "maxZ": 296
+          }
+      },
+
+      {
+          "id": "raticate-3",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "31-35",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 1406, "maxX": 1436, "minZ": -373, "maxZ": -349
+          }
+      },
+
+      {
+          "id": "raticate-4",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-30",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -22, "maxX": 206, "minY": 69, "maxY": 82, "minZ": 217, "maxZ": 565
+          }
+      },
+      {
+          "id": "raticate-5",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-17",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -22, "maxX": 206, "minY": 27, "maxY": 42, "minZ": 217, "maxZ": 404
+          }
+      },
+
+      {
+          "id": "raticate-6",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 40,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -1088, "maxX": -1015, "minZ": -528, "maxZ": -482
+          }
+      },
+
+      {
+          "id": "raticate-7",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "22-23",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -977, "maxX": -859, "minZ": -482, "maxZ": -420
+          }
+      },
+
+      {
+          "id": "raticate-8",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 5,
+          "condition": {
+              "timeRange": "dawn,dusk,day",
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"],
+              "minX": -1321, "maxX": -1216, "minZ": -482, "maxZ": -284
+          }
+      },
+      {
+          "id": "raticate-9",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 35,
+          "condition": {
+              "timeRange": "night",
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"],
+              "minX": -1321, "maxX": -1216, "minZ": -482, "maxZ": -284
+          }
+      },
+
+      {
+          "id": "raticate-10",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-15",
+          "weight": 10,
+          "condition": {
+              "timeRange": "dawn,dusk,day",
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -3316, "maxX": -2902, "minZ": 683, "maxZ": 781
+          }
+      },
+      {
+          "id": "raticate-11",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-15",
+          "weight": 25,
+          "condition": {
+              "timeRange": "night",
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -3316, "maxX": -2902, "minZ": 683, "maxZ": 781
+          }
+      },
+
+      {
+          "id": "raticate-12",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-18",
+          "weight": 25,
+          "condition": {
+              "timeRange": "dawn,dusk,night",
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -3319, "maxX": -3300, "minZ": 588, "maxZ": 626
+          }
+      },
+      {
+          "id": "raticate-13",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-18",
+          "weight": 20,
+          "condition": {
+              "timeRange": "day",
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -3319, "maxX": -3300, "minZ": 588, "maxZ": 626
+          }
+      },
+
+      {
+          "id": "raticate-14",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-19",
+          "weight": 10,
+          "condition": {
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -2611, "maxX": -2570, "minZ": 349, "maxZ": 379
+          }
+      },
+
+      {
+          "id": "raticate-15",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-19",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -1583, "maxX": -1468, "minY": 42, "maxY": 59, "minZ": -895, "maxZ": -826
+          }
+      },
+      {
+          "id": "raticate-16",
+          "pokemon": "raticate",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-19",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -1583, "maxX": -1468, "minY": 0, "maxY": 41, "minZ": -895, "maxZ": -826
+          }
+      },
+
+      {
+        "id": "raticate-17",
+        "pokemon": "raticate",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:plains",
+                "minecraft:sunflower_plains",
+                "minecraft:windswept_hills"
+            ]
+        }
+    }
+    ]
+}

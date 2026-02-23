@@ -1,0 +1,163 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "growlithe-1",
+          "pokemon": "growlithe",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-15",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,night",
+              "minX": 371, "maxX": 406, "minZ": -46, "maxZ": -27
+          }
+      },
+      {
+          "id": "growlithe-2",
+          "pokemon": "growlithe",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-15",
+          "weight": 15,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "day",
+              "minX": 371, "maxX": 406, "minZ": -46, "maxZ": -27
+          }
+      },
+
+      {
+          "id": "growlithe-3",
+          "pokemon": "growlithe",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-15",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,night",
+              "minX": 313, "maxX": 400, "minZ": 29, "maxZ": 135
+          }
+      },
+      {
+          "id": "growlithe-4",
+          "pokemon": "growlithe",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-15",
+          "weight": 15,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "day",
+              "minX": 313, "maxX": 400, "minZ": 29, "maxZ": 135
+          }
+      },
+
+      {
+          "id": "growlithe-5",
+          "pokemon": "growlithe",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "21-24",
+          "weight": 9,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": 1575, "maxX": 1618, "minZ": -296, "maxZ": -248
+          }
+      },
+      {
+          "id": "growlithe-6",
+          "pokemon": "growlithe",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "21-24",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": 1575, "maxX": 1618, "minZ": -296, "maxZ": -248
+          }
+      },
+
+      {
+          "id": "growlithe-7",
+          "pokemon": "growlithe",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-19",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "dawn,dusk,day",
+              "minX": -3103, "maxX": -3034, "minZ": 293, "maxZ": 344
+          }
+      },
+      {
+          "id": "growlithe-8",
+          "pokemon": "growlithe",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-19",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "timeRange": "night",
+              "minX": -3103, "maxX": -3034, "minZ": 293, "maxZ": 344
+          }
+      },
+
+      {
+          "id": "growlithe-9",
+          "pokemon": "growlithe",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-19",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -2611, "maxX": -2570, "minZ": 349, "maxZ": 379
+          }
+      }
+    ]
+}

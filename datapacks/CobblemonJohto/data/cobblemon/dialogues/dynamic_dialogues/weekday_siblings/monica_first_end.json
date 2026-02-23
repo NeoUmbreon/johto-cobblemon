@@ -1,0 +1,55 @@
+{   
+    "speakers": {
+    "npc": {
+        "name": "Monica",
+        "face": {
+            "type": "artificial",
+            "modelType": "npc",
+            "identifier": "cobblemon:lass",
+            "isLeftSide": true
+        }
+    }
+      },
+      "escapeAction": [              
+        ],
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "You should equip a bird Pokémon with that item."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "My brothers and sisters are all over the place. See if you could find them all!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        }
+        ]
+    }

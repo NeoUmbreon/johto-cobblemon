@@ -1,0 +1,30 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+    {
+        "id": "sableye-1",
+        "pokemon": "sableye",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "23",
+        "weight": 10000.0,
+        "condition": {
+            "minX": -642, "maxX": -538, "minZ": -51, "maxZ": 85,
+            "biomes": [
+                "minecraft:bamboo_jungle"
+            ],
+            "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ]
+        }
+    }
+
+      
+    ]
+}

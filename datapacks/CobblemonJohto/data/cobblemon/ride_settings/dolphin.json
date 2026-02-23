@@ -1,0 +1,14 @@
+{
+    "infiniteStamina": "true",
+    "canJump": "true",
+    "reverseDriveFactor": "0.25",
+    "strafeFactor": "0.2",
+    "timeToRollCorrect": "1.2",
+    "jumpExpr": "q.get_ride_stats('JUMP', 'LIQUID', 2.0, 1.0)",
+    "handlingExpr": "q.get_ride_stats('SKILL', 'LIQUID', 75.0, 10.0)",
+    "horizontalPitchExpr": "q.get_ride_stats('SKILL', 'LIQUID', 0.3, 0.2)",
+    "mouseInputMult": "q.get_ride_stats('SKILL', 'LIQUID', 1.2, 0.8)",
+    "speedExpr": "q.get_ride_stats('SPEED', 'LIQUID', 24.0, 2.0)",
+    "accelerationExpr": "q.get_ride_stats('ACCELERATION', 'LIQUID', 0.1, 8.0)",
+    "staminaExpr": "q.get_ride_stats('STAMINA', 'LIQUID', 20.0, 2.0)"
+}

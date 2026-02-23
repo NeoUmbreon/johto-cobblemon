@@ -1,0 +1,14 @@
+{
+    "infiniteStamina": "false",
+    "canJump": "true",
+    "speed": "0.3",
+    "driveFactor": "1.0",
+    "reverseDriveFactor": "0.25",
+    "rotationSpeed": "45/20",
+    "lookYawLimit": "101",
+    "speedExpr": "q.get_ride_stats('SPEED', 'LAND', 1.0, 0.3)",
+    "accelerationExpr": "q.get_ride_stats('ACCELERATION', 'LAND', (1.0 / (20.0 * 1.5)), (1.0 / (20.0 * 5.0)))",
+    "staminaExpr": "q.get_ride_stats('STAMINA', 'LAND', 30.0, 10.0)",
+    "jumpExpr": "q.get_ride_stats('JUMP', 'LAND', 10.0, 1.0)",
+    "handlingExpr": "q.get_ride_stats('SKILL', 'LAND', 140.0, 20.0)"
+}

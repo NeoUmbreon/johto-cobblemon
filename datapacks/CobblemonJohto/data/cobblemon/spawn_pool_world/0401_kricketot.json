@@ -1,0 +1,30 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+    {
+        "id": "kricketot-1",
+        "pokemon": "kricketot",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "3",
+        "weight": 10000.0,
+        "condition": {
+            "minX": -1686, "maxX": -1619, "minZ": 301, "maxZ": 394,
+            "biomes": [
+                "minecraft:bamboo_jungle"
+            ],
+            "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ]
+        }
+    }
+
+      
+    ]
+}

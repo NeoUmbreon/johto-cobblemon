@@ -1,0 +1,22 @@
+'Finds Pokemon of matching name in party and transacts trade';
+t.party_pokemon = q.player.party.find_all_by_properties(q.npc.config.trade_requested);
+t.trade_requested_min_level = q.npc.config.trade_requested_min_level;
+t.trade_offer = q.npc.config.trade_offered;
+t.found = 0;
+
+'Level Requirement for trade and Pokemon to Trade';
+for_each(t.trademon, t.party_pokemon, {
+  t.trademon.level >= t.trade_requested_min_level ? {
+    q.player.party.remove_by_id(t.trademon.id);
+    q.player.party.add_by_properties(t.trade_offer);
+    q.player.tell('§7§oYou traded Pokémon!§r');
+    q.run_command('playsound minecraft:egghatch ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');
+    t.found = 1;
+    break;
+  };
+});
+
+t.found ? return 1;
+
+q.player.tell('§c§lLevel up ' + q.npc.config.trade_requested_display + ' to level ' + t.trade_requested_min_level + ' to complete trade!§r');
+return t.found;

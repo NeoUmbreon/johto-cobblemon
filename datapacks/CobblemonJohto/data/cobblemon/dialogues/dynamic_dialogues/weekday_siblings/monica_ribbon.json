@@ -1,0 +1,319 @@
+{   
+        "initializationAction": [
+        "v.slot1 = q.player.party.get_pokemon(0);",
+        "v.slot2 = q.player.party.get_pokemon(1);",
+        "v.slot3 = q.player.party.get_pokemon(2);",
+        "v.slot4 = q.player.party.get_pokemon(3);",
+        "v.slot5 = q.player.party.get_pokemon(4);",
+        "v.slot6 = q.player.party.get_pokemon(5);"
+    ],
+
+    "speakers": {
+    "npc": {
+        "name": "Monica",
+        "face": {
+            "type": "artificial",
+            "modelType": "npc",
+            "identifier": "cobblemon:lass",
+            "isLeftSide": true
+        }
+    }
+      },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Hey, you! The one who found all of my siblings!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Yeah, you! We're pretty good friends now, don't you agree?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Since we're such good friends, I'll give you this Alert Ribbon!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "What Pokémon should I pin it on?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot1.species.name;"
+                        },
+                        "isVisible": "v.slot1 != 0",
+                        "value": "s1",
+                        "action": [
+                            "q.dialogue.set_page('page5');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run givemark @s 1 cobblemon:ribbon_day_alert');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot2.species.name;"
+                        },
+                        "isVisible": "v.slot2 != 0",
+                        "value": "s2",
+                        "action": [
+                            "q.dialogue.set_page('page6');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run givemark @s 2 cobblemon:ribbon_day_alert');"
+                ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot3.species.name;"
+                        },
+                        "isVisible": "v.slot3 != 0",
+                        "value": "s3",
+                        "action": [
+                            "q.dialogue.set_page('page7');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run givemark @s 3 cobblemon:ribbon_day_alert');"
+                ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot4.species.name;"
+                        },
+                        "isVisible": "v.slot4 != 0",
+                        "value": "s4",
+                        "action": [
+                            "q.dialogue.set_page('page8');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run givemark @s 4 cobblemon:ribbon_day_alert');"
+                    ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot5.species.name;"
+                        },
+                        "isVisible": "v.slot5 != 0",
+                        "value": "s5",
+                        "action": [
+                            "q.dialogue.set_page('page9');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run givemark @s 5 cobblemon:ribbon_day_alert');"
+                    ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot6.species.name;"
+                        },
+                        "isVisible": "v.slot6 != 0",
+                        "value": "s6",
+                        "action": [
+                            "q.dialogue.set_page('page10');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run givemark @s 6 cobblemon:ribbon_day_alert');"
+                    ]
+                    }
+                ]
+            }
+
+        },
+
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'That Alert Ribbon looks great on your ' + v.slot1.species.name + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'That Alert Ribbon looks great on your ' + v.slot2.species.name + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'That Alert Ribbon looks great on your ' + v.slot3.species.name + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'That Alert Ribbon looks great on your ' + v.slot4.species.name + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'That Alert Ribbon looks great on your ' + v.slot5.species.name + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'That Alert Ribbon looks great on your ' + v.slot6.species.name + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        }
+        ]
+    }

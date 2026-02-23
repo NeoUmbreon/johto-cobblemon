@@ -1,0 +1,112 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "mareep-1",
+          "pokemon": "mareep",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "4-6",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+                "timeRange": "dawn,dusk,day",
+              "minX": 106, "maxX": 203, "minZ": -548, "maxZ": -232
+          }
+      },
+      {
+          "id": "mareep-2",
+          "pokemon": "mareep",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "4-6",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+                "timeRange": "night",
+              "minX": 106, "maxX": 203, "minZ": -548, "maxZ": -232
+          }
+      },
+
+      {
+          "id": "mareep-3",
+          "pokemon": "mareep",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "14-16",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -59, "maxX": -4, "minZ": 154, "maxZ": 177
+          }
+      },
+
+      {
+          "id": "mareep-4",
+          "pokemon": "mareep",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-17",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+                "timeRange": "dawn,dusk,day",
+              "minX": -224, "maxX": -79, "minZ": 303, "maxZ": 523
+          }
+      },
+      {
+          "id": "mareep-5",
+          "pokemon": "mareep",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-17",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+                "timeRange": "night",
+              "minX": -224, "maxX": -79, "minZ": 303, "maxZ": 523
+          }
+      },
+
+      {
+        "id": "mareep-6",
+        "pokemon": "mareep",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:stony_shore"
+            ]
+            }
+        }
+    ]
+}

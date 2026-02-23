@@ -1,0 +1,29 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Cascade Badge",
+            "color": "blue"
+        },
+        "description": {
+            "text": "Defeat Misty in battle"
+        },
+        "icon": {
+            "id": "cobblemon:mystic_water"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+
+        "commandonly": {
+
+            "trigger": "minecraft:impossible"
+
+        }
+
+    },
+    "parent": "johto:badges/kanto/badge1"
+}

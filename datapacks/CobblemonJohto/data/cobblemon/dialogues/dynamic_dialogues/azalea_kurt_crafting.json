@@ -1,0 +1,596 @@
+{
+    "initializationAction": [
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:white_apricorn\"}]}] add WhiteHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:green_apricorn\"}]}] add GreenHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:black_apricorn\"}]}] add BlackHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:red_apricorn\"}]}] add RedHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:pink_apricorn\"}]}] add PinkHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:blue_apricorn\"}]}] add BlueHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s[nbt={Inventory:[{id:\"cobblemon:yellow_apricorn\"}]}] add YellowHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove 1Have');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove 5Have');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove 10Have');",
+        "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Temp 0');"
+    ],
+    "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove WhiteHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove GreenHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove BlackHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove RedHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove PinkHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove BlueHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove YellowHave');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove 1Have');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove 5Have');",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s remove 10Have');",
+        "q.dialogue.close();"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Kurt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:kurt",
+                "isLeftSide": true
+            }
+        },
+        "player": {
+            "face": "q.player.face(true);",
+            "name": {
+                "type": "expression",
+                "expression": "q.player.username"
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "You have Apricorns for me? Fine! I'll turn them into Poké Balls."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Craft",
+                        "value": "craft",
+                        "action": [
+                            "q.dialogue.set_page('pick1');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.dialogue.set_page('bye1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pick1",
+            "speaker": "npc",
+            "lines": [
+                "Which ball would you like me to craft?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('WhiteHave')",
+                        "text": "Fast Ball",
+                        "value": "fastball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run execute as @a store result score @s Temp run clear @s cobblemon:white_apricorn 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=1..}] add 1Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=5..}] add 5Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=10..}] add 10Have');",
+                            "q.dialogue.set_page('whitepick');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('GreenHave')",
+                        "text": "Friend Ball",
+                        "value": "friendball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run execute as @a store result score @s Temp run clear @s cobblemon:green_apricorn 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=1..}] add 1Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=5..}] add 5Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=10..}] add 10Have');",
+                            "q.dialogue.set_page('greenpick');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('BlackHave')",
+                        "text": "Heavy Ball",
+                        "value": "heavyball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run execute as @a store result score @s Temp run clear @s cobblemon:black_apricorn 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=1..}] add 1Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=5..}] add 5Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=10..}] add 10Have');",
+                            "q.dialogue.set_page('blackpick');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('RedHave')",
+                        "text": "Level Ball",
+                        "value": "levelball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run execute as @a store result score @s Temp run clear @s cobblemon:red_apricorn 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=1..}] add 1Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=5..}] add 5Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=10..}] add 10Have');",
+                            "q.dialogue.set_page('redpick');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('PinkHave')",
+                        "text": "Love Ball",
+                        "value": "loveball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run execute as @a store result score @s Temp run clear @s cobblemon:pink_apricorn 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=1..}] add 1Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=5..}] add 5Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=10..}] add 10Have');",
+                            "q.dialogue.set_page('pinkpick');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('BlueHave')",
+                        "text": "Lure Ball",
+                        "value": "lureball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run execute as @a store result score @s Temp run clear @s cobblemon:blue_apricorn 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=1..}] add 1Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=5..}] add 5Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=10..}] add 10Have');",
+                            "q.dialogue.set_page('bluepick');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('YellowHave')",
+                        "text": "Moon Ball",
+                        "value": "moonball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run execute as @a store result score @s Temp run clear @s cobblemon:yellow_apricorn 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=1..}] add 1Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=5..}] add 5Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s[scores={Temp=10..}] add 10Have');",
+                            "q.dialogue.set_page('yellowpick');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "whitepick",
+            "speaker": "npc",
+            "lines": [
+                "A Ball that catches Fast Pokémon. How many did you want me to make you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('1Have')",
+                        "text": "1 Ball",
+                        "value": "1ball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:white_apricorn 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:fast_ball 1');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('5Have')",
+                        "text": "5 Balls",
+                        "value": "5balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:white_apricorn 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:fast_ball 5');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('10Have')",
+                        "text": "10 Balls",
+                        "value": "10balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:white_apricorn 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:fast_ball 10');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greenpick",
+            "speaker": "npc",
+            "lines": [
+                "A Ball that makes Pokémon like you. How many did you want me to make you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('1Have')",
+                        "text": "1 Ball",
+                        "value": "1ball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:green_apricorn 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:friend_ball 1');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('5Have')",
+                        "text": "5 Balls",
+                        "value": "5balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:green_apricorn 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:friend_ball 5');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('10Have')",
+                        "text": "10 Balls",
+                        "value": "10balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:green_apricorn 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:friend_ball 10');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "blackpick",
+            "speaker": "npc",
+            "lines": [
+                "A Ball that catches Heavier Pokémon Easier. How many did you want me to make you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('1Have')",
+                        "text": "1 Ball",
+                        "value": "1ball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:black_apricorn 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:heavy_ball 1');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('5Have')",
+                        "text": "5 Balls",
+                        "value": "5balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:black_apricorn 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:heavy_ball 5');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('10Have')",
+                        "text": "10 Balls",
+                        "value": "10balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:black_apricorn 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:heavy_ball 10');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "redpick",
+            "speaker": "npc",
+            "lines": [
+                "The bigger the difference in level between your Pokémon and the Capture Target, the more likely the capture. How many did you want me to make you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('1Have')",
+                        "text": "1 Ball",
+                        "value": "1ball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:red_apricorn 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:level_ball 1');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('5Have')",
+                        "text": "5 Balls",
+                        "value": "5balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:red_apricorn 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:level_ball 5');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('10Have')",
+                        "text": "10 Balls",
+                        "value": "10balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:red_apricorn 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:level_ball 10');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pinkpick",
+            "speaker": "npc",
+            "lines": [
+                "This ball works better on Pokémon of the opposite Gender. How many did you want me to make you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('1Have')",
+                        "text": "1 Ball",
+                        "value": "1ball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:pink_apricorn 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:love_ball 1');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('5Have')",
+                        "text": "5 Balls",
+                        "value": "5balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:pink_apricorn 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:love_ball 5');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('10Have')",
+                        "text": "10 Balls",
+                        "value": "10balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:pink_apricorn 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:love_ball 10');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "bluepick",
+            "speaker": "npc",
+            "lines": [
+                "This ball works better on Pokémon snagged with Fishing Rod. How many did you want me to make you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('1Have')",
+                        "text": "1 Ball",
+                        "value": "1ball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:blue_apricorn 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:lure_ball 1');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('5Have')",
+                        "text": "5 Balls",
+                        "value": "5balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:blue_apricorn 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:lure_ball 5');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('10Have')",
+                        "text": "10 Balls",
+                        "value": "10balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:blue_apricorn 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:lure_ball 10');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "yellowpick",
+            "speaker": "npc",
+            "lines": [
+                "This ball works better on Pokémon that evolve with Moon Stone. How many did you want me to make you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "isSelectable": "q.player.has_tag('1Have')",
+                        "text": "1 Ball",
+                        "value": "1ball",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:yellow_apricorn 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:moon_ball 1');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('5Have')",
+                        "text": "5 Balls",
+                        "value": "5balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:yellow_apricorn 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:moon_ball 5');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    },
+                    {
+                        "isSelectable": "q.player.has_tag('10Have')",
+                        "text": "10 Balls",
+                        "value": "10balls",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s cobblemon:yellow_apricorn 10');",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:moon_ball 10');",
+                            "q.dialogue.set_page('page2');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Just one second!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page3');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:block.anvil.use ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page4');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "I just finished your Poké Ball. Here!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.dialogue.set_page('page5');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "That turned out great. Try catching Pokémon with it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove WhiteHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove GreenHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove BlackHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove RedHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove PinkHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove BlueHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove YellowHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove 1Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove 5Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove 10Have');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "bye1",
+            "speaker": "npc",
+            "lines": [
+                "Oh... That's a letdown."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove WhiteHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove GreenHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove BlackHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove RedHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove PinkHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove BlueHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove YellowHave');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove 1Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove 5Have');",
+                            "q.run_command('execute as ' + q.player.username + ' run tag @s remove 10Have');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

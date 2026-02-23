@@ -1,0 +1,1767 @@
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Bicycle Follow-up call
+#execute as @s[score_BicycleCD=0,score_Bicycle_min=1,score_Bicycle=1,tag=Bicycle] run scoreboard players set @s[tag=!Dialogue26,score_TalkTime=0] DialogueTrigger 26
+
+tellraw @s[scores={DialogueTrigger=26,TalkTime=5}] ["",{"text":"<Bicycle Clerk> Hi, "},{"selector":"@s"},{"text":"! Our Bicycle sales have gone through the roof!"}]
+tellraw @s[scores={DialogueTrigger=26,TalkTime=15}] {"text":"<Bicycle Clerk> We owe it all to your advertising by riding around on our Bicycle."}
+tellraw @s[scores={DialogueTrigger=26,TalkTime=25}] {"text":"<Bicycle Clerk> As our way of saying thanks, please keep that Bicycle. Thanks again!"}
+execute as @s[scores={DialogueTrigger=26,TalkTime=25}] run scoreboard players set @s Bicycle 2
+
+tag @s[scores={DialogueTrigger=26,TalkTime=25..}] add Dialogue26
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#https://youtu.be/HQEaaIuyKAM?t=7812
+#Goldenrod City Radio Tower Lucky Number Show
+#Resets when player leaves the building
+#execute as @s[x=506,y=31,z=-272,distance=..10,tag=LuckyNumberTalk] run scoreboard players set @s DialogueTrigger 25
+
+tellraw @s[scores={DialogueTrigger=25,TalkTime=1}] {"text":"<DJ Reed> Hi, are you here for the Lucky Number Show? Want me to check the ID numbers of your Pokémon?"}
+tellraw @s[scores={DialogueTrigger=25,TalkTime=11}] {"text":"<DJ Reed> If you get lucky, you win a prize."}
+tellraw @s[scores={DialogueTrigger=25,TalkTime=18}] {"text":"<DJ Reed> Throw out a Pokémon, and let see if you have a match."}
+
+tag @s[scores={DialogueTrigger=25,TalkTime=18..}] add Dialogue25
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Legendary Dog statues
+#scoreboard players set @a[x=444,y=58,z=328,distance=..5,tag=!Dialogue36] DialogueTrigger 36
+
+#Raikou
+execute as @s[scores={DialogueTrigger=36,TalkTime=2}] run data merge block 439 59 328 {PokeDisplayPokemon:{ndex:243,Growth:3b},PokeDisplayTextureMode:0}
+execute as @s[scores={DialogueTrigger=36,TalkTime=2}] run playsound raikou hostile @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=36,TalkTime=5}] run playsound flee ambient @s ~ ~ ~ 100 1 1
+execute as @s[scores={DialogueTrigger=36,TalkTime=5}] run particle cloud 439 59 328 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=36,TalkTime=5}] run setblock 439 59 328 minecraft:air
+
+#Entei
+execute as @s[scores={DialogueTrigger=36,TalkTime=8}] run data merge block 446 59 328 {PokeDisplayPokemon:{ndex:244,Growth:3b},PokeDisplayTextureMode:0}
+execute as @s[scores={DialogueTrigger=36,TalkTime=8}] run playsound entei hostile @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=36,TalkTime=11}] run playsound flee hostile @s ~ ~ ~ 100 1 1
+execute as @s[scores={DialogueTrigger=36,TalkTime=11}] run particle cloud 446 59 328 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=36,TalkTime=11}] run setblock 446 59 328 minecraft:air
+
+#Suicune
+execute as @s[scores={DialogueTrigger=36,TalkTime=14}] run data merge block 443 59 328 {PokeDisplayPokemon:{ndex:245,Growth:3b},PokeDisplayTextureMode:0}
+execute as @s[scores={DialogueTrigger=36,TalkTime=14}] run playsound suicune hostile @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=36,TalkTime=17}] run playsound flee hostile @s ~ ~ ~ 100 1 1
+execute as @s[scores={DialogueTrigger=36,TalkTime=17}] run particle cloud 443 59 328 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=36,TalkTime=17}] run setblock 443 59 328 minecraft:air
+
+
+tellraw @s[scores={DialogueTrigger=36,TalkTime=22}] {"text":"You can now find Entei and Raikou anytime in the wild grass!","italic":true,"color":"gray"}
+execute as @s[scores={DialogueTrigger=36,TalkTime=22}] run scoreboard players set @s DogEncounter 1
+execute as @s[scores={DialogueTrigger=36,TalkTime=22}] run scoreboard players set @s DogSpawn 0
+execute as @s[scores={DialogueTrigger=36,TalkTime=22}] run advancement grant @s only johto:event3
+
+tag @s[scores={DialogueTrigger=36,TalkTime=22..}] add Dialogue36
+
+
+#Dog Statue Resets
+#setblock 439 59 328 pixelmon:poke_display[facing=north]{PokeDisplayPokemon:{ndex:2004,Growth:2b},PokeDisplayTextureMode:1} replace
+#setblock 446 59 328 pixelmon:poke_display[facing=north]{PokeDisplayPokemon:{ndex:2005,Growth:2b},PokeDisplayTextureMode:1} replace
+#setblock 443 59 328 pixelmon:poke_display[facing=north]{PokeDisplayPokemon:{ndex:2006,Growth:2b},PokeDisplayTextureMode:1} replace
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Mr. Pokémon asking about the Red Scale if player brings it to him
+#scoreboard players set @a[x=-255,y=63,z=-198,dx=20,dy=5,dz=8,score_DialogueTrigger=0,tag=!Dialogue50] DialogueTrigger 50 {Inventory:[{id:"minecraft:music_disc_cat"}]}
+
+tellraw @s[scores={DialogueTrigger=50,TalkTime=1}] {"text":"<Mr. Pokémon> Hm? That Scale! What's that?"}
+tellraw @s[scores={DialogueTrigger=50,TalkTime=9}] {"text":"<Mr. Pokémon> A red Gyarados? That's rare! I, I want it..."}
+tellraw @s[scores={DialogueTrigger=50,TalkTime=17}] ["",{"text":"<Mr. Pokémon> "},{"selector":"@s"},{"text":", would you care to trade it?"}]
+tellraw @s[scores={DialogueTrigger=50,TalkTime=25}] {"text":"<Mr. Pokémon> I can offer this Exp. Share I got from Professor Oak."}
+tellraw @s[scores={DialogueTrigger=50,TalkTime=25}] ["",{"text":"["},{"text":"Yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 47"}},{"text":"]"}]
+execute as @s[scores={DialogueTrigger=50,TalkTime=25}] run scoreboard players enable @s TriggerCommand
+
+tag @s[scores={DialogueTrigger=50,TalkTime=25..}] add Dialogue50
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Sets up Goldenrod City for takeover
+
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue64] run execute @s[tag=!Dialogue72] run tp @e[x=-791,y=92,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 546 64 -350
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue64] run execute @s[tag=!Dialogue72] run tp @e[x=-785,y=92,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 495 64 -392
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue64] run execute @s[tag=!Dialogue72] run tp @e[x=-787,y=92,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 425 64 -380
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue64] run execute @s[tag=!Dialogue72] run tp @e[x=-789,y=92,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 420 64 -380
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue64] run execute @s[tag=!Dialogue72] run tp @e[x=-783,y=92,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 560 64 -352
+
+#Lone guy outside Radio Tower all story
+#execute @a[x=560,y=64,z=-352,distance=..100,tag=!Dialogue72] run tp @e[x=-783,y=92,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 560 64 -352
+
+
+#Tps NPCs out after Takeover
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue72] run tp @e[x=546,y=63,z=-350,dy=3,nbt=!{cobblemon:npc_chatting}] -791 93 -242
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue72] run tp @e[x=495,y=63,z=-392,dy=3,nbt=!{cobblemon:npc_chatting}] -785 93 -242
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue72] run tp @e[x=425,y=63,z=-380,dy=3,nbt=!{cobblemon:npc_chatting}] -787 93 -242
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue72] run tp @e[x=420,y=63,z=-380,dy=3,nbt=!{cobblemon:npc_chatting}] -789 93 -242
+#execute @a[x=349,y=63,z=-461,dx=239,dy=10,dz=194,tag=Dialogue72] run tp @e[x=560,y=63,z=-352,dy=3,nbt=!{cobblemon:npc_chatting}] -783 93 -242
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Radio Tower Post-Rocket Takeover gift
+#execute as @s[x=517,y=42,z=-267,distance=..5,score_TalkTime=0,tag=Dialogue72] run scoreboard players set @s[tag=!Dialogue75] DialogueTrigger 75
+
+tellraw @s[scores={DialogueTrigger=75,TalkTime=1}] {"text":"<Radio Worker> Thank you! You're my hero! This is a token of my appreciation."}
+execute as @s[scores={DialogueTrigger=75,TalkTime=4}] run give @s pixelmon:tm_gen2{tm:11}
+execute as @s[scores={DialogueTrigger=75,TalkTime=4}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tag @s[scores={DialogueTrigger=75,TalkTime=4..}] add Dialogue75
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Route 43 gate reward after beating Team Rocket in their HQ
+#execute as @s[x=-183,y=64,z=352,distance=..5,tag=Dialogue64] run scoreboard players set @s[tag=!Dialogue76] DialogueTrigger 76
+
+tellraw @s[scores={DialogueTrigger=76,TalkTime=1}] {"text":"<Officer Jenny> I got chased from my post by these thugs in black."}
+tellraw @s[scores={DialogueTrigger=76,TalkTime=10}] {"text":"<Officer Jenny> They left this behind. It makes me uncomfortable."}
+tellraw @s[scores={DialogueTrigger=76,TalkTime=19}] {"text":"<Officer Jenny> Could you take it away?"}
+execute as @s[scores={DialogueTrigger=76,TalkTime=22}] run give @s pixelmon:tm_gen2{tm:36}
+execute as @s[scores={DialogueTrigger=76,TalkTime=22}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tag @s[scores={DialogueTrigger=76,TalkTime=22..}] add Dialogue76
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Mr Pokémon giving an orb after the Elite Four
+#execute as @s[x=-255,y=63,z=-198,dx=20,dy=5,dz=8,score_DialogueTrigger=0,score_IP_min=1] run scoreboard players set @s[tag=!Dialogue102] DialogueTrigger 102
+
+tellraw @s[scores={DialogueTrigger=102,TalkTime=1}] ["",{"text":"<Mr. Pokémon> Hi, "},{"selector":"@s"},{"text":"! I have something I want you to have and was just about to send an email to Professor Oak."}]
+tellraw @s[scores={DialogueTrigger=102,TalkTime=13}] {"text":"<Mr. Pokémon> The thing is..."}
+tellraw @s[scores={DialogueTrigger=102,TalkTime=18}] {"text":"<Mr. Pokémon> A friend of mine from Hoenn came over to give this to me."}
+
+#Rolls for which orb player gets
+execute as @s[scores={DialogueTrigger=102,TalkTime=21}] run scoreboard players set @e[x=-867,y=69,z=-207,dy=4,dz=2] rng 0
+execute as @s[scores={DialogueTrigger=102,TalkTime=21}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 1
+execute as @s[scores={DialogueTrigger=102,TalkTime=21}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 2
+execute as @s[scores={DialogueTrigger=102,TalkTime=21}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 4
+execute as @s[scores={DialogueTrigger=102,TalkTime=21}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 8
+execute as @s[scores={DialogueTrigger=102,TalkTime=21}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 16
+execute as @s[scores={DialogueTrigger=102,TalkTime=21}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 32
+execute as @s[scores={DialogueTrigger=102,TalkTime=21}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 64
+
+execute as @s[scores={DialogueTrigger=102,TalkTime=22}] run scoreboard players operation @s rng = @e[x=-867,y=69,z=-205,dy=3,type=armor_stand] rng
+
+execute as @s[scores={DialogueTrigger=102,TalkTime=23,rng=0..63}] run give @s pixelmon:blue_orb
+execute as @s[scores={DialogueTrigger=102,TalkTime=23,rng=64..127}] run give @s pixelmon:red_orb
+execute as @s[scores={DialogueTrigger=102,TalkTime=23,rng=0..63}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={DialogueTrigger=102,TalkTime=23,rng=64..127}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tellraw @s[scores={DialogueTrigger=102,TalkTime=26}] {"text":"<Mr. Pokémon> That Orb has something to do with the ancient ruins located past Cianwood City, called the Embedded Tower."}
+tellraw @s[scores={DialogueTrigger=102,TalkTime=37}] {"text":"<Mr. Pokémon> But only a handful of Trainers can reach there... That's where you come in."}
+tellraw @s[scores={DialogueTrigger=102,TalkTime=47}] {"text":"<Mr. Pokémon> Professor Oak thinks highly of you, and you are the proud Champion after all."}
+tellraw @s[scores={DialogueTrigger=102,TalkTime=57}] {"text":"<Mr. Pokémon> I'm sure you can solve the mystery of the Orb and the secret of the ruins."}
+
+tag @s[scores={DialogueTrigger=102,TalkTime=60..}] add Dialogue102
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Obtaining the GS ball from Goldenrod City Poke Center
+#scoreboard players set @a[x=498,y=64,z=-414,distance=..5,score_TalkTime=0,score_IP_min=1,tag=!Dialogue106] DialogueTrigger 106
+
+tellraw @s[scores={DialogueTrigger=106,TalkTime=1}] ["",{"text":"<Nurse Joy> "},{"selector":"@s"},{"text":", isn't it?"}]
+tellraw @s[scores={DialogueTrigger=106,TalkTime=8}] {"text":"<Nurse Joy> Congratulations!"}
+tellraw @s[scores={DialogueTrigger=106,TalkTime=13}] {"text":"<Nurse Joy> As a special deal, a GS Ball has been sent just for you!"}
+tellraw @s[scores={DialogueTrigger=106,TalkTime=21}] {"text":"<Nurse Joy> Please accept it!"}
+execute as @s[scores={DialogueTrigger=106,TalkTime=24}] run give @s pixelmon:poke_ball{PokeBallID:"gs_ball",display:{Lore:['[{"text":"A mysterious Ball.","italic":false}]','[{"text":"It seems to have some","italic":false}]','[{"text":"connection to Ilex Forest.","italic":false}]']}} 1
+execute as @s[scores={DialogueTrigger=106,TalkTime=24}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+tellraw @s[scores={DialogueTrigger=106,TalkTime=29}] {"text":"<Nurse Joy> Please do come again!"}
+
+tag @s[scores={DialogueTrigger=106,TalkTime=29..}] add Dialogue106
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Kurt inspecting the GS Ball
+#scoreboard players set @a[x=354,y=63,z=-704,dx=19,dy=5,dz=8,tag=!Dialogue107] DialogueTrigger 107 {Inventory:[{id:"pixelmon:gs_ball"}]}
+
+execute as @s[scores={DialogueTrigger=107,TalkTime=1}] run clear @s pixelmon:gs_ball{PokeBallID:"gs_ball"}
+tellraw @s[scores={DialogueTrigger=107,TalkTime=1}] {"text":"<Kurt> Wh-what is that? I've never seen one before."}
+tellraw @s[scores={DialogueTrigger=107,TalkTime=10}] {"text":"<Kurt> It looks a lot like a Poke Ball, but it appears to be something else."}
+tellraw @s[scores={DialogueTrigger=107,TalkTime=21}] {"text":"<Kurt> Let me check it for you. "}
+
+tag @s[scores={DialogueTrigger=107,TalkTime=21..}] add Dialogue107
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Kurt after he's inspected the ball for a day (or until the daily commands run)
+#execute as @s[x=354,y=63,z=-704,dx=19,dy=5,dz=8,score_TalkTime=0,tag=Dialogue107] run execute @s[tag=GSBallReady] run scoreboard players set @s[tag=!Dialogue108] DialogueTrigger 108
+#scoreboard players tag @a[tag=Dialogue107] add GSBallReady
+
+tellraw @s[scores={DialogueTrigger=108,TalkTime=1}] ["",{"text":"<Kurt> "},{"selector":"@s"},{"text":"!"}]
+tellraw @s[scores={DialogueTrigger=108,TalkTime=6}] {"text":"<Kurt> This Ball started to shake while I was checking it."}
+tellraw @s[scores={DialogueTrigger=108,TalkTime=13}] {"text":"<Kurt> There must be something to this! "}
+tellraw @s[scores={DialogueTrigger=108,TalkTime=20}] {"text":"<Kurt> ...???"}
+tellraw @s[scores={DialogueTrigger=108,TalkTime=27}] {"text":"<Kurt> Ilex Forest is restless!"}
+tellraw @s[scores={DialogueTrigger=108,TalkTime=34}] {"text":"<Kurt> What is going on? ..."}
+tellraw @s[scores={DialogueTrigger=108,TalkTime=42}] ["",{"text":"<Kurt> "},{"selector":"@s"},{"text":", here's your GS Ball back!"}]
+tellraw @s[scores={DialogueTrigger=108,TalkTime=50}] {"text":"<Kurt> Could you go see why Ilex Forest is so restless? "}
+execute as @s[scores={DialogueTrigger=108,TalkTime=53}] run give @s pixelmon:poke_ball{PokeBallID:"gs_ball",display:{Lore:['[{"text":"A mysterious Ball.","italic":false}]','[{"text":"It seems to have some","italic":false}]','[{"text":"connection to Ilex Forest.","italic":false}]']}} 1
+execute as @s[scores={DialogueTrigger=108,TalkTime=53}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+#Enables particles in the Ilex Forest
+execute as @s[scores={DialogueTrigger=108,TalkTime=3}] run setblock -861 64 -305 minecraft:redstone_block
+#execute as @s[x=617,y=66,z=-696,distance=..20,tag=Dialogue108,limit=1] run particle reddust 617 66 -696.5 -1 1 0 1
+
+tag @s[scores={DialogueTrigger=108,TalkTime=53..}] add Dialogue108
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Ilex Forest Shrine when player can throw the GS ball into it
+#execute as @s[x=617,y=65,z=-696,distance=..10,score_TalkTime=0,tag=Dialogue108] run scoreboard players set @s[tag=!Dialogue109] DialogueTrigger 109
+
+tellraw @s[scores={DialogueTrigger=109,TalkTime=1}] {"text":"Ilex Forest Shrine.","italic":true}
+tellraw @s[scores={DialogueTrigger=109,TalkTime=8}] {"text":"It's in honor of the forest's protector.","italic":true}
+tellraw @s[scores={DialogueTrigger=109,TalkTime=16}] {"text":"Oh? What is this? It's a hole.","italic":true}
+tellraw @s[scores={DialogueTrigger=109,TalkTime=24}] {"text":"It looks like the GS Ball would fit inside it.","italic":true}
+
+tag @s[scores={DialogueTrigger=109,TalkTime=24..}] add Dialogue109
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Summons Celebi
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Jirachi Give (Any Pokémon Center after all gyms are beaten)
+#execute as @e[type=armor_stand,name=Mystery_Gift] ~1 ~ ~4 execute @a[r=5,tag=AllGyms,score_TalkTime=0] run scoreboard players set @s[tag=!Dialogue132] DialogueTrigger 132
+
+tellraw @s[scores={DialogueTrigger=132,TalkTime=1}] {"text":"<Shopkeeper> Good morning. I've received a gift for you!"}
+execute as @s[scores={DialogueTrigger=132,TalkTime=4}] run pokegive @s Jirachi helditem:liechi_berry ball:cherish_ball lvl:5 ribbon:classic originaltrainername:SMR2010
+execute as @s[scores={DialogueTrigger=132,TalkTime=4}] run give @s pixelmon:gold_bottle_cap{display:{Lore:["A beautiful bottle cap that gives off","a golden gleam. Some people are","happy to receive one."]}}
+execute as @s[scores={DialogueTrigger=132,TalkTime=4}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tag @s[scores={DialogueTrigger=132,TalkTime=4..}] add Dialogue132
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Manaphy Egg Sailor Event
+#scoreboard players set @a[x=923,y=64,z=-73,distance=..10,score_TalkTime=0,score_IP_min=1,tag=!Dialogue140] DialogueTrigger 140
+
+
+tellraw @s[scores={DialogueTrigger=140,TalkTime=1}] {"text":"<Sailor> The ocean is so beautiful, isn't it?"}
+tellraw @s[scores={DialogueTrigger=140,TalkTime=8}] {"text":"<Sailor> You look like you have proven yourself as a trainer."}
+tellraw @s[scores={DialogueTrigger=140,TalkTime=26}] {"text":"<Sailor> Please take this, and help preserve the beauty of the seas!"}
+execute as @s[scores={DialogueTrigger=140,TalkTime=31}] run pokegive @s Manaphy egg ball:cherish_ball originaltrainername:NZ ribbon:classic helditem:lansat_berry
+execute as @s[scores={DialogueTrigger=140,TalkTime=31}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tag @s[scores={DialogueTrigger=140,TalkTime=31..}] add Dialogue140
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Elm giving the Shiny Charm post-Red
+#execute as @s[x=-693,y=63,z=-490,dx=20,dy=5,dz=20,score_DialogueTrigger=0,tag=Dialogue101] run execute @s[tag=Red] run scoreboard players set @s[tag=!Dialogue141] DialogueTrigger 141
+
+execute as @s[scores={DialogueTrigger=141,TalkTime=1}] run scoreboard players set @s click 1
+tellraw @s[scores={DialogueTrigger=141,TalkTime=1}] ["",{"text":"<Professor Elm> Hi "},{"selector":"@s"},{"text":"! How is your Pokédex coming along?"}]
+tellraw @s[scores={DialogueTrigger=141,TalkTime=9}] {"text":"<Professor Elm> You've been meeting new Pokémon at a great pace, haven't you?"}
+tellraw @s[scores={DialogueTrigger=141,TalkTime=17}] {"text":"<Professor Elm> Here, take this as a little reward for all your hard work!"}
+
+execute as @s[scores={DialogueTrigger=141,TalkTime=24}] run data merge entity @e[limit=1,x=-801,y=64,z=-284,dy=3,type=armor_stand] {CustomName:'{"text":"Professor Elm"}'}
+execute as @s[scores={DialogueTrigger=141,TalkTime=25}] run shinycharm @s
+execute as @s[scores={DialogueTrigger=141,TalkTime=26}] run data merge entity @e[limit=1,x=-801,y=64,z=-284,dy=3,type=armor_stand] {CustomName:'{"text":"Pixelmon Johto"}'}
+
+tellraw @s[scores={DialogueTrigger=141,TalkTime=32}] {"text":"<Professor Elm> Having a Shiny Charm will improve your chances of finding a Shiny Pokémon!"}
+
+tag @s[scores={DialogueTrigger=141,TalkTime=32..}] add Dialogue141
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Mr. Pokémon after encounter with Kyogre or Groudon, depends on orb
+#execute @a[x=-255,y=63,z=-198,dx=20,dy=5,dz=8,score_TalkTime=0,score_DialogueTrigger=0,score_Groudon_min=1,tag=Dialogue102] run scoreboard players set @s[tag=!Dialogue143] DialogueTrigger 143
+#execute as @s[x=-255,y=63,z=-198,dx=20,dy=5,dz=8,score_TalkTime=0,score_DialogueTrigger=0,score_Kyogre_min=1,tag=Dialogue102] run scoreboard players set @s[tag=!Dialogue143] DialogueTrigger 143
+
+#Give Kyogre Orb
+tellraw @s[scores={DialogueTrigger=143,TalkTime=1,Groudon=1..}] {"text":"<Mr. Pokémon> Wow! That Red Orb summoned Groudon? Incredible!"}
+tellraw @s[scores={DialogueTrigger=143,TalkTime=11,Groudon=1..}] {"text":"<Mr. Pokémon> So I suppose this Blue Orb summons Kyogre?"}
+execute as @s[scores={DialogueTrigger=143,TalkTime=15,Groudon=1..}] run give @s pixelmon:blue_orb
+execute as @s[scores={DialogueTrigger=143,TalkTime=15,Groudon=1..}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+#Give Groudon Orb
+tellraw @s[scores={DialogueTrigger=143,TalkTime=1,Kyogre=1..}] {"text":"<Mr. Pokémon> Wow! That Blue Orb summoned Kyogre? Incredible!"}
+tellraw @s[scores={DialogueTrigger=143,TalkTime=11,Kyogre=1..}] {"text":"<Mr. Pokémon> So I suppose this Red Orb summons Groudon?"}
+execute as @s[scores={DialogueTrigger=143,TalkTime=15,Kyogre=1..}] run give @s pixelmon:red_orb
+execute as @s[scores={DialogueTrigger=143,TalkTime=15,Kyogre=1..}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tag @s[scores={DialogueTrigger=143,TalkTime=15..}] add Dialogue143
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Mr. Pokémon after encountering both Kyogre and Groudon
+#execute as @s[x=-255,y=63,z=-198,dx=20,dy=5,dz=8,score_Groudon_min=1,score_Kyogre_min=1,tag=Dialogue143] run scoreboard players set @s[tag=!Dialogue144] DialogueTrigger 144
+
+tellraw @s[scores={DialogueTrigger=144,TalkTime=1}] {"text":"<Mr. Pokémon> I am amazed!"}
+tellraw @s[scores={DialogueTrigger=144,TalkTime=7}] {"text":"<Mr. Pokémon> So if each color is to a legendary Pokémon, this Green Orb would be to Rayquaza, right?"}
+execute as @s[scores={DialogueTrigger=144,TalkTime=12}] run give @s pixelmon:jade_orb
+execute as @s[scores={DialogueTrigger=144,TalkTime=12}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+tellraw @s[scores={DialogueTrigger=144,TalkTime=19}] {"text":"<Mr. Pokémon> Fascinating! Thank you for doing all this."}
+
+tag @s[scores={DialogueTrigger=144,TalkTime=19..}] add Dialogue144
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Chuck on the way to the Embedded Tower after talking with Mr. Pokémon
+#execute as @s[x=1317,y=64,z=-370,distance=..7,score_TalkTime=0,tag=Dialogue102] run scoreboard players set @s[tag=!Dialogue145] DialogueTrigger 145
+
+#tp Chuck in
+#execute as @s[x=1317,y=64,z=-370,distance=..30,tag=Dialogue102] run execute @s[tag=!Dialogue145] run /tp @e[x=-718,y=90,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 1317 64 -370
+
+tellraw @s[scores={DialogueTrigger=145,TalkTime=1}] ["",{"text":"<Chuck> Hey, "},{"selector":"@s"},{"text":"! Good to see you again!"}]
+tellraw @s[scores={DialogueTrigger=145,TalkTime=8}] {"text":"<Chuck> But I never expected to see you around here."}
+tellraw @s[scores={DialogueTrigger=145,TalkTime=15}] {"text":"<Chuck> Could it be... that you are on the way to the Embedded Tower?"}
+tellraw @s[scores={DialogueTrigger=145,TalkTime=23}] {"text":"<Chuck> The Embedded Tower was a huge tower piercing the sky."}
+tellraw @s[scores={DialogueTrigger=145,TalkTime=32}] {"text":"<Chuck> It is said to have something to do with the mythical Pokémon that stretched the seas and that Pokémon that widened the lands."}
+tellraw @s[scores={DialogueTrigger=145,TalkTime=44}] {"text":"<Chuck> But the tower no longer is standing."}
+tellraw @s[scores={DialogueTrigger=145,TalkTime=51}] {"text":"<Chuck> The way to the Embedded Tower is harder than you can imagine."}
+tellraw @s[scores={DialogueTrigger=145,TalkTime=60}] {"text":"<Chuck> I see! So you've defeated all the Gym Leaders in Johto! Then there's nothing to worry about."}
+tellraw @s[scores={DialogueTrigger=145,TalkTime=70}] {"text":"<Chuck> Believe in yourself and walk your path. Yahaha!"}
+
+#tp Chuck out
+execute as @s[scores={DialogueTrigger=145,TalkTime=78}] run particle cloud 1317 64 -370 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=145,TalkTime=78}] run tp @e[x=1317,y=63,z=-370,dy=3,nbt=!{cobblemon:npc_chatting}] -718 91 -242
+
+tag @s[scores={DialogueTrigger=145,TalkTime=78..}] add Dialogue145
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Sidequest bringing a person a Pokémon sprite
+#scoreboard players set @a[x=481,y=64,z=-267,distance=..3,score_Cooldown=0,score_TalkTime=0,tag=!Dialogue146] DialogueTrigger 146
+
+tellraw @s[scores={DialogueTrigger=146,TalkTime=1}] {"text":"<Randy> Excuse me, guy! Can you do a guy a favor?"}
+tellraw @s[scores={DialogueTrigger=146,TalkTime=10}] {"text":"<Randy> Can you take this Pokémon with a message to my friend? He's on Route 31."}
+tellraw @s[scores={DialogueTrigger=146,TalkTime=10}] ["",{"text":"["},{"text":"Yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 48"}},{"text":"] \u0020 \u0020["},{"text":"No","color":"red","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 49"}},{"text":"]"}]
+execute as @s[scores={DialogueTrigger=146,TalkTime=9..10}] run scoreboard players enable @s TriggerCommand
+
+tag @s[scores={DialogueTrigger=146,TalkTime=10..}] add Dialogue146
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Accepting Spearow quest
+#execute as @s[score_TriggerCommand_min=48,score_TriggerCommand=48] run tag @s[tag=!Dialogue147] DialogueTrigger 147
+
+tellraw @s[scores={DialogueTrigger=147,TalkTime=1}] {"text":"<Randy> You will? Perfect! Thanks, guy!"}
+tellraw @s[scores={DialogueTrigger=147,TalkTime=8}] {"text":"<Randy> My pal's a chubby guy who snoozes all the time."}
+tellraw @s[scores={DialogueTrigger=147,TalkTime=17}] {"text":"<Randy> You'll recognize him right away!"}
+
+execute at @s[scores={DialogueTrigger=147,TalkTime=21}] run summon minecraft:item ~ ~ ~ {Item:{id:"pixelmon:pixelmon_sprite",Count:1,tag:{display:{Name:"Kenya",Lore:["OT: Randy","","Attached Mail: 'Dark Cave","leads to another road'"]},ndex:21s}}}
+
+tellraw @s[scores={DialogueTrigger=147,TalkTime=24}] {"text":"<Randy> You can read it, but don't lose it!"}
+tellraw @s[scores={DialogueTrigger=147,TalkTime=32}] {"text":"<Randy> Route 31! Oh, yeah. There was a weird tree blocking the road."}
+tellraw @s[scores={DialogueTrigger=147,TalkTime=41}] {"text":"<Randy> I wonder if it's been cleared?"}
+
+tag @s[scores={DialogueTrigger=147,TalkTime=41..}] add Dialogue147
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Route 31 guy after speaking with Randy
+#execute as @s[x=-130,y=64,z=-105,distance=..6,score_TalkTime=0,tag=Dialogue147] run scoreboard players set @s[tag=!Dialogue148] DialogueTrigger 148 {Inventory:[{tag:{display:{Name:"Kenya"}}}]}
+
+execute as @s[scores={DialogueTrigger=148,TalkTime=1}] run clear @s pixelmon:pixelmon_sprite{display:{Name:"Kenya"}}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=1}] {"text":"<Randy's Friend> ...Zzzz... Huh? What's that? You have Mail for me?"}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=10}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" handed over the Pokémon holding the Mail.","italic":true,"color":"gray"}]
+tellraw @s[scores={DialogueTrigger=148,TalkTime=18}] {"text":"<Randy's Friend> Let's see..."}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=23}] ["",{"text":"<Randy's Friend> \u201c"},{"text":"Thank you for your Mail. It was such an exciting adventure. I did not like Zubat, though...","italic":true},{"text":"\u201d"}]
+tellraw @s[scores={DialogueTrigger=148,TalkTime=34}] {"text":"<Randy's Friend> That's what it says. I went to a dark cave the other day with a friend."}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=44}] {"text":"<Randy's Friend> That cave leads to another route."}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=51}] {"text":"<Randy's Friend> By the way, I must thank you for being so kind."}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=59}] {"text":"<Randy's Friend> I'd like to do something good in return."}
+execute as @s[scores={DialogueTrigger=148,TalkTime=62}] run give @s pixelmon:tm_gen2{tm:44}
+execute as @s[scores={DialogueTrigger=148,TalkTime=62}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+tellraw @s[scores={DialogueTrigger=148,TalkTime=65}] {"text":"<Randy's Friend> TM44 is..."}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=70}] {"text":"<Randy's Friend> ...Zzz... ..."}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=75}] {"text":"<Randy's Friend> ...Umm... Rest!"}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=81}] {"text":"<Randy's Friend> The phrase \u201crecover fast\u201d became shortened to \u201cRest,\u201d you see?"}
+tellraw @s[scores={DialogueTrigger=148,TalkTime=90}] {"text":"<Randy's Friend> This is a move to sleep and recover HP."}
+
+tag @s[scores={DialogueTrigger=148,TalkTime=90..}] add Dialogue148
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Visiting Randy again after bringing Spearow
+#execute as @s[x=481,y=64,z=-267,distance=..5,score_TalkTime=0,tag=Dialogue148] run scoreboard players set @s[tag=!Dialogue149] DialogueTrigger 149
+
+tellraw @s[scores={DialogueTrigger=149,TalkTime=1}] {"text":"<Randy> Thank you for making the delivery!"}
+tellraw @s[scores={DialogueTrigger=149,TalkTime=10}] {"text":"<Randy> ...What about a cave exploration?"}
+tellraw @s[scores={DialogueTrigger=149,TalkTime=17}] {"text":"<Randy> Ah, you can go right through here."}
+tellraw @s[scores={DialogueTrigger=149,TalkTime=25}] {"text":"<Randy> I want you to have this for your kindness!"}
+execute as @s[scores={DialogueTrigger=149,TalkTime=28}] run give @s pixelmon:hp_up
+execute as @s[scores={DialogueTrigger=149,TalkTime=28}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+tellraw @s[scores={DialogueTrigger=149,TalkTime=34}] {"text":"<Randy> My pal was snoozing, right? Heh, he's always sleeping."}
+
+tag @s[scores={DialogueTrigger=149,TalkTime=34..}] add Dialogue149
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#150-153, armor stand events
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#After Professor Oak giving Kanto Starter, gives Mega Ring
+#scoreboard players set @a[x=-1726,y=63,z=-319,dx=23,dy=5,dz=25,tag=!Dialogue154,score_KantoStarters_min=1] DialogueTrigger 154
+
+tellraw @s[scores={DialogueTrigger=154,TalkTime=6}] {"text":"<Professor Oak> There was another thing I wanted to give you!"}
+tellraw @s[scores={DialogueTrigger=154,TalkTime=14,KantoStarters=3}] {"text":"<Professor Oak> I came across these stones that seem to increase its power in battle."}
+tellraw @s[scores={DialogueTrigger=154,TalkTime=14,KantoStarters=1..2}] {"text":"<Professor Oak> I came this stone that seem to increase its power in battle."}
+
+#give Mega Stone(s) depending on which KantoStarters they picked
+execute as @s[scores={DialogueTrigger=154,TalkTime=17,KantoStarters=1}] run give @s pixelmon:venusaurite
+execute as @s[scores={DialogueTrigger=154,TalkTime=17,KantoStarters=2}] run give @s pixelmon:blastoisinite
+execute as @s[scores={DialogueTrigger=154,TalkTime=17,KantoStarters=3}] run give @s pixelmon:charizardite_x
+execute as @s[scores={DialogueTrigger=154,TalkTime=17,KantoStarters=3}] run give @s pixelmon:charizardite_y
+execute as @s[scores={DialogueTrigger=154,TalkTime=17,KantoStarters=1..3}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tellraw @s[scores={DialogueTrigger=154,TalkTime=24}] {"text":"<Professor Oak> After speaking with Professor Sycamore of the Kalos region, I think I might know what they are."}
+tellraw @s[scores={DialogueTrigger=154,TalkTime=35}] {"text":"<Professor Oak> He provided me with this bracelet to study the stones, but I think you can make better use of it."}
+
+execute as @s[scores={DialogueTrigger=154,TalkTime=46}] run megaring @s
+execute as @s[scores={DialogueTrigger=154,TalkTime=46}] run scoreboard players set @s MegaStones 1
+execute as @s[scores={DialogueTrigger=154,TalkTime=46}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tellraw @s[scores={DialogueTrigger=154,TalkTime=54}] {"text":"<Professor Oak> You might be able to find more stones across Kanto and Johto."}
+tellraw @s[scores={DialogueTrigger=154,TalkTime=63}] {"text":"<Professor Oak> I found them while gathering data."}
+tellraw @s[scores={DialogueTrigger=154,TalkTime=70}] {"text":"<Professor Oak> They appeared around sunset, and made a beautiful rainbow cloud around them! That's how I spotted them."}
+tellraw @s[scores={DialogueTrigger=154,TalkTime=83}] {"text":"<Professor Oak> Keep your eyes out for them!"}
+
+#Unlocks Mega Stones around the map for player
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Beedrillite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Pidgeotite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Slowbronite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Alakazite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Gengarite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Kangaskhanite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Pinsirite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Gyaradosite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Aerodactylite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Mewtwonite_X 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Mewtwonite_Y 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Steelixite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Ampharosite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Scizorite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Heracronite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Houndoominite 0
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run scoreboard players set @s Tyranitarite 0
+
+execute as @s[scores={DialogueTrigger=154,TalkTime=93}] run advancement grant @s only johto:event10
+
+tellraw @s[scores={DialogueTrigger=154,TalkTime=93}] {"text":"You can now find wild mega stones, scattered around Johto and Kanto!","italic":true,"color":"gray"}
+
+tag @s[scores={DialogueTrigger=154,TalkTime=93..}] add Dialogue154
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Celebi Time Travel Event beginning prompt
+#execute as @e[x=617,y=64,z=-699,distance=..15,nbt={Pokemon:{Species:"cobblemon:celebi"}}] run scoreboard players set @p[r=15,tag=!Dialogue161,score_Celebi_min=1] DialogueTrigger 161
+#execute as @e[x=617,y=64,z=-699,distance=..15,nbt={Pokemon:{Species:"cobblemon:celebi"}}] run scoreboard players set @a[x=617,y=64,z=-699,distance=..15,tag=!Dialogue161,score_Celebi_min=1] DialogueTrigger 161
+
+tellraw @s[scores={DialogueTrigger=161,TalkTime=1}] ["",{"text":"Celebi is reacting to the energy of the shrine. Do you want to investigate?\n["},{"text":"Yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 41"}},{"text":"]"}]
+execute as @s[scores={DialogueTrigger=161,TalkTime=1..2}] run scoreboard players enable @s TriggerCommand
+
+tag @s[scores={DialogueTrigger=161,TalkTime=2..}] add Dialogue161
+
+#Celebi might be interested
+#testfor @s[x=617,y=64,z=-699,distance=..15,score_Celebi_min=1,tag=!Dialogue161]
+#tellraw @s[x=617,y=64,z=-699,distance=..15,score_Celebi_min=1,tag=!Dialogue161]  {"text":"Celebi seems interested to see the shrine.","italic":true}
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Celebi Time Travel Event beginning
+#execute as @s[score_TriggerCommand_min=41,score_TriggerCommand=41] run scoreboard players set @s DialogueTrigger 162
+
+#Prevents player from leaving
+execute as @s[scores={DialogueTrigger=162,TalkTime=1}] run tp @s[x=615,y=63,z=-711,dx=5,dy=10,dz=5] ~ ~ ~3
+execute as @s[scores={DialogueTrigger=162,TalkTime=1}] run tp @s[x=628,y=63,z=-703,dx=10,dy=10,dz=4] ~-3 ~ ~
+
+#tp Lyra and Marill in
+execute as @s[scores={DialogueTrigger=162,TalkTime=1}] run setblock 621 64 -700 pixelmon:poke_display[facing=west]{PokeDisplayPokemon:{ndex:183,Growth:7b}} replace
+execute as @s[scores={DialogueTrigger=162,TalkTime=1}] run tp @e[x=-725,y=70,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 621 64 -701
+execute as @s[scores={DialogueTrigger=162,TalkTime=1}] run particle cloud 621 64 -701 1 1 1 1 100
+
+
+tellraw @s[scores={DialogueTrigger=162,TalkTime=3}] ["",{"text":"<Lyra> Hi, "},{"selector":"@s"},{"text":". Have you heard the legend of the shrine?"}]
+tellraw @s[scores={DialogueTrigger=162,TalkTime=13}] {"text":"<Lyra> They say people disappear when they tamper with it."}
+
+#Enables particles #1
+#execute as @s[scores={DialogueTrigger=162,TalkTime=17..27}]
+
+execute as @s[scores={DialogueTrigger=162,TalkTime=20}] run playsound celebi ambient @s ~ ~ ~ 100 1 1
+execute as @s[scores={DialogueTrigger=162,TalkTime=23}] run effect give @s minecraft:blindness 5 1 true
+
+#tp Lyra out
+execute as @s[scores={DialogueTrigger=162,TalkTime=25}] run tp @e[x=621,y=63,z=-701,dy=3,nbt=!{cobblemon:npc_chatting}] -725 71 -242
+
+#tp Player out
+execute as @s[scores={DialogueTrigger=162,TalkTime=25}] run tp @s 257 64 695
+execute as @s[scores={DialogueTrigger=162,TalkTime=25}] run scoreboard players set @s click 1
+
+#tp Lyra in
+execute as @s[scores={DialogueTrigger=162,TalkTime=27}] run tp @e[x=-727,y=70,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 267 64 694
+
+#Enables particles #2
+
+
+
+tellraw @s[scores={DialogueTrigger=162,TalkTime=30}] {"text":"<Lyra> Where are we...?"}
+tellraw @s[scores={DialogueTrigger=162,TalkTime=37}] {"text":"<Lyra> Ilex Forest has disappeared!"}
+tellraw @s[scores={DialogueTrigger=162,TalkTime=44}] {"text":"<Lyra> ...That's not it. It's more like we have been transported somewhere else...?"}
+execute as @s[scores={DialogueTrigger=162,TalkTime=49}] run replaceitem entity @e[x=267,y=63,z=694,dy=3,nbt=!{cobblemon:npc_chatting}] weapon.offhand minecraft:carrot_on_a_stick
+execute as @s[scores={DialogueTrigger=162,TalkTime=60}] run replaceitem entity @e[x=267,y=63,z=694,dy=3,nbt=!{cobblemon:npc_chatting}] weapon.offhand air
+tellraw @s[scores={DialogueTrigger=162,TalkTime=54}] {"text":"<Lyra> ... ... ..."}
+tellraw @s[scores={DialogueTrigger=162,TalkTime=59}] ["",{"text":"<Lyra> "},{"selector":"@s"},{"text":", something is strange! I heard the radio mentioning the date from 3 years ago!"}]
+tellraw @s[scores={DialogueTrigger=162,TalkTime=69}] {"text":"<Lyra> Is that... What I am looking at..."}
+execute as @s[scores={DialogueTrigger=162,TalkTime=74}] run playsound celebi ambient @s ~ ~ ~ 100 1 1
+tellraw @s[scores={DialogueTrigger=162,TalkTime=79}] {"text":"<Lyra> Celebi? That explains it! Celebi must have caused all this!"}
+
+#tps Silver and Giovanni in, in distance
+execute as @s[scores={DialogueTrigger=162,TalkTime=84}] run tp @e[x=-731,y=70,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 278 64 726
+execute as @s[scores={DialogueTrigger=162,TalkTime=84}] run tp @e[x=-733,y=70,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 284 64 726
+execute as @s[scores={DialogueTrigger=162,TalkTime=84}] run particle cloud 278 64 726.0 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=162,TalkTime=84}] run particle cloud 284 64 726.0 1 1 1 1 100
+
+tellraw @s[scores={DialogueTrigger=162,TalkTime=87}] {"text":"<Lyra> Celebi must have taken us back in time! Literally!"}
+tellraw @s[scores={DialogueTrigger=162,TalkTime=95}] ["",{"text":"<Lyra> "},{"selector":"@s"},{"text":", there is someone else here besides us! Let's go find out who!"}]
+
+tag @s[scores={DialogueTrigger=162,TalkTime=95..}] add Dialogue162
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Celebi Time Travel Giovanni and Silver
+#execute as @s[x=263,y=64,z=719,distance=..13,score_TalkTime=0,tag=Dialogue162] run scoreboard players set @a[tag=!Dialogue163] DialogueTrigger 163
+
+tellraw @s[scores={DialogueTrigger=163,TalkTime=1}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> You told me... you were the number one in the world!"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=10}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> Are you gonna quit? What are you going to do now?"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=19}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> ... ... ... .....One must acknowledge one's defeat before he can move on..."}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=31}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> I will go solo...for now..."}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=38}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> So that one day I will form a stronger organization!"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=46}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> What aspect of you was number one?"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=53}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> Gathering so many only to be defeated by a mere child!"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=61}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> Putting together the potential of many is how you produce a huge power..."}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=71}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> That's what an organization is... That's the strength of an organization!"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=81}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> I failed... to make the best use of my subordinates potential...!"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=91}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> But you shall witness one day the revival of me and my Team Rocket!"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=101}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> I don't understand you! You don't make any sense!"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=109}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> ... ... ..."}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=114}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> ... ... ... ... ..One day, you will understand."}]
+
+#tp Giovanni out
+execute as @s[scores={DialogueTrigger=163,TalkTime=122}] run particle cloud 284 64 726.0 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=163,TalkTime=122}] run tp @e[x=284,y=63,z=726,dy=3,nbt=!{cobblemon:npc_chatting}] -733 71 -242
+
+tellraw @s[scores={DialogueTrigger=163,TalkTime=125}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> I don't want to understand you! I will never become someone like you."}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=135}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> A coward when you're alone and acting like a tyrant when you're in front of other cowards!"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=147}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> I will become strong! I will become a stronger man all by myself!"}]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=156}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> "},{"text":"All by myself!","bold":true}]
+
+execute as @s[scores={DialogueTrigger=163,TalkTime=161}] run execute at @e[x=278,y=63,z=726,dy=3,nbt=!{cobblemon:npc_chatting},name=Silver] run summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,CustomName:'{"text":"!"}',CustomNameVisible:1b}
+execute as @s[scores={DialogueTrigger=163,TalkTime=164}] run execute at @e[x=278,y=63,z=726,dy=3,nbt=!{cobblemon:npc_chatting},name=Silver] run kill @e[distance=..2,type=armor_stand]
+tellraw @s[scores={DialogueTrigger=163,TalkTime=164}] ["",{"text":"<"},{"text":"Silver","color":"red"},{"text":"> \u0020...What are you staring at?"}]
+
+#tps Silver out
+execute as @s[scores={DialogueTrigger=163,TalkTime=172}] run particle cloud 278 64 726.0 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=163,TalkTime=172}] run tp @e[x=278,y=63,z=726,dy=3,nbt=!{cobblemon:npc_chatting}] -731 71 -242
+
+tag @s[scores={DialogueTrigger=163,TalkTime=172..}] add Dialogue163
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Lyra after hearing Silver/Giovanni story
+#execute as @s[x=267,y=64,z=694,distance=..10,tag=Dialogue163] run scoreboard players set @s[tag=!Dialogue164] DialogueTrigger 164
+
+tellraw @s[scores={DialogueTrigger=164,TalkTime=1}] {"text":"<Lyra> Who does he think he is? That was unnecessary!"}
+tellraw @s[scores={DialogueTrigger=164,TalkTime=9}] {"text":"<Lyra> But what were they talking about? The revival of Team Rocket...?"}
+tellraw @s[scores={DialogueTrigger=164,TalkTime=18}] {"text":"<Lyra> They say Team Rocket was removed from the Kanto region by a child three years ago."}
+tellraw @s[scores={DialogueTrigger=164,TalkTime=30}] {"text":"<Lyra> So this really is three years ago!"}
+
+execute as @s[scores={DialogueTrigger=164,TalkTime=37}] run playsound celebi ambient @s ~ ~ ~ 100 1 1
+tellraw @s[scores={DialogueTrigger=164,TalkTime=41}] {"text":"<Lyra> Oh no! It's happening again...! It's Celebi's Time Travel!"}
+
+#Blinds player
+execute as @s[scores={DialogueTrigger=164,TalkTime=45}] run effect give @s minecraft:blindness 10 1 true
+execute as @s[scores={DialogueTrigger=164,TalkTime=46}] run tp @s 108 54 738
+execute as @s[scores={DialogueTrigger=164,TalkTime=46}] run scoreboard players set @s click 1
+
+#tp Giovanni in
+execute as @s[scores={DialogueTrigger=164,TalkTime=48}] run tp @e[x=-735,y=70,z=-242,dy=3,nbt=!{cobblemon:npc_trainer}] 109 54 750
+
+#tp Lyra in
+execute as @s[scores={DialogueTrigger=164,TalkTime=48}] run tp @e[x=-729,y=70,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 112 54 735
+
+
+#Turns off particles #2
+
+tellraw @s[scores={DialogueTrigger=164,TalkTime=53}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> ...I don't know why you have come here."}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=60}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> Anyway, I have to warn you that this is not a place for kids like you."}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=69}] {"text":"<Lyra> Huh? That's the guy we just saw arguing with that boy!"}
+tellraw @s[scores={DialogueTrigger=164,TalkTime=78}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> You have a certain look..."}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=85}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> It reminds me of the kid who stood in front of me three years ago..."}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=95}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> You have the same eyes..."}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=102}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> .... I'm on my way to Goldenrod City to answer the call and join my team."}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=111}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> Are you going to get in my way?"}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=118}] {"text":"<Lyra> Three years ago...? Goldenrod City...?"}
+tellraw @s[scores={DialogueTrigger=164,TalkTime=125}] {"text":"<Lyra> Could this be the one that the radio was trying to reach?"}
+tellraw @s[scores={DialogueTrigger=164,TalkTime=134}] ["",{"text":"<Lyra> Giovanni, their boss? Do you hear it, "},{"selector":"@s"},{"text":"?"}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=142}] {"text":"<Lyra> The radio is saying something strange!"}
+tellraw @s[scores={DialogueTrigger=164,TalkTime=150}] {"text":"<Lyra> Team Rocket has occupied the Radio Tower at Goldenrod City!"}
+tellraw @s[scores={DialogueTrigger=164,TalkTime=160}] ["",{"text":"<Lyra> It can't be! "},{"selector":"@s"},{"text":", you solved this case already!"}]
+
+#Plays Team Rocket music
+execute as @s[scores={DialogueTrigger=164,TalkTime=166}] run scoreboard players set @s click 1
+
+tellraw @s[scores={DialogueTrigger=164,TalkTime=169}] ["",{"text":"\u266a\u266b\u266c "},{"text":"[Radio: Pokémon Music] ","color":"aqua"},{"text":"<Team Rocket> ...This is the Radio Tower. This is the Radio Tower. We are pleased to declare Team Rocket's revival.","italic":true},{"text":"\u266a\u266b\u266c"}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=182}] ["",{"text":"\u266a\u266b\u266c "},{"text":"[Radio: Pokémon Music] ","color":"aqua"},{"text":"<Team Rocket> ...Giovanni? ...Can you hear us? We have finally made it!...","italic":true},{"text":"\u266a\u266b\u266c"}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=192}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> My old associates need me..."}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=200}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> We will not repeat the failure of three years ago!"}]
+tellraw @s[scores={DialogueTrigger=164,TalkTime=208}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> Team Rocket will be born again, and I will rule the world!"}]
+
+tag @s[scores={DialogueTrigger=164,TalkTime=208..}] add Dialogue164
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Giovanni post-battle
+#execute as @s[x=87,y=50,z=719,dx=44,dy=20,dz=44,score_TalkTime=0,tag=Dialogue164] run scoreboard players set @s[tag=!Dialogue165] DialogueTrigger 165 {Inventory:[{id:"minecraft:nether_brick"}]}
+
+#Giovanni respawn
+#execute as @s[x=87,y=50,z=719,dx=44,dy=20,dz=44.score_TalkTime=0,tag=Dialogue164] run execute @s[tag=!Dialogue165] run tp @e[x=-735,y=70,z=-242,dy=3,nbt=!{cobblemon:npc_trainer}] 109 54 750
+
+#Radio sparkle particle
+#/execute as @s[x=87,y=50,z=719,dx=44,dy=20,dz=44] run /particle fireworksSpark 106 53 751 0 2 0 0.1 0 normal @a[r=40]
+
+execute as @s[scores={DialogueTrigger=165,TalkTime=1}] run clear @s minecraft:nether_brick
+tellraw @s[scores={DialogueTrigger=165,TalkTime=1}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> How is this possible...?"}]
+tellraw @s[scores={DialogueTrigger=165,TalkTime=8}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> The past three years have been a waste...?"}]
+tellraw @s[scores={DialogueTrigger=165,TalkTime=16}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> How can a kid like you manage to destroy my team again?"}]
+tellraw @s[scores={DialogueTrigger=165,TalkTime=25}] ["",{"text":"<"},{"text":"Giovanni","color":"gray"},{"text":"> The precious dream of Team Rocket has become little more than an illusion..."}]
+
+#tp Giovanni Out
+execute as @s[scores={DialogueTrigger=165,TalkTime=33}] run particle cloud 109 54 750 1 1 1 0.15 100
+execute as @s[scores={DialogueTrigger=165,TalkTime=33}] run tp @e[x=109,y=53,z=750,dy=3,nbt=!{cobblemon:npc_trainer}] -735 71 -242
+
+tellraw @s[scores={DialogueTrigger=165,TalkTime=34}] ["",{"text":"\u266a\u266b\u266c "},{"text":"[Radio: Pokémon Music] ","color":"aqua"},{"text":"<Team Rocket> ...Hey! Where has Giovanni gone? I wonder if he is listening to our broadcast... ...","italic":true},{"text":"\u266a\u266b\u266c"}]
+tellraw @s[scores={DialogueTrigger=165,TalkTime=43}] {"text":"<Lyra> They keep calling for their boss. I feel sorry they don't know he's not coming."}
+tellraw @s[scores={DialogueTrigger=165,TalkTime=53}] ["",{"text":"<Lyra> After this, "},{"selector":"@s"},{"text":", you will defeat them!"}]
+tellraw @s[scores={DialogueTrigger=165,TalkTime=60}] ["",{"text":"<Lyra> ...Wait a second! "},{"selector":"@s"},{"text":", you're still here. Then, who will defeat Team Rocket...?"}]
+
+execute as @s[scores={DialogueTrigger=165,TalkTime=70}] run playsound celebi ambient @s ~ ~ ~ 100 1 1
+
+tellraw @s[scores={DialogueTrigger=165,TalkTime=73}] {"text":"<Lyra> Not again...! I've had enough!"}
+
+#Blinds and tps player
+execute as @s[scores={DialogueTrigger=165,TalkTime=81}] run effect give @s minecraft:blindness 10 1 true
+execute as @s[scores={DialogueTrigger=165,TalkTime=81}] run tp @s 617 64 -700
+
+#Enables Particles #3
+#execute as @s[scores={DialogueTrigger=165,TalkTime=70..82}] run
+
+#turns back on keeping player near Lyra
+execute as @s[scores={DialogueTrigger=165,TalkTime=158}] run tp @s[x=628,y=63,z=-703,dx=10,dy=10,dz=4] ~-3 ~ ~
+execute as @s[scores={DialogueTrigger=165,TalkTime=158}] run tp @s[x=615,y=63,z=-711,dx=5,dy=10,dz=5] ~ ~ ~3
+
+#re-tps Lyra in
+execute as @s[scores={DialogueTrigger=165,TalkTime=84}] run tp @e[x=-725,y=70,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 621 64 -701
+
+tellraw @s[scores={DialogueTrigger=165,TalkTime=84}] {"text":"<Lyra> Traveling through time sure doesn't feel good."}
+tellraw @s[scores={DialogueTrigger=165,TalkTime=92}] {"text":"<Lyra> Hey, my Marill!"}
+tellraw @s[scores={DialogueTrigger=165,TalkTime=99}] {"text":"<Lyra> I missed you so much! Wait a sec... So we must be back to our own time!"}
+tellraw @s[scores={DialogueTrigger=165,TalkTime=109}] {"text":"<Lyra> It was all so bizarre."}
+tellraw @s[scores={DialogueTrigger=165,TalkTime=116}] {"text":"<Lyra> But now that we are safely back to our time and Team Rocket's terrible design fell through, we can say..."}
+tellraw @s[scores={DialogueTrigger=165,TalkTime=128}] {"text":"<Lyra> All's well that ends well, right?"}
+tellraw @s[scores={DialogueTrigger=165,TalkTime=135}] ["",{"text":"<Lyra> "},{"selector":"@s"},{"text":", you never cease to to inspire great adventures."}]
+tellraw @s[scores={DialogueTrigger=165,TalkTime=143}] {"text":"<Lyra> It sure was an exhausting day, though. I better get going."}
+tellraw @s[scores={DialogueTrigger=165,TalkTime=143}] {"text":"<Lyra> See you!"}
+
+#tp Lyra and Marill out
+execute as @s[scores={DialogueTrigger=165,TalkTime=158}] run particle cloud 620 64 -701 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=165,TalkTime=158}] run setblock 621 64 -700 minecraft:air
+execute as @s[scores={DialogueTrigger=165,TalkTime=158}] run tp @e[x=621,y=63,z=-701,dy=3,nbt=!{cobblemon:npc_chatting}] -725 71 -242
+
+execute as @s[scores={DialogueTrigger=165,TalkTime=158}] run advancement grant @s only johto:rocket5
+
+tag @s[scores={DialogueTrigger=165,TalkTime=158..}] add Dialogue165
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Celebi's Return Home option:
+#execute as @s[x=105,y=54,z=731,distance=..3,tag=!Dialogue165] run testfor @s[tag=!Dialogue164] ~ ~ ~
+
+#execute as @s[x=105,y=54,z=731,distance=..3,tag=!Dialogue165] run execute @s[tag=!Dialogue164] run tellraw @s ["",{"text":"Would you like Celebi to take you to your time?\n["},{"text":"Yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 42"}},{"text":"]"}]
+#execute as @s[x=105,y=54,z=731,distance=..10,tag=!Dialogue165] run execute @s[tag=!Dialogue164] run scoreboard players enable @s TriggerCommand
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Ruins of Alph post-red, spawning visual Azure Flute
+#execute as @s[x=160,y=60,z=-295,dx=121,dy=30,dz=205,score_TalkTime=0,tag=Red] run scoreboard players set @s[tag=!Dialogue166] DialogueTrigger 166
+
+#Toggles Lightning effect
+#20tps Lightning
+#execute as @s[scores={DialogueTrigger=166,TalkTime=2..5}] run /summon minecraft:lightning_bolt 176 64 -141
+
+#Tps Archeologists around
+execute as @s[scores={DialogueTrigger=166,TalkTime=10}] run tp @e[x=178,y=64,z=-127,distance=..1,nbt=!{cobblemon:npc_chatting}] -697 86 -242
+execute as @s[scores={DialogueTrigger=166,TalkTime=10}] run tp @e[x=-705,y=85,z=-242,dy=3,nbt=!{cobblemon:npc_chatting}] 174 64 -141
+
+#Summons visual-only Azure flute
+execute as @s[scores={DialogueTrigger=166,TalkTime=7}] run summon minecraft:item 176 64 -141 {Item:{id:"pixelmon:azure_flute",Count:1b},Age:-32768,PickupDelay:32767}
+
+tag @s[scores={DialogueTrigger=166,TalkTime=10..}] add Dialogue166
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Archeologist giving Azure Flute
+#execute as @s[x=174,y=64,z=-141,distance=..10,score_TalkTime=0,tag=Red] run scoreboard players set @s[tag=!Dialogue167] DialogueTrigger 167
+
+tellraw @s[scores={DialogueTrigger=167,TalkTime=1}] {"text":"<Archaeologist> Is that... the Azure Flute?"}
+tellraw @s[scores={DialogueTrigger=167,TalkTime=9}] {"text":"<Archaeologist> I've heard legends of in Sinnoh, but.. what is it doing in Johto?"}
+tellraw @s[scores={DialogueTrigger=167,TalkTime=19}] {"text":"<Archaeologist> You, Champion! Could you help me investigate this?"}
+
+#Kill ground Flute
+execute as @s[scores={DialogueTrigger=167,TalkTime=24}] run kill @e[x=176,y=63,z=-141,dy=2,type=item]
+execute as @s[scores={DialogueTrigger=167,TalkTime=24}] run give @s pixelmon:azure_flute{display:{Name:'[{"text":"Azure Flute","italic":false,"color":"yellow"}]',Lore:['[{"text":"A flute that puts out echoing","italic":false}]','[{"text":"sounds that do not seem to be of","italic":false}]','[{"text":"this world. No one knows who made","italic":false}]','[{"text":"it. It seems to call to the","italic":false}]','[{"text":"highest mountains.","italic":false}]']}} 1
+execute as @s[scores={DialogueTrigger=167,TalkTime=24}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tellraw @s[scores={DialogueTrigger=167,TalkTime=27}] {"text":"<Archaeologist> The Flute is said to call upon the mythical Pokemon Arceus atop Mt. Coronet, but that is unreachable to us..."}
+tellraw @s[scores={DialogueTrigger=167,TalkTime=38}] {"text":"<Archaeologist> Is there a mountain in this region that may have a similar connection?"}
+
+tag @s[scores={DialogueTrigger=167,TalkTime=38..}] add Dialogue167
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Post-catching Arceus
+#execute as @e[x=174,y=63,z=-141,distance=..20,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:arceus"}}] run execute @p[r=15,score_TalkTime=0,tag=Dialogue167,score_Arceus_min=1] run execute @s[tag=Red] run scoreboard players set @s[tag=!Dialogue168] DialogueTrigger 168
+
+tellraw @s[scores={DialogueTrigger=168,TalkTime=1}] {"text":"<Archaeologist> No way! Could it be a Pokémon from Sinnoh... The one they call Arceus?"}
+tellraw @s[scores={DialogueTrigger=168,TalkTime=10}] {"text":"<Archaeologist> Oh, could it be...? Arceus causing all this...? I cannot explain it any other way..."}
+tellraw @s[scores={DialogueTrigger=168,TalkTime=21}] {"text":"<Archaeologist> Arceus may be the key to solving the mystery of the Unown and the Ruins of Alph...?"}
+tellraw @s[scores={DialogueTrigger=168,TalkTime=31}] {"text":"<Archaeologist> Can you come to the Ruins of Alph with me?"}
+tellraw @s[scores={DialogueTrigger=168,TalkTime=39}] {"text":"<Archaeologist> Please! You must! I am trembling with excitement."}
+tellraw @s[scores={DialogueTrigger=168,TalkTime=48}] {"text":"<Archaeologist> I think something is about to happen!"}
+
+execute as @s[scores={DialogueTrigger=168,TalkTime=58}] run particle cloud 174 64 -141 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=168,TalkTime=58}] run tp @e[x=174,y=64,z=-141,distance=..3,nbt=!{cobblemon:npc_chatting}] -705 86 -242
+
+#Enables Walking into portal
+#execute as @s[scores={DialogueTrigger=168,TalkTime=48}] run tag @e[x=-792,y=65,z=-284,dy=3,type=armor_stand] add HikerRun
+
+tag @s[scores={DialogueTrigger=168,TalkTime=58..}] add Dialogue168
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Inside fake ruins, tps into Sinjoh Ruins
+#scoreboard players set @a[x=-992,y=0,z=-172,dx=45,dy=70,dz=60,score_TalkTime=0] DialogueTrigger 169
+
+tellraw @s[scores={DialogueTrigger=169,TalkTime=1}] {"text":"<Archaeologist> Hmm. I have been studying the ruins for many years, but something feels...different."}
+
+#Enables Particles 1
+#execute as @s[scores={DialogueTrigger=169,TalkTime=1}] run setblock -691 91 -242 minecraft:redstone_block
+
+tellraw @s[scores={DialogueTrigger=169,TalkTime=13}] {"text":"<Archaeologist> Wow! The Unown pictures on the wall... It feels like they're staring at me!"}
+
+#Enables Particles 2
+#execute as @s[scores={DialogueTrigger=169,TalkTime=13}] run setblock -692 91 -242 minecraft:redstone_block
+
+tellraw @s[scores={DialogueTrigger=169,TalkTime=27}] {"text":"<Archaeologist> What is this? There is something eerie that is making my legs shiver. I can't stop them!"}
+
+#Enables Particles 3
+#execute as @s[scores={DialogueTrigger=169,TalkTime=27}] run fill -693 91 -242 -694 91 -242 minecraft:redstone_block
+
+execute as @s[scores={DialogueTrigger=169,TalkTime=37}] run effect give @s minecraft:blindness 7 1
+execute as @s[scores={DialogueTrigger=169,TalkTime=38}] run tp @s -1042 61 -181 -90 ~
+execute as @s[scores={DialogueTrigger=169,TalkTime=38}] run playsound minecraft:block.portal.travel ambient @s ~ ~ ~ 1 1 1
+
+#Disables particles
+execute as @s[scores={DialogueTrigger=169,TalkTime=38}] run fill -694 91 -242 -691 91 -242 air
+
+#tp Hiker in
+execute as @s[scores={DialogueTrigger=169,TalkTime=40}] run tp @e[x=-701,y=86,z=-242,distance=..1,limit=1,nbt=!{cobblemon:npc_chatting}] -1044 61 -181
+
+tellraw @s[scores={DialogueTrigger=169,TalkTime=42}] {"text":"<Hiker> Well, hello! It's so freezing, isn't it? For a youngster like you to be interested in the Sinjoh Ruins is not something we see every day."}
+execute as @s[scores={DialogueTrigger=169,TalkTime=42}] run scoreboard players set @s click 1
+tellraw @s[scores={DialogueTrigger=169,TalkTime=54}] {"text":"<Hiker> Take a look at them. From the design of the pillars at the Sinjoh Ruins, you can see that the cultures of Sinnoh and Johto have blended."}
+tellraw @s[scores={DialogueTrigger=169,TalkTime=66}] {"text":"<Hiker> Oh, right! We don't need to be standing here."}
+tellraw @s[scores={DialogueTrigger=169,TalkTime=74}] {"text":"<Hiker> Why don't you come to the cabin around the corner for more discussion?"}
+tellraw @s[scores={DialogueTrigger=169,TalkTime=83}] {"text":"<Hiker> By the way, we happen to have a person at the cabin."}
+tellraw @s[scores={DialogueTrigger=169,TalkTime=91}] {"text":"<Hiker> Any Trainer should know who she is."}
+tellraw @s[scores={DialogueTrigger=169,TalkTime=98}] {"text":"<Hiker> The famous Trainer from Sinnoh!"}
+tellraw @s[scores={DialogueTrigger=169,TalkTime=105}] {"text":"<Hiker> She is traveling around to study myths and ancient ruins. Isn't that something?"}
+
+#tps Hiker out
+execute as @s[scores={DialogueTrigger=169,TalkTime=115}] run tp @e[nbt=!{cobblemon:npc_chatting},x=-1044,y=61,z=-181,distance=..1,limit=1] -701 86 -242
+execute as @s[scores={DialogueTrigger=169,TalkTime=115}] run particle cloud -1044 61 -181 1 1 1 1 100
+
+tag @s[scores={DialogueTrigger=169,TalkTime=115..}] add Dialogue169
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Hiker Continuation in the house
+#execute as @s[x=-1085,y=60,z=-230,dx=16,dy=5,dz=15,score_TalkTime=0,tag=Dialogue169] run scoreboard players set @s[tag=!Dialogue170] DialogueTrigger 170
+
+tellraw @s[scores={DialogueTrigger=170,TalkTime=1}] {"text":"<Hiker> A long time ago, people used to draw life from Pokémon and also give their lives to those Pokémon..."}
+tellraw @s[scores={DialogueTrigger=170,TalkTime=12}] {"text":"<Hiker> That shows that people and Pokémon used to be more closely bonded with each other."}
+tellraw @s[scores={DialogueTrigger=170,TalkTime=22}] {"text":"<Hiker> When people moved from place to place, the myths and legends of Pokémon and their power would also be carried with those people. "}
+tellraw @s[scores={DialogueTrigger=170,TalkTime=35}] {"text":"<Hiker> That's how myths and legends from each region are blended with each other."}
+tellraw @s[scores={DialogueTrigger=170,TalkTime=45}] {"text":"<Hiker> The ancient ruins here have inherited the legends from both the Ruins of Alph in Johto and the Spear Pillar in Sinnoh. "}
+tellraw @s[scores={DialogueTrigger=170,TalkTime=58}] {"text":"<Hiker> That is proof that people from Johto and Sinnoh blended together as a group."}
+
+tag @s[scores={DialogueTrigger=170,TalkTime=58..}] add Dialogue170
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Cynthia introduction after Hiker finishes
+#execute as @s[x=-1081,y=62,z=-224,distance=..3,score_TalkTime=0,tag=Dialogue170] run scoreboard players set @s[tag=!Dialogue171] DialogueTrigger 171
+
+#tp Cynthia in separately
+#execute as @s[x=-1081,y=62,z=-224,distance=..20,tag=!Dialogue171,score_TalkTime=0] run tp @e[x=-815,y=64,z=-235,dy=3,nbt=!{cobblemon:npc_chatting}] -1081 61 -224
+
+tellraw @s[scores={DialogueTrigger=171,TalkTime=1}] {"text":"<Cynthia> My name is Cynthia. I am a Pokémon Trainer."}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=9}] {"text":"<Cynthia> The Sinjoh Ruins remind me of Sinnoh, where I come from."}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=17}] {"text":"<Cynthia> Initially, I thought it was because it snows a lot here as well. But that was not it."}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=27}] {"text":"<Cynthia> A long time ago...people came from Sinnoh to live here."}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=36}] {"text":"<Cynthia> They must have built a temple here while longing for home."}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=44}] {"text":"<Cynthia> That's why we call these the Sinjoh Ruins..."}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=52}] {"text":"<Cynthia> You are...a Pokémon Trainer?"}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=59}] {"text":"<Cynthia> I can sense strong power coming from your Poké Ball..."}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=67}] {"text":"<Cynthia> I feel a familiar presence..."}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=74}] {"text":"<Cynthia> The power of Dialga... Palkia... or could it be Giratina?"}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=84}] {"text":"<Cynthia> It's similar, but not quite the same..."}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=91}] {"text":"<Cynthia> Have you got time? Can you come to the Sinjoh Ruins with me?"}
+tellraw @s[scores={DialogueTrigger=171,TalkTime=100}] {"text":"<Cynthia> Call it a Trainer's intuition. When you and your Pokémon step onto that stage, something will happen."}
+
+#tp Cynthia out
+execute as @s[scores={DialogueTrigger=171,TalkTime=110}] run particle cloud -1081 61 -224 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=171,TalkTime=110}] run tp @e[x=-1081,y=61,z=-224,distance=..1,limit=1,nbt=!{cobblemon:npc_chatting}] -815 65 -235
+
+tag @s[scores={DialogueTrigger=171,TalkTime=111..}] add Dialogue171
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Sinjoh Altar Cynthia
+#execute as @s[x=-1056,y=47,z=-131,dx=33,dy=15,dz=69,score_TalkTime=0,tag=Dialogue171] run scoreboard players set @s[tag=!Dialogue172] DialogueTrigger 172
+
+#tp Cynthia in
+#execute as @s[x=-1046,y=48,z=-111,distance=..50,tag=Dialogue171] run execute @s[tag=!Dialogue172] run tp @e[x=-815,y=64,z=-233,dy=3,nbt=!{cobblemon:npc_chatting}] -1046 48 -111
+
+tellraw @s[scores={DialogueTrigger=172,TalkTime=1}] {"text":"<Cynthia> This is the Mystri Stage."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=8}] {"text":"<Cynthia> The mythical stage built to show respect for Arceus."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=15}] {"text":"<Cynthia> It is said that people used to celebrate its magnificent might with music and dance."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=25}] {"text":"<Cynthia> Some people in Johto still pass down this tradition."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=33}] {"text":"<Cynthia> According to an ancient document, time, space, and antimatter, or what combined we call the world,"}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=44}] {"text":"<Cynthia> shall be born when Arceus stands on the Mystri Stage."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=52}] {"text":"<Cynthia> This is where one might say, 'The lead enters the Mystri Stage at last.'"}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=62}] {"text":"<Cynthia> All my study of ruins and Pokémon mythology in Sinnoh may have been to bring you up on this stage today..."}
+
+execute as @s[scores={DialogueTrigger=172,TalkTime=72}] run tp @e[x=-1046,y=48,z=-111,distance=..1,nbt=!{cobblemon:npc_chatting},limit=1] -1044 51 -93 180 ~0
+execute as @s[scores={DialogueTrigger=172,TalkTime=72}] run particle cloud -1046 48 -111 1 1 1 1 100
+
+tellraw @s[scores={DialogueTrigger=172,TalkTime=74}] {"text":"<Cynthia> Depicted on that Mystri Stage are the Pokémon that shaped this world."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=83}] {"text":"<Cynthia> The circle in the middle is Arceus, the origin of it all..."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=92}] {"text":"<Cynthia> The purple pattern represents Palkia, the master of space and dimensions..."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=102}] {"text":"<Cynthia> The blue pattern represents Dialga, the guardian of time..."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=111}] {"text":"<Cynthia> The red pattern represents Giratina, the ruler of the world that is on the opposite side of ours, the world of antimatter..."}
+
+execute as @s[scores={DialogueTrigger=172,TalkTime=122}] run tp @e[x=-1044,y=51,z=-93,distance=..1,nbt=!{cobblemon:npc_chatting},limit=1] -1046 48 -111
+execute as @s[scores={DialogueTrigger=172,TalkTime=122}] run particle cloud -1044 51 -93 1 1 1 1 100
+
+tellraw @s[scores={DialogueTrigger=172,TalkTime=124}] {"text":"<Cynthia> Arceus has accepted you as a Trainer."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=131}] {"text":"<Cynthia> Arceus, having shaped the world, is said to show you a glimpse of its true power."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=142}] {"text":"<Cynthia> The power of possibly making life appear out of nothing..."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=151}] {"text":"<Cynthia> It seems that something will happen when you choose one of the circles with Arceus on the stage..."}
+tellraw @s[scores={DialogueTrigger=172,TalkTime=163}] {"text":"<Cynthia> You'll want to be well prepared."}
+
+tag @s[scores={DialogueTrigger=172,TalkTime=163..}] add Dialogue172
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Dialogues 173-175 Summoning Sinnoh Legends
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Sinjoh Cynthia after summoning a legendary
+#execute as @s[x=-1046,y=48,z=-111,distance=..5,score_TalkTime=0,tag=SinnohLegend] run scoreboard players set @s[tag=!Dialogue176] DialogueTrigger 176
+
+tellraw @s[scores={DialogueTrigger=176,TalkTime=1}] {"text":"<Cynthia> That shining sphere..."}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=8}] {"text":"<Cynthia> Could it be... an Egg?"}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=15}] {"text":"<Cynthia> Did we just witness the very moment an Egg was brought into this world?"}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=25}] {"text":"<Cynthia> A moment no-one has ever seen?"}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=32}] {"text":"<Cynthia> An Egg is the cradle of every being."}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=39}] {"text":"<Cynthia> This planet itself is an Egg in a sense..."}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=46}] {"text":"<Cynthia> Life that comes from an Egg will come to an end in due course... to begin anew..."}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=56}] {"text":"<Cynthia> That may be what Arceus wanted to show us."}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=64}] {"text":"<Cynthia> That was... We seem to be surrounded by that strong power again...!"}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=73}] {"text":"<Cynthia> I must investigate this further!"}
+tellraw @s[scores={DialogueTrigger=176,TalkTime=80}] {"text":"<Cynthia> Thank you! This would have been impossible without you!"}
+
+#tp Cynthia out
+execute as @s[scores={DialogueTrigger=176,TalkTime=88}] run tp @e[x=-1046,y=48,z=-111,distance=..1,nbt=!{cobblemon:npc_chatting},limit=1] -815 65 -233
+execute as @s[scores={DialogueTrigger=176,TalkTime=88}] run particle cloud -1046 48 -111 1 1 1 1 100
+
+tag @s[scores={DialogueTrigger=176,TalkTime=88..}] add Dialogue176
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Lucky Number Show Roll
+#execute as @s[score_TriggerCommand_min=76,score_TriggerCommand=76] run scoreboard players set @s DialogueTrigger 185
+
+tellraw @s[scores={DialogueTrigger=185,TalkTime=1}] {"text":"<DJ Reed> I need to run a check on this number to see if it matches any of your Pokémon's ID numbers. Please wait."}
+
+#Rolls for an ID
+execute as @s[scores={DialogueTrigger=185,TalkTime=12}] run scoreboard players set @e[x=-867,y=69,z=-207,dy=4,dz=2,type=minecraft:armor_stand] rng 0
+execute as @s[scores={DialogueTrigger=185,TalkTime=12}] run scoreboard players add @e[sort=random,limit=1,x=-867,y=69,z=-207,dy=4,dz=2] rng 1
+execute as @s[scores={DialogueTrigger=185,TalkTime=12}] run scoreboard players add @e[sort=random,limit=1,x=-867,y=69,z=-207,dy=4,dz=2] rng 2
+execute as @s[scores={DialogueTrigger=185,TalkTime=12}] run scoreboard players add @e[sort=random,limit=1,x=-867,y=69,z=-207,dy=4,dz=2] rng 4
+execute as @s[scores={DialogueTrigger=185,TalkTime=12}] run scoreboard players add @e[sort=random,limit=1,x=-867,y=69,z=-207,dy=4,dz=2] rng 8
+execute as @s[scores={DialogueTrigger=185,TalkTime=12}] run scoreboard players add @e[sort=random,limit=1,x=-867,y=69,z=-207,dy=4,dz=2] rng 16
+execute as @s[scores={DialogueTrigger=185,TalkTime=12}] run scoreboard players add @e[sort=random,limit=1,x=-867,y=69,z=-207,dy=4,dz=2] rng 32
+execute as @s[scores={DialogueTrigger=185,TalkTime=12}] run scoreboard players add @e[sort=random,limit=1,x=-867,y=69,z=-207,dy=4,dz=2] rng 64
+
+execute as @s[scores={DialogueTrigger=185,TalkTime=12}] run scoreboard players operation @s rng = @e[x=-867,y=69,z=-205,dy=3,type=armor_stand] rng
+
+
+#Rolls for a random number (X/127):
+#~50% nothing (0-63)
+#~35% PP Up (65-108)
+#~12.7% Exp Share (111-127)
+#~2.3% Master Ball (64, 109-110)
+
+#Nothing
+tellraw @s[scores={DialogueTrigger=185,TalkTime=14,rng=0..63}] {"text":"<DJ Reed> Nope, none of your ID numbers match. Try again tomorrow!"}
+
+execute as @s[scores={DialogueTrigger=185,TalkTime=14,rng=64..127}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+#PP Up
+tellraw @s[scores={DialogueTrigger=185,TalkTime=14,rng=65..108}] {"text":"<DJ Reed> Ooh, you've matched the last two numbers. You've won third prize, a PP Up."}
+execute as @s[scores={DialogueTrigger=185,TalkTime=14,rng=65..108}] run give @s pixelmon:pp_up{display:{Lore:["A medicine that slightly raises","the maximum PP of a single selected","move that has been learned","by a Pokémon."]}}
+
+#XP Share
+tellraw @s[scores={DialogueTrigger=185,TalkTime=14,rng=111..127}] {"text":"<DJ Reed> Hey! You've matched the last three numbers! You've won second prize, an Exp.Share!"}
+execute as @s[scores={DialogueTrigger=185,TalkTime=14,rng=111..127}] run give @s pixelmon:exp_share{display:{Lore:["An item to be held by a Pokémon.","The holder gets a share of","Exp. points without having to battle."]}}
+
+#Master Ball
+tellraw @s[scores={DialogueTrigger=185,TalkTime=14,rng=64}] {"text":"<DJ Reed> Wow! You have a perfect match of all five numbers! We have a grand prize winner! You have won a Master Ball!"}
+execute as @s[scores={DialogueTrigger=185,TalkTime=14,rng=64}] run give @s pixelmon:master_ball
+execute as @s[scores={DialogueTrigger=185,TalkTime=14,rng=64}] run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1
+
+tellraw @s[scores={DialogueTrigger=185,TalkTime=14,rng=109..110}] {"text":"<DJ Reed> Wow! You have a perfect match of all five numbers! We have a grand prize winner! You have won a Master Ball!"}
+execute as @s[scores={DialogueTrigger=185,TalkTime=14,rng=109..110}] run give @s pixelmon:master_ball
+execute as @s[scores={DialogueTrigger=185,TalkTime=14,rng=109..110}] run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1
+
+execute as @s[scores={DialogueTrigger=185,TalkTime=14}] run tag @s add LuckyNumberCD
+tellraw @s[scores={DialogueTrigger=185,TalkTime=24}] {"text":"<DJ Reed> Tune in again tomorrow and see me for another chance at a prize!"}
+
+tag @s[scores={DialogueTrigger=185,TalkTime=24..}] add Dialogue185
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Route 25 Trainers after beating all 6
+#scoreboard players set @a[x=-2999,y=64,z=1005,distance=..10,score_TalkTime=0,tag=!Dialogue194] DialogueTrigger 194 {Inventory:[{id:"minecraft:paper",Count:6b}]}
+
+execute as @s[scores={DialogueTrigger=194,TalkTime=1}] run clear @s minecraft:paper 6
+tellraw @s[scores={DialogueTrigger=194,TalkTime=1}] {"text":"<Ace Trainer Kevin> As promised, you win a prize! Would you like to battle one more time with me?"}
+
+execute as @s[scores={DialogueTrigger=194,TalkTime=5}] run give @s pixelmon:nugget
+execute as @s[scores={DialogueTrigger=194,TalkTime=5}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+tag @s[scores={DialogueTrigger=194,TalkTime=5..}] add Dialogue194
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Bug Catching Contest intro
+#Dialogue198
+
+tellraw @s[scores={DialogueTrigger=198,TalkTime=1}] {"text":"<Park Worker> Remember, only Bug Pokemon caught in the Sport Ball are allowed to be judged!"}
+execute as @s[scores={DialogueTrigger=198,TalkTime=1}] run spawnpoint @s 477 64 61
+execute as @s[scores={DialogueTrigger=198,TalkTime=1}] run scoreboard players set @s click 1
+execute as @s[scores={DialogueTrigger=198,TalkTime=1}] run tag @s remove Dialogue199
+execute as @s[scores={DialogueTrigger=198,TalkTime=1}] run give @s pixelmon:poke_ball{PokeBallID:"sport_ball"} 45
+tellraw @s[scores={DialogueTrigger=198,TalkTime=10}] {"text":"<Park Worker> You can check your IVs as you catch the Pokemon. Submit the highest total stats at the end!"}
+tellraw @s[scores={DialogueTrigger=198,TalkTime=20}] {"text":"<Park Worker> You have 20 minutes from now until judging, or just come back and talk to me to start it early! Good luck!"}
+execute as @s[scores={DialogueTrigger=198,TalkTime=20}] run scoreboard players set @s BugContest 1
+execute as @s[scores={DialogueTrigger=198,TalkTime=20}] run scoreboard players set @e[x=-799,y=64,z=-284,dy=3,type=armor_stand] BugContest 1
+execute as @s[scores={DialogueTrigger=198,TalkTime=20}] run data merge block 476 67 68 {Text3: '{"text":"Current active"}'}
+
+#Boss Bar Progress
+execute as @s[scores={DialogueTrigger=198,TalkTime=1}] run bossbar add johto:bugcontest "Contest Time Remaining"
+execute as @s[scores={DialogueTrigger=198,TalkTime=1}] run bossbar set johto:bugcontest color green
+execute as @s[scores={DialogueTrigger=198,TalkTime=1..17}] run bossbar set johto:bugcontest value 100
+execute as @s[scores={DialogueTrigger=198,TalkTime=18..34}] run bossbar set johto:bugcontest value 99
+execute as @s[scores={DialogueTrigger=198,TalkTime=35..51}] run bossbar set johto:bugcontest value 98
+execute as @s[scores={DialogueTrigger=198,TalkTime=52..68}] run bossbar set johto:bugcontest value 97
+execute as @s[scores={DialogueTrigger=198,TalkTime=69..85}] run bossbar set johto:bugcontest value 96
+execute as @s[scores={DialogueTrigger=198,TalkTime=86..102}] run bossbar set johto:bugcontest value 95
+execute as @s[scores={DialogueTrigger=198,TalkTime=103..119}] run bossbar set johto:bugcontest value 94
+execute as @s[scores={DialogueTrigger=198,TalkTime=120..136}] run bossbar set johto:bugcontest value 93
+execute as @s[scores={DialogueTrigger=198,TalkTime=137..153}] run bossbar set johto:bugcontest value 92
+execute as @s[scores={DialogueTrigger=198,TalkTime=154..170}] run bossbar set johto:bugcontest value 91
+execute as @s[scores={DialogueTrigger=198,TalkTime=171..187}] run bossbar set johto:bugcontest value 90
+execute as @s[scores={DialogueTrigger=198,TalkTime=188..204}] run bossbar set johto:bugcontest value 89
+execute as @s[scores={DialogueTrigger=198,TalkTime=205..221}] run bossbar set johto:bugcontest value 88
+execute as @s[scores={DialogueTrigger=198,TalkTime=222..238}] run bossbar set johto:bugcontest value 87
+execute as @s[scores={DialogueTrigger=198,TalkTime=239..255}] run bossbar set johto:bugcontest value 86
+execute as @s[scores={DialogueTrigger=198,TalkTime=256..272}] run bossbar set johto:bugcontest value 85
+execute as @s[scores={DialogueTrigger=198,TalkTime=273..289}] run bossbar set johto:bugcontest value 84
+execute as @s[scores={DialogueTrigger=198,TalkTime=290..306}] run bossbar set johto:bugcontest value 83
+execute as @s[scores={DialogueTrigger=198,TalkTime=307..323}] run bossbar set johto:bugcontest value 82
+execute as @s[scores={DialogueTrigger=198,TalkTime=324..340}] run bossbar set johto:bugcontest value 81
+execute as @s[scores={DialogueTrigger=198,TalkTime=341..357}] run bossbar set johto:bugcontest value 80
+execute as @s[scores={DialogueTrigger=198,TalkTime=358..374}] run bossbar set johto:bugcontest value 79
+execute as @s[scores={DialogueTrigger=198,TalkTime=375..391}] run bossbar set johto:bugcontest value 78
+execute as @s[scores={DialogueTrigger=198,TalkTime=392..408}] run bossbar set johto:bugcontest value 77
+execute as @s[scores={DialogueTrigger=198,TalkTime=409..425}] run bossbar set johto:bugcontest value 76
+execute as @s[scores={DialogueTrigger=198,TalkTime=426..442}] run bossbar set johto:bugcontest value 75
+execute as @s[scores={DialogueTrigger=198,TalkTime=443..459}] run bossbar set johto:bugcontest value 74
+execute as @s[scores={DialogueTrigger=198,TalkTime=460..476}] run bossbar set johto:bugcontest value 73
+execute as @s[scores={DialogueTrigger=198,TalkTime=477..493}] run bossbar set johto:bugcontest value 72
+execute as @s[scores={DialogueTrigger=198,TalkTime=494..510}] run bossbar set johto:bugcontest value 71
+execute as @s[scores={DialogueTrigger=198,TalkTime=511..527}] run bossbar set johto:bugcontest value 70
+execute as @s[scores={DialogueTrigger=198,TalkTime=528..544}] run bossbar set johto:bugcontest value 69
+execute as @s[scores={DialogueTrigger=198,TalkTime=545..561}] run bossbar set johto:bugcontest value 68
+execute as @s[scores={DialogueTrigger=198,TalkTime=562..578}] run bossbar set johto:bugcontest value 67
+execute as @s[scores={DialogueTrigger=198,TalkTime=579..595}] run bossbar set johto:bugcontest value 66
+execute as @s[scores={DialogueTrigger=198,TalkTime=596..612}] run bossbar set johto:bugcontest value 65
+execute as @s[scores={DialogueTrigger=198,TalkTime=613..629}] run bossbar set johto:bugcontest value 64
+execute as @s[scores={DialogueTrigger=198,TalkTime=630..646}] run bossbar set johto:bugcontest value 63
+execute as @s[scores={DialogueTrigger=198,TalkTime=647..663}] run bossbar set johto:bugcontest value 62
+execute as @s[scores={DialogueTrigger=198,TalkTime=664..680}] run bossbar set johto:bugcontest value 61
+execute as @s[scores={DialogueTrigger=198,TalkTime=681..697}] run bossbar set johto:bugcontest value 60
+execute as @s[scores={DialogueTrigger=198,TalkTime=698..714}] run bossbar set johto:bugcontest value 59
+execute as @s[scores={DialogueTrigger=198,TalkTime=715..731}] run bossbar set johto:bugcontest value 58
+execute as @s[scores={DialogueTrigger=198,TalkTime=732..748}] run bossbar set johto:bugcontest value 57
+execute as @s[scores={DialogueTrigger=198,TalkTime=749..765}] run bossbar set johto:bugcontest value 56
+execute as @s[scores={DialogueTrigger=198,TalkTime=766..782}] run bossbar set johto:bugcontest value 55
+execute as @s[scores={DialogueTrigger=198,TalkTime=783..799}] run bossbar set johto:bugcontest value 54
+execute as @s[scores={DialogueTrigger=198,TalkTime=800..816}] run bossbar set johto:bugcontest value 53
+execute as @s[scores={DialogueTrigger=198,TalkTime=817..833}] run bossbar set johto:bugcontest value 52
+execute as @s[scores={DialogueTrigger=198,TalkTime=834..850}] run bossbar set johto:bugcontest value 51
+execute as @s[scores={DialogueTrigger=198,TalkTime=851..867}] run bossbar set johto:bugcontest value 50
+execute as @s[scores={DialogueTrigger=198,TalkTime=868..884}] run bossbar set johto:bugcontest value 49
+execute as @s[scores={DialogueTrigger=198,TalkTime=885..901}] run bossbar set johto:bugcontest value 48
+execute as @s[scores={DialogueTrigger=198,TalkTime=902..918}] run bossbar set johto:bugcontest value 47
+execute as @s[scores={DialogueTrigger=198,TalkTime=919..935}] run bossbar set johto:bugcontest value 46
+execute as @s[scores={DialogueTrigger=198,TalkTime=936..952}] run bossbar set johto:bugcontest value 45
+execute as @s[scores={DialogueTrigger=198,TalkTime=953..969}] run bossbar set johto:bugcontest value 44
+execute as @s[scores={DialogueTrigger=198,TalkTime=970..986}] run bossbar set johto:bugcontest value 43
+execute as @s[scores={DialogueTrigger=198,TalkTime=987..1003}] run bossbar set johto:bugcontest value 42
+execute as @s[scores={DialogueTrigger=198,TalkTime=1004..1020}] run bossbar set johto:bugcontest value 41
+execute as @s[scores={DialogueTrigger=198,TalkTime=1021..1037}] run bossbar set johto:bugcontest value 40
+execute as @s[scores={DialogueTrigger=198,TalkTime=1038..1054}] run bossbar set johto:bugcontest value 39
+execute as @s[scores={DialogueTrigger=198,TalkTime=1055..1071}] run bossbar set johto:bugcontest value 38
+execute as @s[scores={DialogueTrigger=198,TalkTime=1072..1088}] run bossbar set johto:bugcontest value 37
+execute as @s[scores={DialogueTrigger=198,TalkTime=1089..1105}] run bossbar set johto:bugcontest value 36
+execute as @s[scores={DialogueTrigger=198,TalkTime=1106..1122}] run bossbar set johto:bugcontest value 35
+execute as @s[scores={DialogueTrigger=198,TalkTime=1123..1139}] run bossbar set johto:bugcontest value 34
+execute as @s[scores={DialogueTrigger=198,TalkTime=1140..1156}] run bossbar set johto:bugcontest value 33
+execute as @s[scores={DialogueTrigger=198,TalkTime=1157..1173}] run bossbar set johto:bugcontest value 32
+execute as @s[scores={DialogueTrigger=198,TalkTime=1174..1190}] run bossbar set johto:bugcontest value 31
+execute as @s[scores={DialogueTrigger=198,TalkTime=1191..1207}] run bossbar set johto:bugcontest value 30
+execute as @s[scores={DialogueTrigger=198,TalkTime=1208..1224}] run bossbar set johto:bugcontest value 29
+execute as @s[scores={DialogueTrigger=198,TalkTime=1225..1241}] run bossbar set johto:bugcontest value 28
+execute as @s[scores={DialogueTrigger=198,TalkTime=1242..1258}] run bossbar set johto:bugcontest value 27
+execute as @s[scores={DialogueTrigger=198,TalkTime=1259..1275}] run bossbar set johto:bugcontest value 26
+execute as @s[scores={DialogueTrigger=198,TalkTime=1276..1292}] run bossbar set johto:bugcontest value 25
+execute as @s[scores={DialogueTrigger=198,TalkTime=1293..1309}] run bossbar set johto:bugcontest value 24
+execute as @s[scores={DialogueTrigger=198,TalkTime=1310..1326}] run bossbar set johto:bugcontest value 23
+execute as @s[scores={DialogueTrigger=198,TalkTime=1327..1343}] run bossbar set johto:bugcontest value 22
+execute as @s[scores={DialogueTrigger=198,TalkTime=1344..1360}] run bossbar set johto:bugcontest value 21
+execute as @s[scores={DialogueTrigger=198,TalkTime=1361..1377}] run bossbar set johto:bugcontest value 20
+execute as @s[scores={DialogueTrigger=198,TalkTime=1378..1394}] run bossbar set johto:bugcontest value 19
+execute as @s[scores={DialogueTrigger=198,TalkTime=1395..1411}] run bossbar set johto:bugcontest value 18
+execute as @s[scores={DialogueTrigger=198,TalkTime=1412..1428}] run bossbar set johto:bugcontest value 17
+execute as @s[scores={DialogueTrigger=198,TalkTime=1429..1445}] run bossbar set johto:bugcontest value 16
+execute as @s[scores={DialogueTrigger=198,TalkTime=1446..1462}] run bossbar set johto:bugcontest value 15
+execute as @s[scores={DialogueTrigger=198,TalkTime=1463..1479}] run bossbar set johto:bugcontest value 14
+execute as @s[scores={DialogueTrigger=198,TalkTime=1480..1496}] run bossbar set johto:bugcontest value 13
+execute as @s[scores={DialogueTrigger=198,TalkTime=1497..1513}] run bossbar set johto:bugcontest value 12
+execute as @s[scores={DialogueTrigger=198,TalkTime=1514..1530}] run bossbar set johto:bugcontest value 11
+execute as @s[scores={DialogueTrigger=198,TalkTime=1531..1547}] run bossbar set johto:bugcontest value 10
+execute as @s[scores={DialogueTrigger=198,TalkTime=1548..1564}] run bossbar set johto:bugcontest value 9
+execute as @s[scores={DialogueTrigger=198,TalkTime=1565..1581}] run bossbar set johto:bugcontest value 8
+execute as @s[scores={DialogueTrigger=198,TalkTime=1582..1598}] run bossbar set johto:bugcontest value 7
+execute as @s[scores={DialogueTrigger=198,TalkTime=1599..1615}] run bossbar set johto:bugcontest value 6
+execute as @s[scores={DialogueTrigger=198,TalkTime=1616..1632}] run bossbar set johto:bugcontest value 5
+execute as @s[scores={DialogueTrigger=198,TalkTime=1633..1649}] run bossbar set johto:bugcontest value 4
+execute as @s[scores={DialogueTrigger=198,TalkTime=1650..1666}] run bossbar set johto:bugcontest value 3
+execute as @s[scores={DialogueTrigger=198,TalkTime=1667..1683}] run bossbar set johto:bugcontest value 2
+execute as @s[scores={DialogueTrigger=198,TalkTime=1684..}] run bossbar set johto:bugcontest value 1
+execute as @s[scores={DialogueTrigger=198,TalkTime=1}] run bossbar set johto:bugcontest players @s[scores={DialogueTrigger=198,TalkTime=1}]
+execute as @s[scores={DialogueTrigger=198,TalkTime=1705..}] run bossbar remove johto:bugcontest
+
+
+
+#Changes out Spawner data for contest & if player has beaten the Pokemon League
+execute as @s[scores={DialogueTrigger=198,TalkTime=20}] run function johto:data/bugcontestspawners
+
+
+#15 Minutes Remaining
+execute as @s[scores={DialogueTrigger=198,TalkTime=429}] run title @s title {"text":"15 Minutes Remain"}
+
+#10 Minutes Remaining
+execute as @s[scores={DialogueTrigger=198,TalkTime=858}] run title @s title {"text":"10 Minutes Remain"}
+
+#5 Minutes Remaining
+execute as @s[scores={DialogueTrigger=198,TalkTime=1287}] run title @s title {"text":"5 Minutes Remain"}
+
+#1 Minute Remaining
+execute as @s[scores={DialogueTrigger=198,TalkTime=1629}] run title @s title {"text":"1 Minute Remains"}
+
+#0 Minutes Remaining - 1714
+
+tellraw @s[scores={DialogueTrigger=198,TalkTime=1705}] {"text":"<Park Worker> Time is up! Let's begin judging!"}
+
+#tps playet to judging building
+execute as @s[scores={DialogueTrigger=198,TalkTime=1714}] run effect give @s minecraft:blindness 5 1 true
+execute as @s[scores={DialogueTrigger=198,TalkTime=1714}] run tp @s 476 64 61 0 0
+tellraw @s[scores={DialogueTrigger=198,TalkTime=1714}] {"text":"<Park Worker> Please send out which Pokemon you wish to be judged!"}
+execute as @s[scores={DialogueTrigger=198,TalkTime=1714}] run scoreboard players set @s BugPoints 0
+
+#Tps in random trainers and statues
+execute as @s[scores={DialogueTrigger=198,TalkTime=1715}] run tp @e[sort=random,limit=1,x=-855,y=64,z=-153,dx=5,dy=2,dz=5] 471 64 61
+execute as @s[scores={DialogueTrigger=198,TalkTime=1715}] run tp @e[sort=random,limit=1,x=-855,y=64,z=-153,dx=5,dy=2,dz=5] 481 64 61
+execute as @s[scores={DialogueTrigger=198,TalkTime=1715}] run function johto:world/bugcontest/makestatues
+execute as @s[scores={DialogueTrigger=198,TalkTime=1715}] run function johto:world/bugcontest/makestatues
+
+tag @s[scores={DialogueTrigger=198,TalkTime=1715..}] add Dialogue198
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Bug Catching Contest Judging
+#Dialogue199
+
+tellraw @s[scores={DialogueTrigger=199,TalkTime=1}] {"text":"<Park Worker> Scoring your Pokemon..."}
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=1}] run scoreboard players set @s BugPoints 0
+execute as @s[scores={DialogueTrigger=199,TalkTime=2}] run function johto:world/bugcontest/bugcontestivscore
+
+tellraw @s[scores={DialogueTrigger=199,TalkTime=8}] {"text":"<Park Worker> Adding up points..."}
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=8}] run function johto:world/bugcontest/bugcontesttotal
+
+tellraw @s[scores={DialogueTrigger=199,TalkTime=15}] {"text":"<Park Worker> And today's winners are..."}
+
+#Rolls for a random number
+execute as @s[scores={DialogueTrigger=199,TalkTime=17}] run scoreboard players set @e[x=-867,y=69,z=-207,dy=4,dz=2] rng 0
+execute as @s[scores={DialogueTrigger=199,TalkTime=17}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 1
+execute as @s[scores={DialogueTrigger=199,TalkTime=17}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 2
+execute as @s[scores={DialogueTrigger=199,TalkTime=17}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 4
+execute as @s[scores={DialogueTrigger=199,TalkTime=17}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 8
+execute as @s[scores={DialogueTrigger=199,TalkTime=17}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 16
+execute as @s[scores={DialogueTrigger=199,TalkTime=17}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 32
+execute as @s[scores={DialogueTrigger=199,TalkTime=17}] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 64
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=17}] run scoreboard players operation @s rng = @e[x=-867,y=69,z=-205,dy=3,type=armor_stand] rng
+
+
+#0-39 (Bug score) 70-99              100-129              130-159              160+
+#2/9 2nd          3/9 1st            5/9 1st              7/9 1st              100% chance first
+#7/9 3rd          3/9 2nd            3/9 2nd              2/9 2nd
+#                 3/9 3rd            1/9 3rd
+
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=0..39,rng=0..28}] run tag @s add Second
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=0..39,rng=29..127}] run tag @s add Third
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=40..69,rng=0..14}] run tag @s add First
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=40..69,rng=15..57}] run tag @s add Second
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=40..69,rng=58..127}] run tag @s add Third
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=70..90,rng=0..42}] run tag @s add First
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=70..90,rng=43..85}] run tag @s add Second
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=70..90,rng=86..127}] run tag @s add Third
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=100..129,rng=0..71}] run tag @s add First
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=100..129,rng=72..113}] run tag @s add Second
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=100..129,rng=114..127}] run tag @s add Third
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=130..159,rng=0..100}] run tag @s add First
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=130..159,rng=101..128}] run tag @s add Second
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=19..20,BugPoints=160..186}] run tag @s add First
+
+#First
+execute as @s[scores={DialogueTrigger=199,TalkTime=22}] run tellraw @s[tag=First] ["",{"text":"1st Place: "},{"selector":"@s[tag=First]"},{"text":"!\n2nd Place: Bug Catcher Ed\n3rd Place: Bug Catcher Don\n "}]
+
+#Second
+execute as @s[scores={DialogueTrigger=199,TalkTime=22}] run tellraw @s[tag=Second] ["",{"text":"1st Place: Bug Catcher Don\n2nd Place: "},{"selector":"@s[tag=Second]"},{"text":"!\n3rd Place: Bug Catcher Ed"}]
+
+#3rd
+execute as @s[scores={DialogueTrigger=199,TalkTime=22}] run tellraw @s[tag=Third] ["",{"text":"1st Place: Bug Catcher Ed\n2nd Place: Bug Catcher Don\n3rd Place: "},{"selector":"@s[tag=Third]"},{"text":"!\n "}]
+
+
+tellraw @s[scores={DialogueTrigger=199,TalkTime=30}] ["",{"text":"<Park Worker> "},{"text":"Here is your prize! Congratulations to our contestants! We hope you'll visit again soon!","color":"white"}]
+execute as @s[scores={DialogueTrigger=199,TalkTime=30}] run advancement grant @s only johto:event1
+
+#Rolls again for a reward if 1st
+execute as @s[scores={DialogueTrigger=199,TalkTime=29},tag=First] run scoreboard players set @e[x=-867,y=69,z=-207,dy=4,dz=2] rng 0
+execute as @s[scores={DialogueTrigger=199,TalkTime=29},tag=First] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 1
+execute as @s[scores={DialogueTrigger=199,TalkTime=29},tag=First] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 2
+execute as @s[scores={DialogueTrigger=199,TalkTime=29},tag=First] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 4
+execute as @s[scores={DialogueTrigger=199,TalkTime=29},tag=First] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 8
+execute as @s[scores={DialogueTrigger=199,TalkTime=29},tag=First] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 16
+execute as @s[scores={DialogueTrigger=199,TalkTime=29},tag=First] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 32
+execute as @s[scores={DialogueTrigger=199,TalkTime=29},tag=First] run scoreboard players add @e[x=-867,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 64
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=29},tag=First] run scoreboard players operation @s rng = @e[x=-867,y=69,z=-205,dy=3,type=armor_stand] rng
+
+execute as @s[scores={DialogueTrigger=199,TalkTime=33,rng=0..32}] run give @s[tag=First] pixelmon:sun_stone
+execute as @s[scores={DialogueTrigger=199,TalkTime=33,rng=33..96}] run give @s[tag=First] pixelmon:shiny_stone
+execute as @s[scores={DialogueTrigger=199,TalkTime=33,rng=97..127}] run give @s[tag=First] pixelmon:oval_stone
+execute as @s[scores={DialogueTrigger=199,TalkTime=33}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+
+#2nd Place Prize
+execute as @s[scores={DialogueTrigger=199,TalkTime=33}] run give @s[tag=Second] pixelmon:ever_stone
+
+#3rd Place Prize
+execute as @s[scores={DialogueTrigger=199,TalkTime=33}] run give @s[tag=Third] pixelmon:shed_shell
+
+
+
+#Clears Sport Ball stuff
+execute as @s[scores={DialogueTrigger=199,TalkTime=34..35}] run clear @s pixelmon:poke_ball_lid{PokeBallID:"sport_ball"}
+execute as @s[scores={DialogueTrigger=199,TalkTime=34..35}] run clear @s pixelmon:poke_ball{PokeBallID:"sport_ball"}
+
+
+#Tps the NPCs and statues out
+execute as @s[scores={DialogueTrigger=199,TalkTime=37}] run tp @e[x=481,y=63,z=61,dy=2,nbt=!{cobblemon:npc_chatting},limit=1] -852 64 -151
+execute as @s[scores={DialogueTrigger=199,TalkTime=37}] run tp @e[x=471,y=63,z=61,dy=2,nbt=!{cobblemon:npc_chatting},limit=1] -852 64 -151
+execute as @s[scores={DialogueTrigger=199,TalkTime=37}] run setblock 481 64 63 minecraft:air
+execute as @s[scores={DialogueTrigger=199,TalkTime=37}] run setblock 471 64 63 minecraft:air
+
+#Resets spawners in park
+execute as @s[scores={DialogueTrigger=199,TalkTime=37}] run function johto:data/bugcontestspawners
+
+#Cleans up scores
+execute as @s[scores={DialogueTrigger=199,TalkTime=38}] run scoreboard players set @s BugPoints 0
+execute as @s[scores={DialogueTrigger=199,TalkTime=38}] run scoreboard players set @s BugContest 0
+execute as @s[scores={DialogueTrigger=199,TalkTime=38}] run scoreboard players set @e[x=-799,y=64,z=-284,dy=3,type=armor_stand] BugContest 0
+execute as @s[scores={DialogueTrigger=199,TalkTime=38}] run data merge block 476 67 68 {Text3: '{"text":"No active"}'}
+execute as @s[scores={DialogueTrigger=199,TalkTime=38}] run tag @s remove First
+execute as @s[scores={DialogueTrigger=199,TalkTime=38}] run tag @s remove Second
+execute as @s[scores={DialogueTrigger=199,TalkTime=38}] run tag @s remove Third
+execute as @s[scores={DialogueTrigger=199,TalkTime=38}] run tag @s remove Dialogue198
+
+tag @s[scores={DialogueTrigger=199,TalkTime=38..}] add Dialogue199
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#PokeManiac Kirk giving Shuckle, Cianwood City
+#scoreboard players set @a[x=1221,y=63,z=-434,dx=19,dy=5,dz=8,score_TalkTime=0,tag=!Dialogue203] DialogueTrigger 203
+
+tellraw @s[scores={DialogueTrigger=203,TalkTime=2}] {"text":"<PokéManiac Kirk> I, I'm in shock!"}
+tellraw @s[scores={DialogueTrigger=203,TalkTime=9}] {"text":"<PokéManiac Kirk> A guy about your age with piercing eyes and long hair came in."}
+tellraw @s[scores={DialogueTrigger=203,TalkTime=18}] {"text":"<PokéManiac Kirk> He scared me into giving him my prized Pokemon!"}
+tellraw @s[scores={DialogueTrigger=203,TalkTime=26}] {"text":"<PokéManiac Kirk> I still have one left, but what if he comes back?"}
+tellraw @s[scores={DialogueTrigger=203,TalkTime=34}] {"text":"<PokéManiac Kirk> You look strong. Could you look after my Pokemon for a while?"}
+execute as @s[scores={DialogueTrigger=203,TalkTime=40}] run pokegive @s Shuckle lvl:15
+execute as @s[scores={DialogueTrigger=203,TalkTime=40}] run playsound egghatch ambient @s ~ ~ ~ 10 1 1
+
+tag @s[scores={DialogueTrigger=203,TalkTime=40..}] add Dialogue203
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Bill's house in Goldenrod City after talking with him in Ecruteak
+#execute as @s[x=541,y=63,z=-416,dx=11,dy=5,dz=11,score_TalkTime=0,tag=Dialogue204] run scoreboard players set @s[tag=!Dialogue205] DialogueTrigger 205
+
+#tp Bill in separately
+#execute as @p[x=541,y=63,z=-416,distance=..15,tag=Dialogue204] run execute @s[tag=!Dialogue205] run tp @e[x=-815,y=69,z=-233,dy=3,nbt=!{cobblemon:npc_chatting}] 549 64 -409
+
+#Return
+#execute as @p[x=541,y=63,z=-416,distance=..15,tag=!Dialogue204] run execute @s[tag=!Dialogue205] run tp @e[x=549,y=63,z=-409,dy=3,nbt=!{cobblemon:npc_chatting}] -815 70 -233
+
+tellraw @s[scores={DialogueTrigger=205,TalkTime=1}] ["",{"text":"<Bill> Hi, "},{"selector":"@s"},{"text":"! Would you do something for me and take this Eevee?"}]
+tellraw @s[scores={DialogueTrigger=205,TalkTime=11}] {"text":"<Bill> It came over when I was adjusting Nintendo Wi-Fi Connection."}
+tellraw @s[scores={DialogueTrigger=205,TalkTime=20}] {"text":"<Bill> Someone has to take care of it, but I don't like being outside."}
+tellraw @s[scores={DialogueTrigger=205,TalkTime=28}] {"text":"<Bill> I knew you'd come through! You're the real deal!"}
+tellraw @s[scores={DialogueTrigger=205,TalkTime=36}] {"text":"<Bill> Way to go! OK, I'm counting on you. Take good care of it!"}
+execute as @s[scores={DialogueTrigger=205,TalkTime=45}] run pokegive @s Eevee lvl:5
+execute as @s[scores={DialogueTrigger=205,TalkTime=45}] run playsound egghatch ambient @s ~ ~ ~ 10 1 1
+tellraw @s[scores={DialogueTrigger=205,TalkTime=45}] ["",{"selector":"@s","italic":true,"color":"gray"},{"text":" received the Eevee!","italic":true,"color":"gray"}]
+tellraw @s[scores={DialogueTrigger=205,TalkTime=53}] {"text":"<Bill> Professor Elm said Eevee can evolve into seven different kinds of Pokémon!"}
+tellraw @s[scores={DialogueTrigger=205,TalkTime=62}] {"text":"<Bill> I used to do experiments on transferring things."}
+tellraw @s[scores={DialogueTrigger=205,TalkTime=70}] {"text":"<Bill> Both the GTS and Nintendo Wi-Fi Connection were inspired by my machine that transfers things!"}
+
+tag @s[scores={DialogueTrigger=205,TalkTime=70..}] add Dialogue205
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Battle Tower Win commands
+#scoreboard players tag @a[x=875,y=99,z=50,dx=55,dy=20,dz=27,score_TalkTime=0,tag=Dialogue206] remove Dialogue206
+#scoreboard players set @a[x=875,y=99,z=50,dx=55,dy=20,dz=27,score_TalkTime=0] DialogueTrigger 206 {Inventory:[{id:"minecraft:nether_brick"}]}
+
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run clear @s minecraft:nether_brick
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run scoreboard players add @s[scores={Battle_Streak=0..7}] BattlePoints 1
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run scoreboard players add @s[scores={Battle_Streak=8..14}] BattlePoints 2
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run scoreboard players add @s[scores={Battle_Streak=15..21}] BattlePoints 3
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run scoreboard players add @s[scores={Battle_Streak=22..28}] BattlePoints 4
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run scoreboard players add @s[scores={Battle_Streak=29..35}] BattlePoints 5
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run scoreboard players add @s[scores={Battle_Streak=36..42}] BattlePoints 6
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run scoreboard players add @s[scores={Battle_Streak=43..49}] BattlePoints 7
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run scoreboard players add @s[scores={Battle_Streak=50..}] BattlePoints 8
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run scoreboard players add @s Battle_Streak 1
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run pokeheal @s
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run tellraw @s {"text":"Your Pokemon have been healed!"}
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run function johto:world/battletower/pointbal
+#execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run tp @s 900 100 67.0 -90 -18
+
+
+#Clear and activates Battle Streak hologram function
+execute as @s[scores={DialogueTrigger=206,TalkTime=1}] run kill @e[x=903,y=100,z=77,distance=..5,type=armor_stand]
+execute as @s[scores={DialogueTrigger=206,TalkTime=2}] run function johto:world/battletower/battlestreakhologram
+execute as @s[scores={DialogueTrigger=206,TalkTime=2}] run summon minecraft:armor_stand 903.0 101 77 {Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,CustomName:'{"text":"Battle Streak","color":"green"}',CustomNameVisible:1b}
+
+
+#Rolls for new NPC
+execute as @s[scores={DialogueTrigger=206,TalkTime=4}] run particle cloud 910 100 66 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=206,TalkTime=5}] run execute as @e[x=910,y=99,z=66,dy=3,dz=1,nbt=!{cobblemon:npc_trainer}] run function johto:world/battletower/rolltrainer
+execute as @s[scores={DialogueTrigger=206,TalkTime=5}] run execute as @e[x=910,y=99,z=66,dy=3,dz=1,nbt=!{cobblemon:npc_trainer}] run function johto:world/battletower/rollpokemon
+execute as @s[scores={DialogueTrigger=206,TalkTime=5}] run execute as @e[x=910,y=99,z=66,dy=3,dz=1,nbt=!{cobblemon:npc_trainer}] run function johto:world/battletower/rolldialogue
+
+#Rotates npcs
+execute as @s[scores={DialogueTrigger=206,TalkTime=5}] run data merge entity @e[limit=1,x=910,y=99,z=66,dy=3,dz=1,nbt=!{cobblemon:npc_trainer}] {TrainerRotation:90.0f}
+
+
+tag @s[scores={DialogueTrigger=206,TalkTime=5..}] add Dialogue206
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Guide Gent first prompt
+#execute as @e[x=-270,y=63,z=-505,dy=3,nbt=!{cobblemon:npc_chatting}] run execute @a[r=5,tag=!GuideTour] run scoreboard players set @s[score_TalkTime=0,tag=!Dialogue209] DialogueTrigger 209
+
+tellraw @s[scores={DialogueTrigger=209,TalkTime=1}] {"text":"<Guide Gent> You're a trainer, aren't you? I can tell!"}
+tellraw @s[scores={DialogueTrigger=209,TalkTime=9}] {"text":"<Guide Gent> That's OK! Everyone is a rookie at some point!"}
+tellraw @s[scores={DialogueTrigger=209,TalkTime=17}] {"text":"<Guide Gent> If you'd like, I can teach you a few things."}
+tellraw @s[scores={DialogueTrigger=209,TalkTime=17}] ["",{"text":"["},{"text":"Yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 10"}},{"text":"] \u0020 \u0020 ["},{"text":"No","color":"red","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 11"}},{"text":"]"}]
+execute as @s[scores={DialogueTrigger=209,TalkTime=17}] run scoreboard players enable @s TriggerCommand
+
+tag @s[scores={DialogueTrigger=209,TalkTime=17..}] add Dialogue209
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Guide Gent Tour
+#execute as @e[x=-256,y=63,z=-495,dy=3,nbt=!{cobblemon:npc_chatting}] run scoreboard players set @a[r=5,score_TalkTime=0,tag=!Dialogue210] DialogueTrigger 210
+
+execute as @s[scores={DialogueTrigger=210,TalkTime=1}] run scoreboard players set @s click 1
+tellraw @s[scores={DialogueTrigger=210,TalkTime=1}] {"text":"<Guide Gent> This is the Pokémon Center. They heal your Pokémon in no time at all!"}
+tellraw @s[scores={DialogueTrigger=210,TalkTime=11}] {"text":"<Guide Gent> You'll be relying on them a lot, so you better learn about them."}
+execute as @s[scores={DialogueTrigger=210,TalkTime=20}] run scoreboard players set @e[x=-256,y=64,z=-495,distance=..2,nbt=!{cobblemon:npc_chatting}] DialogueTrigger 2
+execute as @s[scores={DialogueTrigger=210,TalkTime=20}] run tag @e[x=-792,y=65,z=-284,dy=3] add GuideGentMove
+
+tag @s[scores={DialogueTrigger=210,TalkTime=20..}] add Dialogue210
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Guide Gent Tour
+#execute as @e[x=-217,y=64,z=-495,dy=3,nbt=!{cobblemon:npc_chatting}] run scoreboard players set @a[r=5,score_TalkTime=0,tag=!Dialogue211] DialogueTrigger 211
+
+tellraw @s[scores={DialogueTrigger=211,TalkTime=1}] {"text":"<Guide Gent> This is a Pokemon Mart."}
+tellraw @s[scores={DialogueTrigger=211,TalkTime=8}] {"text":"<Guide Gent> They sell Poke Balls for catching wild Pokemon and other useful items."}
+execute as @s[scores={DialogueTrigger=211,TalkTime=18}] run scoreboard players set @e[x=-217,y=64,z=-495,distance=..2,nbt=!{cobblemon:npc_chatting}] DialogueTrigger 3
+execute as @s[scores={DialogueTrigger=211,TalkTime=18}] run tag @e[x=-792,y=65,z=-284,dy=3] add GuideGentMove
+
+tag @s[scores={DialogueTrigger=211,TalkTime=18..}] add Dialogue211
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Guide Gent Tour
+#execute as @e[x=-184,y=64,z=-495,dy=3,nbt=!{cobblemon:npc_chatting}] run scoreboard players set @a[r=5,score_TalkTime=0,tag=!Dialogue212] DialogueTrigger 212
+
+tellraw @s[scores={DialogueTrigger=212,TalkTime=1}] {"text":"<Guide Gent> Route 30 is out this way. Trainers will be battling their Pokemon there."}
+tellraw @s[scores={DialogueTrigger=212,TalkTime=11}] {"text":"<Guide Gent> If you go a little further, you'll see Mr. Pokemon's House."}
+execute as @s[scores={DialogueTrigger=212,TalkTime=20}] run scoreboard players set @e[x=-184,y=64,z=-495,distance=..2,nbt=!{cobblemon:npc_chatting}] DialogueTrigger 4
+execute as @s[scores={DialogueTrigger=212,TalkTime=20}] run tag @e[x=-792,y=65,z=-284,dy=3] add GuideGentMove
+
+tag @s[scores={DialogueTrigger=212,TalkTime=20..}] add Dialogue212
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Guide Gent Tour
+#execute as @e[x=-146,y=64,z=-517,dy=3,nbt=!{cobblemon:npc_chatting}] run scoreboard players set @a[r=5,score_TalkTime=0,tag=!Dialogue197] DialogueTrigger 197
+
+tellraw @s[scores={DialogueTrigger=197,TalkTime=1}] {"text":"<Guide Gent> This is the sea, as you can see."}
+tellraw @s[scores={DialogueTrigger=197,TalkTime=9}] {"text":"<Guide Gent> Some Pokemon are only found in water."}
+execute as @s[scores={DialogueTrigger=197,TalkTime=17}] run scoreboard players set @e[x=-146,y=64,z=-517,distance=..2,nbt=!{cobblemon:npc_chatting}] DialogueTrigger 5
+execute as @s[scores={DialogueTrigger=197,TalkTime=17}] run tag @e[x=-792,y=65,z=-284,dy=3] add GuideGentMove
+
+tag @s[scores={DialogueTrigger=197,TalkTime=17..}] add Dialogue197
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Guide Gent Tour
+#execute as @e[x=-230,y=64,z=-529,dy=3,nbt=!{cobblemon:npc_chatting}] run scoreboard players set @a[r=5,score_TalkTime=0,tag=!Dialogue213] DialogueTrigger 213
+
+tellraw @s[scores={DialogueTrigger=213,TalkTime=1}] {"text":"<Guide Gent> Here... It's my house!"}
+tellraw @s[scores={DialogueTrigger=213,TalkTime=8}] {"text":"<Guide Gent> For your effort keeping up with me, I'll give you a Town Map!"}
+execute as @s[scores={DialogueTrigger=213,TalkTime=5}] run replaceitem entity @e[x=-230,y=63,z=-529,dy=2,distance=..5,nbt=!{cobblemon:npc_chatting}] weapon.mainhand minecraft:filled_map
+execute as @s[scores={DialogueTrigger=213,TalkTime=11}] run function johto:spawn/townmap
+execute as @s[scores={DialogueTrigger=213,TalkTime=11}] run replaceitem entity @e[x=-230,y=63,z=-529,dy=2,distance=..5,nbt=!{cobblemon:npc_chatting}] weapon.mainhand minecraft:air
+execute as @s[scores={DialogueTrigger=213,TalkTime=11}] run playsound pixelmon:pixelmon.block.pokelootobtained ambient @s ~ ~ ~ 1 1 1
+tellraw @s[scores={DialogueTrigger=213,TalkTime=18}] {"text":"<Guide Gent> It will show you where you are any time you look at it!"}
+execute as @s[scores={DialogueTrigger=213,TalkTime=26}] run scoreboard players set @e[x=-230,y=64,z=-529,distance=..3,nbt=!{cobblemon:npc_chatting}] DialogueTrigger 6
+execute as @s[scores={DialogueTrigger=213,TalkTime=26}] run tag @e[x=-792,y=65,z=-284,dy=3] add GuideGentMove
+execute as @s[scores={DialogueTrigger=213,TalkTime=26}] run tag @s add GuideTour
+execute as @s[scores={DialogueTrigger=213,TalkTime=26}] run scoreboard players set @s click 1
+
+tag @s[scores={DialogueTrigger=213,TalkTime=26..}] add Dialogue213
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Team Rocket's Announcement when Radio Tower is occupied, overwrites existing radio shows
+#Dialogue224
+#Applied by the RadioStations function, removed by fiveminutecommands function
+
+tellraw @s[scores={DialogueTrigger=224,TalkTime=1}] ["",{"text":"\u266a\u266b\u266c "},{"text":"[Radio] ","color":"aqua"},{"text":"<Team Rocket> ...This is the Radio Tower. This is the Radio Tower.","italic":true},{"text":"\u266a\u266b\u266c"}]
+tellraw @s[scores={DialogueTrigger=224,TalkTime=10}] ["",{"text":"\u266a\u266b\u266c "},{"text":"[Radio] ","color":"aqua"},{"text":"<Team Rocket> We are pleased to declare Team Rocket's revival.","italic":true},{"text":"\u266a\u266b\u266c"}]
+tellraw @s[scores={DialogueTrigger=224,TalkTime=20}] ["",{"text":"\u266a\u266b\u266c "},{"text":"[Radio] ","color":"aqua"},{"text":"<Team Rocket> ...Giovanni? ...Can you hear us? We have finally made it!...","italic":true},{"text":"\u266a\u266b\u266c"}]
+
+tag @s[scores={DialogueTrigger=224,TalkTime=20..}] add Dialogue224
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Buena's Password Item
+#execute as @s[x=502,y=48,z=-274,dx=6,dy=5,dz=5,tag=BuenasPasswordDaily,score_TalkTime=0] run scoreboard players set @s[tag=!Dialogue225] DialogueTrigger 225
+
+tellraw @s[scores={DialogueTrigger=225,TalkTime=1}] {"text":"<DJ Buena> YIPPEE! That's the password!"}
+tellraw @s[scores={DialogueTrigger=225,TalkTime=7}] {"text":"<DJ Buena> You did tune in! I'm so happy!"}
+
+#Rolls RNG Score
+execute as @s[scores={DialogueTrigger=225,TalkTime=12}] run scoreboard players set @e[x=-864,y=69,z=-202,dy=4,dz=2,limit=1] rng 0
+execute as @s[scores={DialogueTrigger=225,TalkTime=12}] run scoreboard players add @e[x=-864,y=69,z=-202,dy=4,dz=2,sort=random,limit=1] rng 1
+execute as @s[scores={DialogueTrigger=225,TalkTime=12}] run scoreboard players add @e[x=-864,y=69,z=-202,dy=4,dz=2,sort=random,limit=1] rng 2
+execute as @s[scores={DialogueTrigger=225,TalkTime=12}] run scoreboard players add @e[x=-864,y=69,z=-202,dy=4,dz=2,sort=random,limit=1] rng 4
+execute as @s[scores={DialogueTrigger=225,TalkTime=12}] run scoreboard players add @e[x=-864,y=69,z=-202,dy=4,dz=2,sort=random,limit=1] rng 8
+execute as @s[scores={DialogueTrigger=225,TalkTime=12}] run scoreboard players add @e[x=-864,y=69,z=-202,dy=4,dz=2,sort=random,limit=1] rng 16
+execute as @s[scores={DialogueTrigger=225,TalkTime=12}] run scoreboard players add @e[x=-864,y=69,z=-202,dy=4,dz=2,sort=random,limit=1] rng 32
+execute as @s[scores={DialogueTrigger=225,TalkTime=12}] run scoreboard players add @e[x=-864,y=69,z=-202,dy=4,dz=2,sort=random,limit=1] rng 64
+
+execute as @s[scores={DialogueTrigger=225,TalkTime=12}] run scoreboard players operation @a[scores={DialogueTrigger=225,TalkTime=12}] rng = @e[x=-864,y=69,z=-200,dy=3] rng
+
+#Gives prize:
+execute as @s[scores={DialogueTrigger=225,TalkTime=13,rng=0..15}] run give @s pixelmon:poke_ball
+execute as @s[scores={DialogueTrigger=225,TalkTime=13,rng=16..31}] run give @s pixelmon:full_restore
+execute as @s[scores={DialogueTrigger=225,TalkTime=13,rng=32..47}] run give @s pixelmon:protein
+execute as @s[scores={DialogueTrigger=225,TalkTime=13,rng=48..63}] run give @s pixelmon:iron
+execute as @s[scores={DialogueTrigger=225,TalkTime=13,rng=64..79}] run give @s pixelmon:carbos
+execute as @s[scores={DialogueTrigger=225,TalkTime=13,rng=80..95}] run give @s pixelmon:nugget
+execute as @s[scores={DialogueTrigger=225,TalkTime=13,rng=96..111}] run give @s pixelmon:rare_candy
+execute as @s[scores={DialogueTrigger=225,TalkTime=13,rng=112..127}] run give @s pixelmon:hp_up
+
+tellraw @s[scores={DialogueTrigger=225,TalkTime=13}] {"text":"<DJ Buena> Here's a prize! Congrats!"}
+
+execute as @s[scores={DialogueTrigger=225,TalkTime=13}] run tag @s remove BuenasPasswordTalk
+execute as @s[scores={DialogueTrigger=225,TalkTime=13}] run tag @s remove BuenasPasswordDaily
+execute as @s[scores={DialogueTrigger=225,TalkTime=13}] run tag @s add BuenasPasswordCD
+
+tellraw @s[scores={DialogueTrigger=225,TalkTime=20}] {"text":"<DJ Buena> My drawings are daily! Tune in and come back tomorrow for another prize!"}
+
+tag @s[scores={DialogueTrigger=225,TalkTime=20..}] add Dialogue225
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Eusine Burned Tower first dialogue
+#scoreboard players set @a[x=445,y=64,z=304,distance=..5,score_DogEncounter_min=1,tag=!Dialogue226] DialogueTrigger 226
+
+#tps Eusine in
+#execute as @s[x=445,y=64,z=304,distance=..10,score_DogEncounter_min=1,tag=!Dialogue226] run tp @e[x=-815,y=74,z=-228,dy=3,nbt=!{cobblemon:npc_chatting}] 445 64 304
+
+tellraw @s[scores={DialogueTrigger=226,TalkTime=1}] {"text":"<...> Did you see it? Suicune raced by like a blur, right in front of my eyes!"}
+tellraw @s[scores={DialogueTrigger=226,TalkTime=10}] {"text":"<..> I have been chasing Suicune for almost ten years, but I have never been this close! I'm all choked up!"}
+tellraw @s[scores={DialogueTrigger=226,TalkTime=20}] {"text":"<Eusine> Oh? My name is Eusine. I'm on the trail of a Pokémon named Suicune. And you are...?"}
+tellraw @s[scores={DialogueTrigger=226,TalkTime=29}] ["",{"text":"<Eusine> "},{"selector":"@s"},{"text":"? Glad to meet you. I heard rumors that Suicune is here, so I came to look."}]
+tellraw @s[scores={DialogueTrigger=226,TalkTime=39}] {"text":"<Eusine> By the way... It was clear to me that Suicune took notice of your presence."}
+tellraw @s[scores={DialogueTrigger=226,TalkTime=48}] {"text":"<Eusine> Ecruteak's legendary Pokémon are said to come to people only when they recognize their talents."}
+tellraw @s[scores={DialogueTrigger=226,TalkTime=58}] {"text":"<Eusine> Perhaps I should be more aggressive toward Suicune..."}
+tellraw @s[scores={DialogueTrigger=226,TalkTime=66}] ["",{"text":"<Eusine> Anyway, "},{"selector":"@s"},{"text":", we will meet again!"}]
+
+#tp out
+execute as @s[scores={DialogueTrigger=226,TalkTime=73}] run particle cloud 445 64 304 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=226,TalkTime=73}] run tp @e[x=445,y=63,z=304,dy=3,nbt=!{cobblemon:npc_chatting}] -815 75 -228
+
+tag @s[scores={DialogueTrigger=226,TalkTime=73..}] add Dialogue226
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Suicune Second Encounter Cianwood City pre-battle
+#execute as @s[x=1249,y=63,z=-300,dx=9,dy=5,dz=10,tag=Dialogue226] run scoreboard players set @s[tag=!Dialogue227] DialogueTrigger 227
+
+#tp in Suicune to find:
+#execute as @s[x=1256,y=64,z=-296,distance=..50,score_DogEncounter_min=1,score_TalkTime=0,tag=Dialogue226] run execute @s[tag=!Dialogue227] run tp @e[x=-817,y=80,z=-171,dy=3,nbt=!{cobblemon:statue}] 1256 64 -296
+
+#Suicune
+execute as @s[scores={DialogueTrigger=227,TalkTime=1}] run stopsound @s record
+execute as @s[scores={DialogueTrigger=227,TalkTime=1}] run scoreboard players set @s MusicCooldown 100
+execute as @s[scores={DialogueTrigger=227,TalkTime=1}] run playsound suicune hostile @s ~ ~ ~ 1 1 1
+
+execute as @s[scores={DialogueTrigger=227,TalkTime=5}] run playsound flee ambient @s ~ ~ ~ 100 1 1
+execute as @s[scores={DialogueTrigger=227,TalkTime=5}] run particle cloud 1256 64 -296 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=227,TalkTime=5}] run setblock 1256 64 -296 minecraft:air
+
+execute as @s[scores={DialogueTrigger=227,TalkTime=10}] run tp @e[x=-815,y=74,z=-226,dy=3,nbt=!{cobblemon:npc_trainer}] 1251 64 -307
+execute as @s[scores={DialogueTrigger=227,TalkTime=10}] run particle cloud 1251 64 -307 1 1 1 1 100
+
+tellraw @s[scores={DialogueTrigger=227,TalkTime=14}] ["",{"text":"<Eusine> Yo, "},{"selector":"@s"},{"text":". Wasn't that Suicune just now?"}]
+tellraw @s[scores={DialogueTrigger=227,TalkTime=22}] {"text":"<Eusine> I only caught a quick glimpse, but I thought I saw Suicune running on the waves."}
+tellraw @s[scores={DialogueTrigger=227,TalkTime=32}] {"text":"<Eusine> Suicune is beautiful and grand. And it races through towns and roads at simply awesome speeds."}
+tellraw @s[scores={DialogueTrigger=227,TalkTime=42}] {"text":"<Eusine> It's wonderful... I want to see Suicune up close..."}
+tellraw @s[scores={DialogueTrigger=227,TalkTime=50}] {"text":"<Eusine> I've decided. I'll battle you as a Trainer to earn Suicune's respect!"}
+tellraw @s[scores={DialogueTrigger=227,TalkTime=59}] ["",{"text":"<Eusine> Come on, "},{"selector":"@s"},{"text":". Let's battle now!"}]
+
+tag @s[scores={DialogueTrigger=227,TalkTime=59..}] add Dialogue227
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Suicune Second Encounter Cianwood City post-battle
+#scoreboard players set @a[x=1256,y=64,z=-296,distance=..20,score_TalkTime=0,tag=!Dialogue228] DialogueTrigger 228 {Inventory:[{id:"minecraft:nether_brick"}]}
+
+#Tp in if needed
+#execute as @s[x=1251,y=64,z=-307,distance=..20,score_TalkTime=0,tag=Dialogue227] run execute @s[tag=!Dialogue228] run tp @e[x=-815,y=74,z=-226,dy=3,nbt=!{cobblemon:npc_trainer}] 1251 64 -307
+
+execute as @s[scores={DialogueTrigger=228,TalkTime=1}] run clear @s minecraft:nether_brick
+
+tellraw @s[scores={DialogueTrigger=228,TalkTime=1}] ["",{"text":"<Eusine> You're amazing, "},{"selector":"@s"},{"text":"! I'm starting to understand why Suicune was keeping an eye on you."}]
+tellraw @s[scores={DialogueTrigger=228,TalkTime=11}] {"text":"<Eusine> I'm going to keep searching for Suicune."}
+tellraw @s[scores={DialogueTrigger=228,TalkTime=19}] {"text":"<Eusine> I have a feeling we'll see each other again. See you around!"}
+
+#tp out
+execute as @s[scores={DialogueTrigger=228,TalkTime=27}] run particle cloud 1251 64 -307 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=228,TalkTime=27}] run tp @e[x=1251,y=63,z=-307,dy=3,nbt=!{cobblemon:npc_trainer}] -815 75 -226
+
+tag @s[scores={DialogueTrigger=228,TalkTime=27..}] add Dialogue228
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Suicune Mt. Mortar encounter
+#execute as @s[x=80,y=64,z=152,distance=..5,score_TalkTime=0,tag=Dialogue228] run scoreboard players set @s[tag=!Dialogue229] DialogueTrigger 229
+
+#tp in Suicune to find:
+#execute as @s[x=80,y=64,z=152,distance=..50,score_TalkTime=0,tag=Dialogue228] run execute @s[tag=!Dialogue229] run tp @e[x=-817,y=80,z=-165,dy=3,nbt=!{cobblemon:statue}] 80 64 152
+
+#Suicune
+execute as @s[scores={DialogueTrigger=229,TalkTime=1}] run stopsound @s record
+execute as @s[scores={DialogueTrigger=229,TalkTime=1}] run scoreboard players set @s MusicCooldown 100
+execute as @s[scores={DialogueTrigger=229,TalkTime=1}] run playsound suicune hostile @s ~ ~ ~ 1 1 1
+
+execute as @s[scores={DialogueTrigger=229,TalkTime=5}] run playsound flee ambient @s ~ ~ ~ 100 1 1
+execute as @s[scores={DialogueTrigger=229,TalkTime=5}] run particle cloud 80 64 152 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=229,TalkTime=5}] run setblock 80 64 152 minecraft:air
+
+execute as @s[scores={DialogueTrigger=229,TalkTime=10}] run tp @e[x=-815,y=74,z=-224,dy=3,nbt=!{cobblemon:npc_chatting}] 94 64 153
+execute as @s[scores={DialogueTrigger=229,TalkTime=10}] run particle cloud 94 64 153 1 1 1 1 100
+
+tellraw @s[scores={DialogueTrigger=229,TalkTime=14}] {"text":"<Eusine> Suicune... How brave it is!"}
+tellraw @s[scores={DialogueTrigger=229,TalkTime=21}] {"text":"<Eusine> How refreshing it is! How beautiful it is!"}
+tellraw @s[scores={DialogueTrigger=229,TalkTime=30}] {"text":"<Eusine> And how quickly it moves!"}
+tellraw @s[scores={DialogueTrigger=229,TalkTime=37}] ["",{"text":"<Eusine> "},{"selector":"@s"},{"text":"! You seem to be around where Suicune would appear."}]
+tellraw @s[scores={DialogueTrigger=229,TalkTime=47}] {"text":"<Eusine> Well, that's OK. My desire to search for Suicune is far beyond yours.."}
+tellraw @s[scores={DialogueTrigger=229,TalkTime=56}] {"text":"<Eusine> My grandpa was...quite into myths. I've heard so many stories about Suicune from him."}
+tellraw @s[scores={DialogueTrigger=229,TalkTime=66}] {"text":"<Eusine> Suicune... I won't stop following you until I've found out what you're after... You hear me!"}
+
+#tp out}
+execute as @s[scores={DialogueTrigger=229,TalkTime=76}] run particle cloud 94 64 153 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=229,TalkTime=76}] run tp @e[x=94,y=63,z=153,dy=3,nbt=!{cobblemon:npc_chatting}] -815 75 -224
+
+tag @s[scores={DialogueTrigger=229,TalkTime=76..}] add Dialogue229
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Suicune Vermilion Port encounter
+#Dialogue230
+#execute as @s[x=-2823,y=64,z=-96,distance=..10,score_TalkTime=0,tag=Dialogue229] run scoreboard players set @s[tag=!Dialogue230] DialogueTrigger 230
+
+#tp in Suicune to find:
+#execute as @s[x=-2823,y=64,z=-96,distance=..50,score_TalkTime=0,tag=Dialogue229] run execute @s[tag=!Dialogue230] run tp @e[x=-817,y=80,z=-159,dy=3,nbt=!{cobblemon:statue}] -2823 64 -96
+
+execute as @s[scores={DialogueTrigger=230,TalkTime=1}] run tp @e[x=-815,y=74,z=-222,dy=3,nbt=!{cobblemon:npc_chatting}] -2816 65 -89
+execute as @s[scores={DialogueTrigger=230,TalkTime=1}] run particle cloud -2816 65 -89 1 1 1 1 100
+
+#Suicune
+execute as @s[scores={DialogueTrigger=230,TalkTime=4}] run stopsound @s record
+execute as @s[scores={DialogueTrigger=230,TalkTime=4}] run scoreboard players set @s MusicCooldown 100
+execute as @s[scores={DialogueTrigger=230,TalkTime=4}] run playsound suicune hostile @s ~ ~ ~ 1 1 1
+
+execute as @s[scores={DialogueTrigger=230,TalkTime=8}] run playsound flee ambient @s ~ ~ ~ 100 1 1
+execute as @s[scores={DialogueTrigger=230,TalkTime=8}] run particle cloud -2823 64 -96 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=230,TalkTime=8}] run setblock -2823 64 -96 minecraft:air
+
+tellraw @s[scores={DialogueTrigger=230,TalkTime=13}] {"text":"<Eusine> That was so close! I thought I could corner it by ambushing it here..."}
+tellraw @s[scores={DialogueTrigger=230,TalkTime=23}] {"text":"<Eusine> But running on the water... is beyond me."}
+tellraw @s[scores={DialogueTrigger=230,TalkTime=30}] {"text":"<Eusine> Still, I am starting to see a pattern. Suicune prefers water! That means..."}
+tellraw @s[scores={DialogueTrigger=230,TalkTime=40}] ["",{"text":"<Eusine> Sorry, "},{"selector":"@s"},{"text":"! I've got to go!"}]
+
+#tp Eusine out
+execute as @s[scores={DialogueTrigger=230,TalkTime=47}] run particle cloud -2816 65 -89 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=230,TalkTime=47}] run tp @e[x=-2816,y=63,z=-89,dy=3,nbt=!{cobblemon:npc_chatting}] -815 75 -222
+
+tag @s[scores={DialogueTrigger=230,TalkTime=47..}] add Dialogue230
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Suicune Route 14 encounter
+#Dialogue231
+#execute as @s[x=-2971,y=64,z=-470,distance=..10,score_TalkTime=0,tag=Dialogue230] run scoreboard players set @s[tag=!Dialogue231] DialogueTrigger 231
+
+#tp in Suicune to find:
+#execute as @s[x=-2981,y=64,z=-470,distance=..50,score_TalkTime=0,tag=Dialogue230] run execute @s[tag=!Dialogue231] run tp @e[x=-817,y=80,z=-153,dy=3,nbt=!{cobblemon:statue}] -2981 64 -470
+
+#Suicune
+execute as @s[scores={DialogueTrigger=231,TalkTime=1}] run stopsound @s record
+execute as @s[scores={DialogueTrigger=231,TalkTime=1}] run scoreboard players set @s MusicCooldown 100
+execute as @s[scores={DialogueTrigger=231,TalkTime=1}] run playsound suicune hostile @s ~ ~ ~ 1 1 1
+
+execute as @s[scores={DialogueTrigger=231,TalkTime=5}] run playsound flee ambient @s ~ ~ ~ 100 1 1
+execute as @s[scores={DialogueTrigger=231,TalkTime=5}] run particle cloud -2981 64 -470 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=231,TalkTime=5}] run setblock -2981 64 -470 minecraft:air
+
+execute as @s[scores={DialogueTrigger=231,TalkTime=10}] run tp @e[x=-815,y=74,z=-220,dy=3,nbt=!{cobblemon:npc_chatting}] -2963 64 -463
+execute as @s[scores={DialogueTrigger=231,TalkTime=10}] run particle cloud -2963 64 -463 1 1 1 1 100
+
+tellraw @s[scores={DialogueTrigger=231,TalkTime=14}] ["",{"text":"<Eusine> "},{"selector":"@s"},{"text":"! Not again! I'll be there first next time!"}]
+tellraw @s[scores={DialogueTrigger=231,TalkTime=24}] {"text":"<Eusine> Having followed it here, I'm starting to understand what Suicune is after."}
+tellraw @s[scores={DialogueTrigger=231,TalkTime=34}] {"text":"<Eusine> To be honest, I would like to keep this information to myself."}
+tellraw @s[scores={DialogueTrigger=231,TalkTime=43}] {"text":"<Eusine> But I want to be an honest Trainer in front of Suicune! That's why I am sharing a clue with you."}
+tellraw @s[scores={DialogueTrigger=231,TalkTime=53}] {"text":"<Eusine> It seems that... ...Suicune prefers a hilly place near water... ...Somewhere north."}
+tellraw @s[scores={DialogueTrigger=231,TalkTime=63}] {"text":"<Eusine> I don't know exactly where, yet. It will be just you and me!"}
+tellraw @s[scores={DialogueTrigger=231,TalkTime=70}] {"text":"<Eusine> Who'll find it first? I challenge you!"}
+
+#tp Eusine out
+execute as @s[scores={DialogueTrigger=231,TalkTime=77}] run particle cloud -2963 64 -463 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=231,TalkTime=77}] run tp @e[x=-2963,y=63,z=-463,dy=3,nbt=!{cobblemon:npc_chatting}] -815 75 -220
+
+tag @s[scores={DialogueTrigger=231,TalkTime=77..}] add Dialogue231
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Suicune Route 25 encounter pre-catch
+#execute as @s[x=-3094,y=64,z=989,distance=..10,tag=!Dialogue232] run scoreboard players set @s[tag=Dialogue231] DialogueTrigger 232
+
+#tp in Suicune to find:
+#execute as @s[x=-3094,y=64,z=989,distance=..50,score_TalkTime=0,tag=Dialogue231] run execute @s[tag=!Dialogue233] run tp @e[x=-817,y=80,z=-147,dy=3,nbt=!{cobblemon:statue}] -3111 64 989
+
+#Tp Eusine in
+execute as @s[scores={DialogueTrigger=232,TalkTime=1}] run tp @e[x=-815,y=74,z=-218,dy=3,nbt=!{cobblemon:npc_chatting}] -3094 64 989
+execute as @s[scores={DialogueTrigger=232,TalkTime=1}] run particle cloud -3094 64 989 1 1 1 1 100
+
+tellraw @s[scores={DialogueTrigger=232,TalkTime=3}] {"text":"<Eusine> Puff, puff... I am...no match for you. ...As I predicted."}
+tellraw @s[scores={DialogueTrigger=232,TalkTime=11}] {"text":"<Eusine> .................. ...Go ahead."}
+tellraw @s[scores={DialogueTrigger=232,TalkTime=19}] {"text":"<Eusine> Since I met you in the Burned Tower at Ecruteak City, I've sort of known that Suicune would choose you."}
+tellraw @s[scores={DialogueTrigger=232,TalkTime=29}] {"text":"<Eusine> Take a look at it! Suicune is waiting for you!"}
+tellraw @s[scores={DialogueTrigger=232,TalkTime=37}] {"text":"<Eusine> It has been waiting for a battle with a worthy Trainer to whom it can entrust itself!"}
+
+tag @s[scores={DialogueTrigger=232,TalkTime=37..}] add Dialogue232
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Suicune Spawn after Eusine talk
+#execute as @s[x=-3111,y=64,z=989,distance=..5,score_TalkTime=0,tag=!Dialogue233] run scoreboard players set @s[tag=Dialogue232] DialogueTrigger 233
+
+execute as @s[scores={DialogueTrigger=233,TalkTime=1}] run pokebattle @s Suicune
+#execute as @s[scores={DialogueTrigger=233,TalkTime=1}] run pokebattle @s Suicune,lvl:40,gr:7
+execute as @s[scores={DialogueTrigger=233,TalkTime=2}] run scoreboard players set @s click 1
+execute as @s[scores={DialogueTrigger=233,TalkTime=1}] run playsound suicune hostile @s ~ ~ ~ 1 1 1
+
+execute as @s[scores={DialogueTrigger=233,TalkTime=1}] run particle cloud -3111 64 989 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=233,TalkTime=1..2}] run setblock -3111 64 989 minecraft:air
+
+tag @s[scores={DialogueTrigger=233,TalkTime=2..}] add Dialogue233
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Suicune Route 25 encounter post-catch
+#Activated from the Suicune catch function
+#Dialogue234
+
+execute as @s[scores={DialogueTrigger=234,TalkTime=1}] run tp @e[x=-815,y=74,z=-218,dy=3,nbt=!{cobblemon:npc_chatting}] -3094 64 989
+execute as @s[scores={DialogueTrigger=234,TalkTime=1}] run scoreboard players set @s click 1
+
+tellraw @s[scores={DialogueTrigger=234,TalkTime=3}] ["",{"text":"<Eusine> "},{"selector":"@s"},{"text":"... You two are truly amazing..."}]
+tellraw @s[scores={DialogueTrigger=233,TalkTime=10}] {"text":"<Eusine> I have never seen a battle this intense!"}
+tellraw @s[scores={DialogueTrigger=233,TalkTime=17}] {"text":"<Eusine> I have no regrets... Farewell, Suicune!"}
+tellraw @s[scores={DialogueTrigger=233,TalkTime=25}] ["",{"text":"<Eusine> Farewell..."},{"selector":"@s"},{"text":"!"}]
+
+#tp Eusine out
+execute as @s[scores={DialogueTrigger=234,TalkTime=33}] run particle cloud -3094 64 989 1 1 1 1 100
+execute as @s[scores={DialogueTrigger=234,TalkTime=33}] run tp @e[x=-3094,y=63,z=989,dy=3,nbt=!{cobblemon:npc_chatting}] -815 75 -218
+
+tag @s[scores={DialogueTrigger=234,TalkTime=33..}] add Dialogue234
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Game Corner placeholder
+#Dialogu999
+
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Use for timing tests
+#Test Timing Dialogue
+#Dialogue1000
+
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=1}] {"text":"1"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=2}] {"text":"2"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=3}] {"text":"3"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=4}] {"text":"4"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=5}] {"text":"5"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=6}] {"text":"6"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=7}] {"text":"7"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=8}] {"text":"8"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=9}] {"text":"9"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=10}] {"text":"10"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=11}] {"text":"11"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=12}] {"text":"12"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=13}] {"text":"13"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=14}] {"text":"14"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=15}] {"text":"15"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=16}] {"text":"16"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=17}] {"text":"17"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=18}] {"text":"18"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=19}] {"text":"19"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=20}] {"text":"20"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=21}] {"text":"21"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=22}] {"text":"22"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=23}] {"text":"23"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=24}] {"text":"24"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=25}] {"text":"25"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=26}] {"text":"26"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=27}] {"text":"27"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=28}] {"text":"28"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=29}] {"text":"29"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=30}] {"text":"30"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=31}] {"text":"31"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=32}] {"text":"32"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=33}] {"text":"33"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=34}] {"text":"34"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=35}] {"text":"35"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=36}] {"text":"36"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=37}] {"text":"37"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=38}] {"text":"38"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=39}] {"text":"39"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=40}] {"text":"40"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=41}] {"text":"41"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=42}] {"text":"42"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=43}] {"text":"43"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=44}] {"text":"44"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=45}] {"text":"45"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=46}] {"text":"46"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=47}] {"text":"47"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=48}] {"text":"48"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=49}] {"text":"49"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=50}] {"text":"50"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=51}] {"text":"51"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=52}] {"text":"52"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=53}] {"text":"53"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=54}] {"text":"54"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=55}] {"text":"55"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=56}] {"text":"56"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=57}] {"text":"57"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=58}] {"text":"58"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=59}] {"text":"59"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=60}] {"text":"60"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=61}] {"text":"61"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=62}] {"text":"62"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=63}] {"text":"63"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=64}] {"text":"64"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=65}] {"text":"65"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=66}] {"text":"66"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=67}] {"text":"67"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=68}] {"text":"68"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=69}] {"text":"69"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=70}] {"text":"70"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=71}] {"text":"71"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=72}] {"text":"72"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=73}] {"text":"73"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=74}] {"text":"74"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=75}] {"text":"75"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=76}] {"text":"76"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=77}] {"text":"77"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=78}] {"text":"78"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=79}] {"text":"79"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=80}] {"text":"80"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=81}] {"text":"81"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=82}] {"text":"82"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=83}] {"text":"83"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=84}] {"text":"84"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=85}] {"text":"85"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=86}] {"text":"86"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=87}] {"text":"87"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=88}] {"text":"88"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=89}] {"text":"89"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=90}] {"text":"90"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=91}] {"text":"91"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=92}] {"text":"92"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=93}] {"text":"93"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=94}] {"text":"94"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=95}] {"text":"95"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=96}] {"text":"96"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=97}] {"text":"97"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=98}] {"text":"98"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=99}] {"text":"99"}
+tellraw @s[scores={DialogueTrigger=1000,TalkTime=100}] {"text":"100"}
+
+tag @s[scores={DialogueTrigger=1000,TalkTime=100..}] add Dialogue1000
+
+
+
+
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#EndDialogue tag, ends a dialogue without finishing. Trigger may take over again as tag is not given
+
+scoreboard players set @s[scores={DialogueTrigger=1..},tag=EndDialogue] DialogueTrigger 0
+scoreboard players set @s[scores={TalkTime=1..},tag=EndDialogue] TalkTime 0
+tag @s[tag=EndDialogue] remove EndDialogue

@@ -1,0 +1,59 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "nidoranm-1",
+          "pokemon": "nidoranm",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-14",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 426, "maxX": 492, "minZ": -252, "maxZ": -94
+          }
+      },
+
+      {
+          "id": "nidoranm-2",
+          "pokemon": "nidoranm",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-15",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 371, "maxX": 406, "minZ": -46, "maxZ": -27
+          }
+      },
+
+      {
+        "id": "nidoranm-3",
+        "pokemon": "nidoranm",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:savanna"
+            ]
+            }
+        }
+    ]
+}

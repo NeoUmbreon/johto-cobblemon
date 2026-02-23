@@ -1,0 +1,70 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "qwilfish-1",
+            "pokemon": "qwilfish",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 5.0,
+            "condition": {
+                "minX": 103, "maxX": 183, "minZ": -509, "maxZ": -390,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "qwilfish-2",
+            "pokemon": "qwilfish",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 10.0,
+            "condition": {
+                "minX": 103, "maxX": 183, "minZ": -509, "maxZ": -390,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "qwilfish-3",
+            "pokemon": "qwilfish",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 3.0,
+            "condition": {
+                "minX": -3354, "maxX": -2950, "minZ": -622, "maxZ": 281,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "qwilfish-4",
+            "pokemon": "qwilfish",
+            "type": "pokemon",
+            "presets": [
+                "water"
+            ],
+            "context": "submerged",
+            "bucket": "common",
+            "level": "40",
+            "weight": 10000,
+            "condition": {
+                "minX": 107, "maxX": 177, "minZ": -506, "maxZ": -387,
+                "biomes": [
+                    "minecraft:bamboo_jungle"
+                ]
+                
+            }
+        }
+    ]
+}

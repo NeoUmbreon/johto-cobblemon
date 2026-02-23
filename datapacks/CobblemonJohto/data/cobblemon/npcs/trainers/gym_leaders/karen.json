@@ -1,0 +1,103 @@
+{
+    "hitbox": "player",
+    "resourceIdentifier": "cobblemon:karen",
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:karen_interaction"
+    },
+    "config": [
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue karen_end @s');"
+          }
+    ],
+    "ai": [
+
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ],
+    "names": [
+        "Karen"
+    ],
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "party": {
+        "type": "simple",
+        "pokemon": [
+            "Umbreon level=42 moves=doubleteam,confuseray,faintattack,paybakc",
+            "Vileplume level=42 moves=stunspore,petaldance,acid,moonlight",
+            "Murkrow level=44 moves=suckerpunch,faintattack,pluck,whirlwind",
+            "Gengar level=45 moves=focusblast,destinybond,spite,lick",
+            "Houndoom level=47 moves=nastyplot,darkpulse,flamethrower,crunch"
+        ]
+    },
+    "ai": [
+
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "tauros-1",
+          "pokemon": "tauros",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-16",
+          "weight": 4,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 489, "maxX": 703, "minZ": 178, "maxZ": 292
+          }
+      },
+
+      {
+          "id": "tauros-2",
+          "pokemon": "tauros",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "13-16",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 704, "maxX": 822, "minZ": 57, "maxZ": 296
+          }
+      },
+
+      {
+          "id": "tauros-3",
+          "pokemon": "tauros",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "21-24",
+          "weight": 21,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 1575, "maxX": 1618, "minZ": -296, "maxZ": -248
+          }
+      },
+
+      {
+        "id": "tauros-4",
+        "pokemon": "tauros",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:savanna"
+            ]
+            }
+        }
+    ]
+}

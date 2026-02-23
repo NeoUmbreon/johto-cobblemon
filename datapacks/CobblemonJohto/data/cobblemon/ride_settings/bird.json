@@ -1,0 +1,15 @@
+{
+    "infiniteAltitude": "false",
+    "infiniteStamina": "false",
+    "timeToRollCorrect": "0.5",
+    "handlingExpr": "q.get_ride_stats('SKILL', 'AIR', 45.0, 10.0)",
+    "horizontalPitchExpr": "q.get_ride_stats('SKILL', 'AIR', 0.2, 0.1)",
+    "mouseInputMult": "q.get_ride_stats('SKILL', 'AIR', 1.2, 0.8)",
+    "speedExpr": "q.get_ride_stats('SPEED', 'AIR', 0.5, 0.0)",
+    "accelerationExpr": "q.get_ride_stats('ACCELERATION', 'AIR', 1.0, 1.0)",
+    "staminaExpr": "q.get_ride_stats('STAMINA', 'AIR', 40.0, 10.0)",
+    "stamDrainHorzMod": "1.5",
+    "stamDrainPercRateGlide": "0.25",
+    "stamDrainPerRateDive": "0.25",
+    "glideSpeedExpr": "q.get_ride_stats('JUMP', 'AIR', 2.0, 1.0)"
+}

@@ -1,0 +1,18 @@
+'This script returns true or false based on whether the NPC is still cooling down from the last battle with this player.';
+'This is assumed to be called from dialogue or somewhere player and NPC are both in the context.';
+'That said, if you fill v.npc and v.player before running it then that works too.';
+'Coalesce in case the caller used v to put the NPC and player in';
+
+t.npc = c.npc == 0 ? v.npc : c.npc;
+t.player = c.player == 0 ? v.player : c.player;
+
+t.npc_cooldown = t.npc.config.challenge_cooldown;
+t.npc_cooldown == 0 ? { return false; };
+t.data = t.player.get_npc_data(t.npc.uuid);
+
+'If there was a challenge time on record then check it against cooldown and game time, otherwise no we are not cooling down.';
+t.data.last_challenged_time != 0 ? {
+  return t.data.last_challenged_time + (t.npc_cooldown * 20) > t.player.world.game_time;
+} : {
+  return false;
+};

@@ -1,0 +1,93 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "arbok-1",
+          "pokemon": "arbok",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -1088, "maxX": -1015, "minZ": -528, "maxZ": -482
+          }
+      },
+
+      {
+          "id": "arbok-2",
+          "pokemon": "arbok",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -1321, "maxX": -1216, "minZ": -482, "maxZ": -284
+          }
+      },
+
+      {
+          "id": "arbok-3",
+          "pokemon": "arbok",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "5-10",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -2211, "maxX": -1961, "minZ": 581, "maxZ": 690
+          }
+      },
+
+      {
+          "id": "arbok-4",
+          "pokemon": "arbok",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "5-10",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -2584, "maxX": -2314, "minZ": 672, "maxZ": 744
+          }
+      },
+
+      {
+        "id": "arbok-5",
+        "pokemon": "arbok",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:mangrove_swamp"
+            ]
+            }
+        }
+    ]
+}

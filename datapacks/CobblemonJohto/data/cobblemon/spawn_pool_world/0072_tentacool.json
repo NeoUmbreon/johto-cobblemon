@@ -1,0 +1,697 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "tentacool-1",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "1-3",
+            "weight": 90.0,
+            "condition": {
+                "minX": -898, "maxX": -747, "minZ": -560, "maxZ": -483
+            }
+        },
+        {
+            "id": "tentacool-2",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "3-5",
+            "weight": 90.0,
+            "condition": {
+                "minX": -191, "maxX": -79, "minZ": -589, "maxZ": -485
+            }
+        },
+
+        {
+            "id": "tentacool-3",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "4-6",
+            "weight": 60.0,
+            "condition": {
+                "minX": 106, "maxX": 203, "minZ": -548, "maxZ": -232
+            }
+        },
+
+        {
+            "id": "tentacool-4",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "10-25",
+            "weight": 60.0,
+            "condition": {
+                "minX": 79, "maxX": 225, "minY":0, "maxY": 25, "minZ": -880, "maxZ": -585
+            }
+        },
+
+        {
+            "id": "tentacool-5",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "10-13",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": 417, "maxX": 514, "minZ": -727, "maxZ": -510
+            }
+        },
+
+        {
+            "id": "tentacool-6",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "13-17",
+            "weight": 90.0,
+            "condition": {
+                "minX": 638, "maxX": 870, "minZ": -206, "maxZ": 11
+            }
+        },
+
+        {
+            "id": "tentacool-7",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "10-25",
+            "weight": 90.0,
+            "condition": {
+                "minX": 870, "maxX": 982, "minZ": -226, "maxZ": -48
+            }
+        },
+
+        {
+            "id": "tentacool-8",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "15-25",
+            "weight": 60.0,
+            "condition": {
+                "minX": 870, "maxX": 1144, "minZ": -532, "maxZ": -227
+            }
+        },
+
+        {
+            "id": "tentacool-9",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "15-25",
+            "weight": 60.0,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 1104, "maxX": 1376, "minY": 80, "maxY": 100, "minZ": 95, "maxZ": 309
+            }
+        },
+
+        {
+            "id": "tentacool-10",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "15-25",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": 1145, "maxX": 1273, "minZ": -508, "maxZ": -286
+            }
+        },
+
+        {
+            "id": "tentacool-11",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "15-25",
+            "weight": 60.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": 1320, "maxX": 1695, "minZ": -521, "maxZ": -218
+            }
+        },
+
+        {
+            "id": "tentacool-12",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "15-20",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": -1248, "maxX": -899, "minZ": -570, "maxZ": -497
+            }
+        },
+
+        {
+            "id": "tentacool-13",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "25-30",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": -1309, "maxX": -1249, "minZ": -570, "maxZ": -130
+            }
+        },
+
+        {
+            "id": "tentacool-14",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "30-35",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": -1767, "maxX": -1620, "minZ": -831, "maxZ": -328
+            }
+        },
+
+        {
+            "id": "tentacool-15",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "30-35",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": -2932, "maxX": -2647, "minZ": -226, "maxZ": 68
+            }
+        },
+
+        {
+            "id": "tentacool-16",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": -2229, "maxX": -1951, "minZ": -609, "maxZ": 301
+            }
+        },
+
+        {
+            "id": "tentacool-16",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "30-35",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": -2479, "maxX": -2308, "minZ": -831, "maxZ": -651
+            }
+        },
+
+        {
+            "id": "tentacool-16",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "30-35",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": -2479, "maxX": -1620, "minY": 59, "minZ": -969, "maxZ": -832
+            }
+        },
+
+        {
+            "id": "tentacool-17",
+            "pokemon": "tentacool",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "30-35",
+            "weight": 90.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": -2479, "maxX": -1620, "minZ": -969, "maxZ": -832
+            }
+        },
+
+        {
+            "id": "tentacool-18",
+            "pokemon": "tentacool",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "10",
+            "weight": 90.0,
+            "condition": {
+                "minX": -898, "maxX": -747, "minZ": -560, "maxZ": -483,
+                "minLureLevel": 1,
+                "maxLureLevel": 1
+                  }
+            },
+            {
+                "id": "tentacool-19",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 30.0,
+                "condition": {
+                    "minX": -898, "maxX": -747, "minZ": -560, "maxZ": -483,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+
+            {
+                "id": "tentacool-20",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 15.0,
+                "condition": {
+                    "minX": 103, "maxX": 183, "minZ": -509, "maxZ": -390,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-21",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 55.0,
+                "condition": {
+                    "minX": 103, "maxX": 183, "minZ": -509, "maxZ": -390,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+            {
+                "id": "tentacool-22",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "40",
+                "weight": 70.0,
+                "condition": {
+                    "minX": 103, "maxX": 183, "minZ": -509, "maxZ": -390,
+                    "minLureLevel": 3,
+                    "maxLureLevel": 3
+                }
+            },
+
+            {
+                "id": "tentacool-21",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 5.0,
+                "condition": {
+                    "minX": 870, "maxX": 1144, "minZ": -532, "maxZ": -227,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-22",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 30.0,
+                "condition": {
+                    "minX": 870, "maxX": 1144, "minZ": -532, "maxZ": -227,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+
+            {
+                "id": "tentacool-23",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 5.0,
+                "condition": {
+                    "minX": 1320, "maxX": 1695, "minZ": -521, "maxZ": -218,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-24",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 30.0,
+                "condition": {
+                    "minX": 1320, "maxX": 1695, "minZ": -521, "maxZ": -218,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+
+            {
+                "id": "tentacool-25",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 5.0,
+                "condition": {
+                    "minX": -1248, "maxX": -899, "minZ": -570, "maxZ": -497,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-26",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 30.0,
+                "condition": {
+                    "minX": -1248, "maxX": -899, "minZ": -570, "maxZ": -497,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+
+            {
+                "id": "tentacool-27",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 15.0,
+                "condition": {
+                    "minX": -1309, "maxX": -1249, "minZ": -570, "maxZ": -458,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-28",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 35.0,
+                "condition": {
+                    "minX": -1309, "maxX": -1249, "minZ": -570, "maxZ": -458,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+
+            {
+                "id": "tentacool-29",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 15.0,
+                "condition": {
+                    "minX": -2932, "maxX": -2647, "minZ": -226, "maxZ": 68,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-30",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 35.0,
+                "condition": {
+                    "minX": -2932, "maxX": -2647, "minZ": -226, "maxZ": 68,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+
+            {
+                "id": "tentacool-31",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 5.0,
+                "condition": {
+                    "minX": -3354, "maxX": -2950, "minZ": -622, "maxZ": 281,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-32",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 40.0,
+                "condition": {
+                    "minX": -3354, "maxX": -2950, "minZ": -622, "maxZ": 281,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+            {
+                "id": "tentacool-33",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "40",
+                "weight": 90.0,
+                "condition": {
+                    "minX": -3354, "maxX": -2950, "minZ": -622, "maxZ": 281,
+                    "minLureLevel": 3,
+                    "maxLureLevel": 3
+                }
+            },
+
+            {
+                "id": "tentacool-34",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 5.0,
+                "condition": {
+                    "minX": -2229, "maxX": -1951, "minZ": -609, "maxZ": 301,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-35",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 30.0,
+                "condition": {
+                    "minX": -2229, "maxX": -1951, "minZ": -609, "maxZ": 301,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+
+            {
+                "id": "tentacool-36",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 5.0,
+                "condition": {
+                    "minX": -2479, "maxX": -1620, "minZ": -969, "maxZ": -832,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-37",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 30.0,
+                "condition": {
+                    "minX": -2479, "maxX": -1620, "minZ": -969, "maxZ": -832,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+
+            {
+                "id": "tentacool-36",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 5.0,
+                "condition": {
+                    "minX": -1767, "maxX": -1620, "minZ": -831, "maxZ": -328,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-37",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 30.0,
+                "condition": {
+                    "minX": -1767, "maxX": -1620, "minZ": -831, "maxZ": -328,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            },
+
+            {
+                "id": "tentacool-38",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "10",
+                "weight": 5.0,
+                "condition": {
+                    "minX": 528, "maxX": 975, "minZ": 320, "maxZ": 799,
+                    "minLureLevel": 1,
+                    "maxLureLevel": 1
+                }
+            },
+            {
+                "id": "tentacool-39",
+                "pokemon": "tentacool",
+                "type": "pokemon",
+                "context": "fishing",
+                "bucket": "common",
+                "level": "20",
+                "weight": 30.0,
+                "condition": {
+                    "minX": 528, "maxX": 975, "minZ": 320, "maxZ": 799,
+                    "minLureLevel": 2,
+                    "maxLureLevel": 2
+                }
+            }
+    ]
+}

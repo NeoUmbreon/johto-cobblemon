@@ -1,0 +1,60 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "mrmime-1",
+            "pokemon": "mrmime",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "28-35",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "day",
+                "minX": -1767, "maxX": -1620, "minZ": -831, "maxZ": -328
+            }
+        },
+        {
+            "id": "mrmime-2",
+            "pokemon": "mrmime",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "28-35",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "dawn,dusk,night",
+                "minX": -1767, "maxX": -1620, "minZ": -831, "maxZ": -328
+            }
+        },
+
+        {
+            "id": "mrmime-3",
+            "pokemon": "mrmime",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:forest"
+                ]
+                }
+            }
+    ]
+}

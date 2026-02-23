@@ -1,0 +1,296 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "chinchou-1",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 7.0,
+            "condition": {
+                "minX": -898, "maxX": -747, "minZ": -560, "maxZ": -483,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-2",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 60.0,
+            "condition": {
+                "minX": -898, "maxX": -747, "minZ": -560, "maxZ": -483,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "chinchou-3",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 7.0,
+            "condition": {
+                "minX": 870, "maxX": 1144, "minZ": -532, "maxZ": -227,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-4",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 60.0,
+            "condition": {
+                "minX": 870, "maxX": 1144, "minZ": -532, "maxZ": -227,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "chinchou-5",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 7.0,
+            "condition": {
+                "minX": 1320, "maxX": 1695, "minZ": -521, "maxZ": -218,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-6",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 60.0,
+            "condition": {
+                "minX": 1320, "maxX": 1695, "minZ": -521, "maxZ": -218,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "chinchou-7",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 7.0,
+            "condition": {
+                "minX": -1248, "maxX": -899, "minZ": -570, "maxZ": -497,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-8",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 60.0,
+            "condition": {
+                "minX": -1248, "maxX": -899, "minZ": -570, "maxZ": -497,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "chinchou-9",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 10.0,
+            "condition": {
+                "minX": -1309, "maxX": -1249, "minZ": -570, "maxZ": -458,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-10",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 20.0,
+            "condition": {
+                "minX": -1309, "maxX": -1249, "minZ": -570, "maxZ": -458,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "chinchou-11",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 7.0,
+            "condition": {
+                "minX": -2932, "maxX": -2647, "minZ": -226, "maxZ": 68,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-12",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 60.0,
+            "condition": {
+                "minX": -2932, "maxX": -2647, "minZ": -226, "maxZ": 68,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "chinchou-13",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 7.0,
+            "condition": {
+                "minX": -2229, "maxX": -1951, "minZ": -609, "maxZ": 301,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-14",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 60.0,
+            "condition": {
+                "minX": -2229, "maxX": -1951, "minZ": -609, "maxZ": 301,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "chinchou-13",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 7.0,
+            "condition": {
+                "minX": -2479, "maxX": -1620, "minZ": -969, "maxZ": -832,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-14",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 60.0,
+            "condition": {
+                "minX": -2479, "maxX": -1620, "minZ": -969, "maxZ": -832,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "chinchou-15",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 7.0,
+            "condition": {
+                "minX": -1767, "maxX": -1620, "minZ": -831, "maxZ": -328,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-16",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 60.0,
+            "condition": {
+                "minX": -1767, "maxX": -1620, "minZ": -831, "maxZ": -328,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "chinchou-17",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 7.0,
+            "condition": {
+                "minX": 528, "maxX": 975, "minZ": 320, "maxZ": 799,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "chinchou-18",
+            "pokemon": "chinchou",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 30.0,
+            "condition": {
+                "minX": 528, "maxX": 975, "minZ": 320, "maxZ": 799,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        }
+    ]
+}

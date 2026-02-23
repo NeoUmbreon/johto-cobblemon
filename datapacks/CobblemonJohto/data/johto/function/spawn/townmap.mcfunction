@@ -1,0 +1,3 @@
+#give @s filled_map[custom_name='["",{"text":"Town Map","italic":false,"color":"aqua"}]',lore=['["",{"text":"A map of the local area.","italic":false}]'],enchantments={levels:{bane_of_arthropods:1},show_in_tooltip:false},entity_data={id:filled_map,Invisible:1b},hide_additional_tooltip={}] 1
+
+give @s minecraft:filled_map[minecraft:map_id=61,minecraft:enchantment_glint_override=true,minecraft:custom_name='["",{"text":"Town Map","italic":false,"color":"aqua"}]',lore=['["",{"text":"A map of the local area.","italic":false,"color":"#ce9178"}]'],hide_additional_tooltip={},minecraft:custom_data={johto_town_map:1b}]

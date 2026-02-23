@@ -1,0 +1,29 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Volcano Badge",
+            "color": "red"
+        },
+        "description": {
+            "text": "Defeat Blaine in battle"
+        },
+        "icon": {
+            "id": "cobblemon:flame_orb"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+
+        "commandonly": {
+
+            "trigger": "minecraft:impossible"
+
+        }
+
+    },
+    "parent": "johto:badges/kanto/badge6"
+}

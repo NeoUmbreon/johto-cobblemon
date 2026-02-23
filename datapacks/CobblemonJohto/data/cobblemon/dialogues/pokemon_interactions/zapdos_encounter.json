@@ -1,0 +1,44 @@
+{
+    "initializationAction": [
+        "q.run_command('playsound minecraft:zapdos ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "pokemon": {
+            "name": "Zapdos",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:zapdos",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "pokemon",
+            "lines": [
+                "Kzzzz-RAAAKOW!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_command('data merge entity @e[x=-3239,y=64,z=570,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:zapdos\"}}] {Pokemon:{PokemonData:[\"catchable\"]}}');",
+                            "q.run_command('data merge entity @e[x=-3239,y=64,z=570,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:zapdos\"}}] {NoAI:0b}');",
+                            "q.run_command('data modify entity @e[x=-3239,y=64,z=570,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:zapdos\"}}] Unbattleable set value 0b');",
+                            "q.run_command('kill @e[x=-3239,y=64,z=570,distance=..5,type=minecraft:interaction]');",
+                            "q.run_command('tag ' + q.player.username + ' add ZapdosEncounter');"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

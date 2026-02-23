@@ -1,0 +1,223 @@
+{
+    "initializationAction": [
+        "q.run_command('team join Coins ' + q.player.username + '');"
+    ],
+    "escapeAction": [
+        "q.run_command('team join default ' + q.player.username + '');",
+        "q.dialogue.close();"
+    ],
+    "names": [
+        "Game Corner Clerk"
+    ],
+    "speakers": {
+        "npc": {
+            "name": "Game Corner Clerk",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:shopman",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+               "Welcome to Game Corner! Do you need some game Coins?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": "q.dialogue.set_page('buy1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buy1",
+            "speaker": "npc",
+            "lines": [
+                "How many would you like?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "50 Coins",
+                        "value": "50coins",
+                        "action": [
+                            "q.dialogue.set_page('pick50coins');",
+                            "q.run_command('team join shops ' + q.player.username + '');"
+                    ]
+                    },
+                    {
+                        "text": "250 Coins",
+                        "value": "250coins",
+                        "action": [
+                            "q.dialogue.set_page('pick250coins');",
+                            "q.run_command('team join shops ' + q.player.username + '');"
+                ]
+                    },
+                    {
+                        "text": "500 Coins",
+                        "value": "500coins",
+                        "action": [
+                            "q.dialogue.set_page('pick500coins');",
+                            "q.run_command('team join shops ' + q.player.username + '');"
+                ]
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "pick50coins",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase 50 Coins for $1000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 253');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');",
+                            "q.run_command('team join Coins ' + q.player.username + '');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pick250coins",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase 250 Coins for $5000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 254');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');",
+                            "q.run_command('team join Coins ' + q.player.username + '');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "pick500coins",
+            "speaker": "npc",
+            "lines": [
+                "You'd like to purchase 500 Coins for $10000?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Buy",
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 255');",
+                            "q.dialogue.set_page('buyend');"
+                        ]
+                    },
+                    {
+                        "text": "Go Back",
+                        "value": "goback",
+                        "action": [
+                            "q.dialogue.set_page('buy1');",
+                            "q.run_command('team join Coins ' + q.player.username + '');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "buyend",
+            "speaker": "npc",
+            "lines": [
+                "Here you are! Thank you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username + '');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "Please come again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username + '');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

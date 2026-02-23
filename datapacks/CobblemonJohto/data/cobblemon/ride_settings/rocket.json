@@ -1,0 +1,11 @@
+{
+    "infiniteStamina": "false",
+    "boostSpeedMod": "5.0",
+    "boostHandlingMod": "0.3",
+    "maxTurnRate": "100",
+    "speedExpr": "q.get_ride_stats('SPEED', 'AIR', 0.0, 0.0)",
+    "accelerationExpr": "q.get_ride_stats('ACCELERATION', 'AIR', (1.0 / (20.0 * 1.5)), (1.0 / (20.0 * 3.0))) * 0.5",
+    "staminaExpr": "q.get_ride_stats('STAMINA', 'AIR', 1000.0, 1.0)",
+    "jumpExpr": "q.get_ride_stats('JUMP', 'AIR', 0.0, 0.0)",
+    "handlingExpr": "q.get_ride_stats('SKILL', 'AIR', 0.5, 10.0)"
+}

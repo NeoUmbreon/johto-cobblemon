@@ -1,0 +1,139 @@
+{   "initializationAction": [              
+    "c.npc.set_chatting();",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $3,200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 3200');"
+        ],
+  "speakers": {
+    "npc": {
+      "name": "Silver",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:silver",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": [
+          "My training's still not good enough...?"
+      ],
+      "input": {
+          "type": "option",
+          "vertical": false,
+          "options": [
+              {
+                  "text": "Next",
+                  "value": "next",
+                  "action": "q.dialogue.set_page('page2');"
+              }
+          ]
+      }
+  },
+  {
+    "id": "page2",
+    "speaker": "npc",
+    "lines": [
+        "My Pokémon are so weak, it makes me frustrated..."
+    ],
+    "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+            {
+                "text": "Next",
+                "value": "next",
+                "action": "q.dialogue.set_page('page3');"
+            }
+        ]
+    }
+},
+{
+  "id": "page3",
+  "speaker": "npc",
+  "lines": [
+      "But I can feel that they are getting better after each battle..."
+  ],
+  "input": {
+      "type": "option",
+      "vertical": false,
+      "options": [
+          {
+              "text": "Next",
+              "value": "next",
+              "action": "q.dialogue.set_page('page4');"
+          }
+      ]
+  }
+},
+{
+  "id": "page4",
+  "speaker": "npc",
+  "lines": [
+      ".................. Tch!"
+  ],
+  "input": {
+      "type": "option",
+      "vertical": false,
+      "options": [
+          {
+              "text": "Next",
+              "value": "next",
+              "action": "q.dialogue.set_page('page5');"
+          }
+      ]
+  }
+},
+{
+  "id": "page5",
+  "speaker": "npc",
+  "lines": [
+      "They're still too weak! I need to give them more training..."
+  ],
+  "input": {
+      "type": "option",
+      "vertical": false,
+      "options": [
+          {
+              "text": "Next",
+              "value": "next",
+              "action": "q.dialogue.set_page('page6');"
+          }
+      ]
+  }
+},
+    {
+      "id": "page6",
+      "speaker": "npc",
+      "lines": [
+        {
+            "type": "expression",
+            "expression": "'See ya, ' + q.player.username + '!';"
+        }
+    ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [              
+                            "q.dialogue.close();",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue131');",
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 99');"
+                          ]
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}

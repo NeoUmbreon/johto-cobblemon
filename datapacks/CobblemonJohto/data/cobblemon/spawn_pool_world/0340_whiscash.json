@@ -1,0 +1,26 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "whiscash-1",
+            "pokemon": "whiscash",
+            "type": "pokemon",
+            "presets": [
+                "water"
+            ],
+            "context": "surface",
+            "bucket": "common",
+            "level": "20",
+            "weight": 10000,
+            "condition": {
+                "minX": -5, "maxX": 150, "minZ": -83, "maxZ": 48,
+                "biomes": [
+                    "minecraft:bamboo_jungle"
+                ]
+                
+            }
+        }
+    ]
+}

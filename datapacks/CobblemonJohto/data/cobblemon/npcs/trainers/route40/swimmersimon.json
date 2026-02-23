@@ -1,0 +1,98 @@
+{  
+    "hitbox": "player",
+    "resourceIdentifier": "cobblemon:swimmerm",
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:swimmersimon_interaction"
+    },
+        "name": "Simon",
+        "party": {
+        "type": "simple",
+        "pokemon": [
+            "Tentacool level=20",
+            "Tentacool level=20"
+        ]
+    },
+    "config": [
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue swimmersimon_end @s');"
+          },
+          {
+            "variableName": "challenge_rejected_text",
+            "displayName": "Reject Text",
+            "description": "The text that appears when the player rejects the challenge.",
+            "type": "TEXT",
+            "defaultValue": "That's too bad. Maybe next time!"
+          },
+          {
+            "variableName": "challenge_cooldown_text",
+            "displayName": "Cooling Down Text",
+            "description": "The text that is displayed while the cooldown is in effect.",
+            "type": "TEXT",
+            "defaultValue": "I'm sorry, but I'm not ready for another battle yet. Please come back later."
+          }
+    ],
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "autoHealParty": true,
+    "isMovable": false,  
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true, 
+    "canDespawn": false,
+    "ai": [
+
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "2": [
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ],
+                "2": [
+                    "stay_afloat"
+                ]
+            }
+        }
+    ]
+}

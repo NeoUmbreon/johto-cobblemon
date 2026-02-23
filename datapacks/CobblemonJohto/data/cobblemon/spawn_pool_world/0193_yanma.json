@@ -1,0 +1,45 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "yanma-1",
+          "pokemon": "yanma",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-14",
+          "weight": 1,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 426, "maxX": 492, "minZ": -252, "maxZ": -94
+          }
+      },
+
+      {
+        "id": "yanma-2",
+        "pokemon": "yanma",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "12",
+        "weight": 10000.0,
+        "condition": {
+            "minX": 430, "maxX": 486, "minZ": -210, "maxZ": -108,
+            "biomes": [
+                "minecraft:bamboo_jungle"
+            ],
+                    "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ]
+        }
+    }
+    ]
+}

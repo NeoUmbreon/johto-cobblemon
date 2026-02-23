@@ -1,0 +1,546 @@
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    ],
+    "escapeAction": [              
+        ],
+
+    "names": [
+        "Professor Elm"
+    ],
+    "speakers": {
+        "elm": {
+            "name": "Professor Elm",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:professorelm",
+                "isLeftSide": true
+            }
+        },
+        "aide": {
+            "name": "Elm's Aide",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:scientistm",
+                "isLeftSide": false
+            }
+        },
+        "police": {
+            "name": "Policeman",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:policeman",
+                "isLeftSide": true
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "aide",
+            "lines": [
+                "There was a loud noise outside... When we went to look, someone stole a Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "aide",
+            "lines": [
+                "It's unbelievable that anyone would do that!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        }, 
+        {
+            "id": "page4",
+            "speaker": "aide",
+            "lines": [
+                "...sigh... That stolen Pokémon. I wonder how it's doing."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page5');"
+                    }
+                ]
+            }
+        },   
+        {
+            "id": "page5",
+            "speaker": "aide",
+            "lines": [
+                "They say a Pokémon raised by a bad person turns bad itself."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page6');"
+                    }
+                ]
+            }
+        },   
+
+        {
+            "id": "page6",
+            "speaker": "police",
+            "lines": [
+                "I heard a Pokémon was stolen here..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page7');"
+                    }
+                ]
+            }
+        },   
+        {
+            "id": "page7",
+            "speaker": "police",
+            "lines": [
+                "I was just getting some information from Professor Elm."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page8');"
+                    }
+                ]
+            }
+        },   
+        {
+            "id": "page8",
+            "speaker": "police",
+            "lines": [
+                "Apparently, it was a young male with long, red hair..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page9');"
+                    }
+                ]
+            }
+        },   
+        {
+            "id": "page9",
+            "speaker": "police",
+            "lines": [
+                "What? You battled a trainer like that? Did you happen to get his name?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page10');"
+                    }
+                ]
+            }
+        },   
+        {
+            "id": "page10",
+            "speaker": "police",
+            "lines": [
+                "... ... ..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page11');"
+                    }
+                ]
+            }
+        },   
+        {
+            "id": "page11",
+            "speaker": "police",
+            "lines": [
+                "So Silver was his name. Thanks for helping my investigation!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 88');",
+                            "q.dialogue.set_page('page12');"
+                        ]
+                    }
+                ]
+            }
+        },   
+
+
+        {
+            "id": "page12",
+            "speaker": "elm",
+            "lines": [
+        {
+            "type": "expression",
+            "expression": "'' + q.player.username + ', this is terrible...';"
+        }
+    ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page13');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page13",
+            "speaker": "elm",
+            "lines": [
+                "Oh, yes, what was Mr. Pokémon's big discovery?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run clear @s minecraft:turtle_egg');",
+                            "q.dialogue.set_page('page14');"
+                        ]
+                    }
+                ]
+            }
+        },   
+        {
+            "id": "page14",
+            "speaker": "elm",
+            "lines": [
+                "This? But... It is a Pokémon Egg?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page15');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page15",
+            "speaker": "elm",
+            "lines": [
+                "If it is, it is a great discovery!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page16');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page16",
+            "speaker": "elm",
+            "lines": [
+                "What?!? Professor Oak gave you a Pokédex?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page17');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page17",
+            "speaker": "elm",
+            "lines": [
+        {
+            "type": "expression",
+            "expression": "'' + q.player.username + ', is that true? Th-that’s incredible!';"
+        }
+    ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page18');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page18",
+            "speaker": "elm",
+            "lines": [
+                "He is superb at seeing the potential of people as trainers."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page19');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page19",
+            "speaker": "elm",
+            "lines": [
+        {
+            "type": "expression",
+            "expression": "'Wow, ' + q.player.username + ', You may have what it takes to become the Champion.';"
+        }
+    ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page20');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page20",
+            "speaker": "elm",
+            "lines": [
+                "You seem to be getting on great with Pokémon too."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page21');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page21",
+            "speaker": "elm",
+            "lines": [
+                "You should take the Pokémon Gym challenge."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page22');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page22",
+            "speaker": "elm",
+            "lines": [
+                "The closest Gym would be the one in Violet City."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page23');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page23",
+            "speaker": "elm",
+            "lines": [
+        {
+            "type": "expression",
+            "expression": "'... ' + q.player.username + '. The road to the championship will be a long one.';"
+        }
+    ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page24');"
+                    }
+                ]
+            }
+        },  
+        {
+            "id": "page24",
+            "speaker": "elm",
+            "lines": [
+                "Before you leave, make sure that you talk to your mom."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page25');"
+                    }
+                ]
+            }
+        },  
+
+
+
+
+
+
+        {
+            "id": "page25",
+            "speaker": "aide",
+            "lines": [
+        {
+            "type": "expression",
+            "expression": "'' + q.player.username + '! Use these on your Pokédex quest!';"
+        }
+    ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page26');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page26",
+            "speaker": "aide",
+            "lines": [
+                "To add to your Pokédex, you have to catch Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page27');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page27",
+            "speaker": "aide",
+            "lines": [
+                "Throw Poké Balls at wild Pokémon to get them."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:poke_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue8');",
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

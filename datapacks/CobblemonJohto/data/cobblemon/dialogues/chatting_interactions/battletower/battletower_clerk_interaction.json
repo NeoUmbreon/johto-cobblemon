@@ -1,0 +1,268 @@
+{   
+    "speakers": {
+        "npc": {
+          "name": "Battle Tower Clerk",
+          "face": {
+            "type": "artificial",
+            "modelType": "npc",
+            "identifier": "cobblemon:shopman",
+            "isLeftSide": true
+          }
+        }
+      },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome to the Battle Tower!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to take the Battle Room challenge?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": "q.dialogue.set_page('page3');"
+                    },
+                    {
+                        "text": "Info",
+                        "value": "info",
+                        "action": "q.dialogue.set_page('info1');"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('end');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "I will now show you to the Battle Room."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 2');",
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        },
+
+        {
+            "id": "info1",
+            "speaker": "npc",
+            "lines": [
+                "The Battle Tower is a facility for Battle challenges."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info2",
+            "speaker": "npc",
+            "lines": [
+                "Once entered, your challenge lasts until you lose."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info3",
+            "speaker": "npc",
+            "lines": [
+                "In our Single Battle format, you enter with three Pokémon only. Any more on you and you won't be able to challenge."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info4",
+            "speaker": "npc",
+            "lines": [
+                "Each of our trainers Pokémon will be set to that of your highest level Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info5');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info5",
+            "speaker": "npc",
+            "lines": [
+                "There are an unlimited amount of trainers, you can battle as long as you want or can!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info6');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info6",
+            "speaker": "npc",
+            "lines": [
+                "If you manage to defeat your opponent, you will earn Battle Points (BP)."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info7');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info7",
+            "speaker": "npc",
+            "lines": [
+                "As your Battle Streak grows, trainers will get more difficult as well with more difficult Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info8');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info8",
+            "speaker": "npc",
+            "lines": [
+                "Leaving the Tower on a win won't affect your Battle Streak, only losing to trainers in the tower."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info9');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info9",
+            "speaker": "npc",
+            "lines": [
+                "If you want to interrupt or pause your challenge, please see the Nurse Joy to exit!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+
+
+
+        {
+            "id": "end",
+            "speaker": "npc",
+            "lines": [
+                "We hope to see you again."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        }
+        ]
+    }

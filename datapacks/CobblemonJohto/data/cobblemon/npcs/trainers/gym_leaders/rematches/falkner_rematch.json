@@ -1,0 +1,79 @@
+{
+    "hitbox": "player",
+    "resourceIdentifier": "cobblemon:falkner",
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:falkner_rematch_interaction"
+    },
+    "config": [
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue falkner_rematch_end @s');"
+          }
+    ],
+    "ai": [
+
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ],
+    "names": [
+        "Falkner"
+    ],
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "party": {
+        "type": "simple",
+        "pokemon": [
+            "Staraptor level=50 moves=uturn,closecombat,bravebird,attract",
+            "Noctowl level=52 moves=airslash,shadowball,featherdance,roost",
+            "Swellow level=52 moves=protect,doubleteam,facade,endeavor",
+            "Honchkrow level=54 moves=darkpulse,nightslash,suckerpunch,thunderwave",
+            "Pelipper level=48 moves=surf,icebeam,hiddenpower,tailwind",
+            "Pidgeot level=56 moves=return,doubleteam,swagger,roost"
+        ]
+    }
+}

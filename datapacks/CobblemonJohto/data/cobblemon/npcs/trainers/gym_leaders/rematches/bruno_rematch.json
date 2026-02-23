@@ -1,0 +1,76 @@
+{
+    "hitbox": "player",
+    "resourceIdentifier": "cobblemon:bruno",
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:bruno_interaction"
+    },
+    "config": [
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue bruno_rematch_end @s');"
+          }
+    ],
+    "ai": [
+
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ],
+    "names": [
+        "Bruno"
+    ],
+    "party": {
+        "type": "simple",
+        "pokemon": [
+            "Hitmontop level=62 moves=closecombat,earthquake,counter,quickattack",
+            "Hitmonlee level=61 moves=closecombat,blazekick,reversal,swagger",
+            "Hitmonchan level=61 moves=closecombat,drainpunch,bulletpunch,substitute",
+            "Hariyama level=62 moves=bulkup,lowkick,payback,bulletpunch",
+            "Machamp level=64 moves=dynamicpunch,stoneedge,bulletpunch,foresight",
+            "Lucario level=64 moves=closecombat,irontail,counter,extremespeed"
+        ]
+    }
+}

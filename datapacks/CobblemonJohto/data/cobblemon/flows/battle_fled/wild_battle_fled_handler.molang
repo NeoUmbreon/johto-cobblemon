@@ -1,0 +1,9 @@
+c.battle.is_pvw == false ? return 0;
+
+for_each(t.player, c.players, {
+    v.player = t.player.player;
+    q.set_query('player', t.player.player);
+
+    q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');
+    q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');
+});

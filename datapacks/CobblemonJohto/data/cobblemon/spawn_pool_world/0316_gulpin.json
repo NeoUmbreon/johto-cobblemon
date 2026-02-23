@@ -1,0 +1,30 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+    {
+        "id": "gulpin-1",
+        "pokemon": "gulpin",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "5",
+        "weight": 10000.0,
+        "condition": {
+            "minX": -2202, "maxX": -2148, "minZ": 593, "maxZ": 636,
+            "biomes": [
+                "minecraft:bamboo_jungle"
+            ],
+            "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ]
+        }
+    }
+
+      
+    ]
+}

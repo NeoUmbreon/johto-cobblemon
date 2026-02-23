@@ -1,0 +1,126 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "metapod-1",
+            "pokemon": "metapod",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "3-4",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "dawn,dusk",
+                "minX": -263, "maxX": -137, "minZ": -458, "maxZ": -188
+            }
+        },
+        {
+            "id": "metapod-2",
+            "pokemon": "metapod",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "3-4",
+            "weight": 15,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "day",
+                "minX": -263, "maxX": -137, "minZ": -458, "maxZ": -188
+            }
+        },
+
+        {
+            "id": "metapod-3",
+            "pokemon": "metapod",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "3-5",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "dawn,dusk",
+                "minX": -245, "maxX": -63, "minZ": -161, "maxZ": -117
+            }
+        },
+        {
+            "id": "metapod-4",
+            "pokemon": "metapod",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "3-5",
+            "weight": 15,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "day",
+                "minX": -245, "maxX": -63, "minZ": -161, "maxZ": -117
+            }
+        },
+
+        {
+            "id": "metapod-5",
+            "pokemon": "metapod",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "5-6",
+            "weight": 30,
+            "condition": {
+                "timeRange": "dawn,dusk,day",
+                "minX": 538, "maxX": 688, "maxY": 67, "minZ": -778, "maxZ": -584
+            }
+        },
+
+        {
+            "id": "metapod-6",
+            "pokemon": "metapod",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "12-14",
+            "weight": 15,
+            "condition": {
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass",
+                  "minecraft:tall_grass"
+              ],
+                "canSeeSky": true,
+                "timeRange": "dawn,dusk,day",
+                "minX": 465, "maxX": 621, "minZ": -57, "maxZ": 135
+            }
+        },
+
+        {
+            "id": "metapod-7",
+            "pokemon": "metapod",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "3-7",
+            "weight": 30,
+            "condition": {
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+                "timeRange": "dawn,dusk,day",
+                "minX": -1710, "maxX": -1571, "minZ": 282, "maxZ": 448
+            }
+        }
+    ]
+}

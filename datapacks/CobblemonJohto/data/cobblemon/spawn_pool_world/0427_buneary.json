@@ -1,0 +1,30 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+    {
+        "id": "buneary-1",
+        "pokemon": "buneary",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "8-10",
+        "weight": 10000.0,
+        "condition": {
+            "minX": -2854, "maxX": -2814, "minZ": 998, "maxZ": 1009,
+            "biomes": [
+                "minecraft:bamboo_jungle"
+            ],
+            "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ]
+        }
+    }
+
+      
+    ]
+}

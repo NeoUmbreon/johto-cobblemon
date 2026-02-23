@@ -1,0 +1,39 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "rhyhorn-1",
+          "pokemon": "rhyhorn",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "32-36",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": false,
+              "minX": -1534, "maxX": -1320, "minY": 1, "maxY": 55, "minZ": 366, "maxZ": 546
+          }
+      },
+
+      {
+        "id": "rhyhorn-2",
+        "pokemon": "rhyhorn",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:savanna"
+            ]
+            }
+        }
+    ]
+}

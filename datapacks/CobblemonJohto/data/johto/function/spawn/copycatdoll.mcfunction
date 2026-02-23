@@ -1,0 +1,1 @@
+give @s music_disc_13[!minecraft:jukebox_playable,custom_name='["",{"text":"Clefairy Doll","italic":false,"color":"light_purple"}]',lore=['["",{"text":"The Poké Doll lost","italic":false}]','["",{"text":"by the Copycat.","italic":false}]']]

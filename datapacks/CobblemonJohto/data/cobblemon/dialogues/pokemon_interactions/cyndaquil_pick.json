@@ -1,0 +1,102 @@
+{
+    "initializationAction": [
+        "q.run_command('playsound cobblemon:pokemon.cyndaquil.cry ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "pokemon": {
+            "name": "Cyndaquil",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:cyndaquil",
+                "isLeftSide": true
+            }
+        },
+        "elm": {
+          "name": "Professor Elm",
+          "face": {
+            "type": "artificial",
+            "modelType": "npc",
+            "identifier": "cobblemon:professorelm",
+            "isLeftSide": true
+          }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "pokemon",
+            "lines": [
+                "So, you like Cyndaquil, the Fire-type Pokémon?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.dialogue.set_page('accept');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.dialogue.set_page('decline');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "accept",
+            "speaker": "elm",
+            "lines": [
+                "I think that's a great Pokémon too!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();",
+                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run pokegive cyndaquil level=5');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s StarterPick 2');",
+                            "q.run_command('execute as ' + q.player.username + ' run opendialogue professorelm_dialogue4 @s');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "decline",
+            "speaker": "elm",
+            "lines": [
+                "Think it over carefully. Your partner is important."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": 
+                            "q.dialogue.close();"
+                    }
+                ]
+            }
+        }
+    ]
+}

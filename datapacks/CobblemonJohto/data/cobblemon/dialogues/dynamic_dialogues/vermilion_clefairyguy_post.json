@@ -1,0 +1,37 @@
+{   
+    "speakers": {
+    "npc": {
+        "name": "     ",
+        "face": {
+            "type": "artificial",
+            "modelType": "npc",
+            "identifier": "cobblemon:artist",
+            "isLeftSide": true
+        }
+    }
+      },
+      "escapeAction": [              
+        ],
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "I'll befriend a real Clefairy on my own one day. No worries!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        }
+        ]
+    }

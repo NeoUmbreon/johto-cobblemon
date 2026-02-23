@@ -1,0 +1,62 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+    {
+        "id": "sentret-1",
+        "pokemon": "sentret",
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "2-4",
+        "weight": 40,
+        "condition": {
+            "canSeeSky": true,
+            "neededNearbyBlocks": [
+                "minecraft:short_grass"
+            ],
+            "timeRange": "dawn,dusk,day",
+            "minX": -623, "maxX": -324, "minZ": -583, "maxZ": -477
+        }
+    },
+
+        {
+            "id": "sentret-2",
+            "pokemon": "sentret",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "2-6",
+            "weight": 40,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "dawn,dusk,day",
+                "minX": -1750, "maxX": -1637, "minZ": -257, "maxZ": -53
+            }
+        },
+
+        {
+            "id": "sentret-3",
+            "pokemon": "sentret",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:swamp",
+                    "minecraft:river"
+                ]
+                }
+            }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "hitbox": "player",
+    "resourceIdentifier": "cobblemon:will",
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:will_interaction"
+    },
+    "config": [
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
+            "variableName": "can_rechallenge",
+            "displayName": "Rechallenging",
+            "description": "This NPC can be battled multiple times.",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "on_player_wins",
+            "displayName": "npc.variable.on_player_wins.name",
+            "description": "npc.variable.on_player_wins.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue will_rematch_end @s');"
+          }
+    ],
+    "ai": [
+
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ],
+    "names": [
+        "Will"
+    ],
+    "party": {
+        "type": "simple",
+        "pokemon": [
+            "Bronzong level=58 moves=gravity,reflect,payback,psychic",
+            "Jynx level=60 moves=faketears,lovelykiss,dreameater,blizzard",
+            "Grumpig level=59 moves=confuseray,signalbeam,powergem,psychic",
+            "Slowbro level=60 moves=curse,amnesia,bodyslam,psychic",
+            "Gardevoir level=61 moves=calmmind,chargebeam,focusblast,psychic",
+            "Xatu level=62 moves=confuseray,quickattack,shadowball,psychic"
+        ]
+    }
+}

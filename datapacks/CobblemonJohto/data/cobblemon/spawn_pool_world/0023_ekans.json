@@ -1,0 +1,93 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "ekans-1",
+          "pokemon": "ekans",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "4-6",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 106, "maxX": 203, "minZ": -548, "maxZ": -232
+          }
+      },
+
+      {
+          "id": "ekans-2",
+          "pokemon": "ekans",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "6-8",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 125, "maxX": 227, "minZ": -787, "maxZ": -688
+          }
+      },
+
+      {
+          "id": "ekans-3",
+          "pokemon": "ekans",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "5-10",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -2211, "maxX": -1961, "minZ": 581, "maxZ": 690
+          }
+      },
+
+      {
+          "id": "ekans-4",
+          "pokemon": "ekans",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "5-10",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -2584, "maxX": -2314, "minZ": 672, "maxZ": 744
+          }
+      },
+
+      {
+        "id": "ekans-5",
+        "pokemon": "ekans",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:mangrove_swamp"
+            ]
+            }
+        }
+    ]
+}

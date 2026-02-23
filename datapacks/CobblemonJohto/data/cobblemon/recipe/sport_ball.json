@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " t ",
+        "l r",
+        " b "
+    ],
+    "key": {
+        "t": {
+            "item": "cobblemon:white_apricorn"
+        },
+        "l": {
+            "item": "cobblemon:red_apricorn"
+        },
+        "r": {
+            "item": "cobblemon:red_apricorn"
+        },
+        "b": {
+            "item": "cobblemon:red_apricorn"
+        }
+    },
+    "result":
+    {
+        "id": "cobblemon:sport_ball",
+        "count": 4
+    }
+}

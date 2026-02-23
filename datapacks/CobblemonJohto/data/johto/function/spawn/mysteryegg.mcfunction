@@ -1,0 +1,1 @@
+give @s turtle_egg[custom_name='["",{"text":"Mystery Egg","italic":false}]',lore=['["",{"text":"An egg found at the daycare.","italic":false,"color":"gold"}]','["",{"text":"I wonder what could be inside?","italic":false,"color":"gold"}]']]

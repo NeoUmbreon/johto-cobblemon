@@ -1,0 +1,1 @@
+give @s prismarine_crystals[custom_name='["",{"text":"Rainbow Feather","italic":false,"color":"#ff8080"}]',lore=['["",{"text":"A mystical rainbow feather that sparkles.","italic":false}]']]

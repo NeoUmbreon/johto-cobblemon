@@ -1,0 +1,55 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "gastly-1",
+          "pokemon": "gastly",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "5-6",
+          "weight": 85,
+          "condition": {
+              "canSeeSky": false,
+              "timeRange": "night",
+              "minX": 45, "maxX": 74, "minY": 83, "maxY": 110, "minZ": 5, "maxZ": 34
+          }
+        },
+
+        {
+            "id": "gastly-2",
+            "pokemon": "gastly",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "20-24",
+            "weight": 80,
+            "condition": {
+                "canSeeSky": false,
+                "timeRange": "night",
+                "minX": 240, "maxX": 273, "minY": 70, "maxY": 112, "minZ": 297, "maxZ": 330
+          }
+        },
+
+        {
+            "id": "gastly-3",
+            "pokemon": "gastly",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:forest"
+                ]
+                }
+            }
+    ]
+}

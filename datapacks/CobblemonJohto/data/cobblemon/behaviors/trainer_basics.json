@@ -1,0 +1,71 @@
+{
+    "variation": {
+        "dirt": [
+            "clean",
+            "slightly_dirty",
+            "dirty",
+            "filthy"
+        ]
+    },
+    "config": [
+        {
+            "variableName": "battle_cooldown_time",
+            "displayName": "Cooldown Time (IN HOURS)",
+            "description": "The time in hours that the player must wait before utilizing this NPC again.",
+            "type": "NUMBER",
+            "defaultValue": "0.0"
+        },
+        {
+            "variableName": "on_player_loses",
+            "displayName": "npc.variable.on_player_loses.name",
+            "description": "npc.variable.on_player_loses.desc",
+            "type": "TEXT",
+            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
+        },
+        {
+            "variableName": "challenge_cooldown_text",
+            "displayName": "Cooling Down Text",
+            "description": "The text that is displayed while the cooldown is in effect.",
+            "type": "TEXT",
+            "defaultValue": "I'm sorry, but I'm not ready for another battle yet. Please come back later."
+        }
+    ],
+    "battleConfiguration": {
+        "canChallenge": true
+    },
+    "autoHealParty": true,
+    "isMovable": false,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true,
+    "canDespawn": false,
+    "skill": 5,
+    "ai": [
+        {
+            "type": "apply_presets",
+            "presets": []
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ]
+}

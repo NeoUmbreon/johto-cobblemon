@@ -1,0 +1,231 @@
+{   
+    "initializationAction": [
+        "v.slot1 = q.player.party.get_pokemon(0);",
+        "v.slot2 = q.player.party.get_pokemon(1);",
+        "v.slot3 = q.player.party.get_pokemon(2);",
+        "v.slot4 = q.player.party.get_pokemon(3);",
+        "v.slot5 = q.player.party.get_pokemon(4);",
+        "v.slot6 = q.player.party.get_pokemon(5);"
+    ],
+
+    "speakers": {
+        "npc": {
+            "name": "Beauty Salon",
+            "face": {
+              "type": "artificial",
+              "modelType": "npc",
+              "identifier": "cobblemon:beauty",
+              "isLeftSide": true
+            }
+          }
+      },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Welcome! I run the Pokémon Salon!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I can make your Pokémon beautiful for just $500."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Grooming gives a better look. Your Pokémon will become friendlier and more beautiful."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page4');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Would you like me to do that?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": "q.dialogue.set_page('yes1');"
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "nothanks",
+                        "action": "q.dialogue.set_page('nothanks');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "yes1",
+            "speaker": "npc",
+            "lines": [
+                "Which Pokémon should I work on?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot1.species.name;"
+                        },
+                        "isVisible": "v.slot1 != 0",
+                        "value": "s1",
+                        "action": [
+                            "q.dialogue.set_page('yes2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Friendship 1');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot2.species.name;"
+                        },
+                        "isVisible": "v.slot2 != 0",
+                        "value": "s2",
+                        "action": [
+                            "q.dialogue.set_page('yes2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Friendship 2');"
+                ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot3.species.name;"
+                        },
+                        "isVisible": "v.slot3 != 0",
+                        "value": "s3",
+                        "action": [
+                            "q.dialogue.set_page('yes2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Friendship 3');"
+                ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot4.species.name;"
+                        },
+                        "isVisible": "v.slot4 != 0",
+                        "value": "s4",
+                        "action": [
+                            "q.dialogue.set_page('yes2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Friendship 4');"
+                    ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot5.species.name;"
+                        },
+                        "isVisible": "v.slot5 != 0",
+                        "value": "s5",
+                        "action": [
+                            "q.dialogue.set_page('yes2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Friendship 5');"
+                    ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.slot6.species.name;"
+                        },
+                        "isVisible": "v.slot6 != 0",
+                        "value": "s6",
+                        "action": [
+                            "q.dialogue.set_page('yes2');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Friendship 6');"
+                    ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "yes2",
+            "speaker": "npc",
+            "lines": [
+                "OK! Watch it become beautiful!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:data/friendshipincrease');",
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "nothanks",
+            "speaker": "npc",
+            "lines": [
+                "Is that right? That's a shame!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                            ]
+                    }
+                ]
+            }
+        }
+        ]
+    }

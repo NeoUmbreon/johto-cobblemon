@@ -1,0 +1,61 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "murkrow-1",
+            "pokemon": "murkrow",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "27-30",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "night",
+                "minX": -2197, "maxX": -2145, "minZ": 338, "maxZ": 368
+            }
+        },
+
+        {
+            "id": "murkrow-2",
+            "pokemon": "murkrow",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "15-19",
+            "weight": 10,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "timeRange": "night",
+                "minX": -2611, "maxX": -2570, "minZ": 349, "maxZ": 379
+            }
+        },
+
+        {
+            "id": "murkrow-3",
+            "pokemon": "murkrow",
+            "presets": [
+                "natural"
+            ],
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                    "minecraft:swamp"
+                ]
+                }
+            }
+    ]
+}

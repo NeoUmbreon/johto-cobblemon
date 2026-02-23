@@ -1,0 +1,75 @@
+{   "initializationAction": [              
+    "c.npc.set_chatting();",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+    "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue66');",
+    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 1200');"
+        ],
+  "speakers": {
+    "npc": {
+      "name": "Rocket Grunt",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:rocketgrunt",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["OK, OK. I'll tell you where he is."],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+          "id": "page2",
+          "speaker": "npc",
+          "lines": ["We stashed the Director in the underground warehouse. It's at the far end of the Goldenrod Tunnel. "],
+                "input": {
+                    "type": "option",
+                    "vertical": false,
+                    "options": [
+                        {
+                            "text": "Next",
+                            "value": "next",
+                            "action": "q.dialogue.set_page('page3');"
+                        }
+                    ]
+                }
+            },
+        {
+          "id": "page3",
+          "speaker": "npc",
+          "lines": ["Hahaha... I doubt a child like you'll get that far."],
+                "input": {
+                    "type": "option",
+                    "vertical": false,
+                    "options": [
+                        {
+                            "text": "Close",
+                            "value": "close",
+                            "action": [              
+                                "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You received a key to the Underground!\",\"italic\":true,\"color\":\"gray\"}');",
+                                "q.dialogue.close();"]
+                        }
+                    ]
+                }
+            }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}

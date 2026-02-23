@@ -1,0 +1,22 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "exeggcute-1",
+          "pokemon": "exeggcute",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "10-13",
+          "weight": 10,
+          "condition": {
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 422, "maxX": 512, "minZ": -721, "maxZ": -488
+          }
+      }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+    "infiniteStamina": "true",
+    "terminalVelocity": "-2.0",
+    "rotatePokemonHead": "true",
+    "stamReplenishTimeSeconds": "15.0",
+    "staminaExpr": "q.get_ride_stats('STAMINA', 'LIQUID', 30.0, 2.0)",
+    "rotationSpeedModifierExpr": "q.get_ride_stats('SKILL', 'LIQUID', 0.8, 0.1)",
+    "jumpStrengthExpr": "q.get_ride_stats('JUMP', 'LIQUID', 1.6, 0.8)",
+    "speedExpr": "q.get_ride_stats('SPEED', 'LIQUID', 0.75, 0.08)",
+    "accelerationExpr": "q.get_ride_stats('ACCELERATION', 'LIQUID', 0.1, 8.0)",
+    "sprintSpeedModifier": "q.get_ride_stats('JUMP', 'LIQUID', 2.0, 1.0)",
+    "sprintFovModifier": "1.2",
+    "surfaceLevelOffset": "0"
+}

@@ -1,0 +1,11 @@
+{
+    "infiniteStamina": "false",
+    "canJump": "true",
+    "canSprint": "true",
+    "lookYawLimit": "90.0",
+    "speedExpr": "q.get_ride_stats('SPEED', 'LAND', 1.2, 0.1)",
+    "accelerationExpr": "q.get_ride_stats('ACCELERATION', 'LAND', 0.1, 12.0)",
+    "staminaExpr": "q.get_ride_stats('STAMINA', 'LAND', 120.0, 4.0)",
+    "jumpExpr": "q.get_ride_stats('JUMP', 'LAND', 1.6, 0.2)",
+    "handlingExpr": "q.get_ride_stats('SKILL', 'LAND', 90.0, 30.0)"
+}

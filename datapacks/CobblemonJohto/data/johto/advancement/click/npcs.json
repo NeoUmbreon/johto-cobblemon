@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "requirements": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "nbt": "{Tags:[\"NPCs\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "johto:triggers/customnpcs"
+    }
+}

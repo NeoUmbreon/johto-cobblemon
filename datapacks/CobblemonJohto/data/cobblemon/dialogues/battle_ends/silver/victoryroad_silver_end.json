@@ -1,0 +1,116 @@
+{   "initializationAction": [              
+    "c.npc.set_chatting();",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $2,560 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 2560');"
+        ],
+  "speakers": {
+    "npc": {
+      "name": "Silver",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:silver",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": [
+          "..............."
+      ],
+      "input": {
+          "type": "option",
+          "vertical": false,
+          "options": [
+              {
+                  "text": "Next",
+                  "value": "next",
+                  "action": "q.dialogue.set_page('page2');"
+              }
+          ]
+      }
+  },
+  {
+    "id": "page2",
+    "speaker": "npc",
+    "lines": [
+        "... I haven't given up on becoming the greatest Trainer..."
+    ],
+    "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+            {
+                "text": "Next",
+                "value": "next",
+                "action": "q.dialogue.set_page('page3');"
+            }
+        ]
+    }
+},
+{
+  "id": "page3",
+  "speaker": "npc",
+  "lines": [
+      "I'm going to find out why I can't win and become stronger..."
+  ],
+  "input": {
+      "type": "option",
+      "vertical": false,
+      "options": [
+          {
+              "text": "Next",
+              "value": "next",
+              "action": "q.dialogue.set_page('page4');"
+          }
+      ]
+  }
+},
+{
+  "id": "page4",
+  "speaker": "npc",
+  "lines": [
+      "When I do, I will challenge you. I'll beat you down with all my power."
+  ],
+  "input": {
+      "type": "option",
+      "vertical": false,
+      "options": [
+          {
+              "text": "Next",
+              "value": "next",
+              "action": "q.dialogue.set_page('page5');"
+          }
+      ]
+  }
+},
+    {
+      "id": "page5",
+      "speaker": "npc",
+      "lines": ["...Humph! You keep at it until then."],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [              
+                            "q.dialogue.close();",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue85');",
+                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 98');"
+                          ]
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}

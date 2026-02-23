@@ -1,0 +1,148 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "gyarados-1",
+            "pokemon": "gyarados",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "10-20",
+            "weight": 10.0,
+            "condition": {
+                "canSeeSky": true,
+                "minX": -251, "maxX": -86, "minZ": 575, "maxZ": 724
+            }
+        },
+
+        {
+            "id": "gyarados-2",
+            "pokemon": "gyarados",
+            "presets": [
+                "water"
+            ],
+            "type": "pokemon",
+            "context": "surface",
+            "bucket": "common",
+            "level": "5-10",
+            "weight": 90.0,
+            "condition": {
+                "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+                "biomes": [
+                "minecraft:sunflower_plains",
+                "minecraft:mangrove_swamp",
+                "minecraft:river"
+            ]
+            }
+        },
+
+        {
+            "id": "gyarados-3",
+            "pokemon": "gyarados",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 3.0,
+            "condition": {
+                "minX": -251, "maxX": -86, "minZ": 575, "maxZ": 724,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "gyarados-4",
+            "pokemon": "gyarados",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 10.0,
+            "condition": {
+                "minX": -251, "maxX": -86, "minZ": 575, "maxZ": 724,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "gyarados-5",
+            "pokemon": "gyarados",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 3.0,
+            "condition": {
+                "minX": -2498, "maxX": -2300, "minZ": -593, "maxZ": -474,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "gyarados-6",
+            "pokemon": "gyarados",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 30.0,
+            "condition": {
+                "minX": -2498, "maxX": -2300, "minZ": -593, "maxZ": -474,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+
+        {
+            "id": "gyarados-5",
+            "pokemon": "gyarados",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "20",
+            "weight": 10.0,
+            "condition": {
+                "timeRange": "night",
+                "minX": -1047, "maxX": -927, "minZ": 255, "maxZ": 367,
+                "minLureLevel": 2,
+                "maxLureLevel": 2
+            }
+        },
+        {
+            "id": "gyarados-6",
+            "pokemon": "gyarados",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 50.0,
+            "condition": {
+                "timeRange": "dawn,dusk,day",
+                "minX": -1047, "maxX": -927, "minZ": 255, "maxZ": 367,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        },
+        {
+            "id": "gyarados-6",
+            "pokemon": "gyarados",
+            "type": "pokemon",
+            "context": "fishing",
+            "bucket": "common",
+            "level": "40",
+            "weight": 80.0,
+            "condition": {
+                "timeRange": "night",
+                "minX": -1047, "maxX": -927, "minZ": 255, "maxZ": 367,
+                "minLureLevel": 3,
+                "maxLureLevel": 3
+            }
+        }
+    ]
+}

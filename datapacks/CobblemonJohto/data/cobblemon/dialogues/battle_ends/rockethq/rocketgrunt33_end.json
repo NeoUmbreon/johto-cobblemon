@@ -1,0 +1,125 @@
+{
+  "initializationAction": [
+      "c.npc.set_chatting();",
+      "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue58');",
+      "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+      "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+      "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,584 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+      "q.run_command('scoreboard players add ' + q.player.username + ' Money 1584');"
+  ],
+  "speakers": {
+      "npc": {
+          "name": "Rocket Admin",
+          "face": {
+              "type": "artificial",
+              "modelType": "npc",
+              "identifier": "cobblemon:rocketgrunt",
+              "isLeftSide": true
+          }
+      },
+      "murkrow": {
+          "name": "Murkrow",
+          "face": {
+              "type": "artificial",
+              "modelType": "pokemon",
+              "identifier": "cobblemon:murkrow",
+              "isLeftSide": false
+          }
+      }
+  },
+  "pages": [
+      {
+          "id": "greeting",
+          "speaker": "npc",
+          "lines": [
+              "I... I couldn't do a thing... "
+          ],
+          "input": {
+              "type": "option",
+              "vertical": false,
+              "options": [
+                  {
+                      "text": "Next",
+                      "value": "next",
+                      "action": "q.dialogue.set_page('page2');"
+                  }
+              ]
+          }
+      },
+      {
+          "id": "page2",
+          "speaker": "npc",
+          "lines": [
+              "Giovanni, please forgive me... "
+          ],
+          "input": {
+              "type": "option",
+              "vertical": false,
+              "options": [
+                  {
+                      "text": "Next",
+                      "value": "next",
+                      "action": "q.dialogue.set_page('page3');"
+                  }
+              ]
+          }
+      },
+      {
+          "id": "page3",
+          "speaker": "npc",
+          "lines": [
+              "No, I can't let this affect me. I have to inform the others..."
+          ],
+          "input": {
+              "type": "option",
+              "vertical": false,
+              "options": [
+                  {
+                      "text": "Next",
+                      "value": "next",
+                      "action": "q.dialogue.set_page('page4');"
+                  }
+              ]
+          }
+      },
+      {
+          "id": "page4",
+          "speaker": "murkrow",
+          "lines": [
+              "The password is... "
+          ],
+          "input": {
+              "type": "option",
+              "vertical": false,
+              "options": [
+                  {
+                      "text": "Next",
+                      "value": "next",
+                      "action": "q.dialogue.set_page('page5');"
+                  }
+              ]
+          }
+      },
+      {
+          "id": "page5",
+          "speaker": "murkrow",
+          "lines": [
+              "HAIL GIOVANNI."
+          ],
+          "input": {
+              "type": "option",
+              "vertical": false,
+              "options": [
+                  {
+                      "text": "Close",
+                      "value": "close",
+                      "action": [
+                          "q.dialogue.close();"
+                      ]
+                  }
+              ]
+          }
+      }
+  ],
+  "escapeAction": []
+}

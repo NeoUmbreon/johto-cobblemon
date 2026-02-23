@@ -1,0 +1,29 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Soul Badge",
+            "color": "dark_purple"
+        },
+        "description": {
+            "text": "Defeat Janine in battle"
+        },
+        "icon": {
+            "id": "cobblemon:poison_barb"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+
+        "commandonly": {
+
+            "trigger": "minecraft:impossible"
+
+        }
+
+    },
+    "parent": "johto:badges/kanto/badge4"
+}

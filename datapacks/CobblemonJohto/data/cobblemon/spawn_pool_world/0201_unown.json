@@ -1,0 +1,455 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "unown-a-1",
+            "pokemon": "unown character=a",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-?-1",
+            "pokemon": "unown character=?",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:the_end"
+            ]
+            }
+        },
+        {
+            "id": "unown-c-1",
+            "pokemon": "unown character=c",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-d-1",
+            "pokemon": "unown character=d",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-h-1",
+            "pokemon": "unown character=h",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-u-1",
+            "pokemon": "unown character=u",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_midlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-o-1",
+            "pokemon": "unown character=o",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_highlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-n-1",
+            "pokemon": "unown character=n",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_highlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-s-1",
+            "pokemon": "unown character=s",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_midlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-i-1",
+            "pokemon": "unown character=i",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-e-1",
+            "pokemon": "unown character=e",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-p-1",
+            "pokemon": "unown character=p",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_highlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-j-1",
+            "pokemon": "unown character=j",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-l-1",
+            "pokemon": "unown character=l",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_highlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-r-1",
+            "pokemon": "unown character=r",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_midlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-q-1",
+            "pokemon": "unown character=q",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_highlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-y-1",
+            "pokemon": "unown character=y",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:the_end"
+            ]
+            }
+        },
+        {
+            "id": "unown-g-1",
+            "pokemon": "unown character=g",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-t-1",
+            "pokemon": "unown character=t",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_midlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-f-1",
+            "pokemon": "unown character=f",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-k-1",
+            "pokemon": "unown character=k",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_highlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-v-1",
+            "pokemon": "unown character=v",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_midlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-w-1",
+            "pokemon": "unown character=w",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:the_end"
+            ]
+            }
+        },
+        {
+            "id": "unown-x-1",
+            "pokemon": "unown character=x",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:the_end"
+            ]
+            }
+        },
+        {
+            "id": "unown-m-1",
+            "pokemon": "unown character=m",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_highlands"
+            ]
+            }
+        },
+        {
+            "id": "unown-b-1",
+            "pokemon": "unown character=b",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:end_barrens"
+            ]
+            }
+        },
+        {
+            "id": "unown-z-1",
+            "pokemon": "unown character=z",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:the_end"
+            ]
+            }
+        },
+        {
+            "id": "unown-!-1",
+            "pokemon": "unown character=!",
+            "type": "pokemon",
+            "spawnablePositionType": "grounded",
+            "bucket": "common",
+            "level": "5",
+            "weight": 5,
+            "condition": {
+                "canSeeSky": false,
+                "minX": 179, "maxX": 214, "minY": 36, "maxY": 41, "minZ": -145, "maxZ": -96,
+                "biomes": [
+                "minecraft:the_end"
+            ]
+            }
+        }
+    ]
+}

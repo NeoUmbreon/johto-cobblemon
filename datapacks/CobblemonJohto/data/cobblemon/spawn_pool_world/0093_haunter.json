@@ -1,0 +1,42 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "haunter-1",
+          "pokemon": "haunter",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "15-19",
+          "weight": 30,
+          "condition": {
+            "neededNearbyBlocks": [
+                "minecraft:short_grass"
+            ],
+              "timeRange": "night",
+              "minX": -3103, "maxX": -3034, "minZ": 293, "maxZ": 344
+          }
+        },
+
+        {
+          "id": "haunter-2",
+          "pokemon": "haunter",
+          "presets": [
+              "natural"
+          ],
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "10-20",
+          "weight": 10.0,
+          "condition": {
+              "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+              "biomes": [
+                  "minecraft:forest"
+              ]
+              }
+          }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+  "values": [
+    "johto:triggers/runupdates",
+    "johto:trainers/detect_trainers",
+    "johto:trainers/battle_cleanup"
+  ]
+}

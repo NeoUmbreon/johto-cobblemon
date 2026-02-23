@@ -1,0 +1,64 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+        {
+            "id": "donphan-1",
+            "pokemon": "donphan",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "39-43",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": true,
+                "neededNearbyBlocks": [
+                    "minecraft:short_grass"
+                ],
+                "minX": -1188, "maxX": -906, "minZ": -11, "maxZ": 84
+            }
+        },
+
+        {
+            "id": "donphan-2",
+            "pokemon": "donphan",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "41-45",
+            "weight": 30,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -1014, "maxX": -941, "maxY": 98, "minZ": 101, "maxZ": 232
+            }
+        },
+        {
+            "id": "donphan-3",
+            "pokemon": "donphan",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "45-48",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -1039, "maxX": -932, "maxY": 98, "minZ": 233, "maxZ": 364
+            }
+        },
+
+        {
+            "id": "donphan-4",
+            "pokemon": "donphan",
+            "type": "pokemon",
+            "context": "grounded",
+            "bucket": "common",
+            "level": "32-36",
+            "weight": 20,
+            "condition": {
+                "canSeeSky": false,
+                "minX": -1534, "maxX": -1320, "minY": 1, "maxY": 55, "minZ": 366, "maxZ": 546
+            }
+        }
+    ]
+}

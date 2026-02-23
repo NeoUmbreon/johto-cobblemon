@@ -1,0 +1,14 @@
+{
+    "pack": {
+      "pack_format": 48,
+      "description": "Cobblemon Johto 1.3.1 commands!"
+    },
+      "filter": {
+        "block": [
+          {
+            "namespace": "cobblemon",
+            "path": "spawn_pool_world"
+          }
+        ]
+      }
+   }

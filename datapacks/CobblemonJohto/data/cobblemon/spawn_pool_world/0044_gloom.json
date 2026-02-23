@@ -1,0 +1,76 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "gloom-1",
+          "pokemon": "gloom",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "31-35",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 1406, "maxX": 1436, "minZ": -373, "maxZ": -349
+          }
+      },
+
+      {
+          "id": "gloom-2",
+          "pokemon": "gloom",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "21-24",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 1575, "maxX": 1618, "minZ": -296, "maxZ": -248
+          }
+      },
+
+      {
+          "id": "gloom-3",
+          "pokemon": "gloom",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "12-15",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -2775, "maxX": -2724, "minZ": 542, "maxZ": 614
+          }
+      },
+
+      {
+        "id": "gloom-4",
+        "pokemon": "gloom",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:mangrove_swamp"
+            ]
+            }
+        }
+    ]
+}

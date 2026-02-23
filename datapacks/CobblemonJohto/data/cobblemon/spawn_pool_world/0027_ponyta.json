@@ -1,0 +1,93 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "ponyta-1",
+          "pokemon": "ponyta",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -1088, "maxX": -1015, "minZ": -528, "maxZ": -482
+          }
+      },
+
+      {
+          "id": "ponyta-2",
+          "pokemon": "ponyta",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "28-32",
+          "weight": 20,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -1321, "maxX": -1216, "minZ": -482, "maxZ": -284
+          }
+      },
+
+      {
+          "id": "ponyta-3",
+          "pokemon": "ponyta",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "39-43",
+          "weight": 30,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -1188, "maxX": -906, "minZ": -11, "maxZ": 84
+          }
+      },
+
+      {
+          "id": "ponyta-4",
+          "pokemon": "ponyta",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "3-7",
+          "weight": 5,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": -1565, "maxX": -1408, "minZ": -1, "maxZ": 72
+          }
+      },
+
+      {
+        "id": "ponyta-5",
+        "pokemon": "ponyta",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:plains"
+            ]
+        }
+    }
+    ]
+}

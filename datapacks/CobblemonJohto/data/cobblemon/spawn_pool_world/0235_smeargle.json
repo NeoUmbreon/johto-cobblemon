@@ -1,0 +1,42 @@
+{
+    "enabled": true,
+    "neededInstalledMods": [],
+    "neededUninstalledMods": [],
+    "spawns": [
+      {
+          "id": "smeargle-1",
+          "pokemon": "smeargle",
+          "type": "pokemon",
+          "context": "grounded",
+          "bucket": "common",
+          "level": "18-24",
+          "weight": 10,
+          "condition": {
+              "canSeeSky": true,
+              "neededNearbyBlocks": [
+                  "minecraft:short_grass"
+              ],
+              "minX": 254, "maxX": 273, "minZ": -213, "maxZ": -169
+          }
+      },
+
+      {
+        "id": "smeargle-2",
+        "pokemon": "smeargle",
+        "presets": [
+            "natural"
+        ],
+        "type": "pokemon",
+        "context": "grounded",
+        "bucket": "common",
+        "level": "10-20",
+        "weight": 10.0,
+        "condition": {
+            "minX": 1406, "maxX": 1777, "minZ": -90, "maxZ": 101,
+            "biomes": [
+                "minecraft:plains"
+            ]
+        }
+    }
+    ]
+}
