@@ -1,1 +1,0 @@
-execute as @a[tag=!dialogueLock,tag=!inTrainerBattle,tag=!defeated.rocketgrunt1] at @s if entity @e[type=cobblemon:npc,tag=trainer.rocketgrunt1,distance=..6] run opendialogue rocketgrunt1_interaction @s

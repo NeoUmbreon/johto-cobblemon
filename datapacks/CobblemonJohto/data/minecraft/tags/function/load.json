@@ -1,6 +1,5 @@
 {
   "values": [
-    "johto:tools/reload",
     "johto:trainers/bootstrap"
   ]
 }
