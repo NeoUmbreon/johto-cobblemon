@@ -9,6 +9,6 @@
 $scoreboard players set $(player) BattleStart $(battle_id)
 $execute as $(player) run function johto:tools/forceclick
 
-$tbcs attach tbcs:$(trainer_id) @s
+$execute at @p run execute as @e[type=cobblemon:npc,distance=..6,limit=1] if data entity @s Config.trainer run tbcs attach tbcs:$(trainer_id) @s
 
 $tbcs battle GEN_9_SINGLES $(player) vs tbcs:$(trainer_id) onwin {1:["tag @1 add defeated.$(trainer_id)","tag @2 remove trainerBusy"],2:["tag @1 remove trainerBusy"]}
