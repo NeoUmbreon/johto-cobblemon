@@ -1,7 +1,6 @@
-# Return states
-$execute as $(player) if entity @s[tag=defeated.$(trainer_id)] run scoreboard players set @s BattleStart 0
-
-$execute as $(player) if entity @s[scores={BattleStart=0}] run return 1
+# Return states (moved to detect_trainers)
+#$execute as $(player) if entity @s[tag=defeated.$(trainer_id)] run scoreboard players set @s BattleStart 0
+#$execute as $(player) if entity @s[scores={BattleStart=0}] run return 1
 
 # Lock States (moved to detect_trainers)
 #tag @s add trainerBusy
