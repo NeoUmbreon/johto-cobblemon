@@ -1,3 +1,6 @@
+#-------------------------------------------------------------------------------------------------------------------------
+#Auto-battle detection
+execute as @a[scores={BattleStart=0}] at @s as @e[type=cobblemon:npc,tag=!trainerBusy,distance=..6,nbt={Config:{trainer:1.0d}}] at @s run function johto:trainers/detect_trainers with entity @s Config
 
 #--------------------------------------------------------------------------------------------------GENERAL WORLD-----------------------------------------------------------------------------------------------------------------------------------
 
