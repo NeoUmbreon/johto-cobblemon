@@ -9,7 +9,7 @@ tag @s[nbt={Inventory:[{Slot:7b,id:"minecraft:carrot_on_a_stick",Count:1b,tag:{d
 tag @s[nbt={Inventory:[{Slot:8b,id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'[{"text":"Radio","italic":false,"color":"aqua"}]'}}}]}] add Skip
 
 #If the player is on their bike
-tag @s[tag=Cycling] add Skip
+#tag @s[tag=Cycling] add Skip
 
 
 #Grass-legendary specific encounters
@@ -17,8 +17,8 @@ tag @s remove GrassCooldown
 
 
 
-stopsound @s[tag=!Skip] record
-scoreboard players set @s[tag=!Skip] MusicCooldown 0
-scoreboard players set @s[tag=!Skip] click 0
+stopsound @s record
+scoreboard players set @s MusicCooldown 0
+scoreboard players set @s click 0
 
-tag @s remove Skip
+#tag @s remove Skip

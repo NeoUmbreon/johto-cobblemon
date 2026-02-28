@@ -129,6 +129,7 @@ execute as @a[tag=BikeEquip] run scoreboard players set @s MusicCooldown 0
 execute as @a[tag=BikeEquip] run playsound minecraft:item.armor.equip_iron ambient @s
 
 execute as @a[tag=BikeEquip] run scoreboard players set @s click 0
+execute as @a[tag=BikeEquip] run tag @s add CyclingMusic
 tag @a[tag=BikeEquip] remove BikeEquip
 
 

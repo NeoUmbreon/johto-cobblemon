@@ -14,9 +14,9 @@ scoreboard players set @s[scores={MusicState=0},nbt={Inventory:[{tag:{display:{N
 
 
 #Riding a Bicycle
-execute as @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Bicycle"}],"text":""}'}}]}] run playsound bicycle record @s[scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute as @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Bicycle"}],"text":""}'}}]}] run tag @s add CyclingMusic
-execute as @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Bicycle"}],"text":""}'}}]}] run scoreboard players set @s[scores={MusicCooldown=0}] MusicCooldown 93
+execute as @s[tag=CyclingMusic] run playsound bicycle record @s[scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+#execute as @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Bicycle"}],"text":""}'}}]}] run tag @s add CyclingMusic
+execute as @s[tag=CyclingMusic] run scoreboard players set @s[scores={MusicCooldown=0}] MusicCooldown 93
 
 
 #GymVictory tag

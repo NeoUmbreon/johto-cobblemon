@@ -19,6 +19,11 @@ scoreboard players set @s[nbt={Inventory:[{Slot:8b,components:{"minecraft:custom
 $execute unless score @s RadioSelect matches 3..9 $(includes)run function johto:tools/forceclick
 
 
+# Restart music if cycling
+execute as @s[tag=CyclingMusic] run function johto:tools/forceclick
+execute as @s[tag=CyclingMusic] run tag @s remove CyclingMusic
+
+
 # Show title
 $title @s actionbar {"text":"$(text)"}
 
