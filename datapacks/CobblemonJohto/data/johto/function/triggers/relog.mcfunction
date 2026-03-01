@@ -1,6 +1,3 @@
-# Resets inTrainerBattle
-tag @s remove inTrainerBattle
-
 #removes BattleStart score that mainly defines music
 scoreboard players set @s BattleStart 0
 

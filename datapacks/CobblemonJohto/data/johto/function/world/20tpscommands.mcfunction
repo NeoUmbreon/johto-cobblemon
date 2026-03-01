@@ -2,6 +2,12 @@
 #Auto-battle detection
 execute as @a[scores={BattleStart=0}] at @s as @e[type=cobblemon:npc,tag=!trainerBusy,distance=..6,nbt={Config:{trainer:1.0d}}] at @s run function johto:trainers/detect_trainers with entity @s Config
 
+# Keep players inside radius
+execute as @e[type=cobblemon:npc,tag=trainerBusy] at @s as @a[scores={BattleStart=1..},distance=6.05..] run tp @s ~ ~ ~
+
+# Free trainer if no active battle players nearby
+execute as @e[type=cobblemon:npc,tag=trainerBusy] at @s unless entity @a[scores={BattleStart=1..},distance=..6.2] run tag @s remove trainerBusy
+
 #--------------------------------------------------------------------------------------------------GENERAL WORLD-----------------------------------------------------------------------------------------------------------------------------------
 
 #Runs the Portals when a player steps on a carpet plate block
