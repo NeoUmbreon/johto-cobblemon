@@ -97,7 +97,11 @@ def generate_battle_end_copy(trainer_id: str, folder: str):
     cleaned_actions = [
         cmd
         for cmd in init_actions
-        if not (cmd.startswith("q.run_command('scoreboard") or cmd.startswith("q.run_command('tellraw"))
+        if not (
+            cmd.startswith("q.run_command('scoreboard")
+            or cmd.startswith("q.run_command('tellraw")
+            or "johto:tools/forceclick" in cmd
+        )
     ]
     data["initializationAction"] = cleaned_actions
 
