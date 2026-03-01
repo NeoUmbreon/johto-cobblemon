@@ -86,8 +86,9 @@ scoreboard players set @a[scores={MusicCooldown=0,DialogueTrigger=6..7}] MusicCo
 
 
 #Pokemon Centers
-execute at @e[type=armor_stand,name=PokeCenter] run playsound pokemoncenter record @a[dx=17,dy=15,dz=14,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
-execute at @e[type=armor_stand,name=PokeCenter] run scoreboard players set @a[dx=17,dy=15,dz=14,scores={MusicCooldown=0}] MusicCooldown 93
+execute if predicate johto:pokemoncenters run playsound pokemoncenter record @s[scores={MusicCooldown=0}] ~ ~ ~ 1 1 1
+execute if predicate johto:pokemoncenters run scoreboard players set @s[scores={MusicCooldown=0}] MusicCooldown 93
+execute if predicate johto:pokemoncenters run return 1
 
 #Cinnabar Island
 playsound ceruleancity record @s[x=-1746,y=63,z=-913,dx=88,dy=20,dz=83,scores={MusicCooldown=0}] ~ ~ ~ 1 1 1

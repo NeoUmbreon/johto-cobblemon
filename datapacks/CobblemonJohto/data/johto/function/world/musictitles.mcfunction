@@ -18,8 +18,9 @@ execute if entity @s[x=489,y=64,z=-389,dx=31,dy=10,dz=19] run return run functio
 execute if entity @s[x=44,y=63,z=4,dx=31,dy=90,dz=31] run return run function johto:world/musictitles/small {text:"Sprout Tower", location:214, includes:""}
 execute if entity @s[x=432,y=0,z=309,dx=20,dy=100,dz=20] run return run function johto:world/musictitles/small {text:"Burned Tower", location:215, includes:""}
 execute if entity @s[x=240,y=63,z=297,dx=33,dy=240,dz=33] run return run function johto:world/musictitles/small {text:"Tin Tower", location:216, includes:""}
-# TODO: 217 Pokemon Centers
+execute if predicate johto:pokemoncenters run return run function johto:world/musictitles/small {text:"Pokemon Center", location:217, includes:""}
 execute if entity @s[x=-1707,y=0,z=284,dx=143,dy=256,dz=164] run return run function johto:world/musictitles/small {text:"Viridian Forest", location:218, includes:""}
+# TODO: Poke Marts & Goldenrod/Celadon Department Stores
 # why is this here?
 execute if entity @s[x=-439,y=0,z=-190,dx=131,dy=240,dz=319] run return run function johto:world/musictitles/small {text:"Dark Cave", location:10, includes:""}
 execute if entity @s[x=-307,y=0,z=-94,dx=94,dy=240,dz=223] run return run function johto:world/musictitles/small {text:"Dark Cave", location:10, includes:""}
@@ -127,6 +128,7 @@ execute if entity @s[x=-1746,y=63,z=-913,dx=88,dy=20,dz=83] run return run funct
 execute if entity @s[x=236,y=0,z=164,dx=262,dy=100,dz=204] run return run function johto:world/musictitles/big {text:"Ecruteak City", color:"light_purple", subtext:"A Historical City", location:308, includes:""}
 execute if entity @s[x=-2513,y=0,z=-642,dx=225,dy=240,dz=187] run return run function johto:world/musictitles/big {text:"Fuchsia City", color:"light_purple", subtext:"Happening and Passing City", location:309, includes:""}
 execute if entity @s[x=349,y=0,z=-461,dx=239,dy=240,dz=194] run return run function johto:world/musictitles/big {text:"Goldenrod City", color:"yellow", subtext:"A Happening Big City", location:310, includes:""}
+# TODO: split up Reception Gate and Indigo Plateau
 execute if entity @s[x=-1343,y=64,z=15,dx=99,dy=100,dz=338] run return run function johto:world/musictitles/big {text:"Indigo Plateau", color:"white", subtext:"The Ultimate Goal of Trainers!", location:311, includes:""}
 execute if entity @s[x=-3338,y=0,z=290,dx=113,dy=240,dz=96] run return run function johto:world/musictitles/big {text:"Lavender Town", color:"dark_purple", subtext:"The Noble Town", location:312, includes:""}
 execute if entity @s[x=-214,y=64,z=125,dx=117,dy=240,dz=119] run return run function johto:world/musictitles/big {text:"Mahogany Town", color:"gray", subtext:"Home of the Ninja", location:313, includes:""}
@@ -149,7 +151,7 @@ execute if entity @s[x=-3088,y=0,z=80,dx=139,dy=100,dz=136] run return run funct
 execute if entity @s[x=-744,y=69,z=507,dx=162,dy=70,dz=147] run return run function johto:world/musictitles/small {text:"Dragon's Den", location:12, includes:""}
 execute if entity @s[x=-1366,y=63,z=676,dx=110,dy=240,dz=74] run return run function johto:world/musictitles/small {text:"Elite Four", location:14, includes:""}
 execute if entity @s[x=-1366,y=63,z=372,dx=110,dy=240,dz=302] run return run function johto:world/musictitles/small {text:"Elite Four", location:14, includes:""}
-execute if entity @s[x=1169,y=252,z=619,distance=..40] run return run function johto:world/musictitles/small {text:"Fly Map", location:15, includes:""}
+execute if entity @s[x=1169,y=252,z=619,distance=..40] run return run function johto:world/musictitles/small {text:"Fly Map", location:15, includes:"unless score @s MusicTitles matches 0.. "}
 execute if entity @s[x=87,y=50,z=719,dx=44,dy=20,dz=44] run return run function johto:world/musictitles/small {text:"???", location:17, includes:""}
 execute if entity @s[x=-1049,y=60,z=-340,dx=41,dy=20,dz=72] run return run function johto:world/musictitles/small {text:"Hall of Fame", location:19, includes:""}
 execute if entity @s[x=-1300,y=77,z=751,dx=24,dy=10,dz=34] run return run function johto:world/musictitles/small {text:"Hall of Fame", location:19, includes:""}
@@ -158,6 +160,7 @@ execute if entity @s[x=513,y=0,z=-793,dx=187,dy=240,dz=228] run return run funct
 execute if entity @s[x=-978,y=64,z=-375,dx=20,dy=20,dz=20] run return run function johto:world/musictitles/small {text:"Lobby", location:25, includes:""}
 execute if entity @s[x=-2279,y=18,z=761,dx=113,dy=37,dz=89] run return run function johto:world/musictitles/small {text:"Mt. Moon", location:27, includes:""}
 execute if entity @s[x=-83,y=0,z=220,dx=318,dy=240,dz=180] run return run function johto:world/musictitles/small {text:"Mt. Mortar", location:28, includes:""}
+# TODO: split up Mt. Silver exterior and Route 28
 execute if entity @s[x=-967,y=174,z=189,dx=50,dy=30,dz=140] run return run function johto:world/musictitles/small {text:"Mt. Silver", location:29, includes:""}
 execute if entity @s[x=-1043,y=60,z=102,dx=135,dy=100,dz=270] run return run function johto:world/musictitles/small {text:"Mt. Silver", location:29, includes:""}
 execute if entity @s[x=463,y=0,z=-67,dx=175,dy=240,dz=203] run return run function johto:world/musictitles/small {text:"National Park", location:30, includes:""}
@@ -184,5 +187,6 @@ execute if entity @s[x=82,y=0,z=-873,dx=140,dy=60,dz=283] run return run functio
 execute if entity @s[x=-1531,y=0,z=372,dx=204,dy=61,dz=173] run return run function johto:world/musictitles/small {text:"Victory Road", location:96, includes:""}
 execute if entity @s[x=1120,y=0,z=120,dx=245,dy=240,dz=280] run return run function johto:world/musictitles/small {text:"Whirl Islands", location:99, includes:""}
 execute if entity @s[x=870,y=0,z=-480,dx=281,dy=240,dz=199] run return run function johto:world/musictitles/small {text:"Whirl Islands", location:100, includes:""}
+# TODO: add Cliff Edge Gate
 
 return 0

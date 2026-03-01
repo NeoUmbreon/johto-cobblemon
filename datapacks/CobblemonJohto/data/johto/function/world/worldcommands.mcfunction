@@ -95,7 +95,7 @@ execute as @a unless items entity @s weapon.mainhand minecraft:filled_map[minecr
 
 
 #MusicTitles function, tracks player around map checking for new areas or music
-execute as @a[scores={TalkTime=0}] run function johto:world/musictitles
+execute as @a[scores={TalkTime=0}] at @s run function johto:world/musictitles
 
 
 #Runs relog function if player is found with relog score
@@ -176,10 +176,10 @@ execute as @a[scores={BattleStart=1..},tag=!BattleMusicCooldown] run function jo
 
 #Primary radio (off-hand and slot 2)
 #Slot 2
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0},nbt={Inventory:[{Slot:1b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] run function johto:world/radio
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0},nbt={Inventory:[{Slot:1b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] at @s run function johto:world/radio
 
 #Offhand
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0},nbt={Inventory:[{Slot:-106b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] run function johto:world/radio
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0},nbt={Inventory:[{Slot:-106b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] at @s run function johto:world/radio
 
 #Radio Stations
 execute as @a[tag=!RadioOff,scores={MusicCooldown=0},nbt={Inventory:[{Slot:2b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] run function johto:world/radiostations
