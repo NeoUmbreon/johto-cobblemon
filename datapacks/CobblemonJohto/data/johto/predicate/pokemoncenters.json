@@ -699,6 +699,47 @@
 
 
 		{
+			"//comment": "Route 3",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2169,
+						"max": -2160
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 751,
+						"max": 753
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2174,
+						"max": -2155
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 753,
+						"max": 769
+					}
+				}
+			}
+		},
+
+
+		{
 			"//comment": "Pewter City",
 			"condition": "minecraft:location_check",
 			"predicate": {

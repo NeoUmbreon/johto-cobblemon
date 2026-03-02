@@ -28,3 +28,22 @@ execute as @a[x=-2096,y=63,z=314,dx=5,dy=7,dz=17,tag=!Cycling] at @s run tp @s ~
 #Fuchsia Side
 execute as @a[x=-2196,y=63,z=-547,dx=5,dy=7,dz=17,tag=!Cycling] run opendialogue cyclingroad_blocked @s
 execute as @a[x=-2196,y=63,z=-547,dx=5,dy=7,dz=17,tag=!Cycling] at @s run tp @s ~-5 ~ ~
+
+#Surfing Detection
+#TODO: should probably be compacted
+execute as @a[tag=Surfing] unless predicate johto:riding run scoreboard players set @s SurfingCD 0
+execute as @a[tag=Surfing] if score @s SurfingCD matches 0 run function johto:tools/forceclick
+execute as @a[tag=Surfing] if score @s SurfingCD matches 0 run tag @s remove Surfing
+
+execute as @a if score @s SurfingCD matches 1.. run scoreboard players remove @s SurfingCD 1
+execute as @a at @s if predicate johto:surfing run scoreboard players set @s SurfingCD 30
+
+execute as @a[tag=!Surfing] at @s if predicate johto:surfing run function johto:tools/forceclick
+execute as @a[tag=!Surfing] at @s if predicate johto:surfing run tag @s add Surfing
+
+#Radio
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0,RadioSelect=2}] at @s run function johto:world/sound/retroradiointro
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1,RadioSelect=2}] at @s run function johto:world/sound/retroradioloop
+
+#Removes a MusicCooldown score each refresh if present
+scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1

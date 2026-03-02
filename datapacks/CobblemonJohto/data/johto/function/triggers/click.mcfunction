@@ -4,6 +4,7 @@ tellraw @s[tag=Temp] {"text":"Music toggled off... Double click the Radio again 
 tag @s[tag=Temp] add RadioOff
 stopsound @s[tag=Temp] record
 scoreboard players set @s[tag=Temp] MusicCooldown 0
+scoreboard players set @s[tag=Temp] MusicLoop 0
 scoreboard players set @s[tag=Temp] click 0
 tag @s remove Temp
 
@@ -25,6 +26,7 @@ tag @s remove Temp
 #Only one click, stops current sounds
 stopsound @s[scores={click=1..}] record
 scoreboard players set @s[scores={click=1..}] MusicCooldown 0
+scoreboard players set @s[scores={click=1..}] MusicLoop 0
 scoreboard players set @s[scores={click=1..}] click 0
 
 

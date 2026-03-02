@@ -1,0 +1,10 @@
+{
+	"//comment": "is riding a pokemon",
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"vehicle": {
+			"type": "cobblemon:pokemon"
+		}
+	}
+}
