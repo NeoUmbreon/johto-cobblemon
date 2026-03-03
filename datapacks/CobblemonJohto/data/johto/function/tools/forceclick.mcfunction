@@ -12,8 +12,7 @@
 #tag @s[tag=Cycling] add Skip
 
 
-#Grass-legendary specific encounters
-tag @s remove GrassCooldown
+
 
 
 

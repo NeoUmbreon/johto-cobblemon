@@ -11,6 +11,10 @@ execute as @s[tag=CyclingMusic] run function johto:tools/forceclick
 execute as @s[tag=CyclingMusic] run tag @s remove CyclingMusic
 
 
+#Grass-legendary specific encounters
+tag @s remove GrassCooldown
+
+
 # Show title
 $title @s actionbar {"text":"$(text)"}
 

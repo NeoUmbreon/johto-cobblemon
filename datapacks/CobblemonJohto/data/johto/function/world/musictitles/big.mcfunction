@@ -11,6 +11,10 @@ execute as @s[tag=CyclingMusic] run function johto:tools/forceclick
 execute as @s[tag=CyclingMusic] run tag @s remove CyclingMusic
 
 
+#Grass-legendary specific encounters
+tag @s remove GrassCooldown
+
+
 # Show title unless exiting interior
 $execute unless score @s MusicTitles matches 201..300 run title @s title {"text":"$(text)","color":"$(color)"}
 $execute unless score @s MusicTitles matches 201..300 run title @s subtitle {"text":"$(subtext)","italic":true}
