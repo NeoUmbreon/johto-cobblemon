@@ -113,7 +113,7 @@ def generate_battle_end_copy(trainer_id: str, folder: str):
     return new_file
 
 # Inject Trainer Variables into config
-def inject_trainer_config(entity_data, trainer_id, battle_id):
+def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid):
     if "config" not in entity_data or not isinstance(entity_data["config"], list):
         entity_data["config"] = []
 
@@ -149,9 +149,17 @@ def inject_trainer_config(entity_data, trainer_id, battle_id):
             "defaultValue": battle_id
         })
 
+    if "trainer_uid" not in existing_vars:
+        add_var({
+            "variableName": "trainer_uid",
+            "displayName": "npc.variable.trainer_uid.name",
+            "description": "npc.variable.trainer_uid.desc",
+            "type": "NUMBER",
+            "defaultValue": trainer_uid
+        })
 
 # Update trainers to use right click interaction
-def update_trainer_entity(trainer_id: str, folder: str, battle_id: int):
+def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_uid: int):
     entity_file = NPC_DIR / folder / f"{trainer_id}.json"
 
     if not entity_file.exists():
@@ -161,8 +169,8 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int):
     with open(entity_file, "r", encoding="utf-8") as f:
         entity_data = json.load(f)
 
-    inject_trainer_config(entity_data, trainer_id, battle_id)
-
+    inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid)
+        
     entity_data["interaction"] = {
         "type": "dialogue",
         "dialogue": f"cobblemon:{trainer_id}_end_defeated"
@@ -282,9 +290,10 @@ def update_interaction_file(path: Path):
 def main():
     files = sorted(INTERACTIONS_DIR.rglob("*_interaction.json"))
     print(f"Found {len(files)} interaction files\n")
-
+    
+    uid_counter = 1
     processed = []
-
+    
     for file_path in files:
 
         # Recursive skip for gym_leaders
@@ -299,15 +308,19 @@ def main():
 
         try:
             result = update_interaction_file(file_path)
+
             if result:
-                processed.append(result)
+                trainer_id, folder, battle_id = result
+                processed.append((trainer_id, folder, battle_id, uid_counter))
+                uid_counter += 1
+
         except Exception as e:
             print(f"FAILED: {file_path}")
             print(e)
 
-    for trainer_id, folder, battle_id in processed:
+    for trainer_id, folder, battle_id, trainer_uid in processed:
         generate_battle_end_copy(trainer_id, folder)
-        update_trainer_entity(trainer_id, folder, battle_id)
+        update_trainer_entity(trainer_id, folder, battle_id, trainer_uid)
         export_trainer_team(trainer_id, folder)
 
     print("\nDone.")
