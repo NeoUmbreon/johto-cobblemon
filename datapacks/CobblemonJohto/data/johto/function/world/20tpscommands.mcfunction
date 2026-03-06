@@ -29,17 +29,21 @@ execute as @a[x=-2096,y=63,z=314,dx=5,dy=7,dz=17,tag=!Cycling] at @s run tp @s ~
 execute as @a[x=-2196,y=63,z=-547,dx=5,dy=7,dz=17,tag=!Cycling] run opendialogue cyclingroad_blocked @s
 execute as @a[x=-2196,y=63,z=-547,dx=5,dy=7,dz=17,tag=!Cycling] at @s run tp @s ~-5 ~ ~
 
+
 #Surfing Detection
-#TODO: should probably be compacted
-execute as @a[tag=Surfing] unless predicate johto:riding run scoreboard players set @s SurfingCD 0
-execute as @a[tag=Surfing] if score @s SurfingCD matches 0 run function johto:tools/forceclick
-execute as @a[tag=Surfing] if score @s SurfingCD matches 0 run tag @s remove Surfing
+#Remove Surfing tag and refresh music if player dismounts or mount hasn't been in the water (SurfingCD reached 0)
+scoreboard players set @a[tag=Surfing,predicate=!johto:riding] SurfingCD 0
+execute as @a[scores={SurfingCD=0},tag=Surfing] run function johto:tools/forceclick
+tag @a[scores={SurfingCD=0},tag=Surfing] remove Surfing
 
-execute as @a if score @s SurfingCD matches 1.. run scoreboard players remove @s SurfingCD 1
-execute as @a at @s if predicate johto:surfing run scoreboard players set @s SurfingCD 30
+#Detection hysteresis
+scoreboard players remove @a[scores={SurfingCD=1..}] SurfingCD 1
+scoreboard players set @a[predicate=johto:surfing] SurfingCD 30
 
-execute as @a[tag=!Surfing] at @s if predicate johto:surfing run function johto:tools/forceclick
-execute as @a[tag=!Surfing] at @s if predicate johto:surfing run tag @s add Surfing
+#Add Surfing tag to newly surfing players and refresh music
+execute as @a[scores={SurfingCD=30},tag=!Surfing] run function johto:tools/forceclick
+tag @a[scores={SurfingCD=30},tag=!Surfing] add Surfing
+
 
 #Radio
 execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0,RadioSelect=2}] at @s run function johto:world/sound/retroradiointro

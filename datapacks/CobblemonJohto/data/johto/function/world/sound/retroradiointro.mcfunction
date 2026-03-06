@@ -61,21 +61,21 @@ execute if score @s BattleStart matches 18 run return run function johto:world/s
 #19 - Wild Pokemon (umbrella)
 # TODO: i could probably do these checks faster and move them to a better place but this technically works
 #20 - Legendary Beasts
-execute if score @s BattleStart matches 19 if entity @e[distance=..20,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:entei",PokemonOriginalTrainerType:"NONE"}}] run scoreboard players set @s BattleStart 20
-execute if score @s BattleStart matches 19 if entity @e[distance=..20,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:suicune",PokemonOriginalTrainerType:"NONE"}}] run scoreboard players set @s BattleStart 20
-execute if score @s BattleStart matches 19 if entity @e[distance=..20,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:raikou",PokemonOriginalTrainerType:"NONE"}}] run scoreboard players set @s BattleStart 20
+execute if score @s BattleStart matches 19 if entity @e[type=cobblemon:pokemon,distance=..20,nbt={Pokemon:{Species:"cobblemon:entei",PokemonOriginalTrainerType:"NONE"}}] run scoreboard players set @s BattleStart 20
+execute if score @s BattleStart matches 19 if entity @e[type=cobblemon:pokemon,distance=..20,nbt={Pokemon:{Species:"cobblemon:suicune",PokemonOriginalTrainerType:"NONE"}}] run scoreboard players set @s BattleStart 20
+execute if score @s BattleStart matches 19 if entity @e[type=cobblemon:pokemon,distance=..20,nbt={Pokemon:{Species:"cobblemon:raikou",PokemonOriginalTrainerType:"NONE"}}] run scoreboard players set @s BattleStart 20
 execute if score @s BattleStart matches 20 run return run function johto:world/sound/playrecord {track:"retro/battle/raikouenteisuicuneintro", duration:254}
 
 #21 - Johto Day
-execute if entity @s[x=-877,y=0,z=-800,dx=3000,dy=256,dz=2000,scores={BattleStart=19}] if predicate {condition:"minecraft:time_check",value:{"min":0,"max":11999},period:24000} run scoreboard players set @s BattleStart 21
+execute if entity @s[scores={BattleStart=19},x=-877,y=0,z=-800,dx=3000,dy=256,dz=2000] if predicate {condition:"minecraft:time_check",value:{"min":0,"max":11999},period:24000} run scoreboard players set @s BattleStart 21
 execute if score @s BattleStart matches 21 run return run function johto:world/sound/playrecord {track:"retro/battle/wildpokemonjohtodayintro", duration:262}
 
 #22 - Johto Night
-execute if entity @s[x=-877,y=0,z=-800,dx=3000,dy=256,dz=2000,scores={BattleStart=19}] unless predicate {condition:"minecraft:time_check",value:{"min":0,"max":11999},period:24000} run scoreboard players set @s BattleStart 22
+execute if entity @s[scores={BattleStart=19},x=-877,y=0,z=-800,dx=3000,dy=256,dz=2000] unless predicate {condition:"minecraft:time_check",value:{"min":0,"max":11999},period:24000} run scoreboard players set @s BattleStart 22
 execute if score @s BattleStart matches 22 run return run function johto:world/sound/playrecord {track:"retro/battle/wildpokemonjohtonightintro", duration:269}
 
 #23 - Kanto
-execute if entity @s[x=-3552,y=0,z=-1136,dx=2675,dy=256,dz=2185,scores={BattleStart=19}] run scoreboard players set @s BattleStart 23
+execute if entity @s[scores={BattleStart=19},x=-3552,y=0,z=-1136,dx=2675,dy=256,dz=2185] run scoreboard players set @s BattleStart 23
 execute if score @s BattleStart matches 23 run return run function johto:world/sound/playrecord {track:"retro/battle/wildpokemonkantointro", duration:57}
 
 
