@@ -175,18 +175,8 @@ execute as @a[scores={BattleEnd=1..}] run function johto:triggers/battles/battle
 
 
 
-# Determines the player's radio station currently playing
-# TODO: This is slow; convert to predicates?
-scoreboard players set @a[nbt={Inventory:[{Slot:0b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 1
-scoreboard players set @a[nbt={Inventory:[{Slot:-106b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 2
-scoreboard players set @a[nbt={Inventory:[{Slot:1b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 2
-scoreboard players set @a[nbt={Inventory:[{Slot:2b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 3
-scoreboard players set @a[nbt={Inventory:[{Slot:3b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 4
-scoreboard players set @a[nbt={Inventory:[{Slot:4b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 5
-scoreboard players set @a[nbt={Inventory:[{Slot:5b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 6
-scoreboard players set @a[nbt={Inventory:[{Slot:6b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 7
-scoreboard players set @a[nbt={Inventory:[{Slot:7b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 8
-scoreboard players set @a[nbt={Inventory:[{Slot:8b,components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}]}] RadioSelect 9
+# Detects if player has switched the slot of their radio, and refreshes their sound if so
+execute as @a[scores={BattleStart=0},tag=!RadioOff] run function johto:world/sound/switchradiostation
 
 
 

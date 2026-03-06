@@ -7,7 +7,9 @@ scoreboard objectives add TownMapLast dummy
 scoreboard objectives setdisplay sidebar.team.green
 scoreboard objectives setdisplay sidebar.team.blue
 
-
+scoreboard objectives add MusicLoop dummy
+scoreboard objectives add SurfingCD dummy
+scoreboard objectives add RadioSelectTemp dummy
 
 
 
