@@ -46,8 +46,8 @@ tag @a[scores={SurfingCD=30},tag=!Surfing] add Surfing
 
 
 #Radio
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0,RadioSelect=2}] at @s run function johto:world/sound/retroradiointro
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1,RadioSelect=2}] at @s run function johto:world/sound/retroradioloop
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0}] at @s run function johto:world/sound/retroradiointro
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..}] at @s run function johto:world/sound/retroradioloop
 
 #Removes a MusicCooldown score each refresh if present
 scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1

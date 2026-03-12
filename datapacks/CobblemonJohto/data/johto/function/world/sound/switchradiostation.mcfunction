@@ -6,6 +6,7 @@ scoreboard players add @s RadioSelectTemp 1
 # Compare, exit if slot hasn't changed
 execute if score @s RadioSelectTemp = @s RadioSelect run return fail
 
-# Refresh sound if slot has changed
+# Refresh sound and play radio music if slot has changed
+tag @s add RadioStationMusic
 scoreboard players operation @s RadioSelect = @s RadioSelectTemp
 function johto:tools/forceclick

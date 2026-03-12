@@ -17,6 +17,7 @@ execute as @s[tag=!RadioOff,scores={BattleEnd=1}] run scoreboard players set @s 
 
 
 #2 - Gym Leader battle ending (Applies a tag based on which gym the player's in)
+#TODO: Move to new radio function
 execute as @s[x=-1222,y=0,z=500,dx=470,dy=240,dz=342,tag=!RadioOff,scores={BattleEnd=2}] run tag @s add GymVictory
 execute as @s[x=-1222,y=0,z=500,dx=470,dy=240,dz=342,tag=!RadioOff,scores={BattleEnd=2}] run function johto:tools/forceclick
 
