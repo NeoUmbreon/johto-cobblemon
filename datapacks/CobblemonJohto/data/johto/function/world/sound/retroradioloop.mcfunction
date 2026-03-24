@@ -3,26 +3,55 @@
 # https://bulbapedia.bulbagarden.net/wiki/List_of_overworld_music_themes#Generation_II
 
 
-# Battle
+# Always Play
+# Battle & Pre-Battle
 execute if score @s BattleStart matches 1.. run return run function johto:world/sound/retrobattleloop
 
-
-# dialogues
-# TODO
-
-
-# Overrides (cycling = radio stations > surfing. cyclingmusic and radio station tags should be removed on location change; surfing should not)
 # Gym Victory
-# TODO
+execute as @s[scores={MusicTitles=35},tag=GymVictory] run return run function johto:world/sound/playrecord {track:"retro/victory/gymleader", duration:699}
 
-# Cycling
-execute as @s[tag=CyclingMusic] run return run function johto:world/sound/playrecord {track:"retro/cycling", duration:563}
+# Magnet Train Rides
+execute if score @s DialogueTrigger matches 207..208 run return run function johto:world/sound/playrecord {track:"retro/sfx/magnettrain", duration:161}
 
+# Hall of Fame Room Credits
+execute if score @s DialogueTrigger matches 98 run return run function johto:world/sound/playrecord {track:"retro/ending", duration:2281}
+
+#TODO: are these even implemented?
+#Bug Catching Contest
+#execute if score @s DialogueTrigger matches 198..199 run return run function johto:world/sound/playrecord {track:"retro/bugcatchingcontest", duration:470}
+
+#Team Rocket mugging on Route 43
+#playsound rockettakeover record @s[scores={MusicCooldown=0,DialogueTrigger=48}] ~ ~ ~ 1 1 1
+#scoreboard players set @s[scores={MusicCooldown=0,DialogueTrigger=48}] MusicCooldown 122
+
+#Giovanni's Cave radio broadcast
+#playsound rockettakeover record @s[scores={MusicCooldown=0,DialogueTrigger=164,TalkTime=166..}] ~ ~ ~ 1 1 1
+#scoreboard players set @s[scores={MusicCooldown=0,DialogueTrigger=164,TalkTime=166..}] MusicCooldown 122
+
+#Guide Gent tour music
+#playsound cherrygrovetour record @s[scores={MusicCooldown=0,DialogueTrigger=209..213}] ~ ~ ~ 1 1 1
+#scoreboard players set @s[scores={MusicCooldown=0,DialogueTrigger=209..213}] MusicCooldown 76
+
+#playsound cherrygrovetour record @s[scores={MusicCooldown=0,DialogueTrigger=197}] ~ ~ ~ 1 1 1
+#scoreboard players set @s[scores={MusicCooldown=0,DialogueTrigger=197}] MusicCooldown 76
+
+#First Silver encounter, plays its NPC theme before its battle theme
+#playsound rivaltalk record @a[scores={MusicCooldown=0,DialogueTrigger=6..7}] ~ ~ ~ 1 1 1
+#scoreboard players set @a[scores={MusicCooldown=0,DialogueTrigger=6..7}] MusicCooldown 70
+
+# Return
+execute unless score @s RadioSelect matches 2..8 run return fail
+
+
+# Overrides
 # Radio Stations
-# TODO
+execute unless score @s RadioSelect matches 2 run return run function johto:world/sound/retroradiostationsloop
 
 # Surfing
 execute as @s[tag=Surfing] run return run function johto:world/sound/playrecord {track:"retro/surf", duration:1099}
+
+# Cycling
+execute as @s[tag=CyclingMusic] run return run function johto:world/sound/playrecord {track:"retro/cycling", duration:563}
 
 
 
@@ -62,8 +91,8 @@ execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:
 # Sprout Tower
 execute if score @s MusicTitles matches 214 run return run function johto:world/sound/playrecord {track:"retro/areas/sprouttower", duration:398}
 
-# Union Cave (& Ruins of Alph Exterior/Chambers, Ilex Forest, Goldenrod Underground, Mt. Mortar, Whirl Islands (Interior), Tohjo Falls, Embedded Tower) 21 28 87 95 100 205 208 209
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":21}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":28}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":87}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":95}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":99}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":205}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":208,"max":209}}}]} run return run function johto:world/sound/playrecord {track:"retro/areas/unioncave", duration:1135}
+# Union Cave (& Ruins of Alph Exterior/Chambers, Ilex Forest, Goldenrod Underground, Mt. Mortar, Whirl Islands (Interior), Tohjo Falls, Embedded Tower, Giovanni) 17 21 28 87 95 100 205 208 209
+execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":17}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":21}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":28}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":87}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":95}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":99}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":205}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":208,"max":209}}}]} run return run function johto:world/sound/playrecord {track:"retro/areas/unioncave", duration:1135}
 # TODO: hamborghini mercy...
 
 # Ruins of Alph (Basement)
@@ -151,11 +180,11 @@ execute if score @s MusicTitles matches 319 run return run function johto:world/
 # Lavender Town
 execute if score @s MusicTitles matches 312 run return run function johto:world/sound/playrecord {track:"retro/settlements/lavendertown", duration:964}
 
-# Rock Tunnel (& Underground Path, Diglett's Cave, Mt. Moon, Cerulean Cave)
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":5}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":11}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":27}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":38}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":38}}]} run return run function johto:world/sound/playrecord {track:"retro/areas/rocktunnel", duration:418}
+# Mt. Moon Square (Monday Nights Only)
+#execute if score @s MusicTitles matches 26 run return run function johto:world/sound/playrecord {track:"retro/areas/mtmoonsquare", duration:225}
 
-# Mt. Moon Square
-execute if score @s MusicTitles matches 26 run return run function johto:world/sound/playrecord {track:"retro/areas/mtmoonsquare", duration:225}
+# Rock Tunnel (& Underground Path, Diglett's Cave, Mt. Moon, Mt. Moon Square, Cerulean Cave)
+execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":5}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":11}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":26,"max":27}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":38}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":38}}]} run return run function johto:world/sound/playrecord {track:"retro/areas/rocktunnel", duration:418}
 
 # Celadon City (& Fuchsia City)
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":303}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":309}}]} run return run function johto:world/sound/playrecord {track:"retro/settlements/celadoncity", duration:624}
@@ -163,15 +192,15 @@ execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:
 # Routes 11-15
 execute if score @s MusicTitles matches 50..54 run return run function johto:world/sound/playrecord {track:"retro/routes/11", duration:595}
 
-# Viridian Forest/Route 2
-execute if score @s MusicTitles matches 41 run return run function johto:world/sound/playrecord {track:"retro/areas/viridianforest", duration:758}
+# Viridian Forest
+execute if score @s MusicTitles matches 218 run return run function johto:world/sound/playrecord {track:"retro/areas/viridianforest", duration:758}
 
 # Pewter City (& Viridian City, Cerulean City, Saffron City, Cinnabar Island, Power Plant) 210 304 307 317 318 321
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":210}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":304}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":307}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":321}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":317,"max":318}}}]} run return run function johto:world/sound/playrecord {track:"retro/settlements/pewtercity", duration:1262}
 # TODO: jesus christ
 
-# Routes 3-10, 16-22, 24-25
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":42,"max":49}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":55,"max":61}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":62,"max":63}}}]} run return run function johto:world/sound/playrecord {track:"retro/routes/3", duration:482}
+# Routes 2-10, 16-22, 24-25
+execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":41,"max":49}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":55,"max":61}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":62,"max":63}}}]} run return run function johto:world/sound/playrecord {track:"retro/routes/3", duration:482}
 
 # Route 1
 execute if score @s MusicTitles matches 40 run return run function johto:world/sound/playrecord {track:"retro/routes/1", duration:555}
@@ -182,8 +211,8 @@ execute if score @s MusicTitles matches 316 run return run function johto:world/
 # Victory Road
 execute if score @s MusicTitles matches 96 run return run function johto:world/sound/playrecord {track:"retro/areas/victoryroad", duration:362}
 
-# Pokemon League (Reception Gate, Indigo Plateau, Route 28, Mt. Silver Exterior) 
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":102,"max":104}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":311}}]} run return run function johto:world/sound/playrecord {track:"retro/areas/pokemonleague", duration:579}
+# Pokemon League (Reception Gate, Indigo Plateau, Route 28, Mt. Silver Exterior, Elite Four) 
+execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":14}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":102,"max":104}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":311}}]} run return run function johto:world/sound/playrecord {track:"retro/areas/pokemonleague", duration:579}
 
 # Hall of Fame
 execute if score @s MusicTitles matches 19 run return run function johto:world/sound/playrecord {track:"retro/halloffame", duration:450}
@@ -198,5 +227,8 @@ execute if score @s MusicTitles matches 35 run return run function johto:world/s
 
 # Lobby
 execute if score @s MusicTitles matches 25 run return run function johto:world/sound/playrecord {track:"retro/titlescreen", duration:1702}
+
+# ???
+execute if score @s MusicTitles matches 15 run return run function johto:world/sound/playrecord {track:"retro/gameboyprinter", duration:1029}
 
 return 0

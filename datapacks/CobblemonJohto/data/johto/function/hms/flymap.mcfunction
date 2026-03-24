@@ -104,77 +104,102 @@ execute as @s[x=1169,y=252,z=619,distance=..40] run particle minecraft:firework 
 
 #Plays arrow sound, sends player to respective towns and cities
 playsound entity.arrow.shoot ambient @s[x=1169,y=251,z=619,dy=3,scores={FlySilver=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1169,y=251,z=619,dy=3,scores={FlySilver=1..}] MusicTitles 0
 tp @s[x=1169,y=251,z=619,dy=3,scores={FlySilver=1..}] -999 64 62
 
 playsound entity.arrow.shoot ambient @s[x=1153,y=251,z=619,dy=3,scores={FlyLavender=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1153,y=251,z=619,dy=3,scores={FlyLavender=1..}] MusicTitles 0
 tp @s[x=1153,y=251,z=619,dy=3,scores={FlyLavender=1..}] -3253 64 356
 
 playsound entity.arrow.shoot ambient @s[x=1157,y=251,z=617,dy=3,scores={FlyVermilion=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1157,y=251,z=617,dy=3,scores={FlyVermilion=1..}] MusicTitles 0
 tp @s[x=1157,y=251,z=617,dy=3,scores={FlyVermilion=1..}] -2714 64 8
 
 playsound entity.arrow.shoot ambient @s[x=1157,y=251,z=619,dy=3,scores={FlySaffron=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1157,y=251,z=619,dy=3,scores={FlySaffron=1..}] MusicTitles 0
 tp @s[x=1157,y=251,z=619,dy=3,scores={FlySaffron=1..}] -2704 64 279
 
 playsound entity.arrow.shoot ambient @s[x=1157,y=251,z=621,dy=3,scores={FlyCerulean=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1157,y=251,z=621,dy=3,scores={FlyCerulean=1..}] MusicTitles 0
 tp @s[x=1157,y=251,z=621,dy=3,scores={FlyCerulean=1..}] -2744 64 728
 
 playsound entity.arrow.shoot ambient @s[x=1158,y=251,z=613,dy=3,scores={FlyFuchsia=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1158,y=251,z=613,dy=3,scores={FlyFuchsia=1..}] MusicTitles 0
 tp @s[x=1158,y=251,z=613,dy=3,scores={FlyFuchsia=1..}] -2405 64 -608
 
 playsound entity.arrow.shoot ambient @s[x=1160,y=251,z=619,dy=3,scores={FlyCeladon=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1160,y=251,z=619,dy=3,scores={FlyCeladon=1..}] MusicTitles 0
 tp @s[x=1160,y=251,z=619,dy=3,scores={FlyCeladon=1..}] -2460 64 375
 
 playsound entity.arrow.shoot ambient @s[x=1163,y=251,z=611,dy=3,scores={FlyCinnabar=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1163,y=251,z=611,dy=3,scores={FlyCinnabar=1..}] MusicTitles 0
 tp @s[x=1163,y=251,z=611,dy=3,scores={FlyCinnabar=1..}] -1709 64 -896
 
 playsound entity.arrow.shoot ambient @s[x=1163,y=251,z=614,dy=3,scores={FlyPallet=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1163,y=251,z=614,dy=3,scores={FlyPallet=1..}] MusicTitles 0
 tp @s[x=1163,y=251,z=614,dy=3,scores={FlyPallet=1..}] -1666 64 -291
 
 playsound entity.arrow.shoot ambient @s[x=1163,y=251,z=618,dy=3,scores={FlyViridian=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1163,y=251,z=618,dy=3,scores={FlyViridian=1..}] MusicTitles 0
 tp @s[x=1163,y=251,z=618,dy=3,scores={FlyViridian=1..}] -1701 64 7
 
 playsound entity.arrow.shoot ambient @s[x=1163,y=251,z=621,dy=3,scores={FlyPewter=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1163,y=251,z=621,dy=3,scores={FlyPewter=1..}] MusicTitles 0
 tp @s[x=1163,y=251,z=621,dy=3,scores={FlyPewter=1..}] -1660 64 602
 
 playsound entity.arrow.shoot ambient @s[x=1166,y=251,z=623,dy=3,scores={FlyIndigo=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1166,y=251,z=623,dy=3,scores={FlyIndigo=1..}] MusicTitles 0
 tp @s[x=1166,y=251,z=623,dy=3,scores={FlyIndigo=1..}] -1292 84 320
 
 playsound entity.arrow.shoot ambient @s[x=1171,y=251,z=622,dy=3,scores={FlyBlackthorn=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1171,y=251,z=622,dy=3,scores={FlyBlackthorn=1..}] MusicTitles 0
 tp @s[x=1171,y=251,z=622,dy=3,scores={FlyBlackthorn=1..}] -662 65 170
 
 playsound entity.arrow.shoot ambient @s[x=1174,y=251,z=622,dy=3,scores={FlyMahogany=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1174,y=251,z=622,dy=3,scores={FlyMahogany=1..}] MusicTitles 0
 tp @s[x=1174,y=251,z=622,dy=3,scores={FlyMahogany=1..}] -177 65 159
 
 playsound entity.arrow.shoot ambient @s[x=1185,y=251,z=615,dy=3,scores={FlyCianwood=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1185,y=251,z=615,dy=3,scores={FlyCianwood=1..}] MusicTitles 0
 tp @s[x=1185,y=251,z=615,dy=3,scores={FlyCianwood=1..}] 1186 65 -471
 
 playsound entity.arrow.shoot ambient @s[x=1183,y=251,z=620,dy=3,scores={FlyOlivine=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1183,y=251,z=620,dy=3,scores={FlyOlivine=1..}] MusicTitles 0
 tp @s[x=1183,y=251,z=620,dy=3,scores={FlyOlivine=1..}] 791 65 -43
 
 playsound entity.arrow.shoot ambient @s[x=1179,y=251,z=622,dy=3,scores={FlyEcruteak=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1179,y=251,z=622,dy=3,scores={FlyEcruteak=1..}] MusicTitles 0
 tp @s[x=1179,y=251,z=622,dy=3,scores={FlyEcruteak=1..}] 341 65 182
 
 playsound entity.arrow.shoot ambient @s[x=1181,y=251,z=616,dy=3,scores={FlyGoldenrod=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1181,y=251,z=616,dy=3,scores={FlyGoldenrod=1..}] MusicTitles 0
 tp @s[x=1181,y=251,z=616,dy=3,scores={FlyGoldenrod=1..}] 499 65 -426
 
 playsound entity.arrow.shoot ambient @s[x=1179,y=251,z=612,dy=3,scores={FlyAzalea=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1179,y=251,z=612,dy=3,scores={FlyAzalea=1..}] MusicTitles 0
 tp @s[x=1179,y=251,z=612,dy=3,scores={FlyAzalea=1..}] 330 65 -730
 
 playsound entity.arrow.shoot ambient @s[x=1177,y=251,z=620,dy=3,scores={FlyViolet=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1177,y=251,z=620,dy=3,scores={FlyViolet=1..}] MusicTitles 0
 tp @s[x=1177,y=251,z=620,dy=3,scores={FlyViolet=1..}] 15 65 -111
 
 playsound entity.arrow.shoot ambient @s[x=1175,y=251,z=615,dy=3,scores={FlyCherrygrove=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1175,y=251,z=615,dy=3,scores={FlyCherrygrove=1..}] MusicTitles 0
 tp @s[x=1175,y=251,z=615,dy=3,scores={FlyCherrygrove=1..}] -256 65 -493
 
 #New Bark Town not requiring any score in case player tps there without unlocking anything
 playsound entity.arrow.shoot ambient @s[x=1170,y=251,z=615,dy=3] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1170,y=251,z=615,dy=3] MusicTitles 0
 tp @s[x=1170,y=251,z=615,dy=3] -724 65 -505
 
 playsound entity.arrow.shoot ambient @s[x=1187,y=251,z=617,dy=3,scores={FlySafari=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1187,y=251,z=617,dy=3,scores={FlySafari=1..}] MusicTitles 0
 tp @s[x=1187,y=251,z=617,dy=3,scores={FlySafari=1..}] 1617 88 -161
 
 playsound entity.arrow.shoot ambient @s[x=1174,y=251,z=624,dy=3,scores={FlyLake=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1174,y=251,z=624,dy=3,scores={FlyLake=1..}] MusicTitles 0
 tp @s[x=1174,y=251,z=624,dy=3,scores={FlyLake=1..}] -143 64 558
 
 playsound entity.arrow.shoot ambient @s[x=1166,y=251,z=621,dy=3,scores={FlyVictory=1..}] ~ ~ ~ 1 1 1
+scoreboard players set @s[x=1166,y=251,z=621,dy=3,scores={FlyVictory=1..}] MusicTitles 0
 tp @s[x=1166,y=251,z=621,dy=3,scores={FlyVictory=1..}] -1258 64 14

@@ -6,7 +6,10 @@ scoreboard players add @s RadioSelectTemp 1
 # Compare, exit if slot hasn't changed
 execute if score @s RadioSelectTemp = @s RadioSelect run return fail
 
-# Refresh sound and play radio music if slot has changed
-tag @s add RadioStationMusic
+# Store
 scoreboard players operation @s RadioSelect = @s RadioSelectTemp
+
+# Refresh sound and run radio function (unless in battle)
+execute if entity @s[x=1169,y=252,z=619,distance=..40] run scoreboard players set @s MusicTitles 15
 function johto:tools/forceclick
+execute if score @s RadioSelect matches 3..8 if score @s BattleStart matches 0 run function johto:world/radiostations

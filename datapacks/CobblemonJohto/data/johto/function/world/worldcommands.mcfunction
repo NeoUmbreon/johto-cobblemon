@@ -114,7 +114,6 @@ execute as @a[tag=Cycling] run attribute @s[nbt={Inventory:[{Slot:103b,component
 
 
 #Bicycle
-# TODO: split into separate functions (so that i can e.g. force dequip cycle)
 
 #If player has an item on their head, prevents clearing it
 execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name": '{"extra":[{"color":"red","italic":false,"text":"Bicycle"}],"text":""}'}}}] if entity @s[nbt={Inventory:[{count:1,Slot:103b}]}] run tellraw @s {"text":"You have a cosmetic item equipped on your head, dequip to use the bikes!","italic":true,"color":"gray"}
@@ -125,11 +124,10 @@ execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custo
 
 execute as @a[tag=BikeEquip] run clear @s minecraft:carrot_on_a_stick[custom_name='["",{"text":"Bicycle","italic":false,"color":"red"}]',lore=['["",{"text":"A folding bicycle that allows faster","italic":false}]','[{"text":"movement than the Running Shoes.","italic":false}]'],custom_model_data=5]
 execute as @a[tag=BikeEquip] run item replace entity @s armor.head with carrot_on_a_stick[custom_name='["",{"text":"Bicycle","italic":false,"color":"red"}]',lore=['["",{"text":"A folding bicycle that allows faster","italic":false}]','[{"text":"movement than the Running Shoes.","italic":false}]'],custom_model_data=5]
-execute as @a[tag=BikeEquip] run stopsound @s record
-execute as @a[tag=BikeEquip] run scoreboard players set @s MusicCooldown 0
+execute as @a[tag=BikeEquip] run function johto:tools/forceclick
 execute as @a[tag=BikeEquip] run playsound minecraft:item.armor.equip_iron ambient @s
+#TODO: could add bicycle equip sound here
 
-execute as @a[tag=BikeEquip] run scoreboard players set @s click 0
 execute as @a[tag=BikeEquip] run tag @s add CyclingMusic
 tag @a[tag=BikeEquip] remove BikeEquip
 
@@ -141,8 +139,7 @@ tag @a[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name": '{"extra"
 execute as @a[tag=Cycling] unless entity @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Bicycle"}],"text":""}'}}]}] run tag @s remove Cycling
 
 #Stops music if players dequips cycle
-execute as @a[tag=CyclingMusic] unless entity @s[tag=Cycling] run stopsound @s record
-execute as @a[tag=CyclingMusic] unless entity @s[tag=Cycling] run scoreboard players set @s MusicCooldown 0
+execute as @a[tag=CyclingMusic] unless entity @s[tag=Cycling] run function johto:tools/forceclick
 execute as @a[tag=CyclingMusic] unless entity @s[tag=Cycling] run tag @s remove CyclingMusic
 
 
@@ -176,8 +173,7 @@ execute as @a[scores={BattleEnd=1..}] run function johto:triggers/battles/battle
 
 
 # Detects if player has switched the slot of their radio, and refreshes their sound if so
-#TODO: radio music and mechanics should run independently of each other
-execute as @a[scores={BattleStart=0},tag=!RadioOff] run function johto:world/sound/switchradiostation
+execute as @a[tag=!RadioOff] at @s run function johto:world/sound/switchradiostation
 
 
 

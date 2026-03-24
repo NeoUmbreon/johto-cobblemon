@@ -33,7 +33,7 @@ execute as @a[x=-2196,y=63,z=-547,dx=5,dy=7,dz=17,tag=!Cycling] at @s run tp @s 
 #Surfing Detection
 #Remove Surfing tag and refresh music if player dismounts or mount hasn't been in the water (SurfingCD reached 0)
 scoreboard players set @a[tag=Surfing,predicate=!johto:riding] SurfingCD 0
-execute as @a[scores={SurfingCD=0},tag=Surfing] run function johto:tools/forceclick
+execute as @a[scores={SurfingCD=0,BattleStart=0},tag=Surfing] run function johto:tools/forceclick
 tag @a[scores={SurfingCD=0},tag=Surfing] remove Surfing
 
 #Detection hysteresis
@@ -41,13 +41,14 @@ scoreboard players remove @a[scores={SurfingCD=1..}] SurfingCD 1
 scoreboard players set @a[predicate=johto:surfing] SurfingCD 30
 
 #Add Surfing tag to newly surfing players and refresh music
-execute as @a[scores={SurfingCD=30},tag=!Surfing] run function johto:tools/forceclick
+execute as @a[scores={SurfingCD=30,BattleStart=0},tag=!Surfing] run function johto:tools/forceclick
 tag @a[scores={SurfingCD=30},tag=!Surfing] add Surfing
 
 
 #Radio
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0}] at @s run function johto:world/sound/retroradiointro
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..}] at @s run function johto:world/sound/retroradioloop
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0,BattleEnd=0}] at @s run function johto:world/sound/retroradiointro
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..,BattleEnd=0}] at @s run function johto:world/sound/retroradioloop
+#checking BattleEnd=0 is a stupid solution, the much better one would be to remove all the forceclicks from each battleend dialogue and run the BattleEnd function from there. but i kinda don't care
 
 #Removes a MusicCooldown score each refresh if present
 scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1

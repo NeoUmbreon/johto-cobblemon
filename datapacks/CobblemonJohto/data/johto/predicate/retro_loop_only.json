@@ -34,14 +34,6 @@
 			}
 		},
 		{
-			"//comment": "Mt. Moon Square",
-			"condition": "minecraft:entity_scores",
-			"entity": "this",
-			"scores": {
-				"MusicTitles": 26
-			}
-		},
-		{
 			"//comment": "Olivine Lighthouse",
 			"condition": "minecraft:entity_scores",
 			"entity": "this",
@@ -96,6 +88,14 @@
 			}
 		},
 		{
+			"//comment": "Elite Four (music: Pokemon League)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 14
+			}
+		},
+		{
 			"//comment": "Indigo Plateau (music: Pokemon League)",
 			"condition": "minecraft:entity_scores",
 			"entity": "this",
@@ -125,6 +125,14 @@
 			"entity": "this",
 			"scores": {
 				"MusicTitles": 95
+			}
+		},
+		{
+			"//comment": "Giovanni's Hideout (music: Union Cave)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 17
 			}
 		},
 		{

@@ -355,7 +355,7 @@ execute as @s[x=530,y=0,z=324,dx=442,dy=63,dz=471,scores={DialogueTrigger=214,Ta
 tellraw @s[scores={DialogueTrigger=214,TalkTime=1,SSState=1}] {"text":"Now boarding the S.S. Aqua voyage for Vermilion City!"}
 tellraw @s[scores={DialogueTrigger=214,TalkTime=1,SSState=2}] {"text":"Now boarding the S.S. Aqua voyage for Olivine City!"}
 execute as @s[scores={DialogueTrigger=214,TalkTime=1}] run advancement grant @s only johto:story/ssaqua
-execute as @s[scores={DialogueTrigger=214,TalkTime=1}] run function johto:tools/forceclick
+execute as @s[scores={DialogueTrigger=214,TalkTime=1}] run function johto:world/musictitles
 
 
 
