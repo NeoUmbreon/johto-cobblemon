@@ -91,7 +91,7 @@ execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:
 # Sprout Tower
 execute if score @s MusicTitles matches 214 run return run function johto:world/sound/playrecord {track:"retro/areas/sprouttowerintro", duration:89}
 
-# Union Cave (& Ruins of Alph Exterior/Chambers, Ilex Forest, Goldenrod Underground, Mt. Mortar, Whirl Islands (Interior), Tohjo Falls, Embedded Tower, Giovanni)
+# Union Cave (& Ruins of Alph Exterior/Chambers, Ilex Forest, Goldenrod Underground, Mt. Mortar, Whirl Islands, Tohjo Falls, Embedded Tower, Giovanni)
 # Loop Only
 
 # Ruins of Alph (Basement)
@@ -101,8 +101,8 @@ execute if score @s MusicTitles matches 203 run return run function johto:world/
 # Azalea Town (& Blackthorn City)
 execute if score @s MusicTitles matches 301..302 run return run function johto:world/sound/playrecord {track:"retro/settlements/azaleatownintro", duration:86}
 
-# Routes 34-37, Routes 40-41, Routes 45-46, Cliff Edge Gate, Whirl Islands (Exterior)
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":72,"max":75}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":78,"max":79}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":83,"max":84}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":100,"max":101}}}]} run return run function johto:world/sound/playrecord {track:"retro/routes/34intro", duration:73}
+# Routes 34-37, Routes 40-41, Routes 45-46, Cliff Edge Gate
+execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":72,"max":75}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":78,"max":79}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":83,"max":84}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":101}}]} run return run function johto:world/sound/playrecord {track:"retro/routes/34intro", duration:73}
 # TODO: rework musictitles so i don't have to do this nonsense
 
 # Goldenrod City (& Goldenrod Radio Tower)

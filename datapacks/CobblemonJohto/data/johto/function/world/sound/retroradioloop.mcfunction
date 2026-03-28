@@ -91,7 +91,7 @@ execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:
 # Sprout Tower
 execute if score @s MusicTitles matches 214 run return run function johto:world/sound/playrecord {track:"retro/areas/sprouttower", duration:398}
 
-# Union Cave (& Ruins of Alph Exterior/Chambers, Ilex Forest, Goldenrod Underground, Mt. Mortar, Whirl Islands (Interior), Tohjo Falls, Embedded Tower, Giovanni) 17 21 28 87 95 100 205 208 209
+# Union Cave (& Ruins of Alph Exterior/Chambers, Ilex Forest, Goldenrod Underground, Mt. Mortar, Whirl Islands, Tohjo Falls, Embedded Tower, Giovanni) 17 21 28 87 95 100 205 208 209
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":17}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":21}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":28}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":87}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":95}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":99}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":205}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":208,"max":209}}}]} run return run function johto:world/sound/playrecord {track:"retro/areas/unioncave", duration:1135}
 # TODO: hamborghini mercy...
 
@@ -102,8 +102,8 @@ execute if score @s MusicTitles matches 203 run return run function johto:world/
 # Azalea Town (& Blackthorn City)
 execute if score @s MusicTitles matches 301..302 run return run function johto:world/sound/playrecord {track:"retro/settlements/azaleatown", duration:964}
 
-# Routes 34-37, Routes 40-41, Routes 45-46, Cliff Edge Gate, Whirl Islands (Exterior)
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":72,"max":75}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":78,"max":79}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":83,"max":84}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":100,"max":101}}}]} run return run function johto:world/sound/playrecord {track:"retro/routes/34", duration:723}
+# Routes 34-37, Routes 40-41, Routes 45-46, Cliff Edge Gate
+execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":72,"max":75}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":78,"max":79}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":83,"max":84}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":101}}]} run return run function johto:world/sound/playrecord {track:"retro/routes/34", duration:723}
 # TODO: rework musictitles so i don't have to do this nonsense
 
 # Goldenrod City (& Goldenrod Radio Tower)
