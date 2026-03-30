@@ -67,6 +67,10 @@ tag @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={DayTime=..1000},tag=Dail
 #-------------------------------------------------------------------------------------------------------------------------
 #Runs HMs/Important Items
 
+#MusicTitles function, tracks player around map checking for new areas or music
+execute as @a[scores={TalkTime=0}] at @s run function johto:world/musictitles
+
+
 #Fly Map Refresh
 execute as @a[x=1169,y=252,z=619,distance=..40] run function johto:hms/flymap
 
@@ -92,10 +96,6 @@ execute as @a[tag=Surf] at @s if block ~ ~ ~ minecraft:water run effect give @s 
 team leave @a[team=black]
 execute as @a if items entity @s weapon.mainhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] run function johto:world/townmap
 execute as @a unless items entity @s weapon.mainhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] if items entity @s weapon.offhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] run function johto:world/townmap
-
-
-#MusicTitles function, tracks player around map checking for new areas or music
-execute as @a[scores={TalkTime=0}] at @s run function johto:world/musictitles
 
 
 #Runs relog function if player is found with relog score
