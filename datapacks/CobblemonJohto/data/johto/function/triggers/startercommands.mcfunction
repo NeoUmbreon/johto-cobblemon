@@ -89,6 +89,7 @@ scoreboard players set @s Air 0
 scoreboard players set @s IP 0
 scoreboard players set @s Farfetchd 0
 scoreboard players set @s BattleStreak 0
+scoreboard players set @s BattleEnd 0
 scoreboard players set @s TownMap 0
 scoreboard players set @s TownMapLast 0
 
@@ -107,6 +108,7 @@ scoreboard players set @s MapHold 0
 scoreboard players set @s MegaStones 0
 scoreboard players set @s MomState 1
 scoreboard players set @s MusicCooldown 0
+scoreboard players set @s MusicLoop 0
 scoreboard players set @s MusicState 0
 scoreboard players set @s OddEgg 0
 scoreboard players set @s rng 0
