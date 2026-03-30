@@ -15,7 +15,7 @@
 - [datapacks/CobblemonJohto/data/johto/function/triggers/runupdates.mcfunction](datapacks/CobblemonJohto/data/johto/function/triggers/runupdates.mcfunction)
 - [datapacks/CobblemonJohto/data/johto/function/world/20tpscommands.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/20tpscommands.mcfunction)
 - [datapacks/CobblemonJohto/data/johto/function/world/musictitles.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/musictitles.mcfunction)
-- [datapacks/CobblemonJohto/data/johto/function/world/radio.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/radio.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/world/portals.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/portals.mcfunction)
 - [datapacks/CobblemonJohto/data/johto/function/world/radiostations.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/radiostations.mcfunction)
 - [datapacks/CobblemonJohto/data/johto/function/world/worldcommands.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/worldcommands.mcfunction)
 
