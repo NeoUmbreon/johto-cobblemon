@@ -6,12 +6,10 @@ scoreboard players set @a[x=-517,y=64,z=193,distance=..5,scores={EscapeRope=1..}
 scoreboard players set @a[x=-614,y=50,z=333,distance=..10,scores={ER=5}] ER 5
 
 #Lobby to New Bark Town/Oak Welcome area
-execute as @a[x=-958,y=66,z=-366,dy=2,dz=1,tag=!Dialogue1] run function johto:tools/forceclick
 playsound door ambient @a[x=-958,y=66,z=-366,dy=2,dz=1,tag=!Dialogue1] ~ ~ ~ 100 1 1
 tp @a[x=-958,y=66,z=-366,dy=2,dz=1,tag=!Dialogue1] -970 65 -405
 
 playsound door ambient @a[x=-958,y=66,z=-366,dy=2,dz=1] ~ ~ ~ 100 1 1
-execute as @a[x=-958,y=66,z=-366,dy=2,dz=1] run function johto:tools/forceclick
 tp @a[x=-958,y=66,z=-366,dy=2,dz=1] -724 69 -491
 
 
@@ -23,7 +21,6 @@ tag @a[x=553,y=64,z=-345,dx=3,dy=2,tag=Dialogue25] remove Dialogue25
 
 #Rocket Takeover Area
 execute as @a[x=553,y=64,z=-345,dx=3,dy=2,tag=Dialogue64,tag=!Dialogue72] run playsound door ambient @s ~ ~ ~ 100 1 1
-execute as @a[x=553,y=64,z=-345,dx=3,dy=2,tag=Dialogue64,tag=!Dialogue72] run execute as @s run function johto:tools/forceclick
 execute as @a[x=553,y=64,z=-345,dx=3,dy=2,tag=Dialogue64,tag=!Dialogue72] run tp @s 525 31 -248
 
 #Pre-Takeover
@@ -77,8 +74,8 @@ tp @a[x=1597,y=87,z=-426,dx=3,dy=3] -1173 64 -237
 #execute as @e[x=-801,y=64,z=-287,dy=3,type=armor_stand,scores={DialogueTrigger=0,TalkTime=0}] run execute as @a[x=-1174,y=64,z=-238,dx=2,dy=2] run function johto:tools/forceclick
 #execute as @e[x=-801,y=64,z=-287,dy=3,type=armor_stand,scores={DialogueTrigger=0,TalkTime=0}] run tp @a[x=-1174,y=64,z=-238,dx=2,dy=2] 1599 87 -427
 
-tp @a[x=-1174,y=64,z=-238,dx=2,dy=2] 1599 87 -427
 playsound door ambient @a[x=-1174,y=64,z=-238,dx=2,dy=2] ~ ~ ~ 100 1 1
+tp @a[x=-1174,y=64,z=-238,dx=2,dy=2] 1599 87 -427
 
 #Ruins of Alph Main Portal
 
@@ -421,12 +418,10 @@ tp @a[x=-1134,y=65,z=737,dx=9,dy=6] -1749 64 94
 
 
 #Dark Cave (Violet Side)
-execute as @a[x=-227,y=64,z=-97,dx=5,dy=4] run function johto:tools/forceclick
 playsound door ambient @a[x=-227,y=64,z=-97,dx=5,dy=4] ~ ~ ~ 100 1 1
 scoreboard players set @a[x=-227,y=64,z=-97,dx=5,dy=4] EscapeRope 1
 tp @a[x=-227,y=64,z=-97,dx=5,dy=4] -225 64 -86
 
-execute as @a[x=-227,y=64,z=-87,dx=5,dy=5] run function johto:tools/forceclick
 playsound door ambient @a[x=-227,y=64,z=-87,dx=5,dy=5] ~ ~ ~ 100 1 1
 scoreboard players set @a[x=-227,y=64,z=-87,dx=5,dy=5] EscapeRope 0
 tp @a[x=-227,y=64,z=-87,dx=5,dy=5] -225 64 -98
