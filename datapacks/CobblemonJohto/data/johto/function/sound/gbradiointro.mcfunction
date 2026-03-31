@@ -11,7 +11,7 @@ execute if score @s BattleStart matches 1.. run return run function johto:sound/
 execute as @s[scores={MusicTitles=35},tag=GymVictory] run return run function johto:sound/playrecord {track:"gb/victory/gymleaderintro", duration:59}
 
 # Magnet Train Rides
-execute if score @s DialogueTrigger matches 207..208 run return run scoreboard players set @s MusicLoop 1
+execute as @s[scores={DialogueTrigger=207..208,TalkTime=1..}] run return run scoreboard players set @s MusicLoop 1
 
 # Hall of Fame Room Credits
 execute if score @s DialogueTrigger matches 98 run return run scoreboard players set @s MusicLoop 1
@@ -51,7 +51,7 @@ execute unless score @s RadioSelect matches 2 run return run function johto:soun
 execute as @s[tag=Surfing] run return run scoreboard players set @s MusicLoop 1
 
 # Cycling
-execute as @s[tag=CyclingMusic] run return run function johto:sound/playrecord {track:"gb/cyclingintro", duration:71}
+execute as @s[tag=CyclingMusic] run return run function johto:sound/playrecord {track:"gb/misc/cyclingintro", duration:71}
 
 
 # Tracks without an intro (set MusicLoop to 1 and return)
@@ -163,7 +163,7 @@ execute if score @s MusicTitles matches 89 run return run function johto:sound/p
 execute if score @s MusicTitles matches 88 run return run function johto:sound/playrecord {track:"gb/areas/safarizoneintro", duration:77}
 
 # Sinjoh Ruins
-execute if score @s MusicTitles matches 92 run return run function johto:sound/playrecord {track:"gb/areas/sinjohruinsintro", duration:19}
+execute if score @s MusicTitles matches 92 run return run function johto:sound/playrecord {track:"common/areas/sinjohruinsintro", duration:19}
 
 
 #-----------------------------------------------Kanto-----------------------------------------------
@@ -214,7 +214,7 @@ execute if score @s MusicTitles matches 40 run return run function johto:sound/p
 # Loop Only
 
 # Hall of Fame
-execute if score @s MusicTitles matches 19 run return run function johto:sound/playrecord {track:"gb/halloffameintro", duration:113}
+execute if score @s MusicTitles matches 19 run return run function johto:sound/playrecord {track:"gb/misc/halloffameintro", duration:113}
 
 
 #-----------------------------------------------Misc------------------------------------------------
@@ -228,6 +228,6 @@ execute if score @s MusicTitles matches 19 run return run function johto:sound/p
 # Loop Only
 
 # ???
-execute if score @s MusicTitles matches 15 run return run function johto:sound/playrecord {track:"gb/gameboyprinterintro", duration:129}
+execute if score @s MusicTitles matches 15 run return run function johto:sound/playrecord {track:"gb/misc/gameboyprinterintro", duration:129}
 
 return 0

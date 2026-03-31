@@ -11,10 +11,10 @@ execute if score @s BattleStart matches 1.. run return run function johto:sound/
 execute as @s[scores={MusicTitles=35},tag=GymVictory] run return run function johto:sound/playrecord {track:"gb/victory/gymleader", duration:699}
 
 # Magnet Train Rides
-execute if score @s DialogueTrigger matches 207..208 run return run function johto:sound/playrecord {track:"gb/sfx/magnettrain", duration:161}
+execute as @s[scores={DialogueTrigger=207..208,TalkTime=1..}] run return run function johto:sound/playrecord {track:"gb/sfx/magnettrain", duration:161}
 
 # Hall of Fame Room Credits
-execute if score @s DialogueTrigger matches 98 run return run function johto:sound/playrecord {track:"gb/ending", duration:2281}
+execute if score @s DialogueTrigger matches 98 run return run function johto:sound/playrecord {track:"gb/misc/ending", duration:2281}
 
 #TODO: are these even implemented?
 #Bug Catching Contest
@@ -48,10 +48,10 @@ execute unless score @s RadioSelect matches 2..8 run return fail
 execute unless score @s RadioSelect matches 2 run return run function johto:sound/gbradiostationsloop
 
 # Surfing
-execute as @s[tag=Surfing] run return run function johto:sound/playrecord {track:"gb/surf", duration:1099}
+execute as @s[tag=Surfing] run return run function johto:sound/playrecord {track:"gb/misc/surf", duration:1099}
 
 # Cycling
-execute as @s[tag=CyclingMusic] run return run function johto:sound/playrecord {track:"gb/cycling", duration:563}
+execute as @s[tag=CyclingMusic] run return run function johto:sound/playrecord {track:"gb/misc/cycling", duration:563}
 
 
 
@@ -164,7 +164,7 @@ execute if score @s MusicTitles matches 89 run return run function johto:sound/p
 execute if score @s MusicTitles matches 88 run return run function johto:sound/playrecord {track:"gb/areas/safarizone", duration:1200}
 
 # Sinjoh Ruins
-execute if score @s MusicTitles matches 92 run return run function johto:sound/playrecord {track:"gb/areas/sinjohruins", duration:1725}
+execute if score @s MusicTitles matches 92 run return run function johto:sound/playrecord {track:"common/areas/sinjohruins", duration:1725}
 
 
 #-----------------------------------------------Kanto-----------------------------------------------
@@ -215,7 +215,7 @@ execute if score @s MusicTitles matches 96 run return run function johto:sound/p
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":14}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":102,"max":104}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":311}}]} run return run function johto:sound/playrecord {track:"gb/areas/pokemonleague", duration:579}
 
 # Hall of Fame
-execute if score @s MusicTitles matches 19 run return run function johto:sound/playrecord {track:"gb/halloffame", duration:450}
+execute if score @s MusicTitles matches 19 run return run function johto:sound/playrecord {track:"gb/misc/halloffame", duration:450}
 
 
 #-----------------------------------------------Misc------------------------------------------------
@@ -226,9 +226,9 @@ execute if score @s MusicTitles matches 217 run return run function johto:sound/
 execute if score @s MusicTitles matches 35 run return run function johto:sound/playrecord {track:"gb/areas/pokemongym", duration:705}
 
 # Lobby
-execute if score @s MusicTitles matches 25 run return run function johto:sound/playrecord {track:"gb/titlescreen", duration:1702}
+execute if score @s MusicTitles matches 25 run return run function johto:sound/playrecord {track:"gb/misc/titlescreen", duration:1702}
 
 # ???
-execute if score @s MusicTitles matches 15 run return run function johto:sound/playrecord {track:"gb/gameboyprinter", duration:1029}
+execute if score @s MusicTitles matches 15 run return run function johto:sound/playrecord {track:"gb/misc/gameboyprinter", duration:1029}
 
 return 0

@@ -27,10 +27,10 @@ execute if score @s RadioSelect matches 6 run return run function johto:sound/pl
 
 # Slot 7 - Pokemon Music
 # Wednesday (3) - Hoenn Sounds
-execute if score @s RadioSelect matches 7 run execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run return run function johto:sound/playrecord {track:"gb/radio/route101intro", duration:6}
+execute if score @s RadioSelect matches 7 run execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run return run function johto:sound/playrecord {track:"common/radio/route101intro", duration:6}
 
 # Thursday (4) - Sinnoh Sounds
-execute if score @s RadioSelect matches 7 run execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] run return run function johto:sound/playrecord {track:"gb/radio/route201intro", duration:80}
+execute if score @s RadioSelect matches 7 run execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] run return run function johto:sound/playrecord {track:"common/radio/route201intro", duration:80}
 
 # Tuesday & Saturday (2 & 6) - Pokemon Lullaby
 execute if score @s RadioSelect matches 7 run execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=2..6}] unless entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=5}] run return run scoreboard players set @s MusicLoop 1
