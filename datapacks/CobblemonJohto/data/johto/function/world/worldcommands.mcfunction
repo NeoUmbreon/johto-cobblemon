@@ -173,7 +173,7 @@ execute as @a[scores={BattleEnd=1..}] run function johto:triggers/battles/battle
 
 
 # Detects if player has switched the slot of their radio, and refreshes their sound if so
-execute as @a[tag=!RadioOff] at @s run function johto:world/sound/switchradiostation
+execute as @a[tag=!RadioOff] at @s run function johto:world/switchradiostation
 
 
 

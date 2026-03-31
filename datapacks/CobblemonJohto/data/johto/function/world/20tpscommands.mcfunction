@@ -46,8 +46,8 @@ tag @a[scores={SurfingCD=30},tag=!Surfing] add Surfing
 
 
 #Radio
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0,BattleEnd=0}] at @s run function johto:world/sound/retroradiointro
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..,BattleEnd=0}] at @s run function johto:world/sound/retroradioloop
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0,BattleEnd=0}] at @s run function johto:sound/gbradiointro
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..,BattleEnd=0}] at @s run function johto:sound/gbradioloop
 #checking BattleEnd=0 is a stupid solution, the much better one would be to remove all the forceclicks from each battleend dialogue and run the BattleEnd function from there. but i kinda don't care
 
 #Removes a MusicCooldown score each refresh if present

@@ -23,7 +23,7 @@ tag @s remove Temp
 #Only one click, refreshes current sounds
 scoreboard players set @s[scores={click=1}] RadioSelect 0
 
-execute if score @s RadioSelect matches 0 run function johto:world/sound/switchradiostation
+execute if score @s RadioSelect matches 0 run function johto:world/switchradiostation
 
 
 
