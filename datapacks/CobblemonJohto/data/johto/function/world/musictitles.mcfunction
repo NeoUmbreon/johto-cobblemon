@@ -1,6 +1,6 @@
 # Runs title based on player location
 # Determines whether or not to refresh music based on where the player was previously
-
+# TODO: small/big functions could probably be combined
 
 # High Priority (areas within areas)
 execute if entity @s[x=-693,y=63,z=-490,dx=19,dy=5,dz=19] run return run function johto:world/musictitles/small {text:"Professor Elm's Lab", location:201, includes:""}

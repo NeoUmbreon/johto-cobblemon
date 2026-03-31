@@ -1,5 +1,6 @@
 #Activated by when a player defeats an NPC.
 #Scores highly depend on which NPC to activate to continue story beats
+#TODO: don't forget to replace these with updated files
 
 scoreboard players set @s BattleStart 0
 execute as @s[tag=!RadioOff] run function johto:tools/forceclick

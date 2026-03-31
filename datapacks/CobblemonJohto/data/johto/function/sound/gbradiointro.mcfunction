@@ -1,4 +1,4 @@
-# Timings and logic for retro music intros
+# Timings and logic for GB music intros
 # only call if musiccooldown=0 && musicloop=0
 # https://bulbapedia.bulbagarden.net/wiki/List_of_overworld_music_themes#Generation_II
 
@@ -55,7 +55,7 @@ execute as @s[tag=CyclingMusic] run return run function johto:sound/playrecord {
 
 
 # Tracks without an intro (set MusicLoop to 1 and return)
-execute if predicate johto:retro_loop_only run return run scoreboard players set @s MusicLoop 1
+execute if predicate johto:gb_loop_only run return run scoreboard players set @s MusicLoop 1
 
 
 # Everything Else

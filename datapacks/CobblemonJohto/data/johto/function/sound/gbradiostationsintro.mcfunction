@@ -1,5 +1,5 @@
 #For the different radio stations besides the world music stations
-# Timings and logic for retro music intros
+# Timings and logic for GB music intros
 
 # Returns
 # Slots 3-7 - No Radio Card

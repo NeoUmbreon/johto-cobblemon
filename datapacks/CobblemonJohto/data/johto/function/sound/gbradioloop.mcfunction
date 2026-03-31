@@ -1,4 +1,4 @@
-# Timings and logic for retro music loops
+# Timings and logic for GB music loops
 # only call if musiccooldown=0 && musicloop=1..
 # https://bulbapedia.bulbagarden.net/wiki/List_of_overworld_music_themes#Generation_II
 

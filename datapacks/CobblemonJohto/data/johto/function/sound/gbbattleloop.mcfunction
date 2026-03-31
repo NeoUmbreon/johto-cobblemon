@@ -1,4 +1,4 @@
-# Timings and logic for retro battle music loops
+# Timings and logic for GB battle music loops
 
 # Pre-Battle
 #1 - Rival
