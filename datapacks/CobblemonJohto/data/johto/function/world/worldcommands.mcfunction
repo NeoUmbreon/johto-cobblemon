@@ -83,7 +83,7 @@ execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custo
 #HM Flash
 execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run tellraw @s {"text":"You used Flash!","italic":true,"color":"gray"}
 execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run effect give @s minecraft:night_vision 900 1 true
-execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run playsound minecraft:entity.firework_rocket.launch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run function johto:sound/playlocalsfx {sfx:"flash"}
 execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"HM05: Flash"}],"text":""}'}}}] run scoreboard players set @s click 0
 
 
@@ -125,8 +125,8 @@ execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custo
 execute as @a[tag=BikeEquip] run clear @s minecraft:carrot_on_a_stick[custom_name='["",{"text":"Bicycle","italic":false,"color":"red"}]',lore=['["",{"text":"A folding bicycle that allows faster","italic":false}]','[{"text":"movement than the Running Shoes.","italic":false}]'],custom_model_data=5]
 execute as @a[tag=BikeEquip] run item replace entity @s armor.head with carrot_on_a_stick[custom_name='["",{"text":"Bicycle","italic":false,"color":"red"}]',lore=['["",{"text":"A folding bicycle that allows faster","italic":false}]','[{"text":"movement than the Running Shoes.","italic":false}]'],custom_model_data=5]
 execute as @a[tag=BikeEquip] run function johto:tools/forceclick
-execute as @a[tag=BikeEquip] run playsound minecraft:item.armor.equip_iron ambient @s
-#TODO: could add bicycle equip sound here
+#execute as @a[tag=BikeEquip] run playsound minecraft:item.armor.equip_iron ambient @s
+#TODO: add real bicycle equip sound here
 
 execute as @a[tag=BikeEquip] run tag @s add CyclingMusic
 tag @a[tag=BikeEquip] remove BikeEquip
@@ -367,10 +367,12 @@ execute if entity @a[x=438,y=63,z=-395,dx=3,dy=34,dz=3] run function johto:world
 #Road Blocks & World Blocks
 
 #Ecruteak City Gym teleport from falling
-playsound flee ambient @a[x=-1075,y=0,z=550,dx=31,dy=62,dz=51] ~ ~ ~ 1000 1 1
-execute at @a[x=-1075,y=0,z=550,dx=31,dy=62,dz=51] run tp @a[x=-1075,y=0,z=550,dx=31,dy=62,dz=51] -1059 65 543 0 10
+tag @a[x=-1075,y=0,z=550,dx=31,dy=62,dz=51] add EcruteakGymFell
+tp @a[tag=EcruteakGymFell] -1059 65 543 0 10
+execute if entity @a[tag=EcruteakGymFell] positioned -1059 65 543 run function johto:sound/playglobalsfx {sfx:"kinesis",category:"player"}
 effect give @e[x=-1091,y=0,z=522,dx=63,dy=63,dz=105,type=cobblemon:pokemon] minecraft:levitation 1 1 true
 execute at @e[x=-1091,y=0,z=522,dx=63,dy=63,dz=105,type=item] run tp @e[x=-1091,y=0,z=522,dx=63,dy=63,dz=105,type=item] -1059 65 538
+tag @a remove EcruteakGymFell
 
 
 #Tps player from Rematched Hall of Fame to real Hall of Fame room

@@ -22,9 +22,9 @@ execute as @e[distance=..15,tag=Break] at @s run particle block{block_state:{Nam
 execute at @s as @e[distance=..15,tag=Break] at @s positioned ~ ~-2 ~ run fill ~ ~ ~ ~ ~5 ~ air replace barrier
 
 #Breaks Rock Smash Rock surrounding player
-execute as @s at @s run kill @e[distance=..5,type=minecraft:interaction,tag=RockSmash]
+execute at @s at @n[type=minecraft:interaction,tag=RockSmash,distance=..5] run function johto:sound/playglobalsfx {sfx:"rocksmash",category:"block"}
+execute as @s at @s run kill @e[type=minecraft:interaction,tag=RockSmash,distance=..5]
 tellraw @s {"text":"You used Rock Smash!","italic":true,"color":"gray"}
-playsound minecraft:item.shield.block ambient @s ~ ~ ~ 10 1 1
 
 #------------------------------------------------------------------------------------------------
 #Sets the player's score to specific areas for loot pools
@@ -104,7 +104,7 @@ give @s[scores={Temp=2,rng=29}] cobblemon:root_fossil
 give @s[scores={Temp=2,rng=30}] cobblemon:oval_stone
 give @s[scores={Temp=2,rng=31}] cobblemon:hard_stone
 
-playsound minecraft:entity.experience_orb.pickup ambient @s[scores={rng=21..31}] ~ ~ ~ 1 1 1
+execute as @s[scores={rng=21..31}] run function johto:sound/playlocalsfx {sfx:"item"}
 tellraw @s[scores={rng=21..31}] {"text":"An item was in the rubble!","italic":true,"color":"gray"}
 
 

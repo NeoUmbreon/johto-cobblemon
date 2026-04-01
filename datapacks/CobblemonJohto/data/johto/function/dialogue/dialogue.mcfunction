@@ -185,7 +185,7 @@ execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200
 execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200,TalkTime=2,rng=118..127}] run pokegive @s Pichu lvl:5 !s egg
 
 execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200,TalkTime=2}] run clear @s minecraft:egg 1
-execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200,TalkTime=2}] run playsound egghatch ambient @s ~ ~ ~ 10 1 1
+execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200,TalkTime=2}] run function johto:sound/playlocalsfx {sfx:"getegg"}
 
 tellraw @s[scores={DialogueTrigger=200,TalkTime=2}] ["",{"text":"You recieved an ","italic":true},{"text":"Odd Egg","italic":true,"color":"aqua","hoverEvent":{"action":"show_text","value":"A gift Egg. The Pokémon it hatches into has a higher-than-usual chance of being Shiny."}},{"text":"!","italic":true}]
 
@@ -201,6 +201,7 @@ execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run effect give @s minecr
 
 execute as @s[scores={DialogueTrigger=207,TalkTime=9}] run tp @s -2673 73 410 0 ~
 
+execute as @s[scores={DialogueTrigger=207,TalkTime=10..}] positioned -2672.5 74.5 410.5 run function johto:sound/playglobalsfx {sfx:"trainarrived",category:"block"}
 tag @s[scores={DialogueTrigger=207,TalkTime=10..}] add Dialogue207
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -213,6 +214,7 @@ execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run effect give @s minecr
 
 execute as @s[scores={DialogueTrigger=208,TalkTime=9}] run tp @s 526 73 -337 0 ~
 
+execute as @s[scores={DialogueTrigger=208,TalkTime=10..}] positioned 526.5 74.5 -336.5 run function johto:sound/playglobalsfx {sfx:"trainarrived",category:"block"}
 tag @s[scores={DialogueTrigger=208,TalkTime=10..}] add Dialogue208
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

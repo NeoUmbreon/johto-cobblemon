@@ -4704,7 +4704,7 @@ execute as @s[scores={Friendship=6,PokeHave=255}] run pokeedit 6 friendship=255
 
 #Deducts cash after raising friendship
 execute as @s[scores={Friendship=1..}] run tellraw @s {"text":"<Beauty Salon> There! All done!"}
-execute as @s[scores={Friendship=1..}] run playsound minecraft:entity.player.levelup ambient @s ~ ~ ~ 1 1 1
+execute as @s[scores={Friendship=1..}] run function johto:sound/playlocalsfx {sfx:"pokemonhealed"}
 execute as @s[scores={Friendship=1..}] run scoreboard players remove @s Money 500
 execute as @s[scores={Friendship=1..}] run tag @s add BeautyCD
 execute as @s[scores={Friendship=1..}] run scoreboard players set @s Friendship 0

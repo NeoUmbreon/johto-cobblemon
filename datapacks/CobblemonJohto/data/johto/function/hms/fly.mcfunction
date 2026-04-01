@@ -138,8 +138,7 @@ scoreboard players set @s[x=87,y=50,z=719,dx=44,dy=20,dz=44,scores={Fly=1..}] Fl
 
 
 #Successful Fly:
-playsound minecraft:entity.arrow.shoot ambient @s[scores={Fly=1..}] ~ ~ ~ 1 1 1
-tp @s[scores={Fly=1..}] 1169 255 613
+execute as @s[scores={Fly=1..}] at @s run function johto:tools/tpwithsfx {xyz:"1169 255 613",sfx:"fly"}
 scoreboard players set @s[scores={Fly=1..}] EscapeRope 0
 tag @s[scores={Fly=1..}] remove GymVictory
 scoreboard players set @s[scores={Fly=1..}] Fly 0
