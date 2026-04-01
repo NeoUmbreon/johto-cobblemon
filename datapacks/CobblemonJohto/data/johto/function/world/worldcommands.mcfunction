@@ -368,10 +368,10 @@ execute if entity @a[x=438,y=63,z=-395,dx=3,dy=34,dz=3] run function johto:world
 
 #Ecruteak City Gym teleport from falling
 tag @a[x=-1075,y=0,z=550,dx=31,dy=62,dz=51] add EcruteakGymFell
-tp @a[tag=EcruteakGymFell] -1059 65 543 0 10
+tp @a[x=-1075,y=0,z=550,dx=31,dy=62,dz=51,tag=EcruteakGymFell] -1059 65 543 0 10
 execute if entity @a[tag=EcruteakGymFell] positioned -1059 65 543 run function johto:sound/playglobalsfx {sfx:"kinesis",category:"player"}
 effect give @e[x=-1091,y=0,z=522,dx=63,dy=63,dz=105,type=cobblemon:pokemon] minecraft:levitation 1 1 true
-execute at @e[x=-1091,y=0,z=522,dx=63,dy=63,dz=105,type=item] run tp @e[x=-1091,y=0,z=522,dx=63,dy=63,dz=105,type=item] -1059 65 538
+execute as @e[x=-1091,y=0,z=522,dx=63,dy=63,dz=105,type=item] run tp @s -1059 65 538
 tag @a remove EcruteakGymFell
 
 
