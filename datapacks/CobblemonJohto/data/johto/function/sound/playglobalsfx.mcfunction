@@ -1,2 +1,2 @@
-$playsound gb/sfx/$(sfx) $(category) @a
-#$playsound ds/sfx/$(sfx) $(category) @a
+$playsound gb/sfx/$(sfx) $(category) @a ~ ~ ~ 1.5
+#$playsound ds/sfx/$(sfx) $(category) @a ~ ~ ~ 1.5
