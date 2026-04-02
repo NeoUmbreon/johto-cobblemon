@@ -324,18 +324,18 @@ execute unless entity @a[x=44,y=63,z=4,dx=31,dy=90,dz=31] run setblock -819 65 -
 
 
 #Runs Game Corner slot machines if buttons pressed
-execute if block 516 66 -377 stone_button[powered=true] if entity @e[x=507,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=518,y=64,z=-377,distance=..2] run function johto:triggers/gamecorner
-execute if block 516 66 -381 stone_button[powered=true] if entity @e[x=505,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=518,y=64,z=-381,distance=..2] run function johto:triggers/gamecorner
-execute if block 513 66 -377 stone_button[powered=true] if entity @e[x=503,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=511,y=64,z=-377,distance=..2] run function johto:triggers/gamecorner
-execute if block 513 66 -381 stone_button[powered=true] if entity @e[x=501,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=511,y=64,z=-381,distance=..2] run function johto:triggers/gamecorner
-execute if block 507 66 -377 stone_button[powered=true] if entity @e[x=499,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=509,y=64,z=-377,distance=..2] run function johto:triggers/gamecorner
-execute if block 507 66 -381 stone_button[powered=true] if entity @e[x=497,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=509,y=64,z=-381,distance=..2] run function johto:triggers/gamecorner
-execute if block 504 66 -377 stone_button[powered=true] if entity @e[x=495,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=502,y=64,z=-377,distance=..2] run function johto:triggers/gamecorner
-execute if block 504 66 -381 stone_button[powered=true] if entity @e[x=493,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=502,y=64,z=-381,distance=..2] run function johto:triggers/gamecorner
-execute if block 498 66 -377 stone_button[powered=true] if entity @e[x=491,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=500,y=64,z=-377,distance=..2] run function johto:triggers/gamecorner
-execute if block 498 66 -381 stone_button[powered=true] if entity @e[x=489,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=500,y=64,z=-381,distance=..2] run function johto:triggers/gamecorner
-execute if block 495 66 -377 stone_button[powered=true] if entity @e[x=487,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=493,y=64,z=-377,distance=..2] run function johto:triggers/gamecorner
-execute if block 495 66 -381 stone_button[powered=true] if entity @e[x=485,y=59,z=-370,dy=3,scores={rng=0}] run execute as @p[x=493,y=64,z=-381,distance=..2] run function johto:triggers/gamecorner
+execute positioned 516 66 -377 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=507,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:1,button_pos:"516 66 -377",facing:"east"}
+execute positioned 516 66 -381 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=505,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:2,button_pos:"516 66 -381",facing:"east"}
+execute positioned 513 66 -377 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=503,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:3,button_pos:"513 66 -377",facing:"west"}
+execute positioned 513 66 -381 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=501,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:4,button_pos:"513 66 -381",facing:"west"}
+execute positioned 507 66 -377 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=499,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:5,button_pos:"507 66 -377",facing:"east"}
+execute positioned 507 66 -381 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=497,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:6,button_pos:"507 66 -381",facing:"east"}
+execute positioned 504 66 -377 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=495,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:7,button_pos:"504 66 -377",facing:"west"}
+execute positioned 504 66 -381 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=493,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:8,button_pos:"504 66 -381",facing:"west"}
+execute positioned 498 66 -377 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=491,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:9,button_pos:"498 66 -377",facing:"east"}
+execute positioned 498 66 -381 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=489,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:10,button_pos:"498 66 -381",facing:"east"}
+execute positioned 495 66 -377 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=487,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:11,button_pos:"495 66 -377",facing:"west"}
+execute positioned 495 66 -381 if block ~ ~ ~ stone_button[powered=true] as @p[x=489,y=64,z=-389,dx=31,dy=10,dz=19] at @e[x=485,y=59,z=-370,dy=3,tag=!SlotRolled,limit=1] run function johto:triggers/gamecorner/startslots {num:12,button_pos:"495 66 -381",facing:"west"}
 
 
 #Runs Ruins of Alph puzzle if player is in the ruins
