@@ -3,6 +3,8 @@
 # https://bulbapedia.bulbagarden.net/wiki/List_of_overworld_music_themes#Generation_II
 
 
+scoreboard players set @s MusicLoop 1
+
 # Always Play
 # Battle & Pre-Battle
 execute if score @s BattleStart matches 1.. run return run function johto:sound/gbbattleintro
@@ -10,15 +12,9 @@ execute if score @s BattleStart matches 1.. run return run function johto:sound/
 # Gym Victory
 execute as @s[scores={MusicTitles=35},tag=GymVictory] run return run function johto:sound/playrecord {track:"gb/victory/gymleaderintro", duration:59}
 
-# Magnet Train Rides
-execute as @s[scores={DialogueTrigger=207..208,TalkTime=1..}] run return run scoreboard players set @s MusicLoop 1
-
-# Hall of Fame Room Credits
-execute if score @s DialogueTrigger matches 98 run return run scoreboard players set @s MusicLoop 1
-
 #TODO: are these even implemented?
 #Bug Catching Contest
-#execute if score @s DialogueTrigger matches 198..199 run return run scoreboard players set @s MusicLoop 1
+#execute if score @s DialogueTrigger matches 198..199 run return 1
 
 #Team Rocket mugging on Route 43
 #playsound rockettakeover record @s[scores={MusicCooldown=0,DialogueTrigger=48}] ~ ~ ~ 1 1 1
@@ -48,14 +44,14 @@ execute unless score @s RadioSelect matches 2..8 run return fail
 execute unless score @s RadioSelect matches 2 run return run function johto:sound/gbradiostationsintro
 
 # Surfing
-execute as @s[tag=Surfing] run return run scoreboard players set @s MusicLoop 1
+execute as @s[tag=Surfing] run return 1
 
 # Cycling
 execute as @s[tag=CyclingMusic] run return run function johto:sound/playrecord {track:"gb/misc/cyclingintro", duration:71}
 
 
-# Tracks without an intro (set MusicLoop to 1 and return)
-execute if predicate johto:gb_loop_only run return run scoreboard players set @s MusicLoop 1
+# Tracks without an intro (return)
+execute if predicate johto:gb_loop_only run return 1
 
 
 # Everything Else

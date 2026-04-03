@@ -2,6 +2,8 @@
 # only call if musiccooldown=0 && musicloop=1..
 # https://bulbapedia.bulbagarden.net/wiki/List_of_overworld_music_themes#Generation_II
 
+# might be used in the future?
+#scoreboard players add @s MusicLoop 1
 
 # Always Play
 # Battle & Pre-Battle
@@ -9,12 +11,6 @@ execute if score @s BattleStart matches 1.. run return run function johto:sound/
 
 # Gym Victory
 execute as @s[scores={MusicTitles=35},tag=GymVictory] run return run function johto:sound/playrecord {track:"gb/victory/gymleader", duration:699}
-
-# Magnet Train Rides
-execute as @s[scores={DialogueTrigger=207..208,TalkTime=1..}] run return run function johto:sound/playrecord {track:"gb/sfx/magnettrain", duration:161}
-
-# Hall of Fame Room Credits
-execute if score @s DialogueTrigger matches 98 run return run function johto:sound/playrecord {track:"gb/misc/ending", duration:2281}
 
 #TODO: are these even implemented?
 #Bug Catching Contest
