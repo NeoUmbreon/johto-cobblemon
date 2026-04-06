@@ -12,28 +12,6 @@ execute if score @s BattleStart matches 1.. run return run function johto:sound/
 # Gym Victory
 execute as @s[scores={MusicTitles=35},tag=GymVictory] run return run function johto:sound/playrecord {track:"ds/victory/gymleader", duration:1640}
 
-#TODO: are these even implemented?
-#Bug Catching Contest
-#execute if score @s DialogueTrigger matches 198..199 run return run function johto:sound/playrecord {track:"ds/bugcatchingcontest", duration:}
-
-#Team Rocket mugging on Route 43
-#playsound rockettakeover record @s[scores={MusicCooldown=0,DialogueTrigger=48}] ~ ~ ~ 1 1 1
-#scoreboard players set @s[scores={MusicCooldown=0,DialogueTrigger=48}] MusicCooldown 122
-
-#Giovanni's Cave radio broadcast
-#playsound rockettakeover record @s[scores={MusicCooldown=0,DialogueTrigger=164,TalkTime=166..}] ~ ~ ~ 1 1 1
-#scoreboard players set @s[scores={MusicCooldown=0,DialogueTrigger=164,TalkTime=166..}] MusicCooldown 122
-
-#Guide Gent tour music
-#playsound cherrygrovetour record @s[scores={MusicCooldown=0,DialogueTrigger=209..213}] ~ ~ ~ 1 1 1
-#scoreboard players set @s[scores={MusicCooldown=0,DialogueTrigger=209..213}] MusicCooldown 76
-
-#playsound cherrygrovetour record @s[scores={MusicCooldown=0,DialogueTrigger=197}] ~ ~ ~ 1 1 1
-#scoreboard players set @s[scores={MusicCooldown=0,DialogueTrigger=197}] MusicCooldown 76
-
-#First Silver encounter, plays its NPC theme before its battle theme
-#playsound rivaltalk record @a[scores={MusicCooldown=0,DialogueTrigger=6..7}] ~ ~ ~ 1 1 1
-#scoreboard players set @a[scores={MusicCooldown=0,DialogueTrigger=6..7}] MusicCooldown 70
 
 # Return
 execute unless score @s RadioSelect matches 2..8 run return fail
@@ -89,7 +67,6 @@ execute if score @s MusicTitles matches 214 run return run function johto:sound/
 
 # Union Cave (& Ruins of Alph Exterior/Chambers, Ilex Forest, Mt. Moon, Mt. Moon Square, Mt. Mortar, Whirl Islands, Tohjo Falls, Embedded Tower, Giovanni, Slowpoke Well) 17 21 26 27 28 87 93 95 100 205 209
 execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":17}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":21}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":26,"max":28}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":87}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":93}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":95}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":99}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":205}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":209}}]} run return run function johto:sound/playrecord {track:"ds/areas/unioncave", duration:2740}
-# TODO: hamborghini mercy...
 
 # Ruins of Alph (Basement)
 execute if score @s MusicTitles matches 203 run return run function johto:sound/playrecord {track:"ds/areas/ruinsofalph", duration:1660}
@@ -99,7 +76,6 @@ execute if score @s MusicTitles matches 301..302 run return run function johto:s
 
 # Routes 34-37, Routes 40-41, Routes 45-46, Cliff Edge Gate
 execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":72,"max":75}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":78,"max":79}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":83,"max":84}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":101}}]} run return run function johto:sound/playrecord {track:"ds/routes/34", duration:2000}
-# TODO: rework musictitles so i don't have to do this nonsense
 
 # Goldenrod City (& Goldenrod Radio Tower, Goldenrod Underground)
 execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":310}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":206}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":208}}]} run return run function johto:sound/playrecord {track:"ds/settlements/goldenrodcity", duration:1740}
@@ -202,7 +178,6 @@ execute if score @s MusicTitles matches 218 run return run function johto:sound/
 
 # Pewter City (& Viridian City, Saffron City, Power Plant) 210 317 318 321
 execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":210}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":321}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":317,"max":318}}}]} run return run function johto:sound/playrecord {track:"ds/settlements/pewtercity", duration:2900}
-# TODO: jesus christ
 
 # Routes 2-10, 16, 18-22   41..49 55 57..61
 execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":41,"max":49}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":55}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":57,"max":61}}}]} run return run function johto:sound/playrecord {track:"ds/routes/3", duration:1660}
