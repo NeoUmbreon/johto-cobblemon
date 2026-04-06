@@ -9,6 +9,7 @@ execute if entity @s[x=-992,y=59,z=-172,dx=38,dy=20,dz=50] run return run functi
 execute if entity @s[x=-987,y=0,z=-492,dx=125,dy=100,dz=75] run return run function johto:world/musictitles/small {text:"Tohjo Falls", location:205, includes:""}
 execute if entity @s[x=495,y=30,z=-275,dx=38,dy=30,dz=21] run return run function johto:world/musictitles/small {text:"Goldenrod Radio Tower", location:206, includes:"unless score @s MusicTitles matches 310 "}
 execute if entity @s[x=495,y=30,z=-249,dx=38,dy=30,dz=21] run return run function johto:world/musictitles/small {text:"Goldenrod Radio Tower", location:207, includes:""}
+execute if entity @s[x=380,y=0,z=-436,dx=157,dy=62,dz=161,tag=DSSound] run return run function johto:world/musictitles/small {text:"Goldenrod Underground", location:208, includes:"unless score @s MusicTitles matches 310 "}
 execute if entity @s[x=380,y=0,z=-436,dx=157,dy=62,dz=161] run return run function johto:world/musictitles/small {text:"Goldenrod Underground", location:208, includes:""}
 execute if entity @s[x=-1196,y=63,z=-239,dx=46,dy=20,dz=53] run return run function johto:world/musictitles/small {text:"Embedded Tower", location:209, includes:""}
 execute if entity @s[x=-3131,y=35,z=561,dx=42,dy=20,dz=36] run return run function johto:world/musictitles/small {text:"Power Plant", location:210, includes:""}
@@ -17,6 +18,7 @@ execute if entity @s[x=684,y=64,z=-59,dx=43,dy=150,dz=36] run return run functio
 execute if entity @s[x=489,y=64,z=-389,dx=31,dy=10,dz=19] run return run function johto:world/musictitles/small {text:"Game Corner", location:213, includes:""}
 execute if entity @s[x=44,y=63,z=4,dx=31,dy=90,dz=31] run return run function johto:world/musictitles/small {text:"Sprout Tower", location:214, includes:""}
 execute if entity @s[x=432,y=0,z=309,dx=20,dy=100,dz=20] run return run function johto:world/musictitles/small {text:"Burned Tower", location:215, includes:""}
+execute if entity @s[x=240,y=63,z=297,dx=33,dy=240,dz=33,tag=DSSound] run return run function johto:world/musictitles/small {text:"Bell Tower", location:216, includes:""}
 execute if entity @s[x=240,y=63,z=297,dx=33,dy=240,dz=33] run return run function johto:world/musictitles/small {text:"Tin Tower", location:216, includes:""}
 execute if predicate johto:pokemoncenters run return run function johto:world/musictitles/small {text:"Pokemon Center", location:217, includes:""}
 execute if entity @s[x=-1707,y=0,z=284,dx=143,dy=256,dz=164] run return run function johto:world/musictitles/small {text:"Viridian Forest", location:218, includes:""}
@@ -26,13 +28,31 @@ execute if entity @s[x=-439,y=0,z=-190,dx=131,dy=240,dz=319] run return run func
 execute if entity @s[x=-307,y=0,z=-94,dx=94,dy=240,dz=223] run return run function johto:world/musictitles/small {text:"Dark Cave", location:10, includes:""}
 
 
-# Special Cases (HGSS)
-# Routes 16-18 HGSS
-#execute if entity @s[x=-2222,y=0,z=279,dx=272,dy=240,dz=131] run return run function johto:world/musictitles/small {text:"Route 16", location:55, includes:""}
-#execute if entity @s[x=-2121,y=0,z=-529,dx=171,dy=240,dz=807] run return run function johto:world/musictitles/small {text:"Route 17", location:56, includes:""}
-#execute if entity @s[x=-2287,y=0,z=-607,dx=271,dy=240,dz=77] run return run function johto:world/musictitles/small {text:"Route 18", location:57, includes:""}
+# HGSS Overrides
+#--------------------------------------------------------------------------------------------------
+# Connect Goldenrod City - Goldenrod Underground
+execute if entity @s[x=349,y=0,z=-461,dx=239,dy=240,dz=194,tag=DSSound] run return run function johto:world/musictitles/big {text:"Goldenrod City", location:310, color:"yellow", subtext:"A Happening Big City", includes:"unless score @s MusicTitles matches 206 unless score @s MusicTitles matches 208 "}
 
-# TODO: Poke Marts & Goldenrod/Celadon Department Stores
+# Disconnect Routes 16-18, Cycling Road
+execute if entity @s[x=-2222,y=0,z=279,dx=272,dy=240,dz=131,tag=DSSound] run return run function johto:world/musictitles/small {text:"Route 16", location:55, includes:""}
+execute if entity @s[x=-2121,y=0,z=-529,dx=171,dy=240,dz=807,tag=DSSound] run return run function johto:world/musictitles/small {text:"Route 17", location:56, includes:"unless entity @s[tag=CyclingMusic] "}
+execute if entity @s[x=-2287,y=0,z=-607,dx=271,dy=240,dz=77,tag=DSSound] run return run function johto:world/musictitles/small {text:"Route 18", location:57, includes:""}
+
+# Poke Marts & Department Stores
+execute if entity @s[tag=DSSound] if predicate johto:pokemarts run return run function johto:world/musictitles/small {text:"Poke Mart", location:220, includes:""}
+execute if entity @s[tag=DSSound] if predicate {condition:"any_of",terms:[{condition:"location_check",predicate:{"position":{"x":{"min":443,"max":454},"y":{"min":64,"max":110},"z":{"min":-423,"max":-421}}}},{condition:"location_check",predicate:{"position":{"x":{"min":441,"max":456},"y":{"min":64,"max":110},"z":{"min":-421,"max":-419}}}},{condition:"location_check",predicate:{"position":{"x":{"min":439,"max":458},"y":{"min":64,"max":110},"z":{"min":-419,"max":-417}}}},{condition:"location_check",predicate:{"position":{"x":{"min":432,"max":465},"y":{"min":64,"max":110},"z":{"min":-417,"max":-391}}}},{condition:"location_check",predicate:{"position":{"x":{"min":430,"max":467},"y":{"min":99,"max":110},"z":{"min":-426,"max":-387}}}}]} run return run function johto:world/musictitles/small {text:"Goldenrod Department Store", location:220, includes:""}
+execute if entity @s[x=-2308,y=63,z=363,dx=40,dy=40,dz=32,tag=DSSound] run return run function johto:world/musictitles/small {text:"Celadon Department Store", location:220, includes:""}
+
+# Disconnect Mt. Silver Cave and Summit
+execute if entity @s[x=-1043,y=60,z=102,dx=135,dy=100,dz=270,tag=DSSound] run return run function johto:world/musictitles/small {text:"Mt. Silver Cave", location:30, includes:""}
+execute if entity @s[x=-967,y=174,z=189,dx=50,dy=30,dz=140,tag=DSSound] run return run function johto:world/musictitles/small {text:"Mt. Silver Summit", location:31, includes:""}
+
+# Connect Route 26 - Pokemon League Reception Gate, Disconnect Route 28 - Pokemon League Reception Gate
+execute if entity @s[x=-1343,y=0,z=-459,dx=126,dy=240,dz=473,tag=DSSound] run return run function johto:world/musictitles/small {text:"Route 26", location:64, includes:"unless score @s MusicTitles matches 65 unless score @s MusicTitles matches 102 "}
+execute if entity @s[x=-1343,y=64,z=15,dx=99,dy=100,dz=60,tag=DSSound] run return run function johto:world/musictitles/small {text:"Pokemon League Reception Gate", location:102, includes:"unless score @s MusicTitles matches 64 "}
+execute if entity @s[x=-1262,y=64,z=68,dx=8,dy=100,dz=51,tag=DSSound] run return run function johto:world/musictitles/small {text:"Pokemon League Reception Gate", location:102, includes:"unless score @s MusicTitles matches 64 "}
+execute if entity @s[x=-1207,y=0,z=-17,dx=146,dy=240,dz=111,tag=DSSound] run return run function johto:world/musictitles/small {text:"Route 28", location:103, includes:"unless score @s MusicTitles matches 104 "}
+#--------------------------------------------------------------------------------------------------
 
 
 # Connected Areas with Shared Music
@@ -41,7 +61,7 @@ execute if entity @s[x=-307,y=0,z=-94,dx=94,dy=240,dz=223] run return run functi
 execute if entity @s[x=-1343,y=64,z=15,dx=99,dy=100,dz=60] run return run function johto:world/musictitles/small {text:"Pokemon League Reception Gate", location:102, includes:"unless score @s MusicTitles matches 102..104 "}
 execute if entity @s[x=-1262,y=64,z=68,dx=8,dy=100,dz=51] run return run function johto:world/musictitles/small {text:"Pokemon League Reception Gate", location:102, includes:"unless score @s MusicTitles matches 102..104 "}
 execute if entity @s[x=-1207,y=0,z=-17,dx=146,dy=240,dz=111] run return run function johto:world/musictitles/small {text:"Route 28", location:103, includes:"unless score @s MusicTitles matches 102..104 "}
-execute if entity @s[x=-1061,y=0,z=-17,dx=146,dy=240,dz=111] run return run function johto:world/musictitles/small {text:"Mt. Silver", location:104, includes:"unless score @s MusicTitles matches 102..104 "}
+execute if entity @s[x=-1061,y=0,z=-17,dx=146,dy=240,dz=111] run return run function johto:world/musictitles/small {text:"Mt. Silver", location:104, includes:"unless score @s MusicTitles matches 103 "}
 
 # Mt. Silver Cave and Summit
 execute if entity @s[x=-1043,y=60,z=102,dx=135,dy=100,dz=270] run return run function johto:world/musictitles/small {text:"Mt. Silver Cave", location:30, includes:"unless score @s MusicTitles matches 30..31 "}
