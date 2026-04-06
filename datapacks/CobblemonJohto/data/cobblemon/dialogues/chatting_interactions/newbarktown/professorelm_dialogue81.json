@@ -140,7 +140,7 @@
                         "action": [
                             "q.run_command('tag ' + q.player.username + ' add Dialogue81');",
                             "q.run_command('give ' + q.player.username + ' cobblemon:master_ball');",
-                            "q.run_command('playsound minecraft:entity.experience_orb.pickup ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                             ]

@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('playsound minecraft:zapdos ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');"
+        "q.run_command('execute at ' + q.player.username + ' run function johto:sound/playcry {species:\"zapdos\",distance:24,volume:1.5}');"
     ],
     "escapeAction": [],
     "speakers": {

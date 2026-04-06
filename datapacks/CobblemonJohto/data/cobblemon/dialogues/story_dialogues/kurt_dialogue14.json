@@ -179,7 +179,7 @@
                         "value": "close",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud 371 64 -698 1 1 1 1 100');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound flee ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' positioned 371 64 -698 run function johto:sound/playglobalsfx {sfx:\"warpfrom\",category:\"player\"}');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue14');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"

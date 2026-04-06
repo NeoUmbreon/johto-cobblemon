@@ -89,7 +89,7 @@
                         "value": "next",
                         "action": [
                         "q.run_command('execute as ' + q.player.username + ' run fill -164 63 213 -161 63 216 air');",
-                        "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.iron_golem.death ambient @s ~ ~ ~ 1 1 1');",
+                        "q.run_command('execute as ' + q.player.username + ' positioned -162.0 63.5 215.0 run function johto:sound/playglobalsfx {sfx:\"revealdoor\",category:\"block\"}');",
                         "q.run_command('execute as ' + q.player.username + ' run fill -160 63 213 -160 63 216 minecraft:stone_brick_stairs[facing=east]');",
                         "q.dialogue.set_page('page5');"
                     ]

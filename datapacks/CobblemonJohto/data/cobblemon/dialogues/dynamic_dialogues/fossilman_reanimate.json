@@ -249,7 +249,7 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
                             "q.dialogue.set_page('page4');"
                         ]
                     }

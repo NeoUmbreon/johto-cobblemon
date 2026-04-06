@@ -27,7 +27,10 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"keyitem\"}');",
+                            "q.dialogue.set_page('page2');"
+                        ]
                     }
                 ]
             }

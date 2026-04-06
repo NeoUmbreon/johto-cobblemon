@@ -58,7 +58,7 @@
                         "value": "next",
                         "action": [
                             "q.dialogue.set_page('page3');",
-                            "q.run_command('playsound minecraft:block.portal.travel ambient ' + q.player.username + ' ~ ~ ~ 10 1 1');"
+                            "q.run_command('execute at ' + q.player.username + ' at @n[type=cobblemon:pokemon,distance=..24,nbt={Pokemon:{Species:\"cobblemon:ampharos\",PokemonOriginalTrainerType:\"NONE\"}}] run function johto:sound/playglobalsfx {sfx:\"pokemonhealed\",category:\"player\"}');"
                         ]
                     }
                 ]
@@ -77,7 +77,10 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": [
+                            "q.dialogue.set_page('page4');",
+                            "q.run_command('execute at ' + q.player.username + ' run function johto:sound/playcry {species:\"ampharos\",distance:24,volume:1.5}');"
+                        ]
                     }
                 ]
             }
@@ -95,10 +98,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": [
-                        "q.dialogue.set_page('page5');",
-                        "q.run_command('playsound ampharos ambient ' + q.player.username + ' ~ ~ ~ 10 1 1');"
-                    ]
+                        "action": "q.dialogue.set_page('page5');"
                     }
                 ]
             }

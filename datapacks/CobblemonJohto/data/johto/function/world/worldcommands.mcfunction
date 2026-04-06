@@ -37,7 +37,7 @@ execute as @p[x=-2781,y=64,z=421,distance=..100,tag=!AllGyms] unless entity @a[x
 execute as @p[x=-2781,y=64,z=421,distance=..100,tag=!AllGyms] unless entity @a[x=-2794,y=63,z=410,dx=26,dy=5,dz=15,scores={BattleStart=1..}] run tp @e[x=-2781,y=63,z=421,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
 
 #Runs Farfetch'd chasing function
-execute as @a[limit=1,x=513,y=60,z=-793,dx=187,dy=10,dz=228] run function johto:world/farfetchd
+execute if entity @a[x=513,y=60,z=-793,dx=187,dy=10,dz=228] run function johto:world/farfetchd
 
 #Legendary Dog & Eon Grass commands 3.0
 execute as @a[tag=!GrassCooldown] at @s if block ~ ~ ~ minecraft:short_grass run function johto:triggers/roaminglegends
@@ -355,9 +355,6 @@ execute as @a[x=240,y=63,z=297,dx=33,dy=240,dz=33] run function johto:world/tint
 
 #Bill's Grandfather giving out stones
 execute as @a[x=-3072,y=63,z=1005,dx=21,dy=5,dz=12,tag=Dialogue195] run function johto:triggers/billshouse
-
-#Tin Tower
-execute as @a[x=240,y=63,z=297,dx=33,dy=240,dz=33] run function johto:world/tintower
 
 #Runs Goldenrod Department Center Elevator
 execute if entity @a[x=438,y=63,z=-395,dx=3,dy=34,dz=3] run function johto:world/departmentelevator

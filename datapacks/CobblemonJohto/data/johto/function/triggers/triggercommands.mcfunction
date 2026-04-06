@@ -34,7 +34,7 @@ execute as @a[scores={TriggerCommand=10}] run data merge entity @e[x=332,y=64,z=
 execute as @a[scores={TriggerCommand=10}] run data merge entity @e[x=332,y=64,z=-17,distance=..5,type=cobblemon:pokemon,limit=1,name=Sudowoodo] {NoAI:0b}
 execute as @a[scores={TriggerCommand=10}] run data modify entity @e[x=332,y=64,z=-17,distance=..5,type=cobblemon:pokemon,limit=1,name=Sudowoodo] Unbattleable set value 0b
 execute as @a[scores={TriggerCommand=10}] run advancement grant @s only johto:story/weirdtree
-execute as @a[scores={TriggerCommand=10}] run playsound cobblemon:pokemon.sudowoodo.cry ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=10}] at @s run function johto:sound/playcry {species:"sudowoodo",distance:24,volume:1.5}
 
 #11 - Sets up Electrode in Rocket HQ
 execute as @a[scores={TriggerCommand=11}] unless entity @e[x=-92,y=46,z=187,distance=..2,type=cobblemon:pokemon] run pokespawnat -92 46 187 electrode no_ai=yes level=23

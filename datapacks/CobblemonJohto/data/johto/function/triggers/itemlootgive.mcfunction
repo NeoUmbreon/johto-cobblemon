@@ -3,7 +3,7 @@
 
 execute as @s[x=513,y=55,z=-395,distance=..4,tag=CoinCase] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=513,y=55,z=-395,distance=..4,tag=!CoinCase] run tellraw @s {"text":"You recieved a Coin Case! You can now get coins in the Game Corner.","italic":true,"color":"gray"}
-execute as @s[x=513,y=55,z=-395,distance=..4,tag=!CoinCase] run function johto:sound/playlocalsfx {sfx:"item"}
+execute as @s[x=513,y=55,z=-395,distance=..4,tag=!CoinCase] run function johto:sound/playlocalsfx {sfx:"keyitem"}
 execute as @s[x=513,y=55,z=-395,distance=..4,tag=!CoinCase] run tag @s add CoinCase
 
 execute as @s[x=-671,y=64,z=-485,distance=..4,tag=ItemLoot1] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
@@ -2223,19 +2223,19 @@ execute as @s[x=-1292,y=64,z=212,distance=..4,tag=!ItemLoot367] run tag @s add I
 execute as @s[x=130,y=65,z=-571,distance=..4,tag=ItemLoot368] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=130,y=65,z=-571,distance=..4,tag=!ItemLoot368] run give @s cobblemon:poke_rod[custom_name='["",{"text":"Old Rod","italic":false}]',lore=['["",{"text":"An old and beat-up fishing rod.","italic":false}]','["",{"text":"Use it by any body of water to","italic":false}]','["",{"text":"fish for wild aquatic Pokémon.","italic":false}]'],enchantment_glint_override=false,enchantments={levels:{lure:1},show_in_tooltip:false},unbreakable={}]
 execute as @s[x=130,y=65,z=-571,distance=..4,tag=!ItemLoot368] run tellraw @s {"text":"You found an Old Rod!","italic":true,"color":"gray"}
-execute as @s[x=130,y=65,z=-571,distance=..4,tag=!ItemLoot368] run function johto:sound/playlocalsfx {sfx:"item"}
+execute as @s[x=130,y=65,z=-571,distance=..4,tag=!ItemLoot368] run function johto:sound/playlocalsfx {sfx:"keyitem"}
 execute as @s[x=130,y=65,z=-571,distance=..4,tag=!ItemLoot368] run tag @s add ItemLoot368
 
 execute as @s[x=793,y=65,z=-2,distance=..4,tag=ItemLoot369] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=793,y=65,z=-2,distance=..4,tag=!ItemLoot369] run give @s cobblemon:great_rod[custom_name='["",{"text":"Good Rod","italic":false}]',lore=['["",{"text":"A new, good-quality fishing rod.","italic":false}]','["",{"text":"Use it by any body of water to","italic":false}]','["",{"text":"fish for wild aquatic Pokémon.","italic":false}]'],enchantment_glint_override=false,enchantments={levels:{lure:2},show_in_tooltip:false},unbreakable={}]
 execute as @s[x=793,y=65,z=-2,distance=..4,tag=!ItemLoot369] run tellraw @s {"text":"You found a Great Rod!","italic":true,"color":"gray"}
-execute as @s[x=793,y=65,z=-2,distance=..4,tag=!ItemLoot369] run function johto:sound/playlocalsfx {sfx:"item"}
+execute as @s[x=793,y=65,z=-2,distance=..4,tag=!ItemLoot369] run function johto:sound/playlocalsfx {sfx:"keyitem"}
 execute as @s[x=793,y=65,z=-2,distance=..4,tag=!ItemLoot369] run tag @s add ItemLoot369
 
 execute as @s[x=-3287,y=65,z=-135,distance=..4,tag=ItemLoot370] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=-3287,y=65,z=-135,distance=..4,tag=!ItemLoot370] run give @s cobblemon:ultra_rod[custom_name='["",{"text":"Super Rod","italic":false}]',lore=['["",{"text":"An awesome, high-tech fishing rod.","italic":false}]','["",{"text":"Use it by any body of water to","italic":false}]','["",{"text":"fish for wild aquatic Pokémon.","italic":false}]'],enchantment_glint_override=false,enchantments={levels:{lure:3},show_in_tooltip:false},unbreakable={}]
 execute as @s[x=-3287,y=65,z=-135,distance=..4,tag=!ItemLoot370] run tellraw @s {"text":"You found a Super Rod!","italic":true,"color":"gray"}
-execute as @s[x=-3287,y=65,z=-135,distance=..4,tag=!ItemLoot370] run function johto:sound/playlocalsfx {sfx:"item"}
+execute as @s[x=-3287,y=65,z=-135,distance=..4,tag=!ItemLoot370] run function johto:sound/playlocalsfx {sfx:"keyitem"}
 execute as @s[x=-3287,y=65,z=-135,distance=..4,tag=!ItemLoot370] run tag @s add ItemLoot370
 
 # If they already have the map anywhere, show message once (prevents duplicates)
@@ -2246,7 +2246,7 @@ execute as @s[x=-270,y=65,z=-505,distance=..5] unless items entity @s inventory.
 # If they don't have the map anywhere, give it to them (allows recovery if lost)
 execute as @s[x=-270,y=65,z=-505,distance=..5] unless items entity @s inventory.* minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.mainhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.offhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] run function johto:spawn/townmap
 execute as @s[x=-270,y=65,z=-505,distance=..5] unless items entity @s inventory.* minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.mainhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.offhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] run tellraw @s {"text":"You received a Town Map!","italic":true,"color":"gray"}
-execute as @s[x=-270,y=65,z=-505,distance=..5] unless items entity @s inventory.* minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.mainhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.offhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] run function johto:sound/playlocalsfx {sfx:"item"}
+execute as @s[x=-270,y=65,z=-505,distance=..5] unless items entity @s inventory.* minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.mainhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.offhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] run function johto:sound/playlocalsfx {sfx:"keyitem"}
 execute as @s[x=-270,y=65,z=-505,distance=..5] unless items entity @s inventory.* minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.mainhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] unless items entity @s weapon.offhand minecraft:filled_map[minecraft:custom_data~{johto_town_map:1b}] run tag @s add ItemLoot371
 
 #ItemLoot372 Flash HM
@@ -2693,7 +2693,7 @@ execute as @s[x=-2562,y=66,z=889,distance=..4,tag=!ItemLoot444] run tag @s add I
 execute as @s[x=426,y=38,z=-304,distance=..4,tag=ItemLoot445] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=426,y=38,z=-304,distance=..4,tag=!ItemLoot445] run tag @s add CardKey
 execute as @s[x=426,y=38,z=-304,distance=..4,tag=!ItemLoot445] run tellraw @s {"text":"You received a Card Key!","italic":true,"color":"gray"}
-execute as @s[x=426,y=38,z=-304,distance=..4,tag=!ItemLoot445] run function johto:sound/playlocalsfx {sfx:"item"}
+execute as @s[x=426,y=38,z=-304,distance=..4,tag=!ItemLoot445] run function johto:sound/playlocalsfx {sfx:"keyitem"}
 execute as @s[x=426,y=38,z=-304,distance=..4,tag=!ItemLoot445] run tag @s add ItemLoot445
 
 execute as @s[x=1230,y=64,z=-429,distance=..5,tag=!ItemLoot446] run function johto:sound/playlocalsfx {sfx:"keyitem"}
@@ -2707,7 +2707,7 @@ execute as @s[x=-1742,y=64,z=637,distance=..4,tag=!ItemLoot449,tag=GoldPick] run
 execute as @s[x=-1742,y=64,z=637,distance=..4,tag=!ItemLoot449,tag=SilverPick] run function johto:spawn/rainbowfeather
 execute as @s[x=-1742,y=64,z=637,distance=..4,tag=!ItemLoot449,tag=GoldPick] run tellraw @s {"text":"You received a Silver Wing!","italic":true,"color":"gray"}
 execute as @s[x=-1742,y=64,z=637,distance=..4,tag=!ItemLoot449,tag=SilverPick] run tellraw @s {"text":"You received a Rainbow Wing!","italic":true,"color":"gray"}
-execute as @s[x=-1742,y=64,z=637,distance=..4,tag=!ItemLoot449] run function johto:sound/playlocalsfx {sfx:"item"}
+execute as @s[x=-1742,y=64,z=637,distance=..4,tag=!ItemLoot449] run function johto:sound/playlocalsfx {sfx:"keyitem"}
 execute as @s[x=-1742,y=64,z=637,distance=..4,tag=!ItemLoot449,tag=GoldPick] run tag @s add ItemLoot449
 execute as @s[x=-1742,y=64,z=637,distance=..4,tag=!ItemLoot449,tag=SilverPick] run tag @s add ItemLoot449
 
