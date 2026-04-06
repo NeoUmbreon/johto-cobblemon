@@ -137,8 +137,8 @@ execute if score @s MusicTitles matches 39 run return run function johto:sound/p
 # Tin Tower
 # Loop Only
 
-# Dark Cave (& Ice Path, Slowpoke Well, Seafoam Islands)
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":10}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":20}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":91}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":93}}]} run return run function johto:sound/playrecord {track:"gb/areas/darkcaveintro", duration:258}
+# Ice Path (& Dark Cave, Slowpoke Well, Seafoam Islands)
+execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":10}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":20}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":91}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":93}}]} run return run function johto:sound/playrecord {track:"gb/areas/icepathintro", duration:258}
 
 # Dragon's Den
 execute if score @s MusicTitles matches 12 run return run function johto:sound/playrecord {track:"gb/areas/dragonsdenintro", duration:217}

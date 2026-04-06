@@ -138,8 +138,8 @@ execute if score @s MusicTitles matches 39 run return run function johto:sound/p
 # Tin Tower
 execute if score @s MusicTitles matches 216 run return run function johto:sound/playrecord {track:"gb/areas/tintower", duration:836}
 
-# Dark Cave (& Ice Path, Slowpoke Well, Seafoam Islands)
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":10}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":20}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":91}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":93}}]} run return run function johto:sound/playrecord {track:"gb/areas/darkcave", duration:1414}
+# Ice Path (& Dark Cave, Slowpoke Well, Seafoam Islands)
+execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":10}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":20}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":91}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":93}}]} run return run function johto:sound/playrecord {track:"gb/areas/icepath", duration:1414}
 
 # Dragon's Den
 execute if score @s MusicTitles matches 12 run return run function johto:sound/playrecord {track:"gb/areas/dragonsden", duration:1157}
@@ -179,8 +179,8 @@ execute if score @s MusicTitles matches 312 run return run function johto:sound/
 # Mt. Moon Square (Monday Nights Only)
 #execute if score @s MusicTitles matches 26 run return run function johto:sound/playrecord {track:"gb/areas/mtmoonsquare", duration:225}
 
-# Rock Tunnel (& Underground Path, Diglett's Cave, Mt. Moon, Mt. Moon Square, Cerulean Cave)
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":5}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":11}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":26,"max":27}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":38}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":38}}]} run return run function johto:sound/playrecord {track:"gb/areas/rocktunnel", duration:418}
+# Rock Tunnel (& Underground Path, Diglett's Cave, Mt. Moon, Mt. Moon Square, Cerulean Cave) 5 11 26 27 38 219
+execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":5}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":11}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":26,"max":27}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":38}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":219}}]} run return run function johto:sound/playrecord {track:"gb/areas/rocktunnel", duration:418}
 
 # Celadon City (& Fuchsia City)
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":303}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":309}}]} run return run function johto:sound/playrecord {track:"gb/settlements/celadoncity", duration:624}
