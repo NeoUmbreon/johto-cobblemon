@@ -2,12 +2,12 @@
 $execute if score @s MusicTitles matches $(location) run return 0
 
 
-# Restart music unless surfing, radio off, or music would be the same
-$execute as @s[tag=!Surfing] unless score @s RadioSelect matches 3..8 $(includes)run function johto:tools/forceclick
+# Restart music (unless surfing, in battle, not on world radio, or music would be the same)
+$execute as @s[tag=!Surfing,scores={BattleStart=0,RadioSelect=2}] $(includes)run function johto:tools/forceclick
 
 
-# Restart music if cycling
-execute as @s[tag=CyclingMusic] run function johto:tools/forceclick
+# Restart music if cycling (unless surfing, in battle, or not on world radio)
+execute as @s[tag=CyclingMusic,tag=!Surfing,scores={BattleStart=0,RadioSelect=2}] run function johto:tools/forceclick
 execute as @s[tag=CyclingMusic] run tag @s remove CyclingMusic
 
 

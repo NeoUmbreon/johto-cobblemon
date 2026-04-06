@@ -124,7 +124,7 @@ execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custo
 
 execute as @a[tag=BikeEquip] run clear @s minecraft:carrot_on_a_stick[custom_name='["",{"text":"Bicycle","italic":false,"color":"red"}]',lore=['["",{"text":"A folding bicycle that allows faster","italic":false}]','[{"text":"movement than the Running Shoes.","italic":false}]'],custom_model_data=5]
 execute as @a[tag=BikeEquip] run item replace entity @s armor.head with carrot_on_a_stick[custom_name='["",{"text":"Bicycle","italic":false,"color":"red"}]',lore=['["",{"text":"A folding bicycle that allows faster","italic":false}]','[{"text":"movement than the Running Shoes.","italic":false}]'],custom_model_data=5]
-execute as @a[tag=BikeEquip] run function johto:tools/forceclick
+execute as @a[tag=BikeEquip,tag=!Surfing,scores={BattleStart=0,RadioSelect=2}] unless entity @s[scores={MusicTitles=56},tag=DSSound] run function johto:tools/forceclick
 #execute as @a[tag=BikeEquip] run playsound minecraft:item.armor.equip_iron ambient @s
 #TODO: add real bicycle equip sound here
 
@@ -139,8 +139,8 @@ tag @a[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name": '{"extra"
 execute as @a[tag=Cycling] unless entity @s[nbt={Inventory:[{Slot:103b,components:{"minecraft:custom_name":'{"extra":[{"color":"red","italic":false,"text":"Bicycle"}],"text":""}'}}]}] run tag @s remove Cycling
 
 #Stops music if players dequips cycle
-execute as @a[tag=CyclingMusic] unless entity @s[tag=Cycling] run function johto:tools/forceclick
-execute as @a[tag=CyclingMusic] unless entity @s[tag=Cycling] run tag @s remove CyclingMusic
+execute as @a[tag=CyclingMusic,tag=!Cycling,tag=!Surfing,scores={BattleStart=0,RadioSelect=2}] unless entity @s[scores={MusicTitles=56},tag=DSSound] run function johto:tools/forceclick
+execute as @a[tag=CyclingMusic,tag=!Cycling] run tag @s remove CyclingMusic
 
 
 #Displays the player's Battle Points or Money if in a shop that uses them
