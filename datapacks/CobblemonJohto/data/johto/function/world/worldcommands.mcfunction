@@ -157,25 +157,16 @@ title @a[team=battletower] actionbar ["",{"text":"Your Battle Points: "},{"score
 execute as @a[scores={click=1..},tag=TempDelay,nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}}] run function johto:triggers/click
 tag @a[scores={click=1..},tag=!TempDelay,nbt={SelectedItem:{components:{"minecraft:custom_name":'{"extra":[{"color":"aqua","italic":false,"text":"Radio"}],"text":""}'}}}] add TempDelay
 
-
+#Detects if player has switched the slot of their radio, and refreshes their sound if so
+execute as @a[tag=!RadioOff] at @s run function johto:world/switchradiostation
 
 #Runs battle music and post-battle events
 #Battle endings
 execute as @a[scores={BattleEnd=1..}] run function johto:triggers/battles/battleend
 
-
 #Battle start and music
 #execute as @a[scores={BattleStart=1..,MusicCooldown=0},tag=BattleMusicCooldown] run tag @s remove BattleMusicCooldown
 #execute as @a[scores={BattleStart=1..},tag=!BattleMusicCooldown] run function johto:triggers/battles/battlestart
-
-
-
-
-
-# Detects if player has switched the slot of their radio, and refreshes their sound if so
-execute as @a[tag=!RadioOff] at @s run function johto:world/switchradiostation
-
-
 
 #Removes a MusicCooldown score each refresh if present
 #scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
