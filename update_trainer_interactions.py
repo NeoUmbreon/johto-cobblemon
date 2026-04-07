@@ -234,7 +234,7 @@ def update_interaction_file(path: Path):
     folder = path.parent.name
 
     if "johto:trainers/start_battle" in json.dumps(data):
-        print(f"Skipping (already converted): {path}")
+        #print(f"Skipping (already converted): {path}")
         return
 
     battle_id = get_battle_music(folder, trainer_id)
@@ -298,14 +298,13 @@ def main():
 
         # Recursive skip for gym_leaders
         if "gym_leaders" in file_path.parts:
-            print(f"Skipping gym_leaders: {file_path}")
+            #print(f"Skipping gym_leaders: {file_path}")
             continue
-
-        # TODO
+        """
         if "silver" in file_path.parts:
             print(f"Skipping silver: {file_path}")
             continue
-
+        """
         try:
             result = update_interaction_file(file_path)
 
