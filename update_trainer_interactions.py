@@ -45,6 +45,83 @@ KANTO_FOLDERS = {
     "seafoamislands","pokemonmansion","viridianforest"
 }
 
+def is_silver(trainer_id: str) -> bool:
+    return "_silver" in trainer_id
+
+def get_silver_base_id(trainer_id: str) -> str:
+    return re.sub(r"\d+$", "", trainer_id)
+
+def silver_base_entity(folder: str, trainer_id: str):
+    base_id = get_silver_base_id(trainer_id)
+
+    base_file = NPC_DIR / folder / f"{base_id}.json"
+    if base_file.exists():
+        return base_file
+
+    # Try to find a variant to copy from
+    for i in range(1, 4):
+        variant_file = NPC_DIR / folder / f"{base_id}{i}.json"
+        if variant_file.exists():
+            with open(variant_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            # Remove party so base NPC has no team
+            data.pop("party", None)
+
+            with open(base_file, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=4, ensure_ascii=False)
+
+            print(f"Created base silver NPC: {base_file}")
+            return base_file
+
+    print(f"No variant found to create base NPC: {base_id}")
+    return None
+
+def export_all_silver_variants(folder: str, base_id: str):
+    for i in range(1, 4):
+        variant_id = f"{base_id}{i}"
+        entity_file = NPC_DIR / folder / f"{variant_id}.json"
+
+        if not entity_file.exists():
+            print(f"Missing variant: {entity_file}")
+            continue
+
+        with open(entity_file, "r", encoding="utf-8") as f:
+            entity_data = json.load(f)
+
+        trainer_name = entity_data.get("name", variant_id)
+
+        party = entity_data.get("party", {})
+        pokemon_list = party.get("pokemon", [])
+
+        team = []
+
+        for entry in pokemon_list:
+            match = re.match(r"(.+?)\s+level=(\d+)", entry, re.IGNORECASE)
+            if not match:
+                continue
+
+            species = match.group(1).strip().lower()
+            level = int(match.group(2))
+
+            team.append({
+                "species": species,
+                "level": level
+            })
+
+        export_data = {
+            "name": trainer_name,
+            "team": team
+        }
+
+        TBCS_TRAINERS_EXPORT_DIR.mkdir(exist_ok=True)
+
+        output_file = TBCS_TRAINERS_EXPORT_DIR / f"{variant_id}.json"
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(export_data, f, indent=2, ensure_ascii=False)
+
+        print(f"Exported silver trainer: {output_file}")
+        
 def get_battle_music(folder: str, trainer_id: str) -> int:
     if trainer_id.startswith("rocket"):
         return 14  # Rocket music
@@ -111,7 +188,6 @@ def generate_battle_end_copy(trainer_id: str, folder: str):
 
     print(f"Generated battle end copy: {new_file}")
     return new_file
-
 # Inject Trainer Variables into config
 def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid):
     if "config" not in entity_data or not isinstance(entity_data["config"], list):
@@ -158,9 +234,14 @@ def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid):
             "defaultValue": trainer_uid
         })
 
-# Update trainers to use right click interaction
 def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_uid: int):
-    entity_file = NPC_DIR / folder / f"{trainer_id}.json"
+    # Collapse to base file if Silver
+    if is_silver(trainer_id):
+        entity_file = silver_base_entity(folder, trainer_id)
+        if not entity_file:
+            return
+    else:
+        entity_file = NPC_DIR / folder / f"{trainer_id}.json"
 
     if not entity_file.exists():
         print(f"Entity file not found: {entity_file}")
@@ -170,17 +251,20 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
         entity_data = json.load(f)
 
     inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid)
-        
-    entity_data["interaction"] = {
-        "type": "dialogue",
-        "dialogue": f"cobblemon:{trainer_id}_end_defeated"
-    }
+
+    if is_silver(trainer_id):
+        entity_data.pop("interaction", None)
+    else:
+        entity_data["interaction"] = {
+            "type": "dialogue",
+            "dialogue": f"cobblemon:{trainer_id}_end_defeated"
+        }
 
     with open(entity_file, "w", encoding="utf-8") as f:
         json.dump(entity_data, f, indent=4, ensure_ascii=False)
 
     print(f"Updated entity: {entity_file}")
-    
+
 def export_trainer_team(trainer_id: str, folder: str):
     entity_file = NPC_DIR / folder / f"{trainer_id}.json"
 
@@ -225,7 +309,6 @@ def export_trainer_team(trainer_id: str, folder: str):
 
     print(f"Exported trainer file: {output_file}")
 
-# Update interaction file
 def update_interaction_file(path: Path):
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -279,6 +362,7 @@ def update_interaction_file(path: Path):
             "action": build_battle_action(trainer_id, battle_id),
         }
 
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
@@ -286,25 +370,19 @@ def update_interaction_file(path: Path):
     return trainer_id, folder, battle_id
 
 
-# Main
 def main():
     files = sorted(INTERACTIONS_DIR.rglob("*_interaction.json"))
     print(f"Found {len(files)} interaction files\n")
-    
+
     uid_counter = 1
     processed = []
-    
-    for file_path in files:
 
+    for file_path in files:
         # Recursive skip for gym_leaders
         if "gym_leaders" in file_path.parts:
             #print(f"Skipping gym_leaders: {file_path}")
             continue
-        """
-        if "silver" in file_path.parts:
-            print(f"Skipping silver: {file_path}")
-            continue
-        """
+
         try:
             result = update_interaction_file(file_path)
 
@@ -317,10 +395,27 @@ def main():
             print(f"FAILED: {file_path}")
             print(e)
 
+    seen_silver = set()
+
     for trainer_id, folder, battle_id, trainer_uid in processed:
-        generate_battle_end_copy(trainer_id, folder)
-        update_trainer_entity(trainer_id, folder, battle_id, trainer_uid)
-        export_trainer_team(trainer_id, folder)
+
+        if is_silver(trainer_id):
+            base_id = get_silver_base_id(trainer_id)
+
+            if base_id in seen_silver:
+                continue
+
+            seen_silver.add(base_id)
+
+            generate_battle_end_copy(base_id, folder)
+            update_trainer_entity(trainer_id, folder, battle_id, trainer_uid)
+
+            export_all_silver_variants(folder, base_id)
+
+        else:
+            generate_battle_end_copy(trainer_id, folder)
+            update_trainer_entity(trainer_id, folder, battle_id, trainer_uid)
+            export_trainer_team(trainer_id, folder)
 
     print("\nDone.")
 
