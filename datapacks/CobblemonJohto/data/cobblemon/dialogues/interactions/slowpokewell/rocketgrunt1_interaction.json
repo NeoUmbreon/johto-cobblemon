@@ -1,23 +1,17 @@
 {   "initializationAction": [              
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 7');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-    "q.run_command('tag ' + q.player.username + ' add dialogueLock');"
+    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');"
         ],
-    "escapeAction": [                           
-    "q.run_command('execute as ' + q.player.username + ' run function johto:trainers/start_battle {battle_id:14,tbcs_id:\"tbcs:rocketgrunt1\",trainer_id:\"rocketgrunt1\"}');",
-    "q.run_command('tag ' + q.player.username + ' remove dialogueLock');",
-    "q.dialogue.close();"
+    "escapeAction": [              
         ],
     "names": ["Rocket Grunt"],
     "speakers": {
         "npc": {
-          "name": "Rocket Grunt",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:rocketgrunt",
-            "isLeftSide": false
-          }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face();"
         }
     },
     "pages": [
@@ -46,23 +40,12 @@
             "input": {
                 "type": "option",
                 "vertical": false,
-
-                "timeout": {
-                "duration": 2,
-                "showTimer": true,
-                "action": [
-                    "q.run_command('execute as ' + q.player.username + ' run function johto:trainers/start_battle {battle_id:14,tbcs_id:\"tbcs:rocketgrunt1\",trainer_id:\"rocketgrunt1\"}');",
-                    "q.run_command('tag ' + q.player.username + ' remove dialogueLock');",
-                    "q.dialogue.close();"
-                ]
-                },
-
                 "options": [
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
                         "action": [                           
-                                    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 14');",
+                                    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 11');",
                                     "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                                     "v.battle = q.npc.start_battle(q.player);"
                             ]
@@ -78,6 +61,5 @@
                     ]
                 }
             }
-        }
-    ]
-}
+        ]
+    }

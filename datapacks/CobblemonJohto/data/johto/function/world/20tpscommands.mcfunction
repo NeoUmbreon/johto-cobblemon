@@ -1,3 +1,14 @@
+#-------------------------------------------------------------------------------------------------------------------------
+#Auto-battle detection
+execute at @a[scores={BattleStart=0}] as @e[type=cobblemon:npc,tag=!trainerBusy,distance=..6,nbt={Config:{trainer:1.0d}}] run function johto:trainers/detect_trainers with entity @s Config
+
+# Keep players inside radius
+execute as @e[type=cobblemon:npc,tag=trainerBusy] store result score @s TrainerUID run data get entity @s Config.trainer_uid
+execute as @a[scores={BattleStart=1..}] at @s run execute as @e[type=cobblemon:npc,tag=trainerBusy,distance=6.05..7.5] if score @s TrainerUID = @a[distance=..0.1,limit=1] ActiveTrainer run tp @a[distance=..0.1,limit=1] @s
+
+# Free trainer if no active battle players nearby
+execute as @e[type=cobblemon:npc,tag=trainerBusy] at @s unless entity @a[scores={BattleStart=1..},distance=..7.6,limit=1] run tag @s remove trainerBusy
+
 
 #--------------------------------------------------------------------------------------------------GENERAL WORLD-----------------------------------------------------------------------------------------------------------------------------------
 
@@ -53,13 +64,3 @@ execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..,BattleEnd=0},t
 
 #Removes a MusicCooldown score each refresh if present
 scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
-#-------------------------------------------------------------------------------------------------------------------------
-#Auto-battle detection
-execute at @a[scores={BattleStart=0}] as @e[type=cobblemon:npc,tag=!trainerBusy,distance=..6,nbt={Config:{trainer:1.0d}}] run function johto:trainers/detect_trainers with entity @s Config
-
-# Keep players inside radius
-execute as @e[type=cobblemon:npc,tag=trainerBusy] store result score @s TrainerUID run data get entity @s Config.trainer_uid
-execute as @a[scores={BattleStart=1..}] at @s run execute as @e[type=cobblemon:npc,tag=trainerBusy,distance=6.05..7.5] if score @s TrainerUID = @a[distance=..0.1,limit=1] ActiveTrainer run tp @a[distance=..0.1,limit=1] @s
-
-# Free trainer if no active battle players nearby
-execute as @e[type=cobblemon:npc,tag=trainerBusy] at @s unless entity @a[scores={BattleStart=1..},distance=..7.6,limit=1] run tag @s remove trainerBusy
