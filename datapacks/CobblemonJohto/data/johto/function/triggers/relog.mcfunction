@@ -1,8 +1,8 @@
-# Resets inTrainerBattle
-tag @s remove inTrainerBattle
-
 #removes BattleStart score that mainly defines music
 scoreboard players set @s BattleStart 0
+
+#removes ActiveTrainer score
+scoreboard players set @s ActiveTrainer 0
 
 #Resets Radio if player logs out while listening to music
 scoreboard players set @s MusicCooldown 0
