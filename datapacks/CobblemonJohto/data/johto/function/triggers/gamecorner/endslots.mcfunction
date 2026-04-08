@@ -16,7 +16,7 @@ $execute as @s[scores={SlotRNG$(num)=61}] run tellraw @s {"text":"You won 10 coi
 $execute as @s[scores={SlotRNG$(num)=61}] positioned ~ ~0.5 ~1 positioned ^ ^ ^0.5 run function johto:sound/playglobalsfx {sfx:"present",category:"block"}
 
 #Darn!
-$execute unless score @s SlotRNG$(num) matches 47 unless score @s SlotRNG$(num) matches 51 unless score @s SlotRNG$(num) matches 57 unless score @s SlotRNG$(num) matches 61 positioned ~ ~0.5 ~1 positioned ^ ^ ^0.5 run playsound minecraft:entity.player.burp block @a
+$execute unless score @s SlotRNG$(num) matches 47 unless score @s SlotRNG$(num) matches 51 unless score @s SlotRNG$(num) matches 57 unless score @s SlotRNG$(num) matches 61 positioned ~ ~0.5 ~1 positioned ^ ^ ^0.5 run function johto:sound/playglobalsfx {sfx:"slotmachinelose",category:"block"}
 
 #Return unless Emerald
 function johto:triggers/gamecorner/coinbal

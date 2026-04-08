@@ -4,7 +4,7 @@
 #Ruins progress tracked by armor stands counting up for each piece in the correct spot
 #Boss bar mirrors puzzle progress score
 #Boss bar is assigned when player enters room, removed when player leaves room through portals
-
+#TODO: Check HGSS sfx
 
 
 

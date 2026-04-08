@@ -26,7 +26,8 @@ scoreboard players add @s[scores={DialogueTrigger=1..}] TalkTime 1
 execute as @s[scores={DialogueTrigger=98,TalkTime=1}] run scoreboard players set @s IP 1
 execute as @s[scores={DialogueTrigger=98,TalkTime=1}] run advancement grant @s only johto:badges/champion
 execute as @s[scores={DialogueTrigger=98,TalkTime=1}] run function johto:tools/forceclick
-execute as @s[scores={DialogueTrigger=98,TalkTime=1}] run function johto:sound/playrecord {track:"gb/misc/ending",duration:-1}
+execute as @s[scores={DialogueTrigger=98,TalkTime=1},tag=!DSSound] run function johto:sound/playrecord {track:"gb/misc/ending",duration:-1}
+execute as @s[scores={DialogueTrigger=98,TalkTime=1},tag=DSSound] run function johto:sound/playrecord {track:"ds/misc/ending",duration:-1}
 
 tellraw @s[scores={DialogueTrigger=98,TalkTime=5}] {"text":"Congratulations, you have completed the Indigo League!"}
 tellraw @s[scores={DialogueTrigger=98,TalkTime=15}] {"text":"You can now access the Kanto region!"}
@@ -199,7 +200,8 @@ tag @s[scores={DialogueTrigger=200,TalkTime=4..}] add Dialogue200
 execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run tellraw @s {"text":"Now boarding the Magnet Train!","italic":true,"color":"gray"}
 execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run function johto:tools/forceclick
 execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run scoreboard players set @s MusicCooldown -1
-execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run function johto:sound/playrecord {track:"gb/misc/magnettrain",duration:-1}
+execute as @s[scores={DialogueTrigger=207,TalkTime=1},tag=!DSSound] run function johto:sound/playrecord {track:"gb/misc/magnettrain",duration:-1}
+execute as @s[scores={DialogueTrigger=207,TalkTime=1},tag=DSSound] run function johto:sound/playrecord {track:"ds/misc/magnettrain",duration:-1}
 execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run effect give @s minecraft:blindness 8 1 true
 
 execute as @s[scores={DialogueTrigger=207,TalkTime=9}] run tp @s -2673 73 410 0 ~
@@ -214,7 +216,8 @@ tag @s[scores={DialogueTrigger=207,TalkTime=10..}] add Dialogue207
 execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run tellraw @s {"text":"Now boarding the Magnet Train!","italic":true,"color":"gray"}
 execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run function johto:tools/forceclick
 execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run scoreboard players set @s MusicCooldown -1
-execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run function johto:sound/playrecord {track:"gb/misc/magnettrain",duration:-1}
+execute as @s[scores={DialogueTrigger=208,TalkTime=1},tag=!DSSound] run function johto:sound/playrecord {track:"gb/misc/magnettrain",duration:-1}
+execute as @s[scores={DialogueTrigger=208,TalkTime=1},tag=DSSound] run function johto:sound/playrecord {track:"ds/misc/magnettrain",duration:-1}
 execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run effect give @s minecraft:blindness 8 1 true
 
 execute as @s[scores={DialogueTrigger=208,TalkTime=9}] run tp @s 526 73 -337 0 ~

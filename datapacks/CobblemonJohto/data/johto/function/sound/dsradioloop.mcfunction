@@ -101,9 +101,8 @@ execute if score @s MusicTitles matches 215 run return run function johto:sound/
 # Routes 38-39
 execute if score @s MusicTitles matches 76..77 run return run function johto:sound/playrecord {track:"ds/routes/38", duration:2220}
 
-# Olivine Lighthouse (& Mt. Silver Cave/Summit)
-#TODO: separate Mt. Silver Summit
-execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":212}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":30,"max":31}}}]} run return run function johto:sound/playrecord {track:"ds/areas/olivinelighthouse", duration:1560}
+# Olivine Lighthouse (& Mt. Silver Cave)
+execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":212}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":30}}]} run return run function johto:sound/playrecord {track:"ds/areas/olivinelighthouse", duration:1560}
 
 # Cianwood City
 execute if score @s MusicTitles matches 306 run return run function johto:sound/playrecord {track:"ds/settlements/cianwoodcity", duration:3140}
@@ -213,6 +212,9 @@ execute if score @s MusicTitles matches 35 run return run function johto:sound/p
 
 # Lobby
 execute if score @s MusicTitles matches 25 run return run function johto:sound/playrecord {track:"ds/misc/titlescreen", duration:1518}
+
+# Mt. Silver Summit
+execute if score @s MusicTitles matches 31 run return run function johto:sound/playrecord {track:"ds/misc/wind", duration:600}
 
 # ???
 execute if score @s MusicTitles matches 15 run return run function johto:sound/playrecord {track:"ds/misc/pokewalker", duration:1600}

@@ -125,8 +125,7 @@ execute as @a[scores={click=1..},nbt={SelectedItem:{components:{"minecraft:custo
 execute as @a[tag=BikeEquip] run clear @s minecraft:carrot_on_a_stick[custom_name='["",{"text":"Bicycle","italic":false,"color":"red"}]',lore=['["",{"text":"A folding bicycle that allows faster","italic":false}]','[{"text":"movement than the Running Shoes.","italic":false}]'],custom_model_data=5]
 execute as @a[tag=BikeEquip] run item replace entity @s armor.head with carrot_on_a_stick[custom_name='["",{"text":"Bicycle","italic":false,"color":"red"}]',lore=['["",{"text":"A folding bicycle that allows faster","italic":false}]','[{"text":"movement than the Running Shoes.","italic":false}]'],custom_model_data=5]
 execute as @a[tag=BikeEquip,tag=!Surfing,scores={BattleStart=0,RadioSelect=2}] unless entity @s[scores={MusicTitles=56},tag=DSSound] run function johto:tools/forceclick
-#execute as @a[tag=BikeEquip] run playsound minecraft:item.armor.equip_iron ambient @s
-#TODO: add real bicycle equip sound here
+execute at @a[tag=BikeEquip] run function johto:sound/playglobalsfx {sfx:"equipbicycle",category:"player"}
 
 execute as @a[tag=BikeEquip] run tag @s add CyclingMusic
 tag @a[tag=BikeEquip] remove BikeEquip
