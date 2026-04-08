@@ -148,6 +148,7 @@ execute as @a[tag=CyclingMusic] unless entity @s[tag=Cycling] run tag @s remove 
 title @a[team=shops] actionbar ["",{"text":"Your Money Balance: $"},{"score":{"name":"*","objective":"Money"}}]
 title @a[team=battletower] actionbar ["",{"text":"Your Battle Points: "},{"score":{"name":"*","objective":"BattlePoints"}}]
 
+
 #-------------------------------------------------------------------------------------------------------------------------
 #Music-based commands
 
@@ -304,6 +305,7 @@ spawnpoint @a[x=127,y=64,z=-582,distance=..5] 127 64 -582
 
 
 #Runs Whiteout function
+execute as @a[tag=Whiteout] run scoreboard players set @s BattleStart 0
 
 #Battle tower, ends a player's streak if they lose.
 execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run tp @e[x=908,y=100,z=67,distance=..4,type=cobblemon:pokemon] 10000000 -50000 -10000000
