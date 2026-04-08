@@ -122,7 +122,7 @@
                         "value": "close",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:twisted_spoon');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue188');",
                             "q.dialogue.close();"
                             ]

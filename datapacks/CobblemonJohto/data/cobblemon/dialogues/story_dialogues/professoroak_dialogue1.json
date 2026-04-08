@@ -271,9 +271,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run playsound flee ambient @s ~ ~ ~ 100 1 1');",
-                            "q.run_command('execute as ' + q.player.username + ' run tp @s -724 69 -491');",
-                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.run_command('execute as ' + q.player.username + ' at @s run function johto:tools/tpwithsfx {sfx:\"warpfrom\",xyz:\"-724 69 -491\"}');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue1');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"

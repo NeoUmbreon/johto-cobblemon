@@ -1,0 +1,946 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"//comment": "Cherrygrove City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -260,
+						"max": -251
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -490,
+						"max": -488
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -265,
+						"max": -246
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -488,
+						"max": -472
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Violet City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 11,
+						"max": 20
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -107,
+						"max": -105
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 6,
+						"max": 25
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -105,
+						"max": -89
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Route 32",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 123,
+						"max": 132
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -580,
+						"max": -578
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 118,
+						"max": 137
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -578,
+						"max": -562
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Azalea Town",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 326,
+						"max": 335
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -726,
+						"max": -724
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 321,
+						"max": 340
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -724,
+						"max": -708
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Goldenrod City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 495,
+						"max": 504
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -422,
+						"max": -420
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 490,
+						"max": 509
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -420,
+						"max": -404
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Ecruteak City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 337,
+						"max": 346
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 185,
+						"max": 187
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 332,
+						"max": 351
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 187,
+						"max": 203
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Olivine City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 787,
+						"max": 796
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -39,
+						"max": -37
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 782,
+						"max": 801
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -37,
+						"max": -21
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Cianwood City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 1182,
+						"max": 1191
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -467,
+						"max": -465
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 1177,
+						"max": 1196
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -465,
+						"max": -449
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Mahogany Town",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -181,
+						"max": -172
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 162,
+						"max": 164
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -186,
+						"max": -167
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 164,
+						"max": 180
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Blackthorn City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -667,
+						"max": -658
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 173,
+						"max": 175
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -672,
+						"max": -653
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 175,
+						"max": 191
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Vermilon City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2718,
+						"max": -2709
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 10,
+						"max": 12
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2723,
+						"max": -2704
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 12,
+						"max": 28
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Saffron City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2708,
+						"max": -2699
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 281,
+						"max": 283
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2713,
+						"max": -2694
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 283,
+						"max": 299
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Lavender Town",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -3257,
+						"max": -3248
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 358,
+						"max": 360
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -3262,
+						"max": -3243
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 360,
+						"max": 376
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Route 9",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -3291,
+						"max": -3282
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 677,
+						"max": 679
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -3296,
+						"max": -3277
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 679,
+						"max": 695
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Cerulean City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2748,
+						"max": -2739
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 730,
+						"max": 732
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2753,
+						"max": -2734
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 732,
+						"max": 748
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Celadon City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2464,
+						"max": -2455
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 377,
+						"max": 379
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2469,
+						"max": -2450
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 379,
+						"max": 395
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Fuchsia City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2409,
+						"max": -2400
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -606,
+						"max": -604
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2414,
+						"max": -2395
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -604,
+						"max": -588
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Route 3",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2169,
+						"max": -2160
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 751,
+						"max": 753
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -2174,
+						"max": -2155
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 753,
+						"max": 769
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Pewter City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -1664,
+						"max": -1655
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 604,
+						"max": 606
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -1669,
+						"max": -1650
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 606,
+						"max": 622
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Viridian City",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -1705,
+						"max": -1696
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 9,
+						"max": 11
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -1710,
+						"max": -1691
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 11,
+						"max": 27
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Cinnabar Island",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -1713,
+						"max": -1704
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -894,
+						"max": -892
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -1718,
+						"max": -1699
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": -892,
+						"max": -876
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Mt. Silver",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -1003,
+						"max": -994
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 64,
+						"max": 66
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": -1008,
+						"max": -989
+					},
+					"y": {
+						"min": 64,
+						"max": 80
+					},
+					"z": {
+						"min": 66,
+						"max": 82
+					}
+				}
+			}
+		},
+
+
+		{
+			"//comment": "Safari Zone Gate",
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 1613,
+						"max": 1622
+					},
+					"y": {
+						"min": 88,
+						"max": 104
+					},
+					"z": {
+						"min": -158,
+						"max": -156
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"predicate": {
+				"position": {
+					"x": {
+						"min": 1608,
+						"max": 1627
+					},
+					"y": {
+						"min": 88,
+						"max": 104
+					},
+					"z": {
+						"min": -156,
+						"max": -140
+					}
+				}
+			}
+		}
+	]
+}

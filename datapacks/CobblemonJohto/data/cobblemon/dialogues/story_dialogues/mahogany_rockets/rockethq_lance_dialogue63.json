@@ -37,7 +37,7 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.iron_golem.death ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' positioned -117.5 47.0 175.5 run function johto:sound/playglobalsfx {sfx:\"opendoor\",category:\"block\"');",
                             "q.run_command('execute as ' + q.player.username + ' run fill -122 45 175 -114 48 175 air');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue63');",
                             "q.dialogue.set_page('page2');"

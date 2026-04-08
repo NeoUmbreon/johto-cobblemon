@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('playsound cobblemon:pokemon.totodile.cry ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');"
+        "q.run_command('execute at ' + q.player.username + ' run function johto:sound/playcry {species:\"totodile\",distance:24,volume:1.5}');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -68,7 +68,7 @@
                         "value": "close",
                         "action": [
                             "q.dialogue.close();",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run pokegive totodile level=5');",
                             "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s StarterPick 3');",
                             "q.run_command('execute as ' + q.player.username + ' run opendialogue professorelm_dialogue4 @s');"

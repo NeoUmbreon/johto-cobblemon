@@ -26,6 +26,8 @@ scoreboard players add @s[scores={DialogueTrigger=1..}] TalkTime 1
 execute as @s[scores={DialogueTrigger=98,TalkTime=1}] run scoreboard players set @s IP 1
 execute as @s[scores={DialogueTrigger=98,TalkTime=1}] run advancement grant @s only johto:badges/champion
 execute as @s[scores={DialogueTrigger=98,TalkTime=1}] run function johto:tools/forceclick
+execute as @s[scores={DialogueTrigger=98,TalkTime=1},tag=!DSSound] run function johto:sound/playrecord {track:"gb/misc/ending",duration:-1}
+execute as @s[scores={DialogueTrigger=98,TalkTime=1},tag=DSSound] run function johto:sound/playrecord {track:"ds/misc/ending",duration:-1}
 
 tellraw @s[scores={DialogueTrigger=98,TalkTime=5}] {"text":"Congratulations, you have completed the Indigo League!"}
 tellraw @s[scores={DialogueTrigger=98,TalkTime=15}] {"text":"You can now access the Kanto region!"}
@@ -64,7 +66,7 @@ tellraw @s[scores={DialogueTrigger=103,TalkTime=1}] {"text":"Your Silver Wing gr
 
 execute as @s[scores={DialogueTrigger=103,TalkTime=16},tag=SilverPick] positioned 1250 30 229 run pokespawn lugia level=45 moves=extrasensory,raindance,hydropump,aeroblast
 execute as @s[scores={DialogueTrigger=103,TalkTime=16},tag=!SilverPick] positioned 1250 30 229 run pokespawn lugia level=70 moves=aeroblast,punishment,ancientpower,safeguard
-execute as @s[scores={DialogueTrigger=103,TalkTime=16}] run playsound lugia record @s ~ ~ ~ 1000 1 1
+execute at @s[scores={DialogueTrigger=103,TalkTime=16}] run function johto:sound/playcry {species:"lugia",distance:80,volume:5}
 
 tag @s[scores={DialogueTrigger=103,TalkTime=16..}] add Dialogue103
 
@@ -83,7 +85,7 @@ tellraw @s[scores={DialogueTrigger=104,TalkTime=1}] {"text":"Your Rainbow Wing g
 
 execute as @s[scores={DialogueTrigger=104,TalkTime=12},tag=GoldPick] positioned 253 157 317 run pokespawn hooh level=45 moves=extrasensory,sunnyday,fireblast,sacredfire
 execute as @s[scores={DialogueTrigger=104,TalkTime=12},tag=!GoldPick] positioned 253 157 317 run pokespawn hooh level=70 moves=sacredfire,punishment,ancientpower,safeguard
-execute as @s[scores={DialogueTrigger=104,TalkTime=12}] run playsound hooh hostile @s ~ ~ ~ 1000 1 1
+execute at @s[scores={DialogueTrigger=104,TalkTime=12}] run function johto:sound/playcry {species:"hooh",distance:80,volume:5}
 
 tag @s[scores={DialogueTrigger=104,TalkTime=13..}] add Dialogue104
 
@@ -92,7 +94,7 @@ tag @s[scores={DialogueTrigger=104,TalkTime=13..}] add Dialogue104
 #Union Cave Friday Lapras
 execute as @s[scores={DialogueTrigger=105,TalkTime=1}] run particle cloud 120 13 -852 1 1 1 1 100
 execute as @s[scores={DialogueTrigger=105,TalkTime=1}] positioned 120 13 -852 run pokespawn lapras lvl=20
-execute as @s[scores={DialogueTrigger=105,TalkTime=1}] run playsound lapras ambient @s ~ ~ ~ 1 1 1
+execute at @s[scores={DialogueTrigger=105,TalkTime=1}] run function johto:sound/playcry {species:"lapras",distance:24,volume:1.5}
 
 tag @s[scores={DialogueTrigger=105,TalkTime=1..}] add Dialogue105
 
@@ -103,8 +105,8 @@ tag @s[scores={DialogueTrigger=105,TalkTime=1..}] add Dialogue105
 
 tellraw @s[scores={DialogueTrigger=142,TalkTime=10}] {"text":"<Snorlax> ..."}
 tellraw @s[scores={DialogueTrigger=142,TalkTime=30}] {"text":"<Snorlax> ... ... ..."}
-execute as @s[scores={DialogueTrigger=142,TalkTime=45}] run playsound snorlax hostile @s ~ ~ ~ 10 1 1
-tellraw @s[scores={DialogueTrigger=142,TalkTime=45}]  {"text":"Snorlax woke up!"}
+execute at @s[scores={DialogueTrigger=142,TalkTime=45}] run function johto:sound/playcry {species:"snorlax",distance:24,volume:1.5}
+tellraw @s[scores={DialogueTrigger=142,TalkTime=45}] {"text":"Snorlax woke up!"}
 
 #Wakes up Snorlax
 execute as @s[scores={DialogueTrigger=142,TalkTime=43..44}] run data merge entity @e[x=-2901,y=64,z=-48,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:"cobblemon:snorlax"}}] {Pokemon:{PokemonData:["catchable"]}}
@@ -185,7 +187,7 @@ execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200
 execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200,TalkTime=2,rng=118..127}] run pokegive @s Pichu lvl:5 !s egg
 
 execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200,TalkTime=2}] run clear @s minecraft:egg 1
-execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200,TalkTime=2}] run playsound egghatch ambient @s ~ ~ ~ 10 1 1
+execute as @s[nbt={Inventory:[{id:"minecraft:egg"}]},scores={DialogueTrigger=200,TalkTime=2}] run function johto:sound/playlocalsfx {sfx:"getegg"}
 
 tellraw @s[scores={DialogueTrigger=200,TalkTime=2}] ["",{"text":"You recieved an ","italic":true},{"text":"Odd Egg","italic":true,"color":"aqua","hoverEvent":{"action":"show_text","value":"A gift Egg. The Pokémon it hatches into has a higher-than-usual chance of being Shiny."}},{"text":"!","italic":true}]
 
@@ -197,10 +199,14 @@ tag @s[scores={DialogueTrigger=200,TalkTime=4..}] add Dialogue200
 
 execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run tellraw @s {"text":"Now boarding the Magnet Train!","italic":true,"color":"gray"}
 execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run function johto:tools/forceclick
+execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run scoreboard players set @s MusicCooldown -1
+execute as @s[scores={DialogueTrigger=207,TalkTime=1},tag=!DSSound] run function johto:sound/playrecord {track:"gb/misc/magnettrain",duration:-1}
+execute as @s[scores={DialogueTrigger=207,TalkTime=1},tag=DSSound] run function johto:sound/playrecord {track:"ds/misc/magnettrain",duration:-1}
 execute as @s[scores={DialogueTrigger=207,TalkTime=1}] run effect give @s minecraft:blindness 8 1 true
 
 execute as @s[scores={DialogueTrigger=207,TalkTime=9}] run tp @s -2673 73 410 0 ~
 
+execute as @s[scores={DialogueTrigger=207,TalkTime=10..}] positioned -2672.5 74.5 410.5 run function johto:sound/playglobalsfx {sfx:"trainarrived",category:"block"}
 tag @s[scores={DialogueTrigger=207,TalkTime=10..}] add Dialogue207
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -209,10 +215,14 @@ tag @s[scores={DialogueTrigger=207,TalkTime=10..}] add Dialogue207
 
 execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run tellraw @s {"text":"Now boarding the Magnet Train!","italic":true,"color":"gray"}
 execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run function johto:tools/forceclick
+execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run scoreboard players set @s MusicCooldown -1
+execute as @s[scores={DialogueTrigger=208,TalkTime=1},tag=!DSSound] run function johto:sound/playrecord {track:"gb/misc/magnettrain",duration:-1}
+execute as @s[scores={DialogueTrigger=208,TalkTime=1},tag=DSSound] run function johto:sound/playrecord {track:"ds/misc/magnettrain",duration:-1}
 execute as @s[scores={DialogueTrigger=208,TalkTime=1}] run effect give @s minecraft:blindness 8 1 true
 
 execute as @s[scores={DialogueTrigger=208,TalkTime=9}] run tp @s 526 73 -337 0 ~
 
+execute as @s[scores={DialogueTrigger=208,TalkTime=10..}] positioned 526.5 74.5 -336.5 run function johto:sound/playglobalsfx {sfx:"trainarrived",category:"block"}
 tag @s[scores={DialogueTrigger=208,TalkTime=10..}] add Dialogue208
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -224,8 +234,7 @@ tag @s[scores={DialogueTrigger=208,TalkTime=10..}] add Dialogue208
 execute as @s[scores={DialogueTrigger=177,TalkTime=1}] run effect give @s minecraft:blindness 5 1 true
 
 #tps to real Ruins of Alph
-execute as @s[scores={DialogueTrigger=177,TalkTime=2}] run tp @a[x=-1099,y=0,z=-252,dx=102,dy=100,dz=189] 197 38 -118 -75 ~
-execute as @s[scores={DialogueTrigger=177,TalkTime=2}] run playsound flee ambient @a[x=-1099,y=0,z=-252,dx=102,dy=100,dz=189] ~ ~ ~ 1000 1 1
+execute as @s[scores={DialogueTrigger=177,TalkTime=2},x=-1099,y=0,z=-252,dx=102,dy=100,dz=189] at @s run function johto:tools/tpwithsfx {sfx:"warpfrom",xyz:"197 38 -118 -75 ~"}
 
 #tp Archeologist in
 #execute as @s[scores={DialogueTrigger=177,TalkTime=5}] run tp @e[x=-699,y=86,z=-242,distance=..1,nbt=!{cobblemon:npc_chatting}] 201 38 -118
@@ -355,7 +364,7 @@ execute as @s[x=530,y=0,z=324,dx=442,dy=63,dz=471,scores={DialogueTrigger=214,Ta
 tellraw @s[scores={DialogueTrigger=214,TalkTime=1,SSState=1}] {"text":"Now boarding the S.S. Aqua voyage for Vermilion City!"}
 tellraw @s[scores={DialogueTrigger=214,TalkTime=1,SSState=2}] {"text":"Now boarding the S.S. Aqua voyage for Olivine City!"}
 execute as @s[scores={DialogueTrigger=214,TalkTime=1}] run advancement grant @s only johto:story/ssaqua
-execute as @s[scores={DialogueTrigger=214,TalkTime=1}] run function johto:tools/forceclick
+execute as @s[scores={DialogueTrigger=214,TalkTime=1}] run function johto:world/musictitles
 
 
 

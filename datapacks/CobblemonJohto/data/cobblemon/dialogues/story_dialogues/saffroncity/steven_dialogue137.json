@@ -145,7 +145,7 @@
                         "text": "Green Stone",
                         "value": "greenstone",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
                             "q.run_command('execute as ' + q.player.username + ' unless entity @s[tag=Dialogue137] run pokegive treecko level=5');",
                             "q.dialogue.set_page('picktreecko');"
                         ]
@@ -154,7 +154,7 @@
                         "text": "Red Stone",
                         "value": "redstone",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
                             "q.run_command('execute as ' + q.player.username + ' unless entity @s[tag=Dialogue137] run pokegive torchic level=5');",
                             "q.dialogue.set_page('picktorchic');"
                         ]
@@ -163,7 +163,7 @@
                         "text": "Blue Stone",
                         "value": "bluestone",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
                             "q.run_command('execute as ' + q.player.username + ' unless entity @s[tag=Dialogue137] run pokegive mudkip level=5');",
                             "q.dialogue.set_page('pickmudkip');"
                         ]

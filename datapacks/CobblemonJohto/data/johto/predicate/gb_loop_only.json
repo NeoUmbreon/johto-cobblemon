@@ -1,0 +1,203 @@
+{
+	"condition": "minecraft:any_of",
+	"terms": [
+		{
+			"//comment": "Battle Tower",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 2
+			}
+		},
+		{
+			"//comment": "Battle Tower Reception Desk",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 3
+			}
+		},
+		{
+			"//comment": "Ecruteak City",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 306
+			}
+		},
+		{
+			"//comment": "Cianwood City (music: Ecruteak City)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 308
+			}
+		},
+		{
+			"//comment": "Olivine Lighthouse",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 212
+			}
+		},
+		{
+			"//comment": "Mt. Silver Cave/Summit (music: Olivine Lighthouse)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": {
+					"min": 30,
+					"max": 31
+				}
+			}
+		},
+		{
+			"//comment": "Pallet Town",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 316
+			}
+		},
+		{
+			"//comment": "Pokemon Centers",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 217
+			}
+		},
+		{
+			"//comment": "Pokemon Gym",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 35
+			}
+		},
+		{
+			"//comment": "Reception Gate, Route 28, and Mt. Silver Exterior (music: Pokemon League)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": {
+					"min": 102,
+					"max": 104
+				}
+			}
+		},
+		{
+			"//comment": "Elite Four (music: Pokemon League)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 14
+			}
+		},
+		{
+			"//comment": "Indigo Plateau (music: Pokemon League)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 311
+			}
+		},
+		{
+			"//comment": "Tin Tower",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 216
+			}
+		},
+		{
+			"//comment": "Lobby (music: Title Screen)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 25
+			}
+		},
+		{
+			"//comment": "Union Cave",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 95
+			}
+		},
+		{
+			"//comment": "Giovanni's Hideout (music: Union Cave)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 17
+			}
+		},
+		{
+			"//comment": "Ruins of Alph (music: Union Cave)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 87
+			}
+		},
+		{
+			"//comment": "Ilex Forest (music: Union Cave)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 21
+			}
+		},
+		{
+			"//comment": "Goldenrod Tunnel/Underground (music: Union Cave)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 208
+			}
+		},
+		{
+			"//comment": "Embedded Tower (music: Union Cave)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 209
+			}
+		},
+		{
+			"//comment": "Mt. Mortar (music: Union Cave)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 28
+			}
+		},
+		{
+			"//comment": "Whirl Islands (Interior) (music: Union Cave)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 99
+			}
+		},
+		{
+			"//comment": "Tohjo Falls (music: Union Cave)",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 205
+			}
+		},
+		{
+			"//comment": "Victory Road",
+			"condition": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"MusicTitles": 96
+			}
+		}
+	]
+}

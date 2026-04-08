@@ -52,6 +52,7 @@ tag @a[tag=MomCooldown] remove MomCooldown
 
 #Radio Talks
 tag @a[tag=LuckyNumberTalk] remove LuckyNumberTalk
+tag @a[tag=BuenasPasswordTalk] remove BuenasPasswordTalk
 tag @a[tag=PokemonMusicTalk] remove PokemonMusicTalk
 tag @a[tag=Dialogue185] remove Dialogue185
 tag @a[tag=LuckyNumberCD] remove LuckyNumberCD
@@ -98,7 +99,7 @@ tag @e[x=-864,y=69,z=-207,dy=4,dz=2] remove SwarmActive
 scoreboard players set @e[x=-864,y=69,z=-207,dy=4,dz=2] rng 0
 tag @a remove PokeTalkCooldown
 
-
+execute as @a[scores={RadioSelect=3..8},tag=!RadioOff] at @s run function johto:world/radiostations
 
 
 

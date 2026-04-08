@@ -98,7 +98,7 @@
                         "action": [
                             "q.dialogue.set_page('page5');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 1 cobblemon:ribbon_day_shock');"
                         ]
                     },
@@ -112,7 +112,7 @@
                         "action": [
                             "q.dialogue.set_page('page6');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 2 cobblemon:ribbon_day_shock');"
                 ]
                     },
@@ -126,7 +126,7 @@
                         "action": [
                             "q.dialogue.set_page('page7');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 3 cobblemon:ribbon_day_shock');"
                 ]
                     },
@@ -140,7 +140,7 @@
                         "action": [
                             "q.dialogue.set_page('page8');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 4 cobblemon:ribbon_day_shock');"
                     ]
                     },
@@ -154,7 +154,7 @@
                         "action": [
                             "q.dialogue.set_page('page9');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 5 cobblemon:ribbon_day_shock');"
                     ]
                     },
@@ -168,7 +168,7 @@
                         "action": [
                             "q.dialogue.set_page('page10');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 6 cobblemon:ribbon_day_shock');"
                     ]
                     }

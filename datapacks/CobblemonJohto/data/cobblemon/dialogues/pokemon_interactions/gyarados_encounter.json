@@ -1,7 +1,7 @@
 {
     "initializationAction": [
-        "q.run_command('playsound minecraft:gyarados ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
-        "q.run_command('playsound minecraft:shiny ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');"
+        "q.run_command('execute at ' + q.player.username + ' run function johto:sound/playcry {species:\"gyarados\",distance:24,volume:1.5}');",
+        "q.run_command('execute at ' + q.player.username + ' at @n[type=cobblemon:pokemon,distance=..24,nbt={Pokemon:{Species:\"cobblemon:gyarados\",PokemonOriginalTrainerType:\"NONE\"}}] run function johto:sound/playglobalsfx {sfx:\"shiny\",category:\"neutral\"}');"
     ],
     "escapeAction": [],
     "speakers": {

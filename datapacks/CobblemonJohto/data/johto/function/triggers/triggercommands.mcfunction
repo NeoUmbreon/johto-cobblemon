@@ -34,7 +34,7 @@ execute as @a[scores={TriggerCommand=10}] run data merge entity @e[x=332,y=64,z=
 execute as @a[scores={TriggerCommand=10}] run data merge entity @e[x=332,y=64,z=-17,distance=..5,type=cobblemon:pokemon,limit=1,name=Sudowoodo] {NoAI:0b}
 execute as @a[scores={TriggerCommand=10}] run data modify entity @e[x=332,y=64,z=-17,distance=..5,type=cobblemon:pokemon,limit=1,name=Sudowoodo] Unbattleable set value 0b
 execute as @a[scores={TriggerCommand=10}] run advancement grant @s only johto:story/weirdtree
-execute as @a[scores={TriggerCommand=10}] run playsound cobblemon:pokemon.sudowoodo.cry ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=10}] at @s run function johto:sound/playcry {species:"sudowoodo",distance:24,volume:1.5}
 
 #11 - Sets up Electrode in Rocket HQ
 execute as @a[scores={TriggerCommand=11}] unless entity @e[x=-92,y=46,z=187,distance=..2,type=cobblemon:pokemon] run pokespawnat -92 46 187 electrode no_ai=yes level=23
@@ -124,8 +124,7 @@ execute as @a[scores={TriggerCommand=86}] run scoreboard players set @s TriggerC
 
 #Runs teleport back to Kurt's
 execute as @a[scores={TriggerCommand=87}] run effect give @s minecraft:blindness 3 1 true
-execute as @a[scores={TriggerCommand=87}] run playsound flee ambient @s ~ ~ ~ 1 1 1
-execute as @a[scores={TriggerCommand=87}] run tp @s 366 64 -703 -30 13
+execute as @a[scores={TriggerCommand=87}] at @s run function johto:tools/tpwithsfx {sfx:"warpto",xyz:"366 64 -703 -30 13"}
 execute as @a[scores={TriggerCommand=87}] run scoreboard players set @s click 1
 execute as @a[scores={TriggerCommand=87}] run scoreboard players set @s TriggerCommand 0
 
@@ -147,7 +146,7 @@ execute as @a[scores={TriggerCommand=90}] run scoreboard players set @s TriggerC
 
 #Silver Sprout Tower TP out
 execute as @a[scores={TriggerCommand=91}] run tellraw @s {"text":"Silver used an Escape Rope!","italic":true,"color":"gray"}
-execute as @a[scores={TriggerCommand=91}] run playsound flee ambient @s ~ ~ ~ 100 1 1
+execute as @a[scores={TriggerCommand=91}] at @e[x=57,y=103,z=29,dy=3,type=cobblemon:npc] run function johto:sound/playglobalsfx {sfx:"warpto",category:"player"}
 execute as @a[scores={TriggerCommand=91}] run particle cloud 57 104 29 1 1 1 0.15 100
 execute as @a[scores={TriggerCommand=91}] run tp @e[x=57,y=103,z=29,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
 execute as @a[scores={TriggerCommand=91}] run scoreboard players set @s TriggerCommand 0
@@ -202,7 +201,7 @@ execute as @a[scores={TriggerCommand=100,Money=..199}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=100,Money=200..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=100,Money=200..}] run give @s cobblemon:poke_ball 1
-execute as @a[scores={TriggerCommand=100,Money=200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=100,Money=200..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=100,Money=200..}] run scoreboard players remove @s Money 200
 
 
@@ -212,7 +211,7 @@ execute as @a[scores={TriggerCommand=101,Money=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=101,Money=1000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=101,Money=1000..}] run give @s cobblemon:poke_ball 5
-execute as @a[scores={TriggerCommand=101,Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=101,Money=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=101,Money=1000..}] run scoreboard players remove @s Money 1000
 
 
@@ -223,7 +222,7 @@ execute as @a[scores={TriggerCommand=102,Money=..1999}] run scoreboard players s
 execute as @a[scores={TriggerCommand=102,Money=2000..}] run tellraw @s {"text":"You put the items in your inventory. You got an extra Premiere Ball for free!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=102,Money=2000..}] run give @s cobblemon:poke_ball 10
 execute as @a[scores={TriggerCommand=102,Money=2000..}] run give @s cobblemon:premier_ball 1
-execute as @a[scores={TriggerCommand=102,Money=2000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=102,Money=2000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=102,Money=2000..}] run scoreboard players remove @s Money 2000
 
 #-----------------------------
@@ -234,7 +233,7 @@ execute as @a[scores={TriggerCommand=103,Money=..599}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=103,Money=600..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=103,Money=600..}] run give @s cobblemon:great_ball 1
-execute as @a[scores={TriggerCommand=103,Money=600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=103,Money=600..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=103,Money=600..}] run scoreboard players remove @s Money 600
 
 
@@ -244,7 +243,7 @@ execute as @a[scores={TriggerCommand=104,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=104,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=104,Money=3000..}] run give @s cobblemon:great_ball 5
-execute as @a[scores={TriggerCommand=104,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=104,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=104,Money=3000..}] run scoreboard players remove @s Money 3000
 
 
@@ -255,7 +254,7 @@ execute as @a[scores={TriggerCommand=105,Money=..5999}] run scoreboard players s
 execute as @a[scores={TriggerCommand=105,Money=6000..}] run tellraw @s {"text":"You put the items in your inventory. You got an extra Premiere Ball for free!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=105,Money=6000..}] run give @s cobblemon:great_ball 10
 execute as @a[scores={TriggerCommand=105,Money=6000..}] run give @s cobblemon:premier_ball 1
-execute as @a[scores={TriggerCommand=105,Money=6000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=105,Money=6000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=105,Money=6000..}] run scoreboard players remove @s Money 6000
 
 #-----------------------------
@@ -266,7 +265,7 @@ execute as @a[scores={TriggerCommand=106,Money=..1199}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=106,Money=1200..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=106,Money=1200..}] run give @s cobblemon:ultra_ball 1
-execute as @a[scores={TriggerCommand=106,Money=1200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=106,Money=1200..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=106,Money=1200..}] run scoreboard players remove @s Money 1200
 
 
@@ -276,7 +275,7 @@ execute as @a[scores={TriggerCommand=107,Money=..5999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=107,Money=6000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=107,Money=6000..}] run give @s cobblemon:ultra_ball 5
-execute as @a[scores={TriggerCommand=107,Money=6000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=107,Money=6000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=107,Money=6000..}] run scoreboard players remove @s Money 6000
 
 
@@ -287,7 +286,7 @@ execute as @a[scores={TriggerCommand=108,Money=..11999}] run scoreboard players 
 execute as @a[scores={TriggerCommand=108,Money=12000..}] run tellraw @s {"text":"You put the items in your inventory. You got an extra Premiere Ball for free!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=108,Money=12000..}] run give @s cobblemon:ultra_ball 10
 execute as @a[scores={TriggerCommand=108,Money=12000..}] run give @s cobblemon:premier_ball 1
-execute as @a[scores={TriggerCommand=108,Money=12000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=108,Money=12000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=108,Money=12000..}] run scoreboard players remove @s Money 12000
 
 #-----------------------------
@@ -298,7 +297,7 @@ execute as @a[scores={TriggerCommand=109,Money=..299}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=109,Money=300..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=109,Money=300..}] run give @s cobblemon:potion 1
-execute as @a[scores={TriggerCommand=109,Money=300..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=109,Money=300..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=109,Money=300..}] run scoreboard players remove @s Money 300
 
 
@@ -308,7 +307,7 @@ execute as @a[scores={TriggerCommand=110,Money=..1499}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=110,Money=1500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=110,Money=1500..}] run give @s cobblemon:potion 5
-execute as @a[scores={TriggerCommand=110,Money=1500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=110,Money=1500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=110,Money=1500..}] run scoreboard players remove @s Money 1500
 
 #-----------------------------
@@ -319,7 +318,7 @@ execute as @a[scores={TriggerCommand=111,Money=..699}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=111,Money=700..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=111,Money=700..}] run give @s cobblemon:super_potion 1
-execute as @a[scores={TriggerCommand=111,Money=700..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=111,Money=700..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=111,Money=700..}] run scoreboard players remove @s Money 700
 
 
@@ -329,7 +328,7 @@ execute as @a[scores={TriggerCommand=112,Money=..1499}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=112,Money=3500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=112,Money=3500..}] run give @s cobblemon:super_potion 5
-execute as @a[scores={TriggerCommand=112,Money=3500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=112,Money=3500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=112,Money=3500..}] run scoreboard players remove @s Money 3500
 
 #-----------------------------
@@ -340,7 +339,7 @@ execute as @a[scores={TriggerCommand=113,Money=..1199}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=113,Money=1200..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=113,Money=1200..}] run give @s cobblemon:hyper_potion 1
-execute as @a[scores={TriggerCommand=113,Money=1200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=113,Money=1200..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=113,Money=1200..}] run scoreboard players remove @s Money 1200
 
 
@@ -350,7 +349,7 @@ execute as @a[scores={TriggerCommand=114,Money=..5999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=114,Money=6000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=114,Money=6000..}] run give @s cobblemon:hyper_potion 5
-execute as @a[scores={TriggerCommand=114,Money=6000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=114,Money=6000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=114,Money=6000..}] run scoreboard players remove @s Money 6000
 
 #-----------------------------
@@ -361,7 +360,7 @@ execute as @a[scores={TriggerCommand=115,Money=..2499}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=115,Money=2500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=115,Money=2500..}] run give @s cobblemon:max_potion 1
-execute as @a[scores={TriggerCommand=115,Money=2500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=115,Money=2500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=115,Money=2500..}] run scoreboard players remove @s Money 1200
 
 
@@ -371,7 +370,7 @@ execute as @a[scores={TriggerCommand=116,Money=..12499}] run scoreboard players 
 
 execute as @a[scores={TriggerCommand=116,Money=12500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=116,Money=12500..}] run give @s cobblemon:max_potion 5
-execute as @a[scores={TriggerCommand=116,Money=12500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=116,Money=12500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=116,Money=12500..}] run scoreboard players remove @s Money 12500
 
 #-----------------------------
@@ -382,7 +381,7 @@ execute as @a[scores={TriggerCommand=117,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=117,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=117,Money=3000..}] run give @s cobblemon:full_restore 1
-execute as @a[scores={TriggerCommand=117,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=117,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=117,Money=3000..}] run scoreboard players remove @s Money 3000
 
 
@@ -392,7 +391,7 @@ execute as @a[scores={TriggerCommand=118,Money=..14999}] run scoreboard players 
 
 execute as @a[scores={TriggerCommand=118,Money=15000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=118,Money=15000..}] run give @s cobblemon:full_restore 5
-execute as @a[scores={TriggerCommand=118,Money=15000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=118,Money=15000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=118,Money=15000..}] run scoreboard players remove @s Money 15000
 
 #-----------------------------
@@ -403,7 +402,7 @@ execute as @a[scores={TriggerCommand=119,Money=..99}] run scoreboard players set
 
 execute as @a[scores={TriggerCommand=119,Money=100..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=119,Money=100..}] run give @s cobblemon:antidote 1
-execute as @a[scores={TriggerCommand=119,Money=100..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=119,Money=100..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=119,Money=100..}] run scoreboard players remove @s Money 100
 
 
@@ -413,7 +412,7 @@ execute as @a[scores={TriggerCommand=120,Money=..499}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=120,Money=500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=120,Money=500..}] run give @s cobblemon:antidote 5
-execute as @a[scores={TriggerCommand=120,Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=120,Money=500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=120,Money=500..}] run scoreboard players remove @s Money 500
 
 #-----------------------------
@@ -424,7 +423,7 @@ execute as @a[scores={TriggerCommand=121,Money=..199}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=121,Money=200..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=121,Money=200..}] run give @s cobblemon:paralyze_heal 1
-execute as @a[scores={TriggerCommand=121,Money=200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=121,Money=200..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=121,Money=200..}] run scoreboard players remove @s Money 200
 
 
@@ -434,7 +433,7 @@ execute as @a[scores={TriggerCommand=122,Money=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=122,Money=1000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=122,Money=1000..}] run give @s cobblemon:paralyze_heal 5
-execute as @a[scores={TriggerCommand=122,Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=122,Money=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=122,Money=1000..}] run scoreboard players remove @s Money 1000
 
 #-----------------------------
@@ -445,7 +444,7 @@ execute as @a[scores={TriggerCommand=123,Money=..99}] run scoreboard players set
 
 execute as @a[scores={TriggerCommand=123,Money=100..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=123,Money=100..}] run give @s cobblemon:awakening 1
-execute as @a[scores={TriggerCommand=123,Money=100..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=123,Money=100..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=123,Money=100..}] run scoreboard players remove @s Money 100
 
 
@@ -455,7 +454,7 @@ execute as @a[scores={TriggerCommand=124,Money=..499}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=124,Money=500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=124,Money=500..}] run give @s cobblemon:awakening 5
-execute as @a[scores={TriggerCommand=124,Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=124,Money=500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=124,Money=500..}] run scoreboard players remove @s Money 500
 
 #-----------------------------
@@ -466,7 +465,7 @@ execute as @a[scores={TriggerCommand=125,Money=..249}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=125,Money=250..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=125,Money=250..}] run give @s cobblemon:burn_heal 1
-execute as @a[scores={TriggerCommand=125,Money=250..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=125,Money=250..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=125,Money=250..}] run scoreboard players remove @s Money 250
 
 
@@ -476,7 +475,7 @@ execute as @a[scores={TriggerCommand=126,Money=..1249}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=126,Money=1250..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=126,Money=1250..}] run give @s cobblemon:burn_heal 5
-execute as @a[scores={TriggerCommand=126,Money=1250..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=126,Money=1250..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=126,Money=1250..}] run scoreboard players remove @s Money 1250
 
 #-----------------------------
@@ -487,7 +486,7 @@ execute as @a[scores={TriggerCommand=127,Money=..249}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=127,Money=250..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=127,Money=250..}] run give @s cobblemon:ice_heal 1
-execute as @a[scores={TriggerCommand=127,Money=250..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=127,Money=250..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=127,Money=250..}] run scoreboard players remove @s Money 250
 
 
@@ -497,7 +496,7 @@ execute as @a[scores={TriggerCommand=128,Money=..1249}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=128,Money=1250..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=128,Money=1250..}] run give @s cobblemon:ice_heal 5
-execute as @a[scores={TriggerCommand=128,Money=1250..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=128,Money=1250..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=128,Money=1250..}] run scoreboard players remove @s Money 1250
 
 #-----------------------------
@@ -508,7 +507,7 @@ execute as @a[scores={TriggerCommand=129,Money=..549}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=129,Money=550..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=129,Money=550..}] run function johto:spawn/escaperope
-execute as @a[scores={TriggerCommand=129,Money=550..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=129,Money=550..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=129,Money=550..}] run scoreboard players remove @s Money 550
 
 
@@ -522,7 +521,7 @@ execute as @a[scores={TriggerCommand=130,Money=2750..}] run function johto:spawn
 execute as @a[scores={TriggerCommand=130,Money=2750..}] run function johto:spawn/escaperope
 execute as @a[scores={TriggerCommand=130,Money=2750..}] run function johto:spawn/escaperope
 execute as @a[scores={TriggerCommand=130,Money=2750..}] run function johto:spawn/escaperope
-execute as @a[scores={TriggerCommand=130,Money=2750..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=130,Money=2750..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=130,Money=2750..}] run scoreboard players remove @s Money 2750
 
 #-----------------------------
@@ -533,7 +532,7 @@ execute as @a[scores={TriggerCommand=131,Money=..299}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=131,Money=300..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=131,Money=300..}] run give @s cobblemon:heal_ball 1
-execute as @a[scores={TriggerCommand=131,Money=300..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=131,Money=300..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=131,Money=300..}] run scoreboard players remove @s Money 200
 
 
@@ -543,7 +542,7 @@ execute as @a[scores={TriggerCommand=132,Money=..1499}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=132,Money=1500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=132,Money=1500..}] run give @s cobblemon:heal_ball 5
-execute as @a[scores={TriggerCommand=132,Money=1500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=132,Money=1500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=132,Money=1500..}] run scoreboard players remove @s Money 1500
 
 
@@ -554,7 +553,7 @@ execute as @a[scores={TriggerCommand=133,Money=..2999}] run scoreboard players s
 execute as @a[scores={TriggerCommand=133,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory. You got an extra Premiere Ball for free!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=133,Money=3000..}] run give @s cobblemon:heal_ball 10
 execute as @a[scores={TriggerCommand=133,Money=3000..}] run give @s cobblemon:premier_ball 1
-execute as @a[scores={TriggerCommand=133,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=133,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=133,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -565,7 +564,7 @@ execute as @a[scores={TriggerCommand=134,Money=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=134,Money=1000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=134,Money=1000..}] run give @s cobblemon:net_ball 1
-execute as @a[scores={TriggerCommand=134,Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=134,Money=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=134,Money=1000..}] run scoreboard players remove @s Money 1000
 
 
@@ -575,7 +574,7 @@ execute as @a[scores={TriggerCommand=135,Money=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=135,Money=5000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=135,Money=5000..}] run give @s cobblemon:net_ball 5
-execute as @a[scores={TriggerCommand=135,Money=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=135,Money=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=135,Money=5000..}] run scoreboard players remove @s Money 5000
 
 
@@ -586,7 +585,7 @@ execute as @a[scores={TriggerCommand=136,Money=..9999}] run scoreboard players s
 execute as @a[scores={TriggerCommand=136,Money=10000..}] run tellraw @s {"text":"You put the items in your inventory. You got an extra Premiere Ball for free!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=136,Money=10000..}] run give @s cobblemon:net_ball 10
 execute as @a[scores={TriggerCommand=136,Money=10000..}] run give @s cobblemon:premier_ball 1
-execute as @a[scores={TriggerCommand=136,Money=10000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=136,Money=10000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=136,Money=10000..}] run scoreboard players remove @s Money 10000
 
 #-----------------------------
@@ -597,7 +596,7 @@ execute as @a[scores={TriggerCommand=137,Money=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=137,Money=1000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=137,Money=1000..}] run give @s cobblemon:dusk_ball 1
-execute as @a[scores={TriggerCommand=137,Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=137,Money=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=137,Money=1000..}] run scoreboard players remove @s Money 1000
 
 
@@ -607,7 +606,7 @@ execute as @a[scores={TriggerCommand=138,Money=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=138,Money=5000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=138,Money=5000..}] run give @s cobblemon:dusk_ball 5
-execute as @a[scores={TriggerCommand=138,Money=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=138,Money=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=138,Money=5000..}] run scoreboard players remove @s Money 5000
 
 
@@ -618,7 +617,7 @@ execute as @a[scores={TriggerCommand=139,Money=..9999}] run scoreboard players s
 execute as @a[scores={TriggerCommand=139,Money=10000..}] run tellraw @s {"text":"You put the items in your inventory. You got an extra Premiere Ball for free!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=139,Money=10000..}] run give @s cobblemon:dusk_ball 10
 execute as @a[scores={TriggerCommand=139,Money=10000..}] run give @s cobblemon:premier_ball 1
-execute as @a[scores={TriggerCommand=139,Money=10000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=139,Money=10000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=139,Money=10000..}] run scoreboard players remove @s Money 10000
 
 
@@ -630,7 +629,7 @@ execute as @a[scores={TriggerCommand=140,Money=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=140,Money=1000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=140,Money=1000..}] run give @s cobblemon:quick_ball 1
-execute as @a[scores={TriggerCommand=140,Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=140,Money=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=140,Money=1000..}] run scoreboard players remove @s Money 1000
 
 
@@ -640,7 +639,7 @@ execute as @a[scores={TriggerCommand=141,Money=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=141,Money=5000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=141,Money=5000..}] run give @s cobblemon:quick_ball 5
-execute as @a[scores={TriggerCommand=141,Money=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=141,Money=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=141,Money=5000..}] run scoreboard players remove @s Money 5000
 
 
@@ -651,7 +650,7 @@ execute as @a[scores={TriggerCommand=142,Money=..9999}] run scoreboard players s
 execute as @a[scores={TriggerCommand=142,Money=10000..}] run tellraw @s {"text":"You put the items in your inventory. You got an extra Premiere Ball for free!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=142,Money=10000..}] run give @s cobblemon:quick_ball 10
 execute as @a[scores={TriggerCommand=142,Money=10000..}] run give @s cobblemon:premier_ball 1
-execute as @a[scores={TriggerCommand=142,Money=10000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=142,Money=10000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=142,Money=10000..}] run scoreboard players remove @s Money 10000
 
 #-----------------------------
@@ -662,7 +661,7 @@ execute as @a[scores={TriggerCommand=143,Money=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=143,Money=1000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=143,Money=1000..}] run give @s cobblemon:nest_ball 1
-execute as @a[scores={TriggerCommand=143,Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=143,Money=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=143,Money=1000..}] run scoreboard players remove @s Money 1000
 
 
@@ -672,7 +671,7 @@ execute as @a[scores={TriggerCommand=144,Money=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=144,Money=5000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=144,Money=5000..}] run give @s cobblemon:nest_ball 5
-execute as @a[scores={TriggerCommand=144,Money=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=144,Money=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=144,Money=5000..}] run scoreboard players remove @s Money 5000
 
 
@@ -683,7 +682,7 @@ execute as @a[scores={TriggerCommand=145,Money=..9999}] run scoreboard players s
 execute as @a[scores={TriggerCommand=145,Money=10000..}] run tellraw @s {"text":"You put the items in your inventory. You got an extra Premiere Ball for free!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=145,Money=10000..}] run give @s cobblemon:nest_ball 10
 execute as @a[scores={TriggerCommand=145,Money=10000..}] run give @s cobblemon:premier_ball 1
-execute as @a[scores={TriggerCommand=145,Money=10000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=145,Money=10000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=145,Money=10000..}] run scoreboard players remove @s Money 10000
 
 #-----------------------------
@@ -694,7 +693,7 @@ execute as @a[scores={TriggerCommand=146,Money=..599}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=146,Money=600..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=146,Money=600..}] run give @s cobblemon:full_heal 1
-execute as @a[scores={TriggerCommand=146,Money=600..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=146,Money=600..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=146,Money=600..}] run scoreboard players remove @s Money 600
 
 
@@ -704,7 +703,7 @@ execute as @a[scores={TriggerCommand=147,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=147,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=147,Money=3000..}] run give @s cobblemon:full_heal 5
-execute as @a[scores={TriggerCommand=147,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=147,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=147,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -715,7 +714,7 @@ execute as @a[scores={TriggerCommand=148,Money=..9799}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=148,Money=9800..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=148,Money=9800..}] run give @s cobblemon:protein 1
-execute as @a[scores={TriggerCommand=148,Money=9800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=148,Money=9800..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=148,Money=9800..}] run scoreboard players remove @s Money 9800
 
 #-----------------------------
@@ -726,7 +725,7 @@ execute as @a[scores={TriggerCommand=149,Money=..9799}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=149,Money=9800..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=149,Money=9800..}] run give @s cobblemon:iron 1
-execute as @a[scores={TriggerCommand=149,Money=9800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=149,Money=9800..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=149,Money=9800..}] run scoreboard players remove @s Money 9800
 
 #-----------------------------
@@ -737,7 +736,7 @@ execute as @a[scores={TriggerCommand=150,Money=..9799}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=150,Money=9800..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=150,Money=9800..}] run give @s cobblemon:calcium 1
-execute as @a[scores={TriggerCommand=150,Money=9800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=150,Money=9800..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=150,Money=9800..}] run scoreboard players remove @s Money 9800
 
 #-----------------------------
@@ -748,7 +747,7 @@ execute as @a[scores={TriggerCommand=151,Money=..9799}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=151,Money=9800..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=151,Money=9800..}] run give @s cobblemon:zinc 1
-execute as @a[scores={TriggerCommand=151,Money=9800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=151,Money=9800..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=151,Money=9800..}] run scoreboard players remove @s Money 9800
 
 #-----------------------------
@@ -759,7 +758,7 @@ execute as @a[scores={TriggerCommand=152,Money=..9799}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=152,Money=9800..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=152,Money=9800..}] run give @s cobblemon:carbos 1
-execute as @a[scores={TriggerCommand=152,Money=9800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=152,Money=9800..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=152,Money=9800..}] run scoreboard players remove @s Money 9800
 
 #-----------------------------
@@ -770,7 +769,7 @@ execute as @a[scores={TriggerCommand=153,Money=..9799}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=153,Money=9800..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=153,Money=9800..}] run give @s cobblemon:hp_up 1
-execute as @a[scores={TriggerCommand=153,Money=9800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=153,Money=9800..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=153,Money=9800..}] run scoreboard players remove @s Money 9800
 
 #-----------------------------
@@ -781,7 +780,7 @@ execute as @a[scores={TriggerCommand=154,Money=..249}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=154,Money=250..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=154,Money=250..}] run give @s cobblemon:x_speed 1
-execute as @a[scores={TriggerCommand=154,Money=250..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=154,Money=250..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=154,Money=250..}] run scoreboard players remove @s Money 250
 
 #-----------------------------
@@ -792,7 +791,7 @@ execute as @a[scores={TriggerCommand=155,Money=..499}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=155,Money=500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=155,Money=500..}] run give @s cobblemon:x_attack 1
-execute as @a[scores={TriggerCommand=155,Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=155,Money=500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=155,Money=500..}] run scoreboard players remove @s Money 500
 
 #-----------------------------
@@ -803,7 +802,7 @@ execute as @a[scores={TriggerCommand=156,Money=..549}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=156,Money=550..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=156,Money=550..}] run give @s cobblemon:x_defence 1
-execute as @a[scores={TriggerCommand=156,Money=550..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=156,Money=550..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=156,Money=550..}] run scoreboard players remove @s Money 550
 
 #-----------------------------
@@ -814,7 +813,7 @@ execute as @a[scores={TriggerCommand=157,Money=..699}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=157,Money=700..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=157,Money=700..}] run give @s cobblemon:guard_spec 1
-execute as @a[scores={TriggerCommand=157,Money=700..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=157,Money=700..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=157,Money=700..}] run scoreboard players remove @s Money 700
 
 #-----------------------------
@@ -825,7 +824,7 @@ execute as @a[scores={TriggerCommand=158,Money=..649}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=158,Money=650..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=158,Money=650..}] run give @s cobblemon:dire_hit 1
-execute as @a[scores={TriggerCommand=158,Money=650..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=158,Money=650..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=158,Money=650..}] run scoreboard players remove @s Money 650
 
 #-----------------------------
@@ -836,7 +835,7 @@ execute as @a[scores={TriggerCommand=159,Money=..949}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=159,Money=950..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=159,Money=950..}] run give @s cobblemon:x_accuracy 1
-execute as @a[scores={TriggerCommand=159,Money=950..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=159,Money=950..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=159,Money=950..}] run scoreboard players remove @s Money 950
 
 #-----------------------------
@@ -847,7 +846,7 @@ execute as @a[scores={TriggerCommand=160,Money=..349}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=160,Money=350..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=160,Money=350..}] run give @s cobblemon:x_special_attack 1
-execute as @a[scores={TriggerCommand=160,Money=350..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=160,Money=350..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=160,Money=350..}] run scoreboard players remove @s Money 350
 
 #-----------------------------
@@ -858,7 +857,7 @@ execute as @a[scores={TriggerCommand=161,Money=..349}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=161,Money=350..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=161,Money=350..}] run give @s cobblemon:x_special_defence 1
-execute as @a[scores={TriggerCommand=161,Money=350..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=161,Money=350..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=161,Money=350..}] run scoreboard players remove @s Money 350
 
 #-----------------------------
@@ -869,7 +868,7 @@ execute as @a[scores={TriggerCommand=162,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=162,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=162,Money=3000..}] run give @s cobblemon:fire_stone 1
-execute as @a[scores={TriggerCommand=162,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=162,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=162,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -880,7 +879,7 @@ execute as @a[scores={TriggerCommand=163,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=163,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=163,Money=3000..}] run give @s cobblemon:water_stone 1
-execute as @a[scores={TriggerCommand=163,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=163,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=163,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -891,7 +890,7 @@ execute as @a[scores={TriggerCommand=164,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=164,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=164,Money=3000..}] run give @s cobblemon:thunder_stone 1
-execute as @a[scores={TriggerCommand=164,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=164,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=164,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -902,7 +901,7 @@ execute as @a[scores={TriggerCommand=165,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=165,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=165,Money=3000..}] run give @s cobblemon:leaf_stone 1
-execute as @a[scores={TriggerCommand=165,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=165,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=165,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -913,7 +912,7 @@ execute as @a[scores={TriggerCommand=166,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=166,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=166,Money=3000..}] run give @s cobblemon:moon_stone 1
-execute as @a[scores={TriggerCommand=166,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=166,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=166,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -924,7 +923,7 @@ execute as @a[scores={TriggerCommand=167,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=167,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=167,Money=3000..}] run give @s cobblemon:sun_stone 1
-execute as @a[scores={TriggerCommand=167,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=167,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=167,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -935,7 +934,7 @@ execute as @a[scores={TriggerCommand=168,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=168,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=168,Money=3000..}] run give @s cobblemon:dawn_stone 1
-execute as @a[scores={TriggerCommand=168,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=168,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=168,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -946,7 +945,7 @@ execute as @a[scores={TriggerCommand=169,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=169,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=169,Money=3000..}] run give @s cobblemon:dusk_stone 1
-execute as @a[scores={TriggerCommand=169,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=169,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=169,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -957,7 +956,7 @@ execute as @a[scores={TriggerCommand=170,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=170,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=170,Money=3000..}] run give @s cobblemon:shiny_stone 1
-execute as @a[scores={TriggerCommand=170,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=170,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=170,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -968,7 +967,7 @@ execute as @a[scores={TriggerCommand=171,Money=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=171,Money=1000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=171,Money=1000..}] run give @s cobblemon:everstone 1
-execute as @a[scores={TriggerCommand=171,Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=171,Money=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=171,Money=1000..}] run scoreboard players remove @s Money 1000
 
 #-----------------------------
@@ -979,7 +978,7 @@ execute as @a[scores={TriggerCommand=172,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=172,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=172,Money=3000..}] run give @s cobblemon:dubious_disc 1
-execute as @a[scores={TriggerCommand=172,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=172,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=172,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -990,7 +989,7 @@ execute as @a[scores={TriggerCommand=173,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=173,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=173,Money=3000..}] run give @s cobblemon:electirizer 1
-execute as @a[scores={TriggerCommand=173,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=173,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=173,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1001,7 +1000,7 @@ execute as @a[scores={TriggerCommand=174,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=174,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=174,Money=3000..}] run give @s cobblemon:kings_rock 1
-execute as @a[scores={TriggerCommand=174,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=174,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=174,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1012,7 +1011,7 @@ execute as @a[scores={TriggerCommand=175,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=175,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=175,Money=3000..}] run give @s cobblemon:magmarizer 1
-execute as @a[scores={TriggerCommand=175,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=175,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=175,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1023,7 +1022,7 @@ execute as @a[scores={TriggerCommand=176,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=176,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=176,Money=3000..}] run give @s cobblemon:metal_coat 1
-execute as @a[scores={TriggerCommand=176,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=176,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=176,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1034,7 +1033,7 @@ execute as @a[scores={TriggerCommand=177,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=177,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=177,Money=3000..}] run give @s cobblemon:protector 1
-execute as @a[scores={TriggerCommand=177,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=177,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=177,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1045,7 +1044,7 @@ execute as @a[scores={TriggerCommand=178,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=178,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=178,Money=3000..}] run give @s cobblemon:upgrade 1
-execute as @a[scores={TriggerCommand=178,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=178,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=178,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1056,7 +1055,7 @@ execute as @a[scores={TriggerCommand=179,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=179,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=179,Money=3000..}] run give @s cobblemon:dragon_scale 1
-execute as @a[scores={TriggerCommand=179,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=179,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=179,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1067,7 +1066,7 @@ execute as @a[scores={TriggerCommand=180,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=180,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=180,Money=3000..}] run give @s cobblemon:razor_fang 1
-execute as @a[scores={TriggerCommand=180,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=180,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=180,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1078,7 +1077,7 @@ execute as @a[scores={TriggerCommand=181,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=181,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=181,Money=3000..}] run give @s cobblemon:razor_claw 1
-execute as @a[scores={TriggerCommand=181,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=181,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=181,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1089,7 +1088,7 @@ execute as @a[scores={TriggerCommand=181,Money=3000..}] run scoreboard players r
 #
 #execute as @a[scores={TriggerCommand=182,Money=500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 #execute as @a[scores={TriggerCommand=182,Money=500..}] run give @s cobblemon:moomoo_milk 1
-#execute as @a[scores={TriggerCommand=182,Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+#execute as @a[scores={TriggerCommand=182,Money=500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 #execute as @a[scores={TriggerCommand=182,Money=500..}] run scoreboard players remove @s Money 500
 
 #-----------------------------
@@ -1100,7 +1099,7 @@ execute as @a[scores={TriggerCommand=183,Money=..1499}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=183,Money=1500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=183,Money=1500..}] run give @s cobblemon:revive 1
-execute as @a[scores={TriggerCommand=183,Money=1500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=183,Money=1500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=183,Money=1500..}] run scoreboard players remove @s Money 1500
 
 
@@ -1110,7 +1109,7 @@ execute as @a[scores={TriggerCommand=184,Money=..7499}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=184,Money=7500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=184,Money=7500..}] run give @s cobblemon:revive 5
-execute as @a[scores={TriggerCommand=184,Money=7500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=184,Money=7500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=184,Money=7500..}] run scoreboard players remove @s Money 7500
 
 #-----------------------------
@@ -1121,7 +1120,7 @@ execute as @a[scores={TriggerCommand=185,Money=..199}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=185,Money=200..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=185,Money=200..}] run give @s cobblemon:premier_ball 1
-execute as @a[scores={TriggerCommand=185,Money=200..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=185,Money=200..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=185,Money=200..}] run scoreboard players remove @s Money 200
 
 
@@ -1131,7 +1130,7 @@ execute as @a[scores={TriggerCommand=186,Money=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=186,Money=1000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=186,Money=1000..}] run give @s cobblemon:premier_ball 5
-execute as @a[scores={TriggerCommand=186,Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=186,Money=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=186,Money=1000..}] run scoreboard players remove @s Money 1000
 
 
@@ -1141,7 +1140,7 @@ execute as @a[scores={TriggerCommand=187,Money=..1999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=187,Money=2000..}] run tellraw @s {"text":"You put the items in your inventory. You got an extra Premiere Ball for free!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=187,Money=2000..}] run give @s cobblemon:premier_ball 11
-execute as @a[scores={TriggerCommand=187,Money=2000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=187,Money=2000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=187,Money=2000..}] run scoreboard players remove @s Money 2000
 
 #-----------------------------
@@ -1152,7 +1151,7 @@ execute as @a[scores={TriggerCommand=188,Money=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=188,Money=3000..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=188,Money=3000..}] run give @s cobblemon:link_cable 1
-execute as @a[scores={TriggerCommand=188,Money=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=188,Money=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=188,Money=3000..}] run scoreboard players remove @s Money 3000
 
 #-----------------------------
@@ -1166,7 +1165,7 @@ execute as @a[scores={TriggerCommand=189,BattlePoints=..0}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=189,BattlePoints=1..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=189,BattlePoints=1..}] run give @s cobblemon:protein 1
-execute as @a[scores={TriggerCommand=189,BattlePoints=1..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=189,BattlePoints=1..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=189,BattlePoints=1..}] run scoreboard players remove @s BattlePoints 1
 
 #Iron, 1
@@ -1175,7 +1174,7 @@ execute as @a[scores={TriggerCommand=190,BattlePoints=..0}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=190,BattlePoints=1..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=190,BattlePoints=1..}] run give @s cobblemon:iron 1
-execute as @a[scores={TriggerCommand=190,BattlePoints=1..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=190,BattlePoints=1..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=190,BattlePoints=1..}] run scoreboard players remove @s BattlePoints 1
 
 #Carbos, 1
@@ -1184,7 +1183,7 @@ execute as @a[scores={TriggerCommand=191,BattlePoints=..0}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=191,BattlePoints=1..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=191,BattlePoints=1..}] run give @s cobblemon:carbos 1
-execute as @a[scores={TriggerCommand=191,BattlePoints=1..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=191,BattlePoints=1..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=191,BattlePoints=1..}] run scoreboard players remove @s BattlePoints 1
 
 #Calcium, 1
@@ -1193,7 +1192,7 @@ execute as @a[scores={TriggerCommand=192,BattlePoints=..0}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=192,BattlePoints=1..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=192,BattlePoints=1..}] run give @s cobblemon:calcium 1
-execute as @a[scores={TriggerCommand=192,BattlePoints=1..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=192,BattlePoints=1..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=192,BattlePoints=1..}] run scoreboard players remove @s BattlePoints 1
 
 #Zinc, 1
@@ -1202,7 +1201,7 @@ execute as @a[scores={TriggerCommand=193,BattlePoints=..0}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=193,BattlePoints=1..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=193,BattlePoints=1..}] run give @s cobblemon:zinc 1
-execute as @a[scores={TriggerCommand=193,BattlePoints=1..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=193,BattlePoints=1..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=193,BattlePoints=1..}] run scoreboard players remove @s BattlePoints 1
 
 
@@ -1212,7 +1211,7 @@ execute as @a[scores={TriggerCommand=194,BattlePoints=..0}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=194,BattlePoints=1..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=194,BattlePoints=1..}] run give @s cobblemon:hp_up 1
-execute as @a[scores={TriggerCommand=194,BattlePoints=1..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=194,BattlePoints=1..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=194,BattlePoints=1..}] run scoreboard players remove @s BattlePoints 1
 
 
@@ -1222,7 +1221,7 @@ execute as @a[scores={TriggerCommand=195,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=195,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=195,BattlePoints=48..}] run give @s cobblemon:rare_candy 1
-execute as @a[scores={TriggerCommand=195,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=195,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=195,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 
@@ -1234,7 +1233,7 @@ execute as @a[scores={TriggerCommand=196,BattlePoints=..15}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=196,BattlePoints=16..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=196,BattlePoints=16..}] run give @s cobblemon:power_bracer 1
-execute as @a[scores={TriggerCommand=196,BattlePoints=16..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=196,BattlePoints=16..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=196,BattlePoints=16..}] run scoreboard players remove @s BattlePoints 16
 
 #Power Belt, 16
@@ -1243,7 +1242,7 @@ execute as @a[scores={TriggerCommand=197,BattlePoints=..15}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=197,BattlePoints=16..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=197,BattlePoints=16..}] run give @s cobblemon:power_belt 1
-execute as @a[scores={TriggerCommand=197,BattlePoints=16..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=197,BattlePoints=16..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=197,BattlePoints=16..}] run scoreboard players remove @s BattlePoints 16
 
 #Power Lens, 16
@@ -1252,7 +1251,7 @@ execute as @a[scores={TriggerCommand=198,BattlePoints=..15}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=198,BattlePoints=16..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=198,BattlePoints=16..}] run give @s cobblemon:power_lens 1
-execute as @a[scores={TriggerCommand=198,BattlePoints=16..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=198,BattlePoints=16..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=198,BattlePoints=16..}] run scoreboard players remove @s BattlePoints 16
 
 #Power Band, 16
@@ -1261,7 +1260,7 @@ execute as @a[scores={TriggerCommand=199,BattlePoints=..15}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=199,BattlePoints=16..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=199,BattlePoints=16..}] run give @s cobblemon:power_band 1
-execute as @a[scores={TriggerCommand=199,BattlePoints=16..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=199,BattlePoints=16..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=199,BattlePoints=16..}] run scoreboard players remove @s BattlePoints 16
 
 #Power Anklet, 16
@@ -1270,7 +1269,7 @@ execute as @a[scores={TriggerCommand=200,BattlePoints=..15}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=200,BattlePoints=16..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=200,BattlePoints=16..}] run give @s cobblemon:power_anklet 1
-execute as @a[scores={TriggerCommand=200,BattlePoints=16..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=200,BattlePoints=16..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=200,BattlePoints=16..}] run scoreboard players remove @s BattlePoints 16
 
 #Power Weight, 16
@@ -1279,7 +1278,7 @@ execute as @a[scores={TriggerCommand=201,BattlePoints=..15}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=201,BattlePoints=16..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=201,BattlePoints=16..}] run give @s cobblemon:power_weight 1
-execute as @a[scores={TriggerCommand=201,BattlePoints=16..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=201,BattlePoints=16..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=201,BattlePoints=16..}] run scoreboard players remove @s BattlePoints 16
 
 
@@ -1291,7 +1290,7 @@ execute as @a[scores={TriggerCommand=202,BattlePoints=..15}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=202,BattlePoints=16..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=202,BattlePoints=16..}] run give @s cobblemon:toxic_orb 1
-execute as @a[scores={TriggerCommand=202,BattlePoints=16..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=202,BattlePoints=16..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=202,BattlePoints=16..}] run scoreboard players remove @s BattlePoints 16
 
 #Flame Orb, 16
@@ -1300,7 +1299,7 @@ execute as @a[scores={TriggerCommand=203,BattlePoints=..15}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=203,BattlePoints=16..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=203,BattlePoints=16..}] run give @s cobblemon:flame_orb 1
-execute as @a[scores={TriggerCommand=203,BattlePoints=16..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=203,BattlePoints=16..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=203,BattlePoints=16..}] run scoreboard players remove @s BattlePoints 16
 
 #White Herb, 32
@@ -1309,7 +1308,7 @@ execute as @a[scores={TriggerCommand=204,BattlePoints=..31}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=204,BattlePoints=32..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=204,BattlePoints=32..}] run give @s cobblemon:white_herb 1
-execute as @a[scores={TriggerCommand=204,BattlePoints=32..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=204,BattlePoints=32..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=204,BattlePoints=32..}] run scoreboard players remove @s BattlePoints 32
 
 #Power Herb, 32
@@ -1318,7 +1317,7 @@ execute as @a[scores={TriggerCommand=205,BattlePoints=..31}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=205,BattlePoints=32..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=205,BattlePoints=32..}] run give @s cobblemon:power_herb 1
-execute as @a[scores={TriggerCommand=205,BattlePoints=32..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=205,BattlePoints=32..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=205,BattlePoints=32..}] run scoreboard players remove @s BattlePoints 32
 
 #Brightpowder, 48
@@ -1327,7 +1326,7 @@ execute as @a[scores={TriggerCommand=206,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=206,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=206,BattlePoints=48..}] run give @s cobblemon:bright_powder 1
-execute as @a[scores={TriggerCommand=206,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=206,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=206,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 #Choice Band, 48
@@ -1336,7 +1335,7 @@ execute as @a[scores={TriggerCommand=207,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=207,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=207,BattlePoints=48..}] run give @s cobblemon:choice_band 1
-execute as @a[scores={TriggerCommand=207,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=207,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=207,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 #Choice Band, 48
@@ -1345,7 +1344,7 @@ execute as @a[scores={TriggerCommand=208,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=208,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=208,BattlePoints=48..}] run give @s cobblemon:focus_band 1
-execute as @a[scores={TriggerCommand=208,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=208,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=208,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 #Scope Lens, 48
@@ -1354,7 +1353,7 @@ execute as @a[scores={TriggerCommand=209,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=209,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=209,BattlePoints=48..}] run give @s cobblemon:scope_lens 1
-execute as @a[scores={TriggerCommand=209,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=209,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=209,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 #Muscle Band, 48
@@ -1363,7 +1362,7 @@ execute as @a[scores={TriggerCommand=210,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=210,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=210,BattlePoints=48..}] run give @s cobblemon:muscle_band 1
-execute as @a[scores={TriggerCommand=210,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=210,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=210,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 #Focus Sash, 48
@@ -1372,7 +1371,7 @@ execute as @a[scores={TriggerCommand=211,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=211,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=211,BattlePoints=48..}] run give @s cobblemon:focus_sash 1
-execute as @a[scores={TriggerCommand=211,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=211,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=211,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 #Choice Scarf, 48
@@ -1381,7 +1380,7 @@ execute as @a[scores={TriggerCommand=212,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=212,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=212,BattlePoints=48..}] run give @s cobblemon:choice_scarf 1
-execute as @a[scores={TriggerCommand=212,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=212,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=212,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 #Razor Claw, 48
@@ -1390,7 +1389,7 @@ execute as @a[scores={TriggerCommand=213,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=213,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=213,BattlePoints=48..}] run give @s cobblemon:razor_claw 1
-execute as @a[scores={TriggerCommand=213,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=213,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=213,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 #Razor Claw, 48
@@ -1399,7 +1398,7 @@ execute as @a[scores={TriggerCommand=214,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=214,BattlePoints=48..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=214,BattlePoints=48..}] run give @s cobblemon:razor_fang 1
-execute as @a[scores={TriggerCommand=214,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=214,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=214,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 
@@ -1411,7 +1410,7 @@ execute as @a[scores={TriggerCommand=215,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=215,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=215,BattlePoints=2..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=215,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=215,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=215,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Tamato Berry
@@ -1420,7 +1419,7 @@ execute as @a[scores={TriggerCommand=216,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=216,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=216,BattlePoints=2..}] run give @s cobblemon:tamato_berry 3
-execute as @a[scores={TriggerCommand=216,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=216,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=216,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Wacan Berry
@@ -1429,7 +1428,7 @@ execute as @a[scores={TriggerCommand=217,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=217,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=217,BattlePoints=2..}] run give @s cobblemon:wacan_berry 3
-execute as @a[scores={TriggerCommand=217,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=217,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=217,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Chople Berry
@@ -1438,7 +1437,7 @@ execute as @a[scores={TriggerCommand=218,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=218,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=218,BattlePoints=2..}] run give @s cobblemon:chople_berry 3
-execute as @a[scores={TriggerCommand=218,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=218,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=218,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Coba Berry
@@ -1447,7 +1446,7 @@ execute as @a[scores={TriggerCommand=219,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=219,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=219,BattlePoints=2..}] run give @s cobblemon:coba_berry 3
-execute as @a[scores={TriggerCommand=219,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=219,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=219,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Pomeg Berry
@@ -1456,7 +1455,7 @@ execute as @a[scores={TriggerCommand=220,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=220,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=220,BattlePoints=2..}] run give @s cobblemon:pomeg_berry 3
-execute as @a[scores={TriggerCommand=220,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=220,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=220,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Hondew Berry
@@ -1465,7 +1464,7 @@ execute as @a[scores={TriggerCommand=221,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=221,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=221,BattlePoints=2..}] run give @s cobblemon:hondew_berry 3
-execute as @a[scores={TriggerCommand=221,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=221,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=221,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Occa Berry
@@ -1474,7 +1473,7 @@ execute as @a[scores={TriggerCommand=222,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=222,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=222,BattlePoints=2..}] run give @s cobblemon:occa_berry 3
-execute as @a[scores={TriggerCommand=222,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=222,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=222,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Rindo Berry
@@ -1483,7 +1482,7 @@ execute as @a[scores={TriggerCommand=223,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=223,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=223,BattlePoints=2..}] run give @s cobblemon:rindo_berry 3
-execute as @a[scores={TriggerCommand=223,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=223,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=223,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Kebia Berry
@@ -1492,7 +1491,7 @@ execute as @a[scores={TriggerCommand=224,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=224,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=224,BattlePoints=2..}] run give @s cobblemon:kebia_berry 3
-execute as @a[scores={TriggerCommand=224,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=224,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=224,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Payapa Berry
@@ -1501,7 +1500,7 @@ execute as @a[scores={TriggerCommand=225,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=225,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=225,BattlePoints=2..}] run give @s cobblemon:payapa_berry 3
-execute as @a[scores={TriggerCommand=225,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=225,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=225,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Kelpsy Berry
@@ -1510,7 +1509,7 @@ execute as @a[scores={TriggerCommand=226,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=226,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=226,BattlePoints=2..}] run give @s cobblemon:kelpsy_berry 3
-execute as @a[scores={TriggerCommand=226,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=226,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=226,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Grepa Berry
@@ -1519,7 +1518,7 @@ execute as @a[scores={TriggerCommand=227,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=227,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=227,BattlePoints=2..}] run give @s cobblemon:grepa_berry 3
-execute as @a[scores={TriggerCommand=227,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=227,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=227,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Passho Berry
@@ -1528,7 +1527,7 @@ execute as @a[scores={TriggerCommand=228,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=228,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=228,BattlePoints=2..}] run give @s cobblemon:passho_berry 3
-execute as @a[scores={TriggerCommand=228,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=228,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=228,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Yache Berry
@@ -1537,7 +1536,7 @@ execute as @a[scores={TriggerCommand=229,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=229,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=229,BattlePoints=2..}] run give @s cobblemon:yache_berry 3
-execute as @a[scores={TriggerCommand=229,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=229,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=229,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Shuca Berry
@@ -1546,7 +1545,7 @@ execute as @a[scores={TriggerCommand=230,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=230,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=230,BattlePoints=2..}] run give @s cobblemon:shuca_berry 3
-execute as @a[scores={TriggerCommand=230,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=230,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=230,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Tanga Berry
@@ -1555,7 +1554,7 @@ execute as @a[scores={TriggerCommand=231,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=231,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=231,BattlePoints=2..}] run give @s cobblemon:tanga_berry 3
-execute as @a[scores={TriggerCommand=231,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=231,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=231,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Charti Berry
@@ -1564,7 +1563,7 @@ execute as @a[scores={TriggerCommand=232,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=232,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=232,BattlePoints=2..}] run give @s cobblemon:charti_berry 3
-execute as @a[scores={TriggerCommand=232,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=232,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=232,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Colbur Berry
@@ -1573,7 +1572,7 @@ execute as @a[scores={TriggerCommand=233,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=233,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=233,BattlePoints=2..}] run give @s cobblemon:colbur_berry 3
-execute as @a[scores={TriggerCommand=233,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=233,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=233,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Kasib Berry
@@ -1582,7 +1581,7 @@ execute as @a[scores={TriggerCommand=234,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=234,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=234,BattlePoints=2..}] run give @s cobblemon:kasib_berry 3
-execute as @a[scores={TriggerCommand=234,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=234,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=234,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Babiri Berry
@@ -1591,7 +1590,7 @@ execute as @a[scores={TriggerCommand=235,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=235,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=235,BattlePoints=2..}] run give @s cobblemon:babiri_berry 3
-execute as @a[scores={TriggerCommand=235,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=235,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=235,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Haban Berry
@@ -1600,7 +1599,7 @@ execute as @a[scores={TriggerCommand=236,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=236,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=236,BattlePoints=2..}] run give @s cobblemon:haban_berry 3
-execute as @a[scores={TriggerCommand=236,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=236,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=236,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 #Chilan Berry
@@ -1609,7 +1608,7 @@ execute as @a[scores={TriggerCommand=237,BattlePoints=..1}] run scoreboard playe
 
 execute as @a[scores={TriggerCommand=237,BattlePoints=2..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=237,BattlePoints=2..}] run give @s cobblemon:chilan_berry 3
-execute as @a[scores={TriggerCommand=237,BattlePoints=2..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=237,BattlePoints=2..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=237,BattlePoints=2..}] run scoreboard players remove @s BattlePoints 2
 
 
@@ -1621,7 +1620,7 @@ execute as @a[scores={TriggerCommand=238,BattlePoints=..31}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=238,BattlePoints=32..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=238,BattlePoints=32..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=238,BattlePoints=32..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=238,BattlePoints=32..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=238,BattlePoints=32..}] run scoreboard players remove @s BattlePoints 32
 
 #Thunder Wave, 32
@@ -1630,7 +1629,7 @@ execute as @a[scores={TriggerCommand=239,BattlePoints=..31}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=239,BattlePoints=32..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=239,BattlePoints=32..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=239,BattlePoints=32..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=239,BattlePoints=32..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=239,BattlePoints=32..}] run scoreboard players remove @s BattlePoints 32
 
 #Will-O-Wisp, 32
@@ -1639,7 +1638,7 @@ execute as @a[scores={TriggerCommand=240,BattlePoints=..31}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=240,BattlePoints=32..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=240,BattlePoints=32..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=240,BattlePoints=32..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=240,BattlePoints=32..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=240,BattlePoints=32..}] run scoreboard players remove @s BattlePoints 32
 
 #Attract, 32
@@ -1648,7 +1647,7 @@ execute as @a[scores={TriggerCommand=241,BattlePoints=..31}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=241,BattlePoints=32..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=241,BattlePoints=32..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=241,BattlePoints=32..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=241,BattlePoints=32..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=241,BattlePoints=32..}] run scoreboard players remove @s BattlePoints 32
 
 #Aerial Ace, 40
@@ -1657,7 +1656,7 @@ execute as @a[scores={TriggerCommand=242,BattlePoints=..39}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=242,BattlePoints=40..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=242,BattlePoints=40..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=242,BattlePoints=40..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=242,BattlePoints=40..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=242,BattlePoints=40..}] run scoreboard players remove @s BattlePoints 40
 
 #Aerial Ace, 40
@@ -1666,7 +1665,7 @@ execute as @a[scores={TriggerCommand=243,BattlePoints=..39}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=243,BattlePoints=40..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=243,BattlePoints=40..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=243,BattlePoints=40..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=243,BattlePoints=40..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=243,BattlePoints=40..}] run scoreboard players remove @s BattlePoints 40
 
 #Brick Break, 40
@@ -1675,7 +1674,7 @@ execute as @a[scores={TriggerCommand=244,BattlePoints=..39}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=244,BattlePoints=40..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=244,BattlePoints=40..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=244,BattlePoints=40..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=244,BattlePoints=40..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=244,BattlePoints=40..}] run scoreboard players remove @s BattlePoints 40
 
 #Bulk Up, 40
@@ -1684,7 +1683,7 @@ execute as @a[scores={TriggerCommand=245,BattlePoints=..39}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=245,BattlePoints=40..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=245,BattlePoints=40..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=245,BattlePoints=40..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=245,BattlePoints=40..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=245,BattlePoints=40..}] run scoreboard players remove @s BattlePoints 40
 
 #Calm Mind, 48
@@ -1693,7 +1692,7 @@ execute as @a[scores={TriggerCommand=246,BattlePoints=..47}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=246,BattlePoints=48..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=246,BattlePoints=48..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=246,BattlePoints=48..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=246,BattlePoints=48..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=246,BattlePoints=48..}] run scoreboard players remove @s BattlePoints 48
 
 #X-Scissor, 64
@@ -1702,7 +1701,7 @@ execute as @a[scores={TriggerCommand=247,BattlePoints=..63}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=247,BattlePoints=64..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=247,BattlePoints=64..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=247,BattlePoints=64..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=247,BattlePoints=64..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=247,BattlePoints=64..}] run scoreboard players remove @s BattlePoints 64
 
 #Shadow Ball, 64
@@ -1711,7 +1710,7 @@ execute as @a[scores={TriggerCommand=248,BattlePoints=..63}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=248,BattlePoints=64..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=248,BattlePoints=64..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=248,BattlePoints=64..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=248,BattlePoints=64..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=248,BattlePoints=64..}] run scoreboard players remove @s BattlePoints 64
 
 #Energy Ball, 64
@@ -1720,7 +1719,7 @@ execute as @a[scores={TriggerCommand=249,BattlePoints=..63}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=249,BattlePoints=64..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=249,BattlePoints=64..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=249,BattlePoints=64..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=249,BattlePoints=64..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=249,BattlePoints=64..}] run scoreboard players remove @s BattlePoints 64
 
 #Sludge Bomb, 80
@@ -1729,7 +1728,7 @@ execute as @a[scores={TriggerCommand=250,BattlePoints=..79}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=250,BattlePoints=80..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=250,BattlePoints=80..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=250,BattlePoints=80..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=250,BattlePoints=80..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=250,BattlePoints=80..}] run scoreboard players remove @s BattlePoints 80
 
 #Dragon Pulse, 80
@@ -1738,7 +1737,7 @@ execute as @a[scores={TriggerCommand=251,BattlePoints=..79}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=251,BattlePoints=80..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=251,BattlePoints=80..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=251,BattlePoints=80..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=251,BattlePoints=80..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=251,BattlePoints=80..}] run scoreboard players remove @s BattlePoints 80
 
 #Stone Edge, 80
@@ -1747,7 +1746,7 @@ execute as @a[scores={TriggerCommand=252,BattlePoints=..79}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=252,BattlePoints=80..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=252,BattlePoints=80..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=252,BattlePoints=80..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=252,BattlePoints=80..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=252,BattlePoints=80..}] run scoreboard players remove @s BattlePoints 80
 
 #Earthquake, 80
@@ -1756,7 +1755,7 @@ execute as @a[scores={TriggerCommand=279,BattlePoints=..79}] run scoreboard play
 
 execute as @a[scores={TriggerCommand=279,BattlePoints=80..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=279,BattlePoints=80..}] run give @s cobblemon:qualot_berry 3
-execute as @a[scores={TriggerCommand=279,BattlePoints=80..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=279,BattlePoints=80..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=279,BattlePoints=80..}] run scoreboard players remove @s BattlePoints 80
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1774,7 +1773,7 @@ execute as @a[scores={TriggerCommand=253,Money=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=253,Money=1000..}] run tellraw @s {"text":"You added the coins to your Coin Case.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=253,Money=1000..}] run scoreboard players add @s Coins 50
-execute as @a[scores={TriggerCommand=253,Money=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=253,Money=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=253,Money=1000..}] run scoreboard players remove @s Money 1000
 
 #250 Coins
@@ -1783,7 +1782,7 @@ execute as @a[scores={TriggerCommand=254,Money=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=254,Money=5000..}] run tellraw @s {"text":"You added the coins to your Coin Case.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=254,Money=5000..}] run scoreboard players add @s Coins 250
-execute as @a[scores={TriggerCommand=254,Money=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=254,Money=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=254,Money=5000..}] run scoreboard players remove @s Money 5000
 
 
@@ -1793,7 +1792,7 @@ execute as @a[scores={TriggerCommand=255,Money=..9999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=255,Money=10000..}] run tellraw @s {"text":"You added the coins to your Coin Case.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=255,Money=10000..}] run scoreboard players add @s Coins 500
-execute as @a[scores={TriggerCommand=255,Money=10000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=255,Money=10000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=255,Money=10000..}] run scoreboard players remove @s Money 10000
 
 #-----------------------------
@@ -1805,7 +1804,7 @@ execute as @a[scores={TriggerCommand=256,Coins=..99}] run scoreboard players set
 
 execute as @a[scores={TriggerCommand=256,Coins=100..}] run tellraw @s {"text":"You received an Abra!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=256,Coins=100..}] run pokegive Abra level=20
-execute as @a[scores={TriggerCommand=256,Coins=100..}] run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=256,Coins=100..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=256,Coins=100..}] run scoreboard players remove @s Coins 100
 
 #Ekans
@@ -1814,7 +1813,7 @@ execute as @a[scores={TriggerCommand=257,Coins=..349}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=257,Coins=350..}] run tellraw @s {"text":"You received an Ekans!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=257,Coins=350..}] run pokegive Ekans level=20
-execute as @a[scores={TriggerCommand=257,Coins=350..}] run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=257,Coins=350..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=257,Coins=350..}] run scoreboard players remove @s Coins 350
 
 #Sandshrew 
@@ -1823,7 +1822,7 @@ execute as @a[scores={TriggerCommand=258,Coins=..349}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=258,Coins=350..}] run tellraw @s {"text":"You received a Sandshrew!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=258,Coins=350..}] run pokegive Sandshrew level=20
-execute as @a[scores={TriggerCommand=258,Coins=350..}] run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=258,Coins=350..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=258,Coins=350..}] run scoreboard players remove @s Coins 350
 
 #Dratini 
@@ -1832,7 +1831,7 @@ execute as @a[scores={TriggerCommand=259,Coins=..1049}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=259,Coins=1050..}] run tellraw @s {"text":"You received a Dratini!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=259,Coins=1050..}] run pokegive Dratini level=20
-execute as @a[scores={TriggerCommand=259,Coins=1050..}] run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=259,Coins=1050..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=259,Coins=1050..}] run scoreboard players remove @s Coins 1050
 
 #Mr. Mime 
@@ -1841,7 +1840,7 @@ execute as @a[scores={TriggerCommand=260,Coins=..1665}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=260,Coins=1666..}] run tellraw @s {"text":"You received a Mr. Mime!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=260,Coins=1666..}] run pokegive MrMime level=5
-execute as @a[scores={TriggerCommand=260,Coins=1666..}] run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=260,Coins=1666..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=260,Coins=1666..}] run scoreboard players remove @s Coins 1666
 
 #Eevee
@@ -1850,7 +1849,7 @@ execute as @a[scores={TriggerCommand=261,Coins=..3332}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=261,Coins=3333..}] run tellraw @s {"text":"You received an Eevee!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=261,Coins=3333..}] run pokegive Eevee level=15
-execute as @a[scores={TriggerCommand=261,Coins=3333..}] run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=261,Coins=3333..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=261,Coins=3333..}] run scoreboard players remove @s Coins 3333
 
 #Porygon
@@ -1859,7 +1858,7 @@ execute as @a[scores={TriggerCommand=262,Coins=..4998}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=262,Coins=4999..}] run tellraw @s {"text":"You received a Porygon!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=262,Coins=4999..}] run pokegive Porygon level=15
-execute as @a[scores={TriggerCommand=262,Coins=4999..}] run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=262,Coins=4999..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=262,Coins=4999..}] run scoreboard players remove @s Coins 4999
 
 #Items
@@ -1870,7 +1869,7 @@ execute as @a[scores={TriggerCommand=263,Coins=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=263,Coins=1000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=263,Coins=1000..}] run give @s cobblemon:silk_scarf
-execute as @a[scores={TriggerCommand=263,Coins=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=263,Coins=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=263,Coins=1000..}] run scoreboard players remove @s Coins 1000
 
 #Wide Lens 
@@ -1879,7 +1878,7 @@ execute as @a[scores={TriggerCommand=264,Coins=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=264,Coins=1000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=264,Coins=1000..}] run give @s cobblemon:wide_lens
-execute as @a[scores={TriggerCommand=264,Coins=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=264,Coins=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=264,Coins=1000..}] run scoreboard players remove @s Coins 1000
 
 #Zoom Lens 
@@ -1888,7 +1887,7 @@ execute as @a[scores={TriggerCommand=265,Coins=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=265,Coins=1000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=265,Coins=1000..}] run give @s cobblemon:zoom_lens
-execute as @a[scores={TriggerCommand=265,Coins=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=265,Coins=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=265,Coins=1000..}] run scoreboard players remove @s Coins 1000
 
 #Metronome
@@ -1897,7 +1896,7 @@ execute as @a[scores={TriggerCommand=266,Coins=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=266,Coins=1000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=266,Coins=1000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=266,Coins=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=266,Coins=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=266,Coins=1000..}] run scoreboard players remove @s Coins 1000
 
 
@@ -1909,7 +1908,7 @@ execute as @a[scores={TriggerCommand=267,Coins=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=267,Coins=1000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=267,Coins=1000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=267,Coins=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=267,Coins=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=267,Coins=1000..}] run scoreboard players remove @s Coins 1000
 
 #Swords Dance
@@ -1918,7 +1917,7 @@ execute as @a[scores={TriggerCommand=268,Coins=..1999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=268,Coins=2000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=268,Coins=2000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=268,Coins=2000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=268,Coins=2000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=268,Coins=2000..}] run scoreboard players remove @s Coins 2000
 
 
@@ -1928,7 +1927,7 @@ execute as @a[scores={TriggerCommand=269,Coins=..2999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=269,Coins=3000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=269,Coins=3000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=269,Coins=3000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=269,Coins=3000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=269,Coins=3000..}] run scoreboard players remove @s Coins 3000
 
 #Flamethrower
@@ -1937,7 +1936,7 @@ execute as @a[scores={TriggerCommand=270,Coins=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=270,Coins=5000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=270,Coins=5000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=270,Coins=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=270,Coins=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=270,Coins=5000..}] run scoreboard players remove @s Coins 5000
 
 #Ice Beam
@@ -1946,7 +1945,7 @@ execute as @a[scores={TriggerCommand=271,Coins=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=271,Coins=5000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=271,Coins=5000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=271,Coins=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=271,Coins=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=271,Coins=5000..}] run scoreboard players remove @s Coins 5000
 
 #Thunderbolt
@@ -1955,7 +1954,7 @@ execute as @a[scores={TriggerCommand=272,Coins=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=272,Coins=5000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=272,Coins=5000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=272,Coins=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=272,Coins=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=272,Coins=5000..}] run scoreboard players remove @s Coins 5000
 
 #Endure
@@ -1964,7 +1963,7 @@ execute as @a[scores={TriggerCommand=273,Coins=..999}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=273,Coins=1000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=273,Coins=1000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=273,Coins=1000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=273,Coins=1000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=273,Coins=1000..}] run scoreboard players remove @s Coins 1000
 
 #Double Team
@@ -1973,7 +1972,7 @@ execute as @a[scores={TriggerCommand=274,Coins=..1999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=274,Coins=2000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=274,Coins=2000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=274,Coins=2000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=274,Coins=2000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=274,Coins=2000..}] run scoreboard players remove @s Coins 2000
 
 #Hidden Power
@@ -1982,7 +1981,7 @@ execute as @a[scores={TriggerCommand=275,Coins=..2499}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=275,Coins=2500..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=275,Coins=2500..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=275,Coins=2500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=275,Coins=2500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=275,Coins=2500..}] run scoreboard players remove @s Coins 2500
 
 #Psychic
@@ -1991,7 +1990,7 @@ execute as @a[scores={TriggerCommand=276,Coins=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=276,Coins=5000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=276,Coins=5000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=276,Coins=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=276,Coins=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=276,Coins=5000..}] run scoreboard players remove @s Coins 5000
 
 #Gyro Ball
@@ -2000,7 +1999,7 @@ execute as @a[scores={TriggerCommand=277,Coins=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=277,Coins=5000..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=277,Coins=5000..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=277,Coins=5000..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=277,Coins=5000..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=277,Coins=5000..}] run scoreboard players remove @s Coins 5000
 
 #Giga Impact
@@ -2009,7 +2008,7 @@ execute as @a[scores={TriggerCommand=278,Coins=..4999}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=278,Coins=7500..}] run tellraw @s {"text":"You put the item in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=278,Coins=7500..}] run give @s cobblemon:metronome
-execute as @a[scores={TriggerCommand=278,Coins=7500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=278,Coins=7500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=278,Coins=7500..}] run scoreboard players remove @s Coins 7500
 
 #279 used
@@ -2044,7 +2043,7 @@ execute as @a[scores={TriggerCommand=280,Money=1500..,rng=100..108}] run pokegiv
 execute as @a[scores={TriggerCommand=280,Money=1500..,rng=109..117}] run pokegive @s pichu level=5 shiny=yes
 execute as @a[scores={TriggerCommand=280,Money=1500..,rng=118..127}] run pokegive @s pichu level=5 shiny=no
 
-execute as @a[scores={TriggerCommand=280,Money=1500..}] run playsound minecraft:egghatch ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=280,Money=1500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=280,Money=1500..}] run scoreboard players remove @s Money 1500
 
 
@@ -2057,7 +2056,7 @@ execute as @a[scores={TriggerCommand=281,Money=..449}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=281,Money=459..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=281,Money=459..}] run give @s cobblemon:heal_powder 1
-execute as @a[scores={TriggerCommand=281,Money=459..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=281,Money=459..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=281,Money=459..}] run scoreboard players remove @s Money 450
 
 
@@ -2067,7 +2066,7 @@ execute as @a[scores={TriggerCommand=282,Money=..499}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=282,Money=500..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=282,Money=500..}] run give @s cobblemon:heal_powder 1
-execute as @a[scores={TriggerCommand=282,Money=500..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=282,Money=500..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=282,Money=500..}] run scoreboard players remove @s Money 500
 
 #Energy Root
@@ -2076,7 +2075,7 @@ execute as @a[scores={TriggerCommand=283,Money=..799}] run scoreboard players se
 
 execute as @a[scores={TriggerCommand=283,Money=800..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=283,Money=800..}] run give @s cobblemon:energy_root 1
-execute as @a[scores={TriggerCommand=283,Money=800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=283,Money=800..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=283,Money=800..}] run scoreboard players remove @s Money 800
 
 #Revival Herb
@@ -2085,7 +2084,7 @@ execute as @a[scores={TriggerCommand=284,Money=..2799}] run scoreboard players s
 
 execute as @a[scores={TriggerCommand=284,Money=2800..}] run tellraw @s {"text":"You put the items in your inventory.","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=284,Money=2800..}] run give @s cobblemon:revival_herb 1
-execute as @a[scores={TriggerCommand=284,Money=2800..}] run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1
+execute as @a[scores={TriggerCommand=284,Money=2800..}] run function johto:sound/playlocalsfx {sfx:"transaction"}
 execute as @a[scores={TriggerCommand=284,Money=2800..}] run scoreboard players remove @s Money 2800
 
 

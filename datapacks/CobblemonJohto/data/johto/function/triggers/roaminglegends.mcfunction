@@ -40,12 +40,12 @@ execute as @s[tag=DogEncounterSuccess,tag=RaikouEncounter,tag=!EnteiEncounter,sc
 #With Success tag, spawn a legend. Randomized for the first one.
 
 execute as @s[tag=DogEncounterSuccess,tag=!EnteiEncounter,scores={rng=0}] run pokespawn entei level=40 moves=roar,quickattack,spark,reflect
-execute as @s[tag=DogEncounterSuccess,tag=!EnteiEncounter,scores={rng=0}] run playsound entei record @s ~ ~ ~ 1 1 1
+execute at @s[tag=DogEncounterSuccess,tag=!EnteiEncounter,scores={rng=0}] run function johto:sound/playcry {species:"entei",distance:24,volume:1.5}
 execute as @s[tag=DogEncounterSuccess,tag=!EnteiEncounter,scores={rng=0}] run tellraw @s {"text":"Entei jumped out at you!"}
 execute as @s[tag=DogEncounterSuccess,tag=!EnteiEncounter,scores={rng=0}] run tag @s add EnteiEncounter
 
 execute as @s[tag=DogEncounterSuccess,tag=!RaikouEncounter,scores={rng=1..}] run pokespawn raikou level=40 moves=roar,firespin,stomp,flamethrower
-execute as @s[tag=DogEncounterSuccess,tag=!RaikouEncounter,scores={rng=1..}] run playsound raikou record @s ~ ~ ~ 1 1 1
+execute at @s[tag=DogEncounterSuccess,tag=!RaikouEncounter,scores={rng=1..}] run function johto:sound/playcry {species:"raikou",distance:24,volume:1.5}
 execute as @s[tag=DogEncounterSuccess,tag=!RaikouEncounter,scores={rng=1..}] run tellraw @s {"text":"Raikou jumped out at you!"}
 execute as @s[tag=DogEncounterSuccess,tag=!RaikouEncounter,scores={rng=1..}] run tag @s add RaikouEncounter
 
@@ -88,12 +88,12 @@ execute as @s[tag=EonEncounterSuccess,tag=LatiasEncounter,tag=!LatiosEncounter,s
 #With Success tag, spawn a legend. Randomized for the first one.
 
 execute as @s[tag=EonEncounterSuccess,tag=!LatiosEncounter,scores={rng=0}] run pokespawn latios level=35 moves=dragonbreath,watersport,refresh,mistball
-execute as @s[tag=EonEncounterSuccess,tag=!LatiosEncounter,scores={rng=0}] run playsound latios record @s ~ ~ ~ 1 1 1
+execute at @s[tag=EonEncounterSuccess,tag=!LatiosEncounter,scores={rng=0}] run function johto:sound/playcry {species:"latios",distance:24,volume:1.5}
 execute as @s[tag=EonEncounterSuccess,tag=!LatiosEncounter,scores={rng=0}] run tellraw @s {"text":"Latios jumped out at you!"}
 execute as @s[tag=EonEncounterSuccess,tag=!LatiosEncounter,scores={rng=0}] run tag @s add LatiosEncounter
 
 execute as @s[tag=EonEncounterSuccess,tag=!LatiasEncounter,scores={rng=1..}] run pokespawn latias level=35 moves=dragonbreath,protect,refresh,lusterpurge
-execute as @s[tag=EonEncounterSuccess,tag=!LatiasEncounter,scores={rng=1..}] run playsound latias record @s ~ ~ ~ 1 1 1
+execute at @s[tag=EonEncounterSuccess,tag=!LatiasEncounter,scores={rng=1..}] run function johto:sound/playcry {species:"latias",distance:24,volume:1.5}
 execute as @s[tag=EonEncounterSuccess,tag=!LatiasEncounter,scores={rng=1..}] run tellraw @s {"text":"Latias jumped out at you!"}
 execute as @s[tag=EonEncounterSuccess,tag=!LatiasEncounter,scores={rng=1..}] run tag @s add LatiasEncounter
 

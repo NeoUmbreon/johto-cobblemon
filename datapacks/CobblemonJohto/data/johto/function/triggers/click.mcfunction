@@ -1,36 +1,35 @@
-#stops current sounds
-tag @s[tag=!RadioOff,scores={click=2..}] add Temp
+tag @s remove TempDelay
+
+#Three or more clicks, toggles sound mode
+tag @s[scores={click=3..}] add Temp
+execute as @s[tag=Temp] run function johto:sound/switchmode
+tellraw @s[tag=Temp,tag=DSSound] {"text":"Switching to DS sound..."}
+tellraw @s[tag=Temp,tag=!DSSound] {"text":"Switching to GB sound..."}
+execute as @s[tag=Temp] at @s run function johto:world/musictitles
+tag @s[tag=Temp] remove RadioOff
+scoreboard players set @s[tag=Temp] RadioSelect 0
+tag @s remove Temp
+
+
+#Two clicks, turns radio off
+tag @s[tag=!RadioOff,scores={click=2}] add Temp
 tellraw @s[tag=Temp] {"text":"Music toggled off... Double click the Radio again to turn on!"}
 tag @s[tag=Temp] add RadioOff
-stopsound @s[tag=Temp] record
-scoreboard players set @s[tag=Temp] MusicCooldown 0
-scoreboard players set @s[tag=Temp] click 0
+execute as @s[tag=Temp] run function johto:tools/forceclick
 tag @s remove Temp
 
 
-
-
-
-#Turns radio on
-tag @s[tag=RadioOff,scores={click=2..}] add Temp
+#Two clicks, turns radio on
+tag @s[tag=RadioOff,scores={click=2}] add Temp
 tellraw @s[tag=Temp] {"text":"Music toggled on! Double click the Radio again to turn off!"}
 tag @s[tag=Temp] remove RadioOff
-scoreboard players set @s[tag=Temp] click 0
+scoreboard players set @s[tag=Temp] RadioSelect 0
 tag @s remove Temp
 
 
+#One click, refreshes current sounds
+scoreboard players set @s[scores={click=1}] RadioSelect 0
 
 
-
-#Only one click, stops current sounds
-stopsound @s[scores={click=1..}] record
-scoreboard players set @s[scores={click=1..}] MusicCooldown 0
-scoreboard players set @s[scores={click=1..}] click 0
-
-
-
-
-
-
-tag @s remove TempDelay
-#scoreboard players set @s click 0
+#Forceclick
+execute if score @s RadioSelect matches 0 run function johto:world/switchradiostation

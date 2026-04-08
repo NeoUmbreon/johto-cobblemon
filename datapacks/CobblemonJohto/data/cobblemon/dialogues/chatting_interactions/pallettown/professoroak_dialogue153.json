@@ -168,7 +168,7 @@
                         "text": "Yes",
                         "value": "yes",
                         "action": [
-                            "q.run_command('playsound minecraft:egghatch ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run pokegive charmander level=5');",
                             "q.dialogue.set_page('page11');"
                         ]
@@ -195,7 +195,7 @@
                         "text": "Yes",
                         "value": "yes",
                         "action": [
-                            "q.run_command('playsound minecraft:egghatch ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run pokegive squirtle level=5');",
                             "q.dialogue.set_page('page11');"
                         ]
@@ -222,7 +222,7 @@
                         "text": "Yes",
                         "value": "yes",
                         "action": [
-                            "q.run_command('playsound minecraft:egghatch ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run pokegive bulbasaur level=5');",
                             "q.dialogue.set_page('page11');"
                         ]

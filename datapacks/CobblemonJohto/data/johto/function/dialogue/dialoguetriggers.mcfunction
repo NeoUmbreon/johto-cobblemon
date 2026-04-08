@@ -223,12 +223,11 @@ execute as @s[x=481,y=47,z=-305,distance=..25,tag=!Dialogue68,scores={StarterPic
 
 #Goldenrod Underground iron door unlock
 #Locked
-execute if block 480 55 -321 minecraft:air if entity @a[x=480,y=54,z=-326,distance=..25] run fill 478 57 -322 479 55 -324 air
-execute if block 480 55 -321 minecraft:air if entity @a[x=480,y=54,z=-326,distance=..25] run clone -728 66 -333 -726 64 -334 479 55 -322
+execute if block 480 55 -321 minecraft:air unless entity @a[x=480,y=54,z=-326,distance=..10,tag=Dialogue66] run fill 478 57 -322 479 55 -324 air
+execute if block 480 55 -321 minecraft:air unless entity @a[x=480,y=54,z=-326,distance=..10,tag=Dialogue66] run clone -728 66 -333 -726 64 -334 479 55 -322
 
 #Unlocked
-execute if block 480 55 -321 minecraft:iron_block if entity @a[x=480,y=54,z=-326,distance=..10,tag=Dialogue66] run playsound minecraft:entity.iron_golem.death ambient @a[x=480,y=54,z=-326,distance=..10,tag=Dialogue66,scores={Cooldown=0}] ~ ~ ~ 1 1 1
-execute if block 480 55 -321 minecraft:iron_block if entity @a[x=480,y=54,z=-326,distance=..10,tag=Dialogue66] run scoreboard players set @a[x=480,y=54,z=-326,distance=..10,tag=Dialogue66,scores={Cooldown=0}] Cooldown 10
+execute if block 480 55 -321 minecraft:iron_block if entity @a[x=480,y=54,z=-326,distance=..10,tag=Dialogue66] positioned 480.5 56.5 -321.0 run function johto:sound/playglobalsfx {sfx:"enterdoor",category:"block"}
 execute if block 480 55 -321 minecraft:iron_block if entity @a[x=480,y=54,z=-326,distance=..10,tag=Dialogue66] run clone -724 66 -333 -723 64 -335 478 55 -324
 execute if block 480 55 -321 minecraft:iron_block if entity @a[x=480,y=54,z=-326,distance=..10,tag=Dialogue66] run fill 481 55 -322 479 57 -321 air
 
@@ -239,11 +238,10 @@ execute at @s[x=426,y=37,z=-304,distance=..25,tag=Dialogue72] as @e[x=426,y=37,z
 
 #Radio Tower Shutter Open and Close
 #Locked
-execute if block 502 43 -244 minecraft:air if entity @a[x=498,y=42,z=-246,distance=..25] run fill 502 43 -244 502 46 -239 minecraft:iron_bars
+execute if block 502 43 -244 minecraft:air unless entity @a[x=498,y=42,z=-246,dx=9,dy=5,dz=10,tag=Dialogue69] run fill 502 43 -244 502 46 -239 minecraft:iron_bars
 
 #Unlocked
-execute if block 502 43 -244 minecraft:iron_bars if entity @a[x=498,y=42,z=-246,dx=9,dy=5,dz=10,tag=Dialogue69] run playsound minecraft:entity.iron_golem.death ambient @a[x=498,y=42,z=-246,dx=9,dy=5,dz=10,tag=Dialogue69,scores={Cooldown=0}] ~ ~ ~ 1 1 1
-execute if block 502 43 -244 minecraft:iron_bars if entity @a[x=498,y=42,z=-246,dx=9,dy=5,dz=10,tag=Dialogue69] run scoreboard players set @a[x=498,y=42,z=-246,dx=9,dy=5,dz=10,tag=Dialogue69,scores={Cooldown=0}] Cooldown 10
+execute if block 502 43 -244 minecraft:iron_bars if entity @a[x=498,y=42,z=-246,dx=9,dy=5,dz=10,tag=Dialogue69] positioned 502.5 45.0 -241.0 run function johto:sound/playglobalsfx {sfx:"enterdoor",category:"block"}
 execute if block 502 43 -244 minecraft:iron_bars if entity @a[x=498,y=42,z=-246,dx=9,dy=5,dz=10,tag=Dialogue69] run fill 502 43 -244 502 46 -239 minecraft:air
 
 execute as @s[x=-744,y=69,z=507,dx=162,dy=70,dz=147,tag=!Dialogue79,nbt={Inventory:[{id:"cobblemon:dragon_fang"}]}] run opendialogue dragonsden_clair_dialogue79 @s

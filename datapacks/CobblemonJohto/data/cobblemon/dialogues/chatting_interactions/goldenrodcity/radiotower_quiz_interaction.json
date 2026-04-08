@@ -103,7 +103,7 @@
                         "value": "true",
                         "action": [
                             "q.dialogue.set_page('quiz2');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"right\"}');"
                         ]
                     },
                     {
@@ -111,7 +111,7 @@
                         "value": "false",
                         "action": [
                             "q.dialogue.set_page('wronganswer');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"wrong\"}');"
                         ]
                     }
                 ]
@@ -132,7 +132,7 @@
                         "value": "true",
                         "action": [
                             "q.dialogue.set_page('quiz3');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"right\"}');"
                         ]
                     },
                     {
@@ -140,7 +140,7 @@
                         "value": "false",
                         "action": [
                             "q.dialogue.set_page('wronganswer');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"wrong\"}');"
                         ]
                     }
                 ]
@@ -161,7 +161,7 @@
                         "value": "true",
                         "action": [
                             "q.dialogue.set_page('wronganswer');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"wrong\"}');"
                         ]
                     },
                     {
@@ -169,7 +169,7 @@
                         "value": "false",
                         "action": [
                             "q.dialogue.set_page('quiz4');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"right\"}');"
                         ]
                     }
                 ]
@@ -190,7 +190,7 @@
                         "value": "true",
                         "action": [
                             "q.dialogue.set_page('quiz5');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"right\"}');"
                         ]
                     },
                     {
@@ -198,7 +198,7 @@
                         "value": "false",
                         "action": [
                             "q.dialogue.set_page('wronganswer');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"wrong\"}');"
                         ]
                     }
                 ]
@@ -219,7 +219,7 @@
                         "value": "true",
                         "action": [
                             "q.dialogue.set_page('wronganswer');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.player.burp ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"wrong\"}');"
                         ]
                     },
                     {
@@ -227,7 +227,7 @@
                         "value": "false",
                         "action": [
                             "q.dialogue.set_page('quizend1');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.firework_rocket.twinkle ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"right\"}');"
                         ]
                     }
                 ]
@@ -269,6 +269,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"keyitem\"}');",
                             "q.dialogue.close();"
                         ]
                     }

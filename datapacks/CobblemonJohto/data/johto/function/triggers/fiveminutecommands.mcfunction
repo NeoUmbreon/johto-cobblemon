@@ -19,6 +19,9 @@ scoreboard players remove @a[scores={StevenCD=1}] StevenCD 1
 #LuckyNumberTalk Cooldown
 tag @a[tag=LuckyNumberTalk] remove LuckyNumberTalk
 
+#BuenasPasswordTalk Cooldown
+tag @a[tag=BuenasPasswordTalk] remove BuenasPasswordTalk
+
 #PokemonMusicTalk Reset
 tag @a[tag=PokemonMusicTalk] remove PokemonMusicTalk
 

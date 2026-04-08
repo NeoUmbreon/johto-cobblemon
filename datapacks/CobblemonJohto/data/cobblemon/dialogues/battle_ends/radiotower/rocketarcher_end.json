@@ -158,7 +158,7 @@
                         "text": "Rainbow Wing",
                         "value": "rainbow",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"keyitem\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/rainbowfeather');",
                             "q.run_command('tag ' + q.player.username + ' add GoldPick');",
                             "q.dialogue.set_page('pickrainbow1');"
@@ -168,7 +168,7 @@
                         "text": "Silver Wing",
                         "value": "silver",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"keyitem\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/silverfeather');",
                             "q.run_command('tag ' + q.player.username + ' add SilverPick');",
                             "q.dialogue.set_page('picksilver1');"

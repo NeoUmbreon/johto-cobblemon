@@ -79,7 +79,7 @@
                         "action": [
                         "q.dialogue.set_page('page4');",
                         "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/mysteryegg');",
-                        "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');"
+                        "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"keyitem\"}');"
                     ]
                     }
                 ]
@@ -320,7 +320,7 @@
                         "action": [
                             "q.dialogue.set_page('page17');",
                             "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:pokedex_red');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound minecraft:entity.experience_orb.pickup ambient @s ~ ~ ~ 1 1 1');"
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');"
                         ]
                     }
                 ]
@@ -470,7 +470,7 @@
                         "value": "close",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run pokeheal');",
-                            "q.run_command('execute as ' + q.player.username + ' run playsound cobblemon:block.healing_machine.active ambient @s ~ ~ ~ 1 1 1');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"pokemonhealed\"}');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue5');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"

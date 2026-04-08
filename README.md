@@ -1,29 +1,37 @@
 # johto-cobblemon
-
-This modification to [Jond's Cobblemon Johto](https://www.curseforge.com/minecraft/worlds/cobblemon-johto) allows trainers to battle you automatically.
-
-### Necessary mods with Fabric 1.21.1:
-
-- [Cobblemon 1.7.3](https://modrinth.com/mod/cobblemon/versions?g=1.21.1&l=fabric)
-- [Cobblemon Trainer Battle Commands 0.13.0-beta](https://modrinth.com/mod/tbcs/versions?g=1.21.1&l=fabric)
-- [Radical Cobblemon Trainers API 0.14.8-beta](https://modrinth.com/mod/rctapi/versions?g=1.21.1&l=fabric)
-- [ForgeConfigAPIPort-v21.1.6](https://modrinth.com/mod/forge-config-api-port/versions?g=1.21.1&l=fabric)
+:)
 
 ## Files
 ### Edited files:
 
-- datapacks/CobblemonJohto/data/johto/function/triggers/relog.mcfunction 
-- datapacks/CobblemonJohto/data/minecraft/tags/function/load.json 
-- datapacks/CobblemonJohto/data/minecraft/tags/function/tick.json 
+- [datapacks/CobblemonJohto/data/cobblemon/flows/battle_started_post/wild_battle_start_handler.molang](datapacks/CobblemonJohto/data/cobblemon/flows/battle_started_post/wild_battle_start_handler.molang)
+- [datapacks/CobblemonJohto/data/johto/function/dialogue/dialogue.mcfunction](datapacks/CobblemonJohto/data/johto/function/dialogue/dialogue.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/hms/flymap.mcfunction](datapacks/CobblemonJohto/data/johto/function/hms/flymap.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/tools/forceclick.mcfunction](datapacks/CobblemonJohto/data/johto/function/tools/forceclick.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/triggers/battles/battleend.mcfunction](datapacks/CobblemonJohto/data/johto/function/triggers/battles/battleend.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/triggers/click.mcfunction](datapacks/CobblemonJohto/data/johto/function/tools/click.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/triggers/dailycommands.mcfunction](datapacks/CobblemonJohto/data/johto/function/triggers/dailycommands.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/triggers/fiveminutecommands.mcfunction](datapacks/CobblemonJohto/data/johto/function/triggers/fiveminutecommands.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/triggers/runupdates.mcfunction](datapacks/CobblemonJohto/data/johto/function/triggers/runupdates.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/world/20tpscommands.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/20tpscommands.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/world/musictitles.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/musictitles.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/world/portals.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/portals.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/world/radiostations.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/radiostations.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/world/worldcommands.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/worldcommands.mcfunction)
 
 ### New files:
 
-- generate_trainers.sh 
-- datapacks/CobblemonJohto/data/johto/function/trainers/battle_cleanup.mcfunction 
-
-### Filled by script:
-
-- datapacks/CobblemonJohto/data/johto/function/trainers/battles/*.mcfunction 
-- trainers/*.json 
-- datapacks/CobblemonJohto/data/johto/function/trainers/bootstrap.mcfunction 
-- datapacks/CobblemonJohto/data/johto/function/trainers/detect_trainers.mcfunction 
+- [datapacks/CobblemonJohto/data/johto/function/sound/playrecord.mcfunction](datapacks/CobblemonJohto/data/johto/function/sound/playrecord.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/sound/gbbattleintro.mcfunction](datapacks/CobblemonJohto/data/johto/function/sound/gbbattleintro.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/sound/gbbattleloop.mcfunction](datapacks/CobblemonJohto/data/johto/function/sound/gbbattleloop.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/sound/gbradiointro.mcfunction](datapacks/CobblemonJohto/data/johto/function/sound/gbradiointro.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/sound/gbradioloop.mcfunction](datapacks/CobblemonJohto/data/johto/function/sound/gbradioloop.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/sound/gbradiostationsintro.mcfunction](datapacks/CobblemonJohto/data/johto/function/sound/gbradiostationsintro.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/sound/gbradiostationsloop.mcfunction](datapacks/CobblemonJohto/data/johto/function/sound/gbradiostationsloop.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/world/musictitles/big.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/musictitles/big.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/world/musictitles/small.mcfunction](datapacks/CobblemonJohto/data/johto/function/world/musictitles/small.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/function/world/switchradiostation.mcfunction](datapacks/CobblemonJohto/data/johto/function/sound/switchradiostation.mcfunction)
+- [datapacks/CobblemonJohto/data/johto/predicate/pokemoncenters.json](datapacks/CobblemonJohto/data/johto/predicate/pokemoncenters.json)
+- [datapacks/CobblemonJohto/data/johto/predicate/gb_loop_only.json](datapacks/CobblemonJohto/data/johto/predicate/gb_loop_only.json)
+- [datapacks/CobblemonJohto/data/johto/predicate/riding.json](datapacks/CobblemonJohto/data/johto/predicate/riding.json)
+- [datapacks/CobblemonJohto/data/johto/predicate/surfing.json](datapacks/CobblemonJohto/data/johto/predicate/surfing.json)

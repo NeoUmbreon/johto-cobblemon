@@ -10,7 +10,7 @@ for_each(t.trademon, t.party_pokemon, {
     q.player.party.remove_by_id(t.trademon.id);
     q.player.party.add_by_properties(t.trade_offer);
     q.player.tell('§7§oYou traded Pokémon!§r');
-    q.run_command('playsound minecraft:egghatch ambient ' + q.player.username + ' ~ ~ ~ 1 1 1');
+    q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"pokemontraded\"}');
     t.found = 1;
     break;
   };
