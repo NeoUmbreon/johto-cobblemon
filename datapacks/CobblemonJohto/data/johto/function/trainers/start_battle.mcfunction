@@ -1,4 +1,5 @@
-# set ActiveTrainer
+# set TrainerUID & ActiveTrainer
+execute as @n[type=cobblemon:npc,tag=trainerBusy,distance=0] store result score @s TrainerUID run data get entity @s Config.trainer_uid
 execute store result score @s ActiveTrainer run data get entity @n[type=cobblemon:npc,tag=trainerBusy,distance=0] Config.trainer_uid 1
 
 # Refresh music
