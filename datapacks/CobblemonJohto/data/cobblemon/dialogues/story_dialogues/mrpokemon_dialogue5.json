@@ -471,6 +471,8 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run pokeheal');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"pokemonhealed\"}');",
+                            "q.run_command('scoreboard players set ' + q.player.username + ' Whiteout 1');",
+                            "q.run_command('spawnpoint ' + q.player.username + ' -256 64 -489');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue5');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
