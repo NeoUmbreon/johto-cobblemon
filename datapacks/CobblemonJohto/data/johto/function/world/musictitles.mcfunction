@@ -125,7 +125,7 @@ execute if entity @s[x=1499,y=64,z=-336,dx=196,dy=256,dz=126] run return run fun
 execute if entity @s[x=-1343,y=0,z=-459,dx=126,dy=240,dz=473] run return run function johto:world/musictitles/small {text:"Route 26", location:64, includes:"unless score @s MusicTitles matches 64..65 "}
 execute if entity @s[x=-1343,y=0,z=-588,dx=190,dy=240,dz=128] run return run function johto:world/musictitles/small {text:"Route 27", location:65, includes:"unless score @s MusicTitles matches 64..65 "}
 execute if entity @s[x=-1152,y=0,z=-588,dx=190,dy=240,dz=128] run return run function johto:world/musictitles/small {text:"Route 27", location:65, includes:"unless score @s MusicTitles matches 64..65 "}
-execute if entity @s[x=-961,y=0,z=-588,dx=207,dy=240,dz=128] run return run function johto:world/musictitles/small {text:"Route 27", location:65, includes:"unless score @s MusicTitles matches 64..65 "}
+execute if entity @s[x=-961,y=0,z=-588,dx=197,dy=240,dz=128] run return run function johto:world/musictitles/small {text:"Route 27", location:65, includes:"unless score @s MusicTitles matches 64..65 "}
 
 # Routes 24-25
 execute if entity @s[x=-2777,y=0,z=803,dx=122,dy=240,dz=150] run return run function johto:world/musictitles/small {text:"Route 24", location:62, includes:"unless score @s MusicTitles matches 62..63 "}
@@ -174,7 +174,7 @@ execute if entity @s[x=349,y=0,z=-461,dx=239,dy=240,dz=194] run return run funct
 execute if entity @s[x=-1343,y=64,z=15,dx=99,dy=100,dz=338] run return run function johto:world/musictitles/big {text:"Indigo Plateau", location:311, color:"white", subtext:"The Ultimate Goal of Trainers!", includes:"unless score @s MusicTitles matches 14 "}
 execute if entity @s[x=-3338,y=0,z=290,dx=113,dy=240,dz=96] run return run function johto:world/musictitles/big {text:"Lavender Town", location:312, color:"dark_purple", subtext:"The Noble Town", includes:""}
 execute if entity @s[x=-214,y=64,z=125,dx=117,dy=240,dz=119] run return run function johto:world/musictitles/big {text:"Mahogany Town", location:313, color:"gray", subtext:"Home of the Ninja", includes:""}
-execute if entity @s[x=-753,y=0,z=-577,dx=103,dy=240,dz=132] run return run function johto:world/musictitles/big {text:"New Bark Town", location:314, color:"white", subtext:"Winds of a New Beginning", includes:""}
+execute if entity @s[x=-763,y=0,z=-577,dx=113,dy=240,dz=132] run return run function johto:world/musictitles/big {text:"New Bark Town", location:314, color:"white", subtext:"Winds of a New Beginning", includes:""}
 execute if entity @s[x=639,y=0,z=-239,dx=197,dy=240,dz=279] run return run function johto:world/musictitles/big {text:"Olivine City", location:315, color:"dark_aqua", subtext:"The Port with Sea Breezes", includes:""}
 execute if entity @s[x=-1765,y=0,z=-404,dx=145,dy=240,dz=154] run return run function johto:world/musictitles/big {text:"Pallet Town", location:316, color:"yellow", subtext:"Shades of Your Journey Await!", includes:""}
 execute if entity @s[x=-1785,y=0,z=553,dx=261,dy=240,dz=208] run return run function johto:world/musictitles/big {text:"Pewter City", location:317, color:"gray", subtext:"Between Rugged Mountains", includes:""}
