@@ -1,4 +1,3 @@
 q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 0');
-q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');
+q.run_command('scoreboard players set ' + q.player.username + ' BattleCD 15');
 q.run_command('tag ' + q.player.username + ' add Whiteout');
-q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');

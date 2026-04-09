@@ -28,8 +28,9 @@ execute as @p[x=-665,y=64,z=-493,distance=50..100,tag=Dialogue6] run tp @e[x=-66
 #Dialogue 5 - Mr. Pokemon and Oak
 execute as @s[x=-255,y=63,z=-198,dx=20,dy=5,dz=8,tag=!Dialogue5] run opendialogue mrpokemon_dialogue5 @s
 
-#Dialogue 6 & 7, Silver Cherrygrove battle
+#Dialogue 6 & 7, Silver Cherrygrove battle (init BattleCD)
 #execute as @a[x=-300,y=64,z=-509,distance=0..5,tag=Dialogue5,tag=!Dialogue6] run opendialogue cherrygrove_silver_interaction @s
+execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=Dialogue5,tag=!Dialogue7] run scoreboard players add @s BattleCD 0
 execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=Dialogue5,tag=!Dialogue7] unless entity @e[x=-300,y=64,z=-509,dy=3,type=cobblemon:npc] run particle cloud -300 64 -509 1 1 1 1 50
 execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=Dialogue5,tag=!Dialogue7] unless entity @e[x=-300,y=64,z=-509,dy=3,type=cobblemon:npc] run npcspawnat -300 64 -509 cherrygrove_silver 1
 

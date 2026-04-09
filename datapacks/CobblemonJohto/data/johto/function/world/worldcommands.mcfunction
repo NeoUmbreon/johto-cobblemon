@@ -23,6 +23,7 @@ execute as @a run function johto:world/roadblocks
 
 #Removes Cooldown score if present
 scoreboard players remove @a[scores={Cooldown=1..}] Cooldown 1
+scoreboard players remove @a[scores={BattleCD=1..}] BattleCD 1
 
 #Runs Goldenrod Underground puzzle function of player is in the underground
 execute if entity @a[x=476,y=46,z=-345,dx=52,dy=7,dz=51,limit=1] run function johto:triggers/undergroundpuzzle/puzzle
@@ -281,7 +282,8 @@ spawnpoint @a[x=127,y=64,z=-582,distance=..5] 127 64 -582
 
 
 #Runs Whiteout function
-
+execute as @a[tag=Whiteout] run scoreboard players set @s BattleStart 0
+execute as @a[tag=Whiteout] run function johto:tools/forceclick
 #Battle tower, ends a player's streak if they lose.
 execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run tp @e[x=908,y=100,z=67,distance=..4,type=cobblemon:pokemon] 10000000 -50000 -10000000
 execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run scoreboard players set @s BattleStreak 0
