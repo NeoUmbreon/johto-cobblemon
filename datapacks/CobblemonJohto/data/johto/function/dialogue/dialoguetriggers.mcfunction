@@ -30,8 +30,8 @@ execute as @s[x=-255,y=63,z=-198,dx=20,dy=5,dz=8,tag=!Dialogue5] run opendialogu
 
 #Dialogue 6 & 7, Silver Cherrygrove battle
 #execute as @a[x=-300,y=64,z=-509,distance=0..5,tag=Dialogue5,tag=!Dialogue6] run opendialogue cherrygrove_silver_interaction @s
-execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=!Dialogue7,scores={StarterPick=1..}] unless entity @e[x=-300,y=64,z=-509,dy=3,type=cobblemon:npc] run particle cloud -300 64 -509 1 1 1 1 50
-execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=!Dialogue7,scores={StarterPick=1..}] unless entity @e[x=-300,y=64,z=-509,dy=3,type=cobblemon:npc] run npcspawnat -300 64 -509 cherrygrove_silver 1
+execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=Dialogue5,tag=!Dialogue7] unless entity @e[x=-300,y=64,z=-509,dy=3,type=cobblemon:npc] run particle cloud -300 64 -509 1 1 1 1 50
+execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=Dialogue5,tag=!Dialogue7] unless entity @e[x=-300,y=64,z=-509,dy=3,type=cobblemon:npc] run npcspawnat -300 64 -509 cherrygrove_silver 1
 
 #If player has null StarterPick score and around Silver, assigns something to them as a fallback.
 execute as @s[x=-279,y=64,z=-509,distance=..15,tag=!Dialogue7] unless entity @s[scores={StarterPick=1..}] run scoreboard players set @s StarterPick 1
@@ -97,10 +97,8 @@ execute as @s[x=343,y=64,z=216,distance=..50,tag=!Dialogue31] unless entity @e[x
 execute as @s[x=333,y=64,z=219,dx=20,dy=5,dz=14,tag=Kimono1,tag=Kimono2,tag=Kimono3,tag=Kimono4,tag=Kimono5,tag=!Dialogue33] run opendialogue surfguy_dialogue33 @s 
 
 #Burned Tower Silver Spawn
-execute as @s[x=441,y=64,z=312,distance=..20,tag=!Dialogue35,scores={StarterPick=1..}] unless entity @e[x=441,y=64,z=312,dy=3,type=cobblemon:npc] run particle cloud 441 64 312 1 1 1 1 100
-execute as @s[x=441,y=64,z=312,distance=..20,tag=!Dialogue35,scores={StarterPick=1}] unless entity @e[x=441,y=64,z=312,dy=3,type=cobblemon:npc] run npcspawnat 441 64 312 burnedtower_silver1 1
-execute as @s[x=441,y=64,z=312,distance=..20,tag=!Dialogue35,scores={StarterPick=2}] unless entity @e[x=441,y=64,z=312,dy=3,type=cobblemon:npc] run npcspawnat 441 64 312 burnedtower_silver2 1
-execute as @s[x=441,y=64,z=312,distance=..20,tag=!Dialogue35,scores={StarterPick=3}] unless entity @e[x=441,y=64,z=312,dy=3,type=cobblemon:npc] run npcspawnat 441 64 312 burnedtower_silver3 1
+execute as @s[x=441,y=64,z=312,distance=..20,tag=!Dialogue35] unless entity @e[x=441,y=64,z=312,dy=3,type=cobblemon:npc] run particle cloud 441 64 312 1 1 1 1 100
+execute as @s[x=441,y=64,z=312,distance=..20,tag=!Dialogue35] unless entity @e[x=441,y=64,z=312,dy=3,type=cobblemon:npc] run npcspawnat 441 64 312 burnedtower_silver 1
 
 #Dialogue 39 - Silver outside Olivine Gym
 execute at @s[x=809,y=63,z=14,distance=..40,tag=!Dialogue39] unless entity @e[x=809,y=64,z=14,dy=3,type=cobblemon:npc] run spawnnpcat 809 64 14 olivine_silver 1
@@ -215,10 +213,8 @@ execute as @s[x=-144,y=44,z=182,distance=..6,tag=Dialogue63,tag=!Dialogue64] unl
 
 
 #Goldenrod Underground Silver
-execute as @s[x=481,y=47,z=-305,distance=..25,tag=!Dialogue68,scores={StarterPick=1..}] unless entity @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] run particle cloud 481 47 -305 1 1 1 1 100
-execute as @s[x=481,y=47,z=-305,distance=..25,tag=!Dialogue68,scores={StarterPick=1}] unless entity @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] run npcspawnat 481 47 -305 goldenrod_silver1 1
-execute as @s[x=481,y=47,z=-305,distance=..25,tag=!Dialogue68,scores={StarterPick=2}] unless entity @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] run npcspawnat 481 47 -305 goldenrod_silver2 1
-execute as @s[x=481,y=47,z=-305,distance=..25,tag=!Dialogue68,scores={StarterPick=3}] unless entity @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] run npcspawnat 481 47 -305 goldenrod_silver3 1
+execute as @s[x=481,y=47,z=-305,distance=..25,tag=!Dialogue68] unless entity @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] run particle cloud 481 47 -305 1 1 1 1 100
+execute as @s[x=481,y=47,z=-305,distance=..25,tag=!Dialogue68] unless entity @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] run npcspawnat 481 47 -305 goldenrod_silver 1
 
 
 #Goldenrod Underground iron door unlock
@@ -258,10 +254,8 @@ execute as @s[x=-723,y=68,z=-492,distance=..20,scores={IP=1..},tag=!Dialogue100]
 execute as @s[x=-683,y=63,z=-478,distance=..10,tag=Clair,tag=Dialogue8,tag=!Dialogue81] run opendialogue professorelm_dialogue81 @s
 
 #Silver Victory Road
-execute as @s[x=-1449,y=51,z=528,distance=..25,tag=!Dialogue85,scores={StarterPick=1..}] unless entity @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] run particle cloud -1449 51 528 1 1 1 1 100
-execute as @s[x=-1449,y=51,z=528,distance=..25,tag=!Dialogue85,scores={StarterPick=1}] unless entity @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] run npcspawnat -1449 51 528 victoryroad_silver1 1
-execute as @s[x=-1449,y=51,z=528,distance=..25,tag=!Dialogue85,scores={StarterPick=2}] unless entity @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] run npcspawnat -1449 51 528 victoryroad_silver2 1
-execute as @s[x=-1449,y=51,z=528,distance=..25,tag=!Dialogue85,scores={StarterPick=3}] unless entity @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] run npcspawnat -1449 51 528 victoryroad_silver3 1
+execute as @s[x=-1449,y=51,z=528,distance=..25,tag=!Dialogue85] unless entity @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] run particle cloud -1449 51 528 1 1 1 1 100
+execute as @s[x=-1449,y=51,z=528,distance=..25,tag=!Dialogue85] unless entity @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] run npcspawnat -1449 51 528 victoryroad_silver 1
 
 
 #Elm granting SS Ticket
@@ -282,10 +276,8 @@ execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTra
 execute as @s[x=-3060,y=64,z=956,distance=..50,tag=!Dialogue113,tag=Dialogue221] unless entity @e[x=-3060,y=64,z=956,dy=3,type=cobblemon:npc] run npcspawnat -3060 64 956 route25_misty 1
 
 #Mt. Moon Silver
-execute as @s[x=-2201,y=24,z=825,distance=..25,tag=!Dialogue131,scores={StarterPick=1..}] unless entity @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] run particle cloud -2201 24 825 1 1 1 1 100
-execute as @s[x=-2201,y=24,z=825,distance=..25,tag=!Dialogue131,scores={StarterPick=1}] unless entity @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] run npcspawnat -2201 24 825 mtmoon_silver1 1
-execute as @s[x=-2201,y=24,z=825,distance=..25,tag=!Dialogue131,scores={StarterPick=2}] unless entity @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] run npcspawnat -2201 24 825 mtmoon_silver2 1
-execute as @s[x=-2201,y=24,z=825,distance=..25,tag=!Dialogue131,scores={StarterPick=3}] unless entity @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] run npcspawnat -2201 24 825 mtmoon_silver3 1
+execute as @s[x=-2201,y=24,z=825,distance=..25,tag=!Dialogue131] unless entity @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] run particle cloud -2201 24 825 1 1 1 1 100
+execute as @s[x=-2201,y=24,z=825,distance=..25,tag=!Dialogue131] unless entity @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] run npcspawnat -2201 24 825 mtmoon_silver 1
 
 #Vermilion Steven Stone after obtaining the Copycat's Doll
 execute at @s[x=-2710,y=64,z=-55,distance=..25,tag=Dialogue134,tag=!Dialogue136] unless entity @e[x=-2710,y=64,z=-55,dy=3,type=cobblemon:npc] run npcspawnat -2710 64 -55 steven_generic
