@@ -283,15 +283,16 @@ spawnpoint @a[x=127,y=64,z=-582,distance=..5] 127 64 -582
 
 #Runs Whiteout function
 execute as @a[tag=Whiteout] run scoreboard players set @s BattleStart 0
-execute as @a[tag=Whiteout] run function johto:tools/forceclick
 #Battle tower, ends a player's streak if they lose.
 execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run tp @e[x=908,y=100,z=67,distance=..4,type=cobblemon:pokemon] 10000000 -50000 -10000000
 execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run scoreboard players set @s BattleStreak 0
 execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run scoreboard players set @s TriggerCommand 1
 execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run pokeheal
+execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run function johto:tools/forceclick
 execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run tag @s remove Whiteout
 
 #Removes tag if Whiteout is disabled via lobby rule
+execute if entity @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] as @a[tag=Whiteout] run function johto:tools/forceclick
 execute if entity @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run tag @a[tag=Whiteout] remove Whiteout
 
 execute as @a[tag=Whiteout] run function johto:triggers/whiteout
