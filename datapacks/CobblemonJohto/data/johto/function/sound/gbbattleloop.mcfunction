@@ -55,17 +55,17 @@ execute if score @s BattleStart matches 17 run return run function johto:sound/p
 #18 - Kanto Gym Leader
 execute if score @s BattleStart matches 18 run return run function johto:sound/playrecord {track:"gb/battle/gymleaderkanto", duration:596}
 
-#19 - Wild Pokemon (umbrella)
-#30..32 - Legendary Beasts
-execute if score @s BattleStart matches 30..32 run return run function johto:sound/playrecord {track:"gb/battle/raikouenteisuicune", duration:1839}
+#20.. - Wild Pokemon
+#20..23 - Johto Day
+execute if score @s BattleStart matches 20..23 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonjohtoday", duration:1839}
 
-#21 - Johto Day
-execute if score @s BattleStart matches 21 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonjohtoday", duration:731}
+#24..27 - Johto Night
+execute if score @s BattleStart matches 24..27 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonjohtonight", duration:731}
 
-#22 - Johto Night
-execute if score @s BattleStart matches 22 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonjohtonight", duration:752}
+#28 - Kanto
+execute if score @s BattleStart matches 28 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonkanto", duration:752}
 
-#23 - Kanto
-execute if score @s BattleStart matches 23 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonkanto", duration:1238}
+#29..31 - Legendary Beasts
+execute if score @s BattleStart matches 29..31 run return run function johto:sound/playrecord {track:"gb/battle/raikouenteisuicune", duration:1238}
 
 return fail

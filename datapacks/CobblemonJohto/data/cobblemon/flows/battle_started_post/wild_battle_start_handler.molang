@@ -1,9 +1,25 @@
 c.battle.is_pvw == false ? return 0;
 
-for_each(t.player, c.players, {
-    v.player = t.player.player;
-    q.set_query('player', t.player.player);
-
-    q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 19');
-    q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');
+for_each(t.actor, q.battle.actors, {
+    t.actor.is_wild ? { t.pokemon = t.actor.pokemon; };
+    t.actor.is_player ? { t.player = t.actor.player; };
 });
+
+q.set_query('player', t.player);
+t.species = q.to_string(t.pokemon.species);
+t.time = q.player.world.time_of_day;
+t.x = t.player.x;
+t.z = t.player.z;
+
+( t.x > -763 ) || ( t.x > -1060 && t.z > -417 ) || ( t.x > -1200 && t.z > -245 && t.z < -180 ) ? ( t.time < 12000 ? { t.battle_start = 20; } : { t.battle_start = 24; }) : { t.battle_start = 28; };
+
+t.species == 'lugia' && t.battle_start <= 24 ? { t.battle_start = t.battle_start + 1; };
+t.species == 'hooh' && t.battle_start <= 24 ? { t.battle_start = t.battle_start + 2; };
+(t.species == 'groudon' || t.species == 'kyogre' || t.species == 'rayquaza') && t.battle_start <= 24 ? { t.battle_start = t.battle_start + 3; };
+t.species == 'raikou' ? { t.battle_start = 29; };
+t.species == 'entei' ? { t.battle_start = 30; };
+t.species == 'suicune' ? { t.battle_start = 31; };
+
+
+q.run_command('scoreboard players set ' + q.player.username + ' BattleStart ' + t.battle_start);
+q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');

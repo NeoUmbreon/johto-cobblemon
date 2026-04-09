@@ -55,23 +55,17 @@ execute if score @s BattleStart matches 17 run return run function johto:sound/p
 #18 - Kanto Gym Leader
 execute if score @s BattleStart matches 18 run return run function johto:sound/playrecord {track:"gb/battle/gymleaderkantointro", duration:422}
 
-#19 - Wild Pokemon (umbrella)
-#30..32 - Legendary Beasts
-execute if score @s BattleStart matches 19 if entity @e[type=cobblemon:pokemon,distance=..20,nbt={Pokemon:{Species:"cobblemon:raikou",PokemonOriginalTrainerType:"NONE"}}] run scoreboard players set @s BattleStart 30
-execute if score @s BattleStart matches 19 if entity @e[type=cobblemon:pokemon,distance=..20,nbt={Pokemon:{Species:"cobblemon:entei",PokemonOriginalTrainerType:"NONE"}}] run scoreboard players set @s BattleStart 31
-execute if score @s BattleStart matches 19 if entity @e[type=cobblemon:pokemon,distance=..20,nbt={Pokemon:{Species:"cobblemon:suicune",PokemonOriginalTrainerType:"NONE"}}] run scoreboard players set @s BattleStart 32
-execute if score @s BattleStart matches 30..32 run return run function johto:sound/playrecord {track:"gb/battle/raikouenteisuicuneintro", duration:254}
+#20.. - Wild Pokemon
+#20..23 - Johto Day
+execute if score @s BattleStart matches 20..23 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonjohtodayintro", duration:262}
 
-#21 - Johto Day
-execute if entity @s[scores={BattleStart=19..},x=-877,y=0,z=-800,dx=3000,dy=256,dz=2000] if predicate {condition:"minecraft:time_check",value:{"min":0,"max":11999},period:24000} run scoreboard players set @s BattleStart 21
-execute if score @s BattleStart matches 21 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonjohtodayintro", duration:262}
+#24..27 - Johto Night
+execute if score @s BattleStart matches 24..27 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonjohtonightintro", duration:269}
 
-#22 - Johto Night
-execute if entity @s[scores={BattleStart=19..},x=-877,y=0,z=-800,dx=3000,dy=256,dz=2000] unless predicate {condition:"minecraft:time_check",value:{"min":0,"max":11999},period:24000} run scoreboard players set @s BattleStart 22
-execute if score @s BattleStart matches 22 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonjohtonightintro", duration:269}
+#28 - Kanto
+execute if score @s BattleStart matches 28 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonkantointro", duration:57}
 
-#23 - Kanto
-execute if entity @s[scores={BattleStart=19..},x=-3552,y=0,z=-1136,dx=2675,dy=256,dz=2185] run scoreboard players set @s BattleStart 23
-execute if score @s BattleStart matches 23 run return run function johto:sound/playrecord {track:"gb/battle/wildpokemonkantointro", duration:57}
+#29..31 - Legendary Beasts
+execute if score @s BattleStart matches 29..31 run return run function johto:sound/playrecord {track:"gb/battle/raikouenteisuicuneintro", duration:254}
 
 return fail
