@@ -40,6 +40,9 @@ execute unless score @s RadioSelect matches 2..8 run return fail
 
 
 # Overrides
+# Dialogue
+execute if score @s DialogueMusic matches 1.. run return run function johto:sound/gbdialogueloop
+
 # Radio Stations
 execute unless score @s RadioSelect matches 2 run return run function johto:sound/gbradiostationsloop
 
@@ -78,8 +81,8 @@ execute if score @s MusicTitles matches 67 run return run function johto:sound/p
 # Cherrygrove City (& Mahogany Town)
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":305}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":313}}]} run return run function johto:sound/playrecord {track:"gb/settlements/cherrygrovecity", duration:458}
 
-# Routes 30-33 and Oak's Welcome
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":68,"max":71}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":24}}]} run return run function johto:sound/playrecord {track:"gb/routes/30", duration:579}
+# Routes 30-33
+execute if score @s MusicTitles matches 68..71 run return run function johto:sound/playrecord {track:"gb/routes/30", duration:579}
 
 # Violet City (& Olivine City)
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":320}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":315}}]} run return run function johto:sound/playrecord {track:"gb/settlements/violetcity", duration:659}
@@ -223,6 +226,9 @@ execute if score @s MusicTitles matches 35 run return run function johto:sound/p
 
 # Lobby
 execute if score @s MusicTitles matches 25 run return run function johto:sound/playrecord {track:"gb/misc/titlescreen", duration:1702}
+
+# Oak's Welcome
+execute if score @s MusicTitles matches 24 run return run function johto:sound/playrecord {track:"gb/misc/anadventurebegins", duration:161}
 
 # ???
 execute if score @s MusicTitles matches 15 run return run function johto:sound/playrecord {track:"gb/misc/gameboyprinter", duration:1029}

@@ -170,7 +170,11 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page9');"
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 4');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.dialogue.set_page('page9');"
+                        ]
                     }
                 ]
             }
@@ -418,7 +422,7 @@
         },
         {
             "id": "page22",
-            "speaker": "mrpokemon",
+            "speaker": "oak",
             "lines": [
                 {
                     "type": "expression",
@@ -432,7 +436,11 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page23');"
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.dialogue.set_page('page23');"
+                        ]
                     }
                 ]
             }

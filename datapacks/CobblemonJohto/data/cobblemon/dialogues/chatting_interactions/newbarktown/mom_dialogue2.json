@@ -1,7 +1,9 @@
 {   
     "initializationAction": [              
+        "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 2');",
+        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('tag ' + q.player.username + ' add InDialogue');"
-            ],
+    ],
     "escapeAction": [],
     "speakers": {
         "npc": {
@@ -73,6 +75,8 @@
                         "value": "close",
                         "action": [
                             "q.dialogue.close();",
+                            "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue2');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');"
                             ]

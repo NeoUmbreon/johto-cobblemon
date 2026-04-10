@@ -18,6 +18,9 @@ execute unless score @s RadioSelect matches 2..8 run return fail
 
 
 # Overrides
+# Dialogue
+execute if score @s DialogueMusic matches 1.. run return run function johto:sound/dsdialogueloop
+
 # Radio Stations
 execute unless score @s RadioSelect matches 2 run return run function johto:sound/dsradiostationsloop
 
@@ -56,8 +59,8 @@ execute if score @s MusicTitles matches 67 run return run function johto:sound/p
 # Cherrygrove City (& Mahogany Town)
 execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":305}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":313}}]} run return run function johto:sound/playrecord {track:"ds/settlements/cherrygrovecity", duration:2140}
 
-# Routes 30-33 and Oak's Welcome
-execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":68,"max":71}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":24}}]} run return run function johto:sound/playrecord {track:"ds/routes/30", duration:1540}
+# Routes 30-33
+execute if score @s MusicTitles matches 68..71 run return run function johto:sound/playrecord {track:"ds/routes/30", duration:1540}
 
 # Violet City (& Olivine City)
 execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":320}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":315}}]} run return run function johto:sound/playrecord {track:"ds/settlements/violetcity", duration:2720}
@@ -212,6 +215,9 @@ execute if score @s MusicTitles matches 35 run return run function johto:sound/p
 
 # Lobby
 execute if score @s MusicTitles matches 25 run return run function johto:sound/playrecord {track:"ds/misc/titlescreen", duration:1518}
+
+# Oak's Welcome
+execute if score @s MusicTitles matches 24 run return run function johto:sound/playrecord {track:"ds/misc/anadventurebegins", duration:860}
 
 # Mt. Silver Summit
 execute if score @s MusicTitles matches 31 run return run function johto:sound/playrecord {track:"ds/misc/wind", duration:600}

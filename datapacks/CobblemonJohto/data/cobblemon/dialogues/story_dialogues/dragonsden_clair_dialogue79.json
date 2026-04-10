@@ -1,6 +1,8 @@
 {
     "initializationAction": [
         "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 6');",
+        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('execute as ' + q.player.username + ' run particle cloud -688 74 540 1 1 1 1 100');",
         "q.run_command('execute as ' + q.player.username + ' run npcspawnat -688 74 540 dragonsden_clair');"
     ],
@@ -31,8 +33,6 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playrecord {track:\"gb/sfx_local/getbadge\",duration:90}');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/badge8');",
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add Clair');",
                             "q.dialogue.set_page('page2');"
@@ -173,6 +173,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud -688 74 540 1 1 1 1 100');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-688,y=74,z=540,distance=..3,type=cobblemon:npc] 10000000 -50000 -10000000');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue79');",

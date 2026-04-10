@@ -40,6 +40,9 @@ execute unless score @s RadioSelect matches 2..8 run return fail
 
 
 # Overrides
+# Dialogue
+execute if score @s DialogueMusic matches 1.. run return run function johto:sound/gbdialogueintro
+
 # Radio Stations
 execute unless score @s RadioSelect matches 2 run return run function johto:sound/gbradiostationsintro
 
@@ -50,8 +53,8 @@ execute as @s[tag=Surfing] run return 1
 execute as @s[tag=CyclingMusic] run return run function johto:sound/playrecord {track:"gb/misc/cyclingintro", duration:71}
 
 
-# Tracks without an intro (return)
-execute if predicate johto:gb_loop_only run return 1
+
+
 
 
 # Everything Else
@@ -78,8 +81,8 @@ execute if score @s MusicTitles matches 67 run return run function johto:sound/p
 # Cherrygrove City (& Mahogany Town)
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":305}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":313}}]} run return run function johto:sound/playrecord {track:"gb/settlements/cherrygrovecityintro", duration:39}
 
-# Routes 30-33 and Oak's Welcome
-execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":{"min":68,"max":71}}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":24}}]} run return run function johto:sound/playrecord {track:"gb/routes/30intro", duration:95}
+# Routes 30-33
+execute if score @s MusicTitles matches 68..71 run return run function johto:sound/playrecord {track:"gb/routes/30intro", duration:95}
 
 # Violet City (& Olivine City)
 execute if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":320}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":315}}]} run return run function johto:sound/playrecord {track:"gb/settlements/violetcityintro", duration:201}
@@ -223,7 +226,13 @@ execute if score @s MusicTitles matches 19 run return run function johto:sound/p
 # Lobby
 # Loop Only
 
+# Oak's Welcome
+execute if score @s MusicTitles matches 24 run return run function johto:sound/playrecord {track:"gb/misc/anadventurebeginsintro", duration:181}
+
 # ???
 execute if score @s MusicTitles matches 15 run return run function johto:sound/playrecord {track:"gb/misc/gameboyprinterintro", duration:129}
+
+# Tracks without an intro (return)
+execute if predicate johto:gb_loop_only run return 1
 
 return 0

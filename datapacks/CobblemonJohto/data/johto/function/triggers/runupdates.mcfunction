@@ -11,6 +11,7 @@ scoreboard objectives add MusicLoop dummy
 scoreboard objectives add SurfingCD dummy
 scoreboard objectives add RadioSelectTemp dummy
 scoreboard objectives add BattleCD dummy
+scoreboard objectives add DialogueMusic dummy
 
 scoreboard objectives add SlotTimer1 dummy
 scoreboard objectives add SlotTimer2 dummy

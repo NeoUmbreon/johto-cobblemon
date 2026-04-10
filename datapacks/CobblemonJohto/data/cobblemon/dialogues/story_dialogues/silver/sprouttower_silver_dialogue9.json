@@ -1,6 +1,4 @@
 {   "initializationAction": [              
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tag ' + q.player.username + ' add InDialogue');"
         ],
     "escapeAction": [],
@@ -74,7 +72,11 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.dialogue.set_page('page4');"
+                        ]
                     }
                 ]
             }
@@ -148,7 +150,7 @@
                         "value": "close",
                         "action": [
                             "q.dialogue.close();",
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
+                            "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 0');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue9');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
