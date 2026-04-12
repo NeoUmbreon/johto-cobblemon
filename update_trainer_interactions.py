@@ -153,6 +153,7 @@ def get_model_identifier(folder: str, trainer_id) -> str:
 
 def build_battle_action(trainer_id: str, battle_id: int):
     return [
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
         (
             "q.run_command("
             f"'execute as ' + q.player.username + ' at @s"
