@@ -162,8 +162,8 @@ execute as @a[scores={TriggerCommand=93}] run tp @e[x=337,y=63,z=191,dy=3,type=c
 execute as @a[scores={TriggerCommand=93}] run scoreboard players set @s TriggerCommand 0
 
 #Cherrygrove Silver TPs out
-execute as @a[scores={TriggerCommand=94}] run particle cloud -300 64 -509 1 1 1 1 100
-execute as @a[scores={TriggerCommand=94}] run tp @e[x=-300,y=63,z=-509,dy=3,type=cobblemon:npc] -800 -50000 -280
+execute as @a[scores={TriggerCommand=94}] unless entity @a[x=-300,y=63,z=-509,distance=..6,tag=Dialogue5,tag=!Dialogue7] run particle cloud -300 64 -509 1 1 1 1 100
+execute as @a[scores={TriggerCommand=94}] unless entity @a[x=-300,y=63,z=-509,distance=..6,tag=Dialogue5,tag=!Dialogue7] run tp @e[x=-300,y=63,z=-509,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=94}] run scoreboard players set @s TriggerCommand 0
 
 #Azalea Silver TPs out

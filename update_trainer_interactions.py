@@ -152,7 +152,17 @@ def get_model_identifier(folder: str, trainer_id) -> str:
         return f"cobblemon:{trainer_id}"
 
 def build_battle_action(trainer_id: str, battle_id: int):
-    return [
+    actions = []
+
+    if is_silver(trainer_id):
+        base_id = get_silver_base_id(trainer_id)
+
+        actions.append("q.run_command('tag ' + q.player.username + ' remove InDialogue');")
+
+        if "cherrygrove" in base_id:
+            actions.append("q.run_command('tag ' + q.player.username + ' add Dialogue6');")
+
+    actions.extend([
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
         (
             "q.run_command("
@@ -163,7 +173,9 @@ def build_battle_action(trainer_id: str, battle_id: int):
             ");"
         ),
         "q.dialogue.close();",
-        ]
+    ])
+
+    return actions
 
 def generate_battle_end_copy(trainer_id: str, folder: str):
     end_file = BATTLE_END_DIR / folder / f"{trainer_id}_end.json"
@@ -327,7 +339,15 @@ def update_interaction_file(path: Path):
 
     battle_id = get_battle_music(folder, trainer_id)
 
-    # Replace escapeAction
+    if is_silver(trainer_id):
+        if "initializationAction" not in data:
+            data["initializationAction"] = []
+
+        init_line = "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+
+        if init_line not in data["initializationAction"]:
+            data["initializationAction"].append(init_line)
+
     data["escapeAction"] = build_battle_action(trainer_id, battle_id)
 
     # Replace speakers.npc

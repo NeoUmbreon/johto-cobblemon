@@ -31,7 +31,7 @@ execute as @s[x=-255,y=63,z=-198,dx=20,dy=5,dz=8,tag=!Dialogue5] run opendialogu
 #Dialogue 6 - Elm's Lab stolen Pokemon Phonecall
 execute as @s[x=-255,y=63,z=-208,dx=20,dy=5,dz=8,tag=Dialogue5,tag=!Dialogue6] run opendialogue elm_stolen_call @s
 
-#Dialogue 7, Silver Cherrygrove battle (init BattleCD)
+#Dialogue 7, Cherrygrove Silver Spawn (init BattleCD)
 execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=Dialogue5,tag=!Dialogue7] run scoreboard players add @s BattleCD 0
 execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=Dialogue5,tag=!Dialogue7] unless entity @e[x=-300,y=64,z=-509,dy=3,type=cobblemon:npc] run particle cloud -300 64 -509 1 1 1 1 50
 execute as @s[x=-279,y=64,z=-509,distance=0..10,tag=Dialogue5,tag=!Dialogue7] unless entity @e[x=-300,y=64,z=-509,dy=3,type=cobblemon:npc] run npcspawnat -300 64 -509 cherrygrove_silver 1
@@ -71,8 +71,8 @@ execute as @s[x=244,y=39,z=-708,distance=..10,tag=Dialogue15,tag=!Dialogue16] un
 execute as @s[x=244,y=39,z=-708,distance=..10,tag=Dialogue15,tag=!Dialogue16] unless entity @e[x=289,y=39,z=-661,dy=3,type=cobblemon:npc] run npcspawnat 289 39 -661 rocketproton1 1
 
 #Azalea Silver Spawn
-execute as @s[x=402,y=64,z=-734,distance=..15,tag=Bugsy,tag=Dialogue16,tag=!Dialogue20,scores={StarterPick=1..}] unless entity @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] run particle cloud 402 64 -734 1 1 1 1 100
-execute as @s[x=402,y=64,z=-734,distance=..15,tag=Bugsy,tag=Dialogue16,tag=!Dialogue20,scores={StarterPick=1..}] unless entity @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] run npcspawnat 402 64 -734 azalea_silver 1
+execute as @s[x=402,y=64,z=-734,distance=..15,tag=Bugsy,tag=Dialogue16,tag=!Dialogue20] unless entity @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] run particle cloud 402 64 -734 1 1 1 1 100
+execute as @s[x=402,y=64,z=-734,distance=..15,tag=Bugsy,tag=Dialogue16,tag=!Dialogue20] unless entity @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] run npcspawnat 402 64 -734 azalea_silver 1
 
 #Ilex Forest
 
@@ -215,7 +215,7 @@ execute as @s[x=-124,y=45,z=169,dx=12,dy=5,dz=11,tag=Dialogue62,tag=!Dialogue63]
 execute as @s[x=-144,y=44,z=182,distance=..6,tag=Dialogue63,tag=!Dialogue64] unless entity @e[x=-149,y=44,z=177,dx=63,dy=5,dz=35,type=cobblemon:pokemon,nbt={Pokemon:{Species:"cobblemon:electrode"}}] run opendialogue rockethq_lance_dialogue64 @s
 
 
-#Goldenrod Underground Silver
+#Goldenrod Underground Silver Spawn
 execute as @s[x=481,y=47,z=-305,distance=..25,tag=!Dialogue68] unless entity @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] run particle cloud 481 47 -305 1 1 1 1 100
 execute as @s[x=481,y=47,z=-305,distance=..25,tag=!Dialogue68] unless entity @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] run npcspawnat 481 47 -305 goldenrod_silver 1
 
@@ -256,7 +256,7 @@ execute as @s[x=-723,y=68,z=-492,distance=..20,scores={IP=1..},tag=!Dialogue100]
 #Elm granting Master Ball
 execute as @s[x=-683,y=63,z=-478,distance=..10,tag=Clair,tag=Dialogue8,tag=!Dialogue81] run opendialogue professorelm_dialogue81 @s
 
-#Silver Victory Road
+#Victory Road Silver Spawn
 execute as @s[x=-1449,y=51,z=528,distance=..25,tag=!Dialogue85] unless entity @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] run particle cloud -1449 51 528 1 1 1 1 100
 execute as @s[x=-1449,y=51,z=528,distance=..25,tag=!Dialogue85] unless entity @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] run npcspawnat -1449 51 528 victoryroad_silver 1
 
@@ -278,7 +278,7 @@ execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTra
 #Player finding Misty after turning on the power plant
 execute as @s[x=-3060,y=64,z=956,distance=..50,tag=!Dialogue113,tag=Dialogue221] unless entity @e[x=-3060,y=64,z=956,dy=3,type=cobblemon:npc] run npcspawnat -3060 64 956 route25_misty 1
 
-#Mt. Moon Silver
+#Mt. Moon Silver Spawn
 execute as @s[x=-2201,y=24,z=825,distance=..25,tag=!Dialogue131] unless entity @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] run particle cloud -2201 24 825 1 1 1 1 100
 execute as @s[x=-2201,y=24,z=825,distance=..25,tag=!Dialogue131] unless entity @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] run npcspawnat -2201 24 825 mtmoon_silver 1
 
