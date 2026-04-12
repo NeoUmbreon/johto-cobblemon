@@ -232,7 +232,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('tp @e[x=-2710,y=63,z=-55,dy=3,dz=1,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=-2710,y=63,z=-55,dy=3,dz=1,type=cobblemon:npc] -800 -50000 -280');",
                             "q.run_command('particle cloud -2710 64 -55 1 1 1 1 100');",
                             "q.dialogue.set_page('page12');"
                         ]

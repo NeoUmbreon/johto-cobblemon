@@ -178,7 +178,7 @@
                         "value": "close",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud -2743 66 870 1 1 1 1 100');",
-                            "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-2743,y=65,z=870,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-2743,y=65,z=870,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.dialogue.close();"
                         ]
                     }

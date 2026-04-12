@@ -134,8 +134,8 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud -128 45 159 1 1 1 1 100');",
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud -118 45 173 1 1 1 1 100');",
-                            "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-134,y=44,z=170,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
-                            "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-128,y=44,z=171,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-134,y=44,z=170,dy=3,type=cobblemon:npc] -800 -50000 -280');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-128,y=44,z=171,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.dialogue.set_page('page7');"
                         ]
                     }

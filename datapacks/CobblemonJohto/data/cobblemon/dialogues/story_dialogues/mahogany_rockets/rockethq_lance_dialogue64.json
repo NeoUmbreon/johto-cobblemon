@@ -216,7 +216,7 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:story/rocket3');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue64');",
-                            "q.run_command('tp @e[x=-144,y=44,z=182,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=-144,y=44,z=182,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.run_command('particle cloud -144 45 182 1 1 1 1 100');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"

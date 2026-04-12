@@ -138,7 +138,7 @@
                         "action": [
                             "q.run_command('tag ' + q.player.username + ' add Dialogue113');",
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud -3060 64 956 1 1 1 1 100');",
-                            "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-3060,y=63,z=956,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-3060,y=63,z=956,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
                             ]

@@ -23,7 +23,7 @@ execute as @s[x=-683,y=63,z=-478,distance=..10,scores={StarterPick=1..},tag=Dial
 
 #Spawns Silver outside of Elm's Lab
 execute as @p[x=-665,y=64,z=-493,distance=..50,tag=!Dialogue6] unless entity @e[x=-665,y=63,z=-493,dy=2,type=cobblemon:npc] run npcspawnat -665 64 -493 newbark_silver 1
-execute as @p[x=-665,y=64,z=-493,distance=50..100,tag=Dialogue6] run tp @e[x=-665,y=63,z=-493,dy=2,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @p[x=-665,y=64,z=-493,distance=50..100,tag=Dialogue6] run tp @e[x=-665,y=63,z=-493,dy=2,type=cobblemon:npc] -800 -50000 -280
 
 #Dialogue 5 - Mr. Pokemon and Oak
 execute as @s[x=-255,y=63,z=-198,dx=20,dy=5,dz=8,tag=!Dialogue5] run opendialogue mrpokemon_dialogue5 @s
@@ -50,7 +50,7 @@ execute as @s[x=15,y=64,z=-111,distance=..15,tag=Falkner,tag=!Dialogue13] unless
 
 #Rocket guarding Slowpoke Well until Kurt runs in
 execute as @s[x=244,y=56,z=-714,distance=0..25,tag=!Dialogue14] unless entity @e[x=247,y=54,z=-714,dy=3,type=cobblemon:npc] run npcspawnat 247 54 -714 slowpokewell_rocketexterior 1
-execute as @s[x=244,y=56,z=-714,distance=0..25,tag=Dialogue14] run tp @e[x=247,y=54,z=-714,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @s[x=244,y=56,z=-714,distance=0..25,tag=Dialogue14] run tp @e[x=247,y=54,z=-714,dy=3,type=cobblemon:npc] -800 -50000 -280
 
 #Dialogue 14 - Kurt first hearing of Team Rocket
 execute as @s[x=371,y=64,z=-698,distance=..4,tag=!Dialogue14] run opendialogue kurt_dialogue14 @s 
@@ -125,11 +125,11 @@ execute as @s[x=-198,y=63,z=343,dx=19,dy=5,dz=19,tag=!Dialogue48] run opendialog
 execute as @s[x=-187,y=64,z=352,distance=..30,tag=!Dialogue64] unless entity @e[x=-184,y=64,z=352,dy=3,type=cobblemon:npc] run npcspawnat -184 64 352 route43_rocketgrunt 1
 execute as @s[x=-187,y=64,z=352,distance=..30,tag=!Dialogue64] unless entity @e[x=-190,y=64,z=352,dy=3,type=cobblemon:npc] run npcspawnat -190 64 352 route43_rocketgrunt 1
 
-execute as @s[x=-187,y=64,z=352,distance=..30,tag=Dialogue64] as @e[x=-184,y=64,z=352,dy=3,type=cobblemon:npc] run tp @s 10000000 -50000 -10000000
-execute as @s[x=-187,y=64,z=352,distance=..30,tag=Dialogue64] as @e[x=-190,y=64,z=352,dy=3,type=cobblemon:npc] run tp @s 10000000 -50000 -10000000
+execute as @s[x=-187,y=64,z=352,distance=..30,tag=Dialogue64] as @e[x=-184,y=64,z=352,dy=3,type=cobblemon:npc] run tp @s -800 -50000 -280
+execute as @s[x=-187,y=64,z=352,distance=..30,tag=Dialogue64] as @e[x=-190,y=64,z=352,dy=3,type=cobblemon:npc] run tp @s -800 -50000 -280
 
 execute as @s[x=-187,y=64,z=352,distance=..30,tag=Dialogue64] unless entity @e[x=-181,y=64,z=352,dy=3,type=cobblemon:npc] run npcspawnat -181 64 352 route43_officerjenny 1
-execute as @s[x=-187,y=64,z=352,distance=..30,tag=!Dialogue64] as @e[x=-181,y=64,z=352,dy=3,type=cobblemon:npc] run tp @s 10000000 -50000 -10000000
+execute as @s[x=-187,y=64,z=352,distance=..30,tag=!Dialogue64] as @e[x=-181,y=64,z=352,dy=3,type=cobblemon:npc] run tp @s -800 -50000 -280
 
 #Lance after battling the Gyarados
 execute as @s[x=-159,y=64,z=590,distance=..50,tag=Dialogue49,tag=!Dialogue51] unless entity @e[x=-159,y=64,z=590,dy=3,type=cobblemon:npc] run npcspawnat -159 64 590 lake_lance 1
@@ -141,8 +141,8 @@ execute at @s[x=-155,y=64,z=208,distance=..30,tag=Dialogue51,tag=!Dialogue53] un
 
 #Mahogany Town Rocket HQ Occupied by Rockets
 execute as @s[x=-155,y=64,z=208,distance=..30,tag=!Dialogue53] run fill -164 63 216 -160 63 213 minecraft:oak_planks
-execute as @s[x=-155,y=64,z=208,distance=..30,tag=!Dialogue53] as @e[x=-152,y=63,z=212,dy=3,type=cobblemon:npc] run tp @s 10000000 -50000 -10000000
-execute as @s[x=-155,y=64,z=208,distance=..30,tag=!Dialogue53] as @e[x=-157,y=63,z=193,dy=3,type=cobblemon:npc] run tp @s 10000000 -50000 -10000000
+execute as @s[x=-155,y=64,z=208,distance=..30,tag=!Dialogue53] as @e[x=-152,y=63,z=212,dy=3,type=cobblemon:npc] run tp @s -800 -50000 -280
+execute as @s[x=-155,y=64,z=208,distance=..30,tag=!Dialogue53] as @e[x=-157,y=63,z=193,dy=3,type=cobblemon:npc] run tp @s -800 -50000 -280
 execute as @s[x=-155,y=64,z=208,distance=..30,tag=!Dialogue53] unless entity @e[x=-149,y=64,z=200,dy=3,type=cobblemon:npc] run npcspawnat -149 64 200 mahogany_thug 1
 execute as @s[x=-155,y=64,z=208,distance=..30,tag=!Dialogue53] unless entity @e[x=-156,y=64,z=206,dy=3,type=cobblemon:npc] run npcspawnat -156 64 206 mahogany_shady_shop 1
 
@@ -151,8 +151,8 @@ execute as @s[x=-155,y=64,z=208,distance=..30,tag=Dialogue53] run fill -164 63 2
 execute as @s[x=-155,y=64,z=208,distance=..30,tag=Dialogue53] run fill -160 63 213 -160 63 216 minecraft:stone_brick_stairs[facing=east]
 execute as @s[x=-155,y=64,z=208,distance=..30,tag=Dialogue64] unless entity @e[x=-152,y=64,z=212,dy=3,type=cobblemon:npc] run npcspawnat -152 64 212 mahogany_grandma_shop 1
 execute as @s[x=-155,y=64,z=208,distance=..30,tag=Dialogue64] unless entity @e[x=-157,y=64,z=193,dy=3,type=cobblemon:npc] run npcspawnat -157 64 193 mahogany_twin 1
-execute as @s[x=-155,y=64,z=208,distance=..30,tag=Dialogue64] run tp @e[x=-156,y=63,z=206,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @s[x=-155,y=64,z=208,distance=..30,tag=Dialogue64] run tp @e[x=-149,y=63,z=200,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @s[x=-155,y=64,z=208,distance=..30,tag=Dialogue64] run tp @e[x=-156,y=63,z=206,dy=3,type=cobblemon:npc] -800 -50000 -280
+execute as @s[x=-155,y=64,z=208,distance=..30,tag=Dialogue64] run tp @e[x=-149,y=63,z=200,dy=3,type=cobblemon:npc] -800 -50000 -280
 
 #Lance in the Rocket HQ healing player
 execute as @s[x=-83,y=45,z=169,distance=..20,tag=!Dialogue54] unless entity @e[x=-83,y=45,z=169,dy=3,type=cobblemon:npc] run npcspawnat -83 45 169 lance_generic 1
@@ -187,7 +187,7 @@ execute if entity @e[x=-93,y=46,z=187,distance=..2,type=cobblemon:pokemon] run f
 
 execute unless entity @e[x=-93,y=46,z=187,distance=..2,type=cobblemon:pokemon] run fill -144 44 186 -124 43 192 minecraft:lapis_block replace minecraft:redstone_block
 execute unless entity @e[x=-93,y=46,z=187,distance=..2,type=cobblemon:pokemon] run fill -111 43 193 -94 44 186 minecraft:lapis_block replace minecraft:redstone_block
-execute unless entity @e[x=-93,y=46,z=187,distance=..2,type=cobblemon:pokemon] run tp @e[x=-143,y=46,z=187,distance=..2,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute unless entity @e[x=-93,y=46,z=187,distance=..2,type=cobblemon:pokemon] run tp @e[x=-143,y=46,z=187,distance=..2,type=cobblemon:pokemon] -800 -50000 -280
 
 #Middle
 execute if entity @e[x=-93,y=46,z=195,distance=..2,type=cobblemon:pokemon] run fill -126 43 194 -141 44 195 minecraft:redstone_block replace minecraft:lapis_block
@@ -195,7 +195,7 @@ execute if entity @e[x=-93,y=46,z=195,distance=..2,type=cobblemon:pokemon] run f
 
 execute unless entity @e[x=-93,y=46,z=195,distance=..2,type=cobblemon:pokemon] run fill -126 43 194 -141 44 195 minecraft:lapis_block replace minecraft:redstone_block
 execute unless entity @e[x=-93,y=46,z=195,distance=..2,type=cobblemon:pokemon] run fill -110 43 196 -94 44 194 minecraft:lapis_block replace minecraft:redstone_block
-execute unless entity @e[x=-93,y=46,z=195,distance=..2,type=cobblemon:pokemon] run tp @e[x=-143,y=46,z=195,distance=..2,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute unless entity @e[x=-93,y=46,z=195,distance=..2,type=cobblemon:pokemon] run tp @e[x=-143,y=46,z=195,distance=..2,type=cobblemon:pokemon] -800 -50000 -280
 
 #Far Side from door
 execute if entity @e[x=-93,y=46,z=203,distance=..2,type=cobblemon:pokemon] run fill -125 43 197 -141 44 203 minecraft:redstone_block replace minecraft:lapis_block
@@ -203,7 +203,7 @@ execute if entity @e[x=-93,y=46,z=203,distance=..2,type=cobblemon:pokemon] run f
 
 execute unless entity @e[x=-93,y=46,z=203,distance=..2,type=cobblemon:pokemon] run fill -125 43 197 -141 44 203 minecraft:lapis_block replace minecraft:redstone_block
 execute unless entity @e[x=-93,y=46,z=203,distance=..2,type=cobblemon:pokemon] run fill -111 43 199 -94 44 203 minecraft:lapis_block replace minecraft:redstone_block
-execute unless entity @e[x=-93,y=46,z=203,distance=..2,type=cobblemon:pokemon] run tp @e[x=-143,y=46,z=203,distance=..2,type=cobblemon:pokemon] 10000000 -50000 -10000000
+execute unless entity @e[x=-93,y=46,z=203,distance=..2,type=cobblemon:pokemon] run tp @e[x=-143,y=46,z=203,distance=..2,type=cobblemon:pokemon] -800 -50000 -280
 
 
 #Opens gates to the generator room
@@ -231,7 +231,7 @@ execute if block 480 55 -321 minecraft:iron_block if entity @a[x=480,y=54,z=-326
 
 #Dialogue69 - Goldenrod Radio Director underground, spawns NPC
 execute at @s[x=426,y=37,z=-304,distance=..25,tag=!Dialogue72] unless entity @e[x=426,y=37,z=-304,dy=3,type=cobblemon:npc] run npcspawnat 426 38 -304 director_dialogue69
-execute at @s[x=426,y=37,z=-304,distance=..25,tag=Dialogue72] as @e[x=426,y=37,z=-304,dy=3,type=cobblemon:npc] run tp @s 10000000 -50000 -10000000
+execute at @s[x=426,y=37,z=-304,distance=..25,tag=Dialogue72] as @e[x=426,y=37,z=-304,dy=3,type=cobblemon:npc] run tp @s -800 -50000 -280
 
 #Radio Tower Shutter Open and Close
 #Locked
@@ -309,7 +309,7 @@ execute positioned -2901.0 64 -48 as @e[distance=..5,type=cobblemon:pokemon,nbt=
 execute as @a[x=337,y=64,z=191,distance=..20,tag=!Dialogue204] unless entity @e[x=337,y=64,z=191,dy=3,type=cobblemon:npc] run npcspawnat 337 64 191 bill_dialogue204 1
 
 #Dialogue 205 Bill in Goldenrod Spawn
-execute as @p[x=549,y=64,z=-409,distance=..20,tag=!Dialogue204,tag=!Dialogue205] if entity @e[x=549,y=64,z=-409,dy=3,type=cobblemon:npc] run tp @e[x=549,y=64,z=-409,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @p[x=549,y=64,z=-409,distance=..20,tag=!Dialogue204,tag=!Dialogue205] if entity @e[x=549,y=64,z=-409,dy=3,type=cobblemon:npc] run tp @e[x=549,y=64,z=-409,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[x=549,y=64,z=-409,distance=..20,tag=Dialogue204,tag=!Dialogue205] unless entity @e[x=549,y=64,z=-409,dy=3,type=cobblemon:npc] run npcspawnat 549 64 -409 bill_dialogue205 1
 
 

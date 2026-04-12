@@ -207,7 +207,7 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue235');",
                             "q.run_command('particle cloud -1697 69 -854 1 1 1 1 25');",
-                            "q.run_command('tp @e[x=-1697,y=69,z=-854,dy=3,dz=1,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=-1697,y=69,z=-854,dy=3,dz=1,type=cobblemon:npc] -800 -50000 -280');",
                             "q.dialogue.close();"
                             ]
                     }

@@ -123,8 +123,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('tp @e[x=-144,y=44,z=182,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
-                            "q.run_command('tp @e[x=-128,y=44,z=159,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000');",
+                            "q.run_command('tp @e[x=-144,y=44,z=182,dy=3,type=cobblemon:npc] -800 -50000 -280');",
+                            "q.run_command('tp @e[x=-128,y=44,z=159,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.run_command('npcspawnat -144 45 182 lance_generic 1');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"

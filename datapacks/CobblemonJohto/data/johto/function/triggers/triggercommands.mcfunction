@@ -6,7 +6,7 @@
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #1 - Battle Tower Trainer Refreshes
-execute as @a[scores={TriggerCommand=1}] run tp @e[x=908,y=100,z=66,dy=3,dz=1,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=1}] run tp @e[x=908,y=100,z=66,dy=3,dz=1,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=1}] run particle cloud 908 100 67.0 1 1 1 1 25
 execute as @a[scores={TriggerCommand=1}] run pokeheal @s
 execute as @a[scores={TriggerCommand=1,BattleStreak=0..10}] run npcspawnat 908 100 67.0 battle_tower_group1
@@ -18,7 +18,7 @@ execute as @a[scores={TriggerCommand=1,BattleStreak=21..}] run npcspawnat 908 10
 execute as @a[scores={TriggerCommand=2}] if entity @a[x=875,y=99,z=52,dx=55,dy=10,dz=26] run opendialogue battletower_clerk_roombusy @s
 execute as @a[scores={TriggerCommand=2}] if entity @a[x=875,y=99,z=52,dx=55,dy=10,dz=26] run scoreboard players set @s TriggerCommand 0
 
-execute as @a[scores={TriggerCommand=2}] run tp @e[x=908,y=100,z=66,dy=3,dz=1,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=2}] run tp @e[x=908,y=100,z=66,dy=3,dz=1,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=2}] run particle cloud 908 100 67.0 1 1 1 1 25
 execute as @a[scores={TriggerCommand=2,BattleStreak=0..10}] run npcspawnat 908 100 67.0 battle_tower_group1
 execute as @a[scores={TriggerCommand=2,BattleStreak=11..20}] run npcspawnat 908 100 67.0 battle_tower_group2
@@ -105,21 +105,21 @@ scoreboard players set @a[scores={TriggerCommand=24..25}] TriggerCommand 0
 
 #Lance teleporting out from Lake of Rage
 execute as @a[scores={TriggerCommand=84}] run particle cloud -159 64 590 1 1 1 1 100
-execute as @a[scores={TriggerCommand=84}] run tp @e[x=-159,y=63,z=590,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=84}] run tp @e[x=-159,y=63,z=590,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=84}] run scoreboard players set @s TriggerCommand 0
 
 #Jasmine teleports back to gym from lighthouse
 execute as @a[scores={TriggerCommand=85}] run particle cloud 705 119 -40 1 1 1 0.15 100
-execute as @a[scores={TriggerCommand=85}] run tp @e[x=705,y=119,z=-40,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=85}] run tp @e[x=705,y=119,z=-40,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=85}] run scoreboard players set @s TriggerCommand 0
 
 #Cleans out Slowpoke Well before teleport out
 execute as @a[scores={TriggerCommand=86}] run particle cloud 289 39 -661 1 1 1 1 100
-execute as @a[scores={TriggerCommand=86}] run tp @e[x=251,y=38,z=-691,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @a[scores={TriggerCommand=86}] run tp @e[x=262,y=42,z=-671,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @a[scores={TriggerCommand=86}] run tp @e[x=289,y=38,z=-661,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @a[scores={TriggerCommand=86}] run tp @e[x=291,y=38,z=-679,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
-execute as @a[scores={TriggerCommand=86}] run tp @e[x=244,y=38,z=-708,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=86}] run tp @e[x=251,y=38,z=-691,dy=3,type=cobblemon:npc] -800 -50000 -280
+execute as @a[scores={TriggerCommand=86}] run tp @e[x=262,y=42,z=-671,dy=3,type=cobblemon:npc] -800 -50000 -280
+execute as @a[scores={TriggerCommand=86}] run tp @e[x=289,y=38,z=-661,dy=3,type=cobblemon:npc] -800 -50000 -280
+execute as @a[scores={TriggerCommand=86}] run tp @e[x=291,y=38,z=-679,dy=3,type=cobblemon:npc] -800 -50000 -280
+execute as @a[scores={TriggerCommand=86}] run tp @e[x=244,y=38,z=-708,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=86}] run scoreboard players set @s TriggerCommand 0
 
 #Runs teleport back to Kurt's
@@ -131,64 +131,64 @@ execute as @a[scores={TriggerCommand=87}] run scoreboard players set @s TriggerC
 
 #Elm's Lab tps out policeman
 execute as @a[scores={TriggerCommand=88}] run particle cloud -682 64 -481 1 1 1 0.15 100
-execute as @a[scores={TriggerCommand=88}] run tp @e[x=-682,y=63,z=-481,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=88}] run tp @e[x=-682,y=63,z=-481,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=88}] run scoreboard players set @s TriggerCommand 0
 
 #Rocket HQ Silver TP out
 execute as @a[scores={TriggerCommand=89}] run particle cloud -82 34 182 1 1 1 1 100
-execute as @a[scores={TriggerCommand=89}] run tp @e[x=-82,y=33,z=182,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=89}] run tp @e[x=-82,y=33,z=182,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=89}] run scoreboard players set @s TriggerCommand 0
 
 #Ecruteak Silver TP out
 execute as @a[scores={TriggerCommand=90}] run particle cloud 343 64 216 1 1 1 1 100
-execute as @a[scores={TriggerCommand=90}] run tp @e[x=343,y=64,z=216,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=90}] run tp @e[x=343,y=64,z=216,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=90}] run scoreboard players set @s TriggerCommand 0
 
 #Silver Sprout Tower TP out
 execute as @a[scores={TriggerCommand=91}] run tellraw @s {"text":"Silver used an Escape Rope!","italic":true,"color":"gray"}
 execute as @a[scores={TriggerCommand=91}] at @e[x=57,y=103,z=29,dy=3,type=cobblemon:npc] run function johto:sound/playglobalsfx {sfx:"warpto",category:"player"}
 execute as @a[scores={TriggerCommand=91}] run particle cloud 57 104 29 1 1 1 0.15 100
-execute as @a[scores={TriggerCommand=91}] run tp @e[x=57,y=103,z=29,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=91}] run tp @e[x=57,y=103,z=29,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=91}] run scoreboard players set @s TriggerCommand 0
 
 #Silver Olivine TP out
 execute as @a[scores={TriggerCommand=92}] run particle cloud 809 64 14 1 1 1 1 100
-execute as @a[scores={TriggerCommand=92}] run tp @e[x=809,y=64,z=14,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=92}] run tp @e[x=809,y=64,z=14,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=92}] run scoreboard players set @s TriggerCommand 0
 
 #Bill tps out
 execute as @a[scores={TriggerCommand=93}] run particle cloud 337 64 191 1 1 1 1 100
-execute as @a[scores={TriggerCommand=93}] run tp @e[x=337,y=63,z=191,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=93}] run tp @e[x=337,y=63,z=191,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=93}] run scoreboard players set @s TriggerCommand 0
 
 #Cherrygrove Silver TPs out
 execute as @a[scores={TriggerCommand=94}] run particle cloud -300 64 -509 1 1 1 1 100
-execute as @a[scores={TriggerCommand=94}] run tp @e[x=-300,y=63,z=-509,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=94}] run tp @e[x=-300,y=63,z=-509,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=94}] run scoreboard players set @s TriggerCommand 0
 
 #Azalea Silver TPs out
 execute as @a[scores={TriggerCommand=95}] run particle cloud 402 64 -734 1 1 1 1 100
-execute as @a[scores={TriggerCommand=95}] run tp @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=95}] run tp @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=95}] run scoreboard players set @s TriggerCommand 0
 
 #Goldenrod Silver TP out
 execute as @a[scores={TriggerCommand=96}] run particle cloud 481 47 -305 1 1 1 1 100
-execute as @a[scores={TriggerCommand=96}] run tp @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=96}] run tp @e[x=481,y=47,z=-305,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=96}] run scoreboard players set @s TriggerCommand 0
 
 #Burned Tower Silver TP out
 execute as @a[scores={TriggerCommand=97}] run particle cloud 441 64 312 1 1 1 1 100
-execute as @a[scores={TriggerCommand=97}] run tp @e[x=441,y=64,z=312,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=97}] run tp @e[x=441,y=64,z=312,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=97}] run scoreboard players set @s TriggerCommand 0
 
 #Victory Road Silver TP out
 execute as @a[scores={TriggerCommand=98}] run particle cloud -1449 51 528 1 1 1 1 100
-execute as @a[scores={TriggerCommand=98}] run tp @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=98}] run tp @e[x=-1449,y=51,z=528,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=98}] run scoreboard players set @s TriggerCommand 0
 
 #Mt. Moon Silver TP out
 execute as @a[scores={TriggerCommand=99}] run particle cloud -2201 24 825 1 1 1 1 100
-execute as @a[scores={TriggerCommand=99}] run tp @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] 10000000 -50000 -10000000
+execute as @a[scores={TriggerCommand=99}] run tp @e[x=-2201,y=24,z=825,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=99}] run scoreboard players set @s TriggerCommand 0
 
 
