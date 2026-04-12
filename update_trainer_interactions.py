@@ -131,21 +131,25 @@ def get_battle_music(folder: str, trainer_id: str) -> int:
         return 17  # Kanto trainer music
     return 11  # Default Johto trainer
 
-def get_model_identifier(folder: str, trainer_id: str, npc_name: str) -> str:
+def get_model_identifier(folder: str, trainer_id) -> str:
     if folder == "silver":
         return "cobblemon:silver"
 
-    base = trainer_id.lower()
-    name_part = npc_name.lower()
+    entity_file = NPC_DIR / folder / f"{trainer_id}.json"
 
-    # Remove trainer name if it exists at end
-    if base.endswith(name_part):
-        base = base[:-len(name_part)]
+    if not entity_file.exists():
+        print(f"Entity file not found for identifier: {entity_file}")
+        return f"cobblemon:{trainer_id}"  # fallback
 
-    # Remove trailing numbers
-    base = re.sub(r"\d+$", "", base)
+    try:
+        with open(entity_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
 
-    return f"cobblemon:{base}"
+        return data.get("resourceIdentifier", f"cobblemon:{trainer_id}")
+
+    except Exception as e:
+        print(f"Failed to read resourceIdentifier from {entity_file}: {e}")
+        return f"cobblemon:{trainer_id}"
 
 def build_battle_action(trainer_id: str, battle_id: int):
     return [
@@ -332,7 +336,7 @@ def update_interaction_file(path: Path):
         "face": {
             "type": "artificial",
             "modelType": "npc",
-            "identifier": get_model_identifier(folder, trainer_id, npc_name),
+            "identifier": get_model_identifier(folder, trainer_id),
             "isLeftSide": False,
         },
     }
