@@ -1,7 +1,5 @@
 #Activated by when a player defeats an NPC.
 #Scores highly depend on which NPC to activate to continue story beats
-#TODO: don't forget to replace the GB tracks with updated files
-#TODO: make DS tracks less looooonggggg
 
 scoreboard players set @s BattleStart 0
 execute as @s[tag=!RadioOff] run function johto:tools/forceclick
@@ -13,23 +11,19 @@ execute as @s[scores={BattleEnd=1..3}] unless entity @s[x=858,y=75,z=-15,dx=102,
 execute as @a[scores={BattleEnd=1..3}] if entity @s[x=858,y=75,z=-15,dx=102,dy=100,dz=143] run tellraw @s ["",{"text":"Your battle streak increased to ","italic":true,"color":"gray"},{"score":{"name":"*","objective":"BattleStreak"},"italic":true,"color":"gray"},{"text":"!","italic":true,"color":"gray"}]
 
 
-#1 - Generic battle ending, majority of trainers especially without a story beat. 
-execute as @s[tag=!RadioOff,scores={BattleEnd=1},tag=!DSSound] run function johto:sound/playrecord {track:"victorytrainer",duration:275}
-execute as @s[tag=!RadioOff,scores={BattleEnd=1},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/trainer",duration:820}
+#1 - Generic battle ending, majority of trainers especially without a story beat.
+execute as @s[tag=!RadioOff,scores={BattleEnd=1},tag=!DSSound] run function johto:sound/playrecord {track:"gb/victory/trainer",duration:282}
+execute as @s[tag=!RadioOff,scores={BattleEnd=1},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/trainer",duration:280}
 
 
-#2 - Gym Leader battle ending (Applies a tag based on which gym the player's in)
-execute as @s[x=-1222,y=0,z=500,dx=470,dy=240,dz=342,tag=!RadioOff,scores={BattleEnd=2}] run tag @s add GymVictory
-
-
-#3 - Elite Four ending
-execute as @s[tag=!RadioOff,scores={BattleEnd=3},tag=!DSSound] run function johto:sound/playrecord {track:"victorytrainer",duration:275}
-execute as @s[tag=!RadioOff,scores={BattleEnd=4},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/trainer",duration:820}
+#2..3 - Gym Leader/Elite Four ending
+execute as @s[tag=!RadioOff,scores={BattleEnd=2..3},tag=!DSSound] run function johto:sound/playrecord {track:"gb/victory/gymleader",duration:764}
+execute as @s[tag=!RadioOff,scores={BattleEnd=2..3},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/gymleader",duration:763}
 
 
 #4 - Wild Pokemon Victory
-execute as @s[tag=!RadioOff,scores={BattleEnd=4},tag=!DSSound] run function johto:sound/playrecord {track:"wildvictory",duration:275}
-execute as @s[tag=!RadioOff,scores={BattleEnd=4},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/wildpokemon",duration:720}
+execute as @s[tag=!RadioOff,scores={BattleEnd=4},tag=!DSSound] run function johto:sound/playrecord {track:"gb/victory/wildpokemon",duration:287}
+execute as @s[tag=!RadioOff,scores={BattleEnd=4},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/wildpokemon",duration:286}
 
 
 #Gives player AllGyms tag and achievement

@@ -9,9 +9,6 @@
 # Battle & Pre-Battle
 execute if score @s BattleStart matches 1.. run return run function johto:sound/gbbattleloop
 
-# Gym Victory
-execute as @s[scores={MusicTitles=35},tag=GymVictory] run return run function johto:sound/playrecord {track:"gb/victory/gymleader", duration:699}
-
 #TODO: are these even implemented?
 #Bug Catching Contest
 #execute if score @s DialogueTrigger matches 198..199 run return run function johto:sound/playrecord {track:"gb/bugcatchingcontest", duration:470}

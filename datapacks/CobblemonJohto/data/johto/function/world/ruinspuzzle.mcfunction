@@ -4,7 +4,7 @@
 #Ruins progress tracked by armor stands counting up for each piece in the correct spot
 #Boss bar mirrors puzzle progress score
 #Boss bar is assigned when player enters room, removed when player leaves room through portals
-#TODO: Check HGSS sfx
+
 
 
 
@@ -32,7 +32,7 @@ execute as @e[x=-867,y=69,z=-212,dy=3,type=armor_stand,scores={PuzzleTrack=7}] r
 execute as @e[x=-867,y=69,z=-212,dy=3,type=armor_stand,scores={PuzzleTrack=0..}] run bossbar set johto:aerodactylruins players @a[x=179,y=49,z=-150,dx=11,dy=5,dz=16]
 
 #Success
-execute as @e[x=-867,y=69,z=-212,dy=3,type=armor_stand,scores={PuzzleTrack=7..}] unless block 186 49 -138 air positioned 185.0 49 -138.5 run function johto:sound/playglobalsfx {sfx:"strength",category:"block"}
+execute as @e[x=-867,y=69,z=-212,dy=3,type=armor_stand,scores={PuzzleTrack=7..}] unless block 186 49 -138 air positioned 185.0 49 -138.5 run function johto:sound/playglobalsfx {sfx:"openfloor",category:"block"}
 execute as @e[x=-867,y=69,z=-212,dy=3,type=armor_stand,scores={PuzzleTrack=7..}] unless block 186 49 -138 air unless biome 214 37 -96 minecraft:end_highlands run fillbiome 214 37 -96 179 41 -145 minecraft:end_highlands
 execute as @e[x=-867,y=69,z=-212,dy=3,type=armor_stand,scores={PuzzleTrack=7..}] unless block 186 49 -138 air run fill 186 49 -138 183 49 -140 minecraft:air
 
@@ -65,7 +65,7 @@ execute as @e[x=-867,y=69,z=-210,dy=3,type=armor_stand,scores={PuzzleTrack=4}] r
 execute as @e[x=-867,y=69,z=-210,dy=3,type=armor_stand,scores={PuzzleTrack=0..}] run bossbar set johto:kabutoruins players @a[x=185,y=52,z=-111,dx=11,dy=5,dz=16]
 
 #Success
-execute as @e[x=-867,y=69,z=-210,dy=3,type=armor_stand,scores={PuzzleTrack=4..}] unless block 192 52 -99 air positioned 191.0 52 -99.5 run function johto:sound/playglobalsfx {sfx:"strength",category:"block"}
+execute as @e[x=-867,y=69,z=-210,dy=3,type=armor_stand,scores={PuzzleTrack=4..}] unless block 192 52 -99 air positioned 191.0 52 -99.5 run function johto:sound/playglobalsfx {sfx:"openfloor",category:"block"}
 execute as @e[x=-867,y=69,z=-210,dy=3,type=armor_stand,scores={PuzzleTrack=4..}] unless block 192 52 -99 air unless biome 214 37 -96 minecraft:end_barrens run fillbiome 214 37 -96 179 41 -145 minecraft:end_barrens
 execute as @e[x=-867,y=69,z=-210,dy=3,type=armor_stand,scores={PuzzleTrack=4..}] unless block 192 52 -99 air run fill 192 52 -99 189 52 -101 minecraft:air
 
@@ -110,7 +110,7 @@ execute as @e[x=-867,y=69,z=-214,dy=3,type=armor_stand,scores={PuzzleTrack=10}] 
 execute as @e[x=-867,y=69,z=-214,dy=3,type=armor_stand,scores={PuzzleTrack=0..}] run bossbar set johto:hoohruins players @a[x=203,y=50,z=-135,dx=11,dy=5,dz=16]
 
 #Success
-execute as @e[x=-867,y=69,z=-214,dy=3,type=armor_stand,scores={PuzzleTrack=10..}] unless block 210 49 -123 air positioned 209.0 49 -123.5 run function johto:sound/playglobalsfx {sfx:"strength",category:"block"}
+execute as @e[x=-867,y=69,z=-214,dy=3,type=armor_stand,scores={PuzzleTrack=10..}] unless block 210 49 -123 air positioned 209.0 49 -123.5 run function johto:sound/playglobalsfx {sfx:"openfloor",category:"block"}
 execute as @e[x=-867,y=69,z=-214,dy=3,type=armor_stand,scores={PuzzleTrack=10..}] unless block 210 49 -123 air unless biome 214 37 -96 minecraft:end_midlands run fillbiome 214 37 -96 179 41 -145 minecraft:end_midlands
 execute as @e[x=-867,y=69,z=-214,dy=3,type=armor_stand,scores={PuzzleTrack=10..}] unless block 210 49 -123 air run fill 210 49 -123 207 49 -125 minecraft:air
 

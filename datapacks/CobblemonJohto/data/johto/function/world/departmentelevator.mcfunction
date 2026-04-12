@@ -66,7 +66,6 @@ execute if block 438 94 -394 stone_button[powered=true] run execute as @a[x=438,
 
 
 #Plays sound
-#TODO: i would like these to be louder... (ideally 1.5 range) but then i would have to pass a "volume" key
 #To Floor 1
 execute positioned 438 64 -394 if predicate {"condition":"any_of","terms":[{"condition":"location_check","offsetY":6,"predicate":{"block":{"blocks":"stone_button","state":{"powered":"true"}}}},{"condition":"location_check","offsetY":12,"predicate":{"block":{"blocks":"stone_button","state":{"powered":"true"}}}},{"condition":"location_check","offsetY":18,"predicate":{"block":{"blocks":"stone_button","state":{"powered":"true"}}}},{"condition":"location_check","offsetY":24,"predicate":{"block":{"blocks":"stone_button","state":{"powered":"true"}}}},{"condition":"location_check","offsetY":30,"predicate":{"block":{"blocks":"stone_button","state":{"powered":"true"}}}}]} if entity @a[x=438,y=63,z=-395,dx=3,dy=4,dz=3] positioned 440.0 67.0 -393.0 run function johto:sound/playglobalsfx {sfx:"elevatorend",category:"block"}
 #To Floor 2

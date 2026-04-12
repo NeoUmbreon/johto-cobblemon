@@ -9,9 +9,6 @@
 # Battle & Pre-Battle
 execute if score @s BattleStart matches 1.. run return run function johto:sound/dsbattleloop
 
-# Gym Victory
-execute as @s[scores={MusicTitles=35},tag=GymVictory] run return run function johto:sound/playrecord {track:"ds/victory/gymleader", duration:1640}
-
 
 # Return
 execute unless score @s RadioSelect matches 2..8 run return fail
