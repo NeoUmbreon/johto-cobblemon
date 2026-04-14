@@ -46,7 +46,7 @@ KANTO_FOLDERS = {
     "seafoamislands","pokemonmansion","viridianforest"
 }
 
-USE_CHALLENGE_TEAMS = True
+USE_CHALLENGE_TEAMS = False
 TEAMS_XLSX_PATH = PROJECT_ROOT / "challengemode_trainers.xlsx"
 
 def load_excel_teams(valid_items, valid_moves):
