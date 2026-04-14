@@ -77,7 +77,7 @@ t.724 = 'Vaporeon held_item=cobblemon:leftovers moves=muddywater,blizzard,aquari
 t.725 = 'Jolteon held_item=cobblemon:bright_powder moves=thunder,shadowball,raindance,yawn special_attack_ev=252 speed_ev=252' + t.constants;
 t.726 = 'Flareon held_item=cobblemon:white_herb moves=overheat,shadowball,mudslap,willowisp special_attack_ev=252 special_defence_ev=252 ' + t.constants;
 t.727 = 'Espeon held_item=cobblemon:lum_berry moves=psychic,shadowball,hyperbeam,grassknot special_attack_ev=252 speed_ev=252' + t.constants;
-t.728 = 'Umbreon held_item=cobblemon:bright_powder moves=faintattack,swagger,psychup,screech hp_ev=252 defence_ev=252 ' + t.constants;
+t.728 = 'Umbreon held_item=cobblemon:bright_powder moves=feintattack,swagger,psychup,screech hp_ev=252 defence_ev=252 ' + t.constants;
 t.729 = 'Leafeon held_item=cobblemon:heat_rock moves=leafblade,xscissor,synthesis,sunnyday attack_ev=252 defence_ev=252 ' + t.constants;
 t.730 = 'Glaceon held_item=cobblemon:focus_sash moves=blizzard,hyperbeam,hail,mirrorcoat defence_ev=252 special_attack_ev=252 ' + t.constants;
 t.731 = 'Lucario held_item=cobblemon:muscle_band moves=closecombat,earthquake,blazekick,shadowclaw attack_ev=252 speed_ev=252' + t.constants;

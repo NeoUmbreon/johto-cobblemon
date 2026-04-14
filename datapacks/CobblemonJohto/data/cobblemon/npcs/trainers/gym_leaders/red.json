@@ -68,9 +68,9 @@
     "party": {
         "type": "simple",
         "pokemon": [
-            "Pikachu level=88 moves=volttackel,irontail,quickattack,thunderbolt",
+            "Pikachu level=88 moves=volttackle,irontail,quickattack,thunderbolt",
             "Lapras level=80 moves=bodyslam,brine,blizzard,psychic",
-            "Snorlax level=82 moves=shadowball,crunhc,blizzard,gigaimpact",
+            "Snorlax level=82 moves=shadowball,crunch,blizzard,gigaimpact",
             "Venusaur level=84 moves=frenzyplant,gigadrain,sludgebomb,sleeppowder",
             "Charizard level=84 moves=blastburn,flareblitz,airslash,dragonpulse",
             "Blastoise level=84 moves=hydrocannon,blizzard,flashcannon,focusblast"

@@ -44,7 +44,7 @@
         "type": "simple",
         "pokemon": [
             "Hitmontop level=42 moves=dig,counter,triplekick,quickattack",
-            "Hitmonlee level=42 moves=hijumpkick,blazekick,focusenergy,swagger",
+            "Hitmonlee level=42 moves=highjumpkick,blazekick,focusenergy,swagger",
             "Hitmonchan level=42 moves=thunderpunch,icepunch,firepunch,bulletpunch",
             "Onix level=43 moves=sandstorm,dragonbreath,rockslide,earthquake",
             "Machamp level=46 moves=revenge,crosschop,rockslide,foresight"

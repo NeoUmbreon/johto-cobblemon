@@ -68,9 +68,9 @@
     "party": {
         "type": "simple",
         "pokemon": [
-            "Umbreon level=42 moves=doubleteam,confuseray,faintattack,paybakc",
+            "Umbreon level=42 moves=doubleteam,confuseray,feintattack,payback",
             "Vileplume level=42 moves=stunspore,petaldance,acid,moonlight",
-            "Murkrow level=44 moves=suckerpunch,faintattack,pluck,whirlwind",
+            "Murkrow level=44 moves=suckerpunch,feintattack,pluck,whirlwind",
             "Gengar level=45 moves=focusblast,destinybond,spite,lick",
             "Houndoom level=47 moves=nastyplot,darkpulse,flamethrower,crunch"
         ]

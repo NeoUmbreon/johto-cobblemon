@@ -37,7 +37,7 @@ t.384 = ' Vileplume held_item=cobblemon:big_root moves=gigadrain,sludgebomb,slee
 t.385 = ' Victreebel held_item=cobblemon:payapa_berry moves=leafstorm,sludgebomb,sleeppowder,gastroacid hp_ev=252 special_attack_ev=252' + t.constants;
 t.386 = ' Electrode held_item=cobblemon:chesto_berry moves=thunderbolt,swift,thunderwave,lightscreen special_attack_ev=252 speed_ev=252' + t.constants;
 t.387 = ' Ludicolo held_item=cobblemon:muscle_band moves=waterfall,razorleaf,drainpunch,swordsdance attack_ev=252 special_defence_ev=252' + t.constants;
-t.388 = ' Shiftry held_item=cobblemon:persim_berry moves=seedbomb,faintattack,xscissor,fakeout attack_ev=252 speed_ev=252' + t.constants;
+t.388 = ' Shiftry held_item=cobblemon:persim_berry moves=seedbomb,feintattack,xscissor,fakeout attack_ev=252 speed_ev=252' + t.constants;
 t.389 = ' Exploud held_item=cobblemon:chople_berry moves=hypervoice,extrasensory,waterpulse,torment hp_ev=252 special_attack_ev=252' + t.constants;
 t.390 = ' Glalie held_item=cobblemon:iron_ball moves=avalanche,payback,gyroball,iceshard hp_ev=170 defence_ev=170 special_defence_ev=170' + t.constants;
 t.391 = ' Lopunny held_item=cobblemon:focus_band moves=return,drainpunch,charm,mirrorcoat attack_ev=252 speed_ev=252' + t.constants;

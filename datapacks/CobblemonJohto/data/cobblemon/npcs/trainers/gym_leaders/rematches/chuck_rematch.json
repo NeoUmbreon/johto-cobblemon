@@ -68,9 +68,9 @@
     "party": {
         "type": "simple",
         "pokemon": [
-            "Medicham level=54 moves=attract,psychocut,thunderpunch,hijumpkick",
+            "Medicham level=54 moves=attract,psychocut,thunderpunch,highjumpkick",
             "Hitmonchan level=52 moves=swagger,doubleteam,machpunch,focuspunch",
-            "Hitmonlee level=55 moves=fakeout,bulkup,blazekick,hijumpkick",
+            "Hitmonlee level=55 moves=fakeout,bulkup,blazekick,highjumpkick",
             "Breloom level=54 moves=substitute,stoneedge,drainpunch,focusblast",
             "Primeape level=56 moves=swagger,payback,thunderpunch,closecombat",
             "Poliwrath level=60 moves=substitute,doubleteam,waterfall,focuspunch"
