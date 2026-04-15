@@ -1,0 +1,3 @@
+q.player.in_battle == true ? return 0;
+q.run_command('execute as ' + q.npc.uuid + ' if entity @s[tag=trainerBusy] run return run tellraw ' + q.player.username + ' {"text":"That trainer is in battle!","italic":true,"color":"gray"}');
+q.run_command('opendialogue ' + q.npc.Config.trainer_id + '_end_defeated ' + q.player.username);

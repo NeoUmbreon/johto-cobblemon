@@ -431,8 +431,8 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
         entity_data.pop("interaction", None)
     else:
         entity_data["interaction"] = {
-            "type": "dialogue",
-            "dialogue": f"cobblemon:{trainer_id}_end_defeated"
+            "type": "custom_script",
+            "dialogue": f"q.run_command('runmolangscript cobblemon:dialogue_check_battle ' + c.player.username + ' ' + c.npc.uuid)"
         }
 
     # write back
