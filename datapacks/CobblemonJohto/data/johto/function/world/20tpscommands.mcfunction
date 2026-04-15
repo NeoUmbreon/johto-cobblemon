@@ -1,12 +1,12 @@
 #-------------------------------------------------------------------------------------------------------------------------
 #Auto-battle detection
-execute at @a[scores={BattleStart=0,BattleCD=0}] as @e[type=cobblemon:npc,tag=!trainerBusy,distance=..6,nbt={Config:{trainer:1.0d}}] run function johto:trainers/detect_trainers with entity @s Config
+execute at @a[scores={BattleStart=0,BattleCD=0},tag=!InDialogue] as @e[type=cobblemon:npc,distance=..6,nbt={Config:{trainer:1.0d}}] run function johto:trainers/detect_trainers with entity @s Config
 
 # Keep players inside radius
-execute as @a[scores={BattleStart=11..18}] at @s at @e[type=cobblemon:npc,tag=trainerBusy,distance=6.05..7.5] if score @n[type=cobblemon:npc,tag=trainerBusy,distance=0] TrainerUID = @s ActiveTrainer run tp @s ~ ~ ~
+execute as @a[scores={BattleStart=11..18}] at @s at @e[type=cobblemon:npc,distance=6.05..7.5] if score @n[type=cobblemon:npc,distance=0] TrainerUID = @s ActiveTrainer run tp @s ~ ~ ~
 
 # Free trainer if no active battle players nearby
-execute as @e[type=cobblemon:npc,tag=trainerBusy] at @s unless entity @a[scores={BattleStart=1..18},distance=..7.6] run tag @s remove trainerBusy
+#execute as @e[type=cobblemon:npc,tag=trainerBusy] at @s unless entity @a[scores={BattleStart=1..18},distance=..7.6] run tag @s remove trainerBusy
 
 
 #--------------------------------------------------------------------------------------------------GENERAL WORLD-----------------------------------------------------------------------------------------------------------------------------------

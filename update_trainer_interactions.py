@@ -309,7 +309,7 @@ def build_battle_action(trainer_id: str, battle_id: int):
         (
             "q.run_command("
             f"'execute as ' + q.player.username + ' at @s"
-            f" at @n[type=cobblemon:npc,tag=trainerBusy,distance=..16,nbt={{Config:{{trainer_id:\"{trainer_id}\"}}}}]"
+            f" at @n[type=cobblemon:npc,distance=..16,nbt={{Config:{{trainer_id:\"{trainer_id}\"}}}}]"
             f" run function johto:trainers/start_battle "
             f"{{trainer_id:\"{trainer_id}\",battle_id:{battle_id}}}'"
             ");"
