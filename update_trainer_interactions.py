@@ -46,11 +46,11 @@ KANTO_FOLDERS = {
     "seafoamislands","pokemonmansion","viridianforest"
 }
 
-USE_CHALLENGE_TEAMS = False
+ENABLE_CHALLENGE_MODE = False
 TEAMS_XLSX_PATH = PROJECT_ROOT / "challengemode_trainers.xlsx"
 
 def load_excel_teams(valid_items, valid_moves):
-    if not USE_CHALLENGE_TEAMS:
+    if not ENABLE_CHALLENGE_MODE:
         return {}
 
     df = pd.read_excel(TEAMS_XLSX_PATH)
@@ -158,7 +158,7 @@ def load_validation_lists():
     return items, moves
 
 def apply_excel_team_override(entity_data, folder, trainer_id, excel_teams):
-    if not USE_CHALLENGE_TEAMS:
+    if not ENABLE_CHALLENGE_MODE:
         return entity_data
 
     if not folder or not trainer_id:
@@ -700,7 +700,7 @@ def main():
     print(f"Found {len(files)} interaction files\n")
 
     excel_teams = {}
-    if USE_CHALLENGE_TEAMS:
+    if ENABLE_CHALLENGE_MODE:
         valid_items, valid_moves = load_validation_lists()
         if not valid_items:
             raise ValueError("No items loaded from Lists sheet!")
@@ -728,7 +728,7 @@ def main():
             if i >= 70:
                 break
     else:
-        print("Challenge teams disabled, skipping Excel loading")
+        print("Challenge mode disabled, skipping Excel loading")
 
     uid_counter = 1
     processed = []
