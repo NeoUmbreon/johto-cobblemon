@@ -410,12 +410,54 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
     with open(entity_file, "r", encoding="utf-8") as f:
         entity_data = json.load(f)
 
-    entity_data = apply_excel_team_override(
-        entity_data,
-        folder,
-        trainer_id,
-        excel_teams
-    )
+    if not is_silver(trainer_id):
+        entity_data = apply_excel_team_override(
+            entity_data,
+            folder,
+            trainer_id,
+            excel_teams
+        )
+
+    if is_silver(trainer_id):
+        base_id = get_silver_base_id(trainer_id)
+
+        for i in range(1, 4):
+            variant_id = f"{base_id}{i}"
+            variant_file = NPC_DIR / folder / f"{variant_id}.json"
+
+            if not variant_file.exists():
+                continue
+
+            with open(variant_file, "r", encoding="utf-8") as f:
+                variant_data = json.load(f)
+
+            updated_variant = apply_excel_team_override(
+                variant_data,
+                folder,
+                variant_id,
+                excel_teams
+            )
+
+            with open(variant_file, "w", encoding="utf-8") as f:
+                json.dump(updated_variant, f, indent=4, ensure_ascii=False)
+
+            print(f"Updated Silver variant: {variant_file}")
+
+        if variant_file.exists():
+            with open(variant_file, "r", encoding="utf-8") as f:
+                variant_data = json.load(f)
+
+            updated_variant = apply_excel_team_override(
+                variant_data,
+                folder,
+                trainer_id,
+                excel_teams
+            )
+
+            with open(variant_file, "w", encoding="utf-8") as f:
+                json.dump(updated_variant, f, indent=4, ensure_ascii=False)
+
+            print(f"Updated Silver variant: {variant_file}")
 
     # Early exit for gym leaders
     if is_gym_leader:
@@ -691,7 +733,7 @@ def should_check(folder, trainer):
         return False
 
     if folder == "silver" or folder == "pokemonmansion":
-        return False  # or handle differently
+        return False
 
     return True
 
@@ -722,11 +764,13 @@ def main():
         excel_teams = load_excel_teams(valid_items, valid_moves)
         print(f"Loaded {len(excel_teams)} Excel trainer entries")
         
+        """
         # Show a few samples
         for i, (k, v) in enumerate(excel_teams.items()):
             print(f"Sample {i}: {k} -> {len(v)} mons")
             if i >= 70:
                 break
+        """
     else:
         print("Challenge mode disabled, skipping Excel loading")
 
