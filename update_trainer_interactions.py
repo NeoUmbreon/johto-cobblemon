@@ -427,13 +427,10 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
     inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid)
 
     # interaction handling
-    if is_silver(trainer_id):
-        entity_data.pop("interaction", None)
-    else:
-        entity_data["interaction"] = {
-            "type": "custom_script",
-            "script": "q.run_command('runmolangscript cobblemon:dialogue_check_battle ' + c.player.username + ' ' + c.npc.uuid)"
-        }
+    entity_data["interaction"] = {
+        "type": "custom_script",
+        "script": "q.run_command('runmolangscript cobblemon:dialogue_check_battle ' + c.player.username + ' ' + c.npc.uuid)"
+    }
 
     # write back
     with open(entity_file, "w", encoding="utf-8") as f:
@@ -760,7 +757,7 @@ def main():
 
             seen_silver.add(base_id)
 
-            generate_battle_end_copy(base_id, folder)
+            #generate_battle_end_copy(base_id, folder)
             update_trainer_entity(trainer_id, folder, battle_id, trainer_uid, excel_teams)
 
             export_all_silver_variants(folder, base_id)
