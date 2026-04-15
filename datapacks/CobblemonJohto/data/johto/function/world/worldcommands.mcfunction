@@ -297,7 +297,7 @@ execute if entity @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run tag @a[tag
 
 #Whiteout enabled by default
 execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable,tag=!WhiteoutInitialized] run function johto:tools/togglewhiteout
-execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable,tag=!WhiteoutInitialized] run tag @s add WhiteoutInitialized
+execute as @e[x=-792,y=65,z=-284,dy=3,tag=!WhiteoutDisable,tag=!WhiteoutInitialized] run tag @s add WhiteoutInitialized
 
 execute as @a[tag=Whiteout] run function johto:triggers/whiteout
 
