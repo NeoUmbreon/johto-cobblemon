@@ -91,6 +91,16 @@ tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove Koga
 tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove Bruno
 tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove Karen
 tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove Lance
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.will
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.koga
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.bruno
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.karen
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.lance
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.will_rematch
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.koga_rematch
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.bruno_rematch
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.karen_rematch
+tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove defeated.lance_rematch
 tag @s[x=-1283,y=84,z=353,dx=12,dy=5] remove Dialogue98
 
 tag @s[x=-1283,y=84,z=353,dx=12,dy=5,tag=Clair,tag=Pryce,tag=Jasmine,tag=Chuck,tag=Morty,tag=Whitney,tag=Bugsy,tag=Falkner,tag=Brock,tag=Misty,tag=Surge,tag=Erika,tag=Janine,tag=Sabrina,tag=Blaine,tag=Blue,tag=!AllGyms] add AllGyms

@@ -265,10 +265,16 @@ def export_all_silver_variants(folder: str, base_id: str):
         #print(f"Exported silver trainer: {output_file}")
         
 def get_battle_music(folder: str, trainer_id: str) -> int:
+    if trainer_id.startswith("lance") or trainer_id == "red":
+        return 16  # Champion music
     if trainer_id.startswith("rocket"):
         return 14  # Rocket music
     if folder == "silver":
         return 13  # Rival music
+    if trainer_id.startswith(("falkner","bugsy","whitney","morty","chuck","jasmine","pryce","clair","will","koga","bruno","karen")):
+        return 12  # Johto Gym Leader & Elite Four music
+    if trainer_id.startswith(("brock","misty","surge","erika","janine","sabrina","blaine","blue")):
+        return 18  # Kanto Gym Leader music
     if folder in KANTO_FOLDERS:
         return 17  # Kanto trainer music
     return 11  # Default Johto trainer
@@ -296,15 +302,16 @@ def get_model_identifier(folder: str, trainer_id) -> str:
 def build_battle_action(trainer_id: str, battle_id: int):
     actions = []
 
-    if is_silver(trainer_id):
-        base_id = get_silver_base_id(trainer_id)
+    #if is_silver(trainer_id):
+    #    base_id = get_silver_base_id(trainer_id)
 
-        actions.append("q.run_command('tag ' + q.player.username + ' remove InDialogue');")
+    #    actions.append("q.run_command('tag ' + q.player.username + ' remove InDialogue');")
 
-        if "cherrygrove" in base_id:
-            actions.append("q.run_command('tag ' + q.player.username + ' add Dialogue6');")
+    #    if "cherrygrove" in base_id:
+    #        actions.append("q.run_command('tag ' + q.player.username + ' add Dialogue6');")
 
     actions.extend([
+        "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
         (
             "q.run_command("
@@ -348,7 +355,7 @@ def generate_battle_end_copy(trainer_id: str, folder: str):
     #print(f"Generated battle end copy: {new_file}")
     return new_file
 # Inject Trainer Variables into config
-def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid):
+def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid, auto_battle):
     if "config" not in entity_data or not isinstance(entity_data["config"], list):
         entity_data["config"] = []
 
@@ -363,7 +370,7 @@ def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid):
             "displayName": "npc.variable.trainer.name",
             "description": "npc.variable.trainer.desc",
             "type": "BOOLEAN",
-            "defaultValue": True
+            "defaultValue": auto_battle
         })
 
     if "trainer_id" not in existing_vars:
@@ -394,7 +401,7 @@ def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid):
         })
 
 def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_uid: int, excel_teams):
-    is_gym_leader = "gym_leaders" in folder.lower() or "rematches" in folder.lower()
+    auto_battle = not ("gym_leaders" in folder.lower() or "rematches" in folder.lower() or "fuchsiagym" in folder.lower())
 
     # Collapse to base file if Silver
     if is_silver(trainer_id):
@@ -460,13 +467,13 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
             print(f"Updated Silver variant: {variant_file}")
 
     # Early exit for gym leaders
-    if is_gym_leader:
-        with open(entity_file, "w", encoding="utf-8") as f:
-            json.dump(entity_data, f, indent=4, ensure_ascii=False)
-        return
+    #if is_gym_leader:
+    #    with open(entity_file, "w", encoding="utf-8") as f:
+    #        json.dump(entity_data, f, indent=4, ensure_ascii=False)
+    #    return
 
     # inject config
-    inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid)
+    inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid, auto_battle)
 
     # interaction handling
     entity_data["interaction"] = {
@@ -532,12 +539,12 @@ def export_trainer_team(trainer_id: str, folder: str, excel_teams):
 
     #print(f"Exported trainer file: {output_file}")
 
-def build_tbcs_command(trainer_id: str):
-    trainer_id_cap = trainer_id.capitalize()
-    return [
-        "q.run_command('execute as ' + q.player.username + ' run function johto:trainers/gym_battle {trainer_id:\"%s\",trainer_id_cap:\"%s\"}')"
-        % (trainer_id, trainer_id_cap)
-    ]
+#def build_tbcs_command(trainer_id: str):
+#    trainer_id_cap = trainer_id.capitalize()
+#    return [
+#        "q.run_command('execute as ' + q.player.username + ' run function johto:trainers/gym_battle {trainer_id:\"%s\",trainer_id_cap:\"%s\"}')"
+#        % (trainer_id, trainer_id_cap)
+#    ]
 
 def update_interaction_file(path: Path):
     with open(path, "r", encoding="utf-8") as f:
@@ -555,43 +562,43 @@ def update_interaction_file(path: Path):
 
     is_gym_leader = "gym_leaders" in folder.lower() or "rematches" in folder.lower()
 
-    if is_gym_leader:
-        for page in data.get("pages", []):
-            input_data = page.get("input")
-            if not isinstance(input_data, dict):
-                continue
+    #if is_gym_leader:
+    #    for page in data.get("pages", []):
+    #        input_data = page.get("input")
+    #        if not isinstance(input_data, dict):
+    #            continue
 
-            options = input_data.get("options")
-            if not isinstance(options, list):
-                continue
+    #        options = input_data.get("options")
+    #        if not isinstance(options, list):
+    #            continue
 
-            for opt in options:
-                action = opt.get("action")
+    #        for opt in options:
+    #            action = opt.get("action")
 
-                if isinstance(action, list):
-                    new_actions = []
+    #            if isinstance(action, list):
+    #                new_actions = []
 
-                    for line in action:
-                        if "q.npc.start_battle(q.player)" in line:
-                            new_actions.extend(build_tbcs_command(trainer_id))
-                        else:
-                            new_actions.append(line)
+    #                for line in action:
+    #                    if "q.npc.start_battle(q.player)" in line:
+    #                        new_actions.extend(build_tbcs_command(trainer_id))
+    #                    else:
+    #                        new_actions.append(line)
 
-                    opt["action"] = new_actions
+    #                opt["action"] = new_actions
 
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=4, ensure_ascii=False)
+    #    with open(path, "w", encoding="utf-8") as f:
+    #        json.dump(data, f, indent=4, ensure_ascii=False)
 
-        return trainer_id, folder, battle_id
+    #    return trainer_id, folder, battle_id
     
-    if is_silver(trainer_id):
-        if "initializationAction" not in data:
-            data["initializationAction"] = []
+    #if is_silver(trainer_id):
+    #    if "initializationAction" not in data:
+    #        data["initializationAction"] = []
 
-        init_line = "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+    #    init_line = "q.run_command('tag ' + q.player.username + ' add InDialogue');"
 
-        if init_line not in data["initializationAction"]:
-            data["initializationAction"].append(init_line)
+    #    if init_line not in data["initializationAction"]:
+    #        data["initializationAction"].append(init_line)
 
     data["escapeAction"] = build_battle_action(trainer_id, battle_id)
 
