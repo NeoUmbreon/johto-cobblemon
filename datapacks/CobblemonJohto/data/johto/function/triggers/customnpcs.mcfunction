@@ -1,6 +1,9 @@
 #Function that manages what specific NPCs say when you click on boxes surroung them.
 #Used to have the same NPC say different lines depending on the player's own tags.
 
+#Return if in battle
+execute if score @s BattleStart matches 1.. run return run advancement revoke @s only johto:click/npcs
+
 
 #Cobblemon Home integration, pre-Pokemon-League
 execute as @s[x=-683,y=64,z=-471,distance=..4,scores={IP=0}] run opendialogue pokemon_home_blocked @s
@@ -39,6 +42,11 @@ execute as @s[x=514,y=31,z=-272,distance=..4,tag=RadioCard] run opendialogue rad
 #Goldenrod Bicycle Man
 execute as @s[x=423,y=64,z=-426,distance=..6,tag=!Dialogue23] run opendialogue bicycle_gift @s
 execute as @s[x=423,y=64,z=-426,distance=..6,tag=Dialogue23] run opendialogue goldenrod_blacksmith_interaction @s
+
+#Clair, post-Dragon's-Den
+execute as @s[x=-856,y=65,z=720,distance=..6,tag=!Dialogue78] run opendialogue clair_interaction @s
+execute as @s[x=-856,y=65,z=720,distance=..6,tag=Dialogue78,tag=!Clair] run opendialogue clair_end_defeated @s
+execute as @s[x=-856,y=65,z=720,distance=..6,tag=Clair] run opendialogue clair_end_defeated_afterbadge @s
 
 
 #Copycat
