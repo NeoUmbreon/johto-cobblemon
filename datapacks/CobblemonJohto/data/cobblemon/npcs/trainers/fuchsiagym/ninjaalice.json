@@ -11,7 +11,7 @@
         "type": "dialogue",
         "dialogue": "cobblemon:ninjaalice_interaction"
     },
-        "name": "???",
+        "name": "Alice",
         "party": {
         "type": "simple",
         "pokemon": [

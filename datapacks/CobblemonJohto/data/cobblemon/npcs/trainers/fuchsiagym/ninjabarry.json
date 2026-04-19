@@ -11,7 +11,7 @@
         "type": "dialogue",
         "dialogue": "cobblemon:ninjabarry_interaction"
     },
-        "name": "???",
+        "name": "Barry",
         "party": {
         "type": "simple",
         "pokemon": [

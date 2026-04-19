@@ -11,7 +11,7 @@
         "type": "dialogue",
         "dialogue": "cobblemon:ninjalinda_interaction"
     },
-        "name": "???",
+        "name": "Linda",
         "party": {
         "type": "simple",
         "pokemon": [

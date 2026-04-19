@@ -11,7 +11,7 @@
         "type": "dialogue",
         "dialogue": "cobblemon:ninjacindy_interaction"
     },
-        "name": "???",
+        "name": "Cindy",
         "party": {
         "type": "simple",
         "pokemon": [
