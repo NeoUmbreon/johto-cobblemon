@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Falkner"
-    ],
+    "name": "Falkner",
     "battleConfiguration": {
         "canChallenge": true
     },

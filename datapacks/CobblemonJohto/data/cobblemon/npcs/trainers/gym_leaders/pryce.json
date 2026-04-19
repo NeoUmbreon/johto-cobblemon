@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Pryce"
-    ],
+    "name": "Pryce",
     "battleConfiguration": {
         "canChallenge": true
     },

@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Clair"
-    ],
+    "name": "Clair",
     "battleConfiguration": {
         "canChallenge": true
     },

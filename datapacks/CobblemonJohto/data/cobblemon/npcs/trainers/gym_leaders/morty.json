@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Morty"
-    ],
+    "name": "Morty",
     "battleConfiguration": {
         "canChallenge": true
     },

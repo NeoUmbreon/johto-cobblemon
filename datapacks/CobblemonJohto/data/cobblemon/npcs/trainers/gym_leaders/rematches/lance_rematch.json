@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Lance"
-    ],
+    "name": "Lance",
     "party": {
         "type": "simple",
         "pokemon": [

@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Misty"
-    ],
+    "name": "Misty",
     "battleConfiguration": {
         "canChallenge": true
     },

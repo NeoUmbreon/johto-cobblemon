@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Lance"
-    ],
+    "name": "Lance",
     "battleConfiguration": {
         "canChallenge": true
     },

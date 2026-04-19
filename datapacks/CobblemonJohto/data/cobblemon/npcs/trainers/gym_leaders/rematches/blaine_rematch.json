@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Blaine"
-    ],
+    "name": "Blaine",
     "battleConfiguration": {
         "canChallenge": true
     },

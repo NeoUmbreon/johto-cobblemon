@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Brock"
-    ],
+    "name": "Brock",
     "battleConfiguration": {
         "canChallenge": true
     },

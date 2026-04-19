@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Will"
-    ],
+    "name": "Will",
     "party": {
         "type": "simple",
         "pokemon": [

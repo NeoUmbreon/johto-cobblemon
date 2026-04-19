@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Bruno"
-    ],
+    "name": "Bruno",
     "party": {
         "type": "simple",
         "pokemon": [

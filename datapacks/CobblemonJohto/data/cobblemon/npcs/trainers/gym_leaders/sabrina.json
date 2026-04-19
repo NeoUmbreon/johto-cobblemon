@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Sabrina"
-    ],
+    "name": "Sabrina",
     "battleConfiguration": {
         "canChallenge": true
     },

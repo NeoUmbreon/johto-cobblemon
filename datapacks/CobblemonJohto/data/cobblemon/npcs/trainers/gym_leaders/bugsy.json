@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Bugsy"
-    ],
+    "name": "Bugsy",
     "battleConfiguration": {
         "canChallenge": true
     },

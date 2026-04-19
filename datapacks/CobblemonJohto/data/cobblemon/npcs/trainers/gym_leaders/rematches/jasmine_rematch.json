@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Jasmine"
-    ],
+    "name": "Jasmine",
     "battleConfiguration": {
         "canChallenge": true
     },

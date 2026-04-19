@@ -34,9 +34,7 @@
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue brock_end @s');"
           }
     ],
-    "names": [
-        "Brock"
-    ],
+    "name": "Brock",
     "battleConfiguration": {
         "canChallenge": true
     },

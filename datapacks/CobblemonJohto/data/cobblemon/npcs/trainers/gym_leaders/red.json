@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Red"
-    ],
+    "name": "Red",
     "battleConfiguration": {
         "canChallenge": true
     },

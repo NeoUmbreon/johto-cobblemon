@@ -34,9 +34,7 @@
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue blue_end @s');"
           }
     ],
-    "names": [
-        "Blue"
-    ],
+    "name": "Blue",
     "battleConfiguration": {
         "canChallenge": true
     },

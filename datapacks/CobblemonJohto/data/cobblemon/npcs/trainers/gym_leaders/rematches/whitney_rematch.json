@@ -41,9 +41,7 @@
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue whitney_rematch_end @s');"
             }
     ],
-    "names": [
-        "Whitney"
-    ],
+    "name": "Whitney",
     "battleConfiguration": {
         "canChallenge": true
     },

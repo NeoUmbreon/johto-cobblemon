@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Koga"
-    ],
+    "name": "Koga",
     "party": {
         "type": "simple",
         "pokemon": [

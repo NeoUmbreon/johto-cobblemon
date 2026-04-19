@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Koga"
-    ],
+    "name": "Koga",
     "battleConfiguration": {
         "canChallenge": true
     },

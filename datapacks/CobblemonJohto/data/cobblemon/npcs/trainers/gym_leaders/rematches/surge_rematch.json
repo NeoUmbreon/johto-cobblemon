@@ -59,9 +59,7 @@
             }
         }
     ],
-    "names": [
-        "Surge"
-    ],
+    "name": "Lt. Surge",
     "battleConfiguration": {
         "canChallenge": true
     },
