@@ -1,6 +1,9 @@
+# return if something went really wrong
+$execute as @n[type=cobblemon:npc,tag=trainerBusy,distance=0] unless entity @s[nbt={Config:{trainer_id:$(trainer_id)}}] run return run say Fatal error! (trainer mismatch)
+
 # set TrainerUID & ActiveTrainer
-execute as @n[type=cobblemon:npc,tag=trainerBusy,distance=0] store result score @s TrainerUID run data get entity @s Config.trainer_uid
-scoreboard players operation @s ActiveTrainer = @n[type=cobblemon:npc,tag=trainerBusy,distance=0] TrainerUID
+$scoreboard players set @n[type=cobblemon:npc,tag=trainerBusy,distance=0] TrainerUID $(trainer_uid)
+$scoreboard players set @s ActiveTrainer $(trainer_uid)
 
 # Refresh music
 $scoreboard players set @s BattleStart $(battle_id)

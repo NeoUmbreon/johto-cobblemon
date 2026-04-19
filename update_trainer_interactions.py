@@ -315,10 +315,10 @@ def build_battle_action(trainer_id: str, battle_id: int):
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
         (
             "q.run_command("
-            f"'execute as ' + q.player.username + ' at @s"
-            f" at @n[type=cobblemon:npc,tag=trainerBusy,distance=..16,nbt={{Config:{{trainer_id:\"{trainer_id}\"}}}}]"
-            f" run function johto:trainers/start_battle "
-            f"{{trainer_id:\"{trainer_id}\",battle_id:{battle_id}}}'"
+            f"'execute as ' + q.player.username + '"
+            f" at ' + q.npc.uuid + '"
+            f" run function johto:trainers/start_battle"
+            f" with entity ' + q.npc.uuid + ' Config'"
             ");"
         ),
         "q.dialogue.close();",
@@ -477,8 +477,8 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
 
     # interaction handling
     entity_data["interaction"] = {
-        "type": "custom_script",
-        "script": "q.run_command('runmolangscript cobblemon:dialogue_check_battle ' + c.player.username + ' ' + c.npc.uuid)"
+        "type": "script",
+        "script": "johto:dialogue_check_battle"
     }
 
     # write back

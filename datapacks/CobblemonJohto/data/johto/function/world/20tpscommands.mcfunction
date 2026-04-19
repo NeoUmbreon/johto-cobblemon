@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------------------------------------------------
 #Auto-battle detection
-execute at @a[scores={BattleStart=0,BattleCD=0},tag=!InDialogue] as @e[type=cobblemon:npc,tag=!trainerBusy,distance=..6,nbt={Config:{trainer:1.0d}}] run function johto:trainers/detect_trainers with entity @s Config
+execute at @a[scores={BattleStart=0,BattleCD=0},tag=!InDialogue] as @e[type=cobblemon:npc,tag=!trainerBusy,distance=..6,nbt={Config:{trainer:1.0d}}] run runmolangscript johto:detect_trainers @p[distance=0] @s
 
 # Keep players inside radius
 execute as @a[scores={BattleStart=11..18}] at @s at @e[type=cobblemon:npc,tag=trainerBusy,distance=6.05..7.5] if score @n[type=cobblemon:npc,tag=trainerBusy,distance=0] TrainerUID = @s ActiveTrainer run tp @s ~ ~ ~

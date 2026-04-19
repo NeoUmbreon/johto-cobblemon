@@ -1,8 +1,4 @@
 {
-    "initializationAction": [
-        "q.run_command('execute at ' + q.player.username + ' run tag @n[type=cobblemon:npc,distance=..16,nbt={Config:{trainer_id:\"clair\"}}] add trainerBusy');",
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
-    ],
     "names": ["Clair"],
     "speakers": {
         "npc": {

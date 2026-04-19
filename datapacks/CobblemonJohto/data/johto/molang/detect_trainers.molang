@@ -1,0 +1,8 @@
+q.npc.has_tag('trainerBusy') ? return 0;
+q.player.has_tag('InDialogue') ? return 0;
+q.player.has_tag('defeated.' + q.npc.Config.trainer_id) ? return 0;
+q.npc.can_see(q.player, q.npc.Config.challenge_distance ?? 6) == false ? return 0;
+
+q.npc.add_tag('trainerBusy');
+q.player.add_tag('InDialogue');
+q.npc.run_dialogue(q.player, q.npc.Config.trainer_id + '_interaction');
