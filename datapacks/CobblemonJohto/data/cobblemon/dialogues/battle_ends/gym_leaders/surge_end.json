@@ -9,7 +9,7 @@
     ],
     "speakers": {
         "npc": {
-            "name": "Surge",
+            "name": "Lt. Surge",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",

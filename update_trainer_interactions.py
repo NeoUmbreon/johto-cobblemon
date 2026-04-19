@@ -401,7 +401,7 @@ def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid, auto_
         })
 
 def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_uid: int, excel_teams):
-    auto_battle = not ("gym_leaders" in folder.lower() or "rematches" in folder.lower() or "fuchsiagym" in folder.lower())
+    auto_battle = not ("gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower() or "fuchsiagym" in folder.lower())
 
     # Collapse to base file if Silver
     if is_silver(trainer_id):
@@ -560,7 +560,7 @@ def update_interaction_file(path: Path):
 
     battle_id = get_battle_music(folder, trainer_id)
 
-    is_gym_leader = "gym_leaders" in folder.lower() or "rematches" in folder.lower()
+    is_gym_leader = "gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower()
 
     #if is_gym_leader:
     #    for page in data.get("pages", []):
@@ -797,7 +797,7 @@ def main():
 
     for trainer_id, folder, battle_id, trainer_uid in processed:
 
-        is_gym_leader = "gym_leaders" in folder.lower() or "rematches" in folder.lower()
+        is_gym_leader = "gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower()
         #if is_gym_leader: print(f"Skipping export (gym leader): {trainer_id} in {folder}")
 
         if is_silver(trainer_id):
