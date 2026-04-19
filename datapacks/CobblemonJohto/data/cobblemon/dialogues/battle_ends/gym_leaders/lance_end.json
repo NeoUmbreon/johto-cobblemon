@@ -23,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "…Whew. You have become truly powerful."
+                "...Whew. You have become truly powerful."
             ],
             "input": {
                 "type": "option",

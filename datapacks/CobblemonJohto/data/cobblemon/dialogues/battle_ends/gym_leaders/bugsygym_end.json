@@ -23,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Whoa, amazing! You're an expert on Pokémon! My research isn't complete yet. OK, you win."
+                "Whoa, amazing! You're an expert on Pokémon! My research isn't complete yet."
             ],
             "input": {
                 "type": "option",
@@ -41,7 +41,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Bug-type Pokémon are deep. There are many mysteries to explore. Study your top choices thoroughly."
+                "OK, you win. Take this Badge."
             ],
             "input": {
                 "type": "option",

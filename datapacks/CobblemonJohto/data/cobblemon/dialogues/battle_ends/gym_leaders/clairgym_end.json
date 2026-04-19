@@ -23,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I won't admit this."
+                "I won’t concede this."
             ],
             "input": {
                 "type": "option",
@@ -41,7 +41,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "I may have lost, but you're still not ready for the Pokémon League."
+                "I might have lost, but you’re still not ready for the Pokémon League."
             ],
             "input": {
                 "type": "option",
@@ -59,7 +59,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "I know. You should take the dragon user challenge."
+                "I know. You should take the Dragon user challenge."
             ],
             "input": {
                 "type": "option",
@@ -113,7 +113,7 @@
             "id": "page6",
             "speaker": "npc",
             "lines": [
-                "That is the test to be accepted as a true dragon user."
+                "That is the test to be accepted as a true Dragon user."
             ],
             "input": {
                 "type": "option",
@@ -131,7 +131,7 @@
             "id": "page7",
             "speaker": "npc",
             "lines": [
-                "If you can do that, I will accept you as a worthy trainer."
+                "If you can do that, I will accept you as a worthy Trainer."
             ],
             "input": {
                 "type": "option",

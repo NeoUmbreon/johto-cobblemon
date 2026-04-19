@@ -23,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Why? How could I lose?"
+                "Why?! ...How could we lose?"
             ],
             "input": {
                 "type": "option",
@@ -41,7 +41,25 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "My job is done! Go face your next challenge!"
+                "Having lost, I have no right to say anything..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Go face your next challenge!"
             ],
             "input": {
                 "type": "option",

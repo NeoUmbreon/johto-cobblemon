@@ -31,7 +31,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue jasmine_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue jasminegym_end @s');"
           }
     ],
     "ai": [

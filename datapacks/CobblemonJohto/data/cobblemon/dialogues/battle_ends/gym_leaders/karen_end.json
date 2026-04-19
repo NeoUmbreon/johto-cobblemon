@@ -59,7 +59,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Truly skilled trainers should try to win with their favorites."
+                "Truly skilled Trainers should try to win with the Pokémon they love best."
             ],
             "input": {
                 "type": "option",

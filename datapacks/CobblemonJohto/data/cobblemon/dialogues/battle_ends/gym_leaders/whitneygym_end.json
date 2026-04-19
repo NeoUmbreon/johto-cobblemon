@@ -84,24 +84,6 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page5",
-            "speaker": "npc",
-            "lines": [
-                "Ah, that was a good cry! Come for a visit again! Bye-bye!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
                         "text": "Close",
                         "value": "close",
                         "action": [
