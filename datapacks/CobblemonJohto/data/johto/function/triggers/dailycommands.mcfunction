@@ -101,6 +101,7 @@ tag @a remove PokeTalkCooldown
 
 execute as @a[scores={RadioSelect=3..8},tag=!RadioOff] at @s run function johto:world/radiostations
 
+
 #Reset Gym Leader rematch tags
 tag @a remove defeated.falkner_rematch
 tag @a remove defeated.bugsy_rematch
@@ -119,6 +120,8 @@ tag @a remove defeated.janine_rematch
 tag @a remove defeated.sabrina_rematch
 tag @a remove defeated.blaine_rematch
 tag @a remove defeated.blue_rematch
+
+tag @a remove defeated.red
 
 
 
