@@ -448,7 +448,7 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
             with open(variant_file, "w", encoding="utf-8") as f:
                 json.dump(updated_variant, f, indent=4, ensure_ascii=False)
 
-            print(f"Updated Silver variant: {variant_file}")
+            #print(f"Updated Silver variant: {variant_file}")
 
         if variant_file.exists():
             with open(variant_file, "r", encoding="utf-8") as f:

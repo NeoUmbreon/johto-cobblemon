@@ -182,7 +182,7 @@ execute as @s[x=69,y=104,z=7,distance=..4,tag=!ItemLoot29] run tag @s add ItemLo
 
 execute as @s[x=50,y=104,z=25,distance=..4,tag=ItemLoot30] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
 execute as @s[x=50,y=104,z=25,distance=..4,tag=!ItemLoot30] run function johto:spawn/escaperope
-execute as @s[x=50,y=104,z=25,distance=..4,tag=!ItemLoot30] run tellraw @s {"text":"You found a Potion!","italic":true,"color":"gray"}
+execute as @s[x=50,y=104,z=25,distance=..4,tag=!ItemLoot30] run tellraw @s {"text":"You found an Escape Rope!","italic":true,"color":"gray"}
 execute as @s[x=50,y=104,z=25,distance=..4,tag=!ItemLoot30] run function johto:sound/playlocalsfx {sfx:"item"}
 execute as @s[x=50,y=104,z=25,distance=..4,tag=!ItemLoot30] run tag @s add ItemLoot30
 
