@@ -1,0 +1,1 @@
+q.player.add_tag('defeated.' + q.npc.Config.trainer_id);
