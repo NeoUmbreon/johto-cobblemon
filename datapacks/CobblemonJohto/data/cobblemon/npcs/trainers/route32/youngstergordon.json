@@ -9,7 +9,7 @@
     "canDespawn": false,
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:youngsteralbert_interaction"
+        "dialogue": "cobblemon:youngstergordon_interaction"
     },
     "name": "Gordon",
     "party": {
