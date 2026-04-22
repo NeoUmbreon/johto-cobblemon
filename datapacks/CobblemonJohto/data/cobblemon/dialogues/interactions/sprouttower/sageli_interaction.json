@@ -7,7 +7,7 @@
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.dialogue.close();"
         ],
-    "names": ["Troy"],
+    "names": ["Li"],
     "speakers": {
         "npc": {
             "name": {
