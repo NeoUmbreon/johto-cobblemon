@@ -46,7 +46,7 @@ KANTO_FOLDERS = {
     "seafoamislands","pokemonmansion","viridianforest"
 }
 
-ENABLE_CHALLENGE_MODE = False
+ENABLE_CHALLENGE_MODE = True
 TEAMS_XLSX_PATH = PROJECT_ROOT / "challengemode_trainers.xlsx"
 
 def load_excel_teams(valid_items, valid_moves):
@@ -221,48 +221,7 @@ def silver_base_entity(folder: str, trainer_id: str):
 
 def export_all_silver_variants(folder: str, base_id: str):
     for i in range(1, 4):
-        variant_id = f"{base_id}{i}"
-        entity_file = NPC_DIR / folder / f"{variant_id}.json"
-
-        if not entity_file.exists():
-            #print(f"Missing variant: {entity_file}")
-            continue
-
-        with open(entity_file, "r", encoding="utf-8") as f:
-            entity_data = json.load(f)
-
-        trainer_name = entity_data.get("name", variant_id)
-
-        party = entity_data.get("party", {})
-        pokemon_list = party.get("pokemon", [])
-
-        team = []
-
-        for entry in pokemon_list:
-            match = re.match(r"(.+?)\s+level=(\d+)", entry, re.IGNORECASE)
-            if not match:
-                continue
-
-            species = match.group(1).strip().lower()
-            level = int(match.group(2))
-
-            team.append({
-                "species": species,
-                "level": level
-            })
-
-        export_data = {
-            "name": trainer_name,
-            "team": team
-        }
-
-        TBCS_TRAINERS_EXPORT_DIR.mkdir(exist_ok=True)
-
-        output_file = TBCS_TRAINERS_EXPORT_DIR / f"{variant_id}.json"
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(export_data, f, indent=2, ensure_ascii=False)
-
-        #print(f"Exported silver trainer: {output_file}")
+        export_trainer_team(f"{base_id}{i}", folder, {})
         
 def get_battle_music(folder: str, trainer_id: str) -> int:
     if trainer_id.startswith("lance") or trainer_id == "red":
@@ -464,7 +423,7 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
             with open(variant_file, "w", encoding="utf-8") as f:
                 json.dump(updated_variant, f, indent=4, ensure_ascii=False)
 
-            print(f"Updated Silver variant: {variant_file}")
+            #print(f"Updated Silver variant: {variant_file}")
 
     # Early exit for gym leaders
     #if is_gym_leader:
@@ -763,7 +722,7 @@ def main():
         validate_trainer_files(excel_df, fs_lookup)
 
         # Validate JSON -> Excel
-        validate_all_json_have_excel_entry(excel_df, fs_lookup)
+        #validate_all_json_have_excel_entry(excel_df, fs_lookup)
         
         excel_teams = load_excel_teams(valid_items, valid_moves)
         print(f"Loaded {len(excel_teams)} Excel trainer entries")
