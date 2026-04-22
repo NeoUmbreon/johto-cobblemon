@@ -146,6 +146,12 @@ title @a[team=battletower] actionbar ["",{"text":"Your Battle Points: "},{"score
 
 #-------------------------------------------------------------------------------------------------------------------------
 #Music-based commands
+#Evolution music
+execute as @a[tag=Evolving,scores={MusicCooldown=-1},tag=!DSSound] run function johto:sound/overwriterecord {track:"gb/misc/evolution",duration:280}
+execute as @a[tag=Evolving,scores={MusicCooldown=-1},tag=DSSound] run function johto:sound/overwriterecord {track:"ds/misc/evolution",duration:280}
+execute as @a[tag=Evolved,tag=!DSSound] run function johto:sound/overwriterecord {track:"gb/sfx_local/caughtmon",duration:71}
+execute as @a[tag=Evolved,tag=DSSound] run function johto:sound/overwriterecord {track:"ds/sfx_local/caughtmon",duration:89}
+tag @a remove Evolved
 
 
 #Music rate: 86 ticks per 60 seconds

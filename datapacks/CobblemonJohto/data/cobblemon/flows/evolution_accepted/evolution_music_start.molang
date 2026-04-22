@@ -1,0 +1,3 @@
+t.owner = q.pokemon.owner;
+t.owner.add_tag('Evolving');
+q.run_command('scoreboard players set ' + t.owner.username + ' MusicCooldown -1');
