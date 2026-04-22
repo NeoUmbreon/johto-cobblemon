@@ -1,0 +1,4 @@
+q.player.has_tag('Evolving') ? {
+    q.player.remove_tag('Evolving');
+    q.run_command('execute as ' + q.player.username + ' run function johto:sound/overwriterecord {track:"",duration:0}');
+};
