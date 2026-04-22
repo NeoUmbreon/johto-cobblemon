@@ -1,4 +1,4 @@
-execute as @s[tag=Skip] run return run tag @s remove Skip
+execute as @s[tag=Overwrite] run return fail
 
 
 stopsound @s record

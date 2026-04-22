@@ -63,3 +63,6 @@ execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..,BattleEnd=0},t
 
 #Removes a MusicCooldown score each refresh if present
 scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
+
+#Removes forceclick prevention tag
+tag @a[tag=Overwrite,scores={MusicCooldown=0}] remove Overwrite
