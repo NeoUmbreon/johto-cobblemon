@@ -1,9 +1,9 @@
-q.player.in_battle ? return 0;
-q.player.has_tag('Whiteout') ? return 0;
-q.npc.has_tag('trainerBusy') ? return q.run_command('tellraw ' + q.player.username + ' {"text":"That trainer is busy!","italic":true,"color":"gray"}');
+c.player.in_battle ? return 0;
+c.player.has_tag('Whiteout') ? return 0;
+c.npc.has_tag('trainerBusy') ? return q.run_command('tellraw ' + c.player.username + ' {"text":"That trainer is busy!","italic":true,"color":"gray"}');
 
-q.player.has_tag('defeated.' + q.npc.Config.trainer_id) ? return q.npc.run_dialogue(q.player, q.npc.Config.trainer_id + '_end_defeated');
+c.player.has_tag('defeated.' + c.npc.Config.trainer_id) ? return c.npc.run_dialogue(c.player, c.npc.Config.trainer_id + '_end_defeated');
 
-q.npc.add_tag('trainerBusy');
-q.player.add_tag('InDialogue');
-q.npc.run_dialogue(q.player, q.npc.Config.trainer_id + '_interaction');
+c.npc.add_tag('trainerBusy');
+c.player.add_tag('InDialogue');
+c.npc.run_dialogue(c.player, c.npc.Config.trainer_id + '_interaction');

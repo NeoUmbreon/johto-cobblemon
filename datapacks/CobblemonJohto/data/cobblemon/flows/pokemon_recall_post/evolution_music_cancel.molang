@@ -1,4 +1,5 @@
-q.player.has_tag('Evolving') ? {
-    q.player.remove_tag('Evolving');
-    q.run_command('execute as ' + q.player.username + ' run function johto:sound/overwriterecord {track:"",duration:0}');
+t.owner = c.pokemon.owner;
+t.owner.has_tag('Evolving') ? {
+    t.owner.remove_tag('Evolving');
+    q.run_command('execute as ' + t.owner.username + ' run function johto:sound/overwriterecord {track:"",duration:0}');
 };
