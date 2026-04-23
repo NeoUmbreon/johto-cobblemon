@@ -1,0 +1,9 @@
+c.player.has_tag('DSSound') ? {
+    t.prefix = 'ds/';
+    t.duration = 79;
+} : {
+    t.prefix = 'gb/';
+    t.duration = 61;
+};
+
+q.run_command('execute as ' + c.player.username + ' run function johto:sound/overwriterecord {track:"' + t.prefix + 'sfx_local/caughtmon",duration:' + t.duration +'}');
