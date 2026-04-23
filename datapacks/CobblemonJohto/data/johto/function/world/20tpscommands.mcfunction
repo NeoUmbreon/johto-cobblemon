@@ -55,11 +55,13 @@ execute as @a[scores={SurfingCD=30,BattleStart=0},tag=!Surfing] run function joh
 tag @a[scores={SurfingCD=30},tag=!Surfing] add Surfing
 
 
+#Battle endings
+execute as @a[scores={BattleEnd=1..},tag=!Overwrite] run function johto:triggers/battles/battleend
+
 #Radio
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0,BattleEnd=0},tag=DSSound] at @s run function johto:sound/dsradioloop
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0,BattleEnd=0},tag=!DSSound] at @s run function johto:sound/gbradiointro
-execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..,BattleEnd=0},tag=!DSSound] at @s run function johto:sound/gbradioloop
-#checking BattleEnd=0 is a stupid solution, the much better one would be to remove all the forceclicks from each battleend dialogue and run the BattleEnd function from there. but i kinda don't care
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0},tag=DSSound] at @s run function johto:sound/dsradioloop
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0},tag=!DSSound] at @s run function johto:sound/gbradiointro
+execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..},tag=!DSSound] at @s run function johto:sound/gbradioloop
 
 #Removes a MusicCooldown score each refresh if present
 scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1

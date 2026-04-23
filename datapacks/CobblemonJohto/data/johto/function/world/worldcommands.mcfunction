@@ -169,7 +169,7 @@ execute as @a[tag=!RadioOff] at @s run function johto:world/switchradiostation
 
 #Runs battle music and post-battle events
 #Battle endings
-execute as @a[scores={BattleEnd=1..},tag=!Overwrite] run function johto:triggers/battles/battleend
+#execute as @a[scores={BattleEnd=1..},tag=!Overwrite] run function johto:triggers/battles/battleend
 
 #Battle start and music
 #execute as @a[scores={BattleStart=1..,MusicCooldown=0},tag=BattleMusicCooldown] run tag @s remove BattleMusicCooldown
