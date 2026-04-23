@@ -1,0 +1,11 @@
+t.owner = c.pokemon.owner;
+c.pokemon.nickname != 'null' ? {
+    t.name = q.split_string(c.pokemon.nickname,'literal{');
+    t.name = q.split_string(t.name.1,'}');
+    t.name = t.name.0
+} : {
+    t.name = c.pokemon.species.name;
+};
+
+q.run_command('tellraw ' + t.owner.username + ' {"text":"' + t.name + ' grew to Lv. ' + c.new_level + '!","italic":true,"color":"gray"}');
+t.owner.add_tag('LvUp');

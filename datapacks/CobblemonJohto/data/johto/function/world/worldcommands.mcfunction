@@ -153,6 +153,10 @@ execute as @a[tag=Evolved,tag=!DSSound] run function johto:sound/overwriterecord
 execute as @a[tag=Evolved,tag=DSSound] run function johto:sound/overwriterecord {track:"ds/sfx_local/caughtmon",duration:89}
 tag @a remove Evolved
 
+#Level Up SFX
+execute as @a[tag=LvUp] run function johto:sound/playlocalsfx {sfx:"levelup"}
+tag @a remove LvUp
+
 
 #Music rate: 86 ticks per 60 seconds
 
