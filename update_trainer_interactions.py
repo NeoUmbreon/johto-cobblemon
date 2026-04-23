@@ -360,7 +360,10 @@ def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid, auto_
         })
 
 def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_uid: int, excel_teams):
-    auto_battle = not ("gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower() or "fuchsiagym" in folder.lower())
+    # Auto-battle exclusions
+    exclude_folder = ["gym_leaders","gym_leader_rematches","fuchsiagym"]
+    exclude_trainer = ["sageli","rocketproton1"]
+    auto_battle = not (folder.lower() in exclude_folder or trainer_id in exclude_trainer)
 
     # Collapse to base file if Silver
     if is_silver(trainer_id):
