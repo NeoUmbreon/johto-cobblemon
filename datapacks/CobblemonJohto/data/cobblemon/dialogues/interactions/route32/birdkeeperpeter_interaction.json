@@ -22,7 +22,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "That Badge! It's from Violet City! You beat Falkner?"
+                "You beat that old coot? He can't compare to Falkner!"
             ],
             "input": {
                 "type": "option",

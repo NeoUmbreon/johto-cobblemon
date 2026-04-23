@@ -16,6 +16,10 @@ execute at @a[x=-177,y=63,z=-311,dx=24,dy=5,dz=6,tag=!Dialogue5] run tp @a[x=-17
 tellraw @a[x=-177,y=63,z=-311,dx=24,dy=5,dz=6,tag=Dialogue5,tag=!Dialogue8] ["",{"text":"You haven't reported your findings to Prof. Elm!","color":"white","italic":true}]
 execute at @a[x=-177,y=63,z=-311,dx=24,dy=5,dz=6,tag=Dialogue5,tag=!Dialogue8] run tp @a[x=-177,y=63,z=-311,dx=24,dy=5,dz=6,tag=Dialogue5,tag=!Dialogue8] ~ ~ ~-10
 
+#Route 32
+tellraw @a[x=83,y=63,z=-222,dx=11,dy=10,dz=5,tag=!SageLi] ["",{"text":"Have you trained with your Pokémon?","color":"white","italic":true}]
+execute at @a[x=83,y=63,z=-222,dx=11,dy=10,dz=5,tag=!SageLi] run tp @a[x=83,y=63,z=-222,dx=11,dy=10,dz=5,tag=!SageLi] ~ ~ ~10
+
 #Azalea Town Slowpoke Well before visiting Kurt
 tellraw @a[x=243,y=54,z=-715,dx=2,dy=5,dz=2,tag=!Dialogue14] ["",{"text":"<Team Rocket Grunt> Get out of here, kid! ","color":"white"}]
 execute at @a[x=243,y=54,z=-715,dx=2,dy=5,dz=2,tag=!Dialogue14] run tp @a[x=243,y=54,z=-715,dx=2,dy=5,dz=2,tag=!Dialogue14] ~3 ~ ~
