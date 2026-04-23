@@ -1,9 +1,8 @@
 c.battle.is_pvw == false ? return 0;
 
 for_each(t.player, c.players, {
-    v.player = t.player.player;
-    q.set_query('player', t.player.player);
+    t.player = t.player.player;
+    c.was_wild_capture ? { t.music = 4; } : { t.music = 5; };
 
-    q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 4');
-    q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');
+    q.run_command('scoreboard players set ' + t.player.username + ' BattleEnd ' + t.music);
 });

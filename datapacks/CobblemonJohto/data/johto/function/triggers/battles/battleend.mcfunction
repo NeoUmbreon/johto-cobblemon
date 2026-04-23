@@ -21,9 +21,14 @@ execute as @s[tag=!RadioOff,scores={BattleEnd=2..3},tag=!DSSound] run function j
 execute as @s[tag=!RadioOff,scores={BattleEnd=2..3},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/gymleader",duration:763}
 
 
-#4 - Wild Pokemon Victory
+#4 - Wild Pokemon Capture
 execute as @s[tag=!RadioOff,scores={BattleEnd=4},tag=!DSSound] run function johto:sound/playrecord {track:"gb/victory/wildpokemon",duration:287}
 execute as @s[tag=!RadioOff,scores={BattleEnd=4},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/wildpokemon",duration:286}
+
+
+#5 - Wild Pokemon Victory
+execute as @s[tag=!RadioOff,scores={BattleEnd=5},tag=!DSSound] run function johto:sound/playrecord {track:"gb/victory/wildpokemonshort",duration:31}
+execute as @s[tag=!RadioOff,scores={BattleEnd=5},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/wildpokemonshort",duration:32}
 
 
 #Gives player AllGyms tag and achievement
