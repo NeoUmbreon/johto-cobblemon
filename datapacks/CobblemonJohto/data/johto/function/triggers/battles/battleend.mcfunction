@@ -8,7 +8,7 @@ execute as @s[tag=!RadioOff] run function johto:tools/forceclick
 execute as @s[scores={BattleEnd=1..3}] unless entity @s[x=858,y=75,z=-15,dx=102,dy=100,dz=143] run tellraw @s ["",{"text":"You now have $","italic":true,"color":"gray"},{"score":{"name":"*","objective":"Money"},"italic":true,"color":"gray"}]
 
 #Lets players know their battle streaks if they're in the tower
-execute as @a[scores={BattleEnd=1..3}] if entity @s[x=858,y=75,z=-15,dx=102,dy=100,dz=143] run tellraw @s ["",{"text":"Your battle streak increased to ","italic":true,"color":"gray"},{"score":{"name":"*","objective":"BattleStreak"},"italic":true,"color":"gray"},{"text":"!","italic":true,"color":"gray"}]
+execute as @s[scores={BattleEnd=1..3}] if entity @s[x=858,y=75,z=-15,dx=102,dy=100,dz=143] run tellraw @s ["",{"text":"Your battle streak increased to ","italic":true,"color":"gray"},{"score":{"name":"*","objective":"BattleStreak"},"italic":true,"color":"gray"},{"text":"!","italic":true,"color":"gray"}]
 
 
 #1 - Generic battle ending, majority of trainers especially without a story beat.
@@ -36,7 +36,7 @@ execute as @s[tag=!RadioOff,scores={BattleEnd=5},tag=DSSound] run function johto
 tag @s[tag=Clair,tag=Pryce,tag=Jasmine,tag=Chuck,tag=Morty,tag=Whitney,tag=Bugsy,tag=Falkner,tag=Brock,tag=Misty,tag=Surge,tag=Erika,tag=Janine,tag=Sabrina,tag=Blaine,tag=Blue,tag=!AllGyms] add AllGyms
 
 #AllGyms Advancement
-advancement grant @a[tag=AllGyms] only johto:badges/allbadges
+advancement grant @s[tag=AllGyms] only johto:badges/allbadges
 
 
 scoreboard players set @s BattleEnd 0
