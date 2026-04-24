@@ -1,0 +1,12 @@
+c.battle.is_pvp == false ? return 0;
+
+for_each(t.player, c.player_winners, {
+    t.player = t.player.player;
+    q.run_command('scoreboard players set ' + t.player.username + ' BattleEnd 6');
+});
+
+for_each(t.player, c.player_losers, {
+    t.player = t.player.player;
+    q.run_command('scoreboard players set ' + t.player.username + ' BattleStart 0');
+    q.run_command('execute as ' + t.player.username + ' run function johto:tools/forceclick');
+});

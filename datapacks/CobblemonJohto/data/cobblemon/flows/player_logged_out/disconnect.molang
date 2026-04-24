@@ -1,0 +1,8 @@
+c.player.in_battle ? {
+    c.player.battle.is_pvp ? {
+        for_each(t.actor, c.player.battle.actors, {
+            q.run_command('scoreboard players set ' + t.actor.player.username + ' BattleStart 0');
+            q.run_command('execute as ' + t.actor.player.username + ' run function johto:tools/forceclick');
+        });
+    };
+};
