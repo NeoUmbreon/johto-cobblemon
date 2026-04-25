@@ -7,5 +7,4 @@ c.pokemon.nickname != 'null' ? {
     t.name = c.pokemon.species.name;
 };
 
-q.run_command('tellraw ' + t.owner.username + ' {"text":"' + t.name + ' grew to Lv. ' + c.new_level + '!","italic":true,"color":"gray"}');
 t.owner.add_tag('LvUp');
