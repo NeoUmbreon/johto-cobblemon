@@ -1,0 +1,10 @@
+loop(1, {
+    q.is_blank(q.entity.data.battle) ? break;
+
+    t.player = q.entity.world.server.get_player_by_username(q.entity.data.battle.player);
+    t.player.data.battle.trainer == q.entity.Config.trainer_id ? { t.match = true; };
+});
+t.match ? return 0;
+
+q.entity.remove_tag('trainerBusy');
+q.delete_variable(q.entity.data, 'battle');

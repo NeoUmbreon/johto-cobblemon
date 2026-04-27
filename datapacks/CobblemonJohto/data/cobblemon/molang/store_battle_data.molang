@@ -1,0 +1,12 @@
+t.player = c.arg_1;
+t.npc = c.arg_2;
+
+t.player.data.battle.trainer = t.npc.Config.trainer_id;
+t.player.data.battle.whiteout_on_disconnect = !t.npc.Config.trainer;
+t.player.data.battle.x = t.npc.x;
+t.player.data.battle.y = t.npc.y;
+t.player.data.battle.z = t.npc.z;
+t.player.data.battle.max_battle_distance = (q.is_blank(t.npc.Config.challenge_distance) ? t.player.world.server.data.max_challenge_distance : t.npc.Config.challenge_distance);
+t.player.data.battle.max_battle_distance = t.player.data.battle.max_battle_distance + 0.5;
+
+t.npc.data.battle.player = t.player.username;

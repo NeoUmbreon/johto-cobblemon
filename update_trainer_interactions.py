@@ -275,9 +275,8 @@ def build_battle_action(trainer_id: str, battle_id: int):
         (
             "q.run_command("
             f"'execute as ' + q.player.username + '"
-            f" at ' + q.npc.uuid + '"
             f" run function johto:trainers/start_battle"
-            f" with entity ' + q.npc.uuid + ' Config'"
+            f" {{trainer_id:\"{trainer_id}\",battle_id:{battle_id},trainer_uuid:\"' + q.npc.uuid + '\"}}'"
             ");"
         ),
         "q.dialogue.close();",

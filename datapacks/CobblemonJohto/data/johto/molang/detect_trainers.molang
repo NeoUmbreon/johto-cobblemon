@@ -1,8 +1,18 @@
-q.npc.has_tag('trainerBusy') ? return 0;
-q.player.has_tag('InDialogue') ? return 0;
-q.player.has_tag('defeated.' + q.npc.Config.trainer_id) ? return 0;
-q.npc.can_see(q.player, q.npc.Config.challenge_distance ?? 6) == false ? return 0;
+t.distance = q.player.world.server.data.max_challenge_distance;
+t.entities = q.player.get_nearby_entities(t.distance * 2);
 
-q.npc.add_tag('trainerBusy');
-q.player.add_tag('InDialogue');
-q.npc.run_dialogue(q.player, q.npc.Config.trainer_id + '_interaction');
+for_each(t.entity, t.entities, {
+    t.entity.Config.trainer == true ? {
+        t.entity.has_tag('trainerBusy') ? continue;
+        q.player.has_tag('defeated.' + t.entity.Config.trainer_id) ? continue;
+        !t.entity.can_see(q.player, ( q.is_blank(t.entity.Config.challenge_distance) ? t.distance : t.entity.Config.challenge_distance ) ) ? continue;
+
+        q.run_script('store_battle_data', q.player, t.entity);
+        t.entity.add_tag('trainerBusy');
+        q.player.add_tag('InDialogue');
+        t.entity.run_dialogue(q.player, t.entity.Config.trainer_id + '_interaction');
+        return 1;
+    };
+});
+
+return 0;

@@ -1,0 +1,3 @@
+for_each(t.player, c.players, {
+    q.delete_variable(t.player.player.data, 'battle');
+});

@@ -1,8 +1,20 @@
+!q.is_blank(c.player.data.battle) ? {
+    c.player.data.battle.whiteout_on_disconnect ? c.player.add_tag('Whiteout');
+    q.delete_variable(c.player.data, 'battle');
+    c.player.save_data;
+};
+
 c.player.in_battle ? {
-    c.player.battle.is_pvp ? {
-        for_each(t.actor, c.player.battle.actors, {
-            q.run_command('scoreboard players set ' + t.actor.player.username + ' BattleStart 0');
-            q.run_command('execute as ' + t.actor.player.username + ' run function johto:tools/forceclick');
-        });
-    };
+    t.players = q.array();
+    t.npcs = q.array();
+
+    for_each(t.actor, c.player.battle.actors, {
+        t.actor.is_player ? { q.append(t.players, t.actor.player); };
+        t.actor.is_npc ? { q.append(t.npcs, t.actor.npc); };
+    });
+
+    for_each(t.player, t.players, {
+        q.run_command('scoreboard players set ' + t.player.username + ' BattleStart 0');
+        q.run_command('execute as ' + t.player.username + ' run function johto:tools/forceclick');
+    });
 };

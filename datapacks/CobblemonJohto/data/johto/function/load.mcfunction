@@ -45,3 +45,6 @@ scoreboard objectives add SlotRNG9 dummy
 scoreboard objectives add SlotRNG10 dummy
 scoreboard objectives add SlotRNG11 dummy
 scoreboard objectives add SlotRNG12 dummy
+
+#Set max challenge distance
+execute as @e[x=-792,y=65,z=-284,dy=3] run runmolang "q.set_query('x',q.entity.world.server);q.is_blank(q.x.data.max_challenge_distance) ? {q.x.data.max_challenge_distance=6;q.x.save_data;};"

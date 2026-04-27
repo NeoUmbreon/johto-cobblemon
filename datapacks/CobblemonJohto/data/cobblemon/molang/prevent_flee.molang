@@ -1,0 +1,8 @@
+q.is_blank(q.player.data.battle) ? return 0;
+
+t.battle = q.player.data.battle;
+
+q.player.distance_to_pos(t.battle.x, t.battle.y, t.battle.z) > t.battle.max_battle_distance ? {
+	q.player.teleport(t.battle.x, t.battle.y, t.battle.z);
+	q.run_command('tellraw ' + q.player.username + ' {"text":"No! There\'s no running from a Trainer battle!","italic":true,"color":"gray"}');
+};
