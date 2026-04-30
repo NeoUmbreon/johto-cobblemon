@@ -12,6 +12,9 @@ execute as @e[type=cobblemon:npc,nbt={PersistenceRequired:0b}] run data merge en
 #Runs custom clickable loots
 execute as @a[tag=ItemLoot] run function johto:triggers/itemlootgive
 
+#Particles displaying above uncollected loot
+execute as @a run function johto:world/itemlootparticles {maxDistance:64,command:"particle dust{color:[1,1,1],scale:0.85} ~ ~0.65 ~ 0 0.05 0 1 0 force @s"}
+
 #Runs TriggerCommand Function
 execute as @a[scores={TriggerCommand=1..}] run function johto:triggers/triggercommands
 
