@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'README.md'
-      - '.gitignore'
+    paths:
+      - 'create-build-artifact.yaml'
+      - 'update_trainer_interactions.py'
+      - 'datapacks/**'
 
 
 jobs:
