@@ -1,21 +1,25 @@
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@v6.0.2
-        - uses: actions/setup-python@v6.2.0
-          with:
-            python-version: '3.x'
-            pip-install: pandas
-        - run: python update_trainer_interactions.py
-        - uses: actions/upload-artifact@v7.0.1
-          with:
-            name: johto-cobblemon
-            path: |
-              ./datapacks/CobblemonJohto/
-              ./trainers/
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6.0.2
+    - uses: actions/setup-python@v6.2.0
+      with:
+        python-version: '3.x'
+        pip-install: pandas
+    - run: python update_trainer_interactions.py
+    - uses: actions/upload-artifact@v7.0.1
+      with:
+        name: johto-cobblemon
+        path: |
+          ./datapacks/CobblemonJohto/
+          ./trainers/
