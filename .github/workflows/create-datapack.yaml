@@ -17,5 +17,5 @@ jobs:
           with:
             name: johto-cobblemon
             path: |
-              .\datapacks\CobblemonJohto\
-              .\trainers\
+              ./datapacks/CobblemonJohto/
+              ./trainers/
