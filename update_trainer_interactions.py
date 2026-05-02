@@ -46,8 +46,10 @@ KANTO_FOLDERS = {
     "seafoamislands","pokemonmansion","viridianforest"
 }
 
-ENABLE_CHALLENGE_MODE = True
+ENABLE_CHALLENGE_MODE = False
 TEAMS_XLSX_PATH = PROJECT_ROOT / "challengemode_trainers.xlsx"
+if TEAMS_XLSX_PATH.exists():
+    ENABLE_CHALLENGE_MODE = True
 
 def load_excel_teams(valid_items, valid_moves):
     if not ENABLE_CHALLENGE_MODE:
