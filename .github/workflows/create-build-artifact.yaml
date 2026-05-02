@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'create-build-artifact.yaml'
+      - '.github/workflows/create-build-artifact.yaml'
       - 'update_trainer_interactions.py'
       - 'datapacks/**'
 
