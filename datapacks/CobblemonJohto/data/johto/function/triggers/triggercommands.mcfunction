@@ -67,7 +67,7 @@ execute as @a[scores={TriggerCommand=22}] run scoreboard players set @s TriggerC
 execute as @a[scores={TriggerCommand=23}] run tag @s remove Dialogue201
 execute as @a[scores={TriggerCommand=23}] run tag @s remove Dialogue202
 execute as @a[scores={TriggerCommand=23}] run scoreboard players remove @s Money 500
-execute as @a[scores={TriggerCommand=23}] run scoreboard players set @s[x=1590,y=74,z=-129,dx=10,dy=5,dz=10] DialogueTrigger 201
+execute as @a[scores={TriggerCommand=23}] run function johto:triggers/safarizone/start
 execute as @a[scores={TriggerCommand=23}] run scoreboard players set @s TriggerCommand 0
 
 
@@ -85,7 +85,7 @@ execute as @a[scores={TriggerCommand=77}] run scoreboard players set @s TriggerC
 #If Safari isn't active
 execute as @a[scores={TriggerCommand=24..25}] run tag @s remove Dialogue202
 execute as @a[scores={TriggerCommand=24..25}] run tag @s remove Dialogue201
-execute as @a[scores={TriggerCommand=24..25}] run scoreboard players set @s DialogueTrigger 202
+execute as @a[scores={TriggerCommand=24..25}] run function johto:triggers/safarizone/end
 scoreboard players set @a[scores={TriggerCommand=24..25}] TriggerCommand 0
 
 
