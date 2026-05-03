@@ -10,7 +10,7 @@ execute as @e[x=-792,y=65,z=-284,dy=3] run tag @s add WhiteoutInitialized
 #Clair interaction boxes
 forceload add -856 720
 execute positioned -856 65 720 unless entity @e[type=interaction,distance=..5] run function johto:spawn/npcboxes
-forceload remove -856 720
+execute positioned -856 65 720 if entity @e[type=interaction,distance=..5] run forceload remove -856 720
 
 #Music scoreboard objectives
 scoreboard objectives add RadioSelectTemp dummy
@@ -48,3 +48,6 @@ scoreboard objectives add SlotRNG12 dummy
 
 #Set max challenge distance
 execute as @e[x=-792,y=65,z=-284,dy=3] run runmolang "q.set_query('x',q.entity.world.server);q.is_blank(q.x.data.max_challenge_distance) ? {q.x.data.max_challenge_distance=6;q.x.save_data;};"
+
+#Prevent rerunning this
+scoreboard players set #firstrun click 1
