@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import re
 import pandas as pd
+import os
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 
@@ -46,10 +47,13 @@ KANTO_FOLDERS = {
     "seafoamislands","pokemonmansion","viridianforest"
 }
 
-ENABLE_CHALLENGE_MODE = False
 TEAMS_XLSX_PATH = PROJECT_ROOT / "challengemode_trainers.xlsx"
-if TEAMS_XLSX_PATH.exists():
+env_flag = os.getenv("ENABLE_CHALLENGE_MODE", "").lower()
+
+if env_flag in ("true", "1", "yes"):
     ENABLE_CHALLENGE_MODE = True
+else:
+    ENABLE_CHALLENGE_MODE = False
 
 def load_excel_teams(valid_items, valid_moves):
     if not ENABLE_CHALLENGE_MODE:

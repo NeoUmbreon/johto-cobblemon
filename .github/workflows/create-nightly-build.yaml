@@ -1,0 +1,67 @@
+name: Nightly build
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/create-nightly-build.yaml'
+      - 'process_files.py'
+      - 'datapacks/**'
+
+permissions:
+  contents: write
+
+env:
+  NIGHTLY_TAG: "nightly"
+  NIGHTLY_NAME: "nightly"
+  NIGHTLY_BODY: "This is an automatic nightly release. It may have changes that are not fully tested."
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: pip install pandas
+
+    - name: Process files (normal mode)
+      run: python process_files.py
+      env:
+        ENABLE_CHALLENGE_MODE: false
+
+    - name: Create normal zip
+      run: |
+        zip -r johto-cobblemon.zip ./datapacks ./trainers
+
+    - name: Process files (challenge mode)
+      run: python process_files.py
+      env:
+        ENABLE_CHALLENGE_MODE: true
+
+    - name: Create challenge zip
+      run: |
+        zip -r johto-cobblemon-challenge.zip ./datapacks ./trainers
+    
+    - name: Update nightly tag
+      run: |
+        git tag $NIGHTLY_TAG -f
+        git push origin $NIGHTLY_TAG -f
+
+    - name: Create release if it doesn't exist
+      run: |
+        gh release view $NIGHTLY_TAG || gh release create $NIGHTLY_TAG --title "$NIGHTLY_NAME" --notes "$NIGHTLY_BODY"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload release assets
+      run: |
+        gh release upload $NIGHTLY_TAG johto-cobblemon.zip johto-cobblemon-challenge.zip --clobber
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
