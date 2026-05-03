@@ -11,7 +11,7 @@ execute as @s[scores={RadioSelect=8},tag=!EXPNCard] run return fail
 
 # Radio Card
 # Slot 5 - Unown Station, Ruins of Alph only
-execute if score @s RadioSelect matches 5 if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":83}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":203}}]} run return run function johto:sound/playrecord {track:"gb/radio/unown", duration:779}
+execute if score @s RadioSelect matches 5 if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":83}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":203}}]} run return run function johto:sound/playrecord {track:"gb/radio/unown", duration:779}
 
 # Slots 3, 4, 6, 7 - Team Rocket Takeover, Between Dialogue64-Dialogue72
 execute if score @s RadioSelect matches 3..7 if entity @s[tag=Dialogue64,tag=!Dialogue72] run return run function johto:sound/playrecord {track:"gb/areas/radiotoweroccupied", duration:804}

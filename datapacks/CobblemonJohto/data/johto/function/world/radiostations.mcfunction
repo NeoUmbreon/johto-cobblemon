@@ -11,7 +11,7 @@ execute as @s[scores={RadioSelect=8},tag=!EXPNCard] run return run title @s acti
 
 # Radio Card
 # Slot 5 - Unown Station, Ruins of Alph only
-execute as @s[scores={RadioSelect=5}] if predicate {condition:"minecraft:any_of",terms:[{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":83}},{condition:"minecraft:entity_scores",entity:"this",scores:{"MusicTitles":203}}]} run return run title @s actionbar ["",{"text":"Radio: "},{"text":"Unown Station","obfuscated":true}]
+execute as @s[scores={RadioSelect=5}] if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":83}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":203}}]} run return run title @s actionbar ["",{"text":"Radio: "},{"text":"Unown Station","obfuscated":true}]
 execute as @s[scores={RadioSelect=5}] run return run title @s actionbar {"text":"Station 5: Weak signal. Get closer to the Ruins of Alph."}
 
 # Slots 3, 4, 6, 7 - Team Rocket Takeover, Between Dialogue64-Dialogue72
