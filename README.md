@@ -19,9 +19,9 @@ The project is a work in progress, so some features may be broken or missing.
 
 
 ### Datapack
-The datapack can be downloaded from the [Actions](../../actions) page.
-1. Navigate to the latest workflow run and download the `johto-cobblemon` file from the Artifacts section.
-2. Copy and paste everything from `johto-cobblemon.zip` into your world folder, overwriting if prompted.
+The datapack can be downloaded from the [Releases](../../releases) page.
+1. Download either `johto-cobblemon.zip` or `johto-cobblemon-challenge.zip` from the Releases section.
+2. Copy and paste everything from your chosen zip file into your world folder, overwriting if prompted.
 
 ## Features
 ### Audio
