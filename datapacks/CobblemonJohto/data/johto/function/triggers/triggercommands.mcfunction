@@ -51,41 +51,49 @@ execute as @a[scores={TriggerCommand=11}] as @e[x=-145,y=45,z=185,dx=4,dy=5,dz=2
 
 
 #22 - Safari Zone Begin Session
-#If Safari Zone is currently active:
-execute as @a[scores={TriggerCommand=22}] run execute as @e[x=-792,y=65,z=-284,dy=3,type=armor_stand,tag=SafariActive] run tellraw @a[scores={TriggerCommand=22}] {"text":"<Safari Clerk> Sorry, our Safari Zone is currently active. Please try again later!"}
-execute as @a[scores={TriggerCommand=22}] run execute as @e[x=-792,y=65,z=-284,dy=3,type=armor_stand,tag=SafariActive] run scoreboard players set @a[scores={TriggerCommand=22}] TriggerCommand 0
+#If triggered by ownership transfer, mark Safari Zone as inactive to reset biomes
+execute as @s[scores={TriggerCommand=22},tag=SafariStarter] run tag @e[x=-792,y=65,z=-284,dy=3,type=armor_stand] remove SafariActive
 
-execute as @a[scores={TriggerCommand=22}] run tp @s 1595 75 -125 -180 -5
-execute as @a[scores={TriggerCommand=22}] run tellraw @s ["",{"text":"Before you start, you must pick which biomes you want in your Safari Zone!"}]
-execute as @a[scores={TriggerCommand=22}] run tag @e[x=-792,y=65,z=-284,dy=3,type=armor_stand] add SafariActive
-execute as @a[scores={TriggerCommand=22}] run clone 1595 81 -121 1595 81 -121 1595 75 -122
-execute as @a[scores={TriggerCommand=22}] run scoreboard players set @s Cooldown 0
-execute as @a[scores={TriggerCommand=22}] run scoreboard players set @s TriggerCommand 0
+#No money :(
+execute as @s[scores={TriggerCommand=22},tag=!SafariState] unless score @s Money matches 500.. run tellraw @s {"text":"<Safari Clerk> I am sorry. You don't have enough money. I hope you will drop by again."}
+execute as @s[scores={TriggerCommand=22},tag=!SafariState] unless score @s Money matches 500.. run scoreboard players set @s TriggerCommand 0
+
+#If Safari Zone is currently active, join ongoing session
+execute as @s[scores={TriggerCommand=22}] if entity @e[x=-792,y=65,z=-284,dy=3,type=armor_stand,tag=SafariActive] run function johto:triggers/safarizone/join
+execute as @s[scores={TriggerCommand=22}] if entity @e[x=-792,y=65,z=-284,dy=3,type=armor_stand,tag=SafariActive] run scoreboard players set @s TriggerCommand 0
+
+#Else: tp to waiting room
+execute as @s[scores={TriggerCommand=22}] unless entity @a[x=1590,y=74,z=-129,dx=10,dy=5,dz=10] unless entity @a[tag=SafariStarter] run tag @s add SafariStarter
+execute as @s[scores={TriggerCommand=22}] run tp @s 1595 75 -125 -180 -5
+execute as @s[scores={TriggerCommand=22}] run tellraw @s {"text":"Before you start, you must pick which biomes you want in your Safari Zone!"}
+execute as @s[scores={TriggerCommand=22},tag=SafariStarter] run scoreboard players set @a[tag=SafariState] TriggerCommand 22
+execute as @s[scores={TriggerCommand=22},tag=SafariStarter] run clone 1595 81 -121 1595 81 -121 1595 75 -122
+execute as @s[scores={TriggerCommand=22}] run scoreboard players set @s Cooldown 0
+execute as @s[scores={TriggerCommand=22}] run scoreboard players set @s TriggerCommand 0
 
 
 #23 - Safari Zone Confirm Maps
-execute as @a[scores={TriggerCommand=23}] run tag @s remove Dialogue201
-execute as @a[scores={TriggerCommand=23}] run tag @s remove Dialogue202
-execute as @a[scores={TriggerCommand=23}] run scoreboard players remove @s Money 500
-execute as @a[scores={TriggerCommand=23}] run function johto:triggers/safarizone/start
-execute as @a[scores={TriggerCommand=23}] run scoreboard players set @s TriggerCommand 0
+execute as @s[scores={TriggerCommand=23},tag=SafariStarter] run function johto:triggers/safarizone/generate
+execute as @s[scores={TriggerCommand=23},tag=SafariStarter] run setblock 1595 81 -129 minecraft:redstone_block
+execute as @s[scores={TriggerCommand=23},tag=SafariStarter] run scoreboard players set @e[x=-879,y=64,z=-180,dy=5,dz=10,type=armor_stand] BiomeID 0
+execute as @s[scores={TriggerCommand=23},tag=SafariStarter] run tag @e[x=-792,y=65,z=-284,dy=3,type=armor_stand] add SafariActive
+execute as @s[scores={TriggerCommand=23}] as @a[x=1590,y=74,z=-129,dx=10,dy=5,dz=10] run function johto:triggers/safarizone/join
+execute as @s[scores={TriggerCommand=23}] run scoreboard players set @s TriggerCommand 0
 
 
 #77 - Map Room Cancel
-execute as @a[scores={TriggerCommand=77}] run tag @e[x=-792,y=65,z=-284,dy=3,type=armor_stand] remove SafariActive
-execute as @a[scores={TriggerCommand=77}] run tp @s 1591 88 -103 180 4
-execute as @a[scores={TriggerCommand=77}] run tellraw @s {"text":"<Safari Clerk> Thank you for visiting! Come again soon!"}
-execute as @a[scores={TriggerCommand=77}] run setblock 1595 81 -129 minecraft:redstone_block
-execute as @a[scores={TriggerCommand=77}] run scoreboard players set @e[x=-879,y=64,z=-180,dy=5,dz=10,type=armor_stand] BiomeID 0
-execute as @a[scores={TriggerCommand=77}] run scoreboard players set @s Cooldown 0
-execute as @a[scores={TriggerCommand=77}] run scoreboard players set @s TriggerCommand 0
+execute as @s[scores={TriggerCommand=77}] run tag @s remove SafariStarter
+execute as @s[scores={TriggerCommand=77}] run tag @s remove SafariState
+execute as @s[scores={TriggerCommand=77}] run tp @s 1591 88 -103 180 4
+execute as @s[scores={TriggerCommand=77}] run tellraw @s {"text":"<Safari Clerk> Thank you for visiting! Come again soon!"}
+execute as @s[scores={TriggerCommand=77}] run setblock 1595 81 -129 minecraft:redstone_block
+execute as @s[scores={TriggerCommand=77}] run scoreboard players set @e[x=-879,y=64,z=-180,dy=5,dz=10,type=armor_stand] BiomeID 0
+execute as @s[scores={TriggerCommand=77}] run scoreboard players set @s Cooldown 0
+execute as @s[scores={TriggerCommand=77}] run scoreboard players set @s TriggerCommand 0
 
 
 #24 - Safari Zone quit button & Fly Prompt
-#If Safari isn't active
-execute as @a[scores={TriggerCommand=24..25}] run tag @s remove Dialogue202
-execute as @a[scores={TriggerCommand=24..25}] run tag @s remove Dialogue201
-execute as @a[scores={TriggerCommand=24..25}] run function johto:triggers/safarizone/end
+execute as @a[scores={TriggerCommand=24..25}] run function johto:triggers/safarizone/leave
 scoreboard players set @a[scores={TriggerCommand=24..25}] TriggerCommand 0
 
 

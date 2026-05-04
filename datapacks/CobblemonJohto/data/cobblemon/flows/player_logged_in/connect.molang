@@ -1,1 +1,5 @@
+c.player.has_tag('SafariState') ? {
+    q.run_command('execute as ' + c.player.username + ' run function johto:triggers/safarizone/leave');
+};
+
 q.run_command('execute as ' + c.player.username + ' if score @s BattleCD matches 0..2 run scoreboard players set @s BattleCD 3');

@@ -345,7 +345,7 @@ execute positioned 495 66 -381 if block ~ ~ ~ stone_button[powered=true] as @p[x
 execute if entity @e[x=-867,y=69,z=-214,dy=3,dz=4,tag=!UnownSpawning,limit=1] if entity @a[x=174,y=36,z=-163,dx=42,dy=22,dz=85] run function johto:world/ruinspuzzle
 
 #Safari Zone Mapping Function
-execute as @a[x=1590,y=74,z=-129,dx=10,dy=5,dz=10] run function johto:world/safariselect
+execute if entity @a[x=1590,y=74,z=-129,dx=10,dy=5,dz=10] run function johto:world/safariselect
 
 #Runs Pre-Victory Road badge lights
 execute as @a[x=-1262,y=63,z=57,dx=7,dy=5,dz=73] run function johto:world/badgegate

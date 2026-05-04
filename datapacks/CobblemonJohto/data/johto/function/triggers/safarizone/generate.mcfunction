@@ -2,60 +2,6 @@
 forceload add 1406 -90 1591 101
 forceload add 1592 -90 1777 101
 
-#Fill base
-#TODO: this is a bit too brute-force
-fill 1406 79 -90 1591 82 101 stone
-fill 1592 79 -90 1777 82 101 stone
-
-#Clones as in spawners from reference spawn
-#^ i have no fucking clue what this means. is this a pixelmon thing? ^
-clone -870 65 -157 -870 65 -157 -716 0 -268
-clone -870 65 -157 -870 65 -157 -716 0 -310
-clone -875 65 -157 -875 65 -157 -779 12 -310
-clone -875 65 -157 -875 65 -157 -779 12 -268
-clone -869 65 -157 -869 65 -157 -716 31 -268
-clone -869 65 -157 -869 65 -157 -716 31 -310
-clone -871 65 -157 -871 65 -157 -779 46 -268
-clone -871 65 -157 -871 65 -157 -779 46 -310
-clone -873 65 -157 -873 65 -157 -716 0 -172
-clone -873 65 -157 -873 65 -157 -779 0 -172
-clone -872 65 -157 -872 65 -157 -716 17 -214
-clone -872 65 -157 -872 65 -157 -779 17 -214
-clone -876 65 -157 -876 65 -157 -716 39 -172
-clone -877 65 -157 -877 65 -157 -779 58 -214
-clone -877 65 -157 -877 65 -157 -779 58 -172
-clone -874 65 -157 -874 65 -157 -716 72 -172
-clone -874 65 -157 -874 65 -157 -716 72 -214
-clone -880 65 -157 -880 65 -157 -716 90 -172
-clone -880 65 -157 -880 65 -157 -779 90 -172
-clone -879 65 -157 -879 65 -157 -850 14 -310
-clone -879 65 -157 -879 65 -157 -850 14 -268
-clone -878 65 -157 -878 65 -157 -850 14 -214
-clone -878 65 -157 -878 65 -157 -850 14 -172
-clone -870 65 -157 -870 65 -157 -779 0 -310
-clone -870 65 -157 -870 65 -157 -779 0 -268
-clone -875 65 -157 -875 65 -157 -716 12 -310
-clone -875 65 -157 -875 65 -157 -716 12 -268
-clone -869 65 -157 -869 65 -157 -779 31 -310
-clone -869 65 -157 -869 65 -157 -779 31 -268
-clone -871 65 -157 -871 65 -157 -716 46 -310
-clone -871 65 -157 -871 65 -157 -716 46 -268
-clone -873 65 -157 -873 65 -157 -779 0 -214
-clone -873 65 -157 -873 65 -157 -716 0 -214
-clone -872 65 -157 -872 65 -157 -779 17 -172
-clone -872 65 -157 -872 65 -157 -716 17 -172
-clone -876 65 -157 -876 65 -157 -779 39 -214
-clone -876 65 -157 -876 65 -157 -779 39 -172
-clone -877 65 -157 -877 65 -157 -716 58 -214
-clone -877 65 -157 -877 65 -157 -716 58 -172
-clone -874 65 -157 -874 65 -157 -779 72 -172
-clone -874 65 -157 -874 65 -157 -779 72 -214
-clone -880 65 -157 -880 65 -157 -716 90 -214
-clone -880 65 -157 -880 65 -157 -779 90 -214
-clone -879 65 -157 -879 65 -157 -841 1 -268
-clone -879 65 -157 -879 65 -157 -841 1 -310
-clone -878 65 -157 -878 65 -157 -841 1 -214
-clone -878 65 -157 -878 65 -157 -841 1 -172
 
 
 #Generates biomes
@@ -288,17 +234,35 @@ execute if entity @e[x=-879,y=64,z=-180,dy=3,type=armor_stand,scores={BiomeID=11
 execute if entity @e[x=-879,y=64,z=-180,dy=3,type=armor_stand,scores={BiomeID=12}] run function johto:triggers/safarizone/biomes/wasteland {destination:"1406 79 -90"}
 
 #---------------------------
+#Clear old items and pokemon
+#Zone 1 Clear
+kill @e[x=1654,y=78,z=6,dx=124,dy=10,dz=96,type=item]
+tp @e[x=1654,y=78,z=6,dx=124,dy=40,dz=96,type=cobblemon:pokemon] -800 -50000 -280
 
-#Player commands
-spawnpoint @s 1591 84 -87
-tp @s 1591 84 -87 -180 1
-scoreboard players set @s SafariState 1
-give @s cobblemon:safari_ball 64
-tellraw @s ["",{"text":"Enjoy your stay in the Safari Zone! Come back to the start when you are ready to leave."}]
+#Zone 2 Clear
+kill @e[x=1654,y=78,z=-90,dx=124,dy=10,dz=96,type=item]
+tp @e[x=1654,y=78,z=-90,dx=124,dy=40,dz=96,type=cobblemon:pokemon] -800 -50000 -280
 
-#Clean up waiting room
-setblock 1595 81 -129 redstone_block
-scoreboard players set @e[x=-879,y=64,z=-180,dy=5,dz=10,type=armor_stand] BiomeID 0
+#Zone 3 Clear
+kill @e[x=1530,y=78,z=6,dx=124,dy=10,dz=96,type=item]
+tp @e[x=1530,y=78,z=6,dx=124,dy=40,dz=96,type=cobblemon:pokemon] -800 -50000 -280
+
+#Zone 4 Clear
+kill @e[x=1530,y=78,z=-90,dx=124,dy=10,dz=96,type=item]
+tp @e[x=1530,y=78,z=-90,dx=124,dy=40,dz=96,type=cobblemon:pokemon] -800 -50000 -280
+
+#Zone 5 Clear
+kill @e[x=1406,y=78,z=6,dx=124,dy=10,dz=96,type=item]
+tp @e[x=1406,y=78,z=6,dx=124,dy=40,dz=96,type=cobblemon:pokemon] -800 -50000 -280
+
+#Zone 6 Clear
+kill @e[x=1406,y=78,z=-90,dx=124,dy=10,dz=96,type=item]
+tp @e[x=1406,y=78,z=-90,dx=124,dy=40,dz=96,type=cobblemon:pokemon] -800 -50000 -280
+
+kill @e[x=-800,y=-50000,z=-280,distance=..5,type=cobblemon:pokemon]
+
+#---------------------------
+
 
 #Clear forceloaded chunks
 forceload remove 1406 -90 1591 101

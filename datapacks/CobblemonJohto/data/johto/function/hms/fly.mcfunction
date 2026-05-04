@@ -28,9 +28,9 @@ scoreboard players set @s[scores={Fly=1..,BugContest=1..}] Fly 0
 #----------------------------------------------------------------
 #If player is the Safari Zone
 
-tellraw @s[scores={Fly=1..,SafariState=1..}] {"text": "Do you want to cancel your Safari Zone session?", "extra": [{"text":" [Yes]","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 25"}}]}
-scoreboard players enable @s[scores={Fly=1..,SafariState=1..}] TriggerCommand
-scoreboard players set @s[scores={Fly=1..,SafariState=1..}] Fly 0
+tellraw @s[scores={Fly=1..},tag=SafariState] {"text": "Do you want to cancel your Safari Zone session?", "extra": [{"text":" [Yes]","color":"green","clickEvent":{"action":"run_command","value":"/trigger TriggerCommand set 25"}}]}
+scoreboard players enable @s[scores={Fly=1..},tag=SafariState] TriggerCommand
+scoreboard players set @s[scores={Fly=1..},tag=SafariState] Fly 0
 
 
 #----------------------------------------------------------------
