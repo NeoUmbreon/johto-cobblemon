@@ -9,8 +9,11 @@ function johto:load/removelobbytoggles
 #Whiteout enabled by default
 execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run function johto:tools/togglewhiteout
 
-# Miltank
-function johto:load/spawnmiltank
+# Summon 4 Miltank on the ranch
+execute positioned 792 64 202 rotated 0 0 run function johto:load/spawnmiltank
+execute positioned 748 64 216 rotated 90 0 run function johto:load/spawnmiltank
+execute positioned 788 64 219 rotated 180 0 run function johto:load/spawnmiltank
+execute positioned 774 64 207 rotated 270 0 run function johto:load/spawnmiltank
 
 #Clair interaction boxes
 forceload add -856 720
