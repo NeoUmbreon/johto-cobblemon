@@ -1,12 +1,12 @@
 #-------------------------------------------------------------------------------------------------------------------------
 #Auto-battle detection
-execute as @a[scores={BattleStart=0,BattleCD=0},tag=!InDialogue] run runmolangscript johto:detect_trainers @s
+execute as @a[scores={BattleStart=0,BattleCD=0},tag=!InDialogue] run runmolangscript johto:detecttrainers @s
 
 # Keep players inside radius
-execute as @a[scores={BattleStart=11..18}] run runmolangscript cobblemon:prevent_flee @s
+execute as @a[scores={BattleStart=11..18}] run runmolangscript cobblemon:preventflee @s
 
 # Free trainer if no active battle players nearby
-execute as @e[type=cobblemon:npc,tag=trainerBusy] run runmolangscript cobblemon:clear_trainerbusy
+execute as @e[type=cobblemon:npc,tag=trainerBusy] run runmolangscript cobblemon:cleartrainerbusy
 
 
 #--------------------------------------------------------------------------------------------------GENERAL WORLD-----------------------------------------------------------------------------------------------------------------------------------

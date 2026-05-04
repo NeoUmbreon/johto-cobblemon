@@ -1,7 +1,7 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
-        "q.run_command('execute as @e[x=-879,y=64,z=529,dx=50,dy=12,dz=78,type=cobblemon:npc] if data entity @s Config.trainer_id run runmolangscript johto:clear_gym ' + q.player.username + ' @s');",
+        "q.run_command('execute as @e[x=-879,y=64,z=529,dx=50,dy=12,dz=78,type=cobblemon:npc] if data entity @s Config.trainer_id run runmolangscript johto:cleargym ' + q.player.username + ' @s');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add Bugsy');",

@@ -42,6 +42,9 @@ The datapack can be downloaded from the [Releases](../../releases) page.
 - Trainers are no longer rebattleable
     - Trainers that *should* be rebattleable still are (Pokemon League, Gym Leader rematches, Red)
 - Trainer battles prevent you from running away
+- Game progression changes
+    - Progression of first 3 Gyms is Azalea -> Goldenrod -> Violet
+    - Sprout Tower is mandatory
 
 ### Challenge Mode
 - Optional, heavily inspired by [Lunatic Crystal](https://www.pokecommunity.com/threads/pokemon-lunatic-crystal-v1-7.525483/)
@@ -50,9 +53,6 @@ The datapack can be downloaded from the [Releases](../../releases) page.
 - Harder trainer battles
     - All trainers have custom teams
     - Gym Leaders and important trainers have custom movesets, held items, and stats
-- Game progression changes
-    - Progression of first 3 Gyms is Azalea -> Goldenrod -> Violet
-    - Sprout Tower is mandatory
 
 ### Other Tweaks
 - Dynamic Surfing music

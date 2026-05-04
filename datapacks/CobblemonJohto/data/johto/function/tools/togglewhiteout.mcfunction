@@ -1,7 +1,7 @@
-execute positioned -974 67 -351 run forceload add ~ ~
+# Enable
+execute if entity @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run tellraw @a {"text":"Whiteout enabled! Players will be brought back to Pokemon Centers upon loss to trainers."}
+execute if entity @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run return run tag @e[x=-792,y=65,z=-284,dy=3] remove WhiteoutDisable
 
-execute positioned -974 67 -351 if block ~ ~ ~ redstone_block run setblock ~ ~ ~-1 redstone_block
-execute positioned -974 67 -351 if block ~ ~ ~ redstone_block run return run setblock ~ ~ ~ air
-
-execute positioned -974 67 -351 run setblock ~ ~ ~-1 air
-execute positioned -974 67 -351 run return run setblock ~ ~ ~ redstone_block
+# Disable
+tellraw @a {"text":"Whiteout has been disabled!"}
+tag @e[x=-792,y=65,z=-284,dy=3] add WhiteoutDisable

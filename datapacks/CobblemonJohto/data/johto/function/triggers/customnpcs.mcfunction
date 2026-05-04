@@ -44,7 +44,7 @@ execute as @s[x=423,y=64,z=-426,distance=..6,tag=!Dialogue23] run opendialogue b
 execute as @s[x=423,y=64,z=-426,distance=..6,tag=Dialogue23] run opendialogue goldenrod_blacksmith_interaction @s
 
 #Clair, post-Dragon's-Den
-execute as @s[x=-856,y=65,z=720,distance=..6,tag=!Clair] at @s run runmolangscript johto:trainer_dialogue_handler @s @n[type=cobblemon:npc,distance=..16,nbt={Config:{trainer_id:clair}}]
+execute as @s[x=-856,y=65,z=720,distance=..6,tag=!Clair] at @s run runmolangscript johto:trainerdialoguehandler @s @n[type=cobblemon:npc,distance=..16,nbt={Config:{trainer_id:clair}}]
 execute as @s[x=-856,y=65,z=720,distance=..6,tag=Clair] run opendialogue clair_end_defeated_afterbadge @s
 
 

@@ -3,9 +3,11 @@ scoreboard objectives add TrainerUID dummy
 scoreboard objectives add ActiveTrainer dummy
 scoreboard objectives add BattleCD dummy
 
+# Remove Clear Weather and Whiteout from the lobby
+function johto:load/removelobbytoggles
+
 #Whiteout enabled by default
-execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable,tag=!WhiteoutInitialized] run function johto:tools/togglewhiteout
-execute as @e[x=-792,y=65,z=-284,dy=3] run tag @s add WhiteoutInitialized
+execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run function johto:tools/togglewhiteout
 
 #Clair interaction boxes
 forceload add -856 720
