@@ -34,7 +34,7 @@
                         "value": "battle",
                         "action": [
                             "q.dialogue.close();",
-                            "v.battle = q.npc.start_battle(q.player);"
+                            "v.battle = q.npc.startbattle(q.player);"
                         ]
                     },
                     {

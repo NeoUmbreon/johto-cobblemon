@@ -281,7 +281,7 @@ def build_battle_action(trainer_id: str, battle_id: int):
         (
             "q.run_command("
             f"'execute as ' + q.player.username + '"
-            f" run function johto:trainers/start_battle"
+            f" run function johto:trainers/startbattle"
             f" {{trainer_id:\"{trainer_id}\",battle_id:{battle_id},trainer_uuid:\"' + q.npc.uuid + '\"}}'"
             ");"
         ),
@@ -506,13 +506,6 @@ def export_trainer_team(trainer_id: str, folder: str, excel_teams):
 
     #print(f"Exported trainer file: {output_file}")
 
-#def build_tbcs_command(trainer_id: str):
-#    trainer_id_cap = trainer_id.capitalize()
-#    return [
-#        "q.run_command('execute as ' + q.player.username + ' run function johto:trainers/gym_battle {trainer_id:\"%s\",trainer_id_cap:\"%s\"}')"
-#        % (trainer_id, trainer_id_cap)
-#    ]
-
 def update_interaction_file(path: Path):
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -521,7 +514,7 @@ def update_interaction_file(path: Path):
     folder = path.parent.name
     
 
-    if "johto:trainers/start_battle" in json.dumps(data):
+    if "johto:trainers/startbattle" in json.dumps(data):
         #print(f"Skipping (already converted): {path}")
         return
 
@@ -546,7 +539,7 @@ def update_interaction_file(path: Path):
     #                new_actions = []
 
     #                for line in action:
-    #                    if "q.npc.start_battle(q.player)" in line:
+    #                    if "q.npc.startbattle(q.player)" in line:
     #                        new_actions.extend(build_tbcs_command(trainer_id))
     #                    else:
     #                        new_actions.append(line)
