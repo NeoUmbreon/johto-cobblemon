@@ -193,7 +193,7 @@ execute if entity @e[x=-879,y=64,z=-178,dy=3,type=armor_stand,scores={BiomeID=10
 execute if entity @e[x=-879,y=64,z=-178,dy=3,type=armor_stand,scores={BiomeID=11}] run function johto:triggers/safarizone/biomes/savannah {destination:"1406 79 6"}
 
 #Zone 5 Biome 12
-execute if entity @e[x=-879,y=64,z=-178,dy=3,type=armor_stand,scores={BiomeID=12}] run function johto:triggers/safarizone/biomes/wasteland {destination:"1409 79 6"}
+execute if entity @e[x=-879,y=64,z=-178,dy=3,type=armor_stand,scores={BiomeID=12}] run function johto:triggers/safarizone/biomes/wasteland {destination:"1406 79 6"}
 
 #---------------------------
 #Zone 6
