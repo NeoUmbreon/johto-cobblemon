@@ -445,7 +445,7 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
     # interaction handling
     entity_data["interaction"] = {
         "type": "script",
-        "script": "johto:trainerdialoguehandler"
+        "script": "johto:trainer_dialogue_handler"
     }
 
     # write back

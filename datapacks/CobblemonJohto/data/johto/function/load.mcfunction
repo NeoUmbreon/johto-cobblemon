@@ -9,6 +9,9 @@ function johto:load/removelobbytoggles
 #Whiteout enabled by default
 execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run function johto:tools/togglewhiteout
 
+# Miltank
+function johto:load/spawnmiltank
+
 #Clair interaction boxes
 forceload add -856 720
 execute positioned -856 65 720 unless entity @e[type=interaction,distance=..5] run function johto:spawn/npcboxes
