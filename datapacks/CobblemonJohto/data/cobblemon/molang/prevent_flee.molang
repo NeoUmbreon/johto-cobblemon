@@ -2,7 +2,16 @@ q.is_blank(q.player.data.battle) ? return 0;
 
 t.battle = q.player.data.battle;
 
+t.angle = 0;
+t.steps = t.battle.max_battle_distance * 20;
+t.step_amount = 360 / t.steps;
+
+loop(t.steps, {
+    q.run_command('execute positioned ' + t.battle.x + ' ' + t.battle.y + ' ' + t.battle.z + ' rotated ' + t.angle + ' 0 run particle dust{color:[1,1,1],scale:2} ^ ^ ^' + t.battle.max_battle_distance + ' 0 0.05 0 1 0');
+    t.angle = t.angle + t.step_amount;
+});
+
 q.player.distance_to_pos(t.battle.x, t.battle.y, t.battle.z) > t.battle.max_battle_distance ? {
-	q.player.teleport(t.battle.x, t.battle.y, t.battle.z);
-	q.run_command('tellraw ' + q.player.username + ' {"text":"No! There\'s no running from a Trainer battle!","italic":true,"color":"gray"}');
+    q.player.teleport(t.battle.x, t.battle.y, t.battle.z);
+    q.run_command('tellraw ' + q.player.username + ' {"text":"No! There\'s no running from a Trainer battle!","italic":true,"color":"gray"}');
 };

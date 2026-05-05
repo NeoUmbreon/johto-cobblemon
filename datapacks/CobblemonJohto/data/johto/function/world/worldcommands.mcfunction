@@ -388,3 +388,7 @@ execute as @a[x=-861,y=58,z=767,dx=2,dy=4,dz=2] run tp @s -2048 51 -878 0 9
 
 #
 execute unless score #firstrun click matches 1 run function johto:load
+
+# Keep players inside radius
+execute as @a[scores={BattleStart=11..18}] run runmolangscript cobblemon:prevent_flee @s
+
