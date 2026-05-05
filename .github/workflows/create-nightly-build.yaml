@@ -32,18 +32,14 @@ jobs:
       run: pip install pandas openpyxl
 
     - name: Process files (normal mode)
-      run: python process_files.py
-      env:
-        ENABLE_CHALLENGE_MODE: false
+      run: make normal
 
     - name: Create normal zip
       run: |
         zip -r johto-cobblemon.zip ./datapacks ./trainers
 
     - name: Process files (challenge mode)
-      run: python process_files.py
-      env:
-        ENABLE_CHALLENGE_MODE: true
+      run: make challenge
 
     - name: Create challenge zip
       run: |

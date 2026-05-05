@@ -519,47 +519,7 @@ def update_interaction_file(path: Path):
         return
 
     battle_id = get_battle_music(folder, trainer_id)
-
-    is_gym_leader = "gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower()
-
-    #if is_gym_leader:
-    #    for page in data.get("pages", []):
-    #        input_data = page.get("input")
-    #        if not isinstance(input_data, dict):
-    #            continue
-
-    #        options = input_data.get("options")
-    #        if not isinstance(options, list):
-    #            continue
-
-    #        for opt in options:
-    #            action = opt.get("action")
-
-    #            if isinstance(action, list):
-    #                new_actions = []
-
-    #                for line in action:
-    #                    if "q.npc.startbattle(q.player)" in line:
-    #                        new_actions.extend(build_tbcs_command(trainer_id))
-    #                    else:
-    #                        new_actions.append(line)
-
-    #                opt["action"] = new_actions
-
-    #    with open(path, "w", encoding="utf-8") as f:
-    #        json.dump(data, f, indent=4, ensure_ascii=False)
-
-    #    return trainer_id, folder, battle_id
     
-    #if is_silver(trainer_id):
-    #    if "initializationAction" not in data:
-    #        data["initializationAction"] = []
-
-    #    init_line = "q.run_command('tag ' + q.player.username + ' add InDialogue');"
-
-    #    if init_line not in data["initializationAction"]:
-    #        data["initializationAction"].append(init_line)
-
     data["escapeAction"] = build_battle_action(trainer_id, battle_id)
 
     # Replace speakers.npc
@@ -758,7 +718,6 @@ def main():
     for trainer_id, folder, battle_id, trainer_uid in processed:
 
         is_gym_leader = "gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower()
-        #if is_gym_leader: print(f"Skipping export (gym leader): {trainer_id} in {folder}")
 
         if is_silver(trainer_id):
             base_id = get_silver_base_id(trainer_id)
