@@ -9,8 +9,8 @@ clean:
 	git restore datapacks/CobblemonJohto/data/cobblemon/npcs/trainers/
 	git clean -fd datapacks/CobblemonJohto/data/cobblemon/npcs/trainers/silver/
 	git restore datapacks/CobblemonJohto/data/cobblemon/dialogues/battle_ends/
-	git clean -fd trainers/
 	git clean -fd datapacks/CobblemonJohto/data/cobblemon/dialogues/battle_ends/
+	git clean -fd trainers/
 	git clean -fd datapacks.zip
 	git clean -fd trainers.zip
 
