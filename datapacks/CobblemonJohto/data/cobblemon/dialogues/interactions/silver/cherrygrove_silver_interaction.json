@@ -137,7 +137,7 @@
                                     "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 13');",
                                     "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                                     "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
-                                    "v.battle = q.npc.startbattle(q.player);"
+                                    "v.battle = q.npc.start_battle(q.player);"
                             ]
                     },
                     {

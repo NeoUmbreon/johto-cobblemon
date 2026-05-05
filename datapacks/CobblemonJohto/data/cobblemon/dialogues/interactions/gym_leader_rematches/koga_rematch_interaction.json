@@ -69,7 +69,7 @@
                         "action": [                           
                                     "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 12');",
                                     "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-                                    "v.battle = q.npc.startbattle(q.player);"
+                                    "v.battle = q.npc.start_battle(q.player);"
                             ]
                     },
                     {

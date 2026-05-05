@@ -34,7 +34,7 @@
                             "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 18');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.dialogue.close();",
-                            "v.battle = q.npc.startbattle(q.player);"]
+                            "v.battle = q.npc.start_battle(q.player);"]
                     },
                     {
                         "text": "No",
