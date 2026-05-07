@@ -82,10 +82,7 @@ execute as @s[scores={TriggerCommand=23}] run scoreboard players set @s TriggerC
 
 
 #77 - Map Room Cancel
-execute as @s[scores={TriggerCommand=77}] run tag @s remove SafariStarter
-execute as @s[scores={TriggerCommand=77}] run tag @s remove SafariState
-execute as @s[scores={TriggerCommand=77}] run tp @s 1591 88 -103 180 4
-execute as @s[scores={TriggerCommand=77}] run tellraw @s {"text":"<Safari Clerk> Thank you for visiting! Come again soon!"}
+execute as @s[scores={TriggerCommand=77}] run function johto:triggers/safarizone/leave
 execute as @s[scores={TriggerCommand=77}] run setblock 1595 81 -129 minecraft:redstone_block
 execute as @s[scores={TriggerCommand=77}] run scoreboard players set @e[x=-879,y=64,z=-180,dy=5,dz=10,type=armor_stand] BiomeID 0
 execute as @s[scores={TriggerCommand=77}] run scoreboard players set @s Cooldown 0
@@ -93,8 +90,8 @@ execute as @s[scores={TriggerCommand=77}] run scoreboard players set @s TriggerC
 
 
 #24 - Safari Zone quit button & Fly Prompt
-execute as @a[scores={TriggerCommand=24..25}] run function johto:triggers/safarizone/leave
-scoreboard players set @a[scores={TriggerCommand=24..25}] TriggerCommand 0
+execute as @s[scores={TriggerCommand=24..25}] run function johto:triggers/safarizone/leave
+scoreboard players set @s[scores={TriggerCommand=24..25}] TriggerCommand 0
 
 
 #26 - Sinjoh Ruins Abra TP out
