@@ -1,0 +1,15 @@
+{
+    "species": "miltank",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "dizzypunch",
+        "2": "firepunch",
+        "3": "thunderpunch",
+        "4": "icepunch"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

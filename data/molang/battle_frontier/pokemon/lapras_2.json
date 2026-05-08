@@ -1,0 +1,15 @@
+{
+    "species": "lapras",
+    "nature": "impish",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "sheercold",
+        "2": "perishsong",
+        "3": "sing",
+        "4": "confuseray"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

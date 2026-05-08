@@ -1,0 +1,15 @@
+{
+    "species": "golduck",
+    "nature": "adamant",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "waterfall",
+        "2": "mudbomb",
+        "3": "shadowclaw",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

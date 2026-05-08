@@ -1,0 +1,16 @@
+{
+    "species": "rhyhorn",
+    "nature": "adamant",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "dig",
+        "2": "rockblast",
+        "3": "scaryface",
+        "4": "tailwhip"
+    },
+    "evs": {
+        "hp": 170,
+        "atk": 170,
+        "def": 170
+    }
+}

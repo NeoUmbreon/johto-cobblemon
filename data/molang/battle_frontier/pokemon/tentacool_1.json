@@ -1,0 +1,15 @@
+{
+    "species": "tentacool",
+    "nature": "modest",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "acid",
+        "3": "supersonic",
+        "4": "barrier"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "mamoswine",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "avalanche",
+        "2": "earthquake",
+        "3": "ironhead",
+        "4": "curse"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

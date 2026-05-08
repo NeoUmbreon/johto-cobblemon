@@ -1,0 +1,15 @@
+{
+    "species": "scizor",
+    "nature": "adamant",
+    "heldItem": "cobblemon:occa_berry",
+    "moveset": {
+        "1": "xscissor",
+        "2": "ironhead",
+        "3": "aerialace",
+        "4": "nightslash"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

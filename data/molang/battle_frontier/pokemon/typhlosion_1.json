@@ -1,0 +1,15 @@
+{
+    "species": "typhlosion",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "firepunch",
+        "2": "thunderpunch",
+        "3": "shadowclaw",
+        "4": "quickattack"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

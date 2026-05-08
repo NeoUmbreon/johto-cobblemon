@@ -1,0 +1,15 @@
+{
+    "species": "pinsir",
+    "nature": "adamant",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "xscissor",
+        "2": "earthquake",
+        "3": "rockslide",
+        "4": "swordsdance"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

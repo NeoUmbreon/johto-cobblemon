@@ -1,0 +1,15 @@
+{
+    "species": "seadra",
+    "nature": "modest",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "surf",
+        "2": "icebeam",
+        "3": "twister",
+        "4": "smokescreen"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

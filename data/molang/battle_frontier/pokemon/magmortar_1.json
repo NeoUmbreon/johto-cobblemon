@@ -1,0 +1,15 @@
+{
+    "species": "magmortar",
+    "nature": "modest",
+    "heldItem": "cobblemon:heat_rock",
+    "moveset": {
+        "1": "fireblast",
+        "2": "focusblast",
+        "3": "willowisp",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

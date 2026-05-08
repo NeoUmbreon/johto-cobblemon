@@ -1,0 +1,15 @@
+{
+    "species": "bagon",
+    "nature": "naughty",
+    "heldItem": "cobblemon:dragon_fang",
+    "moveset": {
+        "1": "dragonbreath",
+        "2": "headbutt",
+        "3": "brickbreak",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

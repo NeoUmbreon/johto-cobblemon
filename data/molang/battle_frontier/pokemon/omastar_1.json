@@ -1,0 +1,15 @@
+{
+    "species": "omastar",
+    "nature": "brave",
+    "heldItem": "cobblemon:metronome",
+    "moveset": {
+        "1": "watergun",
+        "2": "rollout",
+        "3": "withdraw",
+        "4": "spikes"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

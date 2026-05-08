@@ -1,0 +1,15 @@
+{
+    "species": "drapion",
+    "nature": "jolly",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "crosspoison",
+        "2": "firefang",
+        "3": "thunderfang",
+        "4": "icefang"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

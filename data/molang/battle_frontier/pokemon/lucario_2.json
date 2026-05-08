@@ -1,0 +1,15 @@
+{
+    "species": "lucario",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "crosschop",
+        "2": "stoneedge",
+        "3": "thunderpunch",
+        "4": "icepunch"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

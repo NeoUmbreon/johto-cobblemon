@@ -1,0 +1,15 @@
+{
+    "species": "torterra",
+    "nature": "adamant",
+    "heldItem": "cobblemon:yache_berry",
+    "moveset": {
+        "1": "earthquake",
+        "2": "grassknot",
+        "3": "rockslide",
+        "4": "curse"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

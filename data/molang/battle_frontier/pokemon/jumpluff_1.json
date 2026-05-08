@@ -1,0 +1,15 @@
+{
+    "species": "jumpluff",
+    "nature": "jolly",
+    "heldItem": "cobblemon:pecha_berry",
+    "moveset": {
+        "1": "aerialace",
+        "2": "bulletseed",
+        "3": "cottonspore",
+        "4": "tailwhip"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "alakazam",
+    "nature": "modest",
+    "heldItem": "cobblemon:colbur_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "focusblast",
+        "3": "chargebeam",
+        "4": "recover"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

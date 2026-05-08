@@ -1,0 +1,15 @@
+{
+    "species": "cloyster",
+    "nature": "bold",
+    "heldItem": "cobblemon:never_melt_ice",
+    "moveset": {
+        "1": "aurorabeam",
+        "2": "waterpulse",
+        "3": "spikes",
+        "4": "supersonic"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

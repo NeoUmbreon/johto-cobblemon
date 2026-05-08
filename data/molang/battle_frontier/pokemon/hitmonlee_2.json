@@ -1,0 +1,16 @@
+{
+    "species": "hitmonlee",
+    "nature": "adamant",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "hijumpkick",
+        "2": "blazekick",
+        "3": "megakick",
+        "4": "endure"
+    },
+    "evs": {
+        "atk": 170,
+        "spd": 170,
+        "spe": 170
+    }
+}

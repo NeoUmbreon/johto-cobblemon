@@ -1,0 +1,15 @@
+{
+    "species": "kricketune",
+    "nature": "adamant",
+    "heldItem": "cobblemon:metronome",
+    "moveset": {
+        "1": "furycutter",
+        "2": "rocksmash",
+        "3": "knockoff",
+        "4": "focusenergy"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

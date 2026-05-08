@@ -1,0 +1,15 @@
+{
+    "species": "grotle",
+    "nature": "relaxed",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "razorleaf",
+        "2": "bite",
+        "3": "leechseed",
+        "4": "synthesis"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

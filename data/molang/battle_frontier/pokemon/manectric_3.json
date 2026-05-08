@@ -1,0 +1,15 @@
+{
+    "species": "manectric",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "thunderfang",
+        "2": "firefang",
+        "3": "icefang",
+        "4": "bite"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

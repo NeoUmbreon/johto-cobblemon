@@ -1,0 +1,15 @@
+{
+    "species": "rhyperior",
+    "nature": "adamant",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "firepunch",
+        "2": "thunderpunch",
+        "3": "icepunch",
+        "4": "aquatail"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

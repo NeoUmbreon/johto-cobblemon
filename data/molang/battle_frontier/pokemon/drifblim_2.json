@@ -1,0 +1,15 @@
+{
+    "species": "drifblim",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "payback",
+        "2": "facade",
+        "3": "willowisp",
+        "4": "trick"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

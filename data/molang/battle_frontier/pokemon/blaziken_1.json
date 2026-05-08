@@ -1,0 +1,15 @@
+{
+    "species": "blaziken",
+    "nature": "adamant",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "blazekick",
+        "2": "reversal",
+        "3": "aerialace",
+        "4": "endure"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

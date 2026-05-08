@@ -1,0 +1,15 @@
+{
+    "species": "luxray",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "thunderfang",
+        "2": "icefang",
+        "3": "crunch",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

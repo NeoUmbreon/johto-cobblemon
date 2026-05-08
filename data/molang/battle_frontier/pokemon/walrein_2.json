@@ -1,0 +1,15 @@
+{
+    "species": "walrein",
+    "nature": "brave",
+    "heldItem": "cobblemon:life_orb",
+    "moveset": {
+        "1": "avalanche",
+        "2": "earthquake",
+        "3": "crunch",
+        "4": "curse"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

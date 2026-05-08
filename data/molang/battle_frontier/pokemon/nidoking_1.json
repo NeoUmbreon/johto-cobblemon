@@ -1,0 +1,15 @@
+{
+    "species": "nidoking",
+    "nature": "impish",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "earthquake",
+        "2": "poisonjab",
+        "3": "doublekick",
+        "4": "counter"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

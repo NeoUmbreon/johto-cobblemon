@@ -1,0 +1,16 @@
+{
+    "species": "blastoise",
+    "nature": "modest",
+    "heldItem": "cobblemon:mystic_water",
+    "moveset": {
+        "1": "hydropump",
+        "2": "signalbeam",
+        "3": "icywind",
+        "4": "mirrorcoat"
+    },
+    "evs": {
+        "def": 170,
+        "spa": 170,
+        "spd": 170
+    }
+}

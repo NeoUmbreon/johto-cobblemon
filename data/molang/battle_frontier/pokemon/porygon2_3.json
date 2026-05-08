@@ -1,0 +1,15 @@
+{
+    "species": "porygon2",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "triattack",
+        "2": "thunderbolt",
+        "3": "psychic",
+        "4": "icebeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

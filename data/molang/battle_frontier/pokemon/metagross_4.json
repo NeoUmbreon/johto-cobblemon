@@ -1,0 +1,15 @@
+{
+    "species": "metagross",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "meteormash",
+        "2": "zenheadbutt",
+        "3": "earthquake",
+        "4": "explosion"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

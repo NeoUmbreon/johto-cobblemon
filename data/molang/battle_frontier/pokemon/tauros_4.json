@@ -1,0 +1,15 @@
+{
+    "species": "tauros",
+    "nature": "adamant",
+    "heldItem": "cobblemon:choice_band",
+    "moveset": {
+        "1": "return",
+        "2": "earthquake",
+        "3": "stoneedge",
+        "4": "zenheadbutt"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "weezing",
+    "nature": "bold",
+    "heldItem": "cobblemon:payapa_berry",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "darkpulse",
+        "3": "shockwave",
+        "4": "grudge"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "drifblim",
+    "nature": "modest",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "ominouswind",
+        "2": "aircutter",
+        "3": "batonpass",
+        "4": "endure"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

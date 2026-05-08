@@ -1,0 +1,15 @@
+{
+    "species": "walrein",
+    "nature": "modest",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "surf",
+        "2": "icebeam",
+        "3": "signalbeam",
+        "4": "hail"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "zapdos",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "drillpeck",
+        "2": "twister",
+        "3": "steelwing",
+        "4": "uturn"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

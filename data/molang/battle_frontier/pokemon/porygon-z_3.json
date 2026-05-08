@@ -1,0 +1,15 @@
+{
+    "species": "porygon-z",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "psychic",
+        "2": "icebeam",
+        "3": "signalbeam",
+        "4": "chargebeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

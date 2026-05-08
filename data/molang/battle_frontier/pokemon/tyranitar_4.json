@@ -1,0 +1,15 @@
+{
+    "species": "tyranitar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chople_berry",
+    "moveset": {
+        "1": "stoneedge",
+        "2": "crunch",
+        "3": "earthquake",
+        "4": "dragondance"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

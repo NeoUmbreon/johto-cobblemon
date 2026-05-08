@@ -1,0 +1,15 @@
+{
+    "species": "leafeon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "leafblade",
+        "2": "xscissor",
+        "3": "aerialace",
+        "4": "bite"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

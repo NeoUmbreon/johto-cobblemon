@@ -1,0 +1,15 @@
+{
+    "species": "ludicolo",
+    "nature": "modest",
+    "heldItem": "cobblemon:wide_lens",
+    "moveset": {
+        "1": "hydropump",
+        "2": "grassknot",
+        "3": "blizzard",
+        "4": "focusblast"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

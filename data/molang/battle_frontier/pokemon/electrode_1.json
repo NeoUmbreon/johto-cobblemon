@@ -1,0 +1,15 @@
+{
+    "species": "electrode",
+    "nature": "modest",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "swift",
+        "3": "thunderwave",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

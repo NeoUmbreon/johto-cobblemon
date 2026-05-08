@@ -1,0 +1,15 @@
+{
+    "species": "prinplup",
+    "nature": "quiet",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "metalclaw",
+        "3": "peck",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

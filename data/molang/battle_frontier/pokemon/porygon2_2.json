@@ -1,0 +1,15 @@
+{
+    "species": "porygon2",
+    "nature": "quiet",
+    "heldItem": "cobblemon:iron_ball",
+    "moveset": {
+        "1": "triattack",
+        "2": "thunderbolt",
+        "3": "recover",
+        "4": "trickroom"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "scyther",
+    "nature": "adamant",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "xscissor",
+        "2": "aerialace",
+        "3": "nightslash",
+        "4": "swordsdance"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

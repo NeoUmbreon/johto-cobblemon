@@ -1,0 +1,15 @@
+{
+    "species": "kingler",
+    "nature": "jolly",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "crabhammer",
+        "2": "guillotine",
+        "3": "flail",
+        "4": "endure"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

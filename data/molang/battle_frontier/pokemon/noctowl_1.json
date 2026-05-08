@@ -1,0 +1,15 @@
+{
+    "species": "noctowl",
+    "nature": "adamant",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "secretpower",
+        "2": "aerialace",
+        "3": "supersonic",
+        "4": "reflect"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

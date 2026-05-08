@@ -1,0 +1,15 @@
+{
+    "species": "glalie",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "icefang",
+        "2": "crunch",
+        "3": "earthquake",
+        "4": "explosion"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "loudred",
+    "nature": "adamant",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "stomp",
+        "2": "bite",
+        "3": "howl",
+        "4": "supersonic"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

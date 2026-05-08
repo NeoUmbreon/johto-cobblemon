@@ -1,0 +1,15 @@
+{
+    "species": "shedinja",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "shadowsneak",
+        "2": "furycutter",
+        "3": "confuseray",
+        "4": "sandattack"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

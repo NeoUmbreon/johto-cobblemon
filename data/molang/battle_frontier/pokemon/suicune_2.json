@@ -1,0 +1,15 @@
+{
+    "species": "suicune",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "waterfall",
+        "2": "icefang",
+        "3": "ironhead",
+        "4": "bite"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

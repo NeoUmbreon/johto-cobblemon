@@ -1,0 +1,15 @@
+{
+    "species": "zapdos",
+    "nature": "timid",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "ancientpower",
+        "3": "ominouswind",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

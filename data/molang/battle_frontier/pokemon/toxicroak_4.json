@@ -1,0 +1,15 @@
+{
+    "species": "toxicroak",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "gunkshot",
+        "2": "crosschop",
+        "3": "earthquake",
+        "4": "stoneedge"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

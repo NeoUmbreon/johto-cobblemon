@@ -1,0 +1,15 @@
+{
+    "species": "claydol",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "earthquake",
+        "2": "zenheadbutt",
+        "3": "rockslide",
+        "4": "explosion"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

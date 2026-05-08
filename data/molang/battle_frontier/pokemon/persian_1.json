@@ -1,0 +1,15 @@
+{
+    "species": "persian",
+    "nature": "jolly",
+    "heldItem": "cobblemon:silk_scarf",
+    "moveset": {
+        "1": "slash",
+        "2": "uturn",
+        "3": "captivate",
+        "4": "swagger"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

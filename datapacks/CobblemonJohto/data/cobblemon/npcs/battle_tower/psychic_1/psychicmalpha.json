@@ -1,0 +1,15 @@
+{
+    "presets": [
+        "cobblemon:battle_tower_trainer"
+    ],
+    "name": "Alpha",
+    "resourceIdentifier": "cobblemon:psychicm",
+    "config": [
+        {
+            "variableName": "class",
+            "displayName": "Battle Tower Trainer Class",
+            "type": "TEXT",
+            "defaultValue": "psychic_1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "species": "rampardos",
+    "nature": "adamant",
+    "heldItem": "cobblemon:toxic_orb",
+    "moveset": {
+        "1": "rockslide",
+        "2": "facade",
+        "3": "crunch",
+        "4": "screech"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

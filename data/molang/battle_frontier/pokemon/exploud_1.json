@@ -1,0 +1,15 @@
+{
+    "species": "exploud",
+    "nature": "modest",
+    "heldItem": "cobblemon:chople_berry",
+    "moveset": {
+        "1": "hypervoice",
+        "2": "extrasensory",
+        "3": "waterpulse",
+        "4": "torment"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

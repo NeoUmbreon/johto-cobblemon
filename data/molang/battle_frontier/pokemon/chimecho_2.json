@@ -1,0 +1,15 @@
+{
+    "species": "chimecho",
+    "nature": "quiet",
+    "heldItem": "cobblemon:twisted_spoon",
+    "moveset": {
+        "1": "psychic",
+        "2": "shadowball",
+        "3": "hypnosis",
+        "4": "dreameater"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

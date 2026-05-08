@@ -1,0 +1,15 @@
+{
+    "species": "bastiodon",
+    "nature": "impish",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "ironhead",
+        "2": "stoneedge",
+        "3": "swagger",
+        "4": "taunt"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

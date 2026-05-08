@@ -1,0 +1,15 @@
+{
+    "species": "raichu",
+    "nature": "jolly",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "thunderpunch",
+        "2": "focuspunch",
+        "3": "sweetkiss",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

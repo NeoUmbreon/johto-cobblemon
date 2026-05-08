@@ -1,0 +1,15 @@
+{
+    "species": "lapras",
+    "nature": "modest",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "surf",
+        "2": "icebeam",
+        "3": "psychic",
+        "4": "thunderbolt"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

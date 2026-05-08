@@ -1,0 +1,15 @@
+{
+    "species": "chansey",
+    "nature": "sassy",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "metronome",
+        "2": "refresh",
+        "3": "defensecurl",
+        "4": "minimize"
+    },
+    "evs": {
+        "hp": 252,
+        "spd": 252
+    }
+}

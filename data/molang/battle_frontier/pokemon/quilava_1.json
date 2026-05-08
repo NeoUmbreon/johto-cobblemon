@@ -1,0 +1,15 @@
+{
+    "species": "quilava",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "flamewheel",
+        "2": "doublekick",
+        "3": "quickattack",
+        "4": "smokescreen"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

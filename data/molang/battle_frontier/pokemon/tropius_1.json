@@ -1,0 +1,15 @@
+{
+    "species": "tropius",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lansat_berry",
+    "moveset": {
+        "1": "razorleaf",
+        "2": "aerialace",
+        "3": "leechseed",
+        "4": "captivate"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

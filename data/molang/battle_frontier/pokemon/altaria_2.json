@@ -1,0 +1,15 @@
+{
+    "species": "altaria",
+    "nature": "modest",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "dragonpulse",
+        "2": "ominouswind",
+        "3": "sing",
+        "4": "perishsong"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

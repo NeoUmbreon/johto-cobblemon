@@ -1,0 +1,15 @@
+{
+    "species": "nidoqueen",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "poisonjab",
+        "2": "firepunch",
+        "3": "thunderpunch",
+        "4": "icepunch"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

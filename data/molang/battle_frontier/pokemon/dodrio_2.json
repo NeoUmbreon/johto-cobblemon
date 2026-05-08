@@ -1,0 +1,15 @@
+{
+    "species": "dodrio",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "drillpeck",
+        "2": "frustration",
+        "3": "feintattack",
+        "4": "acupressure"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

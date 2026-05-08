@@ -1,0 +1,15 @@
+{
+    "species": "granbull",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "facade",
+        "2": "firefang",
+        "3": "thunderfang",
+        "4": "icefang"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

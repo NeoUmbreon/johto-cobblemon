@@ -1,0 +1,15 @@
+{
+    "species": "nidoqueen",
+    "nature": "modest",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "earthpower",
+        "3": "flamethrower",
+        "4": "icebeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

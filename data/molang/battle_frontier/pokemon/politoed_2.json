@@ -1,0 +1,15 @@
+{
+    "species": "politoed",
+    "nature": "impish",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "dive",
+        "2": "brickbreak",
+        "3": "hypnosis",
+        "4": "perishsong"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

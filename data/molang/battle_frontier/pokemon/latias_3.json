@@ -1,0 +1,15 @@
+{
+    "species": "latias",
+    "nature": "timid",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "psychic",
+        "2": "icebeam",
+        "3": "energyball",
+        "4": "shadowball"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

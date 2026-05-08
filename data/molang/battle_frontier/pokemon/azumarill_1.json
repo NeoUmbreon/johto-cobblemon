@@ -1,0 +1,15 @@
+{
+    "species": "azumarill",
+    "nature": "quiet",
+    "heldItem": "cobblemon:pecha_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "rollout",
+        "3": "defensecurl",
+        "4": "tailwhip"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "shiftry",
+    "nature": "adamant",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "seedbomb",
+        "2": "suckerpunch",
+        "3": "aerialace",
+        "4": "explosion"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

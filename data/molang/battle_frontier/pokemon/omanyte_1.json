@@ -1,0 +1,15 @@
+{
+    "species": "omanyte",
+    "nature": "bold",
+    "heldItem": "cobblemon:pecha_berry",
+    "moveset": {
+        "1": "ancientpower",
+        "2": "watergun",
+        "3": "mudshot",
+        "4": "protect"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

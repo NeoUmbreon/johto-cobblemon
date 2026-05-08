@@ -1,0 +1,15 @@
+{
+    "species": "banette",
+    "nature": "adamant",
+    "heldItem": "cobblemon:colbur_berry",
+    "moveset": {
+        "1": "shadowclaw",
+        "2": "feintattack",
+        "3": "willowisp",
+        "4": "trickroom"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

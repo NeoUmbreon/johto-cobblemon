@@ -1,0 +1,15 @@
+{
+    "species": "hippowdon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "earthquake",
+        "2": "stoneedge",
+        "3": "crunch",
+        "4": "thunderfang"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

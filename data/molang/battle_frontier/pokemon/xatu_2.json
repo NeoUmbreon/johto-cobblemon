@@ -1,0 +1,15 @@
+{
+    "species": "xatu",
+    "nature": "modest",
+    "heldItem": "cobblemon:colbur_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "aircutter",
+        "3": "ominouswind",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

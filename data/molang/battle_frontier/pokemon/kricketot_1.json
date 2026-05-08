@@ -1,0 +1,16 @@
+{
+    "species": "kricketot",
+    "nature": "relaxed",
+    "heldItem": "cobblemon:liechi_berry",
+    "moveset": {
+        "1": "bugbite",
+        "2": "bide",
+        "3": "mudslap",
+        "4": "growl"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

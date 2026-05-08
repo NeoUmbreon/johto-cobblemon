@@ -1,0 +1,15 @@
+{
+    "species": "slowbro",
+    "nature": "quiet",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "psychic",
+        "2": "surf",
+        "3": "icebeam",
+        "4": "trickroom"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

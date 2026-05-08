@@ -1,0 +1,16 @@
+{
+    "species": "cradily",
+    "nature": "calm",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "sludgebomb",
+        "3": "recover",
+        "4": "ingrain"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "weepinbell",
+    "nature": "quiet",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "razorleaf",
+        "2": "acid",
+        "3": "wrap",
+        "4": "sweetscent"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

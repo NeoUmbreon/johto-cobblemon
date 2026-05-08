@@ -1,0 +1,16 @@
+{
+    "species": "raticate",
+    "nature": "bashful",
+    "heldItem": "cobblemon:chople_berry",
+    "moveset": {
+        "1": "superfang",
+        "2": "hyperfang",
+        "3": "shadowball",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 170,
+        "spa": 170,
+        "spe": 170
+    }
+}

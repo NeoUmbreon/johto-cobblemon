@@ -1,0 +1,15 @@
+{
+    "species": "ampharos",
+    "nature": "careful",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "thunderpunch",
+        "2": "firepunch",
+        "3": "focuspunch",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

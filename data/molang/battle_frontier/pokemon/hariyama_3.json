@@ -1,0 +1,15 @@
+{
+    "species": "hariyama",
+    "nature": "adamant",
+    "heldItem": "cobblemon:life_orb",
+    "moveset": {
+        "1": "dynamicpunch",
+        "2": "firepunch",
+        "3": "thunderpunch",
+        "4": "icepunch"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

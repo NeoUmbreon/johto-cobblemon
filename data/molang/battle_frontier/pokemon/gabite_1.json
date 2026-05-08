@@ -1,0 +1,15 @@
+{
+    "species": "gabite",
+    "nature": "adamant",
+    "heldItem": "cobblemon:yache_berry",
+    "moveset": {
+        "1": "dragonrage",
+        "2": "sandtomb",
+        "3": "slash",
+        "4": "sandattack"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

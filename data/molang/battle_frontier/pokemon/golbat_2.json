@@ -1,0 +1,15 @@
+{
+    "species": "golbat",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "poisonfang",
+        "2": "aerialace",
+        "3": "zenheadbutt",
+        "4": "confuseray"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

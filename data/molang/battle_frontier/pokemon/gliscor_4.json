@@ -1,0 +1,15 @@
+{
+    "species": "gliscor",
+    "nature": "adamant",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "earthquake",
+        "2": "aerialace",
+        "3": "xscissor",
+        "4": "stoneedge"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

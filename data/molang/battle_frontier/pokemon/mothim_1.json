@@ -1,0 +1,15 @@
+{
+    "species": "mothim",
+    "nature": "modest",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "silverwind",
+        "2": "aircutter",
+        "3": "poisonpowder",
+        "4": "captivate"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

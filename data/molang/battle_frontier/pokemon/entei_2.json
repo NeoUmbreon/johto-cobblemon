@@ -1,0 +1,15 @@
+{
+    "species": "entei",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "firefang",
+        "2": "bite",
+        "3": "ironhead",
+        "4": "stoneedge"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "solrock",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "psywave",
+        "2": "rocktomb",
+        "3": "cosmicpower",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

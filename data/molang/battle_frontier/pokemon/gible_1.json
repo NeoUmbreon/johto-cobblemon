@@ -1,0 +1,15 @@
+{
+    "species": "gible",
+    "nature": "adamant",
+    "heldItem": "cobblemon:soft_sand",
+    "moveset": {
+        "1": "dragonrage",
+        "2": "sandtomb",
+        "3": "metalclaw",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

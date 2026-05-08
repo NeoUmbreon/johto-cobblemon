@@ -1,0 +1,15 @@
+{
+    "species": "regirock",
+    "nature": "careful",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "stoneedge",
+        "2": "hammerarm",
+        "3": "rest",
+        "4": "curse"
+    },
+    "evs": {
+        "hp": 252,
+        "spd": 252
+    }
+}

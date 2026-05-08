@@ -1,0 +1,15 @@
+{
+    "species": "sandshrew",
+    "nature": "adamant",
+    "heldItem": "cobblemon:soft_sand",
+    "moveset": {
+        "1": "dig",
+        "2": "rocktomb",
+        "3": "sandstorm",
+        "4": "sandattack"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "glaceon",
+    "nature": "modest",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "blizzard",
+        "2": "hyperbeam",
+        "3": "hail",
+        "4": "mirrorcoat"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

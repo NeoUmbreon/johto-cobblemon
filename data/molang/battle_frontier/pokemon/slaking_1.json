@@ -1,0 +1,15 @@
+{
+    "species": "slaking",
+    "nature": "impish",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "facade",
+        "2": "shadowclaw",
+        "3": "slackoff",
+        "4": "yawn"
+    },
+    "evs": {
+        "hp": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "mantyke",
+    "nature": "docile",
+    "heldItem": "cobblemon:mystic_water",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "aerialace",
+        "3": "icywind",
+        "4": "agility"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

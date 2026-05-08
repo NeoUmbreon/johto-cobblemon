@@ -1,0 +1,15 @@
+{
+    "species": "piplup",
+    "nature": "bashful",
+    "heldItem": "cobblemon:rindo_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "aerialace",
+        "3": "growl",
+        "4": "supersonic"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

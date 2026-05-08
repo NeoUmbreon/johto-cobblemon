@@ -1,0 +1,15 @@
+{
+    "species": "voltorb",
+    "nature": "modest",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "shockwave",
+        "2": "swift",
+        "3": "thunderwave",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

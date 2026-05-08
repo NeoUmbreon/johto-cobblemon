@@ -1,0 +1,16 @@
+{
+    "species": "venusaur",
+    "nature": "bold",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "ingrain",
+        "3": "leechseed",
+        "4": "sleeppowder"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

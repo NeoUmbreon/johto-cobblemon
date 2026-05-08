@@ -1,0 +1,15 @@
+{
+    "species": "pidgeot",
+    "nature": "adamant",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "wingattack",
+        "2": "facade",
+        "3": "tailwind",
+        "4": "sandattack"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

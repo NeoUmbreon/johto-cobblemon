@@ -1,0 +1,15 @@
+{
+    "species": "armaldo",
+    "nature": "adamant",
+    "heldItem": "cobblemon:choice_band",
+    "moveset": {
+        "1": "stoneedge",
+        "2": "superpower",
+        "3": "earthquake",
+        "4": "gigaimpact"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

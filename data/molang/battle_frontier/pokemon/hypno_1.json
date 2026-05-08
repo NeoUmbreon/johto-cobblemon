@@ -1,0 +1,15 @@
+{
+    "species": "hypno",
+    "nature": "brave",
+    "heldItem": "cobblemon:iron_ball",
+    "moveset": {
+        "1": "psychocut",
+        "2": "fling",
+        "3": "hypnosis",
+        "4": "trickroom"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

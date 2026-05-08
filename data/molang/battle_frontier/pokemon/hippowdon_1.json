@@ -1,0 +1,15 @@
+{
+    "species": "hippowdon",
+    "nature": "impish",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "earthquake",
+        "2": "crunch",
+        "3": "slackoff",
+        "4": "curse"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

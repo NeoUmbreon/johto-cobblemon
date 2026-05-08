@@ -1,0 +1,15 @@
+{
+    "species": "pidgeotto",
+    "nature": "adamant",
+    "heldItem": "cobblemon:rawst_berry",
+    "moveset": {
+        "1": "wingattack",
+        "2": "quickattack",
+        "3": "featherdance",
+        "4": "mirrormove"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

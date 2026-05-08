@@ -1,0 +1,16 @@
+{
+    "species": "ludicolo",
+    "nature": "impish",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "leechseed",
+        "2": "toxic",
+        "3": "doubleteam",
+        "4": "raindance"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

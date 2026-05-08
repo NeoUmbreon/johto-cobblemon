@@ -1,0 +1,15 @@
+{
+    "species": "vileplume",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "seedbomb",
+        "2": "drainpunch",
+        "3": "frustration",
+        "4": "swordsdance"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

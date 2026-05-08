@@ -1,0 +1,15 @@
+{
+    "species": "umbreon",
+    "nature": "impish",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "payback",
+        "2": "trumpcard",
+        "3": "curse",
+        "4": "moonlight"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

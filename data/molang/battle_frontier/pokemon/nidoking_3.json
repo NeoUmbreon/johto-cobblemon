@@ -1,0 +1,15 @@
+{
+    "species": "nidoking",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "earthpower",
+        "2": "sludgebomb",
+        "3": "icebeam",
+        "4": "shadowball"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

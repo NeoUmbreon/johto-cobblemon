@@ -1,0 +1,15 @@
+{
+    "species": "noctowl",
+    "nature": "quiet",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "airslash",
+        "2": "swift",
+        "3": "psychic",
+        "4": "reflect"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

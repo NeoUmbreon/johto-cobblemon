@@ -1,0 +1,15 @@
+{
+    "species": "bayleef",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "magicalleaf",
+        "2": "ancientpower",
+        "3": "safeguard",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

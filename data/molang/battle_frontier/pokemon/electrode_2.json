@@ -1,0 +1,15 @@
+{
+    "species": "electrode",
+    "nature": "timid",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "chargebeam",
+        "2": "thunderwave",
+        "3": "flash",
+        "4": "swagger"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

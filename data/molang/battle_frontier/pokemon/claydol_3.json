@@ -1,0 +1,15 @@
+{
+    "species": "claydol",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "earthpower",
+        "2": "psychic",
+        "3": "chargebeam",
+        "4": "icebeam"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

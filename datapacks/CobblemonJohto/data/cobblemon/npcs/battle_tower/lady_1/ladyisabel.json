@@ -1,0 +1,15 @@
+{
+    "presets": [
+        "cobblemon:battle_tower_trainer"
+    ],
+    "name": "Isabel",
+    "resourceIdentifier": "cobblemon:lady",
+    "config": [
+        {
+            "variableName": "class",
+            "displayName": "Battle Tower Trainer Class",
+            "type": "TEXT",
+            "defaultValue": "lady_1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "species": "ursaring",
+    "nature": "adamant",
+    "heldItem": "cobblemon:toxic_orb",
+    "moveset": {
+        "1": "facade",
+        "2": "superpower",
+        "3": "crunch",
+        "4": "protect"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "lunatone",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "ancientpower",
+        "2": "confusion",
+        "3": "cosmicpower",
+        "4": "reflect"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

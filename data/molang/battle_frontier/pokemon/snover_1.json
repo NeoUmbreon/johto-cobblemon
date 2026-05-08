@@ -1,0 +1,15 @@
+{
+    "species": "snover",
+    "nature": "adamant",
+    "heldItem": "cobblemon:never_melt_ice",
+    "moveset": {
+        "1": "icepunch",
+        "2": "razorleaf",
+        "3": "grasswhistle",
+        "4": "ingrain"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

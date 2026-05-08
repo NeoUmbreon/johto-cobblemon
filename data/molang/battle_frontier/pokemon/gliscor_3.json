@@ -1,0 +1,15 @@
+{
+    "species": "gliscor",
+    "nature": "jolly",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "guillotine",
+        "2": "earthquake",
+        "3": "uturn",
+        "4": "counter"
+    },
+    "evs": {
+        "hp": 252,
+        "spe": 252
+    }
+}

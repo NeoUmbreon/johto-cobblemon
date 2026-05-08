@@ -1,0 +1,15 @@
+{
+    "species": "rotom",
+    "nature": "modest",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "thundershock",
+        "2": "astonish",
+        "3": "thunderwave",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "cacturne",
+    "nature": "modest",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "darkpulse",
+        "3": "acid",
+        "4": "cottonspore"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

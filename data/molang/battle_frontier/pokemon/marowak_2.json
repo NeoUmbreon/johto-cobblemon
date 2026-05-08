@@ -1,0 +1,15 @@
+{
+    "species": "marowak",
+    "nature": "adamant",
+    "heldItem": "cobblemon:thick_club",
+    "moveset": {
+        "1": "bonerush",
+        "2": "firepunch",
+        "3": "thunderpunch",
+        "4": "rockslide"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

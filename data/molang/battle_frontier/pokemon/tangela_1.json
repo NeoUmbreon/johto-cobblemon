@@ -1,0 +1,15 @@
+{
+    "species": "tangela",
+    "nature": "bold",
+    "heldItem": "cobblemon:pecha_berry",
+    "moveset": {
+        "1": "megadrain",
+        "2": "ancientpower",
+        "3": "toxic",
+        "4": "bind"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

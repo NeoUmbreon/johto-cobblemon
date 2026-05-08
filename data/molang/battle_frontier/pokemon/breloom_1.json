@@ -1,0 +1,15 @@
+{
+    "species": "breloom",
+    "nature": "impish",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "seedbomb",
+        "2": "skyuppercut",
+        "3": "rockslide",
+        "4": "counter"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "vespiquen",
+    "nature": "adamant",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "attackorder",
+        "2": "defendorder",
+        "3": "healorder",
+        "4": "confuseray"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "snorlax",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "outrage",
+        "2": "superpower",
+        "3": "gunkshot",
+        "4": "seedbomb"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

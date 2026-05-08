@@ -1,0 +1,15 @@
+{
+    "species": "heatran",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "ironhead",
+        "2": "earthquake",
+        "3": "stoneedge",
+        "4": "crunch"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

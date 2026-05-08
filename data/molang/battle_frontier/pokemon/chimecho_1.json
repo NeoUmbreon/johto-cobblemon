@@ -1,0 +1,15 @@
+{
+    "species": "chimecho",
+    "nature": "calm",
+    "heldItem": "cobblemon:pecha_berry",
+    "moveset": {
+        "1": "psywave",
+        "2": "icywind",
+        "3": "healbell",
+        "4": "safeguard"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

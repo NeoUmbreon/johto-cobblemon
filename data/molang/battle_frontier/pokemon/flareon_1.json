@@ -1,0 +1,15 @@
+{
+    "species": "flareon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "firefang",
+        "2": "superpower",
+        "3": "curse",
+        "4": "batonpass"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

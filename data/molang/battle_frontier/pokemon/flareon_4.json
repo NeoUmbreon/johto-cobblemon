@@ -1,0 +1,15 @@
+{
+    "species": "flareon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "firefang",
+        "2": "gigaimpact",
+        "3": "superpower",
+        "4": "bite"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

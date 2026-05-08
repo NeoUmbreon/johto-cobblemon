@@ -1,0 +1,15 @@
+{
+    "species": "politoed",
+    "nature": "modest",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "hydropump",
+        "2": "icebeam",
+        "3": "psychic",
+        "4": "hypnosis"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

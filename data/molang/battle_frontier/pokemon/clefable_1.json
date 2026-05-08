@@ -1,0 +1,15 @@
+{
+    "species": "clefable",
+    "nature": "bashful",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "metronome",
+        "2": "doubleteam",
+        "3": "reflect",
+        "4": "followme"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

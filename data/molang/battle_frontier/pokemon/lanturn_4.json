@@ -1,0 +1,15 @@
+{
+    "species": "lanturn",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "surf",
+        "2": "thunderbolt",
+        "3": "icebeam",
+        "4": "signalbeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

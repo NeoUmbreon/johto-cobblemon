@@ -1,0 +1,15 @@
+{
+    "presets": [
+        "cobblemon:battle_tower_trainer"
+    ],
+    "name": "Camui",
+    "resourceIdentifier": "cobblemon:bugcatcher",
+    "config": [
+        {
+            "variableName": "class",
+            "displayName": "Battle Tower Trainer Class",
+            "type": "TEXT",
+            "defaultValue": "bugcatcher_2"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "species": "burmy",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "bugbite",
+        "2": "tackle",
+        "3": "snore",
+        "4": "protect"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

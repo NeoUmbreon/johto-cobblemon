@@ -1,0 +1,15 @@
+{
+    "species": "blaziken",
+    "nature": "adamant",
+    "heldItem": "cobblemon:passho_berry",
+    "moveset": {
+        "1": "blazekick",
+        "2": "earthquake",
+        "3": "shadowclaw",
+        "4": "stoneedge"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

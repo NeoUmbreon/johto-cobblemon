@@ -1,0 +1,15 @@
+{
+    "species": "wailord",
+    "nature": "adamant",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "waterfall",
+        "2": "avalanche",
+        "3": "earthquake",
+        "4": "curse"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

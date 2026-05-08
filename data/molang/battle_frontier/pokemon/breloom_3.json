@@ -1,0 +1,15 @@
+{
+    "species": "breloom",
+    "nature": "adamant",
+    "heldItem": "cobblemon:toxic_orb",
+    "moveset": {
+        "1": "dynamicpunch",
+        "2": "thunderpunch",
+        "3": "stoneedge",
+        "4": "facade"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

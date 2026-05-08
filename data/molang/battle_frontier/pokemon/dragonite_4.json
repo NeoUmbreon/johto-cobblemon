@@ -1,0 +1,15 @@
+{
+    "species": "dragonite",
+    "nature": "adamant",
+    "heldItem": "cobblemon:choice_band",
+    "moveset": {
+        "1": "outrage",
+        "2": "gigaimpact",
+        "3": "earthquake",
+        "4": "superpower"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

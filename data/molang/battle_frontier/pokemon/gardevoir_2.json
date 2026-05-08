@@ -1,0 +1,15 @@
+{
+    "species": "gardevoir",
+    "nature": "modest",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "thunderbolt",
+        "3": "calmmind",
+        "4": "rest"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

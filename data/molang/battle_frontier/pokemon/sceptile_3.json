@@ -1,0 +1,15 @@
+{
+    "species": "sceptile",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "leafblade",
+        "2": "xscissor",
+        "3": "nightslash",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

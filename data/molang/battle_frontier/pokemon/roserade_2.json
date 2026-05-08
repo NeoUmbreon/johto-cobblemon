@@ -1,0 +1,15 @@
+{
+    "species": "roserade",
+    "nature": "calm",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "leechseed",
+        "3": "ingrain",
+        "4": "synthesis"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

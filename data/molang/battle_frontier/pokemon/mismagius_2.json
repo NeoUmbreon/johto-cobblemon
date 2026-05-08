@@ -1,0 +1,15 @@
+{
+    "species": "mismagius",
+    "nature": "modest",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "shadowball",
+        "2": "confuseray",
+        "3": "perishsong",
+        "4": "meanlook"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

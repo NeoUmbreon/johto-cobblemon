@@ -1,0 +1,15 @@
+{
+    "presets": [
+        "cobblemon:battle_tower_trainer"
+    ],
+    "name": "Utah",
+    "resourceIdentifier": "cobblemon:idol",
+    "config": [
+        {
+            "variableName": "class",
+            "displayName": "Battle Tower Trainer Class",
+            "type": "TEXT",
+            "defaultValue": "idol_2"
+        }
+    ]
+}

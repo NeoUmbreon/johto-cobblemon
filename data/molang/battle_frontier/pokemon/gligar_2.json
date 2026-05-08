@@ -1,0 +1,15 @@
+{
+    "species": "gligar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "earthquake",
+        "2": "aerialace",
+        "3": "aquatail",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

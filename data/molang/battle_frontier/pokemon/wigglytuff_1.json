@@ -1,0 +1,15 @@
+{
+    "species": "wigglytuff",
+    "nature": "adamant",
+    "heldItem": "cobblemon:silk_scarf",
+    "moveset": {
+        "1": "secretpower",
+        "2": "grassknot",
+        "3": "wish",
+        "4": "sing"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "purugly",
+    "nature": "adamant",
+    "heldItem": "cobblemon:liechi_berry",
+    "moveset": {
+        "1": "bodyslam",
+        "2": "shadowclaw",
+        "3": "attract",
+        "4": "fakeout"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

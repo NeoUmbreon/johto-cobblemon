@@ -1,0 +1,15 @@
+{
+    "species": "arcanine",
+    "nature": "jolly",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "flareblitz",
+        "2": "thunderfang",
+        "3": "reversal",
+        "4": "endure"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

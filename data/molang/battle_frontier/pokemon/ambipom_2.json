@@ -1,0 +1,15 @@
+{
+    "species": "ambipom",
+    "nature": "jolly",
+    "heldItem": "cobblemon:metronome",
+    "moveset": {
+        "1": "lastresort",
+        "2": "thunderwave",
+        "3": "protect",
+        "4": "fakeout"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

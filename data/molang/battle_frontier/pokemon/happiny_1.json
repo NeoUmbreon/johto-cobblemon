@@ -1,0 +1,15 @@
+{
+    "species": "happiny",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "present",
+        "2": "sweetkiss",
+        "3": "copycat",
+        "4": "charm"
+    },
+    "evs": {
+        "hp": 252,
+        "def": 252
+    }
+}

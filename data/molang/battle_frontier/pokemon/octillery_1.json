@@ -1,0 +1,15 @@
+{
+    "species": "octillery",
+    "nature": "modest",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "octazooka",
+        "2": "icywind",
+        "3": "thunderwave",
+        "4": "focusenergy"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

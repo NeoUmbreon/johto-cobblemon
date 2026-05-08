@@ -1,0 +1,42 @@
+{  
+    "hitbox": "player",
+    "resourceIdentifier": "cobblemon:nursejoy",
+    "presets": [],
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:battle_tower_nursejoy_interaction"
+    },
+    "name": "Nurse Joy",
+    "autoHealParty": true,
+    "isMovable": false,  
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "isInvulnerable": true, 
+    "canDespawn": false,
+    "skill": 5,
+    "ai": [
+
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "core",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target",
+                    "stay_afloat"
+                ]
+            }
+        },
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "look_at_target"
+                ],
+                "1": [
+                    "look_at_entities"
+                ]
+            }
+        }
+    ]
+}

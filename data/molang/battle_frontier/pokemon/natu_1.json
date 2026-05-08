@@ -1,0 +1,15 @@
+{
+    "species": "natu",
+    "nature": "timid",
+    "heldItem": "cobblemon:twisted_spoon",
+    "moveset": {
+        "1": "nightshade",
+        "2": "aircutter",
+        "3": "ominouswind",
+        "4": "futuresight"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

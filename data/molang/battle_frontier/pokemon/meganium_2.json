@@ -1,0 +1,16 @@
+{
+    "species": "meganium",
+    "nature": "calm",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "leechseed",
+        "3": "toxic",
+        "4": "substitute"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

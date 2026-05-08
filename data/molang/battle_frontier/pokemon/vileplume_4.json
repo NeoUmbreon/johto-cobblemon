@@ -1,0 +1,15 @@
+{
+    "species": "vileplume",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "energyball",
+        "3": "hyperbeam",
+        "4": "synthesis"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

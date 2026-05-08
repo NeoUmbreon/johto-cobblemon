@@ -1,0 +1,15 @@
+{
+    "species": "swellow",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "pluck",
+        "2": "quickattack",
+        "3": "focusenergy",
+        "4": "growl"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

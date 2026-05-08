@@ -1,0 +1,15 @@
+{
+    "species": "ninjask",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "bugbite",
+        "2": "aerialace",
+        "3": "sandattack",
+        "4": "batonpass"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

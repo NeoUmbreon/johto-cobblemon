@@ -1,0 +1,15 @@
+{
+    "species": "tentacruel",
+    "nature": "modest",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "surf",
+        "2": "sludgebomb",
+        "3": "gigadrain",
+        "4": "mirrorcoat"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

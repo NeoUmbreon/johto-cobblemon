@@ -1,0 +1,15 @@
+{
+    "species": "totodile",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "dive",
+        "2": "slash",
+        "3": "screech",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

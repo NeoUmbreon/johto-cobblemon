@@ -1,0 +1,15 @@
+{
+    "species": "psyduck",
+    "nature": "modest",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "watergun",
+        "2": "confusion",
+        "3": "watersport",
+        "4": "disable"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

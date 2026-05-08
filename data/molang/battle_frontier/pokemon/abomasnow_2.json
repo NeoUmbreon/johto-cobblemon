@@ -1,0 +1,16 @@
+{
+    "species": "abomasnow",
+    "nature": "bold",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "sheercold",
+        "3": "ingrain",
+        "4": "leechseed"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

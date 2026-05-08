@@ -1,0 +1,15 @@
+{
+    "species": "lapras",
+    "nature": "adamant",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "aquatail",
+        "2": "avalanche",
+        "3": "iceshard",
+        "4": "curse"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "haunter",
+    "nature": "timid",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "nightshade",
+        "2": "toxic",
+        "3": "confuseray",
+        "4": "grudge"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

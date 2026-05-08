@@ -1,0 +1,15 @@
+{
+    "species": "entei",
+    "nature": "modest",
+    "heldItem": "cobblemon:shuca_berry",
+    "moveset": {
+        "1": "fireblast",
+        "2": "solarbeam",
+        "3": "hyperbeam",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

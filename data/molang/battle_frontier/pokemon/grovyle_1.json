@@ -1,0 +1,15 @@
+{
+    "species": "grovyle",
+    "nature": "timid",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "magicalleaf",
+        "2": "swift",
+        "3": "mudslap",
+        "4": "detect"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

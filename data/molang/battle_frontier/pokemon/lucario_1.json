@@ -1,0 +1,15 @@
+{
+    "species": "lucario",
+    "nature": "modest",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "aurasphere",
+        "2": "flashcannon",
+        "3": "waterpulse",
+        "4": "roar"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

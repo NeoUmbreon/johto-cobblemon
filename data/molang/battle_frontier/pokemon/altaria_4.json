@@ -1,0 +1,15 @@
+{
+    "species": "altaria",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "dracometeor",
+        "2": "aircutter",
+        "3": "flamethrower",
+        "4": "icebeam"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

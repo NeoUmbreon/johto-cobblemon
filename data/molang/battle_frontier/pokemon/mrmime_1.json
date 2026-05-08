@@ -1,0 +1,15 @@
+{
+    "species": "mrmime",
+    "nature": "calm",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "signalbeam",
+        "3": "copycat",
+        "4": "mimic"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

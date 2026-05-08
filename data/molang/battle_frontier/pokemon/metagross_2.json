@@ -1,0 +1,15 @@
+{
+    "species": "metagross",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "psychic",
+        "2": "flashcannon",
+        "3": "shadowball",
+        "4": "sludgebomb"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

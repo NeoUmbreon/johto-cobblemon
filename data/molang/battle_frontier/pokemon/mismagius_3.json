@@ -1,0 +1,15 @@
+{
+    "species": "mismagius",
+    "nature": "timid",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "shadowball",
+        "2": "energyball",
+        "3": "icywind",
+        "4": "destinybond"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

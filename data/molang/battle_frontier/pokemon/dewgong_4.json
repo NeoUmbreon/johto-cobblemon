@@ -1,0 +1,15 @@
+{
+    "species": "dewgong",
+    "nature": "calm",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "icebeam",
+        "3": "signalbeam",
+        "4": "rest"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

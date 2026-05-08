@@ -1,0 +1,15 @@
+{
+    "species": "larvitar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:liechi_berry",
+    "moveset": {
+        "1": "rockslide",
+        "2": "dig",
+        "3": "bite",
+        "4": "scaryface"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

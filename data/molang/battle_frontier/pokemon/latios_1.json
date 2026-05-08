@@ -1,0 +1,15 @@
+{
+    "species": "latios",
+    "nature": "calm",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "psychic",
+        "2": "dragonpulse",
+        "3": "thunderwave",
+        "4": "calmmind"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

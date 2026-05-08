@@ -1,0 +1,16 @@
+{
+    "species": "registeel",
+    "nature": "adamant",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "ironhead",
+        "2": "hammerarm",
+        "3": "earthquake",
+        "4": "curse"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

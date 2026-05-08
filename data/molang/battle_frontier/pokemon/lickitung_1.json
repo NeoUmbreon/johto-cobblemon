@@ -1,0 +1,15 @@
+{
+    "species": "lickitung",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "secretpower",
+        "2": "rocktomb",
+        "3": "lick",
+        "4": "screech"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

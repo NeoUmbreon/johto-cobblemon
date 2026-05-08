@@ -1,0 +1,15 @@
+{
+    "species": "lunatone",
+    "nature": "modest",
+    "heldItem": "cobblemon:passho_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "ancientpower",
+        "3": "shadowball",
+        "4": "cosmicpower"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

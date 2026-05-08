@@ -1,0 +1,15 @@
+{
+    "species": "skuntank",
+    "nature": "jolly",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "poisonjab",
+        "2": "nightslash",
+        "3": "crunch",
+        "4": "explosion"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

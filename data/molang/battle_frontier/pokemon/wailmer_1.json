@@ -1,0 +1,15 @@
+{
+    "species": "wailmer",
+    "nature": "modest",
+    "heldItem": "cobblemon:sea_incense",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "icywind",
+        "3": "roar",
+        "4": "mist"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

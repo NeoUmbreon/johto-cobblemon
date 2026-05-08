@@ -1,0 +1,15 @@
+{
+    "species": "rhydon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "earthquake",
+        "2": "stoneedge",
+        "3": "megahorn",
+        "4": "horndrill"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

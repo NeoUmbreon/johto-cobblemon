@@ -1,0 +1,15 @@
+{
+    "species": "tentacruel",
+    "nature": "timid",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "sludgebomb",
+        "3": "icywind",
+        "4": "barrier"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "zangoose",
+    "nature": "adamant",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "scratch",
+        "2": "pursuit",
+        "3": "detect",
+        "4": "leer"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

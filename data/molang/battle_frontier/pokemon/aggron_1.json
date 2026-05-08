@@ -1,0 +1,15 @@
+{
+    "species": "aggron",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "ironhead",
+        "2": "rockslide",
+        "3": "sandstorm",
+        "4": "screech"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

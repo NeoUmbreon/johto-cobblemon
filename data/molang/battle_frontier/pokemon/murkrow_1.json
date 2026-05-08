@@ -1,0 +1,15 @@
+{
+    "species": "murkrow",
+    "nature": "jolly",
+    "heldItem": "cobblemon:black_glasses",
+    "moveset": {
+        "1": "feintattack",
+        "2": "wingattack",
+        "3": "torment",
+        "4": "taunt"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

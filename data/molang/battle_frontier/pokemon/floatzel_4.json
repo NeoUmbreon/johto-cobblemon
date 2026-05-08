@@ -1,0 +1,15 @@
+{
+    "species": "floatzel",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_fang",
+    "moveset": {
+        "1": "aquatail",
+        "2": "icefang",
+        "3": "crunch",
+        "4": "brickbreak"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

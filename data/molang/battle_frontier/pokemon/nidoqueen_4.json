@@ -1,0 +1,15 @@
+{
+    "species": "nidoqueen",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "earthquake",
+        "2": "poisonjab",
+        "3": "superpower",
+        "4": "crunch"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

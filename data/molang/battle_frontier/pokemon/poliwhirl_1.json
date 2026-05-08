@@ -1,0 +1,15 @@
+{
+    "species": "poliwhirl",
+    "nature": "hardy",
+    "heldItem": "cobblemon:liechi_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "doubleslap",
+        "3": "mist",
+        "4": "raindance"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

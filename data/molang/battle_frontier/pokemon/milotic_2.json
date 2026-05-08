@@ -1,0 +1,15 @@
+{
+    "species": "milotic",
+    "nature": "impish",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "toxic",
+        "2": "confuseray",
+        "3": "doubleteam",
+        "4": "aquaring"
+    },
+    "evs": {
+        "hp": 252,
+        "def": 252
+    }
+}

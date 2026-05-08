@@ -1,0 +1,15 @@
+{
+    "species": "budew",
+    "nature": "calm",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "megadrain",
+        "2": "toxic",
+        "3": "growth",
+        "4": "worryseed"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

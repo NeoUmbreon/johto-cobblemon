@@ -1,0 +1,15 @@
+{
+    "species": "lopunny",
+    "nature": "jolly",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "dizzypunch",
+        "2": "firepunch",
+        "3": "thunderpunch",
+        "4": "icepunch"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

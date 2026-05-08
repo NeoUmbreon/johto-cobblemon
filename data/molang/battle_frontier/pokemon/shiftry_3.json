@@ -1,0 +1,15 @@
+{
+    "species": "shiftry",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "leafstorm",
+        "2": "darkpulse",
+        "3": "focusblast",
+        "4": "shadowball"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

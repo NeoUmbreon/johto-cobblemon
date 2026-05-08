@@ -1,0 +1,15 @@
+{
+    "species": "weezing",
+    "nature": "modest",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "flamethrower",
+        "3": "shadowball",
+        "4": "destinybond"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "staraptor",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "return",
+        "2": "aerialace",
+        "3": "doubleteam",
+        "4": "roost"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

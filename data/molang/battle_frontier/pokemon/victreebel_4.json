@@ -1,0 +1,15 @@
+{
+    "species": "victreebel",
+    "nature": "modest",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "solarbeam",
+        "2": "sludgebomb",
+        "3": "wringout",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

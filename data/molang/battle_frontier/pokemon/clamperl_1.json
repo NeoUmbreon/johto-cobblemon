@@ -1,0 +1,15 @@
+{
+    "species": "clamperl",
+    "nature": "bold",
+    "heldItem": "cobblemon:deep_sea_scale",
+    "moveset": {
+        "1": "whirlpool",
+        "2": "toxic",
+        "3": "irondefense",
+        "4": "protect"
+    },
+    "evs": {
+        "hp": 252,
+        "def": 252
+    }
+}

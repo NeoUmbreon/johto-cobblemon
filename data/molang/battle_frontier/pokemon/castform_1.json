@@ -1,0 +1,15 @@
+{
+    "species": "castform",
+    "nature": "timid",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "weatherball",
+        "2": "sunnyday",
+        "3": "raindance",
+        "4": "hail"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

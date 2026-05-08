@@ -1,0 +1,15 @@
+{
+    "species": "wigglytuff",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "hypervoice",
+        "2": "shadowball",
+        "3": "sing",
+        "4": "dreameater"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

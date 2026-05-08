@@ -1,0 +1,15 @@
+{
+    "species": "cubone",
+    "nature": "adamant",
+    "heldItem": "cobblemon:soft_sand",
+    "moveset": {
+        "1": "boneclub",
+        "2": "headbutt",
+        "3": "brickbreak",
+        "4": "leer"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

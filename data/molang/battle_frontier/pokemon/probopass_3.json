@@ -1,0 +1,15 @@
+{
+    "species": "probopass",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "stoneedge",
+        "2": "ironhead",
+        "3": "earthquake",
+        "4": "explosion"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

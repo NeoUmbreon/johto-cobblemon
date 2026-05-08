@@ -1,0 +1,15 @@
+{
+    "species": "rampardos",
+    "nature": "brave",
+    "heldItem": "cobblemon:iron_ball",
+    "moveset": {
+        "1": "stoneedge",
+        "2": "payback",
+        "3": "avalanche",
+        "4": "fling"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "staravia",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sharp_beak",
+    "moveset": {
+        "1": "endeavor",
+        "2": "wingattack",
+        "3": "quickattack",
+        "4": "whirlwind"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

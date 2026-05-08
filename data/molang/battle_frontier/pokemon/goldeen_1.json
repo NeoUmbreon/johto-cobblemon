@@ -1,0 +1,15 @@
+{
+    "species": "goldeen",
+    "nature": "modest",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "psybeam",
+        "3": "supersonic",
+        "4": "raindance"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

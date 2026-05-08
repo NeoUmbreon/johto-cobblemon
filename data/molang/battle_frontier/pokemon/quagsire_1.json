@@ -1,0 +1,15 @@
+{
+    "species": "quagsire",
+    "nature": "adamant",
+    "heldItem": "cobblemon:rindo_berry",
+    "moveset": {
+        "1": "earthquake",
+        "2": "aquatail",
+        "3": "brickbreak",
+        "4": "counter"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

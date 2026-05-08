@@ -1,0 +1,15 @@
+{
+    "species": "spoink",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "psywave",
+        "2": "swift",
+        "3": "magiccoat",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

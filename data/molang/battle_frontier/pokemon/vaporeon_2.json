@@ -1,0 +1,15 @@
+{
+    "species": "vaporeon",
+    "nature": "modest",
+    "heldItem": "cobblemon:damp_rock",
+    "moveset": {
+        "1": "hydropump",
+        "2": "icebeam",
+        "3": "acidarmor",
+        "4": "raindance"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

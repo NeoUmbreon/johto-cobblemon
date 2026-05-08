@@ -1,0 +1,15 @@
+{
+    "species": "pachirisu",
+    "nature": "jolly",
+    "heldItem": "cobblemon:magnet",
+    "moveset": {
+        "1": "spark",
+        "2": "quickattack",
+        "3": "bite",
+        "4": "sweetkiss"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

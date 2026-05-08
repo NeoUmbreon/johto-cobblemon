@@ -1,0 +1,15 @@
+{
+    "species": "golduck",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "aquatail",
+        "2": "crosschop",
+        "3": "icepunch",
+        "4": "zenheadbutt"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

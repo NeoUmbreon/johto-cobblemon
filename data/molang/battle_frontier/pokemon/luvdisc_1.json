@@ -1,0 +1,15 @@
+{
+    "species": "luvdisc",
+    "nature": "timid",
+    "heldItem": "cobblemon:damp_rock",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "attract",
+        "3": "sweetkiss",
+        "4": "raindance"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

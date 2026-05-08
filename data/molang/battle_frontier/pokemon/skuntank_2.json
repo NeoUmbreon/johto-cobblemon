@@ -1,0 +1,15 @@
+{
+    "species": "skuntank",
+    "nature": "jolly",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "crunch",
+        "2": "toxic",
+        "3": "swagger",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "hp": 252,
+        "spe": 252
+    }
+}

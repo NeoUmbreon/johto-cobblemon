@@ -1,0 +1,15 @@
+{
+    "species": "pinsir",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "xscissor",
+        "2": "earthquake",
+        "3": "closecombat",
+        "4": "guillotine"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

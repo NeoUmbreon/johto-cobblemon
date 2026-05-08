@@ -1,0 +1,15 @@
+{
+    "species": "exeggutor",
+    "nature": "modest",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "solarbeam",
+        "2": "psychic",
+        "3": "synthesis",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

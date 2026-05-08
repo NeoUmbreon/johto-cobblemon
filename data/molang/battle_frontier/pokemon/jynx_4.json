@@ -1,0 +1,15 @@
+{
+    "species": "jynx",
+    "nature": "modest",
+    "heldItem": "cobblemon:choice_specs",
+    "moveset": {
+        "1": "icebeam",
+        "2": "psychic",
+        "3": "focusblast",
+        "4": "shadowball"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

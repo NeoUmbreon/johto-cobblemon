@@ -1,0 +1,15 @@
+{
+    "species": "bibarel",
+    "nature": "quirky",
+    "heldItem": "cobblemon:chople_berry",
+    "moveset": {
+        "1": "headbutt",
+        "2": "waterpulse",
+        "3": "quickattack",
+        "4": "growl"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,1 @@
+c.pokemon.owner.has_tag('BattleTowerReady') ? q.cancel;

@@ -1,0 +1,15 @@
+{
+    "species": "marshtomp",
+    "nature": "quiet",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "muddywater",
+        "2": "earthquake",
+        "3": "ancientpower",
+        "4": "protect"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

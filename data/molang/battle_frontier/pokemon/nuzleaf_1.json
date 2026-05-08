@@ -1,0 +1,15 @@
+{
+    "species": "nuzleaf",
+    "nature": "adamant",
+    "heldItem": "cobblemon:aspear_berry",
+    "moveset": {
+        "1": "razorleaf",
+        "2": "feintattack",
+        "3": "swagger",
+        "4": "harden"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

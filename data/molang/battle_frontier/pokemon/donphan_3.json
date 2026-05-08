@@ -1,0 +1,15 @@
+{
+    "species": "donphan",
+    "nature": "brave",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "earthquake",
+        "2": "gyroball",
+        "3": "firefang",
+        "4": "thunderfang"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

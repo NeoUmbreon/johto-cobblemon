@@ -1,0 +1,15 @@
+{
+    "species": "dugtrio",
+    "nature": "jolly",
+    "heldItem": "cobblemon:grip_claw",
+    "moveset": {
+        "1": "earthquake",
+        "2": "rockslide",
+        "3": "astonish",
+        "4": "sandtomb"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

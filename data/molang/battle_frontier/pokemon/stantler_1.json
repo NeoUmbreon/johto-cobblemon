@@ -1,0 +1,15 @@
+{
+    "species": "stantler",
+    "nature": "adamant",
+    "heldItem": "cobblemon:liechi_berry",
+    "moveset": {
+        "1": "stomp",
+        "2": "bite",
+        "3": "imprison",
+        "4": "confuseray"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

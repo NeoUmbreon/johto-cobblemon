@@ -1,0 +1,20 @@
+t.nursejoy = v.player.data.battle_tower.npc;
+
+v.won ? {
+    v.player.data.battle_tower.battle_num > v.player.data.battle_tower.streak ? { v.player.data.battle_tower.streak = v.player.data.battle_tower.battle_num };
+    t.nursejoy.data.battle_num = v.player.data.battle_tower.battle_num + 1;
+    t.nursejoy.run_dialogue(v.player, 'battle_tower_nursejoy_post_battle');
+} : {
+    v.player.party.heal;
+    v.player.data.battle_tower.streak = 0;
+};
+
+for_each(t.npc, t.nursejoy.data.npcs, {
+    q.run_command('tp ' + t.npc.uuid + ' -800 -50000 -280');
+    '^c2me compatibility, otherwise i would love to just do t.npc.discard';
+});
+
+t.nursejoy.remove_tag('Locked');
+v.player.remove_tag('BattleTowerReady');
+q.delete_variable(v.player.data.battle_tower, 'npc');
+v.player.save_data;

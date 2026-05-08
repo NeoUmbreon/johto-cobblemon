@@ -1,0 +1,15 @@
+{
+    "species": "bulbasaur",
+    "nature": "modest",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "magicalleaf",
+        "2": "toxic",
+        "3": "leechseed",
+        "4": "sweetscent"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

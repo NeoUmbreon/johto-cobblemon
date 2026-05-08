@@ -1,0 +1,15 @@
+{
+    "species": "monferno",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "blazekick",
+        "2": "brickbreak",
+        "3": "rockslide",
+        "4": "torment"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

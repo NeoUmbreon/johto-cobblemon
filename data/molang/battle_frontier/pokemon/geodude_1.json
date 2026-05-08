@@ -1,0 +1,15 @@
+{
+    "species": "geodude",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "magnitude",
+        "2": "rockblast",
+        "3": "strength",
+        "4": "protect"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

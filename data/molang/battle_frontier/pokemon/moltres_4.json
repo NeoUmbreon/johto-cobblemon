@@ -1,0 +1,15 @@
+{
+    "species": "moltres",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "overheat",
+        "2": "airslash",
+        "3": "ancientpower",
+        "4": "ominouswind"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

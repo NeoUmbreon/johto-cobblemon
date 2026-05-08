@@ -1,0 +1,15 @@
+{
+    "species": "lanturn",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "hydropump",
+        "2": "thunder",
+        "3": "blizzard",
+        "4": "raindance"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

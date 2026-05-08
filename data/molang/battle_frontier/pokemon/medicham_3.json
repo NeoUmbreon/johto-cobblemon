@@ -1,0 +1,15 @@
+{
+    "species": "medicham",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "psychic",
+        "2": "focusblast",
+        "3": "shadowball",
+        "4": "calmmind"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

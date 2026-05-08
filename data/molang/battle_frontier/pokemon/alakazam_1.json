@@ -1,0 +1,15 @@
+{
+    "species": "alakazam",
+    "nature": "timid",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "psychic",
+        "2": "shadowball",
+        "3": "calmmind",
+        "4": "futuresight"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

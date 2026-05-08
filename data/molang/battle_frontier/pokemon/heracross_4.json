@@ -1,0 +1,15 @@
+{
+    "species": "heracross",
+    "nature": "jolly",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "megahorn",
+        "2": "earthquake",
+        "3": "reversal",
+        "4": "endure"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

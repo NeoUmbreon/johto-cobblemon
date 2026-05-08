@@ -1,0 +1,15 @@
+{
+    "species": "venomoth",
+    "nature": "modest",
+    "heldItem": "cobblemon:silver_powder",
+    "moveset": {
+        "1": "bugbuzz",
+        "2": "sludgebomb",
+        "3": "psychic",
+        "4": "supersonic"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

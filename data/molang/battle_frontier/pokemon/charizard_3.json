@@ -1,0 +1,15 @@
+{
+    "species": "charizard",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "flareblitz",
+        "2": "earthquake",
+        "3": "crunch",
+        "4": "dragonclaw"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

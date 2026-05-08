@@ -1,0 +1,15 @@
+{
+    "species": "numel",
+    "nature": "serious",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "magnitude",
+        "2": "ember",
+        "3": "rocktomb",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

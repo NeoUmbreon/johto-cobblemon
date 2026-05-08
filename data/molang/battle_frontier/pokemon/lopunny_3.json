@@ -1,0 +1,15 @@
+{
+    "species": "lopunny",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "chargebeam",
+        "2": "icebeam",
+        "3": "shadowball",
+        "4": "focusblast"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

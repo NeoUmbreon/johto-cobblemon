@@ -1,0 +1,15 @@
+{
+    "species": "golduck",
+    "nature": "modest",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "hydropump",
+        "2": "psychic",
+        "3": "icebeam",
+        "4": "signalbeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

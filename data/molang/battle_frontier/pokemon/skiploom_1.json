@@ -1,0 +1,15 @@
+{
+    "species": "skiploom",
+    "nature": "docile",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "megadrain",
+        "2": "aerialace",
+        "3": "confusion",
+        "4": "cottonspore"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

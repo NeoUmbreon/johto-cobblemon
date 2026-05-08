@@ -1,0 +1,15 @@
+{
+    "species": "omastar",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "stoneedge",
+        "3": "icebeam",
+        "4": "toxicspikes"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

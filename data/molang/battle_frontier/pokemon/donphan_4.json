@@ -1,0 +1,15 @@
+{
+    "species": "donphan",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "earthquake",
+        "2": "stoneedge",
+        "3": "seedbomb",
+        "4": "fissure"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

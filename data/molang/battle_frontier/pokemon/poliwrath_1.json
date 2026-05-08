@@ -1,0 +1,15 @@
+{
+    "species": "poliwrath",
+    "nature": "modest",
+    "heldItem": "cobblemon:rindo_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "vacuumwave",
+        "3": "psychic",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

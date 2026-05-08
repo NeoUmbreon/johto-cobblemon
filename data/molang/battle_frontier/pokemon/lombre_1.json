@@ -1,0 +1,15 @@
+{
+    "species": "lombre",
+    "nature": "quiet",
+    "heldItem": "cobblemon:damp_rock",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "megadrain",
+        "3": "fakeout",
+        "4": "raindance"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

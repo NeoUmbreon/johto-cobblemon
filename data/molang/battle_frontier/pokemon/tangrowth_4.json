@@ -1,0 +1,15 @@
+{
+    "species": "tangrowth",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "powerwhip",
+        "2": "earthquake",
+        "3": "aerialace",
+        "4": "brickbreak"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

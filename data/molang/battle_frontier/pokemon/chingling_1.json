@@ -1,0 +1,15 @@
+{
+    "species": "chingling",
+    "nature": "modest",
+    "heldItem": "cobblemon:twisted_spoon",
+    "moveset": {
+        "1": "confusion",
+        "2": "swift",
+        "3": "disable",
+        "4": "growl"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

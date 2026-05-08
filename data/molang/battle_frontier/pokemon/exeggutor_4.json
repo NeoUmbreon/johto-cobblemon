@@ -1,0 +1,15 @@
+{
+    "species": "exeggutor",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "leafstorm",
+        "2": "psychic",
+        "3": "sludgebomb",
+        "4": "ancientpower"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "whiscash",
+    "nature": "adamant",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "aquatail",
+        "2": "earthquake",
+        "3": "rockslide",
+        "4": "thrash"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

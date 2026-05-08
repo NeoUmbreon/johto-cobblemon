@@ -1,0 +1,15 @@
+{
+    "species": "exploud",
+    "nature": "adamant",
+    "heldItem": "cobblemon:life_orb",
+    "moveset": {
+        "1": "facade",
+        "2": "earthquake",
+        "3": "avalanche",
+        "4": "crunch"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "magnemite",
+    "nature": "bold",
+    "heldItem": "cobblemon:rawst_berry",
+    "moveset": {
+        "1": "shockwave",
+        "2": "mirrorshot",
+        "3": "metalsound",
+        "4": "reflect"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

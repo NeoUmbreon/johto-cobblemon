@@ -1,0 +1,15 @@
+{
+    "species": "infernape",
+    "nature": "jolly",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "closecombat",
+        "2": "firepunch",
+        "3": "uturn",
+        "4": "fakeout"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "armaldo",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "crushclaw",
+        "2": "aquatail",
+        "3": "aerialace",
+        "4": "swagger"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

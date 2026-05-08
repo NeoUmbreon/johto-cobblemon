@@ -1,0 +1,15 @@
+{
+    "species": "magneton",
+    "nature": "modest",
+    "heldItem": "cobblemon:shuca_berry",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "mirrorshot",
+        "3": "thunderwave",
+        "4": "magnetrise"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

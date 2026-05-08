@@ -1,0 +1,15 @@
+{
+    "species": "forretress",
+    "nature": "adamant",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "dig",
+        "2": "swagger",
+        "3": "toxic",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

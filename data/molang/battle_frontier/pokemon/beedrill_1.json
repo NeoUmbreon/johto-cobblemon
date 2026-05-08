@@ -1,0 +1,15 @@
+{
+    "species": "beedrill",
+    "nature": "jolly",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "twineedle",
+        "2": "toxic",
+        "3": "assurance",
+        "4": "agility"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

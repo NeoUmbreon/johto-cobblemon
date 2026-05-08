@@ -1,0 +1,15 @@
+{
+    "species": "milotic",
+    "nature": "modest",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "icebeam",
+        "3": "dragonpulse",
+        "4": "recover"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

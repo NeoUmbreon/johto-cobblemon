@@ -1,0 +1,15 @@
+{
+    "species": "empoleon",
+    "nature": "brave",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "surf",
+        "2": "earthquake",
+        "3": "blizzard",
+        "4": "signalbeam"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

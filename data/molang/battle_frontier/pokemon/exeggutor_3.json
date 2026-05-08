@@ -1,0 +1,15 @@
+{
+    "species": "exeggutor",
+    "nature": "brave",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "woodhammer",
+        "2": "zenheadbutt",
+        "3": "trickroom",
+        "4": "explosion"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

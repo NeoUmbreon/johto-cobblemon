@@ -1,0 +1,15 @@
+{
+    "species": "banette",
+    "nature": "adamant",
+    "heldItem": "cobblemon:rawst_berry",
+    "moveset": {
+        "1": "shadowsneak",
+        "2": "knockoff",
+        "3": "willowisp",
+        "4": "spite"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

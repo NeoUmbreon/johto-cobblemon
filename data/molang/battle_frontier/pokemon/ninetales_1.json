@@ -1,0 +1,15 @@
+{
+    "species": "ninetales",
+    "nature": "timid",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "fireblast",
+        "2": "solarbeam",
+        "3": "attract",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

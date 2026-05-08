@@ -1,0 +1,15 @@
+{
+    "species": "scizor",
+    "nature": "careful",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "metalclaw",
+        "2": "nightslash",
+        "3": "irondefense",
+        "4": "roost"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

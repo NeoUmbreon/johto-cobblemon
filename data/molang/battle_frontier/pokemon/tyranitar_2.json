@@ -1,0 +1,15 @@
+{
+    "species": "tyranitar",
+    "nature": "jolly",
+    "heldItem": "cobblemon:choice_scarf",
+    "moveset": {
+        "1": "firepunch",
+        "2": "thunderpunch",
+        "3": "icepunch",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

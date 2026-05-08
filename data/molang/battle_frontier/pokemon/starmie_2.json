@@ -1,0 +1,15 @@
+{
+    "species": "starmie",
+    "nature": "timid",
+    "heldItem": "cobblemon:wide_lens",
+    "moveset": {
+        "1": "hydropump",
+        "2": "blizzard",
+        "3": "thunder",
+        "4": "recover"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

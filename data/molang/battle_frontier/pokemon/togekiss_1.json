@@ -1,0 +1,15 @@
+{
+    "species": "togekiss",
+    "nature": "adamant",
+    "heldItem": "cobblemon:power_herb",
+    "moveset": {
+        "1": "skyattack",
+        "2": "extremespeed",
+        "3": "drainpunch",
+        "4": "roost"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

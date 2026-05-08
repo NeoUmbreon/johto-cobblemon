@@ -1,0 +1,15 @@
+{
+    "species": "sunflora",
+    "nature": "calm",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "megadrain",
+        "2": "ingrain",
+        "3": "leechseed",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

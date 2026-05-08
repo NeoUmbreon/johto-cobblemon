@@ -1,0 +1,15 @@
+{
+    "species": "steelix",
+    "nature": "impish",
+    "heldItem": "cobblemon:passho_berry",
+    "moveset": {
+        "1": "earthquake",
+        "2": "ironhead",
+        "3": "crunch",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

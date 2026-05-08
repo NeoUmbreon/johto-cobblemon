@@ -1,0 +1,15 @@
+{
+    "species": "granbull",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "return",
+        "2": "rockslide",
+        "3": "crunch",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

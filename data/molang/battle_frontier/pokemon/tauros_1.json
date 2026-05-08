@@ -1,0 +1,15 @@
+{
+    "species": "tauros",
+    "nature": "jolly",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "thrash",
+        "2": "zenheadbutt",
+        "3": "pursuit",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

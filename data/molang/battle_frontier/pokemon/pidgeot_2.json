@@ -1,0 +1,15 @@
+{
+    "species": "pidgeot",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "return",
+        "2": "aerialace",
+        "3": "steelwing",
+        "4": "uturn"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

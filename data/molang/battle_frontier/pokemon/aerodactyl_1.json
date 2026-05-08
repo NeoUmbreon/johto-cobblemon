@@ -1,0 +1,15 @@
+{
+    "species": "aerodactyl",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "rockslide",
+        "2": "aerialace",
+        "3": "torment",
+        "4": "taunt"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

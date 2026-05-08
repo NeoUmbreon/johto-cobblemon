@@ -1,0 +1,15 @@
+{
+    "species": "regirock",
+    "nature": "impish",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "rockslide",
+        "2": "earthquake",
+        "3": "brickbreak",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "gallade",
+    "nature": "careful",
+    "heldItem": "cobblemon:kasib_berry",
+    "moveset": {
+        "1": "zenheadbutt",
+        "2": "brickbreak",
+        "3": "thunderwave",
+        "4": "confuseray"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

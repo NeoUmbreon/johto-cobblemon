@@ -1,0 +1,15 @@
+{
+    "species": "bronzong",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "zenheadbutt",
+        "2": "ironhead",
+        "3": "earthquake",
+        "4": "explosion"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

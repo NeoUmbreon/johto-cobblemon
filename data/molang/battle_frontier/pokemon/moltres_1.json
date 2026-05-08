@@ -1,0 +1,15 @@
+{
+    "species": "moltres",
+    "nature": "timid",
+    "heldItem": "cobblemon:passho_berry",
+    "moveset": {
+        "1": "flamethrower",
+        "2": "airslash",
+        "3": "ancientpower",
+        "4": "roost"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

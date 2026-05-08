@@ -1,0 +1,15 @@
+{
+    "species": "regirock",
+    "nature": "careful",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "stoneedge",
+        "2": "earthquake",
+        "3": "hammerarm",
+        "4": "explosion"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

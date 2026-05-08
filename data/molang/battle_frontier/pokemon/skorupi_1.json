@@ -1,0 +1,15 @@
+{
+    "species": "skorupi",
+    "nature": "impish",
+    "heldItem": "cobblemon:poison_barb",
+    "moveset": {
+        "1": "poisonfang",
+        "2": "bugbite",
+        "3": "bite",
+        "4": "toxicspikes"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

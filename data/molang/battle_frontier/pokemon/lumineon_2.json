@@ -1,0 +1,15 @@
+{
+    "species": "lumineon",
+    "nature": "modest",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "surf",
+        "2": "silverwind",
+        "3": "attract",
+        "4": "aquaring"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

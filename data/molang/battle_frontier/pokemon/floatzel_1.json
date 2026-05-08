@@ -1,0 +1,15 @@
+{
+    "species": "floatzel",
+    "nature": "jolly",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "waterfall",
+        "2": "icepunch",
+        "3": "quickattack",
+        "4": "raindance"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

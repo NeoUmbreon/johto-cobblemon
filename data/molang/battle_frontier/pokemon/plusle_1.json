@@ -1,0 +1,15 @@
+{
+    "species": "plusle",
+    "nature": "timid",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "shockwave",
+        "2": "swift",
+        "3": "faketears",
+        "4": "helpinghand"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "regice",
+    "nature": "bold",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "icebeam",
+        "2": "flashcannon",
+        "3": "ancientpower",
+        "4": "rest"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

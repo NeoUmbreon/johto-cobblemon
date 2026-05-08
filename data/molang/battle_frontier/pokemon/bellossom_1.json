@@ -1,0 +1,15 @@
+{
+    "species": "bellossom",
+    "nature": "modest",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "magicalleaf",
+        "2": "acid",
+        "3": "tickle",
+        "4": "stunspore"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

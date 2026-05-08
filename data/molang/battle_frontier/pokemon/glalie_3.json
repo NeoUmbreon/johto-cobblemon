@@ -1,0 +1,15 @@
+{
+    "species": "glalie",
+    "nature": "modest",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "icebeam",
+        "2": "shadowball",
+        "3": "signalbeam",
+        "4": "waterpulse"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

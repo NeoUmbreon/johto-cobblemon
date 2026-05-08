@@ -1,0 +1,15 @@
+{
+    "species": "swellow",
+    "nature": "adamant",
+    "heldItem": "cobblemon:toxic_orb",
+    "moveset": {
+        "1": "facade",
+        "2": "aerialace",
+        "3": "growl",
+        "4": "uturn"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

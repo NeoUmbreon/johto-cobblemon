@@ -1,0 +1,15 @@
+{
+    "species": "gallade",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "psychocut",
+        "2": "stoneedge",
+        "3": "aerialace",
+        "4": "xscissor"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

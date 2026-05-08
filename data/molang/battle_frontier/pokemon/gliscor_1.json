@@ -1,0 +1,15 @@
+{
+    "species": "gliscor",
+    "nature": "adamant",
+    "heldItem": "cobblemon:yache_berry",
+    "moveset": {
+        "1": "earthquake",
+        "2": "aerialace",
+        "3": "swordsdance",
+        "4": "batonpass"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

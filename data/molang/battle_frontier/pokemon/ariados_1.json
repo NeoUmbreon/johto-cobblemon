@@ -1,0 +1,15 @@
+{
+    "species": "ariados",
+    "nature": "adamant",
+    "heldItem": "cobblemon:silver_powder",
+    "moveset": {
+        "1": "bugbite",
+        "2": "toxic",
+        "3": "shadowsneak",
+        "4": "spiderweb"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

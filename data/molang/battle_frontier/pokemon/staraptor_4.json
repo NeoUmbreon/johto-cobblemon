@@ -1,0 +1,15 @@
+{
+    "species": "staraptor",
+    "nature": "adamant",
+    "heldItem": "cobblemon:choice_band",
+    "moveset": {
+        "1": "bravebird",
+        "2": "gigaimpact",
+        "3": "closecombat",
+        "4": "uturn"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

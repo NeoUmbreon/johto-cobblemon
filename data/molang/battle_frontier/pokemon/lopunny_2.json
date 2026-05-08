@@ -1,0 +1,15 @@
+{
+    "species": "lopunny",
+    "nature": "jolly",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "focuspunch",
+        "2": "sweetkiss",
+        "3": "attract",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "hp": 252,
+        "spe": 252
+    }
+}

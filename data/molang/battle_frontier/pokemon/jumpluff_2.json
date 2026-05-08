@@ -1,0 +1,15 @@
+{
+    "species": "jumpluff",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "seedbomb",
+        "2": "bounce",
+        "3": "sleeppowder",
+        "4": "synthesis"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

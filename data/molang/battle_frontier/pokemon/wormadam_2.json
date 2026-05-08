@@ -1,0 +1,15 @@
+{
+    "species": "wormadam",
+    "nature": "modest",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "signalbeam",
+        "3": "psychic",
+        "4": "attract"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

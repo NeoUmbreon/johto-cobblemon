@@ -1,0 +1,15 @@
+{
+    "species": "snorlax",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "firepunch",
+        "2": "thunderpunch",
+        "3": "icepunch",
+        "4": "rest"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

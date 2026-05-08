@@ -1,0 +1,15 @@
+{
+    "species": "jolteon",
+    "nature": "timid",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "thunderwave",
+        "3": "agility",
+        "4": "batonpass"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

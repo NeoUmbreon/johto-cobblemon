@@ -1,0 +1,15 @@
+{
+    "species": "slowbro",
+    "nature": "bold",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "surf",
+        "3": "calmmind",
+        "4": "yawn"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

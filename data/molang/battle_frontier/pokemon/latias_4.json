@@ -1,0 +1,15 @@
+{
+    "species": "latias",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "mistball",
+        "2": "dracometeor",
+        "3": "thunderbolt",
+        "4": "surf"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

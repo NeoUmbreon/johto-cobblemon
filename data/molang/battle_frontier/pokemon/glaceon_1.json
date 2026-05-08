@@ -1,0 +1,15 @@
+{
+    "species": "glaceon",
+    "nature": "calm",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "icebeam",
+        "2": "waterpulse",
+        "3": "doubleteam",
+        "4": "batonpass"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

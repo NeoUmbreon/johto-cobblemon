@@ -1,0 +1,15 @@
+{
+    "species": "croagunk",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "poisonjab",
+        "2": "wakeupslap",
+        "3": "taunt",
+        "4": "swagger"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

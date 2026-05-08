@@ -1,0 +1,15 @@
+{
+    "species": "golem",
+    "nature": "brave",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "earthquake",
+        "2": "stoneedge",
+        "3": "gyroball",
+        "4": "explosion"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

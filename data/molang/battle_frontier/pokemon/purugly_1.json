@@ -1,0 +1,15 @@
+{
+    "species": "purugly",
+    "nature": "adamant",
+    "heldItem": "cobblemon:silk_scarf",
+    "moveset": {
+        "1": "slash",
+        "2": "feintattack",
+        "3": "attract",
+        "4": "growl"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Your Pokémon will be restored to full health."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"pokemonhealed\"}');",
+                            "q.player.party.heal;",
+                            "q.npc.run_dialogue(q.player, 'battle_tower_nursejoy_interaction');"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

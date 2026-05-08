@@ -1,0 +1,15 @@
+{
+    "species": "vileplume",
+    "nature": "modest",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "sludgebomb",
+        "3": "sleeppowder",
+        "4": "ingrain"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

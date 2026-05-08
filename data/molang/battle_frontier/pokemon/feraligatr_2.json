@@ -1,0 +1,15 @@
+{
+    "species": "feraligatr",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "aquatail",
+        "2": "superpower",
+        "3": "dragonclaw",
+        "4": "shadowclaw"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

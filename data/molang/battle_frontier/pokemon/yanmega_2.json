@@ -1,0 +1,15 @@
+{
+    "species": "yanmega",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "aerialace",
+        "2": "uturn",
+        "3": "nightslash",
+        "4": "steelwing"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

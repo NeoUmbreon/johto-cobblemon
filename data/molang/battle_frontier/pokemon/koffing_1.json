@@ -1,0 +1,15 @@
+{
+    "species": "koffing",
+    "nature": "modest",
+    "heldItem": "cobblemon:poison_barb",
+    "moveset": {
+        "1": "sludge",
+        "2": "psybeam",
+        "3": "smokescreen",
+        "4": "spite"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

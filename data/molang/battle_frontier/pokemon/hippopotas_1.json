@@ -1,0 +1,15 @@
+{
+    "species": "hippopotas",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "dig",
+        "2": "rocktomb",
+        "3": "sandtomb",
+        "4": "yawn"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

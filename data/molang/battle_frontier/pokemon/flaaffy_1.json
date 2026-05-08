@@ -1,0 +1,15 @@
+{
+    "species": "flaaffy",
+    "nature": "modest",
+    "heldItem": "cobblemon:light_clay",
+    "moveset": {
+        "1": "shockwave",
+        "2": "swift",
+        "3": "thunderwave",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

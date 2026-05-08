@@ -1,0 +1,15 @@
+{
+    "species": "venonat",
+    "nature": "relaxed",
+    "heldItem": "cobblemon:silver_powder",
+    "moveset": {
+        "1": "bugbite",
+        "2": "poisonpowder",
+        "3": "psybeam",
+        "4": "supersonic"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

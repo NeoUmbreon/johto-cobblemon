@@ -1,0 +1,16 @@
+{
+    "species": "glalie",
+    "nature": "brave",
+    "heldItem": "cobblemon:iron_ball",
+    "moveset": {
+        "1": "avalanche",
+        "2": "payback",
+        "3": "gyroball",
+        "4": "iceshard"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "seel",
+    "nature": "adamant",
+    "heldItem": "cobblemon:aspear_berry",
+    "moveset": {
+        "1": "aquajet",
+        "2": "iceshard",
+        "3": "fakeout",
+        "4": "encore"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

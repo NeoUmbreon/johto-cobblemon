@@ -1,0 +1,15 @@
+{
+    "species": "yanmega",
+    "nature": "timid",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "signalbeam",
+        "2": "aircutter",
+        "3": "detect",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

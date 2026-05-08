@@ -1,0 +1,15 @@
+{
+    "species": "linoone",
+    "nature": "jolly",
+    "heldItem": "cobblemon:lansat_berry",
+    "moveset": {
+        "1": "slash",
+        "2": "shadowclaw",
+        "3": "covet",
+        "4": "tickle"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "species": "lileep",
+    "nature": "calm",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "ancientpower",
+        "2": "grassknot",
+        "3": "ingrain",
+        "4": "confuseray"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

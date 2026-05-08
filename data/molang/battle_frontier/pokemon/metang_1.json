@@ -1,0 +1,15 @@
+{
+    "species": "metang",
+    "nature": "hardy",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "metalclaw",
+        "2": "confusion",
+        "3": "magnetrise",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

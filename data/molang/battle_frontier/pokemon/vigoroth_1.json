@@ -1,0 +1,15 @@
+{
+    "species": "vigoroth",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "slash",
+        "2": "pursuit",
+        "3": "encore",
+        "4": "counter"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

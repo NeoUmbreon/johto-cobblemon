@@ -1,0 +1,15 @@
+{
+    "species": "chimchar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:passho_berry",
+    "moveset": {
+        "1": "flamewheel",
+        "2": "facade",
+        "3": "leer",
+        "4": "fakeout"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

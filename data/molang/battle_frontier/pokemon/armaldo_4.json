@@ -1,0 +1,15 @@
+{
+    "species": "armaldo",
+    "nature": "adamant",
+    "heldItem": "cobblemon:life_orb",
+    "moveset": {
+        "1": "stoneedge",
+        "2": "xscissor",
+        "3": "earthquake",
+        "4": "crosspoison"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

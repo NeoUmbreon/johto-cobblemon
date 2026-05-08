@@ -1,0 +1,15 @@
+{
+    "species": "blissey",
+    "nature": "calm",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "dreameater",
+        "2": "sing",
+        "3": "softboiled",
+        "4": "counter"
+    },
+    "evs": {
+        "hp": 252,
+        "spd": 252
+    }
+}

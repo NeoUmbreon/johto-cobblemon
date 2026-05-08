@@ -1,0 +1,15 @@
+{
+    "species": "dusknoir",
+    "nature": "brave",
+    "heldItem": "cobblemon:iron_ball",
+    "moveset": {
+        "1": "shadowpunch",
+        "2": "fling",
+        "3": "willowisp",
+        "4": "trickroom"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

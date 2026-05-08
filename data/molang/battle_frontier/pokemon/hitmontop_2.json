@@ -1,0 +1,15 @@
+{
+    "species": "hitmontop",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "triplekick",
+        "2": "bulletpunch",
+        "3": "aerialace",
+        "4": "counter"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

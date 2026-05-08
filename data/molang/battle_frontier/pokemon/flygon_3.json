@@ -1,0 +1,15 @@
+{
+    "species": "flygon",
+    "nature": "timid",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "dracometeor",
+        "2": "earthpower",
+        "3": "flamethrower",
+        "4": "gigadrain"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

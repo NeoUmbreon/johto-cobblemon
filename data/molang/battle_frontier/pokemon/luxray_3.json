@@ -1,0 +1,15 @@
+{
+    "species": "luxray",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "thunderfang",
+        "2": "icefang",
+        "3": "superpower",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

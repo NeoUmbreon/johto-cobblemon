@@ -1,0 +1,15 @@
+{
+    "species": "rhyperior",
+    "nature": "impish",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "horndrill",
+        "2": "avalanche",
+        "3": "payback",
+        "4": "counter"
+    },
+    "evs": {
+        "hp": 252,
+        "def": 252
+    }
+}

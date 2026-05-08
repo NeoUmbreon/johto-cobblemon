@@ -1,0 +1,15 @@
+{
+    "species": "staraptor",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "bravebird",
+        "2": "return",
+        "3": "steelwing",
+        "4": "pursuit"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

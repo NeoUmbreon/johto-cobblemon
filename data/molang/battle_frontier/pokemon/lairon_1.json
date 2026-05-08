@@ -1,0 +1,15 @@
+{
+    "species": "lairon",
+    "nature": "impish",
+    "heldItem": "cobblemon:metal_coat",
+    "moveset": {
+        "1": "metalclaw",
+        "2": "rocktomb",
+        "3": "irondefense",
+        "4": "protect"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "slowbro",
+    "nature": "adamant",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "zenheadbutt",
+        "2": "aquatail",
+        "3": "earthquake",
+        "4": "avalanche"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

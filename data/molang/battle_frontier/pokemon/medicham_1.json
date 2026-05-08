@@ -1,0 +1,15 @@
+{
+    "species": "medicham",
+    "nature": "jolly",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "zenheadbutt",
+        "2": "reversal",
+        "3": "endure",
+        "4": "fakeout"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

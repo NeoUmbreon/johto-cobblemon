@@ -1,0 +1,15 @@
+{
+    "species": "porygon-z",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "triattack",
+        "2": "shadowball",
+        "3": "thunderbolt",
+        "4": "recover"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

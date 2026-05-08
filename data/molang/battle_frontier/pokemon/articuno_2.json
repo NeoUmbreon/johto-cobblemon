@@ -1,0 +1,15 @@
+{
+    "species": "articuno",
+    "nature": "brave",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "avalanche",
+        "2": "aerialace",
+        "3": "facade",
+        "4": "reflect"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

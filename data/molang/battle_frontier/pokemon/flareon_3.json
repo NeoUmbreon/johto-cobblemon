@@ -1,0 +1,15 @@
+{
+    "species": "flareon",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "overheat",
+        "2": "shadowball",
+        "3": "mudslap",
+        "4": "willowisp"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

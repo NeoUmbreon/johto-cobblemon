@@ -1,0 +1,15 @@
+{
+    "species": "donphan",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "earthquake",
+        "2": "superpower",
+        "3": "gunkshot",
+        "4": "counter"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

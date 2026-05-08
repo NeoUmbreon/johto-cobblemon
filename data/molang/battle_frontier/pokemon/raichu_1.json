@@ -1,0 +1,15 @@
+{
+    "species": "raichu",
+    "nature": "adamant",
+    "heldItem": "cobblemon:wide_lens",
+    "moveset": {
+        "1": "thunderpunch",
+        "2": "irontail",
+        "3": "slam",
+        "4": "quickattack"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

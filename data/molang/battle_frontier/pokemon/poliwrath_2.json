@@ -1,0 +1,15 @@
+{
+    "species": "poliwrath",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "waterfall",
+        "2": "dynamicpunch",
+        "3": "poisonjab",
+        "4": "bulkup"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

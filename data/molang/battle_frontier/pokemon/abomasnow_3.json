@@ -1,0 +1,15 @@
+{
+    "species": "abomasnow",
+    "nature": "quiet",
+    "heldItem": "cobblemon:occa_berry",
+    "moveset": {
+        "1": "energyball",
+        "2": "blizzard",
+        "3": "shadowball",
+        "4": "focusblast"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

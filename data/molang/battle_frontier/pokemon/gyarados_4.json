@@ -1,0 +1,15 @@
+{
+    "species": "gyarados",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "waterfall",
+        "2": "earthquake",
+        "3": "rest",
+        "4": "dragondance"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

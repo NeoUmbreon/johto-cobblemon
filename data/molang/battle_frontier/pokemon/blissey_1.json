@@ -1,0 +1,15 @@
+{
+    "species": "blissey",
+    "nature": "modest",
+    "heldItem": "cobblemon:chople_berry",
+    "moveset": {
+        "1": "hyperbeam",
+        "2": "shadowball",
+        "3": "waterpulse",
+        "4": "sing"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "raikou",
+    "nature": "modest",
+    "heldItem": "cobblemon:shuca_berry",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "extrasensory",
+        "3": "shadowball",
+        "4": "calmmind"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

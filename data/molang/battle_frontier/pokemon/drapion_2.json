@@ -1,0 +1,15 @@
+{
+    "species": "drapion",
+    "nature": "adamant",
+    "heldItem": "cobblemon:iron_ball",
+    "moveset": {
+        "1": "payback",
+        "2": "poisonjab",
+        "3": "fling",
+        "4": "knockoff"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

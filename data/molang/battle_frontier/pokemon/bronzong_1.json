@@ -1,0 +1,15 @@
+{
+    "species": "bronzong",
+    "nature": "impish",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "extrasensory",
+        "2": "ironhead",
+        "3": "rockslide",
+        "4": "trickroom"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

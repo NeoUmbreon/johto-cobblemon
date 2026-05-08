@@ -1,0 +1,15 @@
+{
+    "species": "stunky",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_glasses",
+    "moveset": {
+        "1": "pursuit",
+        "2": "toxic",
+        "3": "slash",
+        "4": "smokescreen"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

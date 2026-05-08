@@ -1,0 +1,15 @@
+{
+    "species": "gastrodon",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "surf",
+        "2": "earthpower",
+        "3": "icebeam",
+        "4": "sludgebomb"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

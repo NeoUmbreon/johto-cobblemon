@@ -1,0 +1,15 @@
+{
+    "species": "lickilicky",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "surf",
+        "2": "icebeam",
+        "3": "thunderbolt",
+        "4": "shadowball"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

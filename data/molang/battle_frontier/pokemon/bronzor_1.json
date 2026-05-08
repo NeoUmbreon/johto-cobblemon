@@ -1,0 +1,15 @@
+{
+    "species": "bronzor",
+    "nature": "brave",
+    "heldItem": "cobblemon:odd_incense",
+    "moveset": {
+        "1": "confusion",
+        "2": "gyroball",
+        "3": "ancientpower",
+        "4": "imprison"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

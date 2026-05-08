@@ -1,0 +1,15 @@
+{
+    "species": "weezing",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "doublehit",
+        "2": "payback",
+        "3": "toxic",
+        "4": "swagger"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "honchkrow",
+    "nature": "adamant",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "nightslash",
+        "2": "aerialace",
+        "3": "torment",
+        "4": "taunt"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

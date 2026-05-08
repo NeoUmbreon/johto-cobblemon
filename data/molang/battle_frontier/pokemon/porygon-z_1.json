@@ -1,0 +1,15 @@
+{
+    "species": "porygon-z",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "triattack",
+        "2": "shadowball",
+        "3": "recycle",
+        "4": "conversion2"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

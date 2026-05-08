@@ -1,0 +1,15 @@
+{
+    "species": "slowpoke",
+    "nature": "modest",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "confusion",
+        "3": "disable",
+        "4": "yawn"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

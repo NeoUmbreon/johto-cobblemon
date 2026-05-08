@@ -1,0 +1,15 @@
+{
+    "species": "scyther",
+    "nature": "jolly",
+    "heldItem": "cobblemon:metronome",
+    "moveset": {
+        "1": "furycutter",
+        "2": "wingattack",
+        "3": "lightscreen",
+        "4": "leer"
+    },
+    "evs": {
+        "hp": 252,
+        "spe": 252
+    }
+}

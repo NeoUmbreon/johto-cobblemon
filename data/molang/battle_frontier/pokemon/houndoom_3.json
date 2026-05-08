@@ -1,0 +1,15 @@
+{
+    "species": "houndoom",
+    "nature": "modest",
+    "heldItem": "cobblemon:passho_berry",
+    "moveset": {
+        "1": "flamethrower",
+        "2": "shadowball",
+        "3": "sludgebomb",
+        "4": "willowisp"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

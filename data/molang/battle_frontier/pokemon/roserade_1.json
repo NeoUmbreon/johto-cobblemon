@@ -1,0 +1,15 @@
+{
+    "species": "roserade",
+    "nature": "calm",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "magicalleaf",
+        "3": "stunspore",
+        "4": "mudslap"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

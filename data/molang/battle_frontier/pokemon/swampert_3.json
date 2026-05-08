@@ -1,0 +1,15 @@
+{
+    "species": "swampert",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "muddywater",
+        "2": "earthpower",
+        "3": "icebeam",
+        "4": "counter"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

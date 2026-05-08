@@ -1,0 +1,15 @@
+{
+    "species": "sandslash",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "earthquake",
+        "2": "rockslide",
+        "3": "crushclaw",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

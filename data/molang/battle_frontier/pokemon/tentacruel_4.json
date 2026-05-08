@@ -1,0 +1,15 @@
+{
+    "species": "tentacruel",
+    "nature": "timid",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "hydropump",
+        "2": "sludgebomb",
+        "3": "icebeam",
+        "4": "wringout"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

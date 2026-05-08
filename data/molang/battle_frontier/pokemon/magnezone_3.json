@@ -1,0 +1,15 @@
+{
+    "species": "magnezone",
+    "nature": "modest",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "chargebeam",
+        "2": "flashcannon",
+        "3": "magnetrise",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

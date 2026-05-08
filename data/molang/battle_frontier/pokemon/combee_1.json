@@ -1,0 +1,16 @@
+{
+    "species": "combee",
+    "nature": "serious",
+    "heldItem": "cobblemon:silver_powder",
+    "moveset": {
+        "1": "bugbite",
+        "2": "gust",
+        "3": "ominouswind",
+        "4": "sweetscent"
+    },
+    "evs": {
+        "atk": 170,
+        "spa": 170,
+        "spe": 170
+    }
+}

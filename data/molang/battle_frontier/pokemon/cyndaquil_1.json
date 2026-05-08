@@ -1,0 +1,15 @@
+{
+    "species": "cyndaquil",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "flamewheel",
+        "2": "doublekick",
+        "3": "swift",
+        "4": "smokescreen"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

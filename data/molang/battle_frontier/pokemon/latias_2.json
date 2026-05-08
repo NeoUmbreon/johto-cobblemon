@@ -1,0 +1,15 @@
+{
+    "species": "latias",
+    "nature": "adamant",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "dragonclaw",
+        "2": "zenheadbutt",
+        "3": "earthquake",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

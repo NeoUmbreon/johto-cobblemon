@@ -1,0 +1,15 @@
+{
+    "species": "machop",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "karatechop",
+        "2": "rocktomb",
+        "3": "foresight",
+        "4": "scaryface"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

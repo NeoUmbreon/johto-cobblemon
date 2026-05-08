@@ -1,0 +1,15 @@
+{
+    "species": "golem",
+    "nature": "brave",
+    "heldItem": "cobblemon:iron_ball",
+    "moveset": {
+        "1": "gyroball",
+        "2": "earthquake",
+        "3": "hammerarm",
+        "4": "fling"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

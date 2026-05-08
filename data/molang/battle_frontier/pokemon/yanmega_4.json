@@ -1,0 +1,15 @@
+{
+    "species": "yanmega",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "bugbuzz",
+        "2": "airslash",
+        "3": "psychic",
+        "4": "shadowball"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

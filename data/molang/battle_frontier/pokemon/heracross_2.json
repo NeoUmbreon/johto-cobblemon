@@ -1,0 +1,15 @@
+{
+    "species": "heracross",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "closecombat",
+        "2": "aerialace",
+        "3": "nightslash",
+        "4": "bulkup"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

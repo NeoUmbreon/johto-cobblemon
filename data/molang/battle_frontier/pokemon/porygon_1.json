@@ -1,0 +1,15 @@
+{
+    "species": "porygon",
+    "nature": "modest",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "swift",
+        "2": "psybeam",
+        "3": "icywind",
+        "4": "recycle"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "empoleon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "waterfall",
+        "2": "metalclaw",
+        "3": "brickbreak",
+        "4": "knockoff"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

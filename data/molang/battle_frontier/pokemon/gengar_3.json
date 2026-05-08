@@ -1,0 +1,15 @@
+{
+    "species": "gengar",
+    "nature": "modest",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "psychic",
+        "2": "energyball",
+        "3": "focusblast",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

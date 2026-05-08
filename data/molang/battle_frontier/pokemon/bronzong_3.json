@@ -1,0 +1,15 @@
+{
+    "species": "bronzong",
+    "nature": "modest",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "psychic",
+        "2": "shadowball",
+        "3": "chargebeam",
+        "4": "signalbeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

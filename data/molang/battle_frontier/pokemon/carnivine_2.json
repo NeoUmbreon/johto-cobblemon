@@ -1,0 +1,15 @@
+{
+    "species": "carnivine",
+    "nature": "adamant",
+    "heldItem": "cobblemon:occa_berry",
+    "moveset": {
+        "1": "seedbomb",
+        "2": "wringout",
+        "3": "crunch",
+        "4": "ingrain"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

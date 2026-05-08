@@ -1,0 +1,15 @@
+{
+    "species": "togekiss",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "hyperbeam",
+        "2": "airslash",
+        "3": "aurasphere",
+        "4": "psychic"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

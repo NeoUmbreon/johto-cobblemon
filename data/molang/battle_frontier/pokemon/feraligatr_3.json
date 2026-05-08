@@ -1,0 +1,15 @@
+{
+    "species": "feraligatr",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "hydrocannon",
+        "2": "icebeam",
+        "3": "focusblast",
+        "4": "ancientpower"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

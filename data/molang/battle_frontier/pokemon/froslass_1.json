@@ -1,0 +1,15 @@
+{
+    "species": "froslass",
+    "nature": "timid",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "icebeam",
+        "2": "ominouswind",
+        "3": "confuseray",
+        "4": "attract"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

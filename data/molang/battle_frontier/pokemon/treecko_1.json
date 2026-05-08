@@ -1,0 +1,15 @@
+{
+    "species": "treecko",
+    "nature": "timid",
+    "heldItem": "cobblemon:miracle_seed",
+    "moveset": {
+        "1": "megadrain",
+        "2": "swift",
+        "3": "flash",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

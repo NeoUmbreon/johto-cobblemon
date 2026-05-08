@@ -1,0 +1,15 @@
+{
+    "species": "magnezone",
+    "nature": "bold",
+    "heldItem": "cobblemon:light_clay",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "mirrorshot",
+        "3": "lightscreen",
+        "4": "reflect"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "staryu",
+    "nature": "timid",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "twister",
+        "3": "swift",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

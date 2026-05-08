@@ -1,0 +1,15 @@
+{
+    "species": "houndoom",
+    "nature": "jolly",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "firefang",
+        "2": "thunderfang",
+        "3": "reversal",
+        "4": "endure"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

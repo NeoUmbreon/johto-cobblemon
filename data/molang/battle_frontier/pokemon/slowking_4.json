@@ -1,0 +1,15 @@
+{
+    "species": "slowking",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "psychic",
+        "2": "surf",
+        "3": "icebeam",
+        "4": "flamethrower"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

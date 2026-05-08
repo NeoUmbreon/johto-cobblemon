@@ -1,0 +1,15 @@
+{
+    "species": "arcanine",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "flareblitz",
+        "2": "extremespeed",
+        "3": "crunch",
+        "4": "thunderfang"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

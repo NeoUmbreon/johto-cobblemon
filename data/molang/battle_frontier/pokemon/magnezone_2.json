@@ -1,0 +1,15 @@
+{
+    "species": "magnezone",
+    "nature": "impish",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "ironhead",
+        "2": "explosion",
+        "3": "swagger",
+        "4": "psychup"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "jynx",
+    "nature": "calm",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "dreameater",
+        "2": "lovelykiss",
+        "3": "perishsong",
+        "4": "meanlook"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

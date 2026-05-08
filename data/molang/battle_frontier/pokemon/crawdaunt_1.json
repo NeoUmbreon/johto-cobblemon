@@ -1,0 +1,15 @@
+{
+    "species": "crawdaunt",
+    "nature": "modest",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "darkpulse",
+        "3": "harden",
+        "4": "taunt"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

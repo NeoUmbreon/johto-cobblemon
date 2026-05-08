@@ -1,0 +1,15 @@
+{
+    "species": "nosepass",
+    "nature": "modest",
+    "heldItem": "cobblemon:hard_stone",
+    "moveset": {
+        "1": "ancientpower",
+        "2": "shockwave",
+        "3": "thunderwave",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

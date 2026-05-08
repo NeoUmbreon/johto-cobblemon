@@ -1,0 +1,15 @@
+{
+    "species": "wartortle",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "aquajet",
+        "2": "bite",
+        "3": "rapidspin",
+        "4": "yawn"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

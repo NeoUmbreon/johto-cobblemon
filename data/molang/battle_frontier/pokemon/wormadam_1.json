@@ -1,0 +1,15 @@
+{
+    "species": "wormadam",
+    "nature": "adamant",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "razorleaf",
+        "2": "bugbite",
+        "3": "protect",
+        "4": "captivate"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

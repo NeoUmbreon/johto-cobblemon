@@ -1,0 +1,15 @@
+{
+    "species": "articuno",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "icebeam",
+        "2": "signalbeam",
+        "3": "ominouswind",
+        "4": "waterpulse"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

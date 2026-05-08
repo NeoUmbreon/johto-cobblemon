@@ -1,0 +1,15 @@
+{
+    "species": "tangela",
+    "nature": "bold",
+    "heldItem": "cobblemon:pecha_berry",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "sludgebomb",
+        "3": "wringout",
+        "4": "ingrain"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "hypno",
+    "nature": "modest",
+    "heldItem": "cobblemon:choice_specs",
+    "moveset": {
+        "1": "psychic",
+        "2": "shadowball",
+        "3": "signalbeam",
+        "4": "focusblast"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

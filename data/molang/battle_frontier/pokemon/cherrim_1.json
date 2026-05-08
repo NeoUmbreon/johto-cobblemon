@@ -1,0 +1,15 @@
+{
+    "species": "cherrim",
+    "nature": "bold",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "magicalleaf",
+        "2": "leechseed",
+        "3": "grasswhistle",
+        "4": "synthesis"
+    },
+    "evs": {
+        "spd": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "pupitar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:hard_stone",
+    "moveset": {
+        "1": "rocktomb",
+        "2": "dig",
+        "3": "scaryface",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

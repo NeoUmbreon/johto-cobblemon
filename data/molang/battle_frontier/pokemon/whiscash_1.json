@@ -1,0 +1,15 @@
+{
+    "species": "whiscash",
+    "nature": "modest",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "surf",
+        "2": "earthpower",
+        "3": "icywind",
+        "4": "amnesia"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "togetic",
+    "nature": "calm",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "aircutter",
+        "2": "swift",
+        "3": "magicalleaf",
+        "4": "wish"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

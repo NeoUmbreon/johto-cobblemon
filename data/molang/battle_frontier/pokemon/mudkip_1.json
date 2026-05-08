@@ -1,0 +1,15 @@
+{
+    "species": "mudkip",
+    "nature": "modest",
+    "heldItem": "cobblemon:mystic_water",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "icywind",
+        "3": "mudslap",
+        "4": "growl"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

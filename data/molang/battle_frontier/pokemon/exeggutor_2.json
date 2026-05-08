@@ -1,0 +1,15 @@
+{
+    "species": "exeggutor",
+    "nature": "modest",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "dreameater",
+        "2": "hypnosis",
+        "3": "leechseed",
+        "4": "ingrain"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "species": "slowking",
+    "nature": "quiet",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "psychic",
+        "2": "brine",
+        "3": "yawn",
+        "4": "trickroom"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "crawdaunt",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "crabhammer",
+        "2": "crunch",
+        "3": "xscissor",
+        "4": "swordsdance"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

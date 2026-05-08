@@ -1,0 +1,15 @@
+{
+    "species": "suicune",
+    "nature": "modest",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "icebeam",
+        "3": "extrasensory",
+        "4": "calmmind"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

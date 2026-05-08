@@ -1,0 +1,15 @@
+{
+    "species": "feraligatr",
+    "nature": "adamant",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "waterfall",
+        "2": "icefang",
+        "3": "rockslide",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

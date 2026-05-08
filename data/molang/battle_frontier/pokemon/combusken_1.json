@@ -1,0 +1,15 @@
+{
+    "species": "combusken",
+    "nature": "adamant",
+    "heldItem": "cobblemon:liechi_berry",
+    "moveset": {
+        "1": "firepunch",
+        "2": "doublekick",
+        "3": "quickattack",
+        "4": "sandattack"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

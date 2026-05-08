@@ -1,0 +1,15 @@
+{
+    "species": "lopunny",
+    "nature": "jolly",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "return",
+        "2": "drainpunch",
+        "3": "charm",
+        "4": "mirrorcoat"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

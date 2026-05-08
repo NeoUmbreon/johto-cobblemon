@@ -1,0 +1,15 @@
+{
+    "species": "golbat",
+    "nature": "jolly",
+    "heldItem": "cobblemon:payapa_berry",
+    "moveset": {
+        "1": "aerialace",
+        "2": "toxic",
+        "3": "steelwing",
+        "4": "confuseray"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

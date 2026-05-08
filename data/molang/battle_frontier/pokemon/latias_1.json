@@ -1,0 +1,15 @@
+{
+    "species": "latias",
+    "nature": "calm",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "dragonpulse",
+        "3": "attract",
+        "4": "calmmind"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

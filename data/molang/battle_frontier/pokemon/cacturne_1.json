@@ -1,0 +1,15 @@
+{
+    "species": "cacturne",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chople_berry",
+    "moveset": {
+        "1": "bulletseed",
+        "2": "feintattack",
+        "3": "spikes",
+        "4": "ingrain"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "jynx",
+    "nature": "calm",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "icebeam",
+        "3": "lovelykiss",
+        "4": "faketears"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

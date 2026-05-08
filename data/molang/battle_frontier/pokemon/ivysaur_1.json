@@ -1,0 +1,15 @@
+{
+    "species": "ivysaur",
+    "nature": "careful",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "razorleaf",
+        "2": "poisonpowder",
+        "3": "takedown",
+        "4": "leechseed"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

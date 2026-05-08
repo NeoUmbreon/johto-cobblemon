@@ -1,0 +1,15 @@
+{
+    "species": "machamp",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "revenge",
+        "2": "earthquake",
+        "3": "payback",
+        "4": "counter"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

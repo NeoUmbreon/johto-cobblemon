@@ -1,0 +1,15 @@
+{
+    "species": "golem",
+    "nature": "impish",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "earthquake",
+        "2": "rockslide",
+        "3": "suckerpunch",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

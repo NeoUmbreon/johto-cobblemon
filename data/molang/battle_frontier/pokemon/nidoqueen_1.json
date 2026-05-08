@@ -1,0 +1,15 @@
+{
+    "species": "nidoqueen",
+    "nature": "adamant",
+    "heldItem": "cobblemon:payapa_berry",
+    "moveset": {
+        "1": "earthquake",
+        "2": "poisonfang",
+        "3": "aerialace",
+        "4": "charm"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "garchomp",
+    "nature": "jolly",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "dragonclaw",
+        "2": "earthquake",
+        "3": "doubleteam",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

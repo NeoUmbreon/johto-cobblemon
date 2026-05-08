@@ -1,0 +1,15 @@
+{
+    "species": "masquerain",
+    "nature": "quiet",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "bugbuzz",
+        "2": "airslash",
+        "3": "shadowball",
+        "4": "stunspore"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "remoraid",
+    "nature": "modest",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "aurorabeam",
+        "3": "mudslap",
+        "4": "supersonic"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

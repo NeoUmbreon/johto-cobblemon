@@ -1,0 +1,15 @@
+{
+    "species": "zapdos",
+    "nature": "serious",
+    "heldItem": "cobblemon:yache_berry",
+    "moveset": {
+        "1": "thunder",
+        "2": "drillpeck",
+        "3": "thunderwave",
+        "4": "raindance"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

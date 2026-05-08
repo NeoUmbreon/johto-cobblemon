@@ -1,0 +1,15 @@
+{
+    "species": "umbreon",
+    "nature": "impish",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "toxic",
+        "2": "meanlook",
+        "3": "doubleteam",
+        "4": "confuseray"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

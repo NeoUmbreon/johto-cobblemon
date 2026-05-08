@@ -1,0 +1,15 @@
+{
+    "species": "honchkrow",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "superpower",
+        "2": "pluck",
+        "3": "confuseray",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

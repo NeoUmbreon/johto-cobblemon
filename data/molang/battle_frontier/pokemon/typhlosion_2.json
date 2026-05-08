@@ -1,0 +1,15 @@
+{
+    "species": "typhlosion",
+    "nature": "serious",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "blastburn",
+        "2": "earthquake",
+        "3": "reversal",
+        "4": "endure"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

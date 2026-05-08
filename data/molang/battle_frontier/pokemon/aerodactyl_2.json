@@ -1,0 +1,15 @@
+{
+    "species": "aerodactyl",
+    "nature": "jolly",
+    "heldItem": "cobblemon:razor_fang",
+    "moveset": {
+        "1": "bite",
+        "2": "firefang",
+        "3": "thunderfang",
+        "4": "icefang"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

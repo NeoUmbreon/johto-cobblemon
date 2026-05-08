@@ -1,0 +1,15 @@
+{
+    "species": "heracross",
+    "nature": "adamant",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "megahorn",
+        "2": "stoneedge",
+        "3": "facade",
+        "4": "shadowclaw"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

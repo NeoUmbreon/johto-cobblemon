@@ -1,0 +1,15 @@
+{
+    "species": "carnivine",
+    "nature": "adamant",
+    "heldItem": "cobblemon:miracle_seed",
+    "moveset": {
+        "1": "razorleaf",
+        "2": "bite",
+        "3": "sweetscent",
+        "4": "ingrain"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

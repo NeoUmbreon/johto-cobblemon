@@ -1,0 +1,15 @@
+{
+    "species": "gorebyss",
+    "nature": "modest",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "surf",
+        "2": "psychic",
+        "3": "icebeam",
+        "4": "raindance"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

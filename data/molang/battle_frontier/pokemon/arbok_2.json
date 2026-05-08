@@ -1,0 +1,15 @@
+{
+    "species": "arbok",
+    "nature": "quirky",
+    "heldItem": "cobblemon:payapa_berry",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "mudbomb",
+        "3": "crunch",
+        "4": "glare"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

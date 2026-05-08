@@ -1,0 +1,15 @@
+{
+    "species": "alakazam",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "psychic",
+        "2": "shadowball",
+        "3": "energyball",
+        "4": "focusblast"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

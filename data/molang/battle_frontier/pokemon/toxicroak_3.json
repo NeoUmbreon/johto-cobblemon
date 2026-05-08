@@ -1,0 +1,15 @@
+{
+    "species": "toxicroak",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "focusblast",
+        "3": "shadowball",
+        "4": "darkpulse"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

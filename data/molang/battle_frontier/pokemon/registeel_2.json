@@ -1,0 +1,16 @@
+{
+    "species": "registeel",
+    "nature": "adamant",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "ironhead",
+        "2": "toxic",
+        "3": "doubleteam",
+        "4": "irondefense"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "sharpedo",
+    "nature": "hardy",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "bite",
+        "3": "scaryface",
+        "4": "focusenergy"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

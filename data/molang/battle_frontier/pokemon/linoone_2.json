@@ -1,0 +1,15 @@
+{
+    "species": "linoone",
+    "nature": "jolly",
+    "heldItem": "cobblemon:choice_scarf",
+    "moveset": {
+        "1": "frustration",
+        "2": "shadowclaw",
+        "3": "dig",
+        "4": "switcheroo"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "xatu",
+    "nature": "jolly",
+    "heldItem": "cobblemon:sharp_beak",
+    "moveset": {
+        "1": "zenheadbutt",
+        "2": "pluck",
+        "3": "tailwind",
+        "4": "futuresight"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

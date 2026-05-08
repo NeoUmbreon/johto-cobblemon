@@ -1,0 +1,15 @@
+{
+    "species": "forretress",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "explosion",
+        "2": "doubleedge",
+        "3": "earthquake",
+        "4": "rockslide"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

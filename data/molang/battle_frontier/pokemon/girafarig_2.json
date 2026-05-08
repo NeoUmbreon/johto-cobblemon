@@ -1,0 +1,15 @@
+{
+    "species": "girafarig",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "zenheadbutt",
+        "2": "doublehit",
+        "3": "crunch",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

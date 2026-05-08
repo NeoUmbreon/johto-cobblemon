@@ -1,0 +1,16 @@
+{
+    "species": "cradily",
+    "nature": "impish",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "ancientpower",
+        "2": "energyball",
+        "3": "confuseray",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

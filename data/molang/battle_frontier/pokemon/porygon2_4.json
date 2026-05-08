@@ -1,0 +1,15 @@
+{
+    "species": "porygon2",
+    "nature": "modest",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "triattack",
+        "2": "signalbeam",
+        "3": "shadowball",
+        "4": "icebeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

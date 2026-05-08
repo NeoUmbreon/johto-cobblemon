@@ -1,0 +1,15 @@
+{
+    "species": "sunflora",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "sludgebomb",
+        "3": "grasswhistle",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

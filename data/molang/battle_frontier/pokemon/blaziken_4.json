@@ -1,0 +1,15 @@
+{
+    "species": "blaziken",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "flareblitz",
+        "2": "superpower",
+        "3": "thunderpunch",
+        "4": "nightslash"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

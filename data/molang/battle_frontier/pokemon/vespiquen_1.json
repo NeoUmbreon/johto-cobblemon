@@ -1,0 +1,15 @@
+{
+    "species": "vespiquen",
+    "nature": "modest",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "silverwind",
+        "2": "aircutter",
+        "3": "ominouswind",
+        "4": "swagger"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

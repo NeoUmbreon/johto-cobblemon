@@ -1,0 +1,15 @@
+{
+    "species": "quagsire",
+    "nature": "modest",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "surf",
+        "2": "earthpower",
+        "3": "focusblast",
+        "4": "sludgebomb"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

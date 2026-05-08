@@ -1,0 +1,15 @@
+{
+    "species": "raichu",
+    "nature": "timid",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "focusblast",
+        "3": "signalbeam",
+        "4": "nastyplot"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "togekiss",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "airslash",
+        "2": "heatwave",
+        "3": "signalbeam",
+        "4": "magicalleaf"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

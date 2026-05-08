@@ -1,0 +1,15 @@
+{
+    "species": "camerupt",
+    "nature": "modest",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "earthpower",
+        "2": "eruption",
+        "3": "ancientpower",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

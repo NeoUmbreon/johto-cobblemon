@@ -1,0 +1,15 @@
+{
+    "species": "sandslash",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "dig",
+        "2": "rocktomb",
+        "3": "defensecurl",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

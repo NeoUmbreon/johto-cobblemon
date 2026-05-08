@@ -1,0 +1,15 @@
+{
+    "species": "lucario",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "aurasphere",
+        "2": "psychic",
+        "3": "shadowball",
+        "4": "dragonpulse"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

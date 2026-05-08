@@ -1,0 +1,15 @@
+{
+    "species": "flygon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:yache_berry",
+    "moveset": {
+        "1": "earthquake",
+        "2": "dragonclaw",
+        "3": "roost",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

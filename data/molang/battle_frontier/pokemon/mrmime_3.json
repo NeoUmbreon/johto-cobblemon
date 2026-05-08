@@ -1,0 +1,15 @@
+{
+    "species": "mrmime",
+    "nature": "modest",
+    "heldItem": "cobblemon:kasib_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "thunderbolt",
+        "3": "energyball",
+        "4": "hyperbeam"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

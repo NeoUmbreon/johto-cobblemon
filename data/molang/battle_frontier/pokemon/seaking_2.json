@@ -1,0 +1,15 @@
+{
+    "species": "seaking",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "aquatail",
+        "2": "poisonjab",
+        "3": "facade",
+        "4": "aquaring"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

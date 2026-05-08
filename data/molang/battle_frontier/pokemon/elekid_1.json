@@ -1,0 +1,15 @@
+{
+    "species": "elekid",
+    "nature": "jolly",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "thunderpunch",
+        "2": "karatechop",
+        "3": "quickattack",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

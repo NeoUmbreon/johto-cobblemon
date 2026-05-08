@@ -1,0 +1,15 @@
+{
+    "species": "pikachu",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "thundershock",
+        "2": "swift",
+        "3": "thunderwave",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

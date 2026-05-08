@@ -1,0 +1,15 @@
+{
+    "species": "teddiursa",
+    "nature": "impish",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "secretpower",
+        "2": "feintattack",
+        "3": "attract",
+        "4": "rest"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

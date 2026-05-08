@@ -1,0 +1,16 @@
+{
+    "species": "dewgong",
+    "nature": "calm",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "sheercold",
+        "2": "horndrill",
+        "3": "rest",
+        "4": "sleeptalk"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

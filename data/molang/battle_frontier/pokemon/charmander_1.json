@@ -1,0 +1,15 @@
+{
+    "species": "charmander",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "firefang",
+        "2": "metalclaw",
+        "3": "smokescreen",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "species": "regigigas",
+    "nature": "impish",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "return",
+        "2": "aerialace",
+        "3": "thunderwave",
+        "4": "confuseray"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "blaziken",
+    "nature": "timid",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "blastburn",
+        "2": "focusblast",
+        "3": "solarbeam",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

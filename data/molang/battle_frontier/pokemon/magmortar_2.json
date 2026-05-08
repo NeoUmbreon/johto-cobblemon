@@ -1,0 +1,15 @@
+{
+    "species": "magmortar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:shuca_berry",
+    "moveset": {
+        "1": "firepunch",
+        "2": "focuspunch",
+        "3": "confuseray",
+        "4": "smokescreen"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

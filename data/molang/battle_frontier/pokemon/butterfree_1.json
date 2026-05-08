@@ -1,0 +1,15 @@
+{
+    "species": "butterfree",
+    "nature": "modest",
+    "heldItem": "cobblemon:pecha_berry",
+    "moveset": {
+        "1": "silverwind",
+        "2": "aircutter",
+        "3": "psybeam",
+        "4": "tailwind"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

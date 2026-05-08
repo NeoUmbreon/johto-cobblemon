@@ -1,0 +1,15 @@
+{
+    "species": "victreebel",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "seedbomb",
+        "2": "spitup",
+        "3": "swallow",
+        "4": "stockpile"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "dragonite",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "dragonclaw",
+        "2": "aerialace",
+        "3": "thunderwave",
+        "4": "dragondance"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

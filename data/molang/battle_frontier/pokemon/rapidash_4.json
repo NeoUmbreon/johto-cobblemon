@@ -1,0 +1,15 @@
+{
+    "species": "rapidash",
+    "nature": "jolly",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "flareblitz",
+        "2": "megahorn",
+        "3": "doubleedge",
+        "4": "hypnosis"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

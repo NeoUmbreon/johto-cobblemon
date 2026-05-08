@@ -1,0 +1,15 @@
+{
+    "species": "flygon",
+    "nature": "jolly",
+    "heldItem": "cobblemon:razor_fang",
+    "moveset": {
+        "1": "fissure",
+        "2": "firepunch",
+        "3": "thunderpunch",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

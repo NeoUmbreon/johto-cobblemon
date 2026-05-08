@@ -1,0 +1,15 @@
+{
+    "species": "tyranitar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "superpower",
+        "2": "dragonclaw",
+        "3": "shadowclaw",
+        "4": "aquatail"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

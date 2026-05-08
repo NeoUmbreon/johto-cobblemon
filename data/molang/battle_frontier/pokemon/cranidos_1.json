@@ -1,0 +1,15 @@
+{
+    "species": "cranidos",
+    "nature": "careful",
+    "heldItem": "cobblemon:rock_incense",
+    "moveset": {
+        "1": "rocktomb",
+        "2": "pursuit",
+        "3": "scaryface",
+        "4": "leer"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

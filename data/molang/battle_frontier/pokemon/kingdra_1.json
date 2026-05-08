@@ -1,0 +1,15 @@
+{
+    "species": "kingdra",
+    "nature": "timid",
+    "heldItem": "cobblemon:razor_fang",
+    "moveset": {
+        "1": "surf",
+        "2": "dragonpulse",
+        "3": "smokescreen",
+        "4": "raindance"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

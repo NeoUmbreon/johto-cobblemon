@@ -1,0 +1,15 @@
+{
+    "species": "kecleon",
+    "nature": "careful",
+    "heldItem": "cobblemon:choice_scarf",
+    "moveset": {
+        "1": "frustration",
+        "2": "shadowclaw",
+        "3": "aerialace",
+        "4": "trick"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

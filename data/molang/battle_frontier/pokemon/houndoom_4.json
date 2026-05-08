@@ -1,0 +1,15 @@
+{
+    "species": "houndoom",
+    "nature": "timid",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "overheat",
+        "2": "darkpulse",
+        "3": "solarbeam",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

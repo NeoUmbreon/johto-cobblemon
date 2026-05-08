@@ -1,0 +1,15 @@
+{
+    "species": "raikou",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "thunderfang",
+        "2": "crunch",
+        "3": "ironhead",
+        "4": "return"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

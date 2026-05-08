@@ -1,0 +1,15 @@
+{
+    "species": "bronzong",
+    "nature": "calm",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "dreameater",
+        "2": "hypnosis",
+        "3": "signalbeam",
+        "4": "trickroom"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

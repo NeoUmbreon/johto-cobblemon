@@ -1,0 +1,15 @@
+{
+    "species": "drowzee",
+    "nature": "modest",
+    "heldItem": "cobblemon:rawst_berry",
+    "moveset": {
+        "1": "psybeam",
+        "2": "assist",
+        "3": "disable",
+        "4": "barrier"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

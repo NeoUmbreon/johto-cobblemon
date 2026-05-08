@@ -1,0 +1,15 @@
+{
+    "species": "charmeleon",
+    "nature": "bashful",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "flamethrower",
+        "2": "shadowclaw",
+        "3": "aerialace",
+        "4": "smokescreen"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

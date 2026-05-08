@@ -1,0 +1,15 @@
+{
+    "species": "ivysaur",
+    "nature": "modest",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "sludgebomb",
+        "3": "sleeppowder",
+        "4": "leechseed"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

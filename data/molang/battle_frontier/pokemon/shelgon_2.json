@@ -1,0 +1,15 @@
+{
+    "species": "shelgon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "dragonclaw",
+        "2": "crunch",
+        "3": "dragondance",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

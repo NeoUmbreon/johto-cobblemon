@@ -1,0 +1,15 @@
+{
+    "species": "volbeat",
+    "nature": "jolly",
+    "heldItem": "cobblemon:liechi_berry",
+    "moveset": {
+        "1": "uturn",
+        "2": "quickattack",
+        "3": "confuseray",
+        "4": "helpinghand"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

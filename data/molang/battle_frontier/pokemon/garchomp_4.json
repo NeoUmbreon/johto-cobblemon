@@ -1,0 +1,15 @@
+{
+    "species": "garchomp",
+    "nature": "adamant",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "outrage",
+        "2": "earthquake",
+        "3": "crunch",
+        "4": "firefang"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

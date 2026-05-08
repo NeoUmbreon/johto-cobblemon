@@ -1,0 +1,15 @@
+{
+    "species": "weavile",
+    "nature": "jolly",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "nightslash",
+        "2": "icepunch",
+        "3": "aerialace",
+        "4": "brickbreak"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

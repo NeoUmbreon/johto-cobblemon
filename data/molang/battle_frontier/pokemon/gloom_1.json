@@ -1,0 +1,15 @@
+{
+    "species": "gloom",
+    "nature": "modest",
+    "heldItem": "cobblemon:miracle_seed",
+    "moveset": {
+        "1": "megadrain",
+        "2": "acid",
+        "3": "stunspore",
+        "4": "moonlight"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

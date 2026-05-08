@@ -1,0 +1,15 @@
+{
+    "species": "regice",
+    "nature": "modest",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "icebeam",
+        "2": "signalbeam",
+        "3": "chargebeam",
+        "4": "amnesia"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

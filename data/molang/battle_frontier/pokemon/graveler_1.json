@@ -1,0 +1,15 @@
+{
+    "species": "graveler",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "magnitude",
+        "2": "rocktomb",
+        "3": "stealthrock",
+        "4": "defensecurl"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

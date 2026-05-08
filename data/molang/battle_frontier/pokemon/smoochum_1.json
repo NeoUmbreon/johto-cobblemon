@@ -1,0 +1,15 @@
+{
+    "species": "smoochum",
+    "nature": "mild",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "confusion",
+        "2": "icywind",
+        "3": "fakeout",
+        "4": "sweetkiss"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

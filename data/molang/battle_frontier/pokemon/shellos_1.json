@@ -1,0 +1,15 @@
+{
+    "species": "shellos",
+    "nature": "bold",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "mudslap",
+        "3": "icywind",
+        "4": "harden"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

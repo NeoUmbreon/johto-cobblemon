@@ -1,0 +1,15 @@
+{
+    "species": "golem",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "earthquake",
+        "2": "superpower",
+        "3": "firepunch",
+        "4": "thunderpunch"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

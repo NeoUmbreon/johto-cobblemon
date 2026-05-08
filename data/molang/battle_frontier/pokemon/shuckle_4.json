@@ -1,0 +1,16 @@
+{
+    "species": "shuckle",
+    "nature": "calm",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "toxic",
+        "2": "substitute",
+        "3": "doubleteam",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

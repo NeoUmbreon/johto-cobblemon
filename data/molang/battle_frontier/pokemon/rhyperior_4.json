@@ -1,0 +1,15 @@
+{
+    "species": "rhyperior",
+    "nature": "adamant",
+    "heldItem": "cobblemon:choice_band",
+    "moveset": {
+        "1": "rockwrecker",
+        "2": "earthquake",
+        "3": "hammerarm",
+        "4": "megahorn"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "dewgong",
+    "nature": "careful",
+    "heldItem": "cobblemon:razor_fang",
+    "moveset": {
+        "1": "waterfall",
+        "2": "avalanche",
+        "3": "headbutt",
+        "4": "fakeout"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

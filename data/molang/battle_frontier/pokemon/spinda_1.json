@@ -1,0 +1,15 @@
+{
+    "species": "spinda",
+    "nature": "adamant",
+    "heldItem": "cobblemon:silk_scarf",
+    "moveset": {
+        "1": "dizzypunch",
+        "2": "drainpunch",
+        "3": "feintattack",
+        "4": "teeterdance"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

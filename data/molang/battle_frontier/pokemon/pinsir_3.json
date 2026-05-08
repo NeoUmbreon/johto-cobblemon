@@ -1,0 +1,15 @@
+{
+    "species": "pinsir",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "xscissor",
+        "2": "superpower",
+        "3": "stoneedge",
+        "4": "gigaimpact"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

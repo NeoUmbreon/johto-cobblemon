@@ -1,0 +1,15 @@
+{
+    "species": "tropius",
+    "nature": "modest",
+    "heldItem": "cobblemon:occa_berry",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "airslash",
+        "3": "synthesis",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

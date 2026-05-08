@@ -1,0 +1,15 @@
+{
+    "species": "misdreavus",
+    "nature": "modest",
+    "heldItem": "cobblemon:kasib_berry",
+    "moveset": {
+        "1": "shadowball",
+        "2": "psychic",
+        "3": "thunderwave",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

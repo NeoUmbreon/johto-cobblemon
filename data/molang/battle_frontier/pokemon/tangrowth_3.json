@@ -1,0 +1,15 @@
+{
+    "species": "tangrowth",
+    "nature": "modest",
+    "heldItem": "cobblemon:heat_rock",
+    "moveset": {
+        "1": "solarbeam",
+        "2": "wringout",
+        "3": "synthesis",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

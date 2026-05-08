@@ -1,0 +1,16 @@
+{
+    "species": "swalot",
+    "nature": "modest",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "sludge",
+        "2": "stockpile",
+        "3": "swallow",
+        "4": "spitup"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

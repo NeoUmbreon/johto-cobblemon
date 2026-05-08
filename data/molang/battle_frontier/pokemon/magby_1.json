@@ -1,0 +1,15 @@
+{
+    "species": "magby",
+    "nature": "adamant",
+    "heldItem": "cobblemon:pecha_berry",
+    "moveset": {
+        "1": "firepunch",
+        "2": "machpunch",
+        "3": "leer",
+        "4": "smokescreen"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

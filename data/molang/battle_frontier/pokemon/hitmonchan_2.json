@@ -1,0 +1,16 @@
+{
+    "species": "hitmonchan",
+    "nature": "adamant",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "skyuppercut",
+        "2": "megapunch",
+        "3": "bulletpunch",
+        "4": "counter"
+    },
+    "evs": {
+        "atk": 170,
+        "spd": 170,
+        "spe": 170
+    }
+}

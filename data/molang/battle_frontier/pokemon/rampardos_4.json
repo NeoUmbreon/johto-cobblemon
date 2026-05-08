@@ -1,0 +1,15 @@
+{
+    "species": "rampardos",
+    "nature": "jolly",
+    "heldItem": "cobblemon:choice_scarf",
+    "moveset": {
+        "1": "headsmash",
+        "2": "earthquake",
+        "3": "gigaimpact",
+        "4": "superpower"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

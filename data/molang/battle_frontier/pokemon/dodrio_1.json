@@ -1,0 +1,15 @@
+{
+    "species": "dodrio",
+    "nature": "jolly",
+    "heldItem": "cobblemon:aspear_berry",
+    "moveset": {
+        "1": "pluck",
+        "2": "furyattack",
+        "3": "growl",
+        "4": "acupressure"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

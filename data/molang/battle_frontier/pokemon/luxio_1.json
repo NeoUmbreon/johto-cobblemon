@@ -1,0 +1,15 @@
+{
+    "species": "luxio",
+    "nature": "adamant",
+    "heldItem": "cobblemon:magnet",
+    "moveset": {
+        "1": "thunderfang",
+        "2": "bite",
+        "3": "flash",
+        "4": "swagger"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

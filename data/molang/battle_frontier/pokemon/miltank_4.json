@@ -1,0 +1,15 @@
+{
+    "species": "miltank",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "gigaimpact",
+        "2": "earthquake",
+        "3": "rockslide",
+        "4": "zenheadbutt"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

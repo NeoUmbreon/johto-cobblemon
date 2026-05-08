@@ -1,0 +1,15 @@
+{
+    "species": "aggron",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "irontail",
+        "2": "dragonrush",
+        "3": "avalanche",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

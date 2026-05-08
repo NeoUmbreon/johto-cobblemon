@@ -1,0 +1,15 @@
+{
+    "species": "torkoal",
+    "nature": "bold",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "ember",
+        "2": "mudslap",
+        "3": "smog",
+        "4": "amnesia"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

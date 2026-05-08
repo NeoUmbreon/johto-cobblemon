@@ -1,0 +1,15 @@
+{
+    "species": "aerodactyl",
+    "nature": "adamant",
+    "heldItem": "cobblemon:choice_band",
+    "moveset": {
+        "1": "stoneedge",
+        "2": "aerialace",
+        "3": "earthquake",
+        "4": "dragonclaw"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

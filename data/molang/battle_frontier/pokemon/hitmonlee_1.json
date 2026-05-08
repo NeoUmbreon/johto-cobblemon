@@ -1,0 +1,15 @@
+{
+    "species": "hitmonlee",
+    "nature": "careful",
+    "heldItem": "cobblemon:black_belt",
+    "moveset": {
+        "1": "rollingkick",
+        "2": "facade",
+        "3": "foresight",
+        "4": "focusenergy"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

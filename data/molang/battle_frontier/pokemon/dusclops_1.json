@@ -1,0 +1,15 @@
+{
+    "species": "dusclops",
+    "nature": "impish",
+    "heldItem": "cobblemon:rawst_berry",
+    "moveset": {
+        "1": "shadowsneak",
+        "2": "painsplit",
+        "3": "willowisp",
+        "4": "confuseray"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

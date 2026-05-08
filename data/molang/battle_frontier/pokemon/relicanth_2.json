@@ -1,0 +1,15 @@
+{
+    "species": "relicanth",
+    "nature": "impish",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "aquatail",
+        "2": "rockslide",
+        "3": "rest",
+        "4": "yawn"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

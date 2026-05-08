@@ -1,0 +1,15 @@
+{
+    "species": "gyarados",
+    "nature": "jolly",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "waterfall",
+        "2": "icefang",
+        "3": "ironhead",
+        "4": "dragondance"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

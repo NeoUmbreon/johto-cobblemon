@@ -1,0 +1,15 @@
+{
+    "species": "electrode",
+    "nature": "hardy",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "signalbeam",
+        "3": "explosion",
+        "4": "mirrorcoat"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

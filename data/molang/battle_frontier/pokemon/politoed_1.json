@@ -1,0 +1,15 @@
+{
+    "species": "politoed",
+    "nature": "calm",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "surf",
+        "2": "hypervoice",
+        "3": "mudbomb",
+        "4": "swagger"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "scizor",
+    "nature": "impish",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "xscissor",
+        "2": "bulletpunch",
+        "3": "swordsdance",
+        "4": "batonpass"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

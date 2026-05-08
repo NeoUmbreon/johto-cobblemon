@@ -1,0 +1,15 @@
+{
+    "species": "ampharos",
+    "nature": "modest",
+    "heldItem": "cobblemon:shuca_berry",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "powergem",
+        "3": "lightscreen",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "sceptile",
+    "nature": "timid",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "leechseed",
+        "3": "toxic",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

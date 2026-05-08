@@ -1,0 +1,15 @@
+{
+    "species": "wailord",
+    "nature": "modest",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "icebeam",
+        "3": "attract",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

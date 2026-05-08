@@ -1,0 +1,15 @@
+{
+    "species": "charizard",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "overheat",
+        "2": "solarbeam",
+        "3": "willowisp",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

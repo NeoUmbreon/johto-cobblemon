@@ -1,0 +1,15 @@
+{
+    "species": "charizard",
+    "nature": "modest",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "flamethrower",
+        "2": "airslash",
+        "3": "smokescreen",
+        "4": "scaryface"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

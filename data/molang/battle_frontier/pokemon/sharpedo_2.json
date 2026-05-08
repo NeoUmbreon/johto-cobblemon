@@ -1,0 +1,15 @@
+{
+    "species": "sharpedo",
+    "nature": "adamant",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "crunch",
+        "2": "waterfall",
+        "3": "icefang",
+        "4": "swagger"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

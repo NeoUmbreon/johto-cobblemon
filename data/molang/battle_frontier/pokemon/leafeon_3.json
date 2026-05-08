@@ -1,0 +1,15 @@
+{
+    "species": "leafeon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:heat_rock",
+    "moveset": {
+        "1": "leafblade",
+        "2": "xscissor",
+        "3": "synthesis",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

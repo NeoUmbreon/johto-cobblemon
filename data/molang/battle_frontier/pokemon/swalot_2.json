@@ -1,0 +1,15 @@
+{
+    "species": "swalot",
+    "nature": "modest",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "shadowball",
+        "3": "gigadrain",
+        "4": "yawn"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

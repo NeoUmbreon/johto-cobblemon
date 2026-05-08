@@ -1,0 +1,15 @@
+{
+    "species": "bastiodon",
+    "nature": "careful",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "ironhead",
+        "2": "fissure",
+        "3": "doubleteam",
+        "4": "irondefense"
+    },
+    "evs": {
+        "hp": 252,
+        "spd": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "abomasnow",
+    "nature": "brave",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "woodhammer",
+        "2": "avalanche",
+        "3": "earthquake",
+        "4": "rockslide"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

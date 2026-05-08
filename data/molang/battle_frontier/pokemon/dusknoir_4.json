@@ -1,0 +1,15 @@
+{
+    "species": "dusknoir",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "shadowpunch",
+        "2": "earthquake",
+        "3": "brickbreak",
+        "4": "rockslide"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

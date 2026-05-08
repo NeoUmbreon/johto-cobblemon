@@ -1,0 +1,15 @@
+{
+    "species": "tangrowth",
+    "nature": "modest",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "energyball",
+        "2": "sludgebomb",
+        "3": "focusblast",
+        "4": "sleeppowder"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

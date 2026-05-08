@@ -1,0 +1,15 @@
+{
+    "species": "camerupt",
+    "nature": "brave",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "magnitude",
+        "2": "willowisp",
+        "3": "rocktomb",
+        "4": "amnesia"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

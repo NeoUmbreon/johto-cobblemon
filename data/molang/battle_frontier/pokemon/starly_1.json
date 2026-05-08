@@ -1,0 +1,15 @@
+{
+    "species": "starly",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sharp_beak",
+    "moveset": {
+        "1": "wingattack",
+        "2": "quickattack",
+        "3": "endeavor",
+        "4": "growl"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "flareon",
+    "nature": "jolly",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "firefang",
+        "2": "flail",
+        "3": "endure",
+        "4": "sandattack"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

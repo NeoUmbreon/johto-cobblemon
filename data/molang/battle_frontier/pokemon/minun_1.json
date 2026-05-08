@@ -1,0 +1,15 @@
+{
+    "species": "minun",
+    "nature": "timid",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "shockwave",
+        "2": "swift",
+        "3": "encore",
+        "4": "helpinghand"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

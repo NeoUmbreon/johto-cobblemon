@@ -1,0 +1,15 @@
+{
+    "species": "skarmory",
+    "nature": "impish",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "drillpeck",
+        "2": "slash",
+        "3": "payback",
+        "4": "nightslash"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

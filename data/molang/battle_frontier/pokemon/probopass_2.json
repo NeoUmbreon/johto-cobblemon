@@ -1,0 +1,15 @@
+{
+    "species": "probopass",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chople_berry",
+    "moveset": {
+        "1": "ironhead",
+        "2": "firepunch",
+        "3": "thunderpunch",
+        "4": "icepunch"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

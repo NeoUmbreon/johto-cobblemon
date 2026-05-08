@@ -1,0 +1,15 @@
+{
+    "species": "poliwrath",
+    "nature": "adamant",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "waterfall",
+        "2": "focuspunch",
+        "3": "earthquake",
+        "4": "hypnosis"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

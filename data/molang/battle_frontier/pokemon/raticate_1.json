@@ -1,0 +1,15 @@
+{
+    "species": "raticate",
+    "nature": "jolly",
+    "heldItem": "cobblemon:silk_scarf",
+    "moveset": {
+        "1": "endeavor",
+        "2": "pursuit",
+        "3": "quickattack",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

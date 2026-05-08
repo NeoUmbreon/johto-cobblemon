@@ -1,0 +1,15 @@
+{
+    "species": "solrock",
+    "nature": "adamant",
+    "heldItem": "cobblemon:passho_berry",
+    "moveset": {
+        "1": "zenheadbutt",
+        "2": "rockslide",
+        "3": "willowisp",
+        "4": "cosmicpower"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "latios",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "dragonclaw",
+        "2": "shadowclaw",
+        "3": "earthquake",
+        "4": "dragondance"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

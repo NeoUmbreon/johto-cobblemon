@@ -1,0 +1,12 @@
+'TODO: set all of these dynamically';
+'---------------------------------------------';
+q.player.data.battle_tower.streak + 1 < q.npc.data.battle_num ? { q.npc.data.battle_num = q.player.data.battle_tower.streak + 1; };
+q.npc.data.battle_num == 0 ? { q.npc.data.battle_num = 1; };
+q.npc.data.floor == 0 ? { q.npc.data.floor = 1; };
+q.npc.data.players == 0 ? { q.npc.data.players = q.array(); };
+q.npc.data.format == 0 ? { q.npc.data.format = 'SINGLES'; };
+for_each(t.player, q.npc.data.players, { t.player.username == q.player.username ? { t.match = 1; break; };});
+!t.match ? { q.run_command('tellraw @a[tag=BattleTowerFloor_' + q.npc.data.floor + '] \"' + q.player.username + ' joined the party\"'); q.player.add_tag('BattleTowerFloor_' + q.npc.data.floor); q.append(q.npc.data.players, q.player); };
+'---------------------------------------------';
+
+q.npc.save_data;

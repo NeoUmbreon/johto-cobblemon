@@ -1,0 +1,15 @@
+{
+    "species": "clefable",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "return",
+        "2": "meteormash",
+        "3": "zenheadbutt",
+        "4": "sing"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

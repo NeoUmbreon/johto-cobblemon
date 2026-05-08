@@ -1,0 +1,15 @@
+{
+    "species": "cacnea",
+    "nature": "adamant",
+    "heldItem": "cobblemon:aspear_berry",
+    "moveset": {
+        "1": "needlearm",
+        "2": "feintattack",
+        "3": "cottonspore",
+        "4": "grasswhistle"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

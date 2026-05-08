@@ -1,0 +1,15 @@
+{
+    "species": "hippowdon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "superpower",
+        "2": "firefang",
+        "3": "icefang",
+        "4": "fissure"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

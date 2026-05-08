@@ -1,0 +1,15 @@
+{
+    "species": "mantine",
+    "nature": "hardy",
+    "heldItem": "cobblemon:mystic_water",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "wingattack",
+        "3": "agility",
+        "4": "supersonic"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "ampharos",
+    "nature": "modest",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "chargebeam",
+        "2": "hyperbeam",
+        "3": "thunderwave",
+        "4": "rest"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

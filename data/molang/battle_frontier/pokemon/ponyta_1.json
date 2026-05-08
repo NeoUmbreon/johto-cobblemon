@@ -1,0 +1,15 @@
+{
+    "species": "ponyta",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "flamewheel",
+        "2": "stomp",
+        "3": "willowisp",
+        "4": "tailwhip"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

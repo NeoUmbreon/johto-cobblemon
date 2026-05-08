@@ -1,0 +1,16 @@
+{
+    "species": "wailord",
+    "nature": "impish",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "whirlpool",
+        "2": "toxic",
+        "3": "amnesia",
+        "4": "rest"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

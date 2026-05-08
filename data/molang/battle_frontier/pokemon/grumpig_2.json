@@ -1,0 +1,15 @@
+{
+    "species": "grumpig",
+    "nature": "calm",
+    "heldItem": "cobblemon:colbur_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "powergem",
+        "3": "chargebeam",
+        "4": "mirrorcoat"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

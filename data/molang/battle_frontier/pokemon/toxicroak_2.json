@@ -1,0 +1,15 @@
+{
+    "species": "toxicroak",
+    "nature": "adamant",
+    "heldItem": "cobblemon:wide_lens",
+    "moveset": {
+        "1": "dynamicpunch",
+        "2": "poisonjab",
+        "3": "thunderpunch",
+        "4": "icepunch"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

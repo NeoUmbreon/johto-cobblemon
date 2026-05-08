@@ -1,0 +1,15 @@
+{
+    "species": "croconaw",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "aquatail",
+        "2": "crunch",
+        "3": "rockslide",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

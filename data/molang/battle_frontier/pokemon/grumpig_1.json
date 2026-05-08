@@ -1,0 +1,15 @@
+{
+    "species": "grumpig",
+    "nature": "calm",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "psybeam",
+        "2": "grassknot",
+        "3": "futuresight",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

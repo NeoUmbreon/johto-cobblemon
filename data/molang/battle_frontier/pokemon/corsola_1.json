@@ -1,0 +1,15 @@
+{
+    "species": "corsola",
+    "nature": "modest",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "ancientpower",
+        "3": "mirrorcoat",
+        "4": "barrier"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

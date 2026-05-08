@@ -1,0 +1,15 @@
+{
+    "species": "mrmime",
+    "nature": "modest",
+    "heldItem": "cobblemon:choice_specs",
+    "moveset": {
+        "1": "psychic",
+        "2": "chargebeam",
+        "3": "shadowball",
+        "4": "focusblast"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

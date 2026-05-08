@@ -1,0 +1,15 @@
+{
+    "species": "gabite",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "dragonclaw",
+        "2": "earthquake",
+        "3": "slash",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

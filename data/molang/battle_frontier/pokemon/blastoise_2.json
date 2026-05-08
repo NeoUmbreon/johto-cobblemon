@@ -1,0 +1,15 @@
+{
+    "species": "blastoise",
+    "nature": "adamant",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "waterfall",
+        "2": "focuspunch",
+        "3": "doubleteam",
+        "4": "aquaring"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

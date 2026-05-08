@@ -1,0 +1,15 @@
+{
+    "species": "ludicolo",
+    "nature": "modest",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "gigadrain",
+        "3": "icebeam",
+        "4": "raindance"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

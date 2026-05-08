@@ -1,0 +1,15 @@
+{
+    "species": "shiftry",
+    "nature": "jolly",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "seedbomb",
+        "2": "feintattack",
+        "3": "xscissor",
+        "4": "fakeout"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

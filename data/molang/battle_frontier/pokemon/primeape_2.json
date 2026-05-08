@@ -1,0 +1,15 @@
+{
+    "species": "primeape",
+    "nature": "adamant",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "crosschop",
+        "2": "earthquake",
+        "3": "rockslide",
+        "4": "swagger"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

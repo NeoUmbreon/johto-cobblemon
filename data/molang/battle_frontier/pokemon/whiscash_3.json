@@ -1,0 +1,15 @@
+{
+    "species": "whiscash",
+    "nature": "modest",
+    "heldItem": "cobblemon:zoom_lens",
+    "moveset": {
+        "1": "hydropump",
+        "2": "earthpower",
+        "3": "blizzard",
+        "4": "fissure"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

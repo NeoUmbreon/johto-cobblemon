@@ -1,0 +1,15 @@
+{
+    "species": "dugtrio",
+    "nature": "jolly",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "fissure",
+        "2": "gigaimpact",
+        "3": "aerialace",
+        "4": "nightslash"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

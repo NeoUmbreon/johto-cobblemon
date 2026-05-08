@@ -1,0 +1,15 @@
+{
+    "species": "golduck",
+    "nature": "modest",
+    "heldItem": "cobblemon:rindo_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "psychic",
+        "3": "confuseray",
+        "4": "calmmind"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

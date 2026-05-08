@@ -1,0 +1,15 @@
+{
+    "species": "regigigas",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "earthpower",
+        "2": "focusblast",
+        "3": "thunderbolt",
+        "4": "ancientpower"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

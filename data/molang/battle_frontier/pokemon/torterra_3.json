@@ -1,0 +1,15 @@
+{
+    "species": "torterra",
+    "nature": "modest",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "frenzyplant",
+        "2": "earthpower",
+        "3": "hyperbeam",
+        "4": "leechseed"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

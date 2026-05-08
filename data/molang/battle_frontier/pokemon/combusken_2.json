@@ -1,0 +1,15 @@
+{
+    "species": "combusken",
+    "nature": "docile",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "flamethrower",
+        "2": "skyuppercut",
+        "3": "slash",
+        "4": "sandattack"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

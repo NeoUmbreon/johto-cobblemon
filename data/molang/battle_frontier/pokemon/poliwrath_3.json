@@ -1,0 +1,15 @@
+{
+    "species": "poliwrath",
+    "nature": "modest",
+    "heldItem": "cobblemon:wide_lens",
+    "moveset": {
+        "1": "hydropump",
+        "2": "focusblast",
+        "3": "blizzard",
+        "4": "mudbomb"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

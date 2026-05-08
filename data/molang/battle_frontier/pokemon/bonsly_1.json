@@ -1,0 +1,15 @@
+{
+    "species": "bonsly",
+    "nature": "adamant",
+    "heldItem": "cobblemon:rock_incense",
+    "moveset": {
+        "1": "rockslide",
+        "2": "lowkick",
+        "3": "copycat",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

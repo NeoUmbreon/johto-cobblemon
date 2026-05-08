@@ -1,0 +1,15 @@
+{
+    "species": "skuntank",
+    "nature": "timid",
+    "heldItem": "cobblemon:shuca_berry",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "darkpulse",
+        "3": "flamethrower",
+        "4": "shadowball"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

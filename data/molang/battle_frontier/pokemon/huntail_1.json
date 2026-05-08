@@ -1,0 +1,15 @@
+{
+    "species": "huntail",
+    "nature": "quirky",
+    "heldItem": "cobblemon:mystic_water",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "bite",
+        "3": "screech",
+        "4": "raindance"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

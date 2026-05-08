@@ -1,0 +1,15 @@
+{
+    "species": "relicanth",
+    "nature": "relaxed",
+    "heldItem": "cobblemon:wave_incense",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "rocktomb",
+        "3": "mudsport",
+        "4": "harden"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

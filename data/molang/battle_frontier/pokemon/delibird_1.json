@@ -1,0 +1,15 @@
+{
+    "species": "delibird",
+    "nature": "adamant",
+    "heldItem": "cobblemon:never_melt_ice",
+    "moveset": {
+        "1": "present",
+        "2": "iceball",
+        "3": "aerialace",
+        "4": "hail"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "vigoroth",
+    "nature": "adamant",
+    "heldItem": "cobblemon:salac_berry",
+    "moveset": {
+        "1": "crushclaw",
+        "2": "shadowclaw",
+        "3": "reversal",
+        "4": "endure"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

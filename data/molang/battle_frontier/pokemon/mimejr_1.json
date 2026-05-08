@@ -1,0 +1,15 @@
+{
+    "species": "mimejr",
+    "nature": "bold",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "copycat",
+        "2": "confusion",
+        "3": "barrier",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

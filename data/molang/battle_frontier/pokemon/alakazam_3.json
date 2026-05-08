@@ -1,0 +1,15 @@
+{
+    "species": "alakazam",
+    "nature": "timid",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "psychic",
+        "2": "chargebeam",
+        "3": "signalbeam",
+        "4": "grassknot"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

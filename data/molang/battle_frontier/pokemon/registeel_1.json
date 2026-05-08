@@ -1,0 +1,15 @@
+{
+    "species": "registeel",
+    "nature": "modest",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "flashcannon",
+        "2": "thunderbolt",
+        "3": "thunderwave",
+        "4": "amnesia"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

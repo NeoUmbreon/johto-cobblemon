@@ -1,0 +1,15 @@
+{
+    "species": "meganium",
+    "nature": "modest",
+    "heldItem": "cobblemon:heat_rock",
+    "moveset": {
+        "1": "solarbeam",
+        "2": "ancientpower",
+        "3": "synthesis",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

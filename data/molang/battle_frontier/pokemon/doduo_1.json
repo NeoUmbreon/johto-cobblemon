@@ -1,0 +1,15 @@
+{
+    "species": "doduo",
+    "nature": "jolly",
+    "heldItem": "cobblemon:liechi_berry",
+    "moveset": {
+        "1": "aerialace",
+        "2": "quickattack",
+        "3": "feintattack",
+        "4": "acupressure"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

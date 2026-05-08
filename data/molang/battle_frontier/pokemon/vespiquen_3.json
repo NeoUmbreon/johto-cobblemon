@@ -1,0 +1,15 @@
+{
+    "species": "vespiquen",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "xscissor",
+        "2": "aerialace",
+        "3": "pursuit",
+        "4": "uturn"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

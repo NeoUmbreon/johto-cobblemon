@@ -1,0 +1,15 @@
+{
+    "species": "chansey",
+    "nature": "impish",
+    "heldItem": "cobblemon:lucky_punch",
+    "moveset": {
+        "1": "eggbomb",
+        "2": "focuspunch",
+        "3": "sing",
+        "4": "softboiled"
+    },
+    "evs": {
+        "hp": 252,
+        "spd": 252
+    }
+}

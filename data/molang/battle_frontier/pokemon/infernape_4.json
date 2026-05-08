@@ -1,0 +1,15 @@
+{
+    "species": "infernape",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "flareblitz",
+        "2": "closecombat",
+        "3": "earthquake",
+        "4": "thunderpunch"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

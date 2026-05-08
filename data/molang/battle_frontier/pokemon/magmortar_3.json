@@ -1,0 +1,15 @@
+{
+    "species": "magmortar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:passho_berry",
+    "moveset": {
+        "1": "flareblitz",
+        "2": "thunderpunch",
+        "3": "earthquake",
+        "4": "brickbreak"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

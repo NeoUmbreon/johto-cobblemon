@@ -1,0 +1,15 @@
+{
+    "species": "magcargo",
+    "nature": "quiet",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "overheat",
+        "2": "rockslide",
+        "3": "earthquake",
+        "4": "bodyslam"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

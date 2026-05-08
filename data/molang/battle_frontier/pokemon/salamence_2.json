@@ -1,0 +1,15 @@
+{
+    "species": "salamence",
+    "nature": "jolly",
+    "heldItem": "cobblemon:razor_fang",
+    "moveset": {
+        "1": "dragonclaw",
+        "2": "firefang",
+        "3": "thunderfang",
+        "4": "dragondance"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

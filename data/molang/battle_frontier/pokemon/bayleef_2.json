@@ -1,0 +1,16 @@
+{
+    "species": "bayleef",
+    "nature": "docile",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "bodyslam",
+        "3": "grasswhistle",
+        "4": "rest"
+    },
+    "evs": {
+        "def": 170,
+        "spa": 170,
+        "spd": 170
+    }
+}

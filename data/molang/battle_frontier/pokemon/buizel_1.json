@@ -1,0 +1,15 @@
+{
+    "species": "buizel",
+    "nature": "jolly",
+    "heldItem": "cobblemon:wave_incense",
+    "moveset": {
+        "1": "aquajet",
+        "2": "quickattack",
+        "3": "pursuit",
+        "4": "growl"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

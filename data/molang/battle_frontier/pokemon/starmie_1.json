@@ -1,0 +1,15 @@
+{
+    "species": "starmie",
+    "nature": "timid",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "surf",
+        "2": "psychic",
+        "3": "confuseray",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

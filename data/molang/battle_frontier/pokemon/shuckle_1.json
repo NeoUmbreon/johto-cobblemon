@@ -1,0 +1,16 @@
+{
+    "species": "shuckle",
+    "nature": "impish",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "stoneedge",
+        "2": "bugbite",
+        "3": "swagger",
+        "4": "powertrick"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

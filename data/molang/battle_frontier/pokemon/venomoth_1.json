@@ -1,0 +1,15 @@
+{
+    "species": "venomoth",
+    "nature": "timid",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "silverwind",
+        "2": "psybeam",
+        "3": "sleeppowder",
+        "4": "attract"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

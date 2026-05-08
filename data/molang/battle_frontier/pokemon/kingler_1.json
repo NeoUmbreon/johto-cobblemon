@@ -1,0 +1,15 @@
+{
+    "species": "kingler",
+    "nature": "quiet",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "vicegrip",
+        "3": "harden",
+        "4": "mudsport"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

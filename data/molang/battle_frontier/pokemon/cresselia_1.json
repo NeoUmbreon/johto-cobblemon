@@ -1,0 +1,15 @@
+{
+    "species": "cresselia",
+    "nature": "bold",
+    "heldItem": "cobblemon:heat_rock",
+    "moveset": {
+        "1": "psychic",
+        "2": "solarbeam",
+        "3": "moonlight",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

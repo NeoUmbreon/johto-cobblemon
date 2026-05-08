@@ -1,0 +1,15 @@
+{
+    "species": "phanpy",
+    "nature": "adamant",
+    "heldItem": "cobblemon:metronome",
+    "moveset": {
+        "1": "rollout",
+        "2": "rocktomb",
+        "3": "defensecurl",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "rapidash",
+    "nature": "modest",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "fireblast",
+        "2": "solarbeam",
+        "3": "sunnyday",
+        "4": "rest"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

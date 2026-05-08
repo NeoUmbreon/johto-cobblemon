@@ -1,0 +1,15 @@
+{
+    "species": "masquerain",
+    "nature": "bold",
+    "heldItem": "cobblemon:silver_powder",
+    "moveset": {
+        "1": "silverwind",
+        "2": "aircutter",
+        "3": "sweetscent",
+        "4": "scaryface"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

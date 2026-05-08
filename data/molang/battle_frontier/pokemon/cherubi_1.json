@@ -1,0 +1,15 @@
+{
+    "species": "cherubi",
+    "nature": "modest",
+    "heldItem": "cobblemon:rose_incense",
+    "moveset": {
+        "1": "magicalleaf",
+        "2": "toxic",
+        "3": "leechseed",
+        "4": "helpinghand"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

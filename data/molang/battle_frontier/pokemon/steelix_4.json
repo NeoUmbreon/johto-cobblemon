@@ -1,0 +1,15 @@
+{
+    "species": "steelix",
+    "nature": "brave",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "gyroball",
+        "2": "earthquake",
+        "3": "stoneedge",
+        "4": "explosion"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

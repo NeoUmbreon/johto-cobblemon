@@ -1,0 +1,15 @@
+{
+    "species": "shinx",
+    "nature": "adamant",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "thunderfang",
+        "2": "bite",
+        "3": "howl",
+        "4": "leer"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

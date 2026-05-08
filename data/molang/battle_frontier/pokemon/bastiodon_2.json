@@ -1,0 +1,15 @@
+{
+    "species": "bastiodon",
+    "nature": "modest",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "ancientpower",
+        "2": "flamethrower",
+        "3": "thunderbolt",
+        "4": "icebeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

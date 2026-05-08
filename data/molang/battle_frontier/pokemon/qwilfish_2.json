@@ -1,0 +1,15 @@
+{
+    "species": "qwilfish",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "aquatail",
+        "2": "poisonjab",
+        "3": "revenge",
+        "4": "destinybond"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "electivire",
+    "nature": "hardy",
+    "heldItem": "cobblemon:wide_lens",
+    "moveset": {
+        "1": "thunder",
+        "2": "dynamicpunch",
+        "3": "rockslide",
+        "4": "irontail"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

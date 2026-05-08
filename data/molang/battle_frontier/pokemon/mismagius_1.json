@@ -1,0 +1,15 @@
+{
+    "species": "mismagius",
+    "nature": "modest",
+    "heldItem": "cobblemon:kasib_berry",
+    "moveset": {
+        "1": "shadowball",
+        "2": "powergem",
+        "3": "magicalleaf",
+        "4": "memento"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

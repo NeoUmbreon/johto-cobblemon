@@ -1,0 +1,15 @@
+{
+    "species": "manectric",
+    "nature": "modest",
+    "heldItem": "cobblemon:damp_rock",
+    "moveset": {
+        "1": "thunder",
+        "2": "hyperbeam",
+        "3": "thunderwave",
+        "4": "raindance"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

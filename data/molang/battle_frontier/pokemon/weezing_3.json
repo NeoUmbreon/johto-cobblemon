@@ -1,0 +1,15 @@
+{
+    "species": "weezing",
+    "nature": "sassy",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "thunderbolt",
+        "3": "darkpulse",
+        "4": "explosion"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

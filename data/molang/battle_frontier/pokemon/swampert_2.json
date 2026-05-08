@@ -1,0 +1,15 @@
+{
+    "species": "swampert",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "aquatail",
+        "2": "earthquake",
+        "3": "hammerarm",
+        "4": "curse"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

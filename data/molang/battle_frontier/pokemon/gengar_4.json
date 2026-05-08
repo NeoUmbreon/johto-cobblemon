@@ -1,0 +1,15 @@
+{
+    "species": "gengar",
+    "nature": "modest",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "shadowball",
+        "2": "sludgebomb",
+        "3": "thunderbolt",
+        "4": "destinybond"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

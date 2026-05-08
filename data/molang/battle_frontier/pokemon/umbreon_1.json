@@ -1,0 +1,15 @@
+{
+    "species": "umbreon",
+    "nature": "careful",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "payback",
+        "2": "confuseray",
+        "3": "curse",
+        "4": "batonpass"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

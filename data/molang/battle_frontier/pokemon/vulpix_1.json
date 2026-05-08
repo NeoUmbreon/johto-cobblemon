@@ -1,0 +1,15 @@
+{
+    "species": "vulpix",
+    "nature": "calm",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "ember",
+        "2": "swift",
+        "3": "willowisp",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

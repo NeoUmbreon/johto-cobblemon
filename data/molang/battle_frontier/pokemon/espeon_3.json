@@ -1,0 +1,15 @@
+{
+    "species": "espeon",
+    "nature": "modest",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "shadowball",
+        "3": "hyperbeam",
+        "4": "grassknot"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

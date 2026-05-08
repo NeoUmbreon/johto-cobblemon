@@ -1,0 +1,15 @@
+{
+    "species": "marowak",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "bonerush",
+        "2": "brickbreak",
+        "3": "irontail",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

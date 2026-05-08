@@ -1,0 +1,15 @@
+{
+    "species": "bidoof",
+    "nature": "adamant",
+    "heldItem": "cobblemon:silk_scarf",
+    "moveset": {
+        "1": "headbutt",
+        "2": "pluck",
+        "3": "growl",
+        "4": "yawn"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "infernape",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "blazekick",
+        "2": "shadowclaw",
+        "3": "thunderpunch",
+        "4": "gunkshot"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

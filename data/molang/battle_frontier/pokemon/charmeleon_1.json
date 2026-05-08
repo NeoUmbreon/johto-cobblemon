@@ -1,0 +1,15 @@
+{
+    "species": "charmeleon",
+    "nature": "naughty",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "firefang",
+        "2": "slash",
+        "3": "smokescreen",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

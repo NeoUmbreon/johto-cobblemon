@@ -1,0 +1,15 @@
+{
+    "species": "dugtrio",
+    "nature": "modest",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "earthpower",
+        "2": "sludgebomb",
+        "3": "triattack",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

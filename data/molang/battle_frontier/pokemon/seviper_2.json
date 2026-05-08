@@ -1,0 +1,15 @@
+{
+    "species": "seviper",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "sludgebomb",
+        "2": "crunch",
+        "3": "aquatail",
+        "4": "swagger"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

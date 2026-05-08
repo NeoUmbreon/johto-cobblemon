@@ -1,0 +1,15 @@
+{
+    "species": "victreebel",
+    "nature": "modest",
+    "heldItem": "cobblemon:payapa_berry",
+    "moveset": {
+        "1": "leafstorm",
+        "2": "sludgebomb",
+        "3": "sleeppowder",
+        "4": "gastroacid"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "species": "dusclops",
+    "nature": "impish",
+    "heldItem": "cobblemon:colbur_berry",
+    "moveset": {
+        "1": "shadowpunch",
+        "2": "payback",
+        "3": "brickbreak",
+        "4": "confuseray"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "heatran",
+    "nature": "quiet",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "magmastorm",
+        "2": "flashcannon",
+        "3": "earthpower",
+        "4": "explosion"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

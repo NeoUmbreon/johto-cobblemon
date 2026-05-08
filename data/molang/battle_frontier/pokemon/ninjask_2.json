@@ -1,0 +1,15 @@
+{
+    "species": "ninjask",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_fang",
+    "moveset": {
+        "1": "xscissor",
+        "2": "aerialace",
+        "3": "nightslash",
+        "4": "batonpass"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "exploud",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "hypervoice",
+        "2": "overheat",
+        "3": "surf",
+        "4": "icebeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

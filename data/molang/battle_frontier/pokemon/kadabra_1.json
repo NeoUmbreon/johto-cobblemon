@@ -1,0 +1,15 @@
+{
+    "species": "kadabra",
+    "nature": "timid",
+    "heldItem": "cobblemon:twisted_spoon",
+    "moveset": {
+        "1": "confusion",
+        "2": "roleplay",
+        "3": "disable",
+        "4": "futuresight"
+    },
+    "evs": {
+        "spd": 252,
+        "spe": 252
+    }
+}

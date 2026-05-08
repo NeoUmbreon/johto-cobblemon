@@ -1,0 +1,16 @@
+{
+    "species": "regigigas",
+    "nature": "careful",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "facade",
+        "2": "zenheadbutt",
+        "3": "doubleteam",
+        "4": "substitute"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

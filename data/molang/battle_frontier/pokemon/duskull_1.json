@@ -1,0 +1,15 @@
+{
+    "species": "duskull",
+    "nature": "adamant",
+    "heldItem": "cobblemon:spell_tag",
+    "moveset": {
+        "1": "shadowsneak",
+        "2": "painsplit",
+        "3": "willowisp",
+        "4": "confuseray"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

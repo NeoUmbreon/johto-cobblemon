@@ -1,0 +1,16 @@
+{
+    "species": "skarmory",
+    "nature": "careful",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "fly",
+        "2": "toxic",
+        "3": "doubleteam",
+        "4": "roost"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

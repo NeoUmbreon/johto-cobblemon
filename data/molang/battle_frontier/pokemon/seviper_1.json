@@ -1,0 +1,15 @@
+{
+    "species": "seviper",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "poisontail",
+        "2": "lick",
+        "3": "knockoff",
+        "4": "glare"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

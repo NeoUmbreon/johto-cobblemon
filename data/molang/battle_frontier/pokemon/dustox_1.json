@@ -1,0 +1,15 @@
+{
+    "species": "dustox",
+    "nature": "modest",
+    "heldItem": "cobblemon:silver_powder",
+    "moveset": {
+        "1": "silverwind",
+        "2": "toxic",
+        "3": "psybeam",
+        "4": "whirlwind"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

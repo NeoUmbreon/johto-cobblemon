@@ -1,0 +1,15 @@
+{
+    "species": "armaldo",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "xscissor",
+        "2": "rockslide",
+        "3": "earthquake",
+        "4": "irondefense"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "garchomp",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "dracometeor",
+        "2": "earthpower",
+        "3": "flamethrower",
+        "4": "surf"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

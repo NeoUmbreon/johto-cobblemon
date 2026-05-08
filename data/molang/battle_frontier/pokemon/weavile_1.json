@@ -1,0 +1,15 @@
+{
+    "species": "weavile",
+    "nature": "adamant",
+    "heldItem": "cobblemon:chople_berry",
+    "moveset": {
+        "1": "nightslash",
+        "2": "icepunch",
+        "3": "screech",
+        "4": "fakeout"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

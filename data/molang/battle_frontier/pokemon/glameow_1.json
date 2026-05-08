@@ -1,0 +1,15 @@
+{
+    "species": "glameow",
+    "nature": "jolly",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "furyswipes",
+        "2": "fakeout",
+        "3": "feintattack",
+        "4": "attract"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

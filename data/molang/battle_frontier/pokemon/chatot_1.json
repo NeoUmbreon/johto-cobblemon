@@ -1,0 +1,15 @@
+{
+    "species": "chatot",
+    "nature": "calm",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "chatter",
+        "2": "swift",
+        "3": "sing",
+        "4": "mirrormove"
+    },
+    "evs": {
+        "spd": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "machoke",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "crosschop",
+        "2": "facade",
+        "3": "rockslide",
+        "4": "counter"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

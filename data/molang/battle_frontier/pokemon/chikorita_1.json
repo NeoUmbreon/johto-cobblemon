@@ -1,0 +1,15 @@
+{
+    "species": "chikorita",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "bulletseed",
+        "2": "secretpower",
+        "3": "growl",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

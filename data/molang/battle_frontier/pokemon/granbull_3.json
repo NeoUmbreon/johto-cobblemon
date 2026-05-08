@@ -1,0 +1,15 @@
+{
+    "species": "granbull",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "firepunch",
+        "2": "thunderpunch",
+        "3": "icepunch",
+        "4": "payback"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "pupitar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:soft_sand",
+    "moveset": {
+        "1": "earthquake",
+        "2": "rockslide",
+        "3": "crunch",
+        "4": "scaryface"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

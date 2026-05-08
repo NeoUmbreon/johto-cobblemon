@@ -1,0 +1,15 @@
+{
+    "species": "growlithe",
+    "nature": "adamant",
+    "heldItem": "cobblemon:charcoal",
+    "moveset": {
+        "1": "firefang",
+        "2": "bite",
+        "3": "roar",
+        "4": "agility"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

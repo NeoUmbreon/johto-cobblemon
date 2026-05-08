@@ -1,0 +1,15 @@
+{
+    "species": "mrmime",
+    "nature": "calm",
+    "heldItem": "cobblemon:light_clay",
+    "moveset": {
+        "1": "dreameater",
+        "2": "hypnosis",
+        "3": "lightscreen",
+        "4": "reflect"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

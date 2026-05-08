@@ -1,0 +1,15 @@
+{
+    "species": "honchkrow",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "nightslash",
+        "2": "drillpeck",
+        "3": "suckerpunch",
+        "4": "steelwing"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

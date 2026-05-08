@@ -1,0 +1,15 @@
+{
+    "species": "heracross",
+    "nature": "jolly",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "megahorn",
+        "2": "focuspunch",
+        "3": "swagger",
+        "4": "attract"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

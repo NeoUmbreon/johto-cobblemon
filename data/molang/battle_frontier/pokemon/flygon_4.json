@@ -1,0 +1,15 @@
+{
+    "species": "flygon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "earthquake",
+        "2": "outrage",
+        "3": "crunch",
+        "4": "stoneedge"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

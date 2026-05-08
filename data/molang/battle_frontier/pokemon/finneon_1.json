@@ -1,0 +1,15 @@
+{
+    "species": "finneon",
+    "nature": "modest",
+    "heldItem": "cobblemon:wave_incense",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "silverwind",
+        "3": "attract",
+        "4": "aquaring"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

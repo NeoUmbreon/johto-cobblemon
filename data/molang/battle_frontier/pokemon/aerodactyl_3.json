@@ -1,0 +1,15 @@
+{
+    "species": "aerodactyl",
+    "nature": "adamant",
+    "heldItem": "cobblemon:yache_berry",
+    "moveset": {
+        "1": "gigaimpact",
+        "2": "earthquake",
+        "3": "rockslide",
+        "4": "crunch"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "electivire",
+    "nature": "jolly",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "thunderpunch",
+        "2": "crosschop",
+        "3": "thunderwave",
+        "4": "screech"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

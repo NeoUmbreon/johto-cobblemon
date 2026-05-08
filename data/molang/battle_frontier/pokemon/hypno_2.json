@@ -1,0 +1,15 @@
+{
+    "species": "hypno",
+    "nature": "hardy",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "dreameater",
+        "2": "nightmare",
+        "3": "drainpunch",
+        "4": "hypnosis"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

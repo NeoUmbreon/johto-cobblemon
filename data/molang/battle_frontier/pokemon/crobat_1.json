@@ -1,0 +1,15 @@
+{
+    "species": "crobat",
+    "nature": "jolly",
+    "heldItem": "cobblemon:payapa_berry",
+    "moveset": {
+        "1": "crosspoison",
+        "2": "aerialace",
+        "3": "roost",
+        "4": "hypnosis"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

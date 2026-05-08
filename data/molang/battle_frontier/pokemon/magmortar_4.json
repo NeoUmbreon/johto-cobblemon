@@ -1,0 +1,15 @@
+{
+    "species": "magmortar",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "overheat",
+        "2": "psychic",
+        "3": "focusblast",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

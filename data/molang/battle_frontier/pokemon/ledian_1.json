@@ -1,0 +1,15 @@
+{
+    "species": "ledian",
+    "nature": "timid",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "silverwind",
+        "2": "aircutter",
+        "3": "agility",
+        "4": "batonpass"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "species": "nidoking",
+    "nature": "careful",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "focuspunch",
+        "2": "dragonpulse",
+        "3": "horndrill",
+        "4": "substitute"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

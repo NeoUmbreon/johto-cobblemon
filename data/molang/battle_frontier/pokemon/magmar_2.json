@@ -1,0 +1,15 @@
+{
+    "species": "magmar",
+    "nature": "modest",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "flamethrower",
+        "2": "psychic",
+        "3": "focusblast",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

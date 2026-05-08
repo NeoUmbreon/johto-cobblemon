@@ -1,0 +1,15 @@
+{
+    "species": "girafarig",
+    "nature": "modest",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "psybeam",
+        "2": "swift",
+        "3": "batonpass",
+        "4": "agility"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

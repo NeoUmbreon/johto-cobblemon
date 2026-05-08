@@ -1,0 +1,15 @@
+{
+    "species": "munchlax",
+    "nature": "relaxed",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "metronome",
+        "2": "recycle",
+        "3": "stockpile",
+        "4": "swallow"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

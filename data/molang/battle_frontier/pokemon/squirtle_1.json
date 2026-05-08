@@ -1,0 +1,15 @@
+{
+    "species": "squirtle",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sea_incense",
+    "moveset": {
+        "1": "aquajet",
+        "2": "bite",
+        "3": "withdraw",
+        "4": "protect"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "nidorino",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "toxic",
+        "2": "doublekick",
+        "3": "facade",
+        "4": "flatter"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "gyarados",
+    "nature": "adamant",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "outrage",
+        "2": "waterfall",
+        "3": "stoneedge",
+        "4": "gigaimpact"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

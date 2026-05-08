@@ -1,0 +1,15 @@
+{
+    "species": "cresselia",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "psychic",
+        "2": "shadowball",
+        "3": "energyball",
+        "4": "chargebeam"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "rampardos",
+    "nature": "adamant",
+    "heldItem": "cobblemon:life_orb",
+    "moveset": {
+        "1": "headsmash",
+        "2": "zenheadbutt",
+        "3": "firepunch",
+        "4": "thunderpunch"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

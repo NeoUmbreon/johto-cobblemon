@@ -1,0 +1,15 @@
+{
+    "species": "hariyama",
+    "nature": "adamant",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "armthrust",
+        "2": "earthquake",
+        "3": "facade",
+        "4": "fakeout"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

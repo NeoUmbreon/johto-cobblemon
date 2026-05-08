@@ -1,0 +1,15 @@
+{
+    "species": "absol",
+    "nature": "adamant",
+    "heldItem": "cobblemon:choice_band",
+    "moveset": {
+        "1": "nightslash",
+        "2": "superpower",
+        "3": "gigaimpact",
+        "4": "zenheadbutt"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

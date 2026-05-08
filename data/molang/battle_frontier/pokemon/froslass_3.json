@@ -1,0 +1,15 @@
+{
+    "species": "froslass",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "icebeam",
+        "2": "thunderbolt",
+        "3": "signalbeam",
+        "4": "destinybond"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

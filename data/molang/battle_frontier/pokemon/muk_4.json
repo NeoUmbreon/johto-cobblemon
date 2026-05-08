@@ -1,0 +1,15 @@
+{
+    "species": "muk",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "gunkshot",
+        "2": "shadowsneak",
+        "3": "brickbreak",
+        "4": "explosion"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "manectric",
+    "nature": "timid",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "flamethrower",
+        "3": "signalbeam",
+        "4": "swift"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

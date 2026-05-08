@@ -1,0 +1,15 @@
+{
+    "species": "espeon",
+    "nature": "timid",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "psychic",
+        "2": "swift",
+        "3": "charm",
+        "4": "attract"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

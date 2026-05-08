@@ -1,0 +1,15 @@
+{
+    "species": "magneton",
+    "nature": "quirky",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "shockwave",
+        "2": "magnetbomb",
+        "3": "thunderwave",
+        "4": "supersonic"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

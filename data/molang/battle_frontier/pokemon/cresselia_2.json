@@ -1,0 +1,16 @@
+{
+    "species": "cresselia",
+    "nature": "bold",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "toxic",
+        "3": "doubleteam",
+        "4": "moonlight"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

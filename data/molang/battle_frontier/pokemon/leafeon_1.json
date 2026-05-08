@@ -1,0 +1,15 @@
+{
+    "species": "leafeon",
+    "nature": "jolly",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "leafblade",
+        "2": "aerialace",
+        "3": "doubleteam",
+        "4": "batonpass"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

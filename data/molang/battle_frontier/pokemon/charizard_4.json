@@ -1,0 +1,15 @@
+{
+    "species": "charizard",
+    "nature": "timid",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "blastburn",
+        "2": "airslash",
+        "3": "focusblast",
+        "4": "ancientpower"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

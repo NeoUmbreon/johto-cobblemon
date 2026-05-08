@@ -1,0 +1,16 @@
+{
+    "species": "vespiquen",
+    "nature": "careful",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "xscissor",
+        "2": "toxic",
+        "3": "healorder",
+        "4": "destinybond"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

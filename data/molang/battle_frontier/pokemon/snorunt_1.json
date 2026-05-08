@@ -1,0 +1,15 @@
+{
+    "species": "snorunt",
+    "nature": "adamant",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "icefang",
+        "2": "headbutt",
+        "3": "bite",
+        "4": "protect"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

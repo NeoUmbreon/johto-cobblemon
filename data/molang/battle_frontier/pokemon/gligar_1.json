@@ -1,0 +1,15 @@
+{
+    "species": "gligar",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "aerialace",
+        "2": "sandtomb",
+        "3": "metalclaw",
+        "4": "swordsdance"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

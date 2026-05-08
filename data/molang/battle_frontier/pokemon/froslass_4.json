@@ -1,0 +1,15 @@
+{
+    "species": "froslass",
+    "nature": "modest",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "blizzard",
+        "2": "shadowball",
+        "3": "psychic",
+        "4": "hail"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

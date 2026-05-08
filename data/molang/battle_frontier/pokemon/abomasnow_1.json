@@ -1,0 +1,15 @@
+{
+    "species": "abomasnow",
+    "nature": "calm",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "icebeam",
+        "3": "waterpulse",
+        "4": "grasswhistle"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

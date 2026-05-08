@@ -1,0 +1,15 @@
+{
+    "species": "gardevoir",
+    "nature": "timid",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "psychic",
+        "2": "thunderbolt",
+        "3": "shadowball",
+        "4": "destinybond"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "ninetales",
+    "nature": "timid",
+    "heldItem": "cobblemon:wide_lens",
+    "moveset": {
+        "1": "heatwave",
+        "2": "ominouswind",
+        "3": "dreameater",
+        "4": "hypnosis"
+    },
+    "evs": {
+        "spd": 252,
+        "spe": 252
+    }
+}

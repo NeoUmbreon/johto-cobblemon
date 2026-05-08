@@ -1,0 +1,15 @@
+{
+    "species": "glaceon",
+    "nature": "calm",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "icebeam",
+        "2": "doubleteam",
+        "3": "yawn",
+        "4": "hail"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

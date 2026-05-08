@@ -1,0 +1,15 @@
+{
+    "species": "dusknoir",
+    "nature": "adamant",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "shadowpunch",
+        "2": "firepunch",
+        "3": "thunderpunch",
+        "4": "icepunch"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

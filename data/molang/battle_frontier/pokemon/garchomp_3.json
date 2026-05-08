@@ -1,0 +1,15 @@
+{
+    "species": "garchomp",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "dragonrush",
+        "2": "stoneedge",
+        "3": "aquatail",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "porygon-z",
+    "nature": "timid",
+    "heldItem": "cobblemon:choice_scarf",
+    "moveset": {
+        "1": "triattack",
+        "2": "thunderwave",
+        "3": "recover",
+        "4": "trick"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "yanma",
+    "nature": "timid",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "silverwind",
+        "2": "aircutter",
+        "3": "doubleteam",
+        "4": "detect"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

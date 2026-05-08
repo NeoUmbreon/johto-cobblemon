@@ -1,0 +1,15 @@
+{
+    "species": "swampert",
+    "nature": "adamant",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "waterfall",
+        "2": "earthquake",
+        "3": "icepunch",
+        "4": "protect"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

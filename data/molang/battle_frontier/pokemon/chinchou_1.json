@@ -1,0 +1,15 @@
+{
+    "species": "chinchou",
+    "nature": "modest",
+    "heldItem": "cobblemon:magnet",
+    "moveset": {
+        "1": "shockwave",
+        "2": "bubblebeam",
+        "3": "icywind",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

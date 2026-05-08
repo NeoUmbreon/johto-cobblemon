@@ -1,0 +1,15 @@
+{
+    "species": "glalie",
+    "nature": "modest",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "blizzard",
+        "2": "darkpulse",
+        "3": "sheercold",
+        "4": "hail"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

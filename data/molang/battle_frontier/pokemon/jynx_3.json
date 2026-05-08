@@ -1,0 +1,15 @@
+{
+    "species": "jynx",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "blizzard",
+        "2": "energyball",
+        "3": "signalbeam",
+        "4": "wringout"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

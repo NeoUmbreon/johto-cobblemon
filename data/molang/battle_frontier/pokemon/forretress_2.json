@@ -1,0 +1,15 @@
+{
+    "species": "forretress",
+    "nature": "brave",
+    "heldItem": "cobblemon:sitrus_berry",
+    "moveset": {
+        "1": "payback",
+        "2": "stealthrock",
+        "3": "toxicspikes",
+        "4": "spikes"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

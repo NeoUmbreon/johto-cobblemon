@@ -1,0 +1,15 @@
+{
+    "species": "shieldon",
+    "nature": "sassy",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "ironhead",
+        "2": "rocktomb",
+        "3": "swagger",
+        "4": "irondefense"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

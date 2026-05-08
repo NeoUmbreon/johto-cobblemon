@@ -1,0 +1,15 @@
+{
+    "species": "regice",
+    "nature": "modest",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "icebeam",
+        "2": "thunderbolt",
+        "3": "hyperbeam",
+        "4": "focusblast"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

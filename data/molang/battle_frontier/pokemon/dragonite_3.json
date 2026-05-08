@@ -1,0 +1,15 @@
+{
+    "species": "dragonite",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "dracometeor",
+        "2": "flamethrower",
+        "3": "thunderbolt",
+        "4": "surf"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "lumineon",
+    "nature": "bashful",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "watergun",
+        "2": "uturn",
+        "3": "captivate",
+        "4": "attract"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "mismagius",
+    "nature": "timid",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "shadowball",
+        "2": "psychic",
+        "3": "thunderbolt",
+        "4": "destinybond"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

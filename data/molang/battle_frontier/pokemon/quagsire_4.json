@@ -1,0 +1,15 @@
+{
+    "species": "quagsire",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "earthquake",
+        "2": "waterfall",
+        "3": "stoneedge",
+        "4": "icepunch"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

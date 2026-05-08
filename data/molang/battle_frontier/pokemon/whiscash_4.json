@@ -1,0 +1,15 @@
+{
+    "species": "whiscash",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "earthquake",
+        "2": "aquatail",
+        "3": "zenheadbutt",
+        "4": "stoneedge"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

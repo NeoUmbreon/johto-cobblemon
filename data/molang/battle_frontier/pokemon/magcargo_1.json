@@ -1,0 +1,15 @@
+{
+    "species": "magcargo",
+    "nature": "modest",
+    "heldItem": "cobblemon:lax_incense",
+    "moveset": {
+        "1": "lavaplume",
+        "2": "ancientpower",
+        "3": "acidarmor",
+        "4": "sandstorm"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

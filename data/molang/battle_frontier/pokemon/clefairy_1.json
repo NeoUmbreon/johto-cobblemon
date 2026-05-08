@@ -1,0 +1,15 @@
+{
+    "species": "clefairy",
+    "nature": "adamant",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "wakeupslap",
+        "2": "followme",
+        "3": "encore",
+        "4": "sing"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

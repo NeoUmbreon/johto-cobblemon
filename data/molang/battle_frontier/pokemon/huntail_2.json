@@ -1,0 +1,15 @@
+{
+    "species": "huntail",
+    "nature": "adamant",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "aquatail",
+        "2": "crunch",
+        "3": "icefang",
+        "4": "raindance"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

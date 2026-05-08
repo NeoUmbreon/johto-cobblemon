@@ -1,0 +1,15 @@
+{
+    "species": "probopass",
+    "nature": "modest",
+    "heldItem": "cobblemon:life_orb",
+    "moveset": {
+        "1": "flashcannon",
+        "2": "powergem",
+        "3": "earthpower",
+        "4": "thunderbolt"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

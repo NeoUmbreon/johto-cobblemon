@@ -1,0 +1,15 @@
+{
+    "species": "mightyena",
+    "nature": "jolly",
+    "heldItem": "cobblemon:razor_fang",
+    "moveset": {
+        "1": "bite",
+        "2": "poisonfang",
+        "3": "howl",
+        "4": "roar"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

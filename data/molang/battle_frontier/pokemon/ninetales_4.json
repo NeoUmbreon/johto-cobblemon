@@ -1,0 +1,15 @@
+{
+    "species": "ninetales",
+    "nature": "modest",
+    "heldItem": "cobblemon:passho_berry",
+    "moveset": {
+        "1": "flamethrower",
+        "2": "extrasensory",
+        "3": "energyball",
+        "4": "calmmind"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

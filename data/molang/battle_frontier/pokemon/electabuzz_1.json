@@ -1,0 +1,15 @@
+{
+    "species": "electabuzz",
+    "nature": "timid",
+    "heldItem": "cobblemon:lansat_berry",
+    "moveset": {
+        "1": "shockwave",
+        "2": "swift",
+        "3": "thunderwave",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

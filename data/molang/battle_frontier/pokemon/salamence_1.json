@@ -1,0 +1,15 @@
+{
+    "species": "salamence",
+    "nature": "adamant",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "dragonclaw",
+        "2": "aerialace",
+        "3": "aquatail",
+        "4": "scaryface"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

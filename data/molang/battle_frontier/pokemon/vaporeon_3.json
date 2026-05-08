@@ -1,0 +1,15 @@
+{
+    "species": "vaporeon",
+    "nature": "modest",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "muddywater",
+        "2": "blizzard",
+        "3": "aquaring",
+        "4": "yawn"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

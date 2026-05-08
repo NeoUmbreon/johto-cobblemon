@@ -1,0 +1,15 @@
+{
+    "species": "kingdra",
+    "nature": "timid",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "brine",
+        "2": "icebeam",
+        "3": "twister",
+        "4": "yawn"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

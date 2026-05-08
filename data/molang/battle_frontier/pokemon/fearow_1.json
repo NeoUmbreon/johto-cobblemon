@@ -1,0 +1,15 @@
+{
+    "species": "fearow",
+    "nature": "adamant",
+    "heldItem": "cobblemon:sharp_beak",
+    "moveset": {
+        "1": "pluck",
+        "2": "facade",
+        "3": "growl",
+        "4": "leer"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

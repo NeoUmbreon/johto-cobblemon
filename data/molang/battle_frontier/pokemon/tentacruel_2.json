@@ -1,0 +1,15 @@
+{
+    "species": "tentacruel",
+    "nature": "calm",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "toxic",
+        "2": "gigadrain",
+        "3": "attract",
+        "4": "confuseray"
+    },
+    "evs": {
+        "hp": 252,
+        "spd": 252
+    }
+}

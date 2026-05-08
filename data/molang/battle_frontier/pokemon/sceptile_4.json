@@ -1,0 +1,15 @@
+{
+    "species": "sceptile",
+    "nature": "timid",
+    "heldItem": "cobblemon:occa_berry",
+    "moveset": {
+        "1": "leafstorm",
+        "2": "dragonpulse",
+        "3": "focusblast",
+        "4": "hyperbeam"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

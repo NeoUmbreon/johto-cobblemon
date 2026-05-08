@@ -1,0 +1,15 @@
+{
+    "species": "raikou",
+    "nature": "timid",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "shadowball",
+        "3": "thunderwave",
+        "4": "lightscreen"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

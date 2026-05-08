@@ -1,0 +1,15 @@
+{
+    "species": "latios",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "lusterpurge",
+        "2": "dracometeor",
+        "3": "hyperbeam",
+        "4": "surf"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "muk",
+    "nature": "brave",
+    "heldItem": "cobblemon:zoom_lens",
+    "moveset": {
+        "1": "gunkshot",
+        "2": "payback",
+        "3": "shadowsneak",
+        "4": "curse"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "milotic",
+    "nature": "calm",
+    "heldItem": "cobblemon:wide_lens",
+    "moveset": {
+        "1": "hydropump",
+        "2": "blizzard",
+        "3": "mirrorcoat",
+        "4": "recover"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

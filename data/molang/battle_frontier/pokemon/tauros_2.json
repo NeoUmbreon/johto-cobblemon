@@ -1,0 +1,15 @@
+{
+    "species": "tauros",
+    "nature": "adamant",
+    "heldItem": "cobblemon:life_orb",
+    "moveset": {
+        "1": "facade",
+        "2": "earthquake",
+        "3": "rockslide",
+        "4": "payback"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

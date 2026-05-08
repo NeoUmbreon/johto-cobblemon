@@ -1,0 +1,15 @@
+{
+    "species": "leafeon",
+    "nature": "jolly",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "leafblade",
+        "2": "lastresort",
+        "3": "curse",
+        "4": "grasswhistle"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

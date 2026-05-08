@@ -1,0 +1,15 @@
+{
+    "species": "gastrodon",
+    "nature": "sassy",
+    "heldItem": "cobblemon:zoom_lens",
+    "moveset": {
+        "1": "muddywater",
+        "2": "mudbomb",
+        "3": "recover",
+        "4": "yawn"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

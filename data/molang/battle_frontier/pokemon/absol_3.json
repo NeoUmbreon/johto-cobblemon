@@ -1,0 +1,15 @@
+{
+    "species": "absol",
+    "nature": "jolly",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "nightslash",
+        "2": "psychocut",
+        "3": "xscissor",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "medicham",
+    "nature": "jolly",
+    "heldItem": "cobblemon:cheri_berry",
+    "moveset": {
+        "1": "drainpunch",
+        "2": "poisonjab",
+        "3": "detect",
+        "4": "recover"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

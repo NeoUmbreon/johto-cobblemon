@@ -1,0 +1,15 @@
+{
+    "species": "piloswine",
+    "nature": "modest",
+    "heldItem": "cobblemon:never_melt_ice",
+    "moveset": {
+        "1": "icywind",
+        "2": "mudbomb",
+        "3": "mist",
+        "4": "hail"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

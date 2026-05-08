@@ -1,0 +1,15 @@
+{
+    "species": "salamence",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "dracometeor",
+        "2": "hydropump",
+        "3": "flamethrower",
+        "4": "ominouswind"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

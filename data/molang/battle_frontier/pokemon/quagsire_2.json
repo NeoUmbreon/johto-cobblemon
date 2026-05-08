@@ -1,0 +1,16 @@
+{
+    "species": "quagsire",
+    "nature": "careful",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "dive",
+        "2": "yawn",
+        "3": "curse",
+        "4": "amnesia"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

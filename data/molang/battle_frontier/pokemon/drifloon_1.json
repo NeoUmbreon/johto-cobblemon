@@ -1,0 +1,15 @@
+{
+    "species": "drifloon",
+    "nature": "modest",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "ominouswind",
+        "2": "aircutter",
+        "3": "icywind",
+        "4": "willowisp"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

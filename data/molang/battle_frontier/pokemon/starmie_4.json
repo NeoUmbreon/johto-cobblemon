@@ -1,0 +1,15 @@
+{
+    "species": "starmie",
+    "nature": "modest",
+    "heldItem": "cobblemon:expert_belt",
+    "moveset": {
+        "1": "surf",
+        "2": "psychic",
+        "3": "thunderbolt",
+        "4": "icebeam"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

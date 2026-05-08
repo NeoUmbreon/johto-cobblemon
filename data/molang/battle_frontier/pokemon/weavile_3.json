@@ -1,0 +1,15 @@
+{
+    "species": "weavile",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "nightslash",
+        "2": "xscissor",
+        "3": "metalclaw",
+        "4": "counter"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "granbull",
+    "nature": "adamant",
+    "heldItem": "cobblemon:life_orb",
+    "moveset": {
+        "1": "gigaimpact",
+        "2": "closecombat",
+        "3": "earthquake",
+        "4": "stoneedge"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

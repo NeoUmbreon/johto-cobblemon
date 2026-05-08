@@ -1,0 +1,15 @@
+{
+    "species": "suicune",
+    "nature": "calm",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "surf",
+        "2": "icywind",
+        "3": "ominouswind",
+        "4": "mirrorcoat"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

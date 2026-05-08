@@ -1,0 +1,15 @@
+{
+    "species": "ambipom",
+    "nature": "jolly",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "doublehit",
+        "2": "shadowclaw",
+        "3": "brickbreak",
+        "4": "knockoff"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

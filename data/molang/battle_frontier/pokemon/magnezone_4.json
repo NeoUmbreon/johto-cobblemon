@@ -1,0 +1,15 @@
+{
+    "species": "magnezone",
+    "nature": "modest",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "flashcannon",
+        "3": "triattack",
+        "4": "signalbeam"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

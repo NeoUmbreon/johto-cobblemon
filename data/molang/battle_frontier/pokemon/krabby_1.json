@@ -1,0 +1,15 @@
+{
+    "species": "krabby",
+    "nature": "quiet",
+    "heldItem": "cobblemon:pecha_berry",
+    "moveset": {
+        "1": "bubblebeam",
+        "2": "vicegrip",
+        "3": "leer",
+        "4": "protect"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

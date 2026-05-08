@@ -1,0 +1,15 @@
+{
+    "species": "cherrim",
+    "nature": "modest",
+    "heldItem": "cobblemon:power_herb",
+    "moveset": {
+        "1": "solarbeam",
+        "2": "leechseed",
+        "3": "sunnyday",
+        "4": "synthesis"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

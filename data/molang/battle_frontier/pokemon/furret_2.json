@@ -1,0 +1,15 @@
+{
+    "species": "furret",
+    "nature": "adamant",
+    "heldItem": "cobblemon:choice_band",
+    "moveset": {
+        "1": "frustration",
+        "2": "shadowclaw",
+        "3": "trick",
+        "4": "assist"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

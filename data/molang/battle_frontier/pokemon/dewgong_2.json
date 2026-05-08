@@ -1,0 +1,15 @@
+{
+    "species": "dewgong",
+    "nature": "calm",
+    "heldItem": "cobblemon:wacan_berry",
+    "moveset": {
+        "1": "icebeam",
+        "2": "signalbeam",
+        "3": "encore",
+        "4": "disable"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

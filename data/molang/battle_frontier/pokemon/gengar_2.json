@@ -1,0 +1,15 @@
+{
+    "species": "gengar",
+    "nature": "modest",
+    "heldItem": "cobblemon:life_orb",
+    "moveset": {
+        "1": "shadowball",
+        "2": "dreameater",
+        "3": "hypnosis",
+        "4": "substitute"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

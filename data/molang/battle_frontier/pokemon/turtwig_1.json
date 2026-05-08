@@ -1,0 +1,15 @@
+{
+    "species": "turtwig",
+    "nature": "adamant",
+    "heldItem": "cobblemon:occa_berry",
+    "moveset": {
+        "1": "razorleaf",
+        "2": "bite",
+        "3": "tickle",
+        "4": "withdraw"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

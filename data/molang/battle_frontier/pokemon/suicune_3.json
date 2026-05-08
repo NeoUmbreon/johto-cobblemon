@@ -1,0 +1,15 @@
+{
+    "species": "suicune",
+    "nature": "bold",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "hydropump",
+        "2": "blizzard",
+        "3": "shadowball",
+        "4": "hail"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

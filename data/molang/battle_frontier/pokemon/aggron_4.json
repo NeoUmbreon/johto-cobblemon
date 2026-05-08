@@ -1,0 +1,15 @@
+{
+    "species": "aggron",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "metalburst",
+        "2": "stoneedge",
+        "3": "earthquake",
+        "4": "shadowclaw"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

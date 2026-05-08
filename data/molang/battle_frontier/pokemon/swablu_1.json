@@ -1,0 +1,15 @@
+{
+    "species": "swablu",
+    "nature": "modest",
+    "heldItem": "cobblemon:mental_herb",
+    "moveset": {
+        "1": "aircutter",
+        "2": "swift",
+        "3": "mirrormove",
+        "4": "attract"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

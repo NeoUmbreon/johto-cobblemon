@@ -1,0 +1,15 @@
+{
+    "species": "farfetchd",
+    "nature": "adamant",
+    "heldItem": "cobblemon:stick",
+    "moveset": {
+        "1": "slash",
+        "2": "aircutter",
+        "3": "knockoff",
+        "4": "swordsdance"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

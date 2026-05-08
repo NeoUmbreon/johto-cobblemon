@@ -1,0 +1,15 @@
+{
+    "species": "floatzel",
+    "nature": "jolly",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "waterfall",
+        "2": "focuspunch",
+        "3": "doubleteam",
+        "4": "attract"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

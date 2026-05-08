@@ -1,0 +1,15 @@
+{
+    "species": "absol",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "punishment",
+        "2": "swagger",
+        "3": "attract",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

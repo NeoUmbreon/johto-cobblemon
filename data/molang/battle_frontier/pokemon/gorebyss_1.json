@@ -1,0 +1,15 @@
+{
+    "species": "gorebyss",
+    "nature": "bold",
+    "heldItem": "cobblemon:wave_incense",
+    "moveset": {
+        "1": "waterpulse",
+        "2": "confusion",
+        "3": "raindance",
+        "4": "aquaring"
+    },
+    "evs": {
+        "hp": 252,
+        "def": 252
+    }
+}

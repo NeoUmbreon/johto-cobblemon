@@ -1,0 +1,15 @@
+{
+    "species": "heatran",
+    "nature": "modest",
+    "heldItem": "cobblemon:shuca_berry",
+    "moveset": {
+        "1": "heatwave",
+        "2": "flashcannon",
+        "3": "ancientpower",
+        "4": "scaryface"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

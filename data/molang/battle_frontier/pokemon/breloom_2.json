@@ -1,0 +1,15 @@
+{
+    "species": "breloom",
+    "nature": "brave",
+    "heldItem": "cobblemon:big_root",
+    "moveset": {
+        "1": "drainpunch",
+        "2": "gigadrain",
+        "3": "synthesis",
+        "4": "leechseed"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

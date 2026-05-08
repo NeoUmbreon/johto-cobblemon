@@ -1,0 +1,15 @@
+{
+    "species": "claydol",
+    "nature": "brave",
+    "heldItem": "cobblemon:kasib_berry",
+    "moveset": {
+        "1": "earthquake",
+        "2": "zenheadbutt",
+        "3": "grassknot",
+        "4": "trickroom"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

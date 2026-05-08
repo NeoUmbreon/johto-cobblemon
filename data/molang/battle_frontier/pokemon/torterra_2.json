@@ -1,0 +1,16 @@
+{
+    "species": "torterra",
+    "nature": "sassy",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "gigadrain",
+        "2": "leechseed",
+        "3": "synthesis",
+        "4": "amnesia"
+    },
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    }
+}

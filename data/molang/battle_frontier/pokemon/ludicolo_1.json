@@ -1,0 +1,15 @@
+{
+    "species": "ludicolo",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "waterfall",
+        "2": "razorleaf",
+        "3": "drainpunch",
+        "4": "swordsdance"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

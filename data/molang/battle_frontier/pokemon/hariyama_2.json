@@ -1,0 +1,15 @@
+{
+    "species": "hariyama",
+    "nature": "adamant",
+    "heldItem": "cobblemon:iron_ball",
+    "moveset": {
+        "1": "revenge",
+        "2": "payback",
+        "3": "fling",
+        "4": "fakeout"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

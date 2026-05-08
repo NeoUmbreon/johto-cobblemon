@@ -1,0 +1,15 @@
+{
+    "species": "politoed",
+    "nature": "careful",
+    "heldItem": "cobblemon:chesto_berry",
+    "moveset": {
+        "1": "waterfall",
+        "2": "earthquake",
+        "3": "bellydrum",
+        "4": "rest"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

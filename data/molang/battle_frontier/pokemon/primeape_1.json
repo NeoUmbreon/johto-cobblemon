@@ -1,0 +1,15 @@
+{
+    "species": "primeape",
+    "nature": "jolly",
+    "heldItem": "cobblemon:scope_lens",
+    "moveset": {
+        "1": "karatechop",
+        "2": "furyswipes",
+        "3": "foresight",
+        "4": "focusenergy"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

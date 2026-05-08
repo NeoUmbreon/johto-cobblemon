@@ -1,0 +1,15 @@
+{
+    "species": "moltres",
+    "nature": "adamant",
+    "heldItem": "cobblemon:power_herb",
+    "moveset": {
+        "1": "skyattack",
+        "2": "return",
+        "3": "steelwing",
+        "4": "uturn"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

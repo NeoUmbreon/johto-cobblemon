@@ -1,0 +1,15 @@
+{
+    "species": "toxicroak",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "poisonjab",
+        "2": "brickbreak",
+        "3": "xscissor",
+        "4": "knockoff"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

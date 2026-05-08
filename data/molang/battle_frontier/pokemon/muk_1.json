@@ -1,0 +1,15 @@
+{
+    "species": "muk",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "poisonjab",
+        "2": "shadowsneak",
+        "3": "minimize",
+        "4": "acidarmor"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

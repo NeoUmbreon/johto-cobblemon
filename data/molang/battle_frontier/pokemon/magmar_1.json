@@ -1,0 +1,15 @@
+{
+    "species": "magmar",
+    "nature": "jolly",
+    "heldItem": "cobblemon:lansat_berry",
+    "moveset": {
+        "1": "firepunch",
+        "2": "machpunch",
+        "3": "smokescreen",
+        "4": "willowisp"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

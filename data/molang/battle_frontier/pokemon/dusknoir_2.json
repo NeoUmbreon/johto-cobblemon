@@ -1,0 +1,15 @@
+{
+    "species": "dusknoir",
+    "nature": "careful",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "curse",
+        "2": "painsplit",
+        "3": "confuseray",
+        "4": "attract"
+    },
+    "evs": {
+        "def": 252,
+        "spd": 252
+    }
+}

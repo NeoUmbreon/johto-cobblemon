@@ -1,0 +1,15 @@
+{
+    "species": "rhydon",
+    "nature": "brave",
+    "heldItem": "cobblemon:persim_berry",
+    "moveset": {
+        "1": "outrage",
+        "2": "hammerarm",
+        "3": "shadowclaw",
+        "4": "avalanche"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

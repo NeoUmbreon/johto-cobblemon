@@ -1,0 +1,15 @@
+{
+    "species": "espeon",
+    "nature": "timid",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "reflect",
+        "3": "calmmind",
+        "4": "batonpass"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

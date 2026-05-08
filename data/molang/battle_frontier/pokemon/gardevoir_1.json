@@ -1,0 +1,15 @@
+{
+    "species": "gardevoir",
+    "nature": "calm",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "psychic",
+        "2": "shadowball",
+        "3": "thunderwave",
+        "4": "confuseray"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

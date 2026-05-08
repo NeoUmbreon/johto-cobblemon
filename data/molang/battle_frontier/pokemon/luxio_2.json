@@ -1,0 +1,15 @@
+{
+    "species": "luxio",
+    "nature": "modest",
+    "heldItem": "cobblemon:petaya_berry",
+    "moveset": {
+        "1": "thunderbolt",
+        "2": "signalbeam",
+        "3": "swift",
+        "4": "thunderwave"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

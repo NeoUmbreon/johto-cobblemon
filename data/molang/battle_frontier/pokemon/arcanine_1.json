@@ -1,0 +1,15 @@
+{
+    "species": "arcanine",
+    "nature": "jolly",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "firefang",
+        "2": "extremespeed",
+        "3": "crunch",
+        "4": "willowisp"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "kecleon",
+    "nature": "careful",
+    "heldItem": "cobblemon:lansat_berry",
+    "moveset": {
+        "1": "slash",
+        "2": "shadowsneak",
+        "3": "tailwhip",
+        "4": "magiccoat"
+    },
+    "evs": {
+        "atk": 252,
+        "spd": 252
+    }
+}

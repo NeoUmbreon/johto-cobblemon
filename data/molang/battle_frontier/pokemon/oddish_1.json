@@ -1,0 +1,15 @@
+{
+    "species": "oddish",
+    "nature": "bold",
+    "heldItem": "cobblemon:rose_incense",
+    "moveset": {
+        "1": "megadrain",
+        "2": "acid",
+        "3": "sweetscent",
+        "4": "moonlight"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

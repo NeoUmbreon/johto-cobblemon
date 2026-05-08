@@ -1,0 +1,15 @@
+{
+    "species": "kangaskhan",
+    "nature": "adamant",
+    "heldItem": "cobblemon:muscle_band",
+    "moveset": {
+        "1": "gigaimpact",
+        "2": "earthquake",
+        "3": "crunch",
+        "4": "outrage"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

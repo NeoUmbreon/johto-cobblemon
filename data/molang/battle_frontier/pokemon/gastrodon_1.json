@@ -1,0 +1,15 @@
+{
+    "species": "gastrodon",
+    "nature": "careful",
+    "heldItem": "cobblemon:focus_sash",
+    "moveset": {
+        "1": "waterfall",
+        "2": "earthquake",
+        "3": "recover",
+        "4": "mirrorcoat"
+    },
+    "evs": {
+        "hp": 252,
+        "spd": 252
+    }
+}

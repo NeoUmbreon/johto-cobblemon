@@ -1,0 +1,15 @@
+{
+    "species": "steelix",
+    "nature": "relaxed",
+    "heldItem": "cobblemon:iron_ball",
+    "moveset": {
+        "1": "gyroball",
+        "2": "payback",
+        "3": "swagger",
+        "4": "curse"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "species": "gastrodon",
+    "nature": "adamant",
+    "heldItem": "cobblemon:shell_bell",
+    "moveset": {
+        "1": "waterfall",
+        "2": "earthquake",
+        "3": "stoneedge",
+        "4": "fissure"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

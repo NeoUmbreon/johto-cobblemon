@@ -1,0 +1,15 @@
+{
+    "species": "aipom",
+    "nature": "adamant",
+    "heldItem": "cobblemon:silk_scarf",
+    "moveset": {
+        "1": "doublehit",
+        "2": "uturn",
+        "3": "thunderwave",
+        "4": "fakeout"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

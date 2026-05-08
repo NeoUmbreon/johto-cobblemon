@@ -1,0 +1,15 @@
+{
+    "species": "mothim",
+    "nature": "modest",
+    "heldItem": "cobblemon:coba_berry",
+    "moveset": {
+        "1": "bugbuzz",
+        "2": "airslash",
+        "3": "psychic",
+        "4": "poisonpowder"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

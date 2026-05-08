@@ -1,0 +1,15 @@
+{
+    "species": "grimer",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "toxic",
+        "2": "shadowsneak",
+        "3": "acidarmor",
+        "4": "minimize"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

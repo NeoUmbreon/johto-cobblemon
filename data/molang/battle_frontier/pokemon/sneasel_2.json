@@ -1,0 +1,15 @@
+{
+    "species": "sneasel",
+    "nature": "jolly",
+    "heldItem": "cobblemon:kings_rock",
+    "moveset": {
+        "1": "icepunch",
+        "2": "feintattack",
+        "3": "crushclaw",
+        "4": "spite"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

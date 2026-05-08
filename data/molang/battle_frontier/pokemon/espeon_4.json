@@ -1,0 +1,15 @@
+{
+    "species": "espeon",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "psychic",
+        "2": "shadowball",
+        "3": "signalbeam",
+        "4": "morningsun"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

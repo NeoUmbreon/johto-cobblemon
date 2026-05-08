@@ -1,0 +1,15 @@
+{
+    "species": "skarmory",
+    "nature": "impish",
+    "heldItem": "cobblemon:occa_berry",
+    "moveset": {
+        "1": "drillpeck",
+        "2": "steelwing",
+        "3": "spikes",
+        "4": "roar"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

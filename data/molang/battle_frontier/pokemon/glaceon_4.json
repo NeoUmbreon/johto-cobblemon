@@ -1,0 +1,15 @@
+{
+    "species": "glaceon",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "icebeam",
+        "2": "shadowball",
+        "3": "signalbeam",
+        "4": "waterpulse"
+    },
+    "evs": {
+        "def": 252,
+        "spa": 252
+    }
+}

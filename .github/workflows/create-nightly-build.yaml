@@ -36,14 +36,14 @@ jobs:
 
     - name: Create normal zip
       run: |
-        zip -r johto-cobblemon.zip ./datapacks ./trainers
+        zip -r johto-cobblemon.zip ./datapacks ./trainers ./data ./serverconfig
 
     - name: Process files (challenge mode)
       run: make challenge
 
     - name: Create challenge zip
       run: |
-        zip -r johto-cobblemon-challenge.zip ./datapacks ./trainers
+        zip -r johto-cobblemon-challenge.zip ./datapacks ./trainers ./data ./serverconfig
     
     - name: Update nightly tag
       run: |

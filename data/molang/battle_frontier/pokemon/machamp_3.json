@@ -1,0 +1,15 @@
+{
+    "species": "machamp",
+    "nature": "adamant",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "dynamicpunch",
+        "2": "earthquake",
+        "3": "stoneedge",
+        "4": "icepunch"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

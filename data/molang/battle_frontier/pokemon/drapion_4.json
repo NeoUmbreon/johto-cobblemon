@@ -1,0 +1,15 @@
+{
+    "species": "drapion",
+    "nature": "adamant",
+    "heldItem": "cobblemon:razor_claw",
+    "moveset": {
+        "1": "crosspoison",
+        "2": "nightslash",
+        "3": "earthquake",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

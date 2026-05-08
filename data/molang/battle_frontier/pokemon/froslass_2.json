@@ -1,0 +1,15 @@
+{
+    "species": "froslass",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "icepunch",
+        "2": "suckerpunch",
+        "3": "swagger",
+        "4": "psychup"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

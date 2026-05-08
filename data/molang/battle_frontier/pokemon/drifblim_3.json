@@ -1,0 +1,15 @@
+{
+    "species": "drifblim",
+    "nature": "modest",
+    "heldItem": "cobblemon:wise_glasses",
+    "moveset": {
+        "1": "psychic",
+        "2": "thunderbolt",
+        "3": "icywind",
+        "4": "destinybond"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

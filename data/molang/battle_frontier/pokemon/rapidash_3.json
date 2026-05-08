@@ -1,0 +1,15 @@
+{
+    "species": "rapidash",
+    "nature": "adamant",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "flareblitz",
+        "2": "poisonjab",
+        "3": "irontail",
+        "4": "horndrill"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

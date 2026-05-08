@@ -1,0 +1,15 @@
+{
+    "species": "metagross",
+    "nature": "adamant",
+    "heldItem": "cobblemon:occa_berry",
+    "moveset": {
+        "1": "hammerarm",
+        "2": "thunderpunch",
+        "3": "icepunch",
+        "4": "aerialace"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

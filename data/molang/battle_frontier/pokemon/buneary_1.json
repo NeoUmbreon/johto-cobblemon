@@ -1,0 +1,15 @@
+{
+    "species": "buneary",
+    "nature": "adamant",
+    "heldItem": "cobblemon:black_belt",
+    "moveset": {
+        "1": "dizzypunch",
+        "2": "drainpunch",
+        "3": "quickattack",
+        "4": "foresight"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

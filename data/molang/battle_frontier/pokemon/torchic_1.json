@@ -1,0 +1,15 @@
+{
+    "species": "torchic",
+    "nature": "docile",
+    "heldItem": "cobblemon:charcoal",
+    "moveset": {
+        "1": "ember",
+        "2": "mirrormove",
+        "3": "mudslap",
+        "4": "doubleteam"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

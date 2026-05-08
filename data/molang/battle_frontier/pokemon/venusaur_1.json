@@ -1,0 +1,15 @@
+{
+    "species": "venusaur",
+    "nature": "modest",
+    "heldItem": "cobblemon:white_herb",
+    "moveset": {
+        "1": "leafstorm",
+        "2": "sludgebomb",
+        "3": "amnesia",
+        "4": "sleeppowder"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

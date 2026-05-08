@@ -1,0 +1,15 @@
+{
+    "species": "lapras",
+    "nature": "adamant",
+    "heldItem": "cobblemon:lum_berry",
+    "moveset": {
+        "1": "waterfall",
+        "2": "outrage",
+        "3": "zenheadbutt",
+        "4": "dragondance"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}

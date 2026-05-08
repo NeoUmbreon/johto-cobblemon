@@ -1,0 +1,15 @@
+{
+    "species": "moltres",
+    "nature": "timid",
+    "heldItem": "cobblemon:heat_rock",
+    "moveset": {
+        "1": "fireblast",
+        "2": "solarbeam",
+        "3": "hyperbeam",
+        "4": "sunnyday"
+    },
+    "evs": {
+        "hp": 252,
+        "spa": 252
+    }
+}

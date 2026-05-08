@@ -1,0 +1,15 @@
+{
+    "species": "floatzel",
+    "nature": "modest",
+    "heldItem": "cobblemon:wave_incense",
+    "moveset": {
+        "1": "surf",
+        "2": "icebeam",
+        "3": "focusblast",
+        "4": "raindance"
+    },
+    "evs": {
+        "spa": 252,
+        "spe": 252
+    }
+}

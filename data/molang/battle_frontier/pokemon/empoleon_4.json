@@ -1,0 +1,15 @@
+{
+    "species": "empoleon",
+    "nature": "brave",
+    "heldItem": "cobblemon:quick_claw",
+    "moveset": {
+        "1": "hydrocannon",
+        "2": "flashcannon",
+        "3": "drillpeck",
+        "4": "earthquake"
+    },
+    "evs": {
+        "atk": 252,
+        "spa": 252
+    }
+}

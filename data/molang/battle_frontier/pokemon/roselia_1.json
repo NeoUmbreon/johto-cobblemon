@@ -1,0 +1,15 @@
+{
+    "species": "roselia",
+    "nature": "modest",
+    "heldItem": "cobblemon:black_sludge",
+    "moveset": {
+        "1": "megadrain",
+        "2": "toxic",
+        "3": "grasswhistle",
+        "4": "cottonspore"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

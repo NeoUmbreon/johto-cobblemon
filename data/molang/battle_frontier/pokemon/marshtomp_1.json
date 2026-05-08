@@ -1,0 +1,15 @@
+{
+    "species": "marshtomp",
+    "nature": "modest",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "mudshot",
+        "2": "waterpulse",
+        "3": "ancientpower",
+        "4": "growl"
+    },
+    "evs": {
+        "spa": 252,
+        "spd": 252
+    }
+}

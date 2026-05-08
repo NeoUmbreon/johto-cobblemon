@@ -1,0 +1,16 @@
+{
+    "species": "wobbuffet",
+    "nature": "jolly",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "counter",
+        "2": "mirrorcoat",
+        "3": "charm",
+        "4": "splash"
+    },
+    "evs": {
+        "def": 170,
+        "spd": 170,
+        "spe": 170
+    }
+}

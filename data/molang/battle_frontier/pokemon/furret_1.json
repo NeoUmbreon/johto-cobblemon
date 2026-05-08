@@ -1,0 +1,15 @@
+{
+    "species": "furret",
+    "nature": "jolly",
+    "heldItem": "cobblemon:liechi_berry",
+    "moveset": {
+        "1": "slash",
+        "2": "suckerpunch",
+        "3": "helpinghand",
+        "4": "assist"
+    },
+    "evs": {
+        "atk": 252,
+        "spe": 252
+    }
+}

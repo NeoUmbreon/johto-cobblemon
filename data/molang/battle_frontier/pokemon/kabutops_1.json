@@ -1,0 +1,15 @@
+{
+    "species": "kabutops",
+    "nature": "impish",
+    "heldItem": "cobblemon:sea_incense",
+    "moveset": {
+        "1": "aquajet",
+        "2": "rocktomb",
+        "3": "harden",
+        "4": "metalsound"
+    },
+    "evs": {
+        "atk": 252,
+        "def": 252
+    }
+}

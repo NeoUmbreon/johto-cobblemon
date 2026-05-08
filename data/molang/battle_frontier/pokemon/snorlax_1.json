@@ -1,0 +1,15 @@
+{
+    "species": "snorlax",
+    "nature": "adamant",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "return",
+        "2": "rockslide",
+        "3": "curse",
+        "4": "yawn"
+    },
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    }
+}
