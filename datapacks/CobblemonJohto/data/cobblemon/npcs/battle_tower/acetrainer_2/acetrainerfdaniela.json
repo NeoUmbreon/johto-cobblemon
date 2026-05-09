@@ -2,8 +2,8 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Garvey",
-    "resourceIdentifier": "cobblemon:acetrainer",
+    "name": "Daniela",
+    "resourceIdentifier": "cobblemon:acetrainerf",
     "config": [
         {
             "variableName": "class",

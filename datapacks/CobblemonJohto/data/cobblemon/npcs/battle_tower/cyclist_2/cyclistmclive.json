@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Jonas",
-    "resourceIdentifier": "cobblemon:schoolkid",
+    "name": "Clive",
+    "resourceIdentifier": "cobblemon:cyclistm",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "schoolkid_2"
+            "defaultValue": "cyclist_2"
         }
     ]
 }

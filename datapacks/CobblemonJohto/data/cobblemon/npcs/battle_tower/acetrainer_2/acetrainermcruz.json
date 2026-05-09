@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Simon",
-    "resourceIdentifier": "cobblemon:pokefan",
+    "name": "Cruz",
+    "resourceIdentifier": "cobblemon:acetrainerm",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "pokefan_2"
+            "defaultValue": "acetrainer_2"
         }
     ]
 }

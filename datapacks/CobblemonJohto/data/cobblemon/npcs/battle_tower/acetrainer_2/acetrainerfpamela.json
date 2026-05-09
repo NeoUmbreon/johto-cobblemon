@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Europa",
-    "resourceIdentifier": "cobblemon:pokefan",
+    "name": "Pamela",
+    "resourceIdentifier": "cobblemon:acetrainerf",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "pokefan_2"
+            "defaultValue": "acetrainer_2"
         }
     ]
 }

@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Antonia",
-    "resourceIdentifier": "cobblemon:pokemonbreeder",
+    "name": "Hilda",
+    "resourceIdentifier": "cobblemon:cyclistf",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "pokemonbreeder_2"
+            "defaultValue": "cyclist_2"
         }
     ]
 }

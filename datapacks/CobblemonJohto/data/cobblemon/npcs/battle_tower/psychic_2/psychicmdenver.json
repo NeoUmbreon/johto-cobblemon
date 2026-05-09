@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Pandora",
-    "resourceIdentifier": "cobblemon:pokefan",
+    "name": "Denver",
+    "resourceIdentifier": "cobblemon:psychicm",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "pokefan_2"
+            "defaultValue": "psychic_2"
         }
     ]
 }

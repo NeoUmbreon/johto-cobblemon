@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Ward",
-    "resourceIdentifier": "cobblemon:cyclist",
+    "name": "Peter",
+    "resourceIdentifier": "cobblemon:pokemonbreederm",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "cyclist_2"
+            "defaultValue": "pokemonbreeder_2"
         }
     ]
 }

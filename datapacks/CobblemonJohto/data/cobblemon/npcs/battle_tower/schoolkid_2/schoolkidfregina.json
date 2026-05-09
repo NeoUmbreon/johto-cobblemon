@@ -2,8 +2,8 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Keon",
-    "resourceIdentifier": "cobblemon:schoolkid",
+    "name": "Regina",
+    "resourceIdentifier": "cobblemon:schoolkidf",
     "config": [
         {
             "variableName": "class",

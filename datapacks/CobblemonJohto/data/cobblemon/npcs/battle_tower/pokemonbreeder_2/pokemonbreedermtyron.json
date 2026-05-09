@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Berkley",
-    "resourceIdentifier": "cobblemon:psychic",
+    "name": "Tyron",
+    "resourceIdentifier": "cobblemon:pokemonbreederm",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "psychic_2"
+            "defaultValue": "pokemonbreeder_2"
         }
     ]
 }

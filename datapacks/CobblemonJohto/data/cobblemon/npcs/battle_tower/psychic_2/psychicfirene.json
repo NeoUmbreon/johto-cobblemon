@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Hilda",
-    "resourceIdentifier": "cobblemon:cyclist",
+    "name": "Irene",
+    "resourceIdentifier": "cobblemon:psychicf",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "cyclist_2"
+            "defaultValue": "psychic_2"
         }
     ]
 }

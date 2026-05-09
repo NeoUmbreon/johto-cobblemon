@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Chelsie",
-    "resourceIdentifier": "cobblemon:schoolkid",
+    "name": "Berkley",
+    "resourceIdentifier": "cobblemon:psychicm",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "schoolkid_2"
+            "defaultValue": "psychic_2"
         }
     ]
 }

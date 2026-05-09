@@ -2,14 +2,14 @@
     "presets": [
         "cobblemon:battle_tower_trainer"
     ],
-    "name": "Tyron",
-    "resourceIdentifier": "cobblemon:pokemonbreeder",
+    "name": "Europa",
+    "resourceIdentifier": "cobblemon:pokefanf",
     "config": [
         {
             "variableName": "class",
             "displayName": "Battle Tower Trainer Class",
             "type": "TEXT",
-            "defaultValue": "pokemonbreeder_2"
+            "defaultValue": "pokefan_2"
         }
     ]
 }
