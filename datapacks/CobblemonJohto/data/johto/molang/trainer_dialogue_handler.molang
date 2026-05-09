@@ -4,6 +4,7 @@ c.npc.has_tag('trainerBusy') ? return q.run_command('tellraw ' + c.player.userna
 
 c.player.has_tag('defeated.' + c.npc.Config.trainer_id) ? return c.npc.run_dialogue(c.player, c.npc.Config.trainer_id + '_end_defeated');
 
+!c.player.party.has_usable_pokemon ? return q.run_command('tellraw ' + c.player.username + ' {"text":"You have no usable Pokémon!","italic":true,"color":"gray"}');
 q.run_script('store_battle_data', c.player, c.npc);
 c.npc.add_tag('trainerBusy');
 c.player.add_tag('InDialogue');
