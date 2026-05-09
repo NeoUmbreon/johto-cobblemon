@@ -8,7 +8,7 @@ execute as @s[tag=!RadioOff] run function johto:tools/forceclick
 execute as @s[scores={BattleEnd=1..3}] unless entity @s[x=858,y=75,z=-15,dx=102,dy=100,dz=143] run tellraw @s ["",{"text":"You now have $","italic":true,"color":"gray"},{"score":{"name":"*","objective":"Money"},"italic":true,"color":"gray"}]
 
 #Lets players know their battle streaks if they're in the tower
-execute as @s[scores={BattleEnd=1..3}] if entity @s[x=858,y=75,z=-15,dx=102,dy=100,dz=143] run tellraw @s ["",{"text":"Your battle streak increased to ","italic":true,"color":"gray"},{"score":{"name":"*","objective":"BattleStreak"},"italic":true,"color":"gray"},{"text":"!","italic":true,"color":"gray"}]
+#execute as @s[scores={BattleEnd=1..3}] if entity @s[x=858,y=75,z=-15,dx=102,dy=100,dz=143] run tellraw @s ["",{"text":"Your battle streak increased to ","italic":true,"color":"gray"},{"score":{"name":"*","objective":"BattleStreak"},"italic":true,"color":"gray"},{"text":"!","italic":true,"color":"gray"}]
 
 
 #6 - PvP battle victory
@@ -33,6 +33,11 @@ execute as @s[tag=!RadioOff,scores={BattleEnd=4},tag=DSSound] run function johto
 #5 - Wild Pokemon Victory
 execute as @s[tag=!RadioOff,scores={BattleEnd=5},tag=!DSSound] run function johto:sound/playrecord {track:"gb/victory/wildpokemonshort",duration:31}
 execute as @s[tag=!RadioOff,scores={BattleEnd=5},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/wildpokemonshort",duration:32}
+
+
+#7 - Frontier Brain
+execute as @s[tag=!RadioOff,scores={BattleEnd=7},tag=!DSSound] run function johto:sound/playrecord {track:"gb/victory/trainer",duration:282}
+execute as @s[tag=!RadioOff,scores={BattleEnd=7},tag=DSSound] run function johto:sound/playrecord {track:"ds/victory/frontierbrain",duration:630}
 
 
 #Gives player AllGyms tag and achievement

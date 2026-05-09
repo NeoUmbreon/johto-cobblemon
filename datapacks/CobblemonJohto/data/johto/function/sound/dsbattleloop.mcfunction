@@ -44,7 +44,8 @@ execute if score @s BattleStart matches 13 run return run function johto:sound/p
 #14 - Team Rocket
 execute if score @s BattleStart matches 14 run return run function johto:sound/playrecord {track:"ds/battle/teamrocket", duration:2580}
 
-#15 - Legendary Beasts (UNUSED)
+#15 - Frontier Brain
+execute if score @s BattleStart matches 15 run return run function johto:sound/playrecord {track:"ds/battle/frontierbrain", duration:3820}
 
 #16 - Champion
 execute if score @s BattleStart matches 16 run return run function johto:sound/playrecord {track:"ds/battle/champion", duration:2440}

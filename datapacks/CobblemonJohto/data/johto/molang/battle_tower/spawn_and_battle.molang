@@ -8,9 +8,16 @@ t.format == 'SINGLES' ? {
     q.npc.data.battle_num == 49 ? { t.palmer = 'palmer_2'; };
 
     'If Palmer found, Palmer time';
-    t.palmer ? {
-        t.npc = q.npc.world.spawn_npc(q.npc.x + 5, q.npc.y, q.npc.z, t.palmer, 1);
-        q.run_command('tbcs battle GEN_9_SINGLES ' + t.players.0.uuid + ' vs ' + t.npc.uuid + ' as tbcs:' + t.palmer);
+    t.palmer != 0 ? {
+        t.player = t.players.0;
+        t.npc = q.npc.world.spawn_npc(q.npc.x + 5, q.npc.y, q.npc.z, 'palmer', 1);
+        t.player.data.battle_tower.battle_num = q.npc.data.battle_num;
+        t.player.data.battle_tower.npc = q.npc;
+        q.npc.data.npcs = q.array(t.npc);
+        q.npc.save_data;
+        q.run_command('tbcs battle GEN_9_SINGLES ' + t.player.uuid + ' vs ' + t.npc.uuid + ' as tbcs:' + t.palmer);
+        q.run_command('scoreboard players set ' + t.player.uuid + ' BattleStart 15');
+        q.run_command('execute as ' + t.player.uuid + ' run function johto:tools/forceclick');
         return 1;
     };
 };
@@ -80,6 +87,10 @@ t.team_size == 1 ? {
 } : {
     q.run_command('tbcs battle GEN_9_MULTI ' + t.players.0.uuid + ' ' + t.players.1.uuid + ' vs ' + t.tbcs_prefix + '1 ' + t.tbcs_prefix + '2');
 };
+
+'Run music';
+q.run_command('scoreboard players set @a[tag=BattleTowerFloor_' + q.npc.data.floor + '] BattleStart 11');
+q.run_command('execute as @a[tag=BattleTowerFloor_' + q.npc.data.floor + '] run function johto:tools/forceclick');
 
 'Store data';
 for_each(t.player, t.players, {

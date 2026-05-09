@@ -1,0 +1,7 @@
+{
+    "presets": [
+        "cobblemon:battle_tower_trainer"
+    ],
+    "name": "Palmer",
+    "resourceIdentifier": "cobblemon:palmer"
+}
