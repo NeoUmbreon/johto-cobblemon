@@ -1,0 +1,15 @@
+{
+    "evs": {
+        "hp": 252,
+        "atk": 252
+    },
+    "species": "regigigas",
+    "nature": "adamant",
+    "heldItem": "cobblemon:bright_powder",
+    "moveset": {
+        "1": "crushgrip",
+        "2": "earthquake",
+        "3": "stoneedge",
+        "4": "drainpunch"
+    }
+}

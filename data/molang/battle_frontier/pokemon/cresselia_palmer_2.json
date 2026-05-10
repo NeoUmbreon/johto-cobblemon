@@ -1,0 +1,16 @@
+{
+    "evs": {
+        "hp": 170,
+        "def": 170,
+        "spd": 170
+    },
+    "species": "cresselia",
+    "nature": "modest",
+    "heldItem": "cobblemon:leftovers",
+    "moveset": {
+        "1": "psychic",
+        "2": "icebeam",
+        "3": "signalbeam",
+        "4": "moonlight"
+    }
+}

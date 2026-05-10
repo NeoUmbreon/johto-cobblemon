@@ -1,0 +1,15 @@
+{
+    "evs": {
+        "atk": 252,
+        "def": 252
+    },
+    "species": "rhyperior",
+    "nature": "adamant",
+    "heldItem": "cobblemon:focus_band",
+    "moveset": {
+        "1": "rockwrecker",
+        "2": "earthquake",
+        "3": "crunch",
+        "4": "roar"
+    }
+}

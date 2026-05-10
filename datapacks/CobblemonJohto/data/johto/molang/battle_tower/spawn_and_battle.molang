@@ -1,75 +1,71 @@
-'Read entity data';
+'Read entity data, init variables';
 t.players = q.npc.data.players;
 t.format = q.npc.data.format;
-
-'Palmer handling';
-t.format == 'SINGLES' ? {
-    q.npc.data.battle_num == 21 ? { t.palmer = 'palmer_1'; };
-    q.npc.data.battle_num == 49 ? { t.palmer = 'palmer_2'; };
-
-    'If Palmer found, Palmer time';
-    t.palmer != 0 ? {
-        t.player = t.players.0;
-        t.npc = q.npc.world.spawn_npc(q.npc.x + 5, q.npc.y, q.npc.z, 'palmer', 1);
-        t.player.data.battle_tower.battle_num = q.npc.data.battle_num;
-        t.player.data.battle_tower.npc = q.npc;
-        q.npc.data.npcs = q.array(t.npc);
-        q.npc.save_data;
-        q.run_command('tbcs battle GEN_9_SINGLES ' + t.player.uuid + ' vs ' + t.npc.uuid + ' as tbcs:' + t.palmer);
-        q.run_command('scoreboard players set ' + t.player.uuid + ' BattleStart 15');
-        q.run_command('execute as ' + t.player.uuid + ' run function johto:tools/forceclick');
-        return 1;
-    };
-};
-
-'Determine team and party sizes';
+v.battle_num = q.npc.data.battle_num;
+t.floor = q.npc.data.floor;
+t.prefix = 'battletower_floor_' + t.floor + '_trainer_';
+t.tbcs_prefix = 'tbcs:' + t.prefix;
+t.trainer_list = q.array();
+t.npcs = q.array();
 t.team_size = q.length(t.players);
 v.party_size = ( t.team_size != 1 ? 2 : ( t.format == 'SINGLES' ? 3 : ( t.format == 'DOUBLES' ? 4 : ( t.format == 'TRIPLES' ? 6 ))));
+t.music_id = 11;
 
-'Generate unique trainer names';
-t.trainer_list = q.array();
-loop(100, {
-    'Generate trainer';
-    t.trainer = q.run_script('johto:generate_trainer');
 
-    'Compare trainer name to already picked list';
-    t.match = 0;
-    for_each(t.item, t.trainer_list, {
-        t.trainer.name == t.item.name ? {
-            t.match = 1;
-            break;
+'Palmer handling';
+t.team_size == 1 && t.format == 'SINGLES' ? {
+    v.battle_num == 21 ? { t.palmer.name = 'palmer'; t.palmer.id = 160; };
+    v.battle_num == 49 ? { t.palmer.name = 'palmer'; t.palmer.id = 300; };
+};
+
+t.palmer != 0 ? {
+    'If Palmer, set variables';
+    t.music_id = 15;
+    q.append(t.trainer_list, t.palmer);
+} : {
+    'Else, generate random trainers';
+    loop(100, {
+        'Generate trainer';
+        t.trainer = q.run_script('johto:generate_trainer');
+
+        'Compare trainer name to already picked list';
+        t.match = 0;
+        for_each(t.item, t.trainer_list, {
+            t.trainer.name == t.item.name ? {
+                t.match = 1;
+                break;
+            };
+        });
+
+        'Append trainer if not already picked';
+        !t.match ? {
+            q.append(t.trainer_list, t.trainer);
         };
+
+        'Break when team is filled';
+        q.length(t.trainer_list) == t.team_size ? break;
     });
-
-    'Append trainer if not already picked';
-    !t.match ? {
-        q.append(t.trainer_list, t.trainer);
-    };
-
-    'Break when team is filled';
-    q.length(t.trainer_list) == t.team_size ? break;
-});
+};
 
 'Spawn trainers, generate and attach TBCS teams';
-t.prefix = 'battletower_floor_' + q.npc.data.floor + '_trainer_';
-t.npcs = q.array();
 for_each(t.trainer, t.trainer_list, {
     'Iterate runtime id';
     t.i = t.i + 1;
     v.rct_name = t.prefix + t.i;
 
-    'Pass numeric trainer id';
-    v.id = t.trainer.id;
-
-    'Spawn NPC and generate corresponding party';
+    'Spawn NPC';
     v.npc = q.npc.world.spawn_npc(q.npc.x + t.i, q.npc.y, q.npc.z, t.trainer.name, 1);
-    'awful hack';
-    t.npc_temp = q.npc.world.get_entities_around(q.npc.x + t.i, q.npc.y, q.npc.z, 0.00001);
-    q.set_query('pool', t.npc_temp.0.config.class);
     v.npc == 0 ? {
         q.run_command('say Error spawning NPC with class ' + t.trainer.name);
         return 0;
     };
+
+    'Awful hack to retrieve config variables';
+    t.npc_temp = q.npc.world.get_entities_around(q.npc.x + t.i, q.npc.y, q.npc.z, 0.00001);
+    q.set_query('pool', t.npc_temp.0.config.class);
+
+    'Generate party';
+    v.id = t.trainer.id;
     q.run_script('johto:generate_party') == 0 ? return 0;
 
     'Store NPC';
@@ -80,21 +76,23 @@ for_each(t.trainer, t.trainer_list, {
 q.npc.data.npcs = t.npcs;
 q.npc.save_data;
 
-'Battle';
-t.tbcs_prefix = 'tbcs:' + t.prefix;
+'Build battle command';
 t.team_size == 1 ? {
-    q.run_command('tbcs battle GEN_9_' + t.format + ' ' + t.players.0.uuid + ' vs ' + t.tbcs_prefix + '1');
+    t.command = 'GEN_9_' + t.format + ' ' + t.players.0.uuid + ' vs ' + t.tbcs_prefix + '1';
 } : {
-    q.run_command('tbcs battle GEN_9_MULTI ' + t.players.0.uuid + ' ' + t.players.1.uuid + ' vs ' + t.tbcs_prefix + '1 ' + t.tbcs_prefix + '2');
+    t.command = 'GEN_9_MULTI ' + t.players.0.uuid + ' ' + t.players.1.uuid + ' vs ' + t.tbcs_prefix + '1 ' + t.tbcs_prefix + '2';
 };
 
+'Run battle';
+q.run_command('tbcs battle ' + t.command + ' rules {maxItemUses: 0}');
+
 'Run music';
-q.run_command('scoreboard players set @a[tag=BattleTowerFloor_' + q.npc.data.floor + '] BattleStart 11');
-q.run_command('execute as @a[tag=BattleTowerFloor_' + q.npc.data.floor + '] run function johto:tools/forceclick');
+q.run_command('scoreboard players set @a[tag=BattleTowerFloor_' + t.floor + '] BattleStart ' + t.music_id);
+q.run_command('execute as @a[tag=BattleTowerFloor_' + t.floor + '] run function johto:tools/forceclick');
 
 'Store data';
 for_each(t.player, t.players, {
-    t.player.data.battle_tower.battle_num = q.npc.data.battle_num;
+    t.player.data.battle_tower.battle_num = v.battle_num;
     t.player.data.battle_tower.npc = q.npc;
 });
 
