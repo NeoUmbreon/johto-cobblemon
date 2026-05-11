@@ -56,7 +56,7 @@ for_each(t.trainer, t.trainer_list, {
     'Spawn NPC';
     v.npc = q.npc.world.spawn_npc(q.npc.x + t.i, q.npc.y, q.npc.z, t.trainer.name, 1);
     v.npc == 0 ? {
-        q.run_command('say Error spawning NPC with class ' + t.trainer.name);
+        q.run_command('say Error spawning NPC with class ' + t.trainer.name + ', canceling battle');
         return 0;
     };
 
@@ -83,6 +83,13 @@ t.team_size == 1 ? {
     t.command = 'GEN_9_MULTI ' + t.players.0.uuid + ' ' + t.players.1.uuid + ' vs ' + t.tbcs_prefix + '1 ' + t.tbcs_prefix + '2';
 };
 
+'Pre-battle prep';
+for_each(t.player, t.players, {
+    t.player.data.battle_tower.battle_num = v.battle_num;
+    t.player.data.battle_tower.npc = q.npc;
+    t.player.party.heal;
+});
+
 'Run battle';
 q.run_command('tbcs battle ' + t.command + ' rules {maxItemUses: 0}');
 
@@ -90,10 +97,5 @@ q.run_command('tbcs battle ' + t.command + ' rules {maxItemUses: 0}');
 q.run_command('scoreboard players set @a[tag=BattleTowerFloor_' + t.floor + '] BattleStart ' + t.music_id);
 q.run_command('execute as @a[tag=BattleTowerFloor_' + t.floor + '] run function johto:tools/forceclick');
 
-'Store data';
-for_each(t.player, t.players, {
-    t.player.data.battle_tower.battle_num = v.battle_num;
-    t.player.data.battle_tower.npc = q.npc;
-});
 
 return 1;

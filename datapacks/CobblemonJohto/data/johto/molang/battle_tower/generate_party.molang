@@ -41,7 +41,7 @@ for_each(t.filename, t.filename_list, {
     t.pokemon = q.file.load('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
     q.file.clear('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
     t.pokemon == 0 ? {
-        q.run_command('say Error loading Pokemon json ' + t.filename);
+        q.run_command('say Error loading Pokemon json ' + t.filename + ', canceling battle');
         return 0;
     };
 

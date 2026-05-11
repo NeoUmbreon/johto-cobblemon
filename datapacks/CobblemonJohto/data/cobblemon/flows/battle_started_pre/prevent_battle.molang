@@ -1,0 +1,3 @@
+for_each(t.actor, c.players, {
+    t.actor.player.has_tag('BattleTowerReady') ? { q.cancel; break; };
+});

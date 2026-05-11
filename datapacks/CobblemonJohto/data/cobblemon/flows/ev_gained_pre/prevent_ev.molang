@@ -1,3 +1,5 @@
+c.pokemon.owner.battle.is_pvp ? q.cancel;
+
 c.pokemon.owner.has_tag('BattleTower') ? {
     c.source == 'battle' ? q.cancel;
 };

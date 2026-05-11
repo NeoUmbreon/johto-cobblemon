@@ -65,7 +65,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_script('johto:spawn_and_battle');",
+                            "q.run_script('johto:spawn_and_battle') == 0 ? { q.npc.remove_tag('Locked') };",
                             "q.dialogue.close;"
                         ]
                     }
