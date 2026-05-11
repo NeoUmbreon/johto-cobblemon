@@ -1,3 +1,5 @@
-for_each(t.actor, c.players, {
-    t.actor.player.has_tag('BattleTowerReady') ? { q.cancel; break; };
-});
+c.battle.is_pvp ? {
+    for_each(t.actor, c.players, {
+        t.actor.player.has_tag('BattleTowerReady') ? { q.cancel; break; };
+    });
+};
