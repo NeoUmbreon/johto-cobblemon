@@ -1,0 +1,50 @@
+'Mismatched party count';
+t.count = q.player.party.count;
+t.format = q.npc.data.format;
+t.format == 'SINGLES' && t.count != 3 ? { t.fail.required_pokemon = 3 };
+t.format == 'DOUBLES' && t.count != 4 ? { t.fail.required_pokemon = 4 };
+t.format == 'TRIPLES' && t.count != 6 ? { t.fail.required_pokemon = 6 };
+t.format == 'MULTI' && t.count != 2 ? { t.fail.required_pokemon = 2 };
+
+'Banned species';
+t.banned_species = 'Mewtwo, Mew, Lugia, Ho-Oh, Celebi, Kyogre, Groudon, Rayquaza, Jirachi, Deoxys, Dialga, Palkia, Giratina, Phione, Manaphy, Darkrai, Shaymin, Arceus';
+t.found = ' ';
+for_each(t.pokemon, q.player.party.pokemon, {
+    q.is_included(t.banned_species, t.pokemon.species.name) ? {
+        q.string_length(t.found) == 1 ? { t.found = t.pokemon.species.name } : { t.found = t.found + ', ' + t.pokemon.species.name };
+    };
+});
+q.string_length(t.found) > 1 ? { t.fail.banned_species = t.found };
+
+'Duplicate species';
+t.party_string = ' ';
+for_each(t.pokemon, q.player.party.pokemon, {
+    q.is_included(t.party_string, t.pokemon.species.name) ? { t.fail.duplicate_species = 1; break; };
+    t.party_string = t.party_string + t.pokemon.species.name + ' ';
+});
+
+'Duplicate items';
+t.items_string = ' ';
+for_each(t.pokemon, q.player.party.pokemon, {
+    t.item = q.to_string(t.pokemon.held_item.item);
+    'Reject air';
+    !q.is_included(t.item, 'minecraft:air') ? {
+        q.is_included(t.items_string, t.item) ? { t.fail.duplicate_items = 1; break; };
+        t.items_string = t.items_string + t.item + ' ';
+    };
+});
+
+'Return pass/fail, tellraw if fail';
+t.fail == 0 ? return 1 : {
+    t.message.0 = ' {"text":"Errors found:","color":"gray","bold":true}';
+    t.fail.required_pokemon != 0 ? { t.i = t.i + 1; t.message.[t.i] = ' {"text":"' + t.i + ') Format ' + t.format + ' requires exactly ' + t.fail.required_pokemon + ' Pokémon","color":"gray","italic":true}'; };
+    t.fail.banned_species != 0 ? { t.i = t.i + 1; t.message.[t.i] = ' {"text":"' + t.i + ') Banned Pokémon found: ' + t.found + '","color":"gray","italic":true,"hoverEvent":{"action":"show_text","value":{"text":"' + t.banned_species + '"}}}'; };
+    t.fail.duplicate_species != 0 ? { t.i = t.i + 1; t.message.[t.i] = ' {"text":"' + t.i + ') Duplicate Pokémon species are not allowed","color":"gray","italic":true}'; };
+    t.fail.duplicate_items != 0 ? { t.i = t.i + 1; t.message.[t.i] = ' {"text":"' + t.i + ') Duplicate held items are not allowed","color":"gray","italic":true}'; };
+
+    for_each(t.str, t.message, {
+        q.run_command('tellraw ' + q.player.username + t.str);
+    });
+
+    return 0;
+};
