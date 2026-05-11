@@ -1,1 +1,4 @@
-c.pokemon.owner.has_tag('BattleTowerReady') ? q.cancel;
+c.pokemon.owner.has_tag('BattleTower') ? {
+    c.source == 'interaction' ? q.run_command('tellraw ' + c.pokemon.owner.username + ' {"text":"You can\'t use that here!","color":"gray","italic":true}');
+    q.cancel;
+};

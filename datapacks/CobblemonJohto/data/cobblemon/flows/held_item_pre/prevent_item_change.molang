@@ -1,0 +1,4 @@
+c.pokemon.owner.has_tag('BattleTower') ? {
+    q.run_command('tellraw ' + c.pokemon.owner.username + ' {"text":"You can\'t change held items while in the Battle Tower!","color":"gray","italic":true}');
+    q.cancel;
+};

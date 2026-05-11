@@ -1,0 +1,3 @@
+c.pokemon.owner.has_tag('BattleTower') ? {
+    c.source == 'battle' ? q.cancel;
+};

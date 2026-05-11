@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.npc.has_tag('Locked') ? q.dialogue.close : q.run_script('johto:init');"
+        "q.player.in_battle || q.npc.has_tag('Locked') ? q.dialogue.close : q.run_script('johto:init');"
     ],
     "speakers": {
         "npc": {
