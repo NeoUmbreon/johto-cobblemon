@@ -7,8 +7,8 @@ t.trainer.team = q.array();
 
 v.npc.name == 'Palmer' ? {
     ':3 ugly lil palmer rng, only 6 permutations so i just hardcoded them';
-    v.battle_num == 21 ? { t.filename_list = q.random( q.array('milotic_palmer_1','rhyperior_palmer_1','dragonite_palmer_1'), q.array('milotic_palmer_1','dragonite_palmer_1','rhyperior_palmer_1'), q.array('rhyperior_palmer_1','milotic_palmer_1','dragonite_palmer_1'), q.array('rhyperior_palmer_1','dragonite_palmer_1','milotic_palmer_1'), q.array('dragonite_palmer_1','milotic_palmer_1','rhyperior_palmer_1'), q.array('dragonite_palmer_1','rhyperior_palmer_1','milotic_palmer_1') ) };
-    v.battle_num == 49 ? { t.filename_list = q.random( q.array('regigigas_palmer_2','heatran_palmer_2','cresselia_palmer_2'), q.array('regigigas_palmer_2','cresselia_palmer_2','heatran_palmer_2'), q.array('cresselia_palmer_2','regigigas_palmer_2','heatran_palmer_2'), q.array('cresselia_palmer_2','heatran_palmer_2','regigigas_palmer_2'), q.array('heatran_palmer_2','regigigas_palmer_2','cresselia_palmer_2'), q.array('heatran_palmer_2','cresselia_palmer_2','regigigas_palmer_2') ) };
+    v.battle_num == 21 ? { t.filename_list = q.random( q.array('milotic_1','rhyperior_1','dragonite_1'), q.array('milotic_1','dragonite_1','rhyperior_1'), q.array('rhyperior_1','milotic_1','dragonite_1'), q.array('rhyperior_1','dragonite_1','milotic_1'), q.array('dragonite_1','milotic_1','rhyperior_1'), q.array('dragonite_1','rhyperior_1','milotic_1') ) };
+    v.battle_num == 49 ? { t.filename_list = q.random( q.array('regigigas_4','heatran_4','cresselia_4'), q.array('regigigas_4','cresselia_4','heatran_4'), q.array('cresselia_4','regigigas_4','heatran_4'), q.array('cresselia_4','heatran_4','regigigas_4'), q.array('heatran_4','regigigas_4','cresselia_4'), q.array('heatran_4','cresselia_4','regigigas_4') ) };
 } : {
     'Else, generate species from rosters';
     loop(100, {
