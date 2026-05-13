@@ -1,0 +1,18 @@
+t.stored_ids = q.array();
+t.stored_levels = q.array();
+
+'flatten';
+for_each(t.pokemon, v.player.party.pokemon, {
+    t.pokemon.level > 50 ? {
+        q.append(t.stored_ids, t.pokemon.id);
+        q.append(t.stored_levels, t.pokemon.level);
+        t.pokemon.apply('level=50');
+    };
+});
+
+'store';
+q.length(t.stored_levels) == 0 ? return 0 : {
+    v.player.data.temp.stored_ids = t.stored_ids;
+    v.player.data.temp.stored_levels = t.stored_levels;
+    q.run_command('tellraw ' + v.player.username + ' {"text":"Your party has been capped to level 50. Their original levels will be restored upon leaving the Battle Tower.","color":"gray","italic":true}');
+};

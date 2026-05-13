@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.player.in_battle || q.npc.has_tag('Locked') ? q.dialogue.close : q.run_script('johto:init');"
+        "q.npc.has_tag('Locked') ? q.dialogue.close;"
     ],
     "speakers": {
         "npc": {
@@ -32,8 +32,8 @@
                             "t.not_ready = q.array();",
                             "for_each(t.player, q.npc.data.players, { ( !t.player.has_tag('BattleTowerReady') && t.player.username != q.player.username ) ? q.append(t.not_ready, t.player); });",
 
-                            "q.length(t.not_ready) == 0 ? { q.run_command('execute as @a[tag=BattleTowerFloor_' + q.npc.data.floor + ',name=!' + q.player.username + '] run runmolang q.entity.active_dialogue.close'); q.run_command('tellraw @a[tag=BattleTowerFloor_' + q.npc.data.floor + ',name=!' + q.player.username + '] \"Starting battle!\"'); q.npc.add_tag('Locked'); q.dialogue.set_page('yes'); };",
-                            "q.length(t.not_ready) != 0 ? { !q.player.has_tag('BattleTowerReady') ? { q.run_command('tellraw @a[tag=BattleTowerFloor_' + q.npc.data.floor + '] \"' + q.player.username + ' is ready!\"'); q.dialogue.close; } : q.dialogue.close; };",
+                            "q.length(t.not_ready) == 0 ? { for_each(t.player, q.npc.data.players, { t.player.username != q.player.username ? { t.player.active_dialogue.close; q.run_command('tellraw ' + t.player.username + ' \"Starting battle...\"'); }; }); q.npc.add_tag('Locked'); q.dialogue.set_page('yes'); };",
+                            "q.length(t.not_ready) != 0 ? { !q.player.has_tag('BattleTowerReady') ? { for_each(t.player, t.not_ready, { q.run_command('tellraw ' + t.player.username + ' \"' + q.player.username + ' is ready!\"') }); }; q.dialogue.close; };",
                             
                             "q.player.add_tag('BattleTowerReady');"
                         ]
@@ -42,7 +42,7 @@
                         "text": "No",
                         "value": "no",
                         "action": [
-                            "q.player.has_tag('BattleTowerReady') ? q.run_command('tellraw @a[tag=BattleTowerFloor_' + q.npc.data.floor + '] \"' + q.player.username + ' is no longer ready!\"');",
+                            "q.player.has_tag('BattleTowerReady') ? { for_each(t.player, q.npc.data.players, { t.player.username != q.player.username ? { q.run_command('tellraw ' + t.player.username + ' \"' + q.player.username + ' is no longer ready!\"') }; }); };",
                             "q.player.remove_tag('BattleTowerReady');",
                             "q.dialogue.set_page('no');"
                         ]
@@ -53,22 +53,20 @@
         {
             "id": "yes",
             "speaker": "npc",
-            "escapeAction": [],
+            "escapeAction": [
+                "q.run_script('johto:spawn_and_battle');",
+                "q.dialogue.close;"
+            ],
             "lines": [
                 "I'll get your next battle set up!"
             ],
             "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": [
-                            "q.run_script('johto:spawn_and_battle') == 0 ? { q.npc.remove_tag('Locked') };",
-                            "q.dialogue.close;"
-                        ]
-                    }
+                "type": "auto-continue",
+                "delay": 1.5,
+                "allowSkip": false,
+                "action": [
+                    "q.run_script('johto:spawn_and_battle');",
+                    "q.dialogue.close;"
                 ]
             }
         },
@@ -86,10 +84,8 @@
                         "text": "Yes",
                         "value": "giveup",
                         "action": [
-                            "q.player.remove_tag('BattleTowerFloor_' + q.npc.data.floor);",
-                            "q.run_command('tellraw @a[tag=BattleTowerFloor_' + q.npc.data.floor + '] \"' + q.player.username + ' left the party\"');",
-                            "for_each(t.player, q.npc.data.players, { t.player.username == q.player.username ? { q.delete(q.npc.data.players, t.i); break; }; t.i = t.i + 1; });",
-                            "q.npc.save_data;",
+                            "v.player = q.player;",
+                            "q.run_script('johto:leave_tower');",
                             "q.dialogue.set_page('giveupconfirm');"
                         ]
                     },

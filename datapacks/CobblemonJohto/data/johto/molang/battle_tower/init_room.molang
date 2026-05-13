@@ -1,0 +1,41 @@
+t.y = 64 + (v.room * 12);
+q.player.data.temp.players == 0 ? { q.player.data.temp.players = q.array(q.player) };
+
+'just in case; nurse joy should be discarded on exit';
+t.entities = q.player.world.get_entities_around(903.0, t.y, 56.5, 1);
+t.entities.0.discard;
+
+'Spawn handler (dumb)';
+t.entity = q.player.world.spawn_npc(903.0, t.y, 56.5, 'battle_tower_nursejoy', 1);
+t.entities = q.player.world.get_entities_around(903.0, t.y, 56.5, 0.00001);
+t.nursejoy = t.entities.0;
+
+'TODO: Spawn partner NPCs';
+t.npcs = q.array();
+for_each(t.id, q.player.data.temp.npcs, {
+    'spawn npcs, create rct jsons and tbcs attach, append to array';
+});
+
+'Finalize';
+for_each(v.player, q.player.data.temp.players, {
+    'find lowest streak of all players';
+    t.current_streak = v.player.data.battle_tower.streaks.current;
+    v.format == 'SINGLES' ? { t.streak = t.current_streak.singles };
+    v.format == 'DOUBLES' ? { t.streak = t.current_streak.doubles };
+    v.format == 'TRIPLES' ? { t.streak = t.current_streak.triples };
+    v.format == 'MULTI' ? { t.streak = t.current_streak.multi };
+    t.battle_num == 0 || t.streak < t.battle_num ? { t.battle_num = t.streak };
+    
+    v.player.remove_tag('BattleSalon');
+    v.player.add_tag('BattleTower');
+    v.player.teleport(894.5, t.y, 67.0, 0);
+    v.player.data.temp.npc = t.nursejoy;
+    v.player.data.temp.partners = t.npcs;
+    q.run_script('johto:flatten_party_levels');
+});
+
+t.nursejoy.data.battle_num = t.battle_num + 1;
+t.nursejoy.data.format = v.format;
+t.nursejoy.data.floor = v.room;
+
+return 1;

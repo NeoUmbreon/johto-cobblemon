@@ -1,4 +1,9 @@
 {
+    "initializationAction": [
+        "v.streak = q.npc.data.battle_num - 1;",
+        "math.mod(v.streak, 7) == 0 ? { t.bp = q.run_script('johto:bp_table'); q.dialogue.set_page('reward1') };"
+    ],
+    "escapeAction": [],
     "speakers": {
         "npc": {
             "name": {
@@ -26,6 +31,53 @@
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"pokemonhealed\"}');",
                             "q.player.party.heal;",
                             "q.npc.run_dialogue(q.player, 'battle_tower_nursejoy_interaction');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "reward1",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'You have cleared match ' + v.streak + '! Congratulations!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "reward2",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'To pay tribute to your talent, we present you ' + t.bp + ' BP!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('scoreboard players add ' + q.player.username + ' BattlePoints ' + t.bp);",
+                            "q.dialogue.set_page('greeting');"
                         ]
                     }
                 ]

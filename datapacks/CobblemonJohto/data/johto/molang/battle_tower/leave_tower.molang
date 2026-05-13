@@ -1,0 +1,17 @@
+t.players = v.player.data.temp.players;
+t.room = v.player.data.temp.npc.data.floor;
+
+'free room';
+v.player.world.server.data.battle_tower.room.[t.room] = 0;
+v.player.world.server.save_data;
+
+'/kill nurse joy';
+q.run_command('tp ' + v.player.data.temp.npc.uuid + ' -800 -50000 -280');
+
+'kick out all players in party';
+for_each(v.player, t.players, {
+    v.player.remove_tag('BattleTower');
+    v.player.teleport(902, 64, 67, 0);
+    q.run_script('johto:restore_party_levels');
+    q.delete_variables(v.player.data.temp);
+});

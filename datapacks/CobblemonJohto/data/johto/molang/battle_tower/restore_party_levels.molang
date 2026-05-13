@@ -1,0 +1,8 @@
+v.player.data.temp.stored_levels != 0 ? {
+    loop(q.length(v.player.data.temp.stored_levels), {
+        t.pokemon = v.player.party.find_by_id(v.player.data.temp.stored_ids.[t.i]);
+        t.pokemon.apply('level=' + q.to_string(v.player.data.temp.stored_levels.[t.i]));
+
+        t.i = t.i + 1;
+    });
+};

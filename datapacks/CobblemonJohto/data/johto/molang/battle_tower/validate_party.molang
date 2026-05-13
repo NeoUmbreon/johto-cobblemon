@@ -1,6 +1,6 @@
 'Mismatched party count';
 t.count = q.player.party.count;
-t.format = q.npc.data.format;
+t.format = v.format;
 t.format == 'SINGLES' && t.count != 3 ? { t.fail.required_pokemon = 3 };
 t.format == 'DOUBLES' && t.count != 4 ? { t.fail.required_pokemon = 4 };
 t.format == 'TRIPLES' && t.count != 6 ? { t.fail.required_pokemon = 6 };
@@ -42,9 +42,5 @@ t.fail == 0 ? return 1 : {
     t.fail.duplicate_species != 0 ? { t.i = t.i + 1; t.message.[t.i] = ' {"text":"' + t.i + ') Duplicate Pokémon species are not allowed","color":"gray","italic":true}'; };
     t.fail.duplicate_items != 0 ? { t.i = t.i + 1; t.message.[t.i] = ' {"text":"' + t.i + ') Duplicate held items are not allowed","color":"gray","italic":true}'; };
 
-    for_each(t.str, t.message, {
-        q.run_command('tellraw ' + q.player.username + t.str);
-    });
-
-    return 0;
+    return t.message;
 };

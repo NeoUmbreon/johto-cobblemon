@@ -1,5 +1,5 @@
 'Read entity data, init variables';
-t.players = q.npc.data.players;
+t.players = q.player.data.temp.players;
 t.format = q.npc.data.format;
 v.battle_num = q.npc.data.battle_num;
 t.floor = q.npc.data.floor;
@@ -86,16 +86,12 @@ t.team_size == 1 ? {
 'Pre-battle prep';
 for_each(t.player, t.players, {
     t.player.data.battle_tower.battle_num = v.battle_num;
-    t.player.data.battle_tower.npc = q.npc;
     t.player.party.heal;
+    q.run_command('scoreboard players set ' + t.player.username + ' BattleStart ' + t.music_id);
+    q.run_command('execute as ' + t.player.username + ' run function johto:tools/forceclick');
 });
 
 'Run battle';
 q.run_command('tbcs battle ' + t.command + ' rules {maxItemUses: 0}');
-
-'Run music';
-q.run_command('scoreboard players set @a[tag=BattleTowerFloor_' + t.floor + '] BattleStart ' + t.music_id);
-q.run_command('execute as @a[tag=BattleTowerFloor_' + t.floor + '] run function johto:tools/forceclick');
-
 
 return 1;

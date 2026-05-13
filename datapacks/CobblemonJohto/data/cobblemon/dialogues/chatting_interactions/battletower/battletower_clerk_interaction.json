@@ -1,4 +1,7 @@
-{   
+{
+    "initializationAction": [
+        "q.npc.is_in_dialogue ? { q.run_command('tellraw ' + q.player.username + ' {\"text\":\"That NPC is busy!\",\"color\":\"gray\",\"italic\":true}'); q.dialogue.close; };"
+    ],
     "speakers": {
         "npc": {
           "name": "Battle Tower Clerk",
@@ -61,7 +64,88 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "I will now show you to the Battle Room."
+                "Which battle format would you like? Single, Double, Triple, or Multi?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Single Battle",
+                        "value": "single",
+                        "action": [
+                            "v.format = 'SINGLES';",
+                            "v.room = q.run_script('johto:assign_room');",
+                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
+                        ]
+                    },
+                    {
+                        "text": "Double Battle",
+                        "value": "double",
+                        "action": [
+                            "v.format = 'DOUBLES';",
+                            "v.room = q.run_script('johto:assign_room');",
+                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
+                        ]
+                    },
+                    {
+                        "text": "Triple Battle",
+                        "value": "triple",
+                        "action": [
+                            "v.format = 'TRIPLES';",
+                            "v.room = q.run_script('johto:assign_room');",
+                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
+                        ]
+                    },
+                    {
+                        "text": "Multi Battle",
+                        "value": "multi",
+                        "action": [
+                            "q.dialogue.set_page('salon1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        
+
+        {
+            "id": "success1",
+            "speaker": "npc",
+            "escapeAction": [
+                "q.run_script('johto:init_room');",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Your assigned Battle Room is Room ' + v.room + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('success2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "success2",
+            "speaker": "npc",
+            "escapeAction": [
+                "q.run_script('johto:init_room');",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                "I will now show you to your Battle Room."
             ],
             "input": {
                 "type": "option",
@@ -71,13 +155,41 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 2');",
-                            "q.dialogue.close();"
-                            ]
+                            "q.run_script('johto:init_room');",
+                            "q.dialogue.close;"
+                        ]
                     }
                 ]
             }
         },
+
+        
+        {
+            "id": "salon1",
+            "speaker": "npc",
+            "escapeAction": [
+                "q.player.add_tag('BattleSalon');",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                "I will now show you to the Battle Salon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.player.add_tag('BattleSalon');",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+
 
         {
             "id": "info1",
@@ -119,7 +231,7 @@
             "id": "info3",
             "speaker": "npc",
             "lines": [
-                "In our Single Battle format, you enter with three Pokémon only. Any more on you and you won't be able to challenge."
+                "We have four available battle formats: Single, Double, Triple, and Multi."
             ],
             "input": {
                 "type": "option",
@@ -137,7 +249,7 @@
             "id": "info4",
             "speaker": "npc",
             "lines": [
-                "Each of our trainers Pokémon will be set to that of your highest level Pokémon."
+                "In Single Battle format, you enter with three Pokémon."
             ],
             "input": {
                 "type": "option",
@@ -155,7 +267,7 @@
             "id": "info5",
             "speaker": "npc",
             "lines": [
-                "There are an unlimited amount of trainers, you can battle as long as you want or can!"
+                "In Double Battle format, you enter with four Pokémon."
             ],
             "input": {
                 "type": "option",
@@ -173,7 +285,7 @@
             "id": "info6",
             "speaker": "npc",
             "lines": [
-                "If you manage to defeat your opponent, you will earn Battle Points (BP)."
+                "In Triple Battle format, you enter with six Pokémon."
             ],
             "input": {
                 "type": "option",
@@ -191,7 +303,7 @@
             "id": "info7",
             "speaker": "npc",
             "lines": [
-                "As your Battle Streak grows, trainers will get more difficult as well with more difficult Pokémon."
+                "In Multi Battle format, teams of two Trainers enter with two Pokémon each."
             ],
             "input": {
                 "type": "option",
@@ -209,7 +321,7 @@
             "id": "info8",
             "speaker": "npc",
             "lines": [
-                "Leaving the Tower on a win won't affect your Battle Streak, only losing to trainers in the tower."
+                "The battles are held in Battle Rooms, of which there are three in the tower."
             ],
             "input": {
                 "type": "option",
@@ -227,7 +339,79 @@
             "id": "info9",
             "speaker": "npc",
             "lines": [
-                "If you want to interrupt or pause your challenge, please see the Nurse Joy to exit!"
+                "In each of the Battle Rooms, many Trainers await your challenge."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info10');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info10",
+            "speaker": "npc",
+            "lines": [
+                "If you manage to win seven battles in a row, you will earn Battle Points (BP)."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info11');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info11",
+            "speaker": "npc",
+            "lines": [
+                "You may stay as long as you like, and you may interrupt your challenge at any time."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info12');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info12",
+            "speaker": "npc",
+            "lines": [
+                "However, if you interrupt your challenge while in a battle, you will be disqualified."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('info13');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "info13",
+            "speaker": "npc",
+            "lines": [
+                "Please be aware of that!"
             ],
             "input": {
                 "type": "option",
@@ -243,12 +427,140 @@
         },
 
 
+        {
+            "id": "invalidparty1",
+            "speaker": "npc",
+            "escapeAction": [
+                "for_each(t.str, v.validated, { q.run_command('tellraw ' + q.player.username + t.str); });",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                "Excuse me!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('invalidparty2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "invalidparty2",
+            "speaker": "npc",
+            "escapeAction": [
+                "for_each(t.str, v.validated, { q.run_command('tellraw ' + q.player.username + t.str); });",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                "Your party has been deemed ineligible for competition."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('invalidparty3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "invalidparty3",
+            "speaker": "npc",
+            "escapeAction": [
+                "for_each(t.str, v.validated, { q.run_command('tellraw ' + q.player.username + t.str); });",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                "Please come see me when you are ready."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "for_each(t.str, v.validated, { q.run_command('tellraw ' + q.player.username + t.str); });",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "full1",
+            "speaker": "npc",
+            "lines": [
+                "Sorry, it appears all of our rooms are currently full!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('full2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "full2",
+            "speaker": "npc",
+            "lines": [
+                "If you would like to, you may spectate the Battle Rooms from the observation decks."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('full3');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "full3",
+            "speaker": "npc",
+            "lines": [
+                "Please come back here to join when one is available!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+
 
         {
             "id": "end",
             "speaker": "npc",
             "lines": [
-                "We hope to see you again."
+                "We hope to see you again!"
             ],
             "input": {
                 "type": "option",
@@ -264,5 +576,5 @@
                 ]
             }
         }
-        ]
-    }
+    ]
+}
