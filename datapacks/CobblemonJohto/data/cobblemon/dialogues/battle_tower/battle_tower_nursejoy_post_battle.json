@@ -1,7 +1,7 @@
 {
     "initializationAction": [
         "v.streak = q.npc.data.battle_num - 1;",
-        "math.mod(v.streak, 7) == 0 ? { t.bp = q.run_script('johto:bp_table'); q.dialogue.set_page('reward1') };"
+        "math.mod(v.streak, 7) == 0 ? { v.bp = q.run_script('johto:bp_table'); q.dialogue.set_page('reward1') };"
     ],
     "escapeAction": [],
     "speakers": {
@@ -65,7 +65,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'To pay tribute to your talent, we present you ' + t.bp + ' BP!'"
+                    "expression": "'To pay tribute to your talent, we present you ' + v.bp + ' BP!'"
                 }
             ],
             "input": {
@@ -76,7 +76,7 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('scoreboard players add ' + q.player.username + ' BattlePoints ' + t.bp);",
+                            "q.run_command('scoreboard players add ' + q.player.username + ' BattlePoints ' + v.bp);",
                             "q.dialogue.set_page('greeting');"
                         ]
                     }

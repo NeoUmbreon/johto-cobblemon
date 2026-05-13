@@ -85,7 +85,7 @@ t.team_size == 1 ? {
 
 'Pre-battle prep';
 for_each(t.player, t.players, {
-    t.player.data.battle_tower.battle_num = v.battle_num;
+    t.player.data.temp.battle_num = v.battle_num;
     t.player.party.heal;
     q.run_command('scoreboard players set ' + t.player.username + ' BattleStart ' + t.music_id);
     q.run_command('execute as ' + t.player.username + ' run function johto:tools/forceclick');
