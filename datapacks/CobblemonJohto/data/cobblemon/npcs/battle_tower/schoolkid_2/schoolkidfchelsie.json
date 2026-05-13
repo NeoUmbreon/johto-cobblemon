@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Chelsie",
-    "resourceIdentifier": "cobblemon:schoolkidf",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "schoolkid_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:schoolkidf"
 }

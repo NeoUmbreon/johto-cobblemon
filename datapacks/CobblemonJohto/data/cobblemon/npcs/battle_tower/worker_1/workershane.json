@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Shane",
-    "resourceIdentifier": "cobblemon:worker",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "worker_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:worker"
 }

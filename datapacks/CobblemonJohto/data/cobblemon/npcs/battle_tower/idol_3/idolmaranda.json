@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Maranda",
-    "resourceIdentifier": "cobblemon:idol",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "idol_3"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:idol"
 }

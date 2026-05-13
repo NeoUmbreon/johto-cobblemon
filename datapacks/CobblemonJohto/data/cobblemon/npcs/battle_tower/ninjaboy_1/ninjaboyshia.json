@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Shia",
-    "resourceIdentifier": "cobblemon:ninjaboy",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "ninjaboy_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:ninjaboy"
 }

@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Layton",
-    "resourceIdentifier": "cobblemon:sailor",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "sailor_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:sailor"
 }

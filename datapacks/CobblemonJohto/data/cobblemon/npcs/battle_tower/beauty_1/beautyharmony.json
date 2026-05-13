@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Harmony",
-    "resourceIdentifier": "cobblemon:beauty",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "beauty_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:beauty"
 }

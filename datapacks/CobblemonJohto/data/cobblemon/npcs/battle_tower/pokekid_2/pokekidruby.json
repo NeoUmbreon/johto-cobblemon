@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Ruby",
-    "resourceIdentifier": "cobblemon:pokekid",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "pokekid_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:pokekid"
 }

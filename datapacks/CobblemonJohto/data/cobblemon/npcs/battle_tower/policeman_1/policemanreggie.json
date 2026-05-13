@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Reggie",
-    "resourceIdentifier": "cobblemon:policeman",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "policeman_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:policeman"
 }

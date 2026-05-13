@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Blanche",
-    "resourceIdentifier": "cobblemon:parasollady",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "parasollady_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:parasollady"
 }

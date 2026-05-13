@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Leslie",
-    "resourceIdentifier": "cobblemon:waitress",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "waitress_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:waitress"
 }

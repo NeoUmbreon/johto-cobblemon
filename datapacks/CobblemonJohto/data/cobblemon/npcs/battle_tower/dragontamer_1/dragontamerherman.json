@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Herman",
-    "resourceIdentifier": "cobblemon:dragontamer",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "dragontamer_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:dragontamer"
 }

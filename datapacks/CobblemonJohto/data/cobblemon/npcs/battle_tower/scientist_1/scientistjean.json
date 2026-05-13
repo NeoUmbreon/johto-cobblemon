@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Jean",
-    "resourceIdentifier": "cobblemon:scientist",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "scientist_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:scientist"
 }

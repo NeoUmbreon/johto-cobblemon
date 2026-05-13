@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Janice",
-    "resourceIdentifier": "cobblemon:socialite",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "socialite_3"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:socialite"
 }

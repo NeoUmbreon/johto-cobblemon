@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Penn",
-    "resourceIdentifier": "cobblemon:ruinmaniac",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "ruinmaniac_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:ruinmaniac"
 }

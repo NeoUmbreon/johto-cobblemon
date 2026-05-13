@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Antonia",
-    "resourceIdentifier": "cobblemon:pokemonbreederf",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "pokemonbreeder_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:pokemonbreederf"
 }

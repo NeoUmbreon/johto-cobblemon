@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Trinity",
-    "resourceIdentifier": "cobblemon:birdkeeper",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "birdkeeper_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:birdkeeper"
 }

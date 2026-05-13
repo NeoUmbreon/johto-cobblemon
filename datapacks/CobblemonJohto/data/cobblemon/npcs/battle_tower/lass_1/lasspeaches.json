@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Peaches",
-    "resourceIdentifier": "cobblemon:lass",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "lass_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:lass"
 }

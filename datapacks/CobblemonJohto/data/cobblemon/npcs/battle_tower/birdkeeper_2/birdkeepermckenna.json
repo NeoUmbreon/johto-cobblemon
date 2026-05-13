@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "McKenna",
-    "resourceIdentifier": "cobblemon:birdkeeper",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "birdkeeper_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:birdkeeper"
 }

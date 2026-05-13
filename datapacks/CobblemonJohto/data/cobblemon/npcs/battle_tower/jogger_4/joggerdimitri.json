@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Dimitri",
-    "resourceIdentifier": "cobblemon:jogger",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "jogger_4"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:jogger"
 }

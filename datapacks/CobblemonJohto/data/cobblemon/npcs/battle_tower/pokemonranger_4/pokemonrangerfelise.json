@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Elise",
-    "resourceIdentifier": "cobblemon:pokemonrangerf",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "pokemonranger_4"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:pokemonrangerf"
 }

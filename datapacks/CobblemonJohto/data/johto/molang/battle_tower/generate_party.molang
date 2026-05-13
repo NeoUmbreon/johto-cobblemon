@@ -10,7 +10,7 @@ v.npc.name == 'Palmer' ? {
     v.battle_num == 21 ? { t.filename_list = q.random( q.array('milotic_palmer_1','rhyperior_palmer_1','dragonite_palmer_1'), q.array('milotic_palmer_1','dragonite_palmer_1','rhyperior_palmer_1'), q.array('rhyperior_palmer_1','milotic_palmer_1','dragonite_palmer_1'), q.array('rhyperior_palmer_1','dragonite_palmer_1','milotic_palmer_1'), q.array('dragonite_palmer_1','milotic_palmer_1','rhyperior_palmer_1'), q.array('dragonite_palmer_1','rhyperior_palmer_1','milotic_palmer_1') ) };
     v.battle_num == 49 ? { t.filename_list = q.random( q.array('regigigas_palmer_2','heatran_palmer_2','cresselia_palmer_2'), q.array('regigigas_palmer_2','cresselia_palmer_2','heatran_palmer_2'), q.array('cresselia_palmer_2','regigigas_palmer_2','heatran_palmer_2'), q.array('cresselia_palmer_2','heatran_palmer_2','regigigas_palmer_2'), q.array('heatran_palmer_2','regigigas_palmer_2','cresselia_palmer_2'), q.array('heatran_palmer_2','cresselia_palmer_2','regigigas_palmer_2') ) };
 } : {
-    'Else, generate species from pools';
+    'Else, generate species from rosters';
     loop(100, {
         'Retrieve Pokemon';
         t.filename = q.run_script('johto:generate_pokemon');

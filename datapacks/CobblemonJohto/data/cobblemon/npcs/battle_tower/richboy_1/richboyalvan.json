@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Alvan",
-    "resourceIdentifier": "cobblemon:richboy",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "richboy_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:richboy"
 }

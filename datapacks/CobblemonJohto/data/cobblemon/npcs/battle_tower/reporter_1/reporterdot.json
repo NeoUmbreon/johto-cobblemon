@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Dot",
-    "resourceIdentifier": "cobblemon:reporter",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "reporter_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:reporter"
 }

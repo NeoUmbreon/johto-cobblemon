@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Aubry",
-    "resourceIdentifier": "cobblemon:ruinmaniac",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "ruinmaniac_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:ruinmaniac"
 }

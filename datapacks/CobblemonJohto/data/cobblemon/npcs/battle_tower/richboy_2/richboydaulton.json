@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Daulton",
-    "resourceIdentifier": "cobblemon:richboy",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "richboy_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:richboy"
 }

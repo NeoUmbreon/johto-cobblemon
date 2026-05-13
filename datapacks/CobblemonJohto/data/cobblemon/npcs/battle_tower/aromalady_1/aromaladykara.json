@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Kara",
-    "resourceIdentifier": "cobblemon:aromalady",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "aromalady_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:aromalady"
 }

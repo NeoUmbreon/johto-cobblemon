@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Charlie",
-    "resourceIdentifier": "cobblemon:acetrainerm",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "acetrainer_4"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:acetrainerm"
 }

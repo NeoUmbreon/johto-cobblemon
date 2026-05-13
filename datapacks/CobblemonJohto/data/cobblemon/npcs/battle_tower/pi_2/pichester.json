@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Chester",
-    "resourceIdentifier": "cobblemon:pi",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "pi_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:pi"
 }

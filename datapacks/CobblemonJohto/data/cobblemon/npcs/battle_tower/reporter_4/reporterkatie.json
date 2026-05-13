@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Katie",
-    "resourceIdentifier": "cobblemon:reporter",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "reporter_4"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:reporter"
 }

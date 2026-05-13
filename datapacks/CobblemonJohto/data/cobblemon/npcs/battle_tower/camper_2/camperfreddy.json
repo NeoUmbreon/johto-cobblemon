@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Freddy",
-    "resourceIdentifier": "cobblemon:camper",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "camper_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:camper"
 }

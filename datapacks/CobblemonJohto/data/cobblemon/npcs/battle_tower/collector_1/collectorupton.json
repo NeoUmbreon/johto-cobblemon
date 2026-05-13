@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Upton",
-    "resourceIdentifier": "cobblemon:collector",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "collector_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:collector"
 }

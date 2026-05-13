@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Zane",
-    "resourceIdentifier": "cobblemon:acetrainerm",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "acetrainer_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:acetrainerm"
 }

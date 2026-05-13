@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Gingham",
-    "resourceIdentifier": "cobblemon:reporter",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "reporter_3"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:reporter"
 }

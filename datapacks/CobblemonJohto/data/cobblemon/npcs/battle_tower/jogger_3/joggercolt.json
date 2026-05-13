@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Colt",
-    "resourceIdentifier": "cobblemon:jogger",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "jogger_3"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:jogger"
 }

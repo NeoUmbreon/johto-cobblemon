@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Nichole",
-    "resourceIdentifier": "cobblemon:lady",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "lady_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:lady"
 }

@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Sally",
-    "resourceIdentifier": "cobblemon:birdkeeper",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "birdkeeper_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:birdkeeper"
 }

@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Leon",
-    "resourceIdentifier": "cobblemon:rancher",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "rancher_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:rancher"
 }

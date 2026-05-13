@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Vance",
-    "resourceIdentifier": "cobblemon:ninjaboy",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "ninjaboy_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:ninjaboy"
 }

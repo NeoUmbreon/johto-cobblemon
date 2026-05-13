@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Sami",
-    "resourceIdentifier": "cobblemon:parasollady",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "parasollady_3"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:parasollady"
 }

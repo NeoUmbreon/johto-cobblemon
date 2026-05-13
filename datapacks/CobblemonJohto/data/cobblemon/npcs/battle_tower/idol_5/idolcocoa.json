@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Cocoa",
-    "resourceIdentifier": "cobblemon:idol",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "idol_5"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:idol"
 }

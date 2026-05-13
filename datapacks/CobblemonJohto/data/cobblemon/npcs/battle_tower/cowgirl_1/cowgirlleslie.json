@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Leslie",
-    "resourceIdentifier": "cobblemon:cowgirl",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "cowgirl_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:cowgirl"
 }

@@ -64,11 +64,8 @@ for_each(t.trainer, t.trainer_list, {
         return 0;
     };
 
-    'Awful hack to retrieve config variables';
-    t.npc_temp = q.npc.world.get_entities_around(q.npc.x + t.i, q.npc.y, q.npc.z, 0.00001);
-    q.set_query('pool', t.npc_temp.0.config.class);
-
     'Generate party';
+    v.roster = t.trainer.roster;
     v.id = t.trainer.id;
     q.run_script('johto:generate_party') == 0 ? return 0;
 

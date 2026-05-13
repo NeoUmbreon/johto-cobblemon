@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Clement",
-    "resourceIdentifier": "cobblemon:blackbelt",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "blackbelt_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:blackbelt"
 }

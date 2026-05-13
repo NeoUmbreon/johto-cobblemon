@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Liliana",
-    "resourceIdentifier": "cobblemon:lass",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "lass_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:lass"
 }

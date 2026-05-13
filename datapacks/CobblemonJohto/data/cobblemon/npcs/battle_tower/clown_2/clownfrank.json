@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Frank",
-    "resourceIdentifier": "cobblemon:clown",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "clown_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:clown"
 }

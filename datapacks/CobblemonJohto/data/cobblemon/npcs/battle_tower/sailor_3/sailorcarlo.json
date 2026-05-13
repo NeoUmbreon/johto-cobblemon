@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Carlo",
-    "resourceIdentifier": "cobblemon:sailor",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "sailor_3"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:sailor"
 }

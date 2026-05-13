@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Mercy",
-    "resourceIdentifier": "cobblemon:pokemonrangerf",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "pokemonranger_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:pokemonrangerf"
 }

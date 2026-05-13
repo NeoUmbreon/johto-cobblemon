@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Garvey",
-    "resourceIdentifier": "cobblemon:acetrainerm",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "acetrainer_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:acetrainerm"
 }

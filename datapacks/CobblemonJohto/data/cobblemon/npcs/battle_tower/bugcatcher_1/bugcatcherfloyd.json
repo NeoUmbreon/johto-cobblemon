@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Floyd",
-    "resourceIdentifier": "cobblemon:bugcatcher",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "bugcatcher_1"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:bugcatcher"
 }

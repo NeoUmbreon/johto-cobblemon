@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Daphne",
-    "resourceIdentifier": "cobblemon:acetrainerf",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "acetrainer_4"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:acetrainerf"
 }

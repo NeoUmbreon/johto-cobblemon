@@ -3,13 +3,5 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Hilda",
-    "resourceIdentifier": "cobblemon:cyclistf",
-    "config": [
-        {
-            "variableName": "class",
-            "displayName": "Battle Tower Trainer Class",
-            "type": "TEXT",
-            "defaultValue": "cyclist_2"
-        }
-    ]
+    "resourceIdentifier": "cobblemon:cyclistf"
 }
