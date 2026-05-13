@@ -14,7 +14,7 @@ t.music_id = 11;
 
 'Palmer handling';
 t.team_size == 1 && t.format == 'SINGLES' ? {
-    v.battle_num == 21 ? { t.palmer.name = 'palmer'; t.palmer.id = 160; };
+    v.battle_num == 21 ? { t.palmer.name = 'palmer'; t.palmer.id = 300; };
     v.battle_num == 49 ? { t.palmer.name = 'palmer'; t.palmer.id = 300; };
 };
 
