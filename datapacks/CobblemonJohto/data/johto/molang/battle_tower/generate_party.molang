@@ -1,5 +1,6 @@
 'Init variables';
 t.species_list = q.array();
+t.item_list = q.array();
 t.filename_list = q.array();
 t.trainer.team = q.array();
 
@@ -11,22 +12,27 @@ v.npc.name == 'Palmer' ? {
 } : {
     'Else, generate species from pools';
     loop(100, {
-        'Retrieve Pokemon filename';
+        'Retrieve Pokemon';
         t.filename = q.run_script('johto:generate_pokemon');
+        t.pokemon = q.file.load('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
+        q.file.clear('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
+        t.pokemon == 0 ? {
+            q.run_command('say Error loading Pokemon json ' + t.filename + ', canceling battle');
+            return 0;
+        };
 
-        'Compare species to already picked list';
+        'Compare species and item to already picked lists';
         t.match = 0;
-        t.split = q.split_string(t.filename,'_');
-        for_each(t.species, t.species_list, {
-            t.split.0 == t.species ? {
-                t.match = 1;
-                break;
-            };
+        t.i = 0;
+        loop(q.length(t.filename_list), {
+            t.pokemon.species == t.species_list.[t.i] || t.pokemon.heldItem == t.item_list.[t.i] ? { t.match = 1; break; };
+            t.i = t.i + 1;
         });
 
-        'Append filename if species not already picked';
+        'Append filename if species and item not already picked';
         !t.match ? {
-            q.append(t.species_list, t.split.0);
+            q.append(t.species_list, t.pokemon.species);
+            q.append(t.item_list, t.pokemon.heldItem);
             q.append(t.filename_list, t.filename);
         };
 
