@@ -55,6 +55,13 @@ The datapack can be downloaded from the [Releases](../../releases) page.
     - Gym Leaders and important trainers have custom movesets, held items, and stats
 
 ### Other Tweaks
+- Reworked Safari Zone:
+    - Multiplayer!
+    - Faster generation & teardown
+- Reworked Battle Tower: (WIP)
+    - Multiple battle formats: singles, doubles, triples, multi with NPC or player partners
+    - Multiple rooms
+    - Accurate-to-cart mechanics
 - Dynamic Surfing music
     - Instead of playing by area, it plays whenever you are riding a Pokemon that is in water
 - Bicycle music no longer overwrites all other music
