@@ -1,6 +1,4 @@
-t.round = v.streak / 7;
-'flatten';
-t.round > 7 ? { t.round = 7 };
+t.round = math.clamp(v.streak / 7, 1, 7);
 'multiplayer bonus';
 q.length(q.npc.data.players) > 1 ? { t.bonus = t.round + 4 };
 
