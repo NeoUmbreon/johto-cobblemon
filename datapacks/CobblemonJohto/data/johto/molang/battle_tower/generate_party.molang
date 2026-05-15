@@ -1,5 +1,5 @@
 'Init variables';
-t.species_list = q.array();
+v.species_list != 0 ? { v.species_list = q.array() };
 t.item_list = q.array();
 t.filename_list = q.array();
 t.trainer.team = q.array();
@@ -23,21 +23,22 @@ v.npc.name == 'Palmer' ? {
 
         'Compare species and item to already picked lists';
         t.match = 0;
-        t.i = 0;
-        loop(q.length(t.filename_list), {
-            t.pokemon.species == t.species_list.[t.i] || t.pokemon.heldItem == t.item_list.[t.i] ? { t.match = 1; break; };
-            t.i = t.i + 1;
+        for_each(t.species, v.species_list, {
+            t.pokemon.species == t.species ? { t.match = 1; break };
         });
+        !t.match ? { for_each(t.heldItem, t.item_list, {
+            t.pokemon.heldItem == t.heldItem ? { t.match = 1; break };
+        });};
 
         'Append filename if species and item not already picked';
         !t.match ? {
-            q.append(t.species_list, t.pokemon.species);
+            q.append(v.species_list, t.pokemon.species);
             q.append(t.item_list, t.pokemon.heldItem);
             q.append(t.filename_list, t.filename);
-        };
 
-        'Break when party is filled';
-        q.length(t.filename_list) == v.party_size ? break;
+            'Break when party is filled';
+            q.length(t.filename_list) == v.party_size ? break;
+        };
     });
 };
 
@@ -64,14 +65,14 @@ for_each(t.filename, t.filename_list, {
     t.pokemon.level = 50;
 
     'Determine IVs from trainer numeric id';
-    v.id <= 100 ? { t.ivs = 3; };
-    v.id >= 101 && v.id <= 120 ? { t.ivs = 6; };
-    v.id >= 121 && v.id <= 140 ? { t.ivs = 9; };
-    v.id >= 141 && v.id <= 160 ? { t.ivs = 12; };
-    v.id >= 161 && v.id <= 180 ? { t.ivs = 15; };
-    v.id >= 181 && v.id <= 200 ? { t.ivs = 18; };
-    v.id >= 201 && v.id <= 220 ? { t.ivs = 21; };
-    v.id >= 221 ? { t.ivs = 31; };
+    v.trainer.id <= 100 ? { t.ivs = 3; };
+    v.trainer.id >= 101 && v.trainer.id <= 120 ? { t.ivs = 6; };
+    v.trainer.id >= 121 && v.trainer.id <= 140 ? { t.ivs = 9; };
+    v.trainer.id >= 141 && v.trainer.id <= 160 ? { t.ivs = 12; };
+    v.trainer.id >= 161 && v.trainer.id <= 180 ? { t.ivs = 15; };
+    v.trainer.id >= 181 && v.trainer.id <= 200 ? { t.ivs = 18; };
+    v.trainer.id >= 201 && v.trainer.id <= 220 ? { t.ivs = 21; };
+    v.trainer.id >= 221 ? { t.ivs = 31; };
 
     t.pokemon.ivs.hp = t.ivs;
     t.pokemon.ivs.atk = t.ivs;
