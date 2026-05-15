@@ -4,17 +4,18 @@ for_each(t.player, c.players, {
 
 q.length(c.player_losers) == 0 ? { v.won = true } : { v.won = false };
 
+v.players = q.array();
 for_each(t.player, c.players, {
-    v.player = t.player.player;
+    q.append(v.players, t.player.player);
 
     'Run victory music';
     v.won ? {
-        q.run_command('execute as ' + v.player.uuid + ' if score @s BattleStart matches 15 run scoreboard players set @s BattleEnd 7');
-        q.run_command('execute as ' + v.player.uuid + ' if score @s BattleStart matches 11 run scoreboard players set @s BattleEnd 1');
+        q.run_command('execute as ' + t.player.player.uuid + ' if score @s BattleStart matches 15 run scoreboard players set @s BattleEnd 7');
+        q.run_command('execute as ' + t.player.player.uuid + ' if score @s BattleStart matches 11 run scoreboard players set @s BattleEnd 1');
     } : {
-        q.run_command('execute as ' + v.player.uuid + ' run scoreboard players set @s BattleStart 0');
-        q.run_command('execute as ' + v.player.uuid + ' run function johto:tools/forceclick');
+        q.run_command('execute as ' + t.player.player.uuid + ' run scoreboard players set @s BattleStart 0');
+        q.run_command('execute as ' + t.player.player.uuid + ' run function johto:tools/forceclick');
     };
-
-    q.run_molang('q.run_script(\'johto:post_battle\')', 2);
 });
+
+q.run_molang('q.run_script(\'johto:post_battle\')', 2);
