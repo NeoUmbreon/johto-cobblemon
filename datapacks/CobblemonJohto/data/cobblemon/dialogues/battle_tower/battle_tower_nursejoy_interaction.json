@@ -30,9 +30,9 @@
                         "value": "yes",
                         "action": [
                             "t.not_ready = q.array();",
-                            "for_each(t.player, q.npc.data.players, { ( !t.player.has_tag('BattleTowerReady') && t.player.username != q.player.username ) ? q.append(t.not_ready, t.player); });",
+                            "for_each(t.player, q.player.data.temp.players, { ( !t.player.has_tag('BattleTowerReady') && t.player.username != q.player.username ) ? q.append(t.not_ready, t.player); });",
 
-                            "q.length(t.not_ready) == 0 ? { for_each(t.player, q.npc.data.players, { t.player.username != q.player.username ? { t.player.active_dialogue.close; q.run_command('tellraw ' + t.player.username + ' \"Starting battle...\"'); }; }); q.npc.add_tag('Locked'); q.dialogue.set_page('yes'); };",
+                            "q.length(t.not_ready) == 0 ? { for_each(t.player, q.player.data.temp.players, { t.player.username != q.player.username ? { t.player.active_dialogue.close; q.run_command('tellraw ' + t.player.username + ' \"Starting battle...\"'); }; }); q.npc.add_tag('Locked'); q.dialogue.set_page('yes'); };",
                             "q.length(t.not_ready) != 0 ? { !q.player.has_tag('BattleTowerReady') ? { for_each(t.player, t.not_ready, { q.run_command('tellraw ' + t.player.username + ' \"' + q.player.username + ' is ready!\"') }); }; q.dialogue.close; };",
                             
                             "q.player.add_tag('BattleTowerReady');"
@@ -42,7 +42,7 @@
                         "text": "No",
                         "value": "no",
                         "action": [
-                            "q.player.has_tag('BattleTowerReady') ? { for_each(t.player, q.npc.data.players, { t.player.username != q.player.username ? { q.run_command('tellraw ' + t.player.username + ' \"' + q.player.username + ' is no longer ready!\"') }; }); };",
+                            "q.player.has_tag('BattleTowerReady') ? { for_each(t.player, q.player.data.temp.players, { t.player.username != q.player.username ? { q.run_command('tellraw ' + t.player.username + ' \"' + q.player.username + ' is no longer ready!\"') }; }); };",
                             "q.player.remove_tag('BattleTowerReady');",
                             "q.dialogue.set_page('no');"
                         ]
@@ -63,7 +63,8 @@
             "input": {
                 "type": "auto-continue",
                 "delay": 1.5,
-                "allowSkip": false,
+                "allowSkip": true,
+                "showTimer": true,
                 "action": [
                     "q.run_script('johto:spawn_and_battle') == 0 ? { q.npc.remove_tag('Locked') };",
                     "q.dialogue.close;"

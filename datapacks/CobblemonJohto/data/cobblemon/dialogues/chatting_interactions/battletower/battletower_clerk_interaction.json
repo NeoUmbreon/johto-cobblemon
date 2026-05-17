@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.npc.is_in_dialogue ? { q.run_command('tellraw ' + q.player.username + ' {\"text\":\"That NPC is busy!\",\"color\":\"gray\",\"italic\":true}'); q.dialogue.close; };"
+        "q.player.data.temp.players = q.array(q.player);"
     ],
     "speakers": {
         "npc": {
@@ -22,7 +22,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -40,7 +40,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Yes",
@@ -51,6 +51,16 @@
                         "text": "Info",
                         "value": "info",
                         "action": "q.dialogue.set_page('info1');"
+                    },
+                    {
+                        "text": "Records",
+                        "value": "records",
+                        "action": "q.dialogue.set_page('records');"
+                    },
+                    {
+                        "text": "Restrictions",
+                        "value": "restrictions",
+                        "action": "q.dialogue.set_page('restrictions');"
                     },
                     {
                         "text": "No",
@@ -68,7 +78,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Single Battle",
@@ -106,6 +116,13 @@
                         "action": [
                             "q.dialogue.set_page('salon1');"
                         ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('page2');"
+                        ]
                     }
                 ]
             }
@@ -127,7 +144,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -149,7 +166,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Close",
@@ -176,7 +193,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Close",
@@ -199,7 +216,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -217,7 +234,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -235,79 +252,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('info4');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "info4",
-            "speaker": "npc",
-            "lines": [
-                "In Single Battle format, you enter with three Pokémon."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('info5');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "info5",
-            "speaker": "npc",
-            "lines": [
-                "In Double Battle format, you enter with four Pokémon."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('info6');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "info6",
-            "speaker": "npc",
-            "lines": [
-                "In Triple Battle format, you enter with six Pokémon."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('info7');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "info7",
-            "speaker": "npc",
-            "lines": [
-                "In Multi Battle format, teams of two Trainers enter with two Pokémon each."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -325,7 +270,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -343,7 +288,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -361,7 +306,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -379,7 +324,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -397,7 +342,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -415,11 +360,339 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ok",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "restrictions",
+            "speaker": "npc",
+            "lines": [
+                "What would you like to know?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "1) Party Size",
+                        "value": "1",
+                        "action": "q.dialogue.set_page('restriction1-1');"
+                    },
+                    {
+                        "text": "2) Pokémon",
+                        "value": "2",
+                        "action": "q.dialogue.set_page('restriction2-1');"
+                    },
+                    {
+                        "text": "3) Held Items",
+                        "value": "3",
+                        "action": "q.dialogue.set_page('restriction3-1');"
+                    },
+                    {
+                        "text": "4) Battle",
+                        "value": "4",
+                        "action": "q.dialogue.set_page('restriction4-1');"
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction1-1",
+            "speaker": "npc",
+            "lines": [
+                "In Single Battle format, you enter with three Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
                         "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction1-2",
+            "speaker": "npc",
+            "lines": [
+                "In Double Battle format, you enter with four Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction1-3",
+            "speaker": "npc",
+            "lines": [
+                "In Triple Battle format, you enter with six Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction1-4",
+            "speaker": "npc",
+            "lines": [
+                "Finally, in Multi Battle format, teams of two Trainers enter with two Pokémon each."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ok",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('restrictions');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction2-1",
+            "speaker": "npc",
+            "lines": [
+                "All Pokémon in your party must be of a different species."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction2-2",
+            "speaker": "npc",
+            "lines": [
+                "Additionally, no Trainer in a Multi Team can enter a Pokémon of the same species as another Trainer's."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction2-3",
+            "speaker": "npc",
+            "lines": [
+                "Mewtwo, Mew, Lugia, Ho-Oh, Celebi, Kyogre, Groudon, Rayquaza, Jirachi, Deoxys, Dialga, Palkia, Giratina, Phione, Manaphy, Darkrai, Shaymin, and Arceus are not allowed to enter."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ok",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('restrictions');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction3-1",
+            "speaker": "npc",
+            "lines": [
+                "All Pokémon in your party must be holding different items."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction3-2",
+            "speaker": "npc",
+            "lines": [
+                "You cannot change your Pokémon's held items during your challenge."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction3-3",
+            "speaker": "npc",
+            "lines": [
+                "Additionally, the item Soul Dew is not allowed."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ok",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('restrictions');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction4-1",
+            "speaker": "npc",
+            "lines": [
+                "Items cannot be used during a battle."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction4-2",
+            "speaker": "npc",
+            "lines": [
+                "All Pokémon above level 50 will be set to level 50. Those under level 50 will remain at their current level."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction4-3",
+            "speaker": "npc",
+            "lines": [
+                "Your Pokémon's original levels will be restored upon leaving the Battle Tower."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "restriction4-4",
+            "speaker": "npc",
+            "lines": [
+                "Additionally, your Pokémon will not gain experience points or effort values during your challenge."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Ok",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('restrictions');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "records",
+            "speaker": "npc",
+            "lines": [
+                "Current / Lifetime Win Streaks",
+                {
+                    "type": "expression",
+                    "expression": "'Single: ' + q.player.data.battle_tower.streaks.current.singles + ' / ' + q.player.data.battle_tower.streaks.lifetime.singles"
+                },
+                {
+                    "type": "expression",
+                    "expression": "'Double: ' + q.player.data.battle_tower.streaks.current.doubles + ' / ' + q.player.data.battle_tower.streaks.lifetime.doubles"
+                },
+                {
+                    "type": "expression",
+                    "expression": "'Triple: ' + q.player.data.battle_tower.streaks.current.triples + ' / ' + q.player.data.battle_tower.streaks.lifetime.triples"
+                },
+                {
+                    "type": "expression",
+                    "expression": "'Multi: ' + q.player.data.battle_tower.streaks.current.multi + ' / ' + q.player.data.battle_tower.streaks.lifetime.multi"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Back",
+                        "value": "back",
                         "action": "q.dialogue.set_page('page2');"
                     }
                 ]
@@ -439,7 +712,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -457,11 +730,11 @@
                 "q.dialogue.close;"
             ],
             "lines": [
-                "Your party has been deemed ineligible for competition."
+                "We found some issues with your party."
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -483,7 +756,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Close",
@@ -506,7 +779,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -524,7 +797,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Next",
@@ -542,7 +815,7 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Close",
@@ -564,14 +837,14 @@
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
                         "text": "Close",
                         "value": "close",
                         "action": [
                             "q.dialogue.close();"
-                            ]
+                        ]
                     }
                 ]
             }

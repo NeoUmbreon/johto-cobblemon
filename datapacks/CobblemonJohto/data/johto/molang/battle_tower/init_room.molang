@@ -28,6 +28,7 @@ for_each(v.player, q.player.data.temp.players, {
     
     v.player.remove_tag('BattleSalon');
     v.player.add_tag('BattleTower');
+    v.player.active_dialogue.close;
     v.player.teleport(894.5, t.y, 67.0, 0);
     v.player.data.temp.npc = t.nursejoy;
     v.player.data.temp.partners = t.npcs;

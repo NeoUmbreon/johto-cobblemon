@@ -1,6 +1,6 @@
 c.player.has_tag('BattleTower') ? {
-    v.player = c.player;
-    v.player.has_tag('BattleTowerReady') ? { q.run_script('johto:post_battle') } : { q.run_script('johto:leave_tower') };
+    v.players = c.player.data.temp.players;
+    c.player.has_tag('BattleTowerReady') ? { q.run_script('johto:post_battle') } : { q.run_script('johto:leave_tower') };
 };
 
 c.player.has_tag('SafariState') ? {
