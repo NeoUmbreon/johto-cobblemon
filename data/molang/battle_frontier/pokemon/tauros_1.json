@@ -2,6 +2,7 @@
     "species": "tauros",
     "nature": "jolly",
     "heldItem": "cobblemon:persim_berry",
+    "item": "cobblemon:persim_berry",
     "moveset": {
         "1": "thrash",
         "2": "zenheadbutt",

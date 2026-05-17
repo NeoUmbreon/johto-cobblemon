@@ -2,6 +2,7 @@
     "species": "latios",
     "nature": "modest",
     "heldItem": "cobblemon:white_herb",
+    "item": "cobblemon:white_herb",
     "moveset": {
         "1": "lusterpurge",
         "2": "dracometeor",

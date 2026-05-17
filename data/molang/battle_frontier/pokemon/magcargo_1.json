@@ -2,6 +2,7 @@
     "species": "magcargo",
     "nature": "modest",
     "heldItem": "cobblemon:lax_incense",
+    "item": "cobblemon:lax_incense",
     "moveset": {
         "1": "lavaplume",
         "2": "ancientpower",

@@ -2,6 +2,7 @@
     "species": "wormadam",
     "nature": "modest",
     "heldItem": "cobblemon:coba_berry",
+    "item": "cobblemon:coba_berry",
     "moveset": {
         "1": "gigadrain",
         "2": "signalbeam",

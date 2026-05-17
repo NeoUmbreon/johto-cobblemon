@@ -2,6 +2,7 @@
     "species": "drowzee",
     "nature": "modest",
     "heldItem": "cobblemon:rawst_berry",
+    "item": "cobblemon:rawst_berry",
     "moveset": {
         "1": "psybeam",
         "2": "assist",

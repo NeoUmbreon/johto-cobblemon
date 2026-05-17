@@ -2,6 +2,7 @@
     "species": "rhydon",
     "nature": "adamant",
     "heldItem": "cobblemon:focus_sash",
+    "item": "cobblemon:focus_sash",
     "moveset": {
         "1": "earthquake",
         "2": "firepunch",

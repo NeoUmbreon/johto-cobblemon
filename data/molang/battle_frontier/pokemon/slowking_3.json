@@ -2,6 +2,7 @@
     "species": "slowking",
     "nature": "modest",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "psychic",
         "2": "shadowball",

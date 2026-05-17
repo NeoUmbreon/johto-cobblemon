@@ -2,6 +2,7 @@
     "species": "magnemite",
     "nature": "bold",
     "heldItem": "cobblemon:rawst_berry",
+    "item": "cobblemon:rawst_berry",
     "moveset": {
         "1": "shockwave",
         "2": "mirrorshot",

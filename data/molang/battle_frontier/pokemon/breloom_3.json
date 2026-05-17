@@ -2,6 +2,7 @@
     "species": "breloom",
     "nature": "adamant",
     "heldItem": "cobblemon:toxic_orb",
+    "item": "cobblemon:toxic_orb",
     "moveset": {
         "1": "dynamicpunch",
         "2": "thunderpunch",

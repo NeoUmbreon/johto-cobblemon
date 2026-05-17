@@ -2,6 +2,7 @@
     "species": "corphish",
     "nature": "brave",
     "heldItem": "cobblemon:pecha_berry",
+    "item": "cobblemon:pecha_berry",
     "moveset": {
         "1": "bubblebeam",
         "2": "vicegrip",

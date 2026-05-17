@@ -2,6 +2,7 @@
     "species": "solrock",
     "nature": "adamant",
     "heldItem": "cobblemon:passho_berry",
+    "item": "cobblemon:passho_berry",
     "moveset": {
         "1": "zenheadbutt",
         "2": "rockslide",

@@ -2,6 +2,7 @@
     "species": "tangela",
     "nature": "bold",
     "heldItem": "cobblemon:pecha_berry",
+    "item": "cobblemon:pecha_berry",
     "moveset": {
         "1": "gigadrain",
         "2": "sludgebomb",

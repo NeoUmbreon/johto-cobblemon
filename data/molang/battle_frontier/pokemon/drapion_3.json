@@ -2,6 +2,7 @@
     "species": "drapion",
     "nature": "jolly",
     "heldItem": "cobblemon:scope_lens",
+    "item": "cobblemon:scope_lens",
     "moveset": {
         "1": "crosspoison",
         "2": "firefang",

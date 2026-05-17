@@ -2,6 +2,7 @@
     "species": "shieldon",
     "nature": "sassy",
     "heldItem": "cobblemon:focus_band",
+    "item": "cobblemon:focus_band",
     "moveset": {
         "1": "ironhead",
         "2": "rocktomb",

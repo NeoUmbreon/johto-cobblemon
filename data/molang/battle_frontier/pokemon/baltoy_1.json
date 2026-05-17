@@ -2,6 +2,7 @@
     "species": "baltoy",
     "nature": "modest",
     "heldItem": "cobblemon:twisted_spoon",
+    "item": "cobblemon:twisted_spoon",
     "moveset": {
         "1": "psybeam",
         "2": "mudslap",

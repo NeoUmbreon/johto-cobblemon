@@ -2,6 +2,7 @@
     "species": "lairon",
     "nature": "impish",
     "heldItem": "cobblemon:sitrus_berry",
+    "item": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "ironhead",
         "2": "rockslide",

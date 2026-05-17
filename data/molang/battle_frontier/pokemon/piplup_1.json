@@ -2,6 +2,7 @@
     "species": "piplup",
     "nature": "bashful",
     "heldItem": "cobblemon:rindo_berry",
+    "item": "cobblemon:rindo_berry",
     "moveset": {
         "1": "bubblebeam",
         "2": "aerialace",

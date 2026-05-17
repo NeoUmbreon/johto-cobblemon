@@ -2,6 +2,7 @@
     "species": "kingler",
     "nature": "quiet",
     "heldItem": "cobblemon:wacan_berry",
+    "item": "cobblemon:wacan_berry",
     "moveset": {
         "1": "bubblebeam",
         "2": "vicegrip",

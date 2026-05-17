@@ -2,6 +2,7 @@
     "species": "skiploom",
     "nature": "docile",
     "heldItem": "cobblemon:big_root",
+    "item": "cobblemon:big_root",
     "moveset": {
         "1": "megadrain",
         "2": "aerialace",

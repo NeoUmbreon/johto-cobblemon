@@ -2,6 +2,7 @@
     "species": "monferno",
     "nature": "adamant",
     "heldItem": "cobblemon:scope_lens",
+    "item": "cobblemon:scope_lens",
     "moveset": {
         "1": "blazekick",
         "2": "brickbreak",

@@ -2,6 +2,7 @@
     "species": "gallade",
     "nature": "jolly",
     "heldItem": "cobblemon:bright_powder",
+    "item": "cobblemon:bright_powder",
     "moveset": {
         "1": "drainpunch",
         "2": "firepunch",

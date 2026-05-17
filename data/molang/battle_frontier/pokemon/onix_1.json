@@ -2,6 +2,7 @@
     "species": "onix",
     "nature": "adamant",
     "heldItem": "cobblemon:hard_stone",
+    "item": "cobblemon:hard_stone",
     "moveset": {
         "1": "rockslide",
         "2": "dig",

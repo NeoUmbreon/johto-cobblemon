@@ -2,6 +2,7 @@
     "species": "raikou",
     "nature": "timid",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "thunderbolt",
         "2": "shadowball",

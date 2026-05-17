@@ -2,6 +2,7 @@
     "species": "meganium",
     "nature": "modest",
     "heldItem": "cobblemon:lax_incense",
+    "item": "cobblemon:lax_incense",
     "moveset": {
         "1": "frenzyplant",
         "2": "ancientpower",

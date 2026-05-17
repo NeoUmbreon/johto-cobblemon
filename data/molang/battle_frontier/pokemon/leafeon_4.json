@@ -2,6 +2,7 @@
     "species": "leafeon",
     "nature": "adamant",
     "heldItem": "cobblemon:quick_claw",
+    "item": "cobblemon:quick_claw",
     "moveset": {
         "1": "leafblade",
         "2": "xscissor",

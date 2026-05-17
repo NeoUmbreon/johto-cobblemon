@@ -2,6 +2,7 @@
     "species": "aerodactyl",
     "nature": "adamant",
     "heldItem": "cobblemon:yache_berry",
+    "item": "cobblemon:yache_berry",
     "moveset": {
         "1": "gigaimpact",
         "2": "earthquake",

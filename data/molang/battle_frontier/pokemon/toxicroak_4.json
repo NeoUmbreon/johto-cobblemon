@@ -2,6 +2,7 @@
     "species": "toxicroak",
     "nature": "adamant",
     "heldItem": "cobblemon:razor_claw",
+    "item": "cobblemon:razor_claw",
     "moveset": {
         "1": "gunkshot",
         "2": "crosschop",

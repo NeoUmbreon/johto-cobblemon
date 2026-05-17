@@ -2,6 +2,7 @@
     "species": "froslass",
     "nature": "modest",
     "heldItem": "cobblemon:expert_belt",
+    "item": "cobblemon:expert_belt",
     "moveset": {
         "1": "icebeam",
         "2": "thunderbolt",

@@ -2,6 +2,7 @@
     "species": "jynx",
     "nature": "modest",
     "heldItem": "cobblemon:choice_specs",
+    "item": "cobblemon:choice_specs",
     "moveset": {
         "1": "icebeam",
         "2": "psychic",

@@ -2,6 +2,7 @@
     "species": "floatzel",
     "nature": "adamant",
     "heldItem": "cobblemon:razor_fang",
+    "item": "cobblemon:razor_fang",
     "moveset": {
         "1": "aquatail",
         "2": "icefang",

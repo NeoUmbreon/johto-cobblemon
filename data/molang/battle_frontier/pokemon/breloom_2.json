@@ -2,6 +2,7 @@
     "species": "breloom",
     "nature": "brave",
     "heldItem": "cobblemon:big_root",
+    "item": "cobblemon:big_root",
     "moveset": {
         "1": "drainpunch",
         "2": "gigadrain",

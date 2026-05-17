@@ -2,6 +2,7 @@
     "species": "ariados",
     "nature": "adamant",
     "heldItem": "cobblemon:silver_powder",
+    "item": "cobblemon:silver_powder",
     "moveset": {
         "1": "bugbite",
         "2": "toxic",

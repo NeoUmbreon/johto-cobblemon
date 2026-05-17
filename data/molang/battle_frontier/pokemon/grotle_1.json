@@ -2,6 +2,7 @@
     "species": "grotle",
     "nature": "relaxed",
     "heldItem": "cobblemon:big_root",
+    "item": "cobblemon:big_root",
     "moveset": {
         "1": "razorleaf",
         "2": "bite",

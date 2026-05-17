@@ -2,6 +2,7 @@
     "species": "aerodactyl",
     "nature": "jolly",
     "heldItem": "cobblemon:kings_rock",
+    "item": "cobblemon:kings_rock",
     "moveset": {
         "1": "rockslide",
         "2": "aerialace",

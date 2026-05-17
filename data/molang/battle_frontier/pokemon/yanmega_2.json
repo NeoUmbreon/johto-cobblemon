@@ -2,6 +2,7 @@
     "species": "yanmega",
     "nature": "adamant",
     "heldItem": "cobblemon:muscle_band",
+    "item": "cobblemon:muscle_band",
     "moveset": {
         "1": "aerialace",
         "2": "uturn",

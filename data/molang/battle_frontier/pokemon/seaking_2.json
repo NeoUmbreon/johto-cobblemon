@@ -2,6 +2,7 @@
     "species": "seaking",
     "nature": "adamant",
     "heldItem": "cobblemon:quick_claw",
+    "item": "cobblemon:quick_claw",
     "moveset": {
         "1": "aquatail",
         "2": "poisonjab",

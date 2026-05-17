@@ -2,6 +2,7 @@
     "species": "graveler",
     "nature": "adamant",
     "heldItem": "cobblemon:focus_band",
+    "item": "cobblemon:focus_band",
     "moveset": {
         "1": "magnitude",
         "2": "rocktomb",

@@ -2,6 +2,7 @@
     "species": "munchlax",
     "nature": "relaxed",
     "heldItem": "cobblemon:sitrus_berry",
+    "item": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "metronome",
         "2": "recycle",

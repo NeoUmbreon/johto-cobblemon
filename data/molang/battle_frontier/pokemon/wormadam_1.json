@@ -2,6 +2,7 @@
     "species": "wormadam",
     "nature": "adamant",
     "heldItem": "cobblemon:coba_berry",
+    "item": "cobblemon:coba_berry",
     "moveset": {
         "1": "razorleaf",
         "2": "bugbite",

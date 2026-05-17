@@ -2,6 +2,7 @@
     "species": "magmortar",
     "nature": "adamant",
     "heldItem": "cobblemon:passho_berry",
+    "item": "cobblemon:passho_berry",
     "moveset": {
         "1": "flareblitz",
         "2": "thunderpunch",

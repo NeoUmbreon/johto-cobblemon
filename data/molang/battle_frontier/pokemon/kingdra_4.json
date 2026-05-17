@@ -2,6 +2,7 @@
     "species": "kingdra",
     "nature": "modest",
     "heldItem": "cobblemon:wide_lens",
+    "item": "cobblemon:wide_lens",
     "moveset": {
         "1": "hydropump",
         "2": "dracometeor",

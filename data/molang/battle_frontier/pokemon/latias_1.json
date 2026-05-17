@@ -2,6 +2,7 @@
     "species": "latias",
     "nature": "calm",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "psychic",
         "2": "dragonpulse",

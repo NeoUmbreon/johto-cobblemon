@@ -2,6 +2,7 @@
     "species": "latias",
     "nature": "adamant",
     "heldItem": "cobblemon:expert_belt",
+    "item": "cobblemon:expert_belt",
     "moveset": {
         "1": "dragonclaw",
         "2": "zenheadbutt",

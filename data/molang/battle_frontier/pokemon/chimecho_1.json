@@ -2,6 +2,7 @@
     "species": "chimecho",
     "nature": "calm",
     "heldItem": "cobblemon:pecha_berry",
+    "item": "cobblemon:pecha_berry",
     "moveset": {
         "1": "psywave",
         "2": "icywind",

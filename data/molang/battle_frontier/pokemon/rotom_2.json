@@ -2,6 +2,7 @@
     "species": "rotom",
     "nature": "modest",
     "heldItem": "cobblemon:magnet",
+    "item": "cobblemon:magnet",
     "moveset": {
         "1": "discharge",
         "2": "ominouswind",

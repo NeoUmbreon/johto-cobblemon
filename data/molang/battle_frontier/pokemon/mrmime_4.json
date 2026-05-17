@@ -2,6 +2,7 @@
     "species": "mrmime",
     "nature": "modest",
     "heldItem": "cobblemon:choice_specs",
+    "item": "cobblemon:choice_specs",
     "moveset": {
         "1": "psychic",
         "2": "chargebeam",

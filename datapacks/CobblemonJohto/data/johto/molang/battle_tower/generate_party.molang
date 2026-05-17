@@ -1,5 +1,5 @@
 'Init variables';
-v.species_list != 0 ? { v.species_list = q.array() };
+v.species_list == 0 ? { v.species_list = q.array() };
 t.item_list = q.array();
 t.filename_list = q.array();
 t.trainer.team = q.array();
@@ -26,14 +26,14 @@ v.npc.name == 'Palmer' ? {
         for_each(t.species, v.species_list, {
             t.pokemon.species == t.species ? { t.match = 1; break };
         });
-        !t.match ? { for_each(t.heldItem, t.item_list, {
-            t.pokemon.heldItem == t.heldItem ? { t.match = 1; break };
+        !t.match ? { for_each(t.item, t.item_list, {
+            t.pokemon.item == t.item ? { t.match = 1; break };
         });};
 
         'Append filename if species and item not already picked';
         !t.match ? {
             q.append(v.species_list, t.pokemon.species);
-            q.append(t.item_list, t.pokemon.heldItem);
+            q.append(t.item_list, t.pokemon.item);
             q.append(t.filename_list, t.filename);
 
             'Break when party is filled';
@@ -80,6 +80,8 @@ for_each(t.filename, t.filename_list, {
     t.pokemon.ivs.spa = t.ivs;
     t.pokemon.ivs.spd = t.ivs;
     t.pokemon.ivs.spe = t.ivs;
+
+    q.delete_variable(t.pokemon, 'item');
 
     'Append edited Pokemon object to team';
     q.append(t.trainer.team, t.pokemon);

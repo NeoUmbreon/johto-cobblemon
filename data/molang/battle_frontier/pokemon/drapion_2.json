@@ -2,6 +2,7 @@
     "species": "drapion",
     "nature": "adamant",
     "heldItem": "cobblemon:iron_ball",
+    "item": "cobblemon:iron_ball",
     "moveset": {
         "1": "payback",
         "2": "poisonjab",

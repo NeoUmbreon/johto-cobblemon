@@ -2,6 +2,7 @@
     "species": "porygonz",
     "nature": "modest",
     "heldItem": "cobblemon:sitrus_berry",
+    "item": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "triattack",
         "2": "shadowball",

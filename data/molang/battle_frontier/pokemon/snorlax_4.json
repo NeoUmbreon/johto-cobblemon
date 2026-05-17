@@ -2,6 +2,7 @@
     "species": "snorlax",
     "nature": "adamant",
     "heldItem": "cobblemon:life_orb",
+    "item": "cobblemon:life_orb",
     "moveset": {
         "1": "doubleedge",
         "2": "earthquake",

@@ -2,6 +2,7 @@
     "species": "pidgeotto",
     "nature": "adamant",
     "heldItem": "cobblemon:rawst_berry",
+    "item": "cobblemon:rawst_berry",
     "moveset": {
         "1": "wingattack",
         "2": "quickattack",

@@ -2,6 +2,7 @@
     "species": "parasect",
     "nature": "jolly",
     "heldItem": "cobblemon:aspear_berry",
+    "item": "cobblemon:aspear_berry",
     "moveset": {
         "1": "bugbite",
         "2": "grassknot",

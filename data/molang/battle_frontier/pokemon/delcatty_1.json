@@ -2,6 +2,7 @@
     "species": "delcatty",
     "nature": "adamant",
     "heldItem": "cobblemon:sitrus_berry",
+    "item": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "secretpower",
         "2": "feintattack",

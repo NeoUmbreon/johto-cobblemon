@@ -2,6 +2,7 @@
     "species": "gallade",
     "nature": "careful",
     "heldItem": "cobblemon:kasib_berry",
+    "item": "cobblemon:kasib_berry",
     "moveset": {
         "1": "zenheadbutt",
         "2": "brickbreak",

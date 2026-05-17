@@ -2,6 +2,7 @@
     "species": "cranidos",
     "nature": "careful",
     "heldItem": "cobblemon:rock_incense",
+    "item": "cobblemon:rock_incense",
     "moveset": {
         "1": "rocktomb",
         "2": "pursuit",

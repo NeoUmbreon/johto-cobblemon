@@ -2,6 +2,7 @@
     "species": "jolteon",
     "nature": "docile",
     "heldItem": "cobblemon:razor_claw",
+    "item": "cobblemon:razor_claw",
     "moveset": {
         "1": "discharge",
         "2": "doublekick",

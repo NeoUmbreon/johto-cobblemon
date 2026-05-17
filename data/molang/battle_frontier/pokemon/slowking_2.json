@@ -2,6 +2,7 @@
     "species": "slowking",
     "nature": "adamant",
     "heldItem": "cobblemon:quick_claw",
+    "item": "cobblemon:quick_claw",
     "moveset": {
         "1": "zenheadbutt",
         "2": "aquatail",

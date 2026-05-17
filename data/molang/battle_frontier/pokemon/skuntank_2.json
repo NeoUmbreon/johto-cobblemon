@@ -2,6 +2,7 @@
     "species": "skuntank",
     "nature": "jolly",
     "heldItem": "cobblemon:chesto_berry",
+    "item": "cobblemon:chesto_berry",
     "moveset": {
         "1": "crunch",
         "2": "toxic",

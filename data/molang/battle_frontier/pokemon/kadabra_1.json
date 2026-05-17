@@ -2,6 +2,7 @@
     "species": "kadabra",
     "nature": "timid",
     "heldItem": "cobblemon:twisted_spoon",
+    "item": "cobblemon:twisted_spoon",
     "moveset": {
         "1": "confusion",
         "2": "roleplay",

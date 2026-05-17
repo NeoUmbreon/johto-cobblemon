@@ -2,6 +2,7 @@
     "species": "machamp",
     "nature": "adamant",
     "heldItem": "cobblemon:focus_sash",
+    "item": "cobblemon:focus_sash",
     "moveset": {
         "1": "revenge",
         "2": "earthquake",

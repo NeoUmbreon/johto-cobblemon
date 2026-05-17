@@ -2,6 +2,7 @@
     "species": "kabutops",
     "nature": "impish",
     "heldItem": "cobblemon:sea_incense",
+    "item": "cobblemon:sea_incense",
     "moveset": {
         "1": "aquajet",
         "2": "rocktomb",

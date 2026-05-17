@@ -2,6 +2,7 @@
     "species": "cyndaquil",
     "nature": "adamant",
     "heldItem": "cobblemon:quick_claw",
+    "item": "cobblemon:quick_claw",
     "moveset": {
         "1": "flamewheel",
         "2": "doublekick",

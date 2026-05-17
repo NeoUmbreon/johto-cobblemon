@@ -2,6 +2,7 @@
     "species": "toxicroak",
     "nature": "adamant",
     "heldItem": "cobblemon:wide_lens",
+    "item": "cobblemon:wide_lens",
     "moveset": {
         "1": "dynamicpunch",
         "2": "poisonjab",

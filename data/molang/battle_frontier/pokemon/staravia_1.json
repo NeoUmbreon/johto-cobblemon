@@ -2,6 +2,7 @@
     "species": "staravia",
     "nature": "adamant",
     "heldItem": "cobblemon:sharp_beak",
+    "item": "cobblemon:sharp_beak",
     "moveset": {
         "1": "endeavor",
         "2": "wingattack",

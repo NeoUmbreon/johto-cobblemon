@@ -2,6 +2,7 @@
     "species": "starly",
     "nature": "adamant",
     "heldItem": "cobblemon:sharp_beak",
+    "item": "cobblemon:sharp_beak",
     "moveset": {
         "1": "wingattack",
         "2": "quickattack",

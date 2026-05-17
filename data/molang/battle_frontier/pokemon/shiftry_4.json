@@ -2,6 +2,7 @@
     "species": "shiftry",
     "nature": "adamant",
     "heldItem": "cobblemon:cheri_berry",
+    "item": "cobblemon:cheri_berry",
     "moveset": {
         "1": "seedbomb",
         "2": "suckerpunch",

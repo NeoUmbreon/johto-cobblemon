@@ -2,6 +2,7 @@
     "species": "swablu",
     "nature": "modest",
     "heldItem": "cobblemon:mental_herb",
+    "item": "cobblemon:mental_herb",
     "moveset": {
         "1": "aircutter",
         "2": "swift",

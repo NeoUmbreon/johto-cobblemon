@@ -2,6 +2,7 @@
     "species": "arcanine",
     "nature": "jolly",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "firefang",
         "2": "extremespeed",

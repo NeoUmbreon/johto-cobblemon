@@ -2,6 +2,7 @@
     "species": "kangaskhan",
     "nature": "jolly",
     "heldItem": "cobblemon:life_orb",
+    "item": "cobblemon:life_orb",
     "moveset": {
         "1": "doublehit",
         "2": "hammerarm",

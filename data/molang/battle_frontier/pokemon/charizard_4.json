@@ -2,6 +2,7 @@
     "species": "charizard",
     "nature": "timid",
     "heldItem": "cobblemon:bright_powder",
+    "item": "cobblemon:bright_powder",
     "moveset": {
         "1": "blastburn",
         "2": "airslash",

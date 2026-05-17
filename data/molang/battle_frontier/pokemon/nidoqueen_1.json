@@ -2,6 +2,7 @@
     "species": "nidoqueen",
     "nature": "adamant",
     "heldItem": "cobblemon:payapa_berry",
+    "item": "cobblemon:payapa_berry",
     "moveset": {
         "1": "earthquake",
         "2": "poisonfang",

@@ -2,6 +2,7 @@
     "species": "alakazam",
     "nature": "modest",
     "heldItem": "cobblemon:expert_belt",
+    "item": "cobblemon:expert_belt",
     "moveset": {
         "1": "psychic",
         "2": "shadowball",

@@ -2,6 +2,7 @@
     "species": "gastrodon",
     "nature": "sassy",
     "heldItem": "cobblemon:zoom_lens",
+    "item": "cobblemon:zoom_lens",
     "moveset": {
         "1": "muddywater",
         "2": "mudbomb",

@@ -2,6 +2,7 @@
     "species": "shuckle",
     "nature": "calm",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "toxic",
         "2": "substitute",

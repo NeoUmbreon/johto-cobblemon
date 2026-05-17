@@ -2,6 +2,7 @@
     "species": "rhyperior",
     "nature": "impish",
     "heldItem": "cobblemon:focus_sash",
+    "item": "cobblemon:focus_sash",
     "moveset": {
         "1": "horndrill",
         "2": "avalanche",

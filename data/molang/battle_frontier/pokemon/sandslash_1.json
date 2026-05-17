@@ -2,6 +2,7 @@
     "species": "sandslash",
     "nature": "adamant",
     "heldItem": "cobblemon:sitrus_berry",
+    "item": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "dig",
         "2": "rocktomb",

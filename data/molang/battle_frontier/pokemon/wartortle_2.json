@@ -2,6 +2,7 @@
     "species": "wartortle",
     "nature": "serious",
     "heldItem": "cobblemon:shell_bell",
+    "item": "cobblemon:shell_bell",
     "moveset": {
         "1": "surf",
         "2": "icebeam",

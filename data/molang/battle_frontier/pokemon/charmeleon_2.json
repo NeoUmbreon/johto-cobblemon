@@ -2,6 +2,7 @@
     "species": "charmeleon",
     "nature": "bashful",
     "heldItem": "cobblemon:razor_claw",
+    "item": "cobblemon:razor_claw",
     "moveset": {
         "1": "flamethrower",
         "2": "shadowclaw",

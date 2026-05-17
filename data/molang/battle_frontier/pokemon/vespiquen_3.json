@@ -2,6 +2,7 @@
     "species": "vespiquen",
     "nature": "adamant",
     "heldItem": "cobblemon:muscle_band",
+    "item": "cobblemon:muscle_band",
     "moveset": {
         "1": "xscissor",
         "2": "aerialace",

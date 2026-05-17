@@ -2,6 +2,7 @@
     "species": "blaziken",
     "nature": "adamant",
     "heldItem": "cobblemon:passho_berry",
+    "item": "cobblemon:passho_berry",
     "moveset": {
         "1": "blazekick",
         "2": "earthquake",

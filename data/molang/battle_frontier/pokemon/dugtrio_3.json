@@ -2,6 +2,7 @@
     "species": "dugtrio",
     "nature": "jolly",
     "heldItem": "cobblemon:razor_claw",
+    "item": "cobblemon:razor_claw",
     "moveset": {
         "1": "fissure",
         "2": "gigaimpact",

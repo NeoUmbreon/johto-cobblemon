@@ -2,6 +2,7 @@
     "species": "ampharos",
     "nature": "modest",
     "heldItem": "cobblemon:shuca_berry",
+    "item": "cobblemon:shuca_berry",
     "moveset": {
         "1": "thunderbolt",
         "2": "powergem",

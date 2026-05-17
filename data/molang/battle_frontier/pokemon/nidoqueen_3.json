@@ -2,6 +2,7 @@
     "species": "nidoqueen",
     "nature": "modest",
     "heldItem": "cobblemon:black_sludge",
+    "item": "cobblemon:black_sludge",
     "moveset": {
         "1": "sludgebomb",
         "2": "earthpower",

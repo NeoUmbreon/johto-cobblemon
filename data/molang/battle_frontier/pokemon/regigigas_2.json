@@ -2,6 +2,7 @@
     "species": "regigigas",
     "nature": "careful",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "facade",
         "2": "zenheadbutt",

@@ -2,6 +2,7 @@
     "species": "koffing",
     "nature": "modest",
     "heldItem": "cobblemon:poison_barb",
+    "item": "cobblemon:poison_barb",
     "moveset": {
         "1": "sludge",
         "2": "psybeam",

@@ -2,6 +2,7 @@
     "species": "pupitar",
     "nature": "adamant",
     "heldItem": "cobblemon:hard_stone",
+    "item": "cobblemon:hard_stone",
     "moveset": {
         "1": "rocktomb",
         "2": "dig",

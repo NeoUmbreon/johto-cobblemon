@@ -2,6 +2,7 @@
     "species": "arcanine",
     "nature": "jolly",
     "heldItem": "cobblemon:salac_berry",
+    "item": "cobblemon:salac_berry",
     "moveset": {
         "1": "flareblitz",
         "2": "thunderfang",

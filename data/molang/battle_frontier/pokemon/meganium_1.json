@@ -2,6 +2,7 @@
     "species": "meganium",
     "nature": "modest",
     "heldItem": "cobblemon:heat_rock",
+    "item": "cobblemon:heat_rock",
     "moveset": {
         "1": "solarbeam",
         "2": "ancientpower",

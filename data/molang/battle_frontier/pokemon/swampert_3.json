@@ -2,6 +2,7 @@
     "species": "swampert",
     "nature": "modest",
     "heldItem": "cobblemon:expert_belt",
+    "item": "cobblemon:expert_belt",
     "moveset": {
         "1": "muddywater",
         "2": "earthpower",

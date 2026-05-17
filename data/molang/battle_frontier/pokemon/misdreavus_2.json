@@ -2,6 +2,7 @@
     "species": "misdreavus",
     "nature": "modest",
     "heldItem": "cobblemon:kasib_berry",
+    "item": "cobblemon:kasib_berry",
     "moveset": {
         "1": "shadowball",
         "2": "psychic",

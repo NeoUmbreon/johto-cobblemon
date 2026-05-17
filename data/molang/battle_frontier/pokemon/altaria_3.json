@@ -2,6 +2,7 @@
     "species": "altaria",
     "nature": "adamant",
     "heldItem": "cobblemon:bright_powder",
+    "item": "cobblemon:bright_powder",
     "moveset": {
         "1": "dragonrush",
         "2": "skyattack",

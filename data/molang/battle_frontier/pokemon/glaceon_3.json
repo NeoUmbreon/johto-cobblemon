@@ -2,6 +2,7 @@
     "species": "glaceon",
     "nature": "modest",
     "heldItem": "cobblemon:focus_sash",
+    "item": "cobblemon:focus_sash",
     "moveset": {
         "1": "blizzard",
         "2": "hyperbeam",

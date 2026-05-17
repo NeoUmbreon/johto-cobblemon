@@ -2,6 +2,7 @@
     "species": "breloom",
     "nature": "impish",
     "heldItem": "cobblemon:focus_sash",
+    "item": "cobblemon:focus_sash",
     "moveset": {
         "1": "seedbomb",
         "2": "skyuppercut",

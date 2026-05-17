@@ -2,6 +2,7 @@
     "species": "shuckle",
     "nature": "careful",
     "heldItem": "cobblemon:grip_claw",
+    "item": "cobblemon:grip_claw",
     "moveset": {
         "1": "wrap",
         "2": "swagger",

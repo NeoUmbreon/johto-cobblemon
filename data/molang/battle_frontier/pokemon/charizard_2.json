@@ -2,6 +2,7 @@
     "species": "charizard",
     "nature": "modest",
     "heldItem": "cobblemon:white_herb",
+    "item": "cobblemon:white_herb",
     "moveset": {
         "1": "overheat",
         "2": "solarbeam",

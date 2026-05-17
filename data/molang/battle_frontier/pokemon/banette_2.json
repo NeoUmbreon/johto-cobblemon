@@ -2,6 +2,7 @@
     "species": "banette",
     "nature": "adamant",
     "heldItem": "cobblemon:colbur_berry",
+    "item": "cobblemon:colbur_berry",
     "moveset": {
         "1": "shadowclaw",
         "2": "feintattack",

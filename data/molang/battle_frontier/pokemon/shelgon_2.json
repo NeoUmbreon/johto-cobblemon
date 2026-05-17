@@ -2,6 +2,7 @@
     "species": "shelgon",
     "nature": "adamant",
     "heldItem": "cobblemon:focus_band",
+    "item": "cobblemon:focus_band",
     "moveset": {
         "1": "dragonclaw",
         "2": "crunch",

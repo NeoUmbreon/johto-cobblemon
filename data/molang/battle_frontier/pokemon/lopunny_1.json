@@ -2,6 +2,7 @@
     "species": "lopunny",
     "nature": "jolly",
     "heldItem": "cobblemon:focus_band",
+    "item": "cobblemon:focus_band",
     "moveset": {
         "1": "return",
         "2": "drainpunch",

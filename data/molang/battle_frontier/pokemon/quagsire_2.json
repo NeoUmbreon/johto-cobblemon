@@ -2,6 +2,7 @@
     "species": "quagsire",
     "nature": "careful",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "dive",
         "2": "yawn",

@@ -2,6 +2,7 @@
     "species": "gloom",
     "nature": "modest",
     "heldItem": "cobblemon:miracle_seed",
+    "item": "cobblemon:miracle_seed",
     "moveset": {
         "1": "megadrain",
         "2": "acid",

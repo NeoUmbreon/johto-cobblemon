@@ -2,6 +2,7 @@
     "species": "cacnea",
     "nature": "adamant",
     "heldItem": "cobblemon:aspear_berry",
+    "item": "cobblemon:aspear_berry",
     "moveset": {
         "1": "needlearm",
         "2": "feintattack",

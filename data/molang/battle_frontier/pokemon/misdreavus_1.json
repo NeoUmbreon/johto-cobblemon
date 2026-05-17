@@ -2,6 +2,7 @@
     "species": "misdreavus",
     "nature": "calm",
     "heldItem": "cobblemon:cheri_berry",
+    "item": "cobblemon:cheri_berry",
     "moveset": {
         "1": "ominouswind",
         "2": "painsplit",

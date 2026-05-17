@@ -2,6 +2,7 @@
     "species": "yanmega",
     "nature": "modest",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "silverwind",
         "2": "ancientpower",

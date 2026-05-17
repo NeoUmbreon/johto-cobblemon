@@ -2,6 +2,7 @@
     "species": "latios",
     "nature": "adamant",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "dragonclaw",
         "2": "shadowclaw",

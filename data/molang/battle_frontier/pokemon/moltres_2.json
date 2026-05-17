@@ -2,6 +2,7 @@
     "species": "moltres",
     "nature": "timid",
     "heldItem": "cobblemon:heat_rock",
+    "item": "cobblemon:heat_rock",
     "moveset": {
         "1": "fireblast",
         "2": "solarbeam",

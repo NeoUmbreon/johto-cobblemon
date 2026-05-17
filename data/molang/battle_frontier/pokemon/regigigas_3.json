@@ -2,6 +2,7 @@
     "species": "regigigas",
     "nature": "modest",
     "heldItem": "cobblemon:wise_glasses",
+    "item": "cobblemon:wise_glasses",
     "moveset": {
         "1": "earthpower",
         "2": "focusblast",

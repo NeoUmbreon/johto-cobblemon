@@ -2,6 +2,7 @@
     "species": "gastrodon",
     "nature": "adamant",
     "heldItem": "cobblemon:shell_bell",
+    "item": "cobblemon:shell_bell",
     "moveset": {
         "1": "waterfall",
         "2": "earthquake",

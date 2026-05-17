@@ -2,6 +2,7 @@
     "species": "articuno",
     "nature": "modest",
     "heldItem": "cobblemon:wise_glasses",
+    "item": "cobblemon:wise_glasses",
     "moveset": {
         "1": "icebeam",
         "2": "signalbeam",

@@ -2,6 +2,7 @@
     "species": "lucario",
     "nature": "modest",
     "heldItem": "cobblemon:expert_belt",
+    "item": "cobblemon:expert_belt",
     "moveset": {
         "1": "aurasphere",
         "2": "psychic",

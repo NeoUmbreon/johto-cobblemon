@@ -2,6 +2,7 @@
     "species": "weavile",
     "nature": "adamant",
     "heldItem": "cobblemon:chople_berry",
+    "item": "cobblemon:chople_berry",
     "moveset": {
         "1": "nightslash",
         "2": "icepunch",

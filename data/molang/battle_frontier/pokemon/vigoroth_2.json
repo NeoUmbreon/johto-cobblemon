@@ -2,6 +2,7 @@
     "species": "vigoroth",
     "nature": "adamant",
     "heldItem": "cobblemon:salac_berry",
+    "item": "cobblemon:salac_berry",
     "moveset": {
         "1": "crushclaw",
         "2": "shadowclaw",

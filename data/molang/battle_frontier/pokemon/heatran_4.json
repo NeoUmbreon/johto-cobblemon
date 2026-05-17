@@ -2,6 +2,7 @@
     "species": "heatran",
     "nature": "quiet",
     "heldItem": "cobblemon:focus_sash",
+    "item": "cobblemon:focus_sash",
     "moveset": {
         "1": "magmastorm",
         "2": "flashcannon",

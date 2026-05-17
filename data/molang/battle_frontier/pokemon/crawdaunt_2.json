@@ -2,6 +2,7 @@
     "species": "crawdaunt",
     "nature": "adamant",
     "heldItem": "cobblemon:quick_claw",
+    "item": "cobblemon:quick_claw",
     "moveset": {
         "1": "crabhammer",
         "2": "crunch",

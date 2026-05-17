@@ -2,6 +2,7 @@
     "species": "grimer",
     "nature": "adamant",
     "heldItem": "cobblemon:black_sludge",
+    "item": "cobblemon:black_sludge",
     "moveset": {
         "1": "toxic",
         "2": "shadowsneak",

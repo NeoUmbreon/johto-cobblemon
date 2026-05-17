@@ -2,6 +2,7 @@
     "species": "walrein",
     "nature": "modest",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "surf",
         "2": "icebeam",

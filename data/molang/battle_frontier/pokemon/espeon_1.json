@@ -2,6 +2,7 @@
     "species": "espeon",
     "nature": "timid",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "psychic",
         "2": "reflect",

@@ -2,6 +2,7 @@
     "species": "weavile",
     "nature": "jolly",
     "heldItem": "cobblemon:bright_powder",
+    "item": "cobblemon:bright_powder",
     "moveset": {
         "1": "nightslash",
         "2": "attract",

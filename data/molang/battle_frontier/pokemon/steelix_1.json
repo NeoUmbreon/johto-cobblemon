@@ -2,6 +2,7 @@
     "species": "steelix",
     "nature": "impish",
     "heldItem": "cobblemon:passho_berry",
+    "item": "cobblemon:passho_berry",
     "moveset": {
         "1": "earthquake",
         "2": "ironhead",

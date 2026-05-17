@@ -2,6 +2,7 @@
     "species": "armaldo",
     "nature": "adamant",
     "heldItem": "cobblemon:choice_band",
+    "item": "cobblemon:choice_band",
     "moveset": {
         "1": "stoneedge",
         "2": "superpower",

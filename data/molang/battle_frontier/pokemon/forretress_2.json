@@ -2,6 +2,7 @@
     "species": "forretress",
     "nature": "brave",
     "heldItem": "cobblemon:sitrus_berry",
+    "item": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "payback",
         "2": "stealthrock",

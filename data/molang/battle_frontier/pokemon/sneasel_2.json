@@ -2,6 +2,7 @@
     "species": "sneasel",
     "nature": "jolly",
     "heldItem": "cobblemon:kings_rock",
+    "item": "cobblemon:kings_rock",
     "moveset": {
         "1": "icepunch",
         "2": "feintattack",

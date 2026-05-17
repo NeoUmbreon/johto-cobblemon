@@ -2,6 +2,7 @@
     "species": "xatu",
     "nature": "jolly",
     "heldItem": "cobblemon:sharp_beak",
+    "item": "cobblemon:sharp_beak",
     "moveset": {
         "1": "zenheadbutt",
         "2": "pluck",

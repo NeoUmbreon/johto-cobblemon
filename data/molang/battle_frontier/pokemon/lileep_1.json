@@ -2,6 +2,7 @@
     "species": "lileep",
     "nature": "calm",
     "heldItem": "cobblemon:lax_incense",
+    "item": "cobblemon:lax_incense",
     "moveset": {
         "1": "ancientpower",
         "2": "grassknot",

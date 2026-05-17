@@ -2,6 +2,7 @@
     "species": "wailmer",
     "nature": "modest",
     "heldItem": "cobblemon:sea_incense",
+    "item": "cobblemon:sea_incense",
     "moveset": {
         "1": "waterpulse",
         "2": "icywind",

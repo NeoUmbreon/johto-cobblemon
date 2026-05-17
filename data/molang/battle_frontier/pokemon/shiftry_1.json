@@ -2,6 +2,7 @@
     "species": "shiftry",
     "nature": "jolly",
     "heldItem": "cobblemon:persim_berry",
+    "item": "cobblemon:persim_berry",
     "moveset": {
         "1": "seedbomb",
         "2": "feintattack",

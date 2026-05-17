@@ -2,6 +2,7 @@
     "species": "ninjask",
     "nature": "adamant",
     "heldItem": "cobblemon:razor_fang",
+    "item": "cobblemon:razor_fang",
     "moveset": {
         "1": "xscissor",
         "2": "aerialace",

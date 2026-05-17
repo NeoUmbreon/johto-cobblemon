@@ -2,6 +2,7 @@
     "species": "forretress",
     "nature": "brave",
     "heldItem": "cobblemon:occa_berry",
+    "item": "cobblemon:occa_berry",
     "moveset": {
         "1": "gyroball",
         "2": "bugbite",

@@ -2,6 +2,7 @@
     "species": "dugtrio",
     "nature": "jolly",
     "heldItem": "cobblemon:grip_claw",
+    "item": "cobblemon:grip_claw",
     "moveset": {
         "1": "earthquake",
         "2": "rockslide",

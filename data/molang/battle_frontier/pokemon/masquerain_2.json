@@ -2,6 +2,7 @@
     "species": "masquerain",
     "nature": "quiet",
     "heldItem": "cobblemon:petaya_berry",
+    "item": "cobblemon:petaya_berry",
     "moveset": {
         "1": "bugbuzz",
         "2": "airslash",

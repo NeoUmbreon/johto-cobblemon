@@ -2,6 +2,7 @@
     "species": "hitmontop",
     "nature": "adamant",
     "heldItem": "cobblemon:liechi_berry",
+    "item": "cobblemon:liechi_berry",
     "moveset": {
         "1": "triplekick",
         "2": "machpunch",

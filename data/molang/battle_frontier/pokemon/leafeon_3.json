@@ -2,6 +2,7 @@
     "species": "leafeon",
     "nature": "adamant",
     "heldItem": "cobblemon:heat_rock",
+    "item": "cobblemon:heat_rock",
     "moveset": {
         "1": "leafblade",
         "2": "xscissor",

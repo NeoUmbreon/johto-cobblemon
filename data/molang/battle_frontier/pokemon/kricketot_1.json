@@ -2,6 +2,7 @@
     "species": "kricketot",
     "nature": "relaxed",
     "heldItem": "cobblemon:liechi_berry",
+    "item": "cobblemon:liechi_berry",
     "moveset": {
         "1": "bugbite",
         "2": "bide",

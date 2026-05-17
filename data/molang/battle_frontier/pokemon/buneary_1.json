@@ -2,6 +2,7 @@
     "species": "buneary",
     "nature": "adamant",
     "heldItem": "cobblemon:black_belt",
+    "item": "cobblemon:black_belt",
     "moveset": {
         "1": "dizzypunch",
         "2": "drainpunch",

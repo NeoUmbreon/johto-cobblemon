@@ -2,6 +2,7 @@
     "species": "lanturn",
     "nature": "calm",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "dive",
         "2": "confuseray",

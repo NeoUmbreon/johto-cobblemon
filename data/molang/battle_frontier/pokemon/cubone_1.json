@@ -2,6 +2,7 @@
     "species": "cubone",
     "nature": "adamant",
     "heldItem": "cobblemon:soft_sand",
+    "item": "cobblemon:soft_sand",
     "moveset": {
         "1": "boneclub",
         "2": "headbutt",

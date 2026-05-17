@@ -2,6 +2,7 @@
     "species": "arbok",
     "nature": "quirky",
     "heldItem": "cobblemon:payapa_berry",
+    "item": "cobblemon:payapa_berry",
     "moveset": {
         "1": "sludgebomb",
         "2": "mudbomb",

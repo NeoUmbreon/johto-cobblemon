@@ -2,6 +2,7 @@
     "species": "regirock",
     "nature": "adamant",
     "heldItem": "cobblemon:razor_claw",
+    "item": "cobblemon:razor_claw",
     "moveset": {
         "1": "firepunch",
         "2": "thunderpunch",

@@ -2,6 +2,7 @@
     "species": "dusknoir",
     "nature": "careful",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "curse",
         "2": "painsplit",

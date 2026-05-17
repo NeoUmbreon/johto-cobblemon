@@ -2,6 +2,7 @@
     "species": "skuntank",
     "nature": "jolly",
     "heldItem": "cobblemon:muscle_band",
+    "item": "cobblemon:muscle_band",
     "moveset": {
         "1": "poisonjab",
         "2": "nightslash",

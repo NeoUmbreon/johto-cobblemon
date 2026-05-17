@@ -2,6 +2,7 @@
     "species": "purugly",
     "nature": "adamant",
     "heldItem": "cobblemon:liechi_berry",
+    "item": "cobblemon:liechi_berry",
     "moveset": {
         "1": "bodyslam",
         "2": "shadowclaw",

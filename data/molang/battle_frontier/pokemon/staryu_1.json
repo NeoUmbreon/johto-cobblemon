@@ -2,6 +2,7 @@
     "species": "staryu",
     "nature": "timid",
     "heldItem": "cobblemon:cheri_berry",
+    "item": "cobblemon:cheri_berry",
     "moveset": {
         "1": "bubblebeam",
         "2": "twister",

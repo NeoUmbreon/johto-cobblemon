@@ -2,6 +2,7 @@
     "species": "remoraid",
     "nature": "modest",
     "heldItem": "cobblemon:petaya_berry",
+    "item": "cobblemon:petaya_berry",
     "moveset": {
         "1": "bubblebeam",
         "2": "aurorabeam",

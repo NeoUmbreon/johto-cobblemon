@@ -2,6 +2,7 @@
     "species": "roserade",
     "nature": "modest",
     "heldItem": "cobblemon:white_herb",
+    "item": "cobblemon:white_herb",
     "moveset": {
         "1": "leafstorm",
         "2": "sludgebomb",

@@ -2,6 +2,7 @@
     "species": "clamperl",
     "nature": "bold",
     "heldItem": "cobblemon:deep_sea_scale",
+    "item": "cobblemon:deep_sea_scale",
     "moveset": {
         "1": "whirlpool",
         "2": "toxic",

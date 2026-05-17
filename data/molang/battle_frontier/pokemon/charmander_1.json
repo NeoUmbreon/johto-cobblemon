@@ -2,6 +2,7 @@
     "species": "charmander",
     "nature": "adamant",
     "heldItem": "cobblemon:scope_lens",
+    "item": "cobblemon:scope_lens",
     "moveset": {
         "1": "firefang",
         "2": "metalclaw",

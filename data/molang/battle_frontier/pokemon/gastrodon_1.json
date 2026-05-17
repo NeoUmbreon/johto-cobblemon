@@ -2,6 +2,7 @@
     "species": "gastrodon",
     "nature": "careful",
     "heldItem": "cobblemon:focus_sash",
+    "item": "cobblemon:focus_sash",
     "moveset": {
         "1": "waterfall",
         "2": "earthquake",

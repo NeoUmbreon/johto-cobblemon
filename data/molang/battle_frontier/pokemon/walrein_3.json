@@ -2,6 +2,7 @@
     "species": "walrein",
     "nature": "bold",
     "heldItem": "cobblemon:lax_incense",
+    "item": "cobblemon:lax_incense",
     "moveset": {
         "1": "sheercold",
         "2": "fissure",

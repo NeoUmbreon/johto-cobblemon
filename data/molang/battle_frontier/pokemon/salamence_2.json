@@ -2,6 +2,7 @@
     "species": "salamence",
     "nature": "jolly",
     "heldItem": "cobblemon:razor_fang",
+    "item": "cobblemon:razor_fang",
     "moveset": {
         "1": "dragonclaw",
         "2": "firefang",

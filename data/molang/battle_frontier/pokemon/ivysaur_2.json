@@ -2,6 +2,7 @@
     "species": "ivysaur",
     "nature": "modest",
     "heldItem": "cobblemon:big_root",
+    "item": "cobblemon:big_root",
     "moveset": {
         "1": "gigadrain",
         "2": "sludgebomb",

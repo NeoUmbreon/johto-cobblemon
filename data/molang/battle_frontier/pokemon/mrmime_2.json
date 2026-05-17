@@ -2,6 +2,7 @@
     "species": "mrmime",
     "nature": "calm",
     "heldItem": "cobblemon:light_clay",
+    "item": "cobblemon:light_clay",
     "moveset": {
         "1": "dreameater",
         "2": "hypnosis",

@@ -2,6 +2,7 @@
     "species": "vespiquen",
     "nature": "modest",
     "heldItem": "cobblemon:scope_lens",
+    "item": "cobblemon:scope_lens",
     "moveset": {
         "1": "silverwind",
         "2": "aircutter",

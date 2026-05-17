@@ -2,6 +2,7 @@
     "species": "togekiss",
     "nature": "modest",
     "heldItem": "cobblemon:wise_glasses",
+    "item": "cobblemon:wise_glasses",
     "moveset": {
         "1": "airslash",
         "2": "heatwave",

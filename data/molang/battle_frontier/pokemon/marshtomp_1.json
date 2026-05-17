@@ -2,6 +2,7 @@
     "species": "marshtomp",
     "nature": "modest",
     "heldItem": "cobblemon:focus_band",
+    "item": "cobblemon:focus_band",
     "moveset": {
         "1": "mudshot",
         "2": "waterpulse",

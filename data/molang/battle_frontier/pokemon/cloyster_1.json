@@ -2,6 +2,7 @@
     "species": "cloyster",
     "nature": "bold",
     "heldItem": "cobblemon:never_melt_ice",
+    "item": "cobblemon:never_melt_ice",
     "moveset": {
         "1": "aurorabeam",
         "2": "waterpulse",

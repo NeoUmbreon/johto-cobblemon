@@ -2,6 +2,7 @@
     "species": "dugtrio",
     "nature": "modest",
     "heldItem": "cobblemon:lax_incense",
+    "item": "cobblemon:lax_incense",
     "moveset": {
         "1": "earthpower",
         "2": "sludgebomb",

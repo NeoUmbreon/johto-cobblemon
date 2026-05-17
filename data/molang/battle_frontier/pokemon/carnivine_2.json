@@ -2,6 +2,7 @@
     "species": "carnivine",
     "nature": "adamant",
     "heldItem": "cobblemon:occa_berry",
+    "item": "cobblemon:occa_berry",
     "moveset": {
         "1": "seedbomb",
         "2": "wringout",

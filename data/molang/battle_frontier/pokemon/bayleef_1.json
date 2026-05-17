@@ -2,6 +2,7 @@
     "species": "bayleef",
     "nature": "modest",
     "heldItem": "cobblemon:sitrus_berry",
+    "item": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "magicalleaf",
         "2": "ancientpower",

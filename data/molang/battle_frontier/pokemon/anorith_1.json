@@ -2,6 +2,7 @@
     "species": "anorith",
     "nature": "adamant",
     "heldItem": "cobblemon:metronome",
+    "item": "cobblemon:metronome",
     "moveset": {
         "1": "furycutter",
         "2": "rockblast",

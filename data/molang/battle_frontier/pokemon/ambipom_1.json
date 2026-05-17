@@ -2,6 +2,7 @@
     "species": "ambipom",
     "nature": "jolly",
     "heldItem": "cobblemon:muscle_band",
+    "item": "cobblemon:muscle_band",
     "moveset": {
         "1": "doublehit",
         "2": "shadowclaw",

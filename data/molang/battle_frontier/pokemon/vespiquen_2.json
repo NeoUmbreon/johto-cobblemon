@@ -2,6 +2,7 @@
     "species": "vespiquen",
     "nature": "careful",
     "heldItem": "cobblemon:persim_berry",
+    "item": "cobblemon:persim_berry",
     "moveset": {
         "1": "xscissor",
         "2": "toxic",

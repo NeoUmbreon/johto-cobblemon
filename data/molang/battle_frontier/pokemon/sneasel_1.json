@@ -2,6 +2,7 @@
     "species": "sneasel",
     "nature": "jolly",
     "heldItem": "cobblemon:persim_berry",
+    "item": "cobblemon:persim_berry",
     "moveset": {
         "1": "feintattack",
         "2": "iceshard",

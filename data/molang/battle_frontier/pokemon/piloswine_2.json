@@ -2,6 +2,7 @@
     "species": "piloswine",
     "nature": "adamant",
     "heldItem": "cobblemon:muscle_band",
+    "item": "cobblemon:muscle_band",
     "moveset": {
         "1": "icefang",
         "2": "earthquake",

@@ -2,6 +2,7 @@
     "species": "huntail",
     "nature": "quirky",
     "heldItem": "cobblemon:mystic_water",
+    "item": "cobblemon:mystic_water",
     "moveset": {
         "1": "waterpulse",
         "2": "bite",

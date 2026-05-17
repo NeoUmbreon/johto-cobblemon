@@ -2,6 +2,7 @@
     "species": "wailord",
     "nature": "adamant",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "waterfall",
         "2": "avalanche",

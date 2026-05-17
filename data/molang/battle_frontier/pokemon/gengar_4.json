@@ -2,6 +2,7 @@
     "species": "gengar",
     "nature": "modest",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "shadowball",
         "2": "sludgebomb",

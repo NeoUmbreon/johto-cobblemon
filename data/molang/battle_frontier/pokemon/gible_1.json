@@ -2,6 +2,7 @@
     "species": "gible",
     "nature": "adamant",
     "heldItem": "cobblemon:soft_sand",
+    "item": "cobblemon:soft_sand",
     "moveset": {
         "1": "dragonrage",
         "2": "sandtomb",

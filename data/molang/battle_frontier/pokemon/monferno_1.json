@@ -2,6 +2,7 @@
     "species": "monferno",
     "nature": "adamant",
     "heldItem": "cobblemon:coba_berry",
+    "item": "cobblemon:coba_berry",
     "moveset": {
         "1": "machpunch",
         "2": "flamewheel",

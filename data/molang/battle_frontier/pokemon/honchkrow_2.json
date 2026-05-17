@@ -2,6 +2,7 @@
     "species": "honchkrow",
     "nature": "adamant",
     "heldItem": "cobblemon:white_herb",
+    "item": "cobblemon:white_herb",
     "moveset": {
         "1": "superpower",
         "2": "pluck",

@@ -2,6 +2,7 @@
     "species": "abomasnow",
     "nature": "quiet",
     "heldItem": "cobblemon:occa_berry",
+    "item": "cobblemon:occa_berry",
     "moveset": {
         "1": "energyball",
         "2": "blizzard",

@@ -2,6 +2,7 @@
     "species": "claydol",
     "nature": "brave",
     "heldItem": "cobblemon:kasib_berry",
+    "item": "cobblemon:kasib_berry",
     "moveset": {
         "1": "earthquake",
         "2": "zenheadbutt",

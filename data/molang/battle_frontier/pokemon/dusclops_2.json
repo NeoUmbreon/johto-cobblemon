@@ -2,6 +2,7 @@
     "species": "dusclops",
     "nature": "impish",
     "heldItem": "cobblemon:colbur_berry",
+    "item": "cobblemon:colbur_berry",
     "moveset": {
         "1": "shadowpunch",
         "2": "payback",

@@ -2,6 +2,7 @@
     "species": "ninetales",
     "nature": "modest",
     "heldItem": "cobblemon:passho_berry",
+    "item": "cobblemon:passho_berry",
     "moveset": {
         "1": "flamethrower",
         "2": "extrasensory",

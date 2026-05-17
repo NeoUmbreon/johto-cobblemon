@@ -2,6 +2,7 @@
     "species": "dusknoir",
     "nature": "adamant",
     "heldItem": "cobblemon:scope_lens",
+    "item": "cobblemon:scope_lens",
     "moveset": {
         "1": "shadowpunch",
         "2": "firepunch",

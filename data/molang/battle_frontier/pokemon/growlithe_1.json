@@ -2,6 +2,7 @@
     "species": "growlithe",
     "nature": "adamant",
     "heldItem": "cobblemon:charcoal",
+    "item": "cobblemon:charcoal",
     "moveset": {
         "1": "firefang",
         "2": "bite",

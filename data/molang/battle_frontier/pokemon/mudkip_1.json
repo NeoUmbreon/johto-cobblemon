@@ -2,6 +2,7 @@
     "species": "mudkip",
     "nature": "modest",
     "heldItem": "cobblemon:mystic_water",
+    "item": "cobblemon:mystic_water",
     "moveset": {
         "1": "waterpulse",
         "2": "icywind",

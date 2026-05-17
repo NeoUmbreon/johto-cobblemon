@@ -2,6 +2,7 @@
     "species": "luxray",
     "nature": "adamant",
     "heldItem": "cobblemon:razor_claw",
+    "item": "cobblemon:razor_claw",
     "moveset": {
         "1": "thunderfang",
         "2": "crunch",

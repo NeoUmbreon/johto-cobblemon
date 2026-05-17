@@ -2,6 +2,7 @@
     "species": "umbreon",
     "nature": "careful",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "payback",
         "2": "confuseray",

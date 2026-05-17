@@ -2,6 +2,7 @@
     "species": "dewgong",
     "nature": "calm",
     "heldItem": "cobblemon:salac_berry",
+    "item": "cobblemon:salac_berry",
     "moveset": {
         "1": "sheercold",
         "2": "horndrill",

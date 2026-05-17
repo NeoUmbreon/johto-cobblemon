@@ -2,6 +2,7 @@
     "species": "muk",
     "nature": "brave",
     "heldItem": "cobblemon:zoom_lens",
+    "item": "cobblemon:zoom_lens",
     "moveset": {
         "1": "gunkshot",
         "2": "payback",

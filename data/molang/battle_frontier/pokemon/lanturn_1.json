@@ -2,6 +2,7 @@
     "species": "lanturn",
     "nature": "modest",
     "heldItem": "cobblemon:rindo_berry",
+    "item": "cobblemon:rindo_berry",
     "moveset": {
         "1": "surf",
         "2": "discharge",

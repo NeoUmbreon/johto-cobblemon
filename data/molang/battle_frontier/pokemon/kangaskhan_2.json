@@ -2,6 +2,7 @@
     "species": "kangaskhan",
     "nature": "adamant",
     "heldItem": "cobblemon:razor_claw",
+    "item": "cobblemon:razor_claw",
     "moveset": {
         "1": "dizzypunch",
         "2": "firepunch",

@@ -2,6 +2,7 @@
     "species": "lapras",
     "nature": "adamant",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "aquatail",
         "2": "avalanche",

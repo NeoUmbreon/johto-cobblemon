@@ -2,6 +2,7 @@
     "species": "jumpluff",
     "nature": "adamant",
     "heldItem": "cobblemon:sitrus_berry",
+    "item": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "seedbomb",
         "2": "bounce",

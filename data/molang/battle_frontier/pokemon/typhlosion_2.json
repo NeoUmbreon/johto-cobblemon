@@ -2,6 +2,7 @@
     "species": "typhlosion",
     "nature": "serious",
     "heldItem": "cobblemon:salac_berry",
+    "item": "cobblemon:salac_berry",
     "moveset": {
         "1": "blastburn",
         "2": "earthquake",

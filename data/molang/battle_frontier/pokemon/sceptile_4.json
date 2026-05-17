@@ -2,6 +2,7 @@
     "species": "sceptile",
     "nature": "timid",
     "heldItem": "cobblemon:occa_berry",
+    "item": "cobblemon:occa_berry",
     "moveset": {
         "1": "leafstorm",
         "2": "dragonpulse",

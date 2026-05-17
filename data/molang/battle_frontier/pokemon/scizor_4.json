@@ -2,6 +2,7 @@
     "species": "scizor",
     "nature": "adamant",
     "heldItem": "cobblemon:occa_berry",
+    "item": "cobblemon:occa_berry",
     "moveset": {
         "1": "xscissor",
         "2": "ironhead",

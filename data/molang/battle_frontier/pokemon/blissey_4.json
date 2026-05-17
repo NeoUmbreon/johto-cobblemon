@@ -2,6 +2,7 @@
     "species": "blissey",
     "nature": "calm",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "dreameater",
         "2": "sing",

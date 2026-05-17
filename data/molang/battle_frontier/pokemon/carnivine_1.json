@@ -2,6 +2,7 @@
     "species": "carnivine",
     "nature": "adamant",
     "heldItem": "cobblemon:miracle_seed",
+    "item": "cobblemon:miracle_seed",
     "moveset": {
         "1": "razorleaf",
         "2": "bite",

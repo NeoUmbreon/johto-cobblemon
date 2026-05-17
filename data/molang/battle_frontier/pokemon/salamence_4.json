@@ -2,6 +2,7 @@
     "species": "salamence",
     "nature": "adamant",
     "heldItem": "cobblemon:lum_berry",
+    "item": "cobblemon:lum_berry",
     "moveset": {
         "1": "outrage",
         "2": "crunch",

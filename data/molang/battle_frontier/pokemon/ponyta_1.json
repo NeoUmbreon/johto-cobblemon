@@ -2,6 +2,7 @@
     "species": "ponyta",
     "nature": "adamant",
     "heldItem": "cobblemon:chesto_berry",
+    "item": "cobblemon:chesto_berry",
     "moveset": {
         "1": "flamewheel",
         "2": "stomp",

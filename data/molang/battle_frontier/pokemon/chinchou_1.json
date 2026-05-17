@@ -2,6 +2,7 @@
     "species": "chinchou",
     "nature": "modest",
     "heldItem": "cobblemon:magnet",
+    "item": "cobblemon:magnet",
     "moveset": {
         "1": "shockwave",
         "2": "bubblebeam",

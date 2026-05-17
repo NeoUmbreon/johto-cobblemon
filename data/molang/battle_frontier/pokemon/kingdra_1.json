@@ -2,6 +2,7 @@
     "species": "kingdra",
     "nature": "timid",
     "heldItem": "cobblemon:razor_fang",
+    "item": "cobblemon:razor_fang",
     "moveset": {
         "1": "surf",
         "2": "dragonpulse",

@@ -2,6 +2,7 @@
     "species": "glaceon",
     "nature": "calm",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "icebeam",
         "2": "doubleteam",

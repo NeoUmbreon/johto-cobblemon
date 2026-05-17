@@ -2,6 +2,7 @@
     "species": "happiny",
     "nature": "adamant",
     "heldItem": "cobblemon:sitrus_berry",
+    "item": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "present",
         "2": "sweetkiss",

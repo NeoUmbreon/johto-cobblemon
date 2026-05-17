@@ -2,6 +2,7 @@
     "species": "cacturne",
     "nature": "adamant",
     "heldItem": "cobblemon:chople_berry",
+    "item": "cobblemon:chople_berry",
     "moveset": {
         "1": "bulletseed",
         "2": "feintattack",

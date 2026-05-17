@@ -2,6 +2,7 @@
     "species": "golduck",
     "nature": "modest",
     "heldItem": "cobblemon:wacan_berry",
+    "item": "cobblemon:wacan_berry",
     "moveset": {
         "1": "hydropump",
         "2": "psychic",

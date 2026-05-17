@@ -2,6 +2,7 @@
     "species": "golbat",
     "nature": "jolly",
     "heldItem": "cobblemon:payapa_berry",
+    "item": "cobblemon:payapa_berry",
     "moveset": {
         "1": "aerialace",
         "2": "toxic",

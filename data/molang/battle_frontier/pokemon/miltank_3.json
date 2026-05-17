@@ -2,6 +2,7 @@
     "species": "miltank",
     "nature": "adamant",
     "heldItem": "cobblemon:scope_lens",
+    "item": "cobblemon:scope_lens",
     "moveset": {
         "1": "dizzypunch",
         "2": "firepunch",

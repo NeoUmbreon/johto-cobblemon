@@ -2,6 +2,7 @@
     "species": "alakazam",
     "nature": "modest",
     "heldItem": "cobblemon:colbur_berry",
+    "item": "cobblemon:colbur_berry",
     "moveset": {
         "1": "psychic",
         "2": "focusblast",

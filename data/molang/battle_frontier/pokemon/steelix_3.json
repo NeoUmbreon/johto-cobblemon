@@ -2,6 +2,7 @@
     "species": "steelix",
     "nature": "relaxed",
     "heldItem": "cobblemon:iron_ball",
+    "item": "cobblemon:iron_ball",
     "moveset": {
         "1": "gyroball",
         "2": "payback",

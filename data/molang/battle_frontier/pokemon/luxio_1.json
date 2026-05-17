@@ -2,6 +2,7 @@
     "species": "luxio",
     "nature": "adamant",
     "heldItem": "cobblemon:magnet",
+    "item": "cobblemon:magnet",
     "moveset": {
         "1": "thunderfang",
         "2": "bite",

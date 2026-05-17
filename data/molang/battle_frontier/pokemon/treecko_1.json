@@ -2,6 +2,7 @@
     "species": "treecko",
     "nature": "timid",
     "heldItem": "cobblemon:miracle_seed",
+    "item": "cobblemon:miracle_seed",
     "moveset": {
         "1": "megadrain",
         "2": "swift",

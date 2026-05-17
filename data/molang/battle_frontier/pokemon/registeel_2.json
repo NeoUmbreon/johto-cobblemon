@@ -2,6 +2,7 @@
     "species": "registeel",
     "nature": "adamant",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "ironhead",
         "2": "toxic",

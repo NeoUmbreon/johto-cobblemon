@@ -2,6 +2,7 @@
     "species": "omastar",
     "nature": "brave",
     "heldItem": "cobblemon:metronome",
+    "item": "cobblemon:metronome",
     "moveset": {
         "1": "watergun",
         "2": "rollout",

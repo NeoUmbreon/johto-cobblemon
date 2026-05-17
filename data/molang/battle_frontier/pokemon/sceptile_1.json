@@ -2,6 +2,7 @@
     "species": "sceptile",
     "nature": "jolly",
     "heldItem": "cobblemon:liechi_berry",
+    "item": "cobblemon:liechi_berry",
     "moveset": {
         "1": "leafblade",
         "2": "crunch",

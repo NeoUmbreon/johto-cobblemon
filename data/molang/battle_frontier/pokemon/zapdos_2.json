@@ -2,6 +2,7 @@
     "species": "zapdos",
     "nature": "timid",
     "heldItem": "cobblemon:focus_band",
+    "item": "cobblemon:focus_band",
     "moveset": {
         "1": "thunderbolt",
         "2": "ancientpower",

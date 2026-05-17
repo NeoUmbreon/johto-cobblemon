@@ -2,6 +2,7 @@
     "species": "articuno",
     "nature": "quirky",
     "heldItem": "cobblemon:icy_rock",
+    "item": "cobblemon:icy_rock",
     "moveset": {
         "1": "blizzard",
         "2": "fly",

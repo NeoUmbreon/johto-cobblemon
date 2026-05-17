@@ -2,6 +2,7 @@
     "species": "pachirisu",
     "nature": "jolly",
     "heldItem": "cobblemon:magnet",
+    "item": "cobblemon:magnet",
     "moveset": {
         "1": "spark",
         "2": "quickattack",

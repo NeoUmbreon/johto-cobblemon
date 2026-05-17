@@ -2,6 +2,7 @@
     "species": "jolteon",
     "nature": "timid",
     "heldItem": "cobblemon:lax_incense",
+    "item": "cobblemon:lax_incense",
     "moveset": {
         "1": "thunder",
         "2": "shadowball",

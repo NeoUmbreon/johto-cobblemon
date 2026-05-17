@@ -2,6 +2,7 @@
     "species": "camerupt",
     "nature": "modest",
     "heldItem": "cobblemon:quick_claw",
+    "item": "cobblemon:quick_claw",
     "moveset": {
         "1": "earthpower",
         "2": "eruption",

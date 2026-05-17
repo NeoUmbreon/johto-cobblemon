@@ -2,6 +2,7 @@
     "species": "quilava",
     "nature": "serious",
     "heldItem": "cobblemon:focus_band",
+    "item": "cobblemon:focus_band",
     "moveset": {
         "1": "flamethrower",
         "2": "crushclaw",

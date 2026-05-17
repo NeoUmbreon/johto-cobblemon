@@ -2,6 +2,7 @@
     "species": "blissey",
     "nature": "modest",
     "heldItem": "cobblemon:bright_powder",
+    "item": "cobblemon:bright_powder",
     "moveset": {
         "1": "flamethrower",
         "2": "thunderbolt",

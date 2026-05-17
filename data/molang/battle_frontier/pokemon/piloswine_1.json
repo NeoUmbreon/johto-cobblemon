@@ -2,6 +2,7 @@
     "species": "piloswine",
     "nature": "modest",
     "heldItem": "cobblemon:never_melt_ice",
+    "item": "cobblemon:never_melt_ice",
     "moveset": {
         "1": "icywind",
         "2": "mudbomb",

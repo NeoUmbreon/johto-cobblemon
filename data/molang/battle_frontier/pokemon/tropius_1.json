@@ -2,6 +2,7 @@
     "species": "tropius",
     "nature": "adamant",
     "heldItem": "cobblemon:lansat_berry",
+    "item": "cobblemon:lansat_berry",
     "moveset": {
         "1": "razorleaf",
         "2": "aerialace",

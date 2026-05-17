@@ -2,6 +2,7 @@
     "species": "pupitar",
     "nature": "adamant",
     "heldItem": "cobblemon:soft_sand",
+    "item": "cobblemon:soft_sand",
     "moveset": {
         "1": "earthquake",
         "2": "rockslide",

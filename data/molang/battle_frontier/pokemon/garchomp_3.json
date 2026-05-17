@@ -2,6 +2,7 @@
     "species": "garchomp",
     "nature": "adamant",
     "heldItem": "cobblemon:focus_sash",
+    "item": "cobblemon:focus_sash",
     "moveset": {
         "1": "dragonrush",
         "2": "stoneedge",

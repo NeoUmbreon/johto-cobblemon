@@ -2,6 +2,7 @@
     "species": "armaldo",
     "nature": "adamant",
     "heldItem": "cobblemon:life_orb",
+    "item": "cobblemon:life_orb",
     "moveset": {
         "1": "stoneedge",
         "2": "xscissor",

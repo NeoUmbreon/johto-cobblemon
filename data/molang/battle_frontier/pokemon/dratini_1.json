@@ -2,6 +2,7 @@
     "species": "dratini",
     "nature": "modest",
     "heldItem": "cobblemon:cheri_berry",
+    "item": "cobblemon:cheri_berry",
     "moveset": {
         "1": "twister",
         "2": "waterpulse",

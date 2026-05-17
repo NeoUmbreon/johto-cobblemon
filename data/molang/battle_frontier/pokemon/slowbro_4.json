@@ -2,6 +2,7 @@
     "species": "slowbro",
     "nature": "quiet",
     "heldItem": "cobblemon:leftovers",
+    "item": "cobblemon:leftovers",
     "moveset": {
         "1": "psychic",
         "2": "surf",

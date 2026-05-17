@@ -2,6 +2,7 @@
     "species": "electrode",
     "nature": "timid",
     "heldItem": "cobblemon:damp_rock",
+    "item": "cobblemon:damp_rock",
     "moveset": {
         "1": "thunder",
         "2": "hyperbeam",
