@@ -1,12 +1,9 @@
-#-------------------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------BATTLE------------------------------------------------------------------------------------------------------
+
 #Auto-battle detection
 execute as @a[scores={BattleStart=0,BattleCD=0},tag=!InDialogue] run runmolangscript johto:detect_trainers @s
 
-# Free trainer if no active battle players nearby
-execute as @e[type=cobblemon:npc,tag=trainerBusy] run runmolangscript cobblemon:clear_trainerbusy
-
-
-#--------------------------------------------------------------------------------------------------GENERAL WORLD-----------------------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------GENERAL WORLD---------------------------------------------------------------------------------------------------
 
 #Runs the Portals when a player steps on a carpet plate block
 execute as @a at @s if block ~ ~ ~ minecraft:magenta_carpet run function johto:world/portals
@@ -36,8 +33,11 @@ execute as @a[x=-2096,y=63,z=314,dx=5,dy=7,dz=17,tag=!Cycling] at @s run tp @s ~
 execute as @a[x=-2196,y=63,z=-547,dx=5,dy=7,dz=17,tag=!Cycling] run opendialogue cyclingroad_blocked @s
 execute as @a[x=-2196,y=63,z=-547,dx=5,dy=7,dz=17,tag=!Cycling] at @s run tp @s ~-5 ~ ~
 
+#------------------------------------------------------------------------------------------------------MUSIC-------------------------------------------------------------------------------------------------------
 
-#Surfing Detection
+#Surfing
+#-------------------------
+
 #Remove Surfing tag and refresh music if player dismounts or mount hasn't been in the water (SurfingCD reached 0)
 scoreboard players set @a[tag=Surfing,predicate=!johto:riding] SurfingCD 0
 execute as @a[scores={SurfingCD=0,BattleStart=0},tag=Surfing] run function johto:tools/forceclick
@@ -51,6 +51,7 @@ scoreboard players set @a[predicate=johto:surfing] SurfingCD 30
 execute as @a[scores={SurfingCD=30,BattleStart=0},tag=!Surfing] run function johto:tools/forceclick
 tag @a[scores={SurfingCD=30},tag=!Surfing] add Surfing
 
+#-------------------------
 
 #Battle endings
 execute as @a[scores={BattleEnd=1..},tag=!Overwrite] run function johto:triggers/battles/battleend
@@ -60,7 +61,7 @@ execute as @a[tag=!RadioOff,scores={MusicCooldown=0},tag=DSSound] at @s run func
 execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=0},tag=!DSSound] at @s run function johto:sound/gbradiointro
 execute as @a[tag=!RadioOff,scores={MusicCooldown=0,MusicLoop=1..},tag=!DSSound] at @s run function johto:sound/gbradioloop
 
-#Removes a MusicCooldown score each refresh if present
+#Removes a MusicCooldown score each tick if present
 scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
 
 #Removes forceclick prevention tag
