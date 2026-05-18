@@ -10,6 +10,10 @@ t.npcs = q.array();
 t.team_size = q.length(t.players);
 v.party_size = ( t.team_size != 1 ? 2 : ( t.format == 'SINGLES' ? 3 : ( t.format == 'DOUBLES' ? 4 : ( t.format == 'TRIPLES' ? 6 ))));
 t.music_id = 11;
+t.player_z = ( t.team_size == 1 ? q.array(67) : ( t.team_size == 2 ? q.array(63.5, 70.5) : q.array(63.5, 67, 70.5)));
+t.npc_z = ( t.team_size == 1 ? q.array(67) : ( t.team_size == 2 ? q.array(70.5, 63.5) : q.array(70.5, 67, 63.5)));
+t.player_pos = q.array(898.5, q.npc.y + 0.0625, t.player_z);
+t.npc_pos = q.array(907.5, q.npc.y + 0.0625, t.npc_z);
 
 
 'Palmer handling';
@@ -45,19 +49,17 @@ t.palmer != 0 ? {
 
 'Spawn trainers, generate and attach TBCS teams';
 for_each(v.trainer, t.trainer_list, {
-    'Iterate runtime id';
-    t.i = t.i + 1;
-    v.rct_name = t.prefix + t.i;
-
     'Spawn NPC';
     t.filename = v.trainer.class + v.trainer.name;
-    v.npc = q.npc.world.spawn_npc(q.npc.x + t.i, q.npc.y, q.npc.z, t.filename, 1);
+    v.npc = q.npc.world.spawn_npc(t.npc_pos.0, t.npc_pos.1, t.npc_pos.2.[t.i], t.filename, 1);
     v.npc == 0 ? {
         q.run_command('say Error spawning NPC with class ' + t.filename + ', canceling battle');
         return 0;
     };
 
     'Generate party';
+    t.i = t.i + 1;
+    v.rct_name = t.prefix + t.i;
     q.run_script('johto:generate_party') == 0 ? return 0;
 
     'Store NPC';
@@ -76,11 +78,14 @@ t.team_size == 1 ? {
 };
 
 'Pre-battle prep';
+t.i = 0;
 for_each(t.player, t.players, {
+    t.player.teleport(t.player_pos.0, t.player_pos.1, t.player_pos.2.[t.i]);
     t.player.data.temp.battle_num = v.battle_num;
     t.player.party.heal;
     q.run_command('scoreboard players set ' + t.player.username + ' BattleStart ' + t.music_id);
     q.run_command('execute as ' + t.player.username + ' run function johto:tools/forceclick');
+    t.i = t.i + 1;
 });
 
 'Run battle';
