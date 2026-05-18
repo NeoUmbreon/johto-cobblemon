@@ -1,0 +1,52 @@
+{
+    "initializationAction": [
+        "q.player.data.temp.invited == 0 ? { q.player.data.temp.invited = q.array() };",
+        "v.player = q.player.data.temp.interacted_player;"
+    ],
+    "speakers": {
+        "player": {
+            "name": " ",
+            "face": "v.player.face"
+        }
+    },
+    "pages": [
+        {
+            "id": "prompt",
+            "speaker": "player",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Invite ' + v.player.username + ' to your multi team?'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "invite",
+                        "action": [
+                            "!v.player.has_tag('BattleSalon') ? { return 0; q.dialogue.close; };",
+                            "q.length(v.player.data.temp.players) + q.length(v.player.data.temp.npcs) >= 2 ? { return q.player.tell(v.player.username + '\\'s team is full!'); q.dialogue.close; };",
+
+                            "q.run_command('execute as ' + v.player.username + ' at @s run playsound entity.experience_orb.pickup');",
+                            "q.run_command('tellraw ' + v.player.username + ' \"' + q.player.username + ' invited you to their multi team!\"');",
+                            "q.append(q.player.data.temp.invited, v.player);",
+                            "v.player.data.temp.interacted_player == q.player ? { v.player.active_dialogue.input('cancelinvite') };",
+                            
+                            "q.dialogue.close;"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "cancelinvite",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

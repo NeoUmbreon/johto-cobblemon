@@ -1,0 +1,462 @@
+{
+    "initializationAction": [
+        "q.length(q.player.data.temp.players) + q.length(q.player.data.temp.npcs) < 2 ? q.dialogue.set_page('cancelprompt1');",
+        "v.format = 'MULTI';"
+    ],
+    "speakers": {
+        "npc": {
+          "name": "Battle Tower Clerk",
+          "face": {
+            "type": "artificial",
+            "modelType": "npc",
+            "identifier": "cobblemon:shopman",
+            "isLeftSide": true
+          }
+        }
+      },
+    "pages": [
+        {
+            "id": "page1",
+            "speaker": "npc",
+            "lines": [
+                "Are you ready to start?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "v.room = q.run_script('johto:assign_room');",
+                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.room != 0 && v.validated == 1 ? { for_each(t.player, q.player.data.temp.players, { t.player != q.player && t.player.active_dialogue.current_page.id != 'waiting' ? { t.wait = 1; break }; }); t.wait ? { for_each(t.player, q.player.data.temp.players, { t.player != q.player ? { t.player.tell(q.player.username + ' is ready to start!'); q.run_command('execute as ' + t.player.username + ' at @s run playsound entity.experience_orb.pickup'); }; }); q.dialogue.set_page('waiting') } : { v.team_validated = q.run_script('johto:validate_team_parties'); v.team_validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.dialogue.set_page('success1') } : { for_each(t.player, q.player.data.temp.players, { t.player.active_dialogue.set_page('invalidteamparty1'); }); }; }; } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
+                        ]
+                    },
+                    {
+                        "text": "Check Party",
+                        "value": "validate",
+                        "action": [
+                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.validated == 1 ? { q.dialogue.set_page('validparty') } : { q.dialogue.set_page('invalidparty2') };"
+                        ]
+                    },
+                    {
+                        "text": "Leave Team",
+                        "value": "leaveteam",
+                        "action": [
+                            "q.dialogue.set_page('leaveteamprompt');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "success1",
+            "speaker": "npc",
+            "escapeAction": [
+                "q.run_script('johto:init_room');",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Your team\\'s assigned Battle Room is Room ' + v.room + '.'"
+                }
+            ],
+            "input": {
+                "type": "auto-continue",
+                "delay": 1.5,
+                "allowSkip": true,
+                "showTimer": true,
+                "action": "q.dialogue.next_page;"
+            }
+        },
+        {
+            "id": "success2",
+            "speaker": "npc",
+            "escapeAction": [
+                "q.run_script('johto:init_room');",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                "I will now show you to your Battle Room."
+            ],
+            "input": {
+                "type": "auto-continue",
+                "delay": 1.5,
+                "allowSkip": true,
+                "showTimer": true,
+                "action": [
+                    "q.run_script('johto:init_room');",
+                    "q.dialogue.close;"
+                ]
+            }
+        },
+
+        
+        {
+            "id": "waiting",
+            "speaker": "npc",
+            "escapeAction": [],
+            "lines": [
+                "Waiting for your team..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Cancel",
+                        "value": "cancel",
+                        "action": [
+                            "for_each(t.player, q.player.data.temp.players, { t.player != q.player ? { t.player.tell(q.player.username + ' is no longer ready'); }; });",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "leaveteamprompt",
+            "speaker": "npc",
+            "lines": [
+                "Are you sure you want to leave your multi team?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.length(q.player.data.temp.players) > 1 ? { loop(q.length(q.player.data.temp.players), { q.player.data.temp.players.[v.i] == q.player ? break; v.i = v.i + 1; }); };",
+                            "for_each(t.player, q.player.data.temp.players, { t.player != q.player ? { t.player.tell(q.player.username + ' left the team'); q.delete(t.player.data.temp.players, v.i); }; });",
+
+                            "q.player.data.temp.players = q.array(q.player);",
+                            "q.player.data.temp.npcs = q.array();",
+                            "q.dialogue.close;"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "cancelprompt1",
+            "speaker": "npc",
+            "lines": [
+                "You have not found a partner for your multi team."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "cancelprompt2",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to quit looking and return to the reception counter?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.player.remove_tag('BattleSalon');",
+                            "q.player.teleport(903, 64, 68);",
+                            "q.dialogue.set_page('leave');"
+                        ]
+                    },
+                    {
+                        "text": "Check Party",
+                        "value": "validate",
+                        "action": [
+                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.validated == 1 ? { q.dialogue.set_page('validparty') } : { q.dialogue.set_page('invalidparty2') };"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "invalidteamparty1",
+            "speaker": "npc",
+            "lines": [
+                "Excuse me!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "v.team_validated == 0 ? { v.team_validated = q.run_script('johto:validate_team_parties') };",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "invalidteamparty2",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'More than one Trainer has chosen the Pokémon ' + v.team_validated + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "invalidteamparty3",
+            "speaker": "npc",
+            "lines": [
+                "Please confer with your team and choose different Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "validparty",
+            "speaker": "npc",
+            "lines": [
+                "Success! We couldn't find any issues with your party."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.length(q.player.data.temp.players) + q.length(q.player.data.temp.npcs) < 2 ? 'Close' : 'Back';"
+                        },
+                        "value": "back",
+                        "action": [
+                            "q.length(q.player.data.temp.players) + q.length(q.player.data.temp.npcs) < 2 ? q.dialogue.close : q.dialogue.set_page('page1');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "invalidparty1",
+            "speaker": "npc",
+            "escapeAction": [
+                "for_each(t.str, v.validated, { q.run_command('tellraw ' + q.player.username + t.str); });",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                "Excuse me!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "invalidparty2",
+            "speaker": "npc",
+            "escapeAction": [
+                "for_each(t.str, v.validated, { q.run_command('tellraw ' + q.player.username + t.str); });",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                "We found some issues with your party."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "invalidparty3",
+            "speaker": "npc",
+            "escapeAction": [
+                "for_each(t.str, v.validated, { q.run_command('tellraw ' + q.player.username + t.str); });",
+                "q.dialogue.close;"
+            ],
+            "lines": [
+                "Please come see me when you are ready."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "for_each(t.str, v.validated, { q.run_command('tellraw ' + q.player.username + t.str); });",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "full1",
+            "speaker": "npc",
+            "lines": [
+                "Sorry, it appears all of our rooms are currently full!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "full2",
+            "speaker": "npc",
+            "lines": [
+                "If you would like to, you may spectate the Battle Rooms from the observation decks."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "full3",
+            "speaker": "npc",
+            "lines": [
+                "Please come back here to join when one is available!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "leave",
+            "speaker": "npc",
+            "lines": [
+                "We hope to see you again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

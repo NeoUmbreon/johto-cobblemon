@@ -1,0 +1,18 @@
+!( c.player.has_tag('BattleSalon') && c.entity.has_tag('BattleSalon') ) ? return 0;
+c.player.is_in_dialogue ? return 0;
+for_each(t.player, c.player.data.temp.players, { c.entity == t.player ? { t.match = 1 }; });
+t.match ? return 0;
+q.length(c.player.data.temp.players) + q.length(c.player.data.temp.npcs) >= 2 ? { c.player.tell('Your team is full!', 1); return 0; };
+q.length(c.entity.data.temp.players) + q.length(c.entity.data.temp.npcs) >= 2 ? { c.player.tell(c.entity.username + '\'s team is full!', 1); return 0; };
+for_each(t.player, c.player.data.temp.invited, { c.entity == t.player ? { c.player.tell('You have already sent a request to ' + c.entity.username + '!', 1); t.match = 1; }; });
+t.match ? return 0;
+
+'success';
+c.player.data.temp.interacted_player = c.entity;
+for_each(t.player, c.entity.data.temp.invited, { c.player == t.player ? { t.invited = 1; break }; });
+
+t.invited ? {
+    q.run_command('opendialogue teaminvite_reply ' + c.player.username);
+} : {
+    q.run_command('opendialogue teaminvite_send ' + c.player.username);
+};

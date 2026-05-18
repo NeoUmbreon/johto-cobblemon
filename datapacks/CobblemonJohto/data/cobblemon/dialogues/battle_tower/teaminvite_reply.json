@@ -1,0 +1,55 @@
+{
+    "initializationAction": [
+        "v.player = q.player.data.temp.interacted_player;"
+    ],
+    "speakers": {
+        "player": {
+            "name": " ",
+            "face": "v.player.face"
+        }
+    },
+    "pages": [
+        {
+            "id": "prompt",
+            "speaker": "player",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "v.player.username + ' wants you to join their multi team!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Accept",
+                        "value": "accept",
+                        "action": [
+                            "!v.player.has_tag('BattleSalon') ? { return 0; q.dialogue.close; };",
+                            "q.length(v.player.data.temp.players) + q.length(v.player.data.temp.npcs) >= 2 ? { return q.player.tell(v.player.username + '\\'s team is full!'); q.dialogue.close; };",
+
+                            "q.append(v.player.data.temp.players, q.player);",
+                            "for_each(t.player, v.player.data.temp.players, { t.player.data.temp.players = v.player.data.temp.players; t.player.tell(q.player.username + ' joined the team!'); q.run_command('execute as ' + t.player.username + ' at @s run playsound entity.experience_orb.pickup'); });",
+                            "t.i = 0; loop(q.length(v.player.data.temp.invited), { v.player.data.temp.invited.[t.i] == q.player ? { q.delete(v.player.data.temp.invited, t.i); break; } : { t.i = t.i + 1 }; });",
+
+                            "q.dialogue.close;"
+                        ]
+                    },
+                    {
+                        "text": "Decline",
+                        "value": "decline",
+                        "action": [
+                            "!v.player.has_tag('BattleSalon') ? { return 0; q.dialogue.close; };",
+                            "q.length(v.player.data.temp.players) + q.length(v.player.data.temp.npcs) >= 2 ? { return 0; q.dialogue.close; };",
+
+                            "t.i = 0; loop(q.length(v.player.data.temp.invited), { v.player.data.temp.invited.[t.i] == q.player ? { q.delete(v.player.data.temp.invited, t.i); break; } : { t.i = t.i + 1 }; });",
+
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
