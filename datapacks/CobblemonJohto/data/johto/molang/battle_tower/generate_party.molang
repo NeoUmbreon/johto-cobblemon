@@ -18,7 +18,7 @@ v.npc.name == 'Palmer' ? {
         q.file.clear('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
         t.pokemon == 0 ? {
             q.run_command('say Error loading Pokemon json ' + t.filename + ', canceling battle');
-            return 0;
+            break;
         };
 
         'Compare species and item to already picked lists';
@@ -40,6 +40,7 @@ v.npc.name == 'Palmer' ? {
             q.length(t.filename_list) == v.party_size ? break;
         };
     });
+    t.pokemon == 0 ? return 0;
 };
 
 'Fill team array';
@@ -49,7 +50,7 @@ for_each(t.filename, t.filename_list, {
     q.file.clear('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
     t.pokemon == 0 ? {
         q.run_command('say Error loading Pokemon json ' + t.filename + ', canceling battle');
-        return 0;
+        break;
     };
 
     'Reformat moveset as array';
@@ -86,6 +87,7 @@ for_each(t.filename, t.filename_list, {
     'Append edited Pokemon object to team';
     q.append(t.trainer.team, t.pokemon);
 });
+t.pokemon == 0 ? return 0;
 
 'Write trainer to json';
 t.trainer.name = v.npc.name;

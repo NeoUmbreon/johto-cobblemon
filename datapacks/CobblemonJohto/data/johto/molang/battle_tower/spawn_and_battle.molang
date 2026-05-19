@@ -53,18 +53,23 @@ for_each(v.trainer, t.trainer_list, {
     t.filename = v.trainer.class + v.trainer.name;
     v.npc = q.npc.world.spawn_npc(t.npc_pos.0, t.npc_pos.1, t.npc_pos.2.[t.i], t.filename, 1);
     v.npc == 0 ? {
+        t.fail = 1;
         q.run_command('say Error spawning NPC with class ' + t.filename + ', canceling battle');
-        return 0;
+        break;
     };
 
     'Generate party';
     t.i = t.i + 1;
     v.rct_name = t.prefix + t.i;
-    q.run_script('johto:generate_party') == 0 ? return 0;
+    q.run_script('johto:generate_party') == 0 ? {
+        t.fail = 1;
+        break;
+    };
 
     'Store NPC';
     q.append(t.npcs, v.npc);
 });
+t.fail ? return 0;
 
 'Store NPC objects in entity to discard after battle';
 q.npc.data.npcs = t.npcs;

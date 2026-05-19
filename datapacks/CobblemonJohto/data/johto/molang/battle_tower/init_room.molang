@@ -19,11 +19,7 @@ for_each(t.id, q.player.data.temp.npcs, {
 'Finalize';
 for_each(v.player, q.player.data.temp.players, {
     'find lowest streak of all players';
-    t.current_streak = v.player.data.battle_tower.streaks.current;
-    v.format == 'SINGLES' ? { t.streak = t.current_streak.singles };
-    v.format == 'DOUBLES' ? { t.streak = t.current_streak.doubles };
-    v.format == 'TRIPLES' ? { t.streak = t.current_streak.triples };
-    v.format == 'MULTI' ? { t.streak = t.current_streak.multi };
+    t.streak = q.get_variable(v.player.data.battle_tower.streaks.current, q.to_lower(v.format));
     t.battle_num == 0 || t.streak < t.battle_num ? { t.battle_num = t.streak };
     
     v.player.remove_tag('BattleSalon');

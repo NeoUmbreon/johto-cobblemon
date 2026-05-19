@@ -1,6 +1,7 @@
 for_each(t.player, c.players, {
-    !t.player.player.has_tag('BattleTowerReady') ? return 0;
+    !t.player.player.has_tag('BattleTowerReady') ? { t.fail = 1; break };
 });
+t.fail ? return 0;
 
 q.length(c.player_losers) == 0 ? { v.won = true } : { v.won = false };
 
