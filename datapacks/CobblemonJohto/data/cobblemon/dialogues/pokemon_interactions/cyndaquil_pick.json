@@ -70,7 +70,7 @@
                             "q.dialogue.close();",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
                             "q.player.party.add_by_properties('cyndaquil level=5');",
-                            "q.player.data.starter.species = 'cyndaquil';",
+                            "q.player.data.starter.species = 2;",
                             "t.starter = q.player.party.find_by_properties('cyndaquil level=5'); q.player.data.starter.id = t.starter.id;",
                             "q.player.save_data;",
                             "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s StarterPick 2');",
