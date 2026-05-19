@@ -277,15 +277,10 @@ def build_battle_action(trainer_id: str, battle_id: int):
 
     actions.extend([
         "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-        (
-            "q.run_command("
-            f"'execute as ' + q.player.username + '"
-            f" run function johto:trainers/startbattle"
-            f" {{trainer_id:\"{trainer_id}\",battle_id:{battle_id},trainer_uuid:\"' + q.npc.uuid + '\"}}'"
-            ");"
-        ),
-        "q.dialogue.close();",
+        f"q.run_command('scoreboard players set ' + q.player.username + ' BattleStart {battle_id}');",
+        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+        "q.npc.start_battle(q.player);",
+        "q.dialogue.close;",
     ])
 
     return actions
