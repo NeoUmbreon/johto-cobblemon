@@ -1,6 +1,7 @@
 t.nursejoy = v.players.0.data.temp.npc;
 t.nursejoy.data.battle_num = v.players.0.data.temp.battle_num + 1;
 t.nursejoy.remove_tag('Locked');
+t.format = q.to_lower(t.nursejoy.data.format);
 
 '/kill';
 for_each(t.npc, t.nursejoy.data.npcs, {
@@ -10,36 +11,22 @@ for_each(t.npc, t.nursejoy.data.npcs, {
 
 for_each(t.player, v.players, {
     t.player.remove_tag('BattleTowerReady');
+    q.set_query('streaks', t.player.data.battle_tower.streaks);
+
     v.won ? {
         'update streaks';
-        t.nursejoy.data.format == 'SINGLES' ? {
-            t.player.data.temp.battle_num > t.player.data.battle_tower.streaks.current.singles ? { t.player.data.battle_tower.streaks.current.singles = t.player.data.temp.battle_num };
-            t.player.data.temp.battle_num > t.player.data.battle_tower.streaks.lifetime.singles ? { t.player.data.battle_tower.streaks.lifetime.singles = t.player.data.temp.battle_num };
-        };
-        t.nursejoy.data.format == 'DOUBLES' ? {
-            t.player.data.temp.battle_num > t.player.data.battle_tower.streaks.current.doubles ? { t.player.data.battle_tower.streaks.current.doubles = t.player.data.temp.battle_num };
-            t.player.data.temp.battle_num > t.player.data.battle_tower.streaks.lifetime.doubles ? { t.player.data.battle_tower.streaks.lifetime.doubles = t.player.data.temp.battle_num };
-        };
-        t.nursejoy.data.format == 'TRIPLES' ? {
-            t.player.data.temp.battle_num > t.player.data.battle_tower.streaks.current.triples ? { t.player.data.battle_tower.streaks.current.triples = t.player.data.temp.battle_num };
-            t.player.data.temp.battle_num > t.player.data.battle_tower.streaks.lifetime.triples ? { t.player.data.battle_tower.streaks.lifetime.triples = t.player.data.temp.battle_num };
-        };
-        t.nursejoy.data.format == 'MULTI' ? {
-            t.player.data.temp.battle_num > t.player.data.battle_tower.streaks.current.multi ? { t.player.data.battle_tower.streaks.current.multi = t.player.data.temp.battle_num };
-            t.player.data.temp.battle_num > t.player.data.battle_tower.streaks.lifetime.multi ? { t.player.data.battle_tower.streaks.lifetime.multi = t.player.data.temp.battle_num };
-        };
+        t.player.data.temp.battle_num > q.get_variable(q.streaks.current, t.format) ? q.set_variable(q.streaks.current, t.format, t.player.data.temp.battle_num);
+        t.player.data.temp.battle_num > q.get_variable(q.streaks.lifetime, t.format) ? q.set_variable(q.streaks.lifetime, t.format, t.player.data.temp.battle_num);
 
         t.nursejoy.run_dialogue(t.player, 'battle_tower_nursejoy_post_battle');
 
     } : {
-        t.player.party.heal;
-
         'clear streak';
-        t.nursejoy.data.format == 'SINGLES' ? { t.player.data.battle_tower.streaks.current.singles = 0 };
-        t.nursejoy.data.format == 'DOUBLES' ? { t.player.data.battle_tower.streaks.current.doubles = 0 };
-        t.nursejoy.data.format == 'TRIPLES' ? { t.player.data.battle_tower.streaks.current.triples = 0 };
-        t.nursejoy.data.format == 'MULTI' ? { t.player.data.battle_tower.streaks.current.multi = 0 };
+        q.set_variable(q.streaks.current, t.format, 0);
+
+        t.player.party.heal;
     };
+    
     t.player.save_data;
 });
 
