@@ -15,10 +15,9 @@ for_each(t.entity, t.entities, {
 });
 
 t.match == 1 ? {
-    q.run_script('store_battle_data', q.player, t.entity);
-    t.entity.add_tag('trainerBusy');
-    q.player.add_tag('InDialogue');
-    t.entity.run_dialogue(q.player, t.entity.Config.trainer_id + '_interaction');
+    q.set_query('npc', t.entity);
+    q.run_script('johto:prebattle_dialogue');
+    
     return 1;
 } : {
     return 0;

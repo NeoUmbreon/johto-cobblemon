@@ -1,0 +1,12 @@
+q.run_script('store_battle_data', q.player, q.npc);
+q.npc.add_tag('trainerBusy');
+q.player.add_tag('InDialogue');
+q.npc.run_dialogue(q.player, q.npc.Config.trainer_id + '_interaction');
+
+'update config';
+!q.is_included('add_tag', q.npc.config.on_player_wins) ? {
+    t.name = q.get_variable(q.split_string(q.npc.class, 'cobblemon:'), '1');
+    q.npc.config.on_player_wins = 'q.player.add_tag(\'defeated.' + t.name + '\'); q.npc.run_dialogue(q.player, \'' + t.name + '_end\');';
+};
+
+return 1;
