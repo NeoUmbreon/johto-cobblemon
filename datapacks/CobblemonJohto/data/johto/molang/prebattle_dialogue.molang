@@ -1,5 +1,4 @@
 q.run_script('store_battle_data', q.player, q.npc);
-q.npc.add_tag('trainerBusy');
 q.player.add_tag('InDialogue');
 q.npc.run_dialogue(q.player, q.npc.Config.trainer_id + '_interaction');
 

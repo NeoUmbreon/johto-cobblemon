@@ -3,7 +3,6 @@ q.set_query('npc', c.npc);
 
 q.player.in_battle ? return 0;
 q.player.has_tag('Whiteout') ? return 0;
-q.npc.has_tag('trainerBusy') ? return q.run_command('tellraw ' + q.player.username + ' {"text":"That trainer is busy!","italic":true,"color":"gray"}');
 
 q.player.has_tag('defeated.' + q.npc.Config.trainer_id) ? return q.npc.run_dialogue(q.player, q.npc.Config.trainer_id + '_end_defeated');
 
