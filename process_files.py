@@ -323,11 +323,11 @@ def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid, auto_
     def add_var(obj):
         entity_data["config"].append(obj)
 
-    if "trainer" not in existing_vars:
+    if "auto_battle" not in existing_vars:
         add_var({
-            "variableName": "trainer",
-            "displayName": "npc.variable.trainer.name",
-            "description": "npc.variable.trainer.desc",
+            "variableName": "auto_battle",
+            "displayName": "npc.variable.auto_battle.name",
+            "description": "npc.variable.auto_battle.desc",
             "type": "BOOLEAN",
             "defaultValue": auto_battle
         })
@@ -350,14 +350,14 @@ def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid, auto_
             "defaultValue": battle_id
         })
 
-    if "trainer_uid" not in existing_vars:
-        add_var({
-            "variableName": "trainer_uid",
-            "displayName": "npc.variable.trainer_uid.name",
-            "description": "npc.variable.trainer_uid.desc",
-            "type": "NUMBER",
-            "defaultValue": trainer_uid
-        })
+    #if "trainer_uid" not in existing_vars:
+    #    add_var({
+    #        "variableName": "trainer_uid",
+    #        "displayName": "npc.variable.trainer_uid.name",
+    #        "description": "npc.variable.trainer_uid.desc",
+    #        "type": "NUMBER",
+    #        "defaultValue": trainer_uid
+    #    })
 
 def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_uid: int, excel_teams):
     # Auto-battle exclusions

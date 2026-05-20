@@ -4,7 +4,7 @@ t.distance = q.player.world.server.data.max_challenge_distance;
 t.entities = q.player.get_nearby_entities(t.distance * 2);
 
 for_each(t.entity, t.entities, {
-    t.entity.Config.trainer ? {
+    t.entity.config.auto_battle ? {
         t.match = 1;
         q.player.has_tag('defeated.' + t.entity.Config.trainer_id) ? { t.match = 0; };
         !t.entity.can_see(q.player, ( q.is_blank(t.entity.Config.challenge_distance) ? t.distance : t.entity.Config.challenge_distance ) ) ? { t.match = 0; };

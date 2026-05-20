@@ -1,4 +1,4 @@
-q.player.data.battle.whiteout_on_disconnect = !q.npc.Config.trainer;
+q.player.data.battle.whiteout_on_disconnect = !q.npc.config.auto_battle;
 q.player.data.battle.x = q.npc.x;
 q.player.data.battle.y = q.npc.y;
 q.player.data.battle.z = q.npc.z;
