@@ -9,14 +9,13 @@
     "canDespawn": false,
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:cherrygrove_silver_interaction"
+        "dialogue": "cobblemon:azalea_silver_interaction"
     },
-        "name": "???",
-        "party": {
-        "type": "simple",
-        "pokemon": [
-            "Cyndaquil level=5"
-        ]
+    "name": "Silver",
+    "party": {
+        "type": "script",
+        "isStatic": "false",
+        "script": "cobblemon:silver_party"
     },
     "config": [
         {
@@ -38,7 +37,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue cherrygrove_silver_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue azalea_silver_end @s');"
           }
     ],
     "ai": [

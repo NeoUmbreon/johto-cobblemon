@@ -1,3 +1,9 @@
+!q.file.exists('data/molang/players/' + c.player.uuid + '.json') ? {
+    t.temp.0 = 0;
+    q.file.save('data/molang/players/' + c.player.uuid + '.json', t.temp);
+    q.run_command('reload');
+};
+
 c.player.has_tag('SafariState') ? {
     q.run_command('execute as ' + c.player.username + ' run function johto:triggers/safarizone/leave');
 };

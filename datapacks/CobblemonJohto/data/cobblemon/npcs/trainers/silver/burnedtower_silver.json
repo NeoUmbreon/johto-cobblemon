@@ -9,18 +9,13 @@
     "canDespawn": false,
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:goldenrod_silver_interaction"
+        "dialogue": "cobblemon:burnedtower_silver_interaction"
     },
-        "name": "Silver",
-        "party": {
-        "type": "simple",
-        "pokemon": [
-            "Golbat level=32",
-            "Magnemite level=30",
-            "Haunter level=30",
-            "Sneasel level=34",
-            "Quilava level=34"
-        ]
+    "name": "Silver",
+    "party": {
+        "type": "script",
+        "isStatic": "false",
+        "script": "cobblemon:silver_party"
     },
     "config": [
         {
@@ -42,7 +37,7 @@
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue goldenrod_silver_end @s');"
+            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue burnedtower_silver_end @s');"
           }
     ],
     "ai": [

@@ -22,28 +22,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6.0.2
 
-    - uses: actions/setup-python@v5
+    - uses: actions/setup-python@v6.2.0
       with:
         python-version: '3.x'
 
     - name: Install dependencies
       run: pip install pandas openpyxl
 
-    - name: Process files (normal mode)
-      run: make normal
+    - name: Process files
+      run: make
 
-    - name: Create normal zip
+    - name: Compress datapack(s)
       run: |
-        zip -r johto-cobblemon.zip ./datapacks ./trainers ./data ./serverconfig
+        zip -r ./datapacks/CobblemonJohto.zip ./datapacks/CobblemonJohto
 
-    - name: Process files (challenge mode)
-      run: make challenge
-
-    - name: Create challenge zip
+    - name: Create release zip
       run: |
-        zip -r johto-cobblemon-challenge.zip ./datapacks ./trainers ./data ./serverconfig
+        zip -r johto-cobblemon.zip ./datapacks/CobblemonJohto.zip ./data ./serverconfig
     
     - name: Update nightly tag
       run: |
@@ -58,6 +55,6 @@ jobs:
 
     - name: Upload release assets
       run: |
-        gh release upload $NIGHTLY_TAG johto-cobblemon.zip johto-cobblemon-challenge.zip --clobber
+        gh release upload $NIGHTLY_TAG johto-cobblemon.zip --clobber
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -297,7 +297,7 @@ spawnpoint @a[x=127,y=64,z=-582,distance=..5] 127 64 -582
 execute as @a[scores={BattleStart=11..18}] run runmolangscript cobblemon:prevent_flee @s
 
 #Free trainer if no active battle players nearby
-execute as @e[type=cobblemon:npc,tag=trainerBusy] run runmolangscript cobblemon:clear_trainerbusy
+#execute as @e[type=cobblemon:npc,tag=trainerBusy] run runmolangscript cobblemon:clear_trainerbusy
 
 #Runs Whiteout function
 execute as @a[tag=Whiteout] run scoreboard players set @s BattleStart 0
@@ -395,5 +395,5 @@ execute as @a[x=-861,y=58,z=767,dx=2,dy=4,dz=2] run tp @s -2048 51 -878 0 9
 
 
 # Firstrun
-execute unless score #firstrun click matches 1 run function johto:load
+execute unless score #firstrun click matches 1 run function johto:firstrun
 

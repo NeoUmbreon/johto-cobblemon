@@ -4,7 +4,7 @@
 	#json files when (re)loading a world.
 	#
 	#Default: ["trainers", "../trainers", "../../trainers"]
-	trainerPaths = ["trainers", "data/molang/battle_frontier"]
+	trainerPaths = ["data/molang/players", "data/molang/battle_frontier"]
 	#━━━━━━━━━━
 	#List of mod ids from mods that also rely on RCTApi to define trainers.
 	#Copies of trainers from the listed mods will also be registered to TBCS.

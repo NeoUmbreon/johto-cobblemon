@@ -1,0 +1,1 @@
+runmolangscript johto:write_config

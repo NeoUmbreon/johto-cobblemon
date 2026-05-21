@@ -1,0 +1,85 @@
+t.player_starter = math.clamp(q.player.data.starter.species - 1, 0, 2);
+
+q.npc.class == 'cobblemon:cherrygrove_silver' ? {
+    t.starter = q.array('cyndaquil','totodile','chikorita');
+    q.party.add_by_properties(t.starter.[t.player_starter] + ' level=5');
+
+    return 1;
+};
+
+q.npc.class == 'cobblemon:azalea_silver' ? {
+    q.party.add_by_properties('gastly level=14');
+    q.party.add_by_properties('zubat level=16');
+
+    t.starter = q.array('quilava','croconaw','bayleef');
+    q.party.add_by_properties(t.starter.[t.player_starter] + ' level=18');
+
+    return 1;
+};
+
+q.npc.class == 'cobblemon:burnedtower_silver' ? {
+    q.party.add_by_properties('gastly level=20');
+    q.party.add_by_properties('zubat level=20');
+    q.party.add_by_properties('magnemite level=18');
+
+    t.starter = q.array('quilava','croconaw','bayleef');
+    q.party.add_by_properties(t.starter.[t.player_starter] + ' level=22');
+
+    return 1;
+};
+
+q.npc.class == 'cobblemon:goldenrod_silver' ? {
+    'if player picked cyndaquil, -2 to levels';
+    t.levels = ( q.player.data.starter.species == 2 ? q.array(30,28,30,32,32) : q.array(32,30,32,34,34) );
+
+    q.party.add_by_properties('golbat level=' + t.levels.0);
+    q.party.add_by_properties('magnemite level=' + t.levels.1);
+    q.party.add_by_properties('haunter level=' + t.levels.2);
+    q.party.add_by_properties('sneasel level=' + t.levels.3);
+    
+    t.starter = q.array('quilava','feraligatr','meganium');
+    q.party.add_by_properties(t.starter.[t.player_starter] + ' level=' + t.levels.4);
+
+    return 1;
+};
+
+q.npc.class == 'cobblemon:victoryroad_silver' ? {
+    q.party.add_by_properties('sneasel level=36');
+    q.party.add_by_properties('golbat level=38');
+    q.party.add_by_properties('magneton level=37');
+    q.party.add_by_properties('kadabra level=37');
+    q.party.add_by_properties('haunter level=37');
+    
+    t.starter = q.array('typhlosion','feraligatr','meganium');
+    q.party.add_by_properties(t.starter.[t.player_starter] + ' level=40');
+
+    return 1;
+};
+
+q.npc.class == 'cobblemon:mtmoon_silver' ? {
+    q.party.add_by_properties('sneasel level=46');
+    q.party.add_by_properties('golbat level=47');
+    q.party.add_by_properties('magneton level=46');
+    q.party.add_by_properties('alakazam level=48');
+    q.party.add_by_properties('gengar level=48');
+    
+    t.starter = q.array('typhlosion','feraligatr','meganium');
+    q.party.add_by_properties(t.starter.[t.player_starter] + ' level=50');
+
+    return 1;
+};
+
+q.npc.class == 'cobblemon:silver_rematch' ? {
+    q.party.add_by_properties('sneasel level=55');
+    q.party.add_by_properties('magneton level=55');
+    q.party.add_by_properties('gengar level=56');
+    q.party.add_by_properties('crobat level=58');
+    q.party.add_by_properties('alakazam level=56');
+    
+    t.starter = q.array('typhlosion','feraligatr','meganium');
+    q.party.add_by_properties(t.starter.[t.player_starter] + ' level=60');
+
+    return 1;
+};
+
+return 0;
