@@ -15,37 +15,42 @@ t.party_store = q.npc.create_npc_party;
 t.rct_trainer.team = q.array();
 for_each(t.raw_data, t.trainer.party, {
     'parse species and level with cobblemon to fetch moveset, ability, etc';
-    t.party_store.add_by_properties(t.raw_data.properties);
+    t.party_store.add_by_properties(q.to_string(t.raw_data.properties));
 
     'reformat to rctapi';
     q.set_query('pokemon_in', t.party_store.pokemon.[t.i]);
-    q.set_query('pokemon_out', t.rct_trainer.team.[t.i]);
-    q.pokemon_out.species = t.raw_data.species;
-    q.pokemon_out.level = t.raw_data.level;
-    t.raw_data.species == 0 || t.raw_data.level == 0 ? { q.player.tell('Something went wrong! (trainer: ' + t.trainer_id + ', #: ' + t.i); break; };
+    t.pokemon_out = 0;
+    t.pokemon_out.species = q.pokemon_in.species.identifier;
+    t.pokemon_out.level = q.pokemon_in.level;
+    t.raw_data.properties == 0 ? { q.player.tell('Something went wrong! (trainer: ' + t.trainer_id + ', #: ' + t.i); break; };
 
-    q.pokemon_out.nature = ( t.raw_data.nature != 0 ? t.raw_data.nature : q.random('hardy','docile','bashful','quirky','serious') );
-    q.pokemon_out.ability = ( t.raw_data.ability != 0 ? t.raw_data.ability : q.pokemon_in.ability );
-    q.length(t.raw_data.ivs) != 0 ? { q.pokemon_out.ivs = t.raw_data.ivs } : { 'TODO: could set to random ivs from pokemon_in' };
-    q.length(t.raw_data.evs) != 0 ? { q.pokemon_out.evs = t.raw_data.evs };
-    t.raw_data.helditem != 0 ? { q.set_variable(q.pokemon_out, 'heldItem', t.raw_data.helditem) };
-    q.pokemon_out.moveset = q.array();
+    t.pokemon_out.nature = ( t.raw_data.nature != 0 ? t.raw_data.nature : q.random('hardy','docile','bashful','quirky','serious') );
+    t.pokemon_out.ability = ( t.raw_data.ability != 0 ? t.raw_data.ability : q.pokemon_in.ability );
+    q.length(t.raw_data.ivs) != 0 ? { t.pokemon_out.ivs = t.raw_data.ivs } : { 'TODO: could set to random ivs from pokemon_in' };
+    q.length(t.raw_data.evs) != 0 ? { t.pokemon_out.evs = t.raw_data.evs };
+    t.raw_data.helditem != 0 ? { q.set_variable(t.pokemon_out, 'heldItem', t.raw_data.helditem) };
+    t.pokemon_out.moveset = q.array();
     q.length(t.raw_data.moveset) != 0 ? {
         for_each(t.move, t.raw_data.moveset, {
-            q.append(q.pokemon_out.moveset, t.move);
+            q.append(t.pokemon_out.moveset, t.move);
         });
     } : {
         'this may be excessive, but probably prudent to check moveset length';
         t.j = 0;
         loop(4, {
             t.move = q.pokemon_in.moveset.[t.j];
-            t.move.name != 0 ? q.append(q.pokemon_out.moveset, t.move.name) : break;
+            t.move.name != 0 ? q.append(t.pokemon_out.moveset, t.move.name) : break;
             t.j = t.j + 1;
         });
     };
 
+    q.append(t.rct_trainer.team, t.pokemon_out);
+
     t.i = t.i + 1;
+    t.i == 6 ? break;
 });
+
+q.length(t.trainer.party) != q.length(t.rct_trainer.team) ? { q.player.tell('Error, falling back to normal trainer party'); return 0 };
 
 'write, save, battle';
 t.trainer.ai != 0 ? { t.rct_trainer.ai = t.trainer.ai };
