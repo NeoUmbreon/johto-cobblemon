@@ -50,7 +50,7 @@ for_each(t.raw_data, t.trainer.party, {
     t.i == 6 ? break;
 });
 
-q.length(t.trainer.party) != q.length(t.rct_trainer.team) ? { q.player.tell('Error, falling back to normal trainer party'); return 0 };
+math.clamp(q.length(t.trainer.party), 0, 6) != q.length(t.rct_trainer.team) ? { q.player.tell('Error, falling back to normal trainer party'); return 0 };
 
 'write, save, battle';
 t.trainer.ai != 0 ? { t.rct_trainer.ai = t.trainer.ai };
