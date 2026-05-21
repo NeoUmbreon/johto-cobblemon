@@ -6,7 +6,12 @@ import os
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 
-TBCS_TRAINERS_EXPORT_DIR = PROJECT_ROOT / "trainers"
+TBCS_TRAINERS_EXPORT_DIR = (
+    PROJECT_ROOT
+    / "data"
+    / "molang"
+    / "challengemode_trainers"
+)
 
 INTERACTIONS_DIR = (
     PROJECT_ROOT
@@ -48,9 +53,8 @@ KANTO_FOLDERS = {
 }
 
 TEAMS_XLSX_PATH = PROJECT_ROOT / "challengemode_trainers.xlsx"
-env_flag = os.getenv("ENABLE_CHALLENGE_MODE", "").lower()
 
-if env_flag in ("true", "1", "yes"):
+if TEAMS_XLSX_PATH.exists():
     ENABLE_CHALLENGE_MODE = True
 else:
     ENABLE_CHALLENGE_MODE = False
@@ -68,22 +72,15 @@ def load_excel_teams(valid_items, valid_moves):
         trainer = str(row["Trainer"]).strip().lower()
 
         if pd.isna(row["Folder"]) or pd.isna(row["Trainer"]):
-            continue
+            break
 
-        key = (folder, trainer)
+        pokemon = {}
 
-        pokemon = {
-            "species": (
-                str(row["Species"])
-                .strip()
-                .lower()
-                .replace("'", "")
-                .replace("’", "")
-                .replace(".", "")
-                .replace(" ", "")
-            ),
-            "level": int(row["Level"]) if not pd.isna(row["Level"]) else 1
-        }
+        species = str(row["Species"]).strip().lower().replace("'", "").replace("’", "").replace(".", "").replace(" ", "")
+        level = int(row["Level"]) if not pd.isna(row["Level"]) else 1
+
+        pokemon["properties"] = species + " level=" + str(level)
+        
         if "Item" in row and not pd.isna(row["Item"]):
             item = (
                 str(row["Item"])
@@ -96,10 +93,32 @@ def load_excel_teams(valid_items, valid_moves):
             if item not in valid_items:
                 raise ValueError(f"Invalid item: {item}")
             else:
-                pokemon["item"] = item
+                pokemon["helditem"] = item
 
-        moves = []
-        for col in ["Move1", "Move2", "Move3", "Move4"]:
+        if "Ability" in row and not pd.isna(row["Ability"]):
+            ability = (
+                str(row["Ability"])
+                .strip()
+                .lower()
+                .replace("'", "")
+                .replace("’", "")
+                .replace(".", "")
+                .replace(" ", "")
+            )
+            # validate?
+            pokemon["ability"] = ability
+
+        if "Nature" in row and not pd.isna(row["Nature"]):
+            nature = (
+                str(row["Nature"])
+                .strip()
+                .lower()
+            )
+            # validate?
+            pokemon["nature"] = nature
+
+        moveset = {}
+        for i, col in enumerate(["Move1", "Move2", "Move3", "Move4"]):
             if col in row and not pd.isna(row[col]):
                 move = (
                     str(row[col])
@@ -112,12 +131,12 @@ def load_excel_teams(valid_items, valid_moves):
                 if move not in valid_moves:
                     raise ValueError(f"Invalid move: {move}")
                 else:
-                    moves.append(move)
+                    moveset[i] = move
 
-        if moves:
-            pokemon["moves"] = moves
+        if moveset:
+            pokemon["moveset"] = moveset
 
-        teams.setdefault(key, []).append(pokemon)
+        teams.setdefault(trainer, {"party": {}})["party"][len(teams[trainer]["party"])] = pokemon
 
     return teams
 
@@ -162,72 +181,6 @@ def load_validation_lists():
     #print("Sample moves:", list(moves)[:10])
 
     return items, moves
-
-def apply_excel_team_override(entity_data, folder, trainer_id, excel_teams):
-    if not ENABLE_CHALLENGE_MODE:
-        return entity_data
-
-    if not folder or not trainer_id:
-        return entity_data
-
-    key = (folder.lower().strip(), trainer_id.lower().strip())
-
-    if key not in excel_teams:
-        return entity_data
-
-    new_team = excel_teams[key]
-
-    pokemon_entries = []
-    for p in new_team:
-        entry = f"{p['species']} level={p['level']}"
-        if "item" in p:
-            entry += f" helditem=cobblemon:{p['item']}"
-        if "moves" in p:
-            entry += " moves=" + ",".join(p["moves"])
-        pokemon_entries.append(entry)
-
-    entity_data["party"] = {
-        "type": "simple",
-        "pokemon": pokemon_entries
-    }
-
-    return entity_data
-
-def is_silver(trainer_id: str) -> bool:
-    return "_silver" in trainer_id
-
-def get_silver_base_id(trainer_id: str) -> str:
-    return re.sub(r"\d+$", "", trainer_id)
-
-def silver_base_entity(folder: str, trainer_id: str):
-    base_id = get_silver_base_id(trainer_id)
-
-    base_file = NPC_DIR / folder / f"{base_id}.json"
-    if base_file.exists():
-        return base_file
-
-    # Try to find a variant to copy from
-    for i in range(1, 4):
-        variant_file = NPC_DIR / folder / f"{base_id}{i}.json"
-        if variant_file.exists():
-            with open(variant_file, "r", encoding="utf-8") as f:
-                data = json.load(f)
-
-            # Remove party so base NPC has no team
-            data.pop("party", None)
-
-            with open(base_file, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=4, ensure_ascii=False)
-
-            #print(f"Created base silver NPC: {base_file}")
-            return base_file
-
-    #print(f"No variant found to create base NPC: {base_id}")
-    return None
-
-def export_all_silver_variants(folder: str, base_id: str):
-    for i in range(1, 4):
-        export_trainer_team(f"{base_id}{i}", folder, {})
         
 def get_battle_music(folder: str, trainer_id: str) -> int:
     if trainer_id.startswith("lance") or trainer_id == "red":
@@ -244,44 +197,15 @@ def get_battle_music(folder: str, trainer_id: str) -> int:
         return 17  # Kanto trainer music
     return 11  # Default Johto trainer
 
-def get_model_identifier(folder: str, trainer_id) -> str:
-    if folder == "silver":
-        return "cobblemon:silver"
-
-    entity_file = NPC_DIR / folder / f"{trainer_id}.json"
-
-    if not entity_file.exists():
-        #print(f"Entity file not found for identifier: {entity_file}")
-        return f"cobblemon:{trainer_id}"  # fallback
-
-    try:
-        with open(entity_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
-        return data.get("resourceIdentifier", f"cobblemon:{trainer_id}")
-
-    except Exception as e:
-        #print(f"Failed to read resourceIdentifier from {entity_file}: {e}")
-        return f"cobblemon:{trainer_id}"
-
 def build_battle_action(trainer_id: str, battle_id: int):
-    actions = []
-
-    #if is_silver(trainer_id):
-    #    base_id = get_silver_base_id(trainer_id)
-
-    #    actions.append("q.run_command('tag ' + q.player.username + ' remove InDialogue');")
-
-    #    if "cherrygrove" in base_id:
-    #        actions.append("q.run_command('tag ' + q.player.username + ' add Dialogue6');")
-
-    actions.extend([
-        "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+    actions = [
+        "q.get_variable(q.file.load('config/molang/johto.json'), 'hotReload') == true ? q.file.clear('config/molang/johto.json');",
+        "q.player.remove_tag('InDialogue');",
         f"q.run_command('scoreboard players set ' + q.player.username + ' BattleStart {battle_id}');",
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-        "q.npc.start_battle(q.player);",
-        "q.dialogue.close;",
-    ])
+        "q.get_variable(q.file.load('config/molang/johto.json'), 'challengeMode') == true ? { q.run_script('johto:instantiate_rctapi_trainer') == 0 ? q.npc.start_battle(q.player); } : q.npc.start_battle(q.player);",
+        "q.dialogue.close;"
+    ]
 
     return actions
 
@@ -313,8 +237,9 @@ def generate_battle_end_copy(trainer_id: str, folder: str):
 
     #print(f"Generated battle end copy: {new_file}")
     return new_file
+
 # Inject Trainer Variables into config
-def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid, auto_battle):
+def inject_trainer_config(entity_data, trainer_id, battle_id, auto_battle):
     if "config" not in entity_data or not isinstance(entity_data["config"], list):
         entity_data["config"] = []
 
@@ -350,28 +275,13 @@ def inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid, auto_
             "defaultValue": battle_id
         })
 
-    #if "trainer_uid" not in existing_vars:
-    #    add_var({
-    #        "variableName": "trainer_uid",
-    #        "displayName": "npc.variable.trainer_uid.name",
-    #        "description": "npc.variable.trainer_uid.desc",
-    #        "type": "NUMBER",
-    #        "defaultValue": trainer_uid
-    #    })
-
-def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_uid: int, excel_teams):
+def update_trainer_entity(trainer_id: str, folder: str, battle_id: int):
     # Auto-battle exclusions
     exclude_folder = ["gym_leaders","gym_leader_rematches","fuchsiagym"]
     exclude_trainer = ["sageli","rocketproton1"]
     auto_battle = not (folder.lower() in exclude_folder or trainer_id in exclude_trainer)
 
-    # Collapse to base file if Silver
-    if is_silver(trainer_id):
-        entity_file = silver_base_entity(folder, trainer_id)
-        if not entity_file:
-            return
-    else:
-        entity_file = NPC_DIR / folder / f"{trainer_id}.json"
+    entity_file = NPC_DIR / folder / f"{trainer_id}.json"
 
     if not entity_file.exists():
         return
@@ -379,63 +289,8 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
     with open(entity_file, "r", encoding="utf-8") as f:
         entity_data = json.load(f)
 
-    if not is_silver(trainer_id):
-        entity_data = apply_excel_team_override(
-            entity_data,
-            folder,
-            trainer_id,
-            excel_teams
-        )
-
-    if is_silver(trainer_id):
-        base_id = get_silver_base_id(trainer_id)
-
-        for i in range(1, 4):
-            variant_id = f"{base_id}{i}"
-            variant_file = NPC_DIR / folder / f"{variant_id}.json"
-
-            if not variant_file.exists():
-                continue
-
-            with open(variant_file, "r", encoding="utf-8") as f:
-                variant_data = json.load(f)
-
-            updated_variant = apply_excel_team_override(
-                variant_data,
-                folder,
-                variant_id,
-                excel_teams
-            )
-
-            with open(variant_file, "w", encoding="utf-8") as f:
-                json.dump(updated_variant, f, indent=4, ensure_ascii=False)
-
-            #print(f"Updated Silver variant: {variant_file}")
-
-        if variant_file.exists():
-            with open(variant_file, "r", encoding="utf-8") as f:
-                variant_data = json.load(f)
-
-            updated_variant = apply_excel_team_override(
-                variant_data,
-                folder,
-                trainer_id,
-                excel_teams
-            )
-
-            with open(variant_file, "w", encoding="utf-8") as f:
-                json.dump(updated_variant, f, indent=4, ensure_ascii=False)
-
-            #print(f"Updated Silver variant: {variant_file}")
-
-    # Early exit for gym leaders
-    #if is_gym_leader:
-    #    with open(entity_file, "w", encoding="utf-8") as f:
-    #        json.dump(entity_data, f, indent=4, ensure_ascii=False)
-    #    return
-
     # inject config
-    inject_trainer_config(entity_data, trainer_id, battle_id, trainer_uid, auto_battle)
+    inject_trainer_config(entity_data, trainer_id, battle_id, auto_battle)
 
     # interaction handling
     entity_data["interaction"] = {
@@ -449,57 +304,13 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int, trainer_
 
     #print(f"Updated entity: {entity_file}")
 
-def export_trainer_team(trainer_id: str, folder: str, excel_teams):
+def export_challenge_trainers(excel_teams):
+    for trainer_id, data in excel_teams.items():
+        output_file = TBCS_TRAINERS_EXPORT_DIR / f"{trainer_id}.json"
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
 
-    entity_file = NPC_DIR / folder / f"{trainer_id}.json"
-
-    if not entity_file.exists():
-        return
-
-    with open(entity_file, "r", encoding="utf-8") as f:
-        entity_data = json.load(f)
-
-    trainer_name = entity_data.get("name", trainer_id)
-
-    party = entity_data.get("party", {})
-    pokemon_list = party.get("pokemon", [])
-
-    team = []
-
-    for entry in pokemon_list:
-        parts = entry.split()
-        species = parts[0].lower().replace("'", "").replace("’", "").replace(".", "").replace(" ", "")
-
-        attrs = {}
-        for part in parts[1:]:
-            if "=" in part:
-                key, value = part.split("=", 1)
-                attrs[key.lower()] = value
-
-        pokemon = {
-            "species": species,
-            "level": int(attrs.get("level", 1))
-        }
-        if "helditem" in attrs:
-            item = attrs["helditem"].replace("cobblemon:", "")
-            pokemon["heldItem"] = item
-        if "moves" in attrs:
-            pokemon["moveset"] = attrs["moves"].split(",")
-
-        team.append(pokemon)
-
-    export_data = {
-        "name": trainer_name,
-        "team": team
-    }
-
-    TBCS_TRAINERS_EXPORT_DIR.mkdir(exist_ok=True)
-
-    output_file = TBCS_TRAINERS_EXPORT_DIR / f"{trainer_id}.json"
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(export_data, f, indent=2, ensure_ascii=False)
-
-    #print(f"Exported trainer file: {output_file}")
+        #print(f"Exported trainer file: {output_file}")
 
 def update_interaction_file(path: Path):
     with open(path, "r", encoding="utf-8") as f:
@@ -507,27 +318,10 @@ def update_interaction_file(path: Path):
 
     trainer_id = path.stem.replace("_interaction", "")
     folder = path.parent.name
-    
-
-    if "johto:trainers/startbattle" in json.dumps(data):
-        #print(f"Skipping (already converted): {path}")
-        return
 
     battle_id = get_battle_music(folder, trainer_id)
     
     data["escapeAction"] = build_battle_action(trainer_id, battle_id)
-
-    # Replace speakers.npc
-    npc_name = data.get("names", [trainer_id])[0]
-    data["speakers"]["npc"] = {
-        "name": npc_name,
-        "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": get_model_identifier(folder, trainer_id),
-            "isLeftSide": False,
-        },
-    }
 
     # Update battle pages
     for page in data.get("pages", []):
@@ -560,91 +354,6 @@ def update_interaction_file(path: Path):
 
     #print(f"Updated entity interaction: {path}")
     return trainer_id, folder, battle_id
-
-def validate_trainer_files(excel_df, fs_lookup):
-    missing = []
-    def normalize_id(val: str) -> str:
-        return (
-            str(val)
-            .strip()
-            .lower()
-            .replace(" ", "")
-            .replace("-", "")
-        )
-    for _, row in excel_df.iterrows():
-        if pd.isna(row["Folder"]) or pd.isna(row["Trainer"]):
-            continue
-
-        folder = normalize_id(row["Folder"])
-        trainer = normalize_id(row["Trainer"])
-
-        key = (folder, trainer)
-
-        if key not in fs_lookup:
-            missing.append(key)
-
-    if missing:
-        print("\n[TRAINER FILE VALIDATION ERRORS]")
-        for folder, trainer in missing:
-            print(f"Missing JSON: {folder}/{trainer}.json")
-
-        raise ValueError("Trainer file validation failed.")
-
-    print("\nTrainer file validation passed")
-
-def scan_trainer_files():
-    """
-    Returns:
-        dict: {(folder, trainer_id)} -> Path
-    """
-    lookup = {}
-
-    for path in NPC_DIR.rglob("*.json"):
-        folder = path.parent.name.lower().strip()
-        trainer_id = path.stem.lower().strip()
-
-        lookup[(folder, trainer_id)] = path
-
-    return lookup
-
-def validate_all_json_have_excel_entry(excel_df, fs_lookup):
-    def normalize_id(val: str) -> str:
-        return (
-            str(val)
-            .strip()
-            .lower()
-            .replace(" ", "")
-            .replace("-", "")
-        )
-
-    excel_keys = set()
-
-    for _, row in excel_df.iterrows():
-        if pd.isna(row["Folder"]) or pd.isna(row["Trainer"]):
-            continue
-
-        folder = normalize_id(row["Folder"])
-        trainer = normalize_id(row["Trainer"])
-
-        excel_keys.add((folder, trainer))
-
-    missing = []
-
-    for folder, trainer in fs_lookup.keys():
-        if not should_check(folder, trainer):
-            continue
-
-        if (folder, trainer) not in excel_keys:
-            missing.append((folder, trainer))
-
-    if missing:
-        print("\n[JSON WITHOUT EXCEL ENTRY]")
-        for folder, trainer in missing:
-            print(f"{folder}/{trainer}.json not in Excel")
-
-        raise ValueError("Reverse validation failed.")
-
-    print("\nAll trainer JSONs have Excel entries")
     
 def should_check(folder, trainer):
     # Skip generated or special cases
@@ -660,7 +369,6 @@ def main():
     files = sorted(INTERACTIONS_DIR.rglob("*_interaction.json"))
     print(f"Found {len(files)} interaction files\n")
 
-    excel_teams = {}
     if ENABLE_CHALLENGE_MODE:
         valid_items, valid_moves = load_validation_lists()
         if not valid_items:
@@ -670,15 +378,6 @@ def main():
             raise ValueError("No moves loaded from Lists sheet!")
         
         excel_df = pd.read_excel(TEAMS_XLSX_PATH)
-
-        # Validate trainer files exist
-        fs_lookup = scan_trainer_files()
-
-        # Validate Excel -> JSON
-        validate_trainer_files(excel_df, fs_lookup)
-
-        # Validate JSON -> Excel
-        #validate_all_json_have_excel_entry(excel_df, fs_lookup)
         
         excel_teams = load_excel_teams(valid_items, valid_moves)
         print(f"Loaded {len(excel_teams)} Excel trainer entries")
@@ -690,10 +389,11 @@ def main():
             if i >= 70:
                 break
         """
+
+        export_challenge_trainers(excel_teams)
     else:
         print("Challenge mode disabled, skipping Excel loading")
 
-    uid_counter = 1
     processed = []
 
     for file_path in files:
@@ -701,39 +401,20 @@ def main():
             result = update_interaction_file(file_path)
             if result:
                 trainer_id, folder, battle_id = result
-                processed.append((trainer_id, folder, battle_id, uid_counter))
-                uid_counter += 1
+                processed.append((trainer_id, folder, battle_id))
 
         except Exception as e:
             print(f"FAILED: {file_path}")
             print(e)
 
-    seen_silver = set()
-
-    for trainer_id, folder, battle_id, trainer_uid in processed:
+    for trainer_id, folder, battle_id in processed:
 
         is_gym_leader = "gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower()
 
-        if is_silver(trainer_id):
-            base_id = get_silver_base_id(trainer_id)
+        if not is_gym_leader:
+            generate_battle_end_copy(trainer_id, folder)
 
-            if base_id in seen_silver:
-                continue
-
-            seen_silver.add(base_id)
-
-            #generate_battle_end_copy(base_id, folder)
-            update_trainer_entity(trainer_id, folder, battle_id, trainer_uid, excel_teams)
-
-            export_all_silver_variants(folder, base_id)
-
-        else:
-            if not is_gym_leader:
-                generate_battle_end_copy(trainer_id, folder)
-
-            update_trainer_entity(trainer_id, folder, battle_id, trainer_uid, excel_teams)
-
-            export_trainer_team(trainer_id, folder, excel_teams)
+        update_trainer_entity(trainer_id, folder, battle_id)
 
     print("\nDone.")
 
