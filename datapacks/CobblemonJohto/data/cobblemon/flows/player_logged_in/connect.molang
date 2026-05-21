@@ -1,7 +1,6 @@
-c.player.data.firstrun == 0 ? {
-    q.file.save('data/molang/players/' + c.player.uuid + '.json', q.array());
-    c.player.data.firstrun = 1;
-    c.player.save_data;
+!q.file.exists('data/molang/players/' + c.player.uuid + '.json') ? {
+    t.temp.0 = 0;
+    q.file.save('data/molang/players/' + c.player.uuid + '.json', t.temp);
     q.run_command('reload');
 };
 
