@@ -305,6 +305,8 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int):
     #print(f"Updated entity: {entity_file}")
 
 def export_challenge_trainers(excel_teams):
+    TBCS_TRAINERS_EXPORT_DIR.mkdir(parents=True, exist_ok=True)
+
     for trainer_id, data in excel_teams.items():
         output_file = TBCS_TRAINERS_EXPORT_DIR / f"{trainer_id}.json"
         with open(output_file, "w", encoding="utf-8") as f:
