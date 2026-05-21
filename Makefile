@@ -1,3 +1,6 @@
+all:
+	python process_files.py
+
 normal:
 	ENABLE_CHALLENGE_MODE=false python process_files.py
 

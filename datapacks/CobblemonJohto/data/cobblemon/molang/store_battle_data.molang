@@ -1,6 +1,9 @@
+q.get_variable(q.file.load('config/molang/johto.json'), 'hotReload') == true ? q.file.clear('config/molang/johto.json');
+t.max_challenge_distance = q.get_variable(q.file.load('config/molang/johto.json'), 'maxChallengeDistance');
+
 q.player.data.battle.whiteout_on_disconnect = !q.npc.config.auto_battle;
 q.player.data.battle.x = q.npc.x;
 q.player.data.battle.y = q.npc.y;
 q.player.data.battle.z = q.npc.z;
-q.player.data.battle.max_battle_distance = (q.is_blank(q.npc.Config.challenge_distance) ? q.player.world.server.data.max_challenge_distance : q.npc.Config.challenge_distance);
+q.player.data.battle.max_battle_distance = (q.is_blank(q.npc.config.challenge_distance) ? t.max_challenge_distance : q.npc.config.challenge_distance);
 q.player.data.battle.max_battle_distance = q.player.data.battle.max_battle_distance + 0.5;

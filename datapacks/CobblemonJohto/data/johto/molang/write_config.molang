@@ -1,0 +1,16 @@
+!q.file.exists('config/molang/johto.json') ? {
+    t.config.0 = 0;
+    q.delete_variable(t.config, '0');
+
+    'set defaults';
+    q.set_variable(t.config, 'maxChallengeDistance', 6);
+    q.set_variable(t.config, 'challengeMode', false);
+    q.set_variable(t.config, 'hotReload', false);
+
+    q.file.save('config/molang/johto.json', t.config);
+} : {
+    'clear cache';
+    q.file.clear('config/molang/johto.json');
+
+    'populate old config with newly-added variables';
+};
