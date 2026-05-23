@@ -14,14 +14,21 @@ The project is a work in progress, so some features may be broken or missing.
 #### Required
 - [Cobblemon](https://modrinth.com/mod/cobblemon/versions?g=1.21.1)
 - [Cobblemon Trainer Battle Commands](https://modrinth.com/mod/tbcs/versions?g=1.21.1)
-#### Optional
+#### Recommended
 - [Fix Cobblemon Pokemon Experience](https://modrinth.com/mod/fix-cobblemon-pokemon-experience/versions?g=1.21.1)
-
 
 ### Datapack
 The datapack can be downloaded from the [Releases](../../releases) page.
-1. Download either `johto-cobblemon.zip` or `johto-cobblemon-challenge.zip` from the Releases section.
-2. Copy and paste everything from your chosen zip file into your world folder, overwriting if prompted.
+1. Download the `johto-cobblemon.zip` file from the Releases section.
+2. Copy and paste all files/folders from within the zip file into your world folder. You should be prompted to overwrite files; click yes.
+
+### Music Pack
+> [!NOTE]
+> The original "Cobblemon Johto Music Pack" is not required.  
+> If you have already installed the original, you can unload and/or delete it if you wish.
+1. Download the `CobblemonJohtoMusicPack.zip` file from [here](github.com/spacky1/cobblemon-johto-music-pack/releases/tag/nightly).
+2. Copy the zip file to your `resourcepacks` folder.
+3. In Minecraft, activate the resource pack named `Cobblemon Johto - Expanded Music Pack`
 
 ## Features
 ### Audio
