@@ -26,7 +26,7 @@ for_each(t.raw_data, t.trainer.party, {
 
     t.pokemon_out.nature = ( t.raw_data.nature != 0 ? t.raw_data.nature : q.random('hardy','docile','bashful','quirky','serious') );
     t.pokemon_out.ability = ( t.raw_data.ability != 0 ? t.raw_data.ability : q.pokemon_in.ability );
-    q.length(t.raw_data.ivs) != 0 ? { t.pokemon_out.ivs = t.raw_data.ivs } : { 'TODO: could set to random ivs from pokemon_in' };
+    t.raw_data.ivs != 0 && q.is_int(t.raw_data.ivs) ? { for_each(t.stat, q.array('hp','atk','def','spa','spd','spe'), { q.set_variable(t.pokemon_out.ivs, t.stat, t.raw_data.ivs); }); };
     q.length(t.raw_data.evs) != 0 ? { t.pokemon_out.evs = t.raw_data.evs };
     t.raw_data.helditem != 0 ? { q.set_variable(t.pokemon_out, 'heldItem', t.raw_data.helditem) };
     t.pokemon_out.moveset = q.array();

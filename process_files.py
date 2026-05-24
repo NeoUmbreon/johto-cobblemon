@@ -68,18 +68,21 @@ def load_excel_teams(valid_items, valid_moves):
     teams = {}
 
     for _, row in df.iterrows():
-        folder = str(row["Folder"]).strip().lower()
-        trainer = str(row["Trainer"]).strip().lower()
-
         if pd.isna(row["Folder"]) or pd.isna(row["Trainer"]):
             break
+        
+        folder = str(row["Folder"]).strip().lower()
+        trainer = str(row["Trainer"]).strip().lower()
+        
+        teams.setdefault(trainer, {"party": {}})
+        teams[trainer]["name"] = " ".join([str(row["Trainer Class"]),str(row["Name"])]) if not pd.isna(row["Trainer Class"]) else str(row["Name"])
 
         pokemon = {}
 
         species = str(row["Species"]).strip().lower().replace("'", "").replace("’", "").replace(".", "").replace(" ", "")
         level = int(row["Level"]) if not pd.isna(row["Level"]) else 1
 
-        pokemon["properties"] = species + " level=" + str(level)
+        pokemon["properties"] = f"{species} level={level}"
         
         if "Item" in row and not pd.isna(row["Item"]):
             item = (
@@ -107,6 +110,14 @@ def load_excel_teams(valid_items, valid_moves):
             )
             # validate?
             pokemon["ability"] = ability
+        
+        if not pd.isna(row["EVs"]):
+            try:
+                evs = json.loads(row["EVs"])
+            except:
+                print(f"Error: Couldn't load EVs for {trainer}'s {species}")
+            else:
+                pokemon["evs"] = evs
 
         if "Nature" in row and not pd.isna(row["Nature"]):
             nature = (
@@ -116,6 +127,9 @@ def load_excel_teams(valid_items, valid_moves):
             )
             # validate?
             pokemon["nature"] = nature
+        
+        if not pd.isna(row["IVs"]):
+            pokemon["ivs"] = int(row["IVs"])
 
         moveset = {}
         for i, col in enumerate(["Move1", "Move2", "Move3", "Move4"]):
@@ -136,7 +150,7 @@ def load_excel_teams(valid_items, valid_moves):
         if moveset:
             pokemon["moveset"] = moveset
 
-        teams.setdefault(trainer, {"party": {}})["party"][len(teams[trainer]["party"])] = pokemon
+        teams[trainer]["party"][len(teams[trainer]["party"])] = pokemon
 
     return teams
 
@@ -182,7 +196,7 @@ def load_validation_lists():
 
     return items, moves
         
-def get_battle_music(folder: str, trainer_id: str) -> int:
+def get_battle_music(trainer_id: str, folder: str) -> int:
     if trainer_id.startswith("lance") or trainer_id == "red":
         return 16  # Champion music
     if trainer_id.startswith("rocket"):
@@ -197,7 +211,9 @@ def get_battle_music(folder: str, trainer_id: str) -> int:
         return 17  # Kanto trainer music
     return 11  # Default Johto trainer
 
-def build_battle_action(trainer_id: str, battle_id: int):
+def build_battle_action(trainer_id: str, folder: str):
+    battle_id = get_battle_music(trainer_id, folder)
+
     actions = [
         "q.get_variable(q.file.load('config/molang/johto.json'), 'hotReload') == true ? q.file.clear('config/molang/johto.json');",
         "q.player.remove_tag('InDialogue');",
@@ -239,7 +255,7 @@ def generate_battle_end_copy(trainer_id: str, folder: str):
     return new_file
 
 # Inject Trainer Variables into config
-def inject_trainer_config(entity_data, trainer_id, battle_id, auto_battle):
+def inject_trainer_config(entity_data, trainer_id, auto_battle):
     if "config" not in entity_data or not isinstance(entity_data["config"], list):
         entity_data["config"] = []
 
@@ -266,16 +282,7 @@ def inject_trainer_config(entity_data, trainer_id, battle_id, auto_battle):
             "defaultValue": trainer_id
         })
 
-    if "battle_id" not in existing_vars:
-        add_var({
-            "variableName": "battle_id",
-            "displayName": "npc.variable.battle_id.name",
-            "description": "npc.variable.battle_id.desc",
-            "type": "NUMBER",
-            "defaultValue": battle_id
-        })
-
-def update_trainer_entity(trainer_id: str, folder: str, battle_id: int):
+def update_trainer_entity(trainer_id: str, folder: str):
     # Auto-battle exclusions
     exclude_folder = ["gym_leaders","gym_leader_rematches","fuchsiagym"]
     exclude_trainer = ["sageli","rocketproton1"]
@@ -290,7 +297,7 @@ def update_trainer_entity(trainer_id: str, folder: str, battle_id: int):
         entity_data = json.load(f)
 
     # inject config
-    inject_trainer_config(entity_data, trainer_id, battle_id, auto_battle)
+    inject_trainer_config(entity_data, trainer_id, auto_battle)
 
     # interaction handling
     entity_data["interaction"] = {
@@ -321,10 +328,6 @@ def update_interaction_file(path: Path):
     trainer_id = path.stem.replace("_interaction", "")
     folder = path.parent.name
 
-    battle_id = get_battle_music(folder, trainer_id)
-    
-    data["escapeAction"] = build_battle_action(trainer_id, battle_id)
-
     # Update battle pages
     for page in data.get("pages", []):
         input_data = page.get("input")
@@ -335,27 +338,39 @@ def update_interaction_file(path: Path):
         if not isinstance(options, list):
             continue
 
-        battle_options = [opt for opt in options if opt.get("value") == "battle"]
+        battle_options = [opt for opt in options if isinstance(opt["action"], list) and any("start_battle(q.player)" in line for line in opt["action"])]
         if not battle_options:
             continue
 
         # Keep only battle option
         input_data["options"] = battle_options
-        input_data["options"][0]["action"] = build_battle_action(trainer_id, battle_id)
+        input_data["options"][0]["action"] = build_battle_action(trainer_id, folder)
+
+        # Timeout/escape: Goto to battle action
+        page_id = page["id"]
+        value = battle_options[0]["value"]
+        
+        goto_battle = [
+            f"q.dialogue.current_page.id != '{page_id}' ? q.dialogue.set_page('{page_id}');",
+            f"q.dialogue.input('{value}');"
+        ]
 
         # Add timeout
         input_data["timeout"] = {
-            "duration": 2,
+            "duration": 3,
             "showTimer": True,
-            "action": build_battle_action(trainer_id, battle_id),
+            "action": goto_battle,
         }
+
+        # Add dialogue skip to battle
+        data["escapeAction"] = goto_battle
 
 
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
     #print(f"Updated entity interaction: {path}")
-    return trainer_id, folder, battle_id
+    return trainer_id, folder
     
 def should_check(folder, trainer):
     # Skip generated or special cases
@@ -402,21 +417,21 @@ def main():
         try:
             result = update_interaction_file(file_path)
             if result:
-                trainer_id, folder, battle_id = result
-                processed.append((trainer_id, folder, battle_id))
+                trainer_id, folder = result
+                processed.append((trainer_id, folder))
 
         except Exception as e:
             print(f"FAILED: {file_path}")
             print(e)
 
-    for trainer_id, folder, battle_id in processed:
+    for trainer_id, folder in processed:
 
         is_gym_leader = "gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower()
 
         if not is_gym_leader:
             generate_battle_end_copy(trainer_id, folder)
 
-        update_trainer_entity(trainer_id, folder, battle_id)
+        update_trainer_entity(trainer_id, folder)
 
     print("\nDone.")
 
