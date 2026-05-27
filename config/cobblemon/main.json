@@ -1,0 +1,12 @@
+{
+  "maxNearbyBlocksHorizontalRange": 1,
+  "maxNearbyBlocksVerticalRange": 1,
+  "defaultFleeDistance": 24.0,
+  "allowExperienceFromPvP": false,
+  "experienceMultiplier": 1.0,
+  "passiveStatuses": {},
+  "infiniteHealerCharge": true,
+  "faintAwakenHealthPercent": 0.0,
+  "healPercent": 0.0,
+  "playerDamagePokemon": false
+}

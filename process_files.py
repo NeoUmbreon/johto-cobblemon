@@ -215,11 +215,11 @@ def build_battle_action(trainer_id: str, folder: str):
     battle_id = get_battle_music(trainer_id, folder)
 
     actions = [
-        "q.get_variable(q.file.load('config/molang/johto.json'), 'hotReload') == true ? q.file.clear('config/molang/johto.json');",
+        "q.get_variable(q.file.load('data/molang/config.json'), 'hotReload') == true ? q.file.clear('data/molang/config.json');",
         "q.player.remove_tag('InDialogue');",
         f"q.run_command('scoreboard players set ' + q.player.username + ' BattleStart {battle_id}');",
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-        "q.get_variable(q.file.load('config/molang/johto.json'), 'challengeMode') == true ? { q.run_script('johto:instantiate_rctapi_trainer') == 0 ? q.npc.start_battle(q.player); } : q.npc.start_battle(q.player);",
+        "q.get_variable(q.file.load('data/molang/config.json'), 'challengeMode') == true ? { q.run_script('johto:instantiate_rctapi_trainer') == 0 ? q.npc.start_battle(q.player); } : q.npc.start_battle(q.player);",
         "q.dialogue.close;"
     ]
 
@@ -359,7 +359,7 @@ def update_interaction_file(path: Path):
         input_data["timeout"] = {
             "duration": 3,
             "showTimer": True,
-            "action": goto_battle,
+            "action": f"q.dialogue.input('{value}');",
         }
 
         # Add dialogue skip to battle

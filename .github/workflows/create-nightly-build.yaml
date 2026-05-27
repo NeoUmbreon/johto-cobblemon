@@ -38,9 +38,15 @@ jobs:
       run: |
         zip -r ./datapacks/CobblemonJohto.zip ./datapacks/CobblemonJohto
 
+    - name: Build filepath
+      run : |
+        mkdir -p Johto/datapacks
+        cp -r data serverconfig Johto
+        cp datapacks/*.zip Johto/datapacks
+
     - name: Create release zip
       run: |
-        zip -r johto-cobblemon.zip ./datapacks/CobblemonJohto.zip ./data ./serverconfig
+        zip -r johto-cobblemon.zip Johto config
     
     - name: Update nightly tag
       run: |

@@ -1,7 +1,7 @@
 !q.player.party.has_usable_pokemon ? return 0;
 
-q.get_variable(q.file.load('config/molang/johto.json'), 'hotReload') == true ? q.file.clear('config/molang/johto.json');
-t.distance = q.get_variable(q.file.load('config/molang/johto.json'), 'maxChallengeDistance');
+q.get_variable(q.file.load('data/molang/config.json'), 'hotReload') == true ? q.file.clear('data/molang/config.json');
+t.distance = q.get_variable(q.file.load('data/molang/config.json'), 'maxChallengeDistance');
 t.entities = q.player.get_nearby_entities(t.distance * 2);
 
 for_each(t.entity, t.entities, {
