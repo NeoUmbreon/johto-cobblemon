@@ -5,7 +5,7 @@ q.npc.run_dialogue(q.player, q.npc.Config.trainer_id + '_interaction');
 'update config';
 !q.is_included('add_tag', q.npc.config.on_player_wins) ? {
     t.name = q.get_variable(q.split_string(q.npc.class, 'cobblemon:'), '1');
-    t.dialogue = q.get_variable(q.split_string(q.get_variable(q.split_string(t.str, 'opendialogue '), '1'), ' @s'), '0');
+    t.dialogue = q.get_variable(q.split_string(q.get_variable(q.split_string(q.npc.config.on_player_wins, 'opendialogue '), '1'), ' @s'), '0');
     q.npc.config.on_player_wins = 'q.player.add_tag(\'defeated.' + t.name + '\'); q.npc.run_dialogue(q.player, \'' + t.dialogue + '\');';
 };
 

@@ -59,6 +59,6 @@ t.trainer.name != 0 ? { t.rct_trainer.name = t.trainer.name } : { t.rct_trainer.
 q.file.save('data/molang/players/' + q.player.uuid + '.json', t.rct_trainer);
 
 q.run_command('tbcs reload tbcs:' + q.player.uuid);
-q.run_command('tbcs battle GEN_9_SINGLES ' + q.player.uuid + ' ' + q.npc.uuid + ' as tbcs:' + q.player.uuid);
+q.run_command('tbcs battle GEN_9_SINGLES ' + q.player.uuid + ' vs ' + q.npc.uuid + ' as tbcs:' + q.player.uuid);
 
 return 1;

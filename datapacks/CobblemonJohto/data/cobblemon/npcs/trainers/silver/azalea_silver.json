@@ -38,7 +38,14 @@
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue azalea_silver_end @s');"
-          }
+        },
+        {
+            "variableName": "tags",
+            "displayName": "Required Tags",
+            "description": "Tag(s) the player must have to battle this Trainer.",
+            "type": "TEXT",
+            "defaultValue": "q.array('Dialogue16')"
+        }
     ],
     "ai": [
 

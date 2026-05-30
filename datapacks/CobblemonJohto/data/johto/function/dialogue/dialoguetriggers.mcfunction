@@ -71,8 +71,8 @@ execute as @s[x=244,y=39,z=-708,distance=..10,tag=Dialogue15,tag=!Dialogue16] un
 execute as @s[x=244,y=39,z=-708,distance=..10,tag=Dialogue15,tag=!Dialogue16] unless entity @e[x=289,y=39,z=-661,dy=3,type=cobblemon:npc] run npcspawnat 289 39 -661 rocketproton1 1
 
 #Azalea Silver Spawn
-execute as @s[x=402,y=64,z=-734,distance=..15,tag=Bugsy,tag=Dialogue16,tag=!Dialogue20] unless entity @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] run particle cloud 402 64 -734 1 1 1 1 100
-execute as @s[x=402,y=64,z=-734,distance=..15,tag=Bugsy,tag=Dialogue16,tag=!Dialogue20] unless entity @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] run npcspawnat 402 64 -734 azalea_silver 1
+execute as @s[x=402,y=64,z=-734,distance=..15,tag=Dialogue16,tag=!Dialogue20] unless entity @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] run particle cloud 402 64 -734 1 1 1 1 100
+execute as @s[x=402,y=64,z=-734,distance=..15,tag=Dialogue16,tag=!Dialogue20] unless entity @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] run npcspawnat 402 64 -734 azalea_silver 1
 
 #Ilex Forest
 

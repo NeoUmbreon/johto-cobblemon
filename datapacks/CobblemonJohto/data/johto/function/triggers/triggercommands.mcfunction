@@ -172,8 +172,8 @@ execute as @a[scores={TriggerCommand=94}] unless entity @a[x=-300,y=64,z=-509,di
 execute as @a[scores={TriggerCommand=94}] run scoreboard players set @s TriggerCommand 0
 
 #Azalea Silver TPs out
-execute as @a[scores={TriggerCommand=95}] unless entity @a[x=402,y=64,z=-734,distance=..16,tag=Bugsy,tag=Dialogue16,tag=!Dialogue20] run particle cloud 402 64 -734 1 1 1 1 100
-execute as @a[scores={TriggerCommand=95}] unless entity @a[x=402,y=64,z=-734,distance=..16,tag=Bugsy,tag=Dialogue16,tag=!Dialogue20] run tp @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] -800 -50000 -280
+execute as @a[scores={TriggerCommand=95}] unless entity @a[x=402,y=64,z=-734,distance=..16,tag=Dialogue16,tag=!Dialogue20] run particle cloud 402 64 -734 1 1 1 1 100
+execute as @a[scores={TriggerCommand=95}] unless entity @a[x=402,y=64,z=-734,distance=..16,tag=Dialogue16,tag=!Dialogue20] run tp @e[x=402,y=64,z=-734,dy=3,type=cobblemon:npc] -800 -50000 -280
 execute as @a[scores={TriggerCommand=95}] run scoreboard players set @s TriggerCommand 0
 
 #Goldenrod Silver TP out

@@ -1,4 +1,4 @@
-!q.player.party.has_usable_pokemon ? return 0;
+!q.player.party.has_usable_pokemon || q.player.in_battle || q.player.is_in_dialogue ? return 0;
 
 q.get_variable(q.file.load('data/molang/config.json'), 'hotReload') == true ? q.file.clear('data/molang/config.json');
 t.distance = q.get_variable(q.file.load('data/molang/config.json'), 'maxChallengeDistance');
@@ -7,10 +7,13 @@ t.entities = q.player.get_nearby_entities(t.distance * 2);
 for_each(t.entity, t.entities, {
     t.entity.config.auto_battle ? {
         t.match = 1;
-        q.player.has_tag('defeated.' + t.entity.Config.trainer_id) ? { t.match = 0; };
-        !t.entity.can_see(q.player, ( q.is_blank(t.entity.Config.challenge_distance) ? t.distance : t.entity.Config.challenge_distance ) ) ? { t.match = 0; };
-
-        t.match == 1 ? { break; };
+        t.entity.config.tags != 0 ? { t.tags = q.run_molang(q.npc.config.tags); for_each(t.tag, t.tags, { !q.player.has_tag(t.tag) ? { t.match = 0; break }; }); };
+        t.match ? {
+            q.player.has_tag('defeated.' + t.entity.Config.trainer_id) ? { t.match = 0 } : {
+            !t.entity.can_see(q.player, ( q.is_blank(t.entity.Config.challenge_distance) ? t.distance : t.entity.Config.challenge_distance ) ) ? { t.match = 0 }; };
+        };
+        
+        t.match == 1 ? break;
     };
 });
 
