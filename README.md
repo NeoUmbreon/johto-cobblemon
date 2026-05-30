@@ -81,3 +81,7 @@ The datapack can be downloaded from the [Releases](../../releases) page.
 - Many minor bugfixes, optimizations, and consistency improvements
     - Like a lot, too many to list
         - No really
+     
+## Credits & Thanks
+- [Jond](https://www.curseforge.com/members/jondgames/projects) for the original map & datapack
+- [Skycrafts](https://www.planetminecraft.com/member/skycrafts/) for providing the trainer skins
