@@ -1,6 +1,6 @@
 {  
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:pokefanf",
+    "resourceIdentifier": "cobblemon:pokefanfchatting",
     "presets": [],
     "variation": {
         "dirt": [

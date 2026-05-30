@@ -5,7 +5,7 @@
           "face": {
             "type": "artificial",
             "modelType": "npc",
-            "identifier": "cobblemon:battlegirl",
+            "identifier": "cobblemon:battlegirlchatting",
             "isLeftSide": true
           }
         }

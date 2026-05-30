@@ -1,6 +1,6 @@
 {  
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:battlegirl",
+    "resourceIdentifier": "cobblemon:battlegirlchatting",
     "presets": [],
     "variation": {
         "dirt": [

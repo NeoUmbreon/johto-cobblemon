@@ -1,6 +1,6 @@
 {  
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:pokefan",
+    "resourceIdentifier": "cobblemon:pokefanf",
     "autoHealParty": true,
     "isMovable": false,
     "isLeashable": false,

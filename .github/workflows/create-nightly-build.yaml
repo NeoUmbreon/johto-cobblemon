@@ -4,10 +4,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '.github/workflows/create-nightly-build.yaml'
-      - 'process_files.py'
-      - 'datapacks/**'
+    paths-ignore:
+      - 'README.md'
 
 permissions:
   contents: write
@@ -38,15 +36,21 @@ jobs:
       run: |
         zip -r ./datapacks/CobblemonJohto.zip ./datapacks/CobblemonJohto
 
-    - name: Build filepath
+    - name: Compress resource pack
+      run: |
+        zip -r CobblemonJohtoAddonResourcePack.zip ./resourcepack
+
+    - name: Build file structure
       run : |
-        mkdir -p Johto/datapacks
-        cp -r data serverconfig Johto
-        cp datapacks/*.zip Johto/datapacks
+        mkdir -p ./Johto/datapacks
+        mkdir ./resourcepacks
+        cp -r ./data ./serverconfig ./Johto
+        cp ./datapacks/*.zip ./Johto/datapacks
+        cp CobblemonJohtoAddonResourcePack.zip ./resourcepacks
 
     - name: Create release zip
       run: |
-        zip -r johto-cobblemon.zip Johto config
+        zip -r johto-cobblemon.zip ./Johto ./config ./resourcepacks
     
     - name: Update nightly tag
       run: |

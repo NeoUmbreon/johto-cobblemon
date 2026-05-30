@@ -1,0 +1,1 @@
+Trainer skins by [Skycrafts](https://www.planetminecraft.com/member/skycrafts/)

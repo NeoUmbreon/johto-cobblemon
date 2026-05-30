@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:jogger",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:standard",
+      "model": "cobblemon:trainer.geo",
+      "texture": "cobblemon:textures/npcs/standard/jogger.png",
+      "layers": []
+    }
+  ]
+}

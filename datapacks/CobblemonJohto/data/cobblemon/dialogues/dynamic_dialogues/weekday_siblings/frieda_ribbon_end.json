@@ -6,7 +6,7 @@
         "face": {
             "type": "artificial",
             "modelType": "npc",
-            "identifier": "cobblemon:pokefanf",
+            "identifier": "cobblemon:pokefanfchatting",
             "isLeftSide": true
         }
     }
