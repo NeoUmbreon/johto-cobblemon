@@ -4,29 +4,29 @@
 #1 - Rival
 execute if score @s BattleStart matches 1 run return run function johto:sound/playrecord {track:"gb/npc/rivalintro", duration:99}
 
-#2 - Boy 1 (Default) (Classes Ace Trainer, Blackbelt, Fisherman, Sailor, Swimmer)
-execute if score @s BattleStart matches 2 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/youngsterintro", duration:67}
+#2 - Boy 1 (Bug Catcher, Bird Keeper, Camper, Psychic, School Kid, Youngster)
+execute if score @s BattleStart matches 2 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/boy1intro", duration:67}
 
-#3 - Sage (Sage)
+#3 - Sage (Medium, Sage)
 execute if score @s BattleStart matches 3 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/sageintro", duration:258}
 
-#4 - Girl 1 (Beauty, Lass, Birdkeeper)
-execute if score @s BattleStart matches 4 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/lassintro", duration:34}
+#4 - Girl 1 (Ace Trainer F, Beauty, PokéFan F, Skier, Swimmer F, Teacher, Young Couple)
+execute if score @s BattleStart matches 4 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/girl1intro", duration:65}
 
-#5 - Suspicious Figure 1 (Burglar, Biker, Firebreather)
-execute if score @s BattleStart matches 5 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/hikerintro", duration:42}
+#5 - Suspicious Figure 1 (Burglar, Juggler, Poké Maniac, Super Nerd)
+execute if score @s BattleStart matches 5 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/suspiciousfigure1intro", duration:19}
 
-#6 - Suspicious Figure 2 (Medium, Psychic, Policeman)
-execute if score @s BattleStart matches 6 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/pokemaniacintro", duration:19}
+#6 - Suspicious Figure 2 (Ace Trainer M, Biker, Black Belt, Boarder, Fisherman, Firebreather, Gentleman, Guitarist, Hiker, PokéFan M, Sailor, Swimmer M)
+execute if score @s BattleStart matches 6 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/suspiciousfigure2intro", duration:42}
 
-#7 - Team Rocket
+#7 - Team Rocket (Grunts, Executives, Scientists)
 execute if score @s BattleStart matches 7 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/teamrocketintro", duration:35}
 
-#8 - Boy 2 (Schoolkid, Supernerd, Pokemaniac, Hiker, Camper)
-execute if score @s BattleStart matches 8 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/officerintro", duration:59}
+#8 - Boy 2 (Double Team, Policeman)
+execute if score @s BattleStart matches 8 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/boy2intro", duration:59}
 
-#9 - Girl 2 (Picknicker, Twin, Pokefan, Teacher)
-execute if score @s BattleStart matches 9 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/beautyintro", duration:65}
+#9 - Girl 2 (Lass, Picnicker, Twins)
+execute if score @s BattleStart matches 9 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/girl2intro", duration:34}
 
 #10 - Kimono Girls
 execute if score @s BattleStart matches 10 run return run function johto:sound/playrecord {track:"gb/trainerseyesmeet/kimonogirlintro", duration:62}
