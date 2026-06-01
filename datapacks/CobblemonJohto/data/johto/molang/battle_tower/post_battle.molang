@@ -1,5 +1,6 @@
-t.nursejoy = v.players.0.data.temp.npc;
-t.nursejoy.data.battle_num = v.players.0.data.temp.battle_num + 1;
+v.player = v.players.0;
+t.nursejoy = v.player.data.temp.npc;
+t.nursejoy.data.battle_num = v.player.data.temp.battle_num + 1;
 t.nursejoy.remove_tag('Locked');
 t.format = q.to_lower(t.nursejoy.data.format);
 
@@ -30,4 +31,4 @@ for_each(t.player, v.players, {
     t.player.save_data;
 });
 
-!v.won ? { v.player = v.players.0; q.run_script('johto:leave_tower'); };
+!v.won ? q.run_script('johto:leave_tower');

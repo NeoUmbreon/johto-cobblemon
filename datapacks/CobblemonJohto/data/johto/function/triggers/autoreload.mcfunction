@@ -3,7 +3,12 @@
 
 
 #tags the armor stand for a ReloadCheck.
-tag @e[x=-792,y=65,z=-284,dy=3] add ReloadCheck
+return run tag @e[x=-792,y=65,z=-284,dy=3] add ReloadCheck
 
 #Purposeful command that errors out unless reloaded
-execute as @p[x=-753,y=64,z=-243,distance=..5] unless entity @e[x=-753,y=64,z=-243,dy=2,type=cobblemon:npc] run npcspawnat -753 64 -243 goldenrod_officerjenny 1
+npcspawn goldenrod_officerjenny
+npcspawn buck_salon
+npcspawn marley_salon
+npcspawn cheryl_salon
+npcspawn mira_salon
+npcspawn riley_salon

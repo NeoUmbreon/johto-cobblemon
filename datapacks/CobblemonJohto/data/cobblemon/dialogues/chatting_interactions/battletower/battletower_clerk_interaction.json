@@ -87,7 +87,7 @@
                             "v.format = 'SINGLES';",
                             "v.room = q.run_script('johto:assign_room');",
                             "v.validated = q.run_script('johto:validate_party');",
-                            "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
+                            "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.player.add_tag('BattleTower'); q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
                         ]
                     },
                     {
@@ -97,7 +97,7 @@
                             "v.format = 'DOUBLES';",
                             "v.room = q.run_script('johto:assign_room');",
                             "v.validated = q.run_script('johto:validate_party');",
-                            "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
+                            "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.player.add_tag('BattleTower'); q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
                         ]
                     },
                     {
@@ -107,7 +107,7 @@
                             "v.format = 'TRIPLES';",
                             "v.room = q.run_script('johto:assign_room');",
                             "v.validated = q.run_script('johto:validate_party');",
-                            "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
+                            "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.player.add_tag('BattleTower'); q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
                         ]
                     },
                     {
@@ -200,6 +200,7 @@
                         "value": "close",
                         "action": [
                             "q.player.add_tag('BattleSalon');",
+                            "q.player.teleport(903.5, 45, 67.5);",
                             "q.dialogue.close;"
                         ]
                     }

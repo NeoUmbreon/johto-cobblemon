@@ -1,5 +1,5 @@
-q.set_query('player', c.player);
-q.set_query('npc', c.npc);
+q.player == 0 ? q.set_query('player', c.player);
+q.npc == 0 ? q.set_query('npc', c.npc);
 
 q.npc.config.tags != 0 ? { t.tags = q.run_molang(q.npc.config.tags); for_each(t.tag, t.tags, { !q.player.has_tag(t.tag) ? { t.exit = 1; break }; }); };
 q.player.in_battle || q.player.has_tag('Whiteout') || t.exit ? return 0;

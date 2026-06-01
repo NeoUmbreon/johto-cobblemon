@@ -1,13 +1,8 @@
-t.y = 64 + (v.room * 12);
-q.player.data.temp.players == 0 ? { q.player.data.temp.players = q.array(q.player) };
-
-'just in case; nurse joy should be discarded on exit';
-t.entities = q.player.world.get_entities_around(903.0, t.y, 56.5, 1);
-t.entities.0.discard;
+t.y = 64.0625 + (v.room * 12);
 
 'Spawn handler (dumb)';
-t.entity = q.player.world.spawn_npc(903.0, t.y, 56.5, 'battle_tower_nursejoy', 1);
-t.entities = q.player.world.get_entities_around(903.0, t.y, 56.5, 0.00001);
+t.entity = q.player.world.spawn_npc(903.0, t.y, 67.0, 'battle_tower_nursejoy', 1);
+t.entities = q.player.world.get_entities_around(903.0, t.y, 67.0, 0.00001);
 t.nursejoy = t.entities.0;
 
 'TODO: Spawn partner NPCs';
@@ -18,14 +13,24 @@ for_each(t.id, q.player.data.temp.npcs, {
 
 'Finalize';
 for_each(v.player, q.player.data.temp.players, {
+    'init streaks struct';
+    v.player.data.battle_tower == 0 ? {
+        v.player.data.battle_tower.streaks.current.singles = 0;
+        v.player.data.battle_tower.streaks.current.doubles = 0;
+        v.player.data.battle_tower.streaks.current.triples = 0;
+        v.player.data.battle_tower.streaks.current.multi = 0;
+        v.player.data.battle_tower.streaks.lifetime.singles = 0;
+        v.player.data.battle_tower.streaks.lifetime.doubles = 0;
+        v.player.data.battle_tower.streaks.lifetime.triples = 0;
+        v.player.data.battle_tower.streaks.lifetime.multi = 0;
+    };
+
     'find lowest streak of all players';
     t.streak = q.get_variable(v.player.data.battle_tower.streaks.current, q.to_lower(v.format));
     t.battle_num == 0 || t.streak < t.battle_num ? { t.battle_num = t.streak };
     
     v.player.remove_tag('BattleSalon');
-    v.player.add_tag('BattleTower');
-    v.player.active_dialogue.close;
-    v.player.teleport(894.5, t.y, 67.0, 0);
+    v.player.teleport(898.5, t.y, 67.0, 0);
     v.player.data.temp.npc = t.nursejoy;
     v.player.data.temp.partners = t.npcs;
     q.run_script('johto:flatten_party_levels');

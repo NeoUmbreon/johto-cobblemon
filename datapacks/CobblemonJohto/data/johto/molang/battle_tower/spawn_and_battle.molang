@@ -12,8 +12,8 @@ v.party_size = ( t.team_size != 1 ? 2 : ( t.format == 'SINGLES' ? 3 : ( t.format
 t.music_id = 11;
 t.player_z = ( t.team_size == 1 ? q.array(67) : ( t.team_size == 2 ? q.array(63.5, 70.5) : q.array(63.5, 67, 70.5)));
 t.npc_z = ( t.team_size == 1 ? q.array(67) : ( t.team_size == 2 ? q.array(70.5, 63.5) : q.array(70.5, 67, 63.5)));
-t.player_pos = q.array(898.5, q.npc.y + 0.0625, t.player_z);
-t.npc_pos = q.array(907.5, q.npc.y + 0.0625, t.npc_z);
+t.player_pos = q.array(898.5, math.floor(q.npc.y) + 0.0625, t.player_z);
+t.npc_pos = q.array(907.5, math.floor(q.npc.y) + 0.0625, t.npc_z);
 
 
 'Palmer handling';

@@ -3,6 +3,11 @@ c.player.has_tag('BattleTower') ? {
     c.player.has_tag('BattleTowerReady') ? { q.run_script('johto:post_battle') } : { q.run_script('johto:leave_tower') };
 };
 
+c.player.has_tag('BattleSalon') ? {
+    q.set_query('player', c.player);
+    q.run_script('johto:leave_team');
+};
+
 c.player.has_tag('SafariState') ? {
     q.run_command('execute as ' + c.player.username + ' run function johto:triggers/safarizone/leave');
 };
@@ -10,7 +15,6 @@ c.player.has_tag('SafariState') ? {
 !q.is_blank(c.player.data.battle) ? {
     c.player.in_battle && c.player.data.battle.whiteout_on_disconnect ? c.player.add_tag('Whiteout');
     q.delete_variable(c.player.data, 'battle');
-    c.player.save_data;
 };
 
 c.player.in_battle ? {
@@ -27,3 +31,5 @@ c.player.in_battle ? {
         q.run_command('execute as ' + t.player.username + ' run function johto:tools/forceclick');
     });
 };
+
+c.player.save_data;

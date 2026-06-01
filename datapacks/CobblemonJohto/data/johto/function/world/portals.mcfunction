@@ -723,14 +723,18 @@ execute as @s[x=261,y=64,z=-64,dx=2,dy=2] at @s run function johto:tools/tpwiths
 
 
 
-#Battle Tower Observation Deck Right
-execute as @s[x=881,y=104,z=80,dx=2,dy=2] at @s run function johto:tools/tpwithsfx {xyz:"891 64 78",sfx:"exitbuilding"}
+#Battle Tower Observation Decks Right
+execute as @s[x=887,y=64,z=81,dy=2,dz=1] at @s run function johto:tools/tpwithsfx {xyz:"882 80 82",sfx:"exitbuilding"}
+execute as @s[x=890,y=64,z=85,dx=1,dy=2] at @s run function johto:tools/tpwithsfx {xyz:"882 92 82",sfx:"exitbuilding"}
+execute as @s[x=894,y=64,z=81,dy=2,dz=1] at @s run function johto:tools/tpwithsfx {xyz:"882 104 82",sfx:"exitbuilding"}
 
-execute as @s[x=890,y=64,z=79,dx=1,dy=2] at @s run function johto:tools/tpwithsfx {xyz:"882 104 82",sfx:"exitbuilding"}
+execute as @s[x=881,y=80,z=80,dx=2,dy=26] at @s run function johto:tools/tpwithsfx {xyz:"891.0 64 82.0",sfx:"exitbuilding"}
 
 
 
-#Battle Tower Observation Left
-execute as @s[x=922,y=104,z=80,dx=2,dy=2] at @s run function johto:tools/tpwithsfx {xyz:"915 64 78",sfx:"exitbuilding"}
+#Battle Tower Observation Decks Left
+execute as @s[x=918,y=64,z=81,dy=2,dz=1] at @s run function johto:tools/tpwithsfx {xyz:"923 80 82",sfx:"exitbuilding"}
+execute as @s[x=914,y=64,z=85,dx=1,dy=2] at @s run function johto:tools/tpwithsfx {xyz:"923 92 82",sfx:"exitbuilding"}
+execute as @s[x=911,y=64,z=81,dy=2,dz=1] at @s run function johto:tools/tpwithsfx {xyz:"923 104 82",sfx:"exitbuilding"}
 
-execute as @s[x=914,y=64,z=79,dx=1,dy=2] at @s run function johto:tools/tpwithsfx {xyz:"923 104 82",sfx:"exitbuilding"}
+execute as @s[x=922,y=80,z=80,dx=2,dy=26] at @s run function johto:tools/tpwithsfx {xyz:"915.0 64 82.0",sfx:"exitbuilding"}

@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "q.player.has_tag('BattleTower') ? q.dialogue.close;",
         "q.length(q.player.data.temp.players) + q.length(q.player.data.temp.npcs) < 2 ? q.dialogue.set_page('cancelprompt1');",
         "v.format = 'MULTI';"
     ],
@@ -31,7 +32,10 @@
                         "action": [
                             "v.room = q.run_script('johto:assign_room');",
                             "v.validated = q.run_script('johto:validate_party');",
-                            "v.room != 0 && v.validated == 1 ? { for_each(t.player, q.player.data.temp.players, { t.player != q.player && t.player.active_dialogue.current_page.id != 'waiting' ? { t.wait = 1; break }; }); t.wait ? { for_each(t.player, q.player.data.temp.players, { t.player != q.player ? { t.player.tell(q.player.username + ' is ready to start!'); q.run_command('execute as ' + t.player.username + ' at @s run playsound entity.experience_orb.pickup'); }; }); q.dialogue.set_page('waiting') } : { v.team_validated = q.run_script('johto:validate_team_parties'); v.team_validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.dialogue.set_page('success1') } : { for_each(t.player, q.player.data.temp.players, { t.player.active_dialogue.set_page('invalidteamparty1'); }); }; }; } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
+                            "v.room == 0 ? q.dialogue.set_page('full1');",
+                            "v.validated != 1 ? q.dialogue.set_page('invalidparty1');",
+
+                            "v.room != 0 && v.validated == 1 ? { for_each(t.player, q.player.data.temp.players, { t.player != q.player && t.player.active_dialogue.current_page.id != 'waiting' ? { t.wait = 1; break }; }); t.wait ? { for_each(t.player, q.player.data.temp.players, { t.player != q.player ? { t.player.tell(q.player.username + ' is ready to start!'); q.run_command('execute as ' + t.player.username + ' at @s run playsound entity.experience_orb.pickup'); }; }); q.dialogue.set_page('waiting') } : { v.team_validated = q.run_script('johto:validate_team_parties'); v.team_validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; for_each(t.player, q.player.data.temp.players, { t.player.add_tag('BattleTower'); t.player != q.player ? t.player.active_dialogue.close; }); q.dialogue.set_page('success1') } : { for_each(t.player, q.player.data.temp.players, { t.player.active_dialogue.set_page('invalidteamparty1'); }); }; }; };"
                         ]
                     },
                     {
@@ -143,11 +147,7 @@
                         "text": "Yes",
                         "value": "yes",
                         "action": [
-                            "q.length(q.player.data.temp.players) > 1 ? { loop(q.length(q.player.data.temp.players), { q.player.data.temp.players.[v.i] == q.player ? break; v.i = v.i + 1; }); };",
-                            "for_each(t.player, q.player.data.temp.players, { t.player != q.player ? { t.player.tell(q.player.username + ' left the team'); q.delete(t.player.data.temp.players, v.i); }; });",
-
-                            "q.player.data.temp.players = q.array(q.player);",
-                            "q.player.data.temp.npcs = q.array();",
+                            "q.run_script('johto:leave_team');",
                             "q.dialogue.close;"
                         ]
                     },

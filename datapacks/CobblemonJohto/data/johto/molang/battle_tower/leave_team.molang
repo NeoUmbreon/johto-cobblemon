@@ -1,0 +1,16 @@
+q.length(q.player.data.temp.players) > 1 ? {
+    'get index of self';
+    loop(q.length(q.player.data.temp.players), {
+        q.player.data.temp.players.[v.i] == q.player ? break;
+        v.i = v.i + 1;
+    });
+
+    'delete self from others';
+    for_each(t.player, q.player.data.temp.players, {
+        t.player != q.player ? { t.player.tell(q.player.username + ' left the team'); q.delete(t.player.data.temp.players, v.i); };
+    });
+};
+
+'reset';
+q.player.data.temp.players = q.array(q.player);
+q.player.data.temp.npcs = q.array();

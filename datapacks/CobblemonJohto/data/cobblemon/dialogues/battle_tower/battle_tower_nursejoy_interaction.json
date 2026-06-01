@@ -29,22 +29,39 @@
                         "text": "Yes",
                         "value": "yes",
                         "action": [
-                            "t.not_ready = q.array();",
-                            "for_each(t.player, q.player.data.temp.players, { ( !t.player.has_tag('BattleTowerReady') && t.player.username != q.player.username ) ? q.append(t.not_ready, t.player); });",
+                            "for_each(t.player, q.player.data.temp.players, { t.player != q.player && t.player.active_dialogue.current_page.id != 'waiting' ? { v.wait = 1; break }; });",
 
-                            "q.length(t.not_ready) == 0 ? { for_each(t.player, q.player.data.temp.players, { t.player.username != q.player.username ? { t.player.active_dialogue.close; q.run_command('tellraw ' + t.player.username + ' \"Starting battle...\"'); }; }); q.npc.add_tag('Locked'); q.npc.walk_to(902,q.npc.y,57,0.5); q.dialogue.set_page('yes'); };",
-                            "q.length(t.not_ready) != 0 ? { !q.player.has_tag('BattleTowerReady') ? { for_each(t.player, t.not_ready, { q.run_command('tellraw ' + t.player.username + ' \"' + q.player.username + ' is ready!\"') }); }; q.dialogue.close; };",
-                            
-                            "q.player.add_tag('BattleTowerReady');"
+                            "v.wait ? { for_each(t.player, q.player.data.temp.players, { t.player != q.player ? { t.player.tell(q.player.username + ' is ready!'); q.run_command('execute as ' + t.player.username + ' at @s run playsound entity.experience_orb.pickup'); }; }); q.dialogue.set_page('waiting') };",
+                            "!v.wait ? { for_each(t.player, q.player.data.temp.players, { t.player.add_tag('BattleTowerReady'); t.player != q.player ? { t.player.active_dialogue.close; t.player.tell('Starting battle...'); }; }); q.npc.add_tag('Locked'); q.npc.walk_to(902,q.npc.y,57,0.5); q.dialogue.set_page('yes'); };"                    
                         ]
                     },
                     {
                         "text": "No",
                         "value": "no",
                         "action": [
-                            "q.player.has_tag('BattleTowerReady') ? { for_each(t.player, q.player.data.temp.players, { t.player.username != q.player.username ? { q.run_command('tellraw ' + t.player.username + ' \"' + q.player.username + ' is no longer ready!\"') }; }); };",
-                            "q.player.remove_tag('BattleTowerReady');",
                             "q.dialogue.set_page('no');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "waiting",
+            "speaker": "npc",
+            "escapeAction": [],
+            "lines": [
+                "Waiting for your team..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Cancel",
+                        "value": "cancel",
+                        "action": [
+                            "for_each(t.player, q.player.data.temp.players, { t.player != q.player ? { t.player.tell(q.player.username + ' is no longer ready'); }; });",
+                            "q.dialogue.close;"
                         ]
                     }
                 ]
@@ -87,33 +104,13 @@
                         "action": [
                             "v.player = q.player;",
                             "q.run_script('johto:leave_tower');",
-                            "q.dialogue.set_page('giveupconfirm');"
+                            "q.dialogue.close;"
                         ]
                     },
                     {
                         "text": "No",
                         "value": "continue",
                         "action": "q.dialogue.close;"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "giveupconfirm",
-            "speaker": "npc",
-            "lines": [
-                "We hope to see you again!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": [
-                            "q.dialogue.close();"
-                        ]
                     }
                 ]
             }

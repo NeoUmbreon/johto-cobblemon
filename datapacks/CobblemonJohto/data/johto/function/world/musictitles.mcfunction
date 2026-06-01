@@ -29,6 +29,9 @@ execute if entity @s[x=-307,y=0,z=-94,dx=94,dy=240,dz=223] run return run functi
 
 # HGSS Overrides
 #--------------------------------------------------------------------------------------------------
+# Battle Tower Music
+execute if entity @s[x=876,y=70,z=52,dx=54,dy=170,dz=55,tag=DSSound] run return run function johto:world/musictitles/small {text:"Battle Tower", location:3, includes:""}
+
 # Disconnect Routes 16-18, Cycling Road
 execute if entity @s[x=-2222,y=0,z=279,dx=272,dy=240,dz=131,tag=DSSound] run return run function johto:world/musictitles/small {text:"Route 16", location:55, includes:""}
 execute if entity @s[x=-2121,y=0,z=-529,dx=171,dy=240,dz=807,tag=DSSound] run return run function johto:world/musictitles/small {text:"Route 17", location:56, includes:"unless entity @s[tag=CyclingMusic] "}
@@ -185,9 +188,8 @@ execute if entity @s[x=-1800,y=0,z=-44,dx=191,dy=240,dz=166] run return run func
 
 
 # Other Locations (actionbar)
-execute if entity @s[x=876,y=60,z=52,dx=54,dy=10,dz=76] run return run function johto:world/musictitles/small {text:"Battle Tower Reception Desk", location:3, includes:""}
-execute if entity @s[x=858,y=75,z=-15,dx=102,dy=100,dz=143] run return run function johto:world/musictitles/small {text:"Battle Tower", location:2, includes:""}
-execute if entity @s[x=858,y=60,z=-15,dx=102,dy=10,dz=143] run return run function johto:world/musictitles/small {text:"Battle Tower", location:2, includes:""}
+execute if entity @s[x=876,y=60,z=52,dx=54,dy=10,dz=55] run return run function johto:world/musictitles/small {text:"Battle Tower Reception Desk", location:3, includes:""}
+execute if entity @s[x=858,y=0,z=-15,dx=102,dy=240,dz=143] run return run function johto:world/musictitles/small {text:"Battle Tower", location:2, includes:""}
 execute if entity @s[x=-2659,y=0,z=828,dx=124,dy=240,dz=68] run return run function johto:world/musictitles/small {text:"Cerulean Cave", location:5, includes:""}
 execute if entity @s[x=-3088,y=0,z=80,dx=139,dy=100,dz=136] run return run function johto:world/musictitles/small {text:"Diglett's Cave", location:11, includes:""}
 execute if entity @s[x=-744,y=69,z=507,dx=162,dy=70,dz=147] run return run function johto:world/musictitles/small {text:"Dragon's Den", location:12, includes:""}

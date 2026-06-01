@@ -19,5 +19,5 @@ for_each(t.player, c.players, {
     };
 });
 
-v.won ? v.players.0.data.temp.npc.walk_to(902, 100, 68, 0.5);
+v.won ? v.players.0.data.temp.npc.walk_to(902, math.floor(v.players.0.data.temp.npc.y) + 0.0625, 68, 0.5);
 q.run_molang('q.run_script(\'johto:post_battle\')', 2);
