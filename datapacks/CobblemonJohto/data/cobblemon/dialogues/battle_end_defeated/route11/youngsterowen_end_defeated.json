@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I fought fair and square. I don't regret this at all."
+                "I fought fair and square.\nI don't regret this at all."
             ],
             "input": {
                 "type": "option",

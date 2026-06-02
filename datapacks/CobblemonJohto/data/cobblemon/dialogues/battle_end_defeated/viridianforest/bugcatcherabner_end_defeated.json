@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Doesn't matter what kind of Pokémon-- as long as you like them, they all look cute."
+                "Doesn't matter what kind of Pokémon--\nas long as you like them, they all look cute."
             ],
             "input": {
                 "type": "option",

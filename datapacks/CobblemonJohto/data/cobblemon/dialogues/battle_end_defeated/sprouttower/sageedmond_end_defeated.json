@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I tried to copy Bellsprout's gentle movements for battle... But I didn't train well enough."
+                "I tried to copy Bellsprout's gentle movements for battle..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "But I didn't train well enough."
             ],
             "input": {
                 "type": "option",

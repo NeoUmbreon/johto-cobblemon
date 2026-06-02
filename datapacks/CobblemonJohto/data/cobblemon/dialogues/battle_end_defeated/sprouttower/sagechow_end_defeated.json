@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "All living beings coexist through cooperation. We must always be thankful for this."
+                "All living beings coexist through cooperation."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "We must always be thankful for this."
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "The Shrine ahead is home to the Master of our Dragon Tamer clan. You're not allowed to just go in!"
+                "The Shrine ahead is home to the Master of our Dragon Tamer clan."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "You're not allowed to just go in!"
             ],
             "input": {
                 "type": "option",

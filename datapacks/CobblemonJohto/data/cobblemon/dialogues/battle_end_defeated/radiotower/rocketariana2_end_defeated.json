@@ -1,7 +1,7 @@
 {
     "speakers": {
         "npc": {
-            "name": "Rocket Admin Ariana",
+            "name": "Ariana",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "What a waste... not to use your strength to do bad things! Feh... "
+                "What a waste...\nnot to use your strength to do bad things!"
             ],
             "input": {
                 "type": "option",
@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "People like you will never in a million years understand our brilliance!"
+                "Feh... People like you will never in a million years understand our brilliance!"
             ],
             "input": {
                 "type": "option",

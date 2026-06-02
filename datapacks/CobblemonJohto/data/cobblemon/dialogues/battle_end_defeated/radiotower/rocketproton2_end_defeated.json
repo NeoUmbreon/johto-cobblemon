@@ -1,11 +1,11 @@
 {
     "speakers": {
         "npc": {
-            "name": "Team Rocket Proton",
+            "name": "Proton",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:rocketgrunt",
+                "identifier": "cobblemon:proton",
                 "isLeftSide": true
             }
         }
@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You may have won this time... But all you did was make Team Rocket's wrath grow..."
+                "You may have won this time...\nBut all you did was make Team Rocket's wrath grow..."
             ],
             "input": {
                 "type": "option",

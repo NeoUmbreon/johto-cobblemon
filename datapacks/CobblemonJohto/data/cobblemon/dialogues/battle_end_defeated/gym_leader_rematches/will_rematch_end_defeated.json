@@ -1,11 +1,11 @@
 {
     "speakers": {
         "npc": {
-            "name": "Silver",
+            "name": "Will",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:silver",
+                "identifier": "cobblemon:will",
                 "isLeftSide": true
             }
         }
@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "...Aw, whatever."
+                "Even though I was defeated, I won't change my course."
             ],
             "input": {
                 "type": "option",
@@ -24,7 +24,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +33,25 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "You would never be able to catch a legendary Pokémon anyway."
+                "I will continue battling until I stand above all Trainers!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Now move on and experience the true ferocity of the Elite Four."
             ],
             "input": {
                 "type": "option",
@@ -43,9 +61,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue35');",
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 97');"
+                            "q.dialogue.close();"
                         ]
                     }
                 ]

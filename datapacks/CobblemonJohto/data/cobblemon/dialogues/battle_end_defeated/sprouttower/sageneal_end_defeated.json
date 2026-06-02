@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "As Pokémon grow stronger, so does the Trainer. No, wait. As the Trainer grows stronger, so do the Pokémon."
+                "Let there be light on your journey."
             ],
             "input": {
                 "type": "option",

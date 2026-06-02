@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "That strength of yours... I've got it! Are you in love?"
+                "That strength of yours..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I've got it! Are you in love?"
             ],
             "input": {
                 "type": "option",

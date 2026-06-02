@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "A radio signal that drives Pokémon mad... My experiment is a complete success."
+                "A radio signal that drives Pokémon mad... My experiment is a complete success. My promotion is assured."
             ],
             "input": {
                 "type": "option",
@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "My promotion is assured. This loss means absolutely nothing."
+                "This loss means absolutely nothing."
             ],
             "input": {
                 "type": "option",

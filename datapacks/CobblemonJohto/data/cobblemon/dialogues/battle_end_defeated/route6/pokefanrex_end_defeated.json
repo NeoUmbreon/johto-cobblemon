@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "My Phanpy!"
+                "Take a look at this--this Phanpy's absolutely adorable behavior!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Isn't it wonderfully cute?\nI just wanna squeeze it!"
             ],
             "input": {
                 "type": "option",

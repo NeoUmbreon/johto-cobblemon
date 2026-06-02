@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I'm not much good at thinking, see? So I just plow ahead with power!"
+                "I'm not much good at thinking, see?\nSo I just plow ahead with power!"
             ],
             "input": {
                 "type": "option",

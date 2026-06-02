@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "You and your Pokémon will be together for many years to come. Cherish your time together!"
+                "You and your Pokémon will be together for many years to come.\nCherish your time together!"
             ],
             "input": {
                 "type": "option",

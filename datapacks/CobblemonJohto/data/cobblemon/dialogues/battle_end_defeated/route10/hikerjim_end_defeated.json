@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Hahaha-hachoo! Hay fever is making me sneeze! Ahahah-CHOO!"
+                "Hay fever is making me sneeze!\nAhahah-CHOO!"
             ],
             "input": {
                 "type": "option",

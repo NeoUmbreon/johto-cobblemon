@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You've met the Dragon Tamer Lance? I don't believe you."
+                "You've met the Dragon Tamer Lance?\nI don't believe you."
             ],
             "input": {
                 "type": "option",

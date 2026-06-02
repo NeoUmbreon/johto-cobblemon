@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I did my best but came up short. No excuses--I admit I lost."
+                "I did my best but came up short.\nNo excuses--I admit I lost."
             ],
             "input": {
                 "type": "option",

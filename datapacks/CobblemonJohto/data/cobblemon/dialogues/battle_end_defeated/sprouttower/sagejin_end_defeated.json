@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "As Pokémon grow stronger, so does the Trainer. No, wait. As the Trainer grows stronger, so do the Pokémon."
+                "As Pokémon grow stronger, so does the Trainer."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "No, wait. As the Trainer grows stronger, so do the Pokémon."
             ],
             "input": {
                 "type": "option",

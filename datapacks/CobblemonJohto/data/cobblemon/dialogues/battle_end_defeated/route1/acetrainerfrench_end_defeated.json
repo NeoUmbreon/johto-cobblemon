@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "That was a great fight! Don't you agree?"
+                "That was a great fight!\nDon't you agree?"
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Bug-type Pokémon are deep. There are many mysteries to explore."
+                "Bug-type Pokémon are deep.\nThere are many mysteries to explore."
             ],
             "input": {
                 "type": "option",

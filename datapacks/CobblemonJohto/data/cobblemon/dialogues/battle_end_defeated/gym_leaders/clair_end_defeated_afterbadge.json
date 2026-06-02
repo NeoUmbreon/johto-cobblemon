@@ -1,7 +1,4 @@
 {
-    "initializationAction": [
-        "c.npc.set_chatting();"
-    ],
     "speakers": {
         "npc": {
             "name": "Clair",
@@ -27,7 +24,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -45,7 +42,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -54,7 +51,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Your face... it tells me you have some unfinished business..."
+                "Your face...it tells me you have some unfinished business..."
             ],
             "input": {
                 "type": "option",
@@ -63,7 +60,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -72,7 +69,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "Wait a sec! You came from New Bark Town where Professor Elm’s Lab is, right?"
+                "Wait a sec!\nYou came from New Bark Town where Professor Elm's Lab is, right?"
             ],
             "input": {
                 "type": "option",
@@ -81,7 +78,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -99,7 +96,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page6');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -108,7 +105,7 @@
             "id": "page6",
             "speaker": "npc",
             "lines": [
-                "Whatever you have to face from now, it’ll be more difficult."
+                "Whatever you have to face from now, it'll be more difficult."
             ],
             "input": {
                 "type": "option",
@@ -117,7 +114,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page7');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -126,7 +123,7 @@
             "id": "page7",
             "speaker": "npc",
             "lines": [
-                "But don’t you dare give up! If you do, I’ll feel even worse about having lost to you!"
+                "But don't you dare give up!"
             ],
             "input": {
                 "type": "option",
@@ -135,7 +132,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page8');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -144,7 +141,25 @@
             "id": "page8",
             "speaker": "npc",
             "lines": [
-                "... Give it your all."
+                "If you do, I'll feel even worse about having lost to you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "...\nGive it your all."
             ],
             "input": {
                 "type": "option",
@@ -160,8 +175,5 @@
                 ]
             }
         }
-    ],
-    "escapeAction": [
-        "q.dialogue.close();"
     ]
 }

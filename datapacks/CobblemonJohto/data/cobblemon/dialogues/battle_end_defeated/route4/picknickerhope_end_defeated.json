@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I heard Clefairy appear at Mt. Moon. But where could they be?"
+                "I heard Clefairy appear at Mt. Moon.\nBut where could they be?"
             ],
             "input": {
                 "type": "option",

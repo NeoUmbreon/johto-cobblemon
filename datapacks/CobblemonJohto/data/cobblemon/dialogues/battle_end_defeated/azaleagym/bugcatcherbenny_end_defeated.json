@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Just evolving isn't enough!"
+                "Pokémon become stronger if they evolve. Really!"
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Exchanging lighthearted greetings with someone you don't know... That's the best thing about mountains!"
+                "Exchanging lighthearted greetings with someone you don't know..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "That's the best thing about mountains!"
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "What else do I like besides Pokémon? Mary, on the radio. I bet she's cute!"
+                "What else do I like besides Pokémon?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Mary, on the radio. I bet she's cute!"
             ],
             "input": {
                 "type": "option",
@@ -24,7 +44,9 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": "q.dialogue.close();"
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
                     }
                 ]
             }

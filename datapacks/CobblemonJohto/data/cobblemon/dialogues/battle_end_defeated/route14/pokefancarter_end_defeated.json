@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Squirtle, Charmander, and Bulbasaur... I think that's a well-balanced mix."
+                "Squirtle, Charmander, and Bulbasaur...\nI think that's a well-balanced mix."
             ],
             "input": {
                 "type": "option",

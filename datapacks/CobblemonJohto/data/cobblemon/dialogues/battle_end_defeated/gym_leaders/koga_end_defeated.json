@@ -24,7 +24,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +33,25 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "I must hone my skills. Go on to the next room, and put your abilities to the test!"
+                "I must hone my skills."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Go on to the next room, and put your abilities to the test!"
             ],
             "input": {
                 "type": "option",

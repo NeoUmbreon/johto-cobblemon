@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Aww, no! You're too good for me. I'm going to train by myself until I improve."
+                "I'm going to train by myself until I improve."
             ],
             "input": {
                 "type": "option",

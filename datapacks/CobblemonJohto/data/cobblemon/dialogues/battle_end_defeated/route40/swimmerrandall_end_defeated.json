@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Swimming exercises your entire body. It's healthy."
+                "Swimming exercises your entire body.\nIt's healthy."
             ],
             "input": {
                 "type": "option",

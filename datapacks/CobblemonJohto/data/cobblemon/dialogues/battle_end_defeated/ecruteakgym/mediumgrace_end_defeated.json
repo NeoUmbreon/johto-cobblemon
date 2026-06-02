@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Having trouble finding your way around? The path is right before our eyes!"
+                "Having trouble finding your way around?\nThe path is right before our eyes!"
             ],
             "input": {
                 "type": "option",

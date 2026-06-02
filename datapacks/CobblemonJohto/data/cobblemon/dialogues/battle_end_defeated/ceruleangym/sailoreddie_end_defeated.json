@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Hey, let's go for a swim! Sailors have to be able to swim!"
+                "Hey, let's go for a swim!\nSailors have to be able to swim!"
             ],
             "input": {
                 "type": "option",

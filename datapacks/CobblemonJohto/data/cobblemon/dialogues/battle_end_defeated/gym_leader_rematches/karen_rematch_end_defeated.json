@@ -1,11 +1,11 @@
 {
     "speakers": {
         "npc": {
-            "name": "Silver",
+            "name": "Karen",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:silver",
+                "identifier": "cobblemon:karen",
                 "isLeftSide": true
             }
         }
@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "..............."
+                "Strong Pokémon."
             ],
             "input": {
                 "type": "option",
@@ -24,7 +24,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "... I haven't given up on becoming the greatest Trainer..."
+                "Weak Pokémon."
             ],
             "input": {
                 "type": "option",
@@ -42,7 +42,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -51,7 +51,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "I'm going to find out why I can't win and become stronger..."
+                "That is only the selfish perception of people."
             ],
             "input": {
                 "type": "option",
@@ -60,7 +60,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -69,7 +69,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "When I do, I will challenge you. I'll beat you down with all my power."
+                "Truly skilled Trainers should try to win with the Pokémon they love best."
             ],
             "input": {
                 "type": "option",
@@ -78,7 +78,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -87,7 +87,25 @@
             "id": "page5",
             "speaker": "npc",
             "lines": [
-                "...Humph! You keep at it until then."
+                "I like your style.\nYou understand what's important."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "Go on--the Champion is waiting."
             ],
             "input": {
                 "type": "option",
@@ -97,9 +115,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue85');",
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 98');"
+                            "q.dialogue.close();"
                         ]
                     }
                 ]

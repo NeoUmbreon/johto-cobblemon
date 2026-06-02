@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You're traveling all alone? Isn't your mom worried?"
+                "You're traveling all alone?\nIsn't your mom worried?"
             ],
             "input": {
                 "type": "option",

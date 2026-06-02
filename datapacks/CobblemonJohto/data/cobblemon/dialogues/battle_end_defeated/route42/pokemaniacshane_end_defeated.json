@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You're working on a Pokédex? Wow, you must know some pretty rare Pokémon! May I please see it? Please?"
+                "You're working on a Pokédex?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Wow, you must know some pretty rare Pokémon!\nMay I please see it? Please?"
             ],
             "input": {
                 "type": "option",

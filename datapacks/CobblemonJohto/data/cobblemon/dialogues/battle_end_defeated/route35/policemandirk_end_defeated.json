@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Your Pokémon look pretty tough. You could go anywhere safely."
+                "You know, nighttime is fun in its own way. But don't overdo it, OK?"
             ],
             "input": {
                 "type": "option",

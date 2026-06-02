@@ -15,7 +15,25 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Let me check my notes..."
+                "I came to explore Mt. Mortar, but I got separated from my partner..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Did you run into a Trainer who uses a Slowpoke? That Slowpoke is really good at using Strength."
             ],
             "input": {
                 "type": "option",

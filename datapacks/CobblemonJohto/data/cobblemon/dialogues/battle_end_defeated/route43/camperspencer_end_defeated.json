@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "What is going on at Lake of Rage? We were planning to camp there."
+                "What is going on at Lake of Rage?\nWe were planning to camp there."
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "A secret about the Whirl Islands... It's pitch black inside!"
+                "A secret about the Whirl Islands...\nIt's pitch black inside!"
             ],
             "input": {
                 "type": "option",

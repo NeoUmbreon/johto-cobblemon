@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Maybe I should lie and say I'm in the heavyweight class..."
+                "You have Pokémon that know the HM move Fly, don't you? I envy you."
             ],
             "input": {
                 "type": "option",

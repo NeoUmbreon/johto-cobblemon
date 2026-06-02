@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I have to take so many tests, I don't have much time for Pokémon. So when I do get to battle, I really concentrate."
+                "I have to take so many tests, I don't have much time for Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "So when I do get to battle, I really concentrate."
             ],
             "input": {
                 "type": "option",

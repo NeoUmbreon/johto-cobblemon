@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Pfft. Before I could get serious, I lost!"
+                "At least I can complain over the phone."
             ],
             "input": {
                 "type": "option",

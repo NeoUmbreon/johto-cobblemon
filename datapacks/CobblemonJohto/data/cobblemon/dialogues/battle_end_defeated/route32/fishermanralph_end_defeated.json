@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Fishing is a lifelong passion. Pokémon are lifelong friends!"
+                "Fishing is a lifelong passion.\nPokémon are lifelong friends!"
             ],
             "input": {
                 "type": "option",

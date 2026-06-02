@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I'm having a picnic with Pokémon. Won't you join us?"
+                "I'm having a picnic with Pokémon.\nWon't you join us?"
             ],
             "input": {
                 "type": "option",

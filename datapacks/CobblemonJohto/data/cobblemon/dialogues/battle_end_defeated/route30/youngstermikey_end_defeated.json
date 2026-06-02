@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Becoming a good Trainer is really tough. I'm going to battle other people to get better."
+                "Becoming a good Trainer is really tough.\nI'm going to battle other people to get better."
             ],
             "input": {
                 "type": "option",

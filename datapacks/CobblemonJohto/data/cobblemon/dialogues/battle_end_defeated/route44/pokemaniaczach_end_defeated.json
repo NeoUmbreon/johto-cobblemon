@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "If a Pokémon has different colors than usual, it's more valuable. What? You mean that's not true?"
+                "If a Pokémon has different colors than usual, it's more valuable."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "What? You mean that's not true?"
             ],
             "input": {
                 "type": "option",

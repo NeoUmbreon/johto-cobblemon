@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I love this melancholy melody. It really suits me well..."
+                "I love this melancholy melody.\nIt really suits me well..."
             ],
             "input": {
                 "type": "option",

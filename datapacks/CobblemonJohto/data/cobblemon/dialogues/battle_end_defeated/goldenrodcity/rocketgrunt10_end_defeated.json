@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Team Rocket will keep going, waiting for the return of Giovanni. We'll do whatever it takes."
+                "Team Rocket will keep going, waiting for the return of Giovanni."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "We'll do whatever it takes."
             ],
             "input": {
                 "type": "option",

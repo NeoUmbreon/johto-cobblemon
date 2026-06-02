@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Don't you misunderstand this! It's not that Moe's weak, it's that you're too strong!"
+                "Don't you misunderstand this!\nIt's not that Moe's weak, it's that you're too strong!"
             ],
             "input": {
                 "type": "option",

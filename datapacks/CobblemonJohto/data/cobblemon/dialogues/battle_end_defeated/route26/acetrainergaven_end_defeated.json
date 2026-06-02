@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "To get to the Pokémon League, you have to get through Victory Road. But Victory Road is tough. Practically nobody goes there!"
+                "To get to the Pokémon League, you have to get through Victory Road."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "But Victory Road is tough.\nPractically nobody goes there!"
             ],
             "input": {
                 "type": "option",

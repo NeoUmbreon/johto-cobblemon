@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Bug Pokémon squish like soft, toy Pokémon when you squeeze their bellies. I love how they feel!"
+                "Bug Pokémon squish like soft, toy Pokémon when you squeeze their bellies."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I love how they feel!"
             ],
             "input": {
                 "type": "option",

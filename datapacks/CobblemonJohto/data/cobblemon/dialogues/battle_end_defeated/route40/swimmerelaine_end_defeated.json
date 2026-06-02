@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I'd say I'm a better swimmer than you. Yeah!"
+                "I'd say I'm a better swimmer than you.\nYeah!"
             ],
             "input": {
                 "type": "option",

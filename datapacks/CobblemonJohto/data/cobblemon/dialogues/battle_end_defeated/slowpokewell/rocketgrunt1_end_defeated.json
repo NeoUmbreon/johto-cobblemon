@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Sure, we've been hacking the tails off Slowpoke and selling them. Team Rocket will do anything for money!"
+                "Sure, we've been hacking the tails off Slowpoke and selling them."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Team Rocket will do anything for money!"
             ],
             "input": {
                 "type": "option",

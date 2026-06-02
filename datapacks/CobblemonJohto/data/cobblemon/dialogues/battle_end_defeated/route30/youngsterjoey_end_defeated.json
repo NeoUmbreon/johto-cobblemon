@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I knew it--if you don't have many Pokémon, battles are harder! I need to catch more Pokémon!"
+                "I knew it--if you don't have many Pokémon, battles are harder!\nI need to catch more Pokémon!"
             ],
             "input": {
                 "type": "option",

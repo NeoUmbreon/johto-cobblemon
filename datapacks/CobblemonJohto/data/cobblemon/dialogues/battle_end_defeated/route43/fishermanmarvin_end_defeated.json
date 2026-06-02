@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Kurt's Lure Ball is the best for catching hooked Pokémon. It's much more effective than an Ultra Ball."
+                "Kurt's Lure Ball is the best for catching hooked Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "It's much more effective than an Ultra Ball."
             ],
             "input": {
                 "type": "option",
@@ -24,7 +44,9 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": "q.dialogue.close();"
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
                     }
                 ]
             }

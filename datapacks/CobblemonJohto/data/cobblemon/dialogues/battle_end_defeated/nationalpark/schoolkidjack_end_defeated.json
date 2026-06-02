@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "There is a lot to learn. For example... There are more than 90 kinds of TMs. And traded Pokémon level up faster."
+                "There is a lot to learn."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "For example...\nThere are more than 90 kinds of TMs.\nAnd traded Pokémon level up faster."
             ],
             "input": {
                 "type": "option",

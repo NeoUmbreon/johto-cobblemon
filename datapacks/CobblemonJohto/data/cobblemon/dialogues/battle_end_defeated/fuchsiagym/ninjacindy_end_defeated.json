@@ -5,7 +5,7 @@
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:janine",
+                "identifier": "cobblemon:picknicker",
                 "isLeftSide": true
             }
         }
@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Or not! I feel stronger dressing up as Janine."
+                "I feel stronger dressing up as Janine."
             ],
             "input": {
                 "type": "option",

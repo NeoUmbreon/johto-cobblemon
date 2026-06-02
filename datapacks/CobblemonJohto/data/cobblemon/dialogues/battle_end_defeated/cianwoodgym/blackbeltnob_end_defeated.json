@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I lost!  I'm speechless!"
+                "I lost!\nI'm speechless!"
             ],
             "input": {
                 "type": "option",

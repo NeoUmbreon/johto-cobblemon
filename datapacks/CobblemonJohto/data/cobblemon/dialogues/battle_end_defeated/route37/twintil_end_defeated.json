@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I lost..."
+                "Even though Tori tried very hard for me, we still lost..."
             ],
             "input": {
                 "type": "option",

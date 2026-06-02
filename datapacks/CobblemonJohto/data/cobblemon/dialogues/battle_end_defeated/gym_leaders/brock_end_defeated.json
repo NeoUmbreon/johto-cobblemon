@@ -24,7 +24,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +33,25 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Just wait and see. I’m going to become a lot stronger, too."
+                "Just wait and see."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "I'm going to become a lot stronger, too."
             ],
             "input": {
                 "type": "option",

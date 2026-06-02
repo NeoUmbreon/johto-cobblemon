@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I get this uncontrollable urge to steal other people's Pokémon."
+                "This white lab coat makes me feel like I have become smarter for some reason."
             ],
             "input": {
                 "type": "option",

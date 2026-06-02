@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Urrgggh!"
+                "I guess I should teach them better moves..."
             ],
             "input": {
                 "type": "option",

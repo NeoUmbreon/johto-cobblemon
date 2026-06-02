@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Are you making a Pokédex? Here's a hot tip. You want to battle as many Trainers as you can when you see them on routes and in caves."
+                "Are you making a Pokédex?\nHere's a hot tip."
             ],
             "input": {
                 "type": "option",
@@ -24,13 +24,31 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
             "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "You want to battle as many Trainers as you can when you see them on routes and in caves."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
             "speaker": "npc",
             "lines": [
                 "Their Pokémon will be recorded in the Pokédex, and they'll also make your Pokémon grow!"

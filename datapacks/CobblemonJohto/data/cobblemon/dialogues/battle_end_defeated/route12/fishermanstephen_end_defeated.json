@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I was listening to my radio the whole time... Is that why I lost?!"
+                "Have you checked out Kanto's radio programs? We get a good variety here."
             ],
             "input": {
                 "type": "option",

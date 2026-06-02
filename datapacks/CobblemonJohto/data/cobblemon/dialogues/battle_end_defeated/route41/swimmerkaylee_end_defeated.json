@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "There's supposed to be a big Pokémon deep beneath the Whirl Islands. I wonder what it could be?"
+                "There's supposed to be a big Pokémon deep beneath the Whirl Islands.\nI wonder what it could be?"
             ],
             "input": {
                 "type": "option",

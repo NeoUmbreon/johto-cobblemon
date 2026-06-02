@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Oh... Looks like I need more training, huh?"
+                "Oh...\nLooks like I need more training, huh?"
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Don't relax just 'cause you won. Once you get home, you should do a full review!"
+                "Don't relax just 'cause you won.\nOnce you get home, you should do a full review!"
             ],
             "input": {
                 "type": "option",

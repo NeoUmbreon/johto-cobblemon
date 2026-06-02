@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I... I'm crushed... My training is still not enough... But a loss is a loss. I admit it."
+                "Tyrogue is a Fighting type.\nIt evolves into a tougher Pokémon."
             ],
             "input": {
                 "type": "option",
@@ -24,7 +24,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "As proof that you defeated me, I'll give you a rare Fighting-type Pokémon."
+                "Keep up the hard work. I'll keep training too. Farewell!"
             ],
             "input": {
                 "type": "option",

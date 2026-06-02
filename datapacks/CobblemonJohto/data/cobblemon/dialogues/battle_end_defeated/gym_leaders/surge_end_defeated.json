@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Hey, kid! Still slugging and chugging away?"
+                "Hey, kid!\nStill slugging and chugging away?"
             ],
             "input": {
                 "type": "option",

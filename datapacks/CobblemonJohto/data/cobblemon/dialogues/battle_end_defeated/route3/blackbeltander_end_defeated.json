@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You came all the way from Johto? You must be very persistent!"
+                "You came all the way from Johto?\nYou must be very persistent!"
             ],
             "input": {
                 "type": "option",

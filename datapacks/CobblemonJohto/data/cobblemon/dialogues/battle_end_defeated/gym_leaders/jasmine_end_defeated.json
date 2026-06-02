@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "I don’t know how to say this, but good luck..."
+                "I don't know how to say this, but good luck..."
             ],
             "input": {
                 "type": "option",

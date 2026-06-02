@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Reckless riding causes accidents! Take it easy!"
+                "Reckless riding causes accidents!\nTake it easy!"
             ],
             "input": {
                 "type": "option",

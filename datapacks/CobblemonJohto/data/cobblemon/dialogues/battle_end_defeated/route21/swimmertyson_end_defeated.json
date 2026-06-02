@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Glug..."
+                "This arrogant guy was at Cinnabar's volcano."
             ],
             "input": {
                 "type": "option",

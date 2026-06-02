@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I've defeated eight Gym Leaders, so I was feeling confident. I'll have to try harder next time."
+                "I've defeated eight Gym Leaders, so I was feeling confident."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I'll have to try harder next time."
             ],
             "input": {
                 "type": "option",

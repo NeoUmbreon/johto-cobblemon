@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "We don't put out any exhaust fumes. We're a biker club that's kind to nature!"
+                "We don't put out any exhaust fumes.\nWe're a biker club that's kind to nature!"
             ],
             "input": {
                 "type": "option",

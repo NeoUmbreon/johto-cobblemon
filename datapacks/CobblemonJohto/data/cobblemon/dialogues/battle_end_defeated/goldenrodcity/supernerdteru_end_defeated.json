@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I know all the different types of Pokémon. But I only use one type."
+                "I know all the different types of Pokémon.\nBut I only use one type."
             ],
             "input": {
                 "type": "option",

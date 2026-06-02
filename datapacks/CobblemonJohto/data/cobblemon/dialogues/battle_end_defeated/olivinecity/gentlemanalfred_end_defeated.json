@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Up top is a Pokémon that keeps the Lighthouse lit. Pokémon glow when they are healthy, just like people."
+                "Up top is a Pokémon that keeps the Lighthouse lit."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Pokémon glow when they are healthy, just like people."
             ],
             "input": {
                 "type": "option",

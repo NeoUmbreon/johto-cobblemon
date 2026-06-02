@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You demonstrated on me! I should compile and announce my study findings."
+                "I should compile and announce my study findings. I might even become famous like Professor Elm."
             ],
             "input": {
                 "type": "option",

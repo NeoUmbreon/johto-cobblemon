@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Boy, do I love HP Up! Mmmm, yum! I keep drinking my Pokémon's! I can't help it!"
+                "Boy, do I love HP Up! Mmmm, yum!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I keep drinking my Pokémon's!\nI can't help it!"
             ],
             "input": {
                 "type": "option",

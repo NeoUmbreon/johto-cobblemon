@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Just once a week a Pokemon comes to the water's edge. I wanted to see that Pokemon."
+                "Just once a week, a Pokémon comes to the water's edge."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I wanted to see that Pokémon..."
             ],
             "input": {
                 "type": "option",

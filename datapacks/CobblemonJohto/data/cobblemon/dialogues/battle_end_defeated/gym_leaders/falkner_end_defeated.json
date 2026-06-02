@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.get_variable(q.file.load('data/molang/config.json'), 'challengeMode') == true ? q.dialogue.set_page('page3');"
+    ],
     "speakers": {
         "npc": {
             "name": "Falkner",
@@ -24,7 +27,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +36,25 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "I’m going to train harder to become the greatest Bird Keeper of all!"
+                "As for your next move...\nI would suggest Azalea Town."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "I'm going to train harder to become the greatest Bird Keeper of all!"
             ],
             "input": {
                 "type": "option",

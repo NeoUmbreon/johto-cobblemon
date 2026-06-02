@@ -1,11 +1,11 @@
 {
     "speakers": {
         "npc": {
-            "name": "Vic",
+            "name": "Tara",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:youngcouplem",
+                "identifier": "cobblemon:youngcouplef",
                 "isLeftSide": true
             }
         }

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Wahahah! I enjoyed battling you!"
+                "Wahahah!\nI enjoyed battling you!"
             ],
             "input": {
                 "type": "option",
@@ -24,7 +24,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +33,25 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "But a loss is a loss! From now on, I’m going to train 24 hours a day!"
+                "But a loss is a loss!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "From now on, I'm going to train 24 hours a day!"
             ],
             "input": {
                 "type": "option",

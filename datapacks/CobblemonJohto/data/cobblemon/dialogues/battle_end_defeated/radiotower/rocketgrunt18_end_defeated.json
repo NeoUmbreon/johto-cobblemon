@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I feel lousy over losing! Bah! I hate useless Pokémon!"
+                "I feel lousy over losing! Bah!\nI hate useless Pokémon!"
             ],
             "input": {
                 "type": "option",

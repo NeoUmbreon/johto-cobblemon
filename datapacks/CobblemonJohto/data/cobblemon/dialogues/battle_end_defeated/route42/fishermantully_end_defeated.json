@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I want to become the Trainer Champ using the Pokémon I caught. That's the best part of fishing!"
+                "I want to become the Trainer Champ using the Pokémon I caught.\nThat's the best part of fishing!"
             ],
             "input": {
                 "type": "option",

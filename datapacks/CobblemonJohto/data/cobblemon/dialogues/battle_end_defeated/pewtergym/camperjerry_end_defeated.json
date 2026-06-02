@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Hey, you! Trainer from Johto! Brock is tough. He'll punish you if you don't take him seriously."
+                "Hey, you! Trainer from Johto!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Brock is tough. He'll punish you if you don't take him seriously."
             ],
             "input": {
                 "type": "option",

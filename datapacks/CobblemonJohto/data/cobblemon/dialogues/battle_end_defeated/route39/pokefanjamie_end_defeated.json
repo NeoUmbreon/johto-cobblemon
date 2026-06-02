@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Oh, how disappointing..."
+                "I met my Meowth at night, right here on Route 39..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I'm not sure why, but it seems to like it when I train here. It seems to become friendlier by training here than anywhere else."
             ],
             "input": {
                 "type": "option",

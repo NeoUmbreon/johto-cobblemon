@@ -15,25 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "My Fire-type Pokémon will be even stronger!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page2",
-            "speaker": "npc",
-            "lines": [
-                "Just you watch!"
+                "My Fire-type Pokémon will be even stronger! Just you watch!"
             ],
             "input": {
                 "type": "option",

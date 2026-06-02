@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Every time I come back to Olivine, I visit the Gym. The Gym Leader's Pokémon type changed without my noticing."
+                "Every time I come back to Olivine, I visit the Gym."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "The Gym Leader's Pokémon type changed without my noticing."
             ],
             "input": {
                 "type": "option",

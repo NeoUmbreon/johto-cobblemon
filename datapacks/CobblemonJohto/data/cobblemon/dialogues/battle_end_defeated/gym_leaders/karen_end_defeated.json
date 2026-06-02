@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Strong Pokémon. Weak Pokémon."
+                "Strong Pokémon."
             ],
             "input": {
                 "type": "option",
@@ -24,13 +24,31 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
             "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Weak Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
             "speaker": "npc",
             "lines": [
                 "That is only the selfish perception of people."
@@ -42,13 +60,13 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "page4",
             "speaker": "npc",
             "lines": [
                 "Truly skilled Trainers should try to win with the Pokémon they love best."
@@ -60,16 +78,16 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page4",
+            "id": "page5",
             "speaker": "npc",
             "lines": [
-                "I like your style. You understand what's important."
+                "I like your style.\nYou understand what's important."
             ],
             "input": {
                 "type": "option",
@@ -78,13 +96,13 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page5",
+            "id": "page6",
             "speaker": "npc",
             "lines": [
                 "Go on--the Champion is waiting."

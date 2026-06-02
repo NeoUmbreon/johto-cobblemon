@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You're kidding!"
+                "I did my best.\nI have no regrets."
             ],
             "input": {
                 "type": "option",

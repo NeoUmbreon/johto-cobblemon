@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "It seems an intruder has appeared in this Gym... I don't like that idea..."
+                "It seems an intruder has appeared in this Gym...\nI don't like that idea..."
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Oh, I've learned something. There are people like you out there who are very skilled even though they're young..."
+                "Wow, you must be good to beat me!\nKeep it up!"
             ],
             "input": {
                 "type": "option",

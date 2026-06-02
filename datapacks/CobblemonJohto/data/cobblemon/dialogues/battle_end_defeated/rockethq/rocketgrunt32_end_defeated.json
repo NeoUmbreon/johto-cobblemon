@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "The password for the boss's door-- RATICATETAIL."
+                "The password for the boss's door--\nRATICATETAIL."
             ],
             "input": {
                 "type": "option",
@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "But if you don't have both passwords... Ha ha ha!"
+                "But if you don't have both passwords...\nHa ha ha!"
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I'm not listening to your bragging! We Pokéfans have a policy of not listening to other people brag!"
+                "I'm not listening to your bragging!\nWe Pokéfans have a policy of not listening to other people brag!"
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Yowza! Too hot!"
+                "Pardon me!\nI failed to sense how strong you are."
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Some Pokémon flee right away. Try catching them with Kurt's Fast Ball."
+                "Some Pokémon flee right away.\nTry catching them with Kurt's Fast Ball."
             ],
             "input": {
                 "type": "option",
@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Whenever I find a Wht. Apricorn, I take it to Kurt. He turns it into a custom Ball."
+                "Whenever I find a White Apricorn, I take it to Kurt. He turns it into a custom Ball."
             ],
             "input": {
                 "type": "option",

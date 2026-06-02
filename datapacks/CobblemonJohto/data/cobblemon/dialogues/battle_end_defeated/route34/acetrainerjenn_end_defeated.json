@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.player.has_tag('defeated.acetrainerkate') ? q.dialogue.set_page('cleared');"
+    ],
     "speakers": {
         "npc": {
             "name": "Jenn",
@@ -13,6 +16,26 @@
     "pages": [
         {
             "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Better not laugh yet.\nMy sister is really strong!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "cleared",
             "speaker": "npc",
             "lines": [
                 "You and us... We might as well become friends!"

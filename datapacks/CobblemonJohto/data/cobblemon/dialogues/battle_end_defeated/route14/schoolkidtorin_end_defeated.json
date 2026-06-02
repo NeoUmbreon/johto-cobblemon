@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "All right! Next time, I won't make any mistakes!"
+                "All right!\nNext time, I won't make any mistakes!"
             ],
             "input": {
                 "type": "option",

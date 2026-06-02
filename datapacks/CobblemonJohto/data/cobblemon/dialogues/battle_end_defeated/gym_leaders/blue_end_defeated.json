@@ -24,7 +24,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "All right, I was wrong. You're the real deal. You are a good trainer."
+                "All right, I was wrong. You're the real deal. You are a good Trainer."
             ],
             "input": {
                 "type": "option",
@@ -42,7 +42,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -51,7 +51,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "But I'm going to beat you someday. Don't you forget it!"
+                "But I'm going to beat you someday.\nDon't you forget it!"
             ],
             "input": {
                 "type": "option",

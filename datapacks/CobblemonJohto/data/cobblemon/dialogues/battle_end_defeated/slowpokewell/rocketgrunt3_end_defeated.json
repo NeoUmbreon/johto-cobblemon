@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "We need the money, but selling SlowpokeTails? It's tough being a Team Rocket Grunt!"
+                "We need the money, but selling SlowpokeTails?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "It's tough being a Team Rocket Grunt!"
             ],
             "input": {
                 "type": "option",

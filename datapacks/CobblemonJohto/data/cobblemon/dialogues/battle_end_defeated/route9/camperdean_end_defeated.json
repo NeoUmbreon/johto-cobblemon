@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "My Pokémon were hurt before even entering Rock Tunnel. I'd better take them to a Pokémon Center right away."
+                "My Pokémon were hurt before even entering Rock Tunnel."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I'd better take them to a Pokémon Center right away."
             ],
             "input": {
                 "type": "option",

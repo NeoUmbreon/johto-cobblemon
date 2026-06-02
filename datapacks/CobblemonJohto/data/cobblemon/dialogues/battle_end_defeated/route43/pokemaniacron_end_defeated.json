@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "It's OK for people to like different types of Pokémon. Pokémon isn't just about having the most powerful one."
+                "It's OK for people to like different types of Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Pokémon isn't just about having the most powerful one."
             ],
             "input": {
                 "type": "option",
@@ -24,7 +44,9 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": "q.dialogue.close();"
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
                     }
                 ]
             }

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I’m going to really apply myself and improve my skills."
+                "I'm going to really apply myself and improve my skills."
             ],
             "input": {
                 "type": "option",

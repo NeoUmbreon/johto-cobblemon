@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Soon I'm going to get permission from our Master to use dragons. "
+                "Soon I'm going to get permission from our Master to use dragons."
             ],
             "input": {
                 "type": "option",
@@ -24,7 +24,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }

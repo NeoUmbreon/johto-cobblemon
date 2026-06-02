@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Steal and sell! That's basic in crime, kid!"
+                "Steal and sell!\nThat's basic in crime, kid!"
             ],
             "input": {
                 "type": "option",

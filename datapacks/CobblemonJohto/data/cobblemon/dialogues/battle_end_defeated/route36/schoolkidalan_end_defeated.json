@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Sniffle... I study for five hours straight every day... If you only read the textbook, I guess you miss out on a lot."
+                "Sniffle... I study for five hours straight every day..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "If you only read the textbook, I guess you miss out on a lot."
             ],
             "input": {
                 "type": "option",

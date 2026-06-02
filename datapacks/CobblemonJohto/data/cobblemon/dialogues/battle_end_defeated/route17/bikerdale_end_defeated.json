@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You're so cool! You don't do anything halfway!"
+                "You're so cool!\nYou don't do anything halfway!"
             ],
             "input": {
                 "type": "option",

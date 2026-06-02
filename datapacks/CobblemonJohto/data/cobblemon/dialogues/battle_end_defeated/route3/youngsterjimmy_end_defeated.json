@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I wear shorts the whole year round. That's my fashion policy."
+                "I wear shorts the whole year round.\nThat's my fashion policy."
             ],
             "input": {
                 "type": "option",

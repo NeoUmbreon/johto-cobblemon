@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "If you have a specific Pokémon that you want to raise, put it out first, then switch it right away. That's how to do it."
+                "If you have a specific Pokémon that you want to raise, put it out first, then switch it right away."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "That's how to do it."
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Heh, only the one who guards the boss's room knows the password for that door. Where's the boss's room? Who knows? Go look for yourself."
+                "Heh, only the one who guards the boss's room knows the password for that door."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Where's the boss's room?\nWho knows? Go look for yourself."
             ],
             "input": {
                 "type": "option",

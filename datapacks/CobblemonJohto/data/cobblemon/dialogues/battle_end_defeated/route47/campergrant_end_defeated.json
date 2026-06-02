@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I should be headed deeper into the mountain, I guess..."
+                "See ya!"
             ],
             "input": {
                 "type": "option",

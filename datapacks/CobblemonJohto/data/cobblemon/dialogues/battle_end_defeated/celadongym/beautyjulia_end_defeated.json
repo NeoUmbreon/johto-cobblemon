@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "The kindness of a woman and the strength of a man... I want to be a Trainer with both those qualities!"
+                "The kindness of a woman and the strength of a man..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "Next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I want to be a Trainer with both those qualities!"
             ],
             "input": {
                 "type": "option",

@@ -15,25 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "The reason that Lt. Surge is protected by electric fences isn't because he's a coward!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page2",
-            "speaker": "npc",
-            "lines": [
-                "It's so you won't underestimate his strength!"
+                "The reason that Lt. Surge is protected by electric fences isn't because he's a coward! It's so you won't underestimate his strength!"
             ],
             "input": {
                 "type": "option",

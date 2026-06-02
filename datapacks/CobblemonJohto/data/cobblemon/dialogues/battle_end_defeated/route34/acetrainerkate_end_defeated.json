@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I'm sorry we jumped you. We never expected anyone to find  us here. You sure startled us."
+                "I'm sorry we jumped you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "We never expected anyone to find us here.\nYou sure startled us."
             ],
             "input": {
                 "type": "option",

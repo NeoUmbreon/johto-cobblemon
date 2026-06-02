@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "A sunburn is the worst for skin. But I don't use sunblock. I won't pollute the water."
+                "A sunburn is the worst for skin."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "But I don't use sunblock.\nI won't pollute the water."
             ],
             "input": {
                 "type": "option",

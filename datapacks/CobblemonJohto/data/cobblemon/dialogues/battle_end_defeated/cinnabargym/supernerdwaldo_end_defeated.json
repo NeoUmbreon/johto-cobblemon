@@ -15,25 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Our Leader, Blaine, became lost in the mountains but good."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page2",
-            "speaker": "npc",
-            "lines": [
-                "Night fell when a fiery bird Pokémon appeared. Its light allowed Blaine to find his way down safely."
+                "I didn't expect you to be so good!\nWho in the world are you?"
             ],
             "input": {
                 "type": "option",

@@ -15,25 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I got wiped out on the last mission by a kid, too."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page2",
-            "speaker": "npc",
-            "lines": [
-                "When we were abducting Pokémon, this kid with long red hair and mean-looking eyes just whomped me..."
+                "I got wiped out on the last mission by a kid, too. When we were abducting Pokémon, this kid with long red hair and mean-looking eyes just whomped me..."
             ],
             "input": {
                 "type": "option",

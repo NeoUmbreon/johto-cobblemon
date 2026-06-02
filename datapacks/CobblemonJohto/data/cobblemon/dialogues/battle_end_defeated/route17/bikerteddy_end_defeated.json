@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I love the way you do battle, too! Consider me a fan!"
+                "I love the way you do battle, too!\nConsider me a fan!"
             ],
             "input": {
                 "type": "option",

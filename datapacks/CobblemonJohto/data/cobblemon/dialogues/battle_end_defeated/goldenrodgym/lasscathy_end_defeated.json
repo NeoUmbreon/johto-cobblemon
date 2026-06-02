@@ -33,7 +33,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "What to do... Well... If I lose, I'll just try harder next time!"
+                "What to do...\nWell... If I lose, I'll just try harder next time!"
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "This Gym is great. I love snowboarding with my Pokémon!"
+                "This Gym is great.\nI love snowboarding with my Pokémon!"
             ],
             "input": {
                 "type": "option",

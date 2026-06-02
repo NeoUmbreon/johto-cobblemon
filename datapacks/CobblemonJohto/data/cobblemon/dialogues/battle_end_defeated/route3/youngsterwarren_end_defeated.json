@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You looked strong. I was afraid to take you on..."
+                "You looked strong.\nI was afraid to take you on..."
             ],
             "input": {
                 "type": "option",

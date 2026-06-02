@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Bike? Oh, I was talking about my Bicycle!"
+                "Bike?\nOh, I was talking about my Bicycle!"
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,25 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "The reason Pryce is strong... It's because every day he sits on top of very cold ice and trains his body and spirit!"
+                "The reason Pryce is strong..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "It's because every day he sits on top of very cold ice and trains his body and spirit!"
             ],
             "input": {
                 "type": "option",

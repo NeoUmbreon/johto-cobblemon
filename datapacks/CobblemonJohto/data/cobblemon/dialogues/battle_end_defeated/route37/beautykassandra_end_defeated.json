@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Wow, you're strong..."
+                "You...\nI wonder what your future holds..."
             ],
             "input": {
                 "type": "option",

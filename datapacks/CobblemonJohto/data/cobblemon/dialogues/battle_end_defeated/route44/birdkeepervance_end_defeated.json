@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Articuno, Zapdos, and Moltres are the three legendary bird Pokémon. I heard there are other legendary birds, though."
+                "Articuno, Zapdos, and Moltres are the three legendary bird Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I heard there are other legendary birds, though."
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "My Pokémon lost... My...my pride is shattered..."
+                "My Pokémon lost...\nMy...my pride is shattered..."
             ],
             "input": {
                 "type": "option",

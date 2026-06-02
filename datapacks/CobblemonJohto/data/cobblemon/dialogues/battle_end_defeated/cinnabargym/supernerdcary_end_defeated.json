@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Waah! My studies were insufficient!"
+                "Bitterness leads to improvement tomorrow."
             ],
             "input": {
                 "type": "option",

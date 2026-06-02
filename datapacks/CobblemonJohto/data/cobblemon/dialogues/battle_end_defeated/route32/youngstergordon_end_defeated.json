@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Each Pokémon has its own nature. They seem different every time I catch one. So there must be many natures!"
+                "Each Pokémon has its own nature.\nThey seem different every time I catch one. So there must be many natures!"
             ],
             "input": {
                 "type": "option",

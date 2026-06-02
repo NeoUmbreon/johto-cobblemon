@@ -1,11 +1,11 @@
 {
     "speakers": {
         "npc": {
-            "name": "Tara",
+            "name": "Vic",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:youngcouplef",
+                "identifier": "cobblemon:youngcouplem",
                 "isLeftSide": true
             }
         }
@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Even though my boyfriend lost, he's still wonderful."
+                "Tara's already seen me humiliated..."
             ],
             "input": {
                 "type": "option",

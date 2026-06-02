@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Do you know about baby Pokémon? I'll bet they're just adorable!"
+                "Do you know about baby Pokémon?\nI'll bet they're just adorable!"
             ],
             "input": {
                 "type": "option",

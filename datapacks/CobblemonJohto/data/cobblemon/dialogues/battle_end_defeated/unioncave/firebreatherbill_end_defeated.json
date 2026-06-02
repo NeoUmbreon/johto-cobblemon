@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Zubat's Supersonic keeps confusing my Pokémon. I'm seriously upset about that!"
+                "I've practiced training my Pokémon, but I've practiced breathing fire many more times than that."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Don't try this at home, OK?"
             ],
             "input": {
                 "type": "option",

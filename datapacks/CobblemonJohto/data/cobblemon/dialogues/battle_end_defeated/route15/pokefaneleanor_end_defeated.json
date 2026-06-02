@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "It's not that my Pokémon are weak! It's that your Pokémon are too strong!"
+                "It's not that my Pokémon are weak!\nIt's that your Pokémon are too strong!"
             ],
             "input": {
                 "type": "option",

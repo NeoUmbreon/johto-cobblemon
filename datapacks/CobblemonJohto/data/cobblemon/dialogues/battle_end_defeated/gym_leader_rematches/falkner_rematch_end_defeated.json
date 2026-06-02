@@ -1,0 +1,34 @@
+{
+  "speakers": {
+    "npc": {
+      "name": "Falkner",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:falkner",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["Mmm...\nIt's still a long way to become the best Trainer..."],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}

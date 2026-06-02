@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "SlowpokeTails grow back fast! Besides, it was an order from Proton, so I'm more concerned about that!"
+                "SlowpokeTails grow back fast!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Besides, it was an order from Proton, so I'm more concerned about that!"
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "If you prevail on this harsh trek, the truth will be revealed! Heh, sorry, I just wanted to say something cool."
+                "If you prevail on this harsh trek, the truth will be revealed!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Heh, sorry, I just wanted to say something cool."
             ],
             "input": {
                 "type": "option",

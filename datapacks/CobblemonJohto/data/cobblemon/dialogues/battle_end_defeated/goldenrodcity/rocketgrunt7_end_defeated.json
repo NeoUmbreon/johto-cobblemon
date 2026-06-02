@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Go wherever you like! Get lost! See if I care!"
+                "Go wherever you like! Get lost!\nSee if I care!"
             ],
             "input": {
                 "type": "option",

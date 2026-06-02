@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "It doesn't matter what kind of preparation you've done. If you lose, you lose."
+                "It doesn't matter what kind of preparation you've done.\nIf you lose, you lose."
             ],
             "input": {
                 "type": "option",

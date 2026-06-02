@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "When and where did I get my Pokémon... I'll bet if I checked my Trainer Memo, I'd remember!"
+                "When and where did I get my Pokémon..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I'll bet if I checked my Trainer Memo, I'd remember!"
             ],
             "input": {
                 "type": "option",

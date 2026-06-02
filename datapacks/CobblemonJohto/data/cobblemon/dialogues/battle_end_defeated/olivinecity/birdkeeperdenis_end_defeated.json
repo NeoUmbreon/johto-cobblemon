@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "My bird Pokémon trained in Cianwood. Since I've lost, maybe we'll go across the sea."
+                "My bird Pokémon trained in Cianwood.\nSince I've lost, maybe we'll go across the sea."
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I'm checking out pre- and post-evolution Pokémon. Evolution really does make Pokémon stronger. But evolved forms also learn moves later on."
+                "I'm checking out pre- and post-evolution Pokémon. Evolution really does make Pokémon stronger."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "But evolved forms also learn moves later on."
             ],
             "input": {
                 "type": "option",

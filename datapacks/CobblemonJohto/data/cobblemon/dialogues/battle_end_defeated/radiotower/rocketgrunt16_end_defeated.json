@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I failed in my duties... I'll be docked pay for this..."
+                "I failed in my duties...\nI'll be docked pay for this..."
             ],
             "input": {
                 "type": "option",

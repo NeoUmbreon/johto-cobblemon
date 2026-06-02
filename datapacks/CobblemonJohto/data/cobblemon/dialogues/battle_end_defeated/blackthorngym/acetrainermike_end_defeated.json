@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I know my shortcomings now. Thanks for showing me!"
+                "I know my shortcomings now.\nThanks for showing me!"
             ],
             "input": {
                 "type": "option",

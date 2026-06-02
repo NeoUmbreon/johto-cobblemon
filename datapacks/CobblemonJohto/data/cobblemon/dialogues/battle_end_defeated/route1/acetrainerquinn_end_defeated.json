@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You're strong. You obviously have trained hard."
+                "You're strong.\nYou obviously have trained hard."
             ],
             "input": {
                 "type": "option",

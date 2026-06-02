@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "The Gym Badges are pretty. I collect them."
+                "The Gym Badges are pretty.\nI collect them."
             ],
             "input": {
                 "type": "option",

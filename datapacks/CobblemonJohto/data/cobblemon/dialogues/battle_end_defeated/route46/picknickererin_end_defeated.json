@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Oh, bleah!"
+                "I've been to many Gyms, but the Gym in Goldenrod is my favorite. It's filled with pretty flowers!"
             ],
             "input": {
                 "type": "option",

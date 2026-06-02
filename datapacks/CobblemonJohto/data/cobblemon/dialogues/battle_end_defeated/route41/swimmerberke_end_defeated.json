@@ -15,7 +15,47 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "It was a dark and stormy night... I saw this giant Pokémon flying from the Whirl Islands. Feathers were scattering from its silver wings."
+                "It was a dark and stormy night..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "I saw this giant Pokémon flying from the Whirl Islands."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Feathers were scattering from its silver wings."
             ],
             "input": {
                 "type": "option",

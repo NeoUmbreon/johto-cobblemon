@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Yikes! You've got awesome torque!"
+                "Hands-free riding is considered cool on Cycling Road."
             ],
             "input": {
                 "type": "option",

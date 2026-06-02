@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I might be an expert angler, but I stink as a Pokemon trainer..."
+                "I won't lose as an angler! I catch Pokémon all day."
             ],
             "input": {
                 "type": "option",

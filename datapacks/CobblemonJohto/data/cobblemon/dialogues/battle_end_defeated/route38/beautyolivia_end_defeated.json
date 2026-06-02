@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "We drink Moomoo Milk every day."
+                "Moomoo Milk is good for beauty and health, but inconveniently, they only sell a bottle at a time."
             ],
             "input": {
                 "type": "option",

@@ -15,7 +15,27 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You can catch Pokémon even if you have six with you. If you catch one, it'll go to your Box automatically."
+                "You can catch Pokémon even if you have six with you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "If you catch one, it'll go to your Box automatically."
             ],
             "input": {
                 "type": "option",

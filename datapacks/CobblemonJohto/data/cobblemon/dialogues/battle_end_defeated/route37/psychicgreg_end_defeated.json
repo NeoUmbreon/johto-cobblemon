@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "You... I wonder what your future holds..."
+                "Making Pokémon sleep or paralyzing them are good battle techniques."
             ],
             "input": {
                 "type": "option",

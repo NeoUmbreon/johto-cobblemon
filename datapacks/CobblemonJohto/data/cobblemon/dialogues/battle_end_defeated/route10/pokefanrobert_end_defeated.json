@@ -15,7 +15,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "My dearest, very important Pokémon... I won't forget what you did!"
+                "My dearest, very important Pokémon...\nI won't forget what you did!"
             ],
             "input": {
                 "type": "option",
