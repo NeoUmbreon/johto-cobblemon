@@ -1,7 +1,6 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $6,240 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 6240');"
         ],
@@ -20,22 +19,25 @@
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["You must have studied a lot about Pokémon!"],
+      "lines": ["Aw, that's the end of it..."],
                 "input": {
                     "type": "option",
                     "vertical": false,
                     "options": [
-                        {
-                            "text": "Close",
-                            "value": "close",
-                            "action": [              
-                                "q.dialogue.close();"]
-                        }
-                    ]
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.npc.run_dialogue(q.player, 'bugsy_rematch_end_defeated');"
+                        ]
+                    }
+                ]
                 }
             }
     ],
-    "escapeAction": [              
+    "escapeAction": [
+      "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
       "q.dialogue.close();"
       ]
 }

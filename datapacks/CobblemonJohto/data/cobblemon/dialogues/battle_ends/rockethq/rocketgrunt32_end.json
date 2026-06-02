@@ -2,7 +2,6 @@
     "c.npc.set_chatting();",
     "q.run_command('execute as ' + q.player.username + ' run tag @s add RocketPW2');",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $720 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 720');"
         ],
@@ -21,7 +20,7 @@
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["The password for the boss's door-- RATICATETAIL."],
+      "lines": ["The password for the boss's door--"],
             "input": {
                 "type": "option",
                 "vertical": false,
@@ -37,7 +36,7 @@
         {
           "id": "page2",
           "speaker": "npc",
-          "lines": ["But if you don't have both passwords... Ha ha ha!"],
+          "lines": ["RATICATETAIL."],
             "input": {
                 "type": "option",
                 "vertical": false,

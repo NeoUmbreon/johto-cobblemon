@@ -1,7 +1,6 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $840 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 840');"
         ],
@@ -20,7 +19,7 @@
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["Maybe I should join your study sessions!"],
+      "lines": ["So strong..."],
             "input": {
                 "type": "option",
                 "vertical": false,

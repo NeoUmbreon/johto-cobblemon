@@ -1,7 +1,6 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,280 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 1280');"
         ],
@@ -20,7 +19,7 @@
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["It's OK for people to like different types of Pokémon. Pokémon isn't just about having the most powerful one."],
+      "lines": ["My Nidoking was outstanding!"],
             "input": {
                 "type": "option",
                 "vertical": false,

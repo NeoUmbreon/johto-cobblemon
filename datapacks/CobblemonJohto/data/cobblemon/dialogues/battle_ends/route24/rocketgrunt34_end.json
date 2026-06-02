@@ -3,7 +3,6 @@
         "c.npc.set_chatting();",
         "q.run_command('tag ' + q.player.username + ' add Dialogue219');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,560 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 1560');"
     ],
@@ -23,7 +22,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "OK. Tell you mine secret will I. Machine Part steal by me."
+                "Ayieeeh! No, no, no, believe it I can't!\nStrong very much be you! Match I am not to you!"
             ],
             "input": {
                 "type": "option",
@@ -32,7 +31,25 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "OK. Tell you mine secret will I."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -41,7 +58,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Hide it I did in Gym of the Cerulean."
+                "Machine Part steal by me. Hide it I did in Gym of the Cerulean."
             ],
             "input": {
                 "type": "option",
@@ -50,7 +67,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -68,7 +85,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -86,7 +103,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -104,7 +121,10 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page6');"
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/overwriterecord {track:\"\",duration:-1}');",
+                            "q.dialogue.next_page;"
+                        ]
                     }
                 ]
             }
@@ -113,7 +133,7 @@
             "id": "page6",
             "speaker": "npc",
             "lines": [
-                "... You say what? Team Rocket bye-bye a go-go?"
+                "..."
             ],
             "input": {
                 "type": "option",
@@ -122,7 +142,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page7');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -131,7 +151,7 @@
             "id": "page6",
             "speaker": "npc",
             "lines": [
-                "Broken up it is says you? Oh, no!"
+                "You say what? Team Rocket bye-bye a go-go? Broken up it is says you?"
             ],
             "input": {
                 "type": "option",
@@ -140,7 +160,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page7');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -149,7 +169,7 @@
             "id": "page6",
             "speaker": "npc",
             "lines": [
-                "Should I do what now on from, me?"
+                "Oh, no! Should I do what now on from, me?"
             ],
             "input": {
                 "type": "option",
@@ -158,7 +178,43 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page7');"
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "...OK."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "I my country go home."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -167,7 +223,7 @@
             "id": "page7",
             "speaker": "npc",
             "lines": [
-                "...OK. I my country go home. Make Team Rocket I will. Good-bye! So long!"
+                "Make Team Rocket I will.\nGood-bye! So long!"
             ],
             "input": {
                 "type": "option",
@@ -177,6 +233,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud -2743 66 870 1 1 1 1 100');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-2743,y=65,z=870,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.dialogue.close();"

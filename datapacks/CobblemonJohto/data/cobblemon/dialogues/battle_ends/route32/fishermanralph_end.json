@@ -1,7 +1,6 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $320 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 320');"
         ],
@@ -20,7 +19,7 @@
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["Fishing is a lifelong passion. Pokémon are lifelong friends!"],
+      "lines": ["Tch! I tried to rush things..."],
             "input": {
                 "type": "option",
                 "vertical": false,

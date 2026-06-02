@@ -4,7 +4,6 @@
         "q.run_command('execute as @e[x=-879,y=64,z=641,dx=52,dy=21,dz=93,type=cobblemon:npc] if data entity @s Config.trainer_id run runmolangscript johto:clear_gym ' + q.player.username + ' @s');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
         "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add Dialogue78');",
-        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $4,920 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 4920');"
     ],
@@ -24,7 +23,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I won’t concede this."
+                "I lost? ..."
             ],
             "input": {
                 "type": "option",
@@ -33,7 +32,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -42,7 +41,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "I might have lost, but you’re still not ready for the Pokémon League."
+                "I don't believe it.\nThere must be some mistake..."
             ],
             "input": {
                 "type": "option",
@@ -51,7 +50,10 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.dialogue.next_page;"
+                        ]
                     }
                 ]
             }
@@ -60,7 +62,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "I know. You should take the Dragon user challenge."
+                "I won't concede this."
             ],
             "input": {
                 "type": "option",
@@ -69,7 +71,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -78,7 +80,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "Behind this Gym is a place called Dragon's Den."
+                "I might have lost, but you're still not ready for the Pokémon League."
             ],
             "input": {
                 "type": "option",
@@ -87,7 +89,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -96,6 +98,25 @@
             "id": "page5",
             "speaker": "npc",
             "lines": [
+                "I know. You should take the Dragon-master challenge."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "Behind this Gym is a place called Dragon's Den.",
                 "Go and bring me the Dragon Fang from deep inside the Den."
             ],
             "input": {
@@ -105,25 +126,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page6');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page6",
-            "speaker": "npc",
-            "lines": [
-                "That is the test to be accepted as a true Dragon user."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page7');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -132,25 +135,7 @@
             "id": "page7",
             "speaker": "npc",
             "lines": [
-                "If you can do that, I will accept you as a worthy Trainer."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page8');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page8",
-            "speaker": "npc",
-            "lines": [
-                "Until then, I won't give you a Badge."
+                "If you can do that, I will admit you are a Trainer worthy of a Gym Badge!"
             ],
             "input": {
                 "type": "option",
@@ -160,14 +145,12 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();"
+                            "q.dialogue.close;"
                         ]
                     }
                 ]
             }
         }
     ],
-    "escapeAction": [
-        "q.dialogue.close();"
-    ]
+    "escapeAction": []
 }

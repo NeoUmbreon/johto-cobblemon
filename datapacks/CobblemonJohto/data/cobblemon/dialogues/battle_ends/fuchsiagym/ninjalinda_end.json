@@ -1,7 +1,6 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $720 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 720');"
         ],
@@ -11,7 +10,7 @@
       "face": {
         "type": "artificial",
         "modelType": "npc",
-        "identifier": "cobblemon:janine",
+        "identifier": "cobblemon:lass",
         "isLeftSide": true
       }
     }
@@ -20,7 +19,7 @@
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["Well? Wasn't my disguise perfect?"],
+      "lines": ["Ooh... I lost...\nYou're not weak..."],
             "input": {
                 "type": "option",
                 "vertical": false,

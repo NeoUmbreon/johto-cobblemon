@@ -3,7 +3,6 @@
         "c.npc.set_chatting();",
         "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue62');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,800 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 1800');"
     ],
@@ -41,7 +40,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -59,7 +58,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -77,7 +76,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -95,7 +94,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -113,7 +112,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page6');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -122,7 +121,7 @@
             "id": "page6",
             "speaker": "ariana",
             "lines": [
-                "Enjoy yourself while you can... Hee hee hee..."
+                "Enjoy yourself while you can...\nHee hee hee..."
             ],
             "input": {
                 "type": "option",
@@ -136,44 +135,8 @@
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud -118 45 173 1 1 1 1 100');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-134,y=44,z=170,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-128,y=44,z=171,dy=3,type=cobblemon:npc] -800 -50000 -280');",
-                            "q.dialogue.set_page('page7');"
+                            "q.dialogue.next_page;"
                         ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page7",
-            "speaker": "lance",
-            "lines": [
-                "That did it. We defeated all the rockets here."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page8');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page8",
-            "speaker": "lance",
-            "lines": [
-                "But I'm concerned about the young guy I battled in the process..."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page9');"
                     }
                 ]
             }
@@ -182,7 +145,10 @@
             "id": "page9",
             "speaker": "lance",
             "lines": [
-                "Sorry. I saw how well you were doing, so I just hung back."
+                {
+                    "type": "expression",
+                    "expression": "'Sorry, ' + q.player.username + '. I saw how well you were doing, so I just hung back.'"
+                }
             ],
             "input": {
                 "type": "option",
@@ -191,7 +157,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page10');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -210,7 +176,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();"
+                            "q.dialogue.close;"
                         ]
                     }
                 ]

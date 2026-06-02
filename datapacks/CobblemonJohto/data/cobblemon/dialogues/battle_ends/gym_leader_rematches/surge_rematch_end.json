@@ -1,7 +1,6 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add SurgeRematch');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $6,720 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 6720');"
@@ -21,7 +20,7 @@
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["Oh no! You are very strong!"],
+      "lines": ["My electric trick..."],
             "input": {
                 "type": "option",
                 "vertical": false,
@@ -29,30 +28,17 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.npc.run_dialogue(q.player, 'surge_rematch_end_defeated');"
+                        ]
                     }
                 ]
             }
-        },
-        {
-          "id": "page2",
-          "speaker": "npc",
-          "lines": ["But I will repay my debt someday."],
-                "input": {
-                    "type": "option",
-                    "vertical": false,
-                    "options": [
-                        {
-                            "text": "Close",
-                            "value": "close",
-                            "action": [              
-                                "q.dialogue.close();"]
-                        }
-                    ]
-                }
-            }
+        }
     ],
-    "escapeAction": [              
+    "escapeAction": [
+      "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
       "q.dialogue.close();"
       ]
 }

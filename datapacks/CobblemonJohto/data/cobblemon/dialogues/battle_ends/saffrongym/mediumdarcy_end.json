@@ -1,7 +1,6 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $2,208 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 2208');"
         ],
@@ -20,7 +19,7 @@
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["Oops! I forgot that I predicted I would lose to you."],
+      "lines": ["Though I read you, I still lost..."],
             "input": {
                 "type": "option",
                 "vertical": false,

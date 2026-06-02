@@ -1,0 +1,66 @@
+{   "initializationAction": [              
+    "c.npc.set_chatting();",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $5,504 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 5504');"
+        ],
+  "speakers": {
+    "moe": {
+      "name": "Moe",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:youngcouplem",
+        "isLeftSide": true
+      }
+    },
+    "lulu": {
+      "name": "Lulu",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:youngcouplef",
+        "isLeftSide": false
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "moe",
+      "lines": ["Uwaaaahhh..."],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [              
+                            "q.dialogue.next_page;"]
+                    }
+                ]
+            }
+        },
+    {
+      "id": "page2",
+      "speaker": "lulu",
+      "lines": ["Eeek!"],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [              
+                            "q.dialogue.close();"]
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}

@@ -1,7 +1,8 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
+    "q.run_command('tag ' + q.player.username + ' add Dialogue20');",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+    "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 5');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,152 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 1152');"
         ],
@@ -21,7 +22,7 @@
       "id": "greeting",
       "speaker": "npc",
       "lines": [
-          "I hate the weak. Pokémon, Trainers. "
+          "...Humph!\nUseless Pokémon!"
       ],
       "input": {
           "type": "option",
@@ -30,16 +31,52 @@
               {
                   "text": "Next",
                   "value": "next",
-                  "action": "q.dialogue.set_page('page2');"
+                  "action": "q.dialogue.next_page;"
+              }
+          ]
+      }
+  },
+    {
+      "id": "page2",
+      "speaker": "npc",
+      "lines": [
+          "Listen, you. You won only because my Pokémon were weak."
+      ],
+      "input": {
+          "type": "option",
+          "vertical": false,
+          "options": [
+              {
+                  "text": "Next",
+                  "value": "next",
+                  "action": "q.dialogue.next_page;"
+              }
+          ]
+      }
+  },
+    {
+      "id": "page3",
+      "speaker": "npc",
+      "lines": [
+          "I hate the weak."
+      ],
+      "input": {
+          "type": "option",
+          "vertical": false,
+          "options": [
+              {
+                  "text": "Next",
+                  "value": "next",
+                  "action": "q.dialogue.next_page;"
               }
           ]
       }
   },
   {
-    "id": "page2",
+    "id": "page4",
     "speaker": "npc",
     "lines": [
-        "It doesn't matter who or what."
+        "Pokémon, Trainers.\nIt doesn't matter who or what."
     ],
     "input": {
         "type": "option",
@@ -48,52 +85,16 @@
             {
                 "text": "Next",
                 "value": "next",
-                "action": "q.dialogue.set_page('page3');"
+                "action": "q.dialogue.next_page;"
             }
         ]
     }
 },
 {
-  "id": "page3",
-  "speaker": "npc",
-  "lines": [
-      "I hate to see them hanging around."
-  ],
-  "input": {
-      "type": "option",
-      "vertical": false,
-      "options": [
-          {
-              "text": "Next",
-              "value": "next",
-              "action": "q.dialogue.set_page('page4');"
-          }
-      ]
-  }
-},
-{
-  "id": "page4",
-  "speaker": "npc",
-  "lines": [
-      "That goes for Team Rocket, too. They think they are big and tough as long as they are in a group."
-  ],
-  "input": {
-      "type": "option",
-      "vertical": false,
-      "options": [
-          {
-              "text": "Next",
-              "value": "next",
-              "action": "q.dialogue.set_page('page5');"
-          }
-      ]
-  }
-},
-{
   "id": "page5",
   "speaker": "npc",
   "lines": [
-      "But get them alone, and they're weak."
+      "I hate to see them hanging around.\nThat goes for Team Rocket, too."
   ],
   "input": {
       "type": "option",
@@ -102,7 +103,7 @@
           {
               "text": "Next",
               "value": "next",
-              "action": "q.dialogue.set_page('page6');"
+              "action": "q.dialogue.next_page;"
           }
       ]
   }
@@ -111,7 +112,7 @@
   "id": "page6",
   "speaker": "npc",
   "lines": [
-      "I hate them all. You stay out of my way."
+      "They think they are big and tough as long as they are in a group."
   ],
   "input": {
       "type": "option",
@@ -120,15 +121,33 @@
           {
               "text": "Next",
               "value": "next",
-              "action": "q.dialogue.set_page('page7');"
+              "action": "q.dialogue.next_page;"
+          }
+      ]
+  }
+},
+{
+  "id": "page7",
+  "speaker": "npc",
+  "lines": [
+      "But get them alone, and they're weak.\nI hate them all."
+  ],
+  "input": {
+      "type": "option",
+      "vertical": false,
+      "options": [
+          {
+              "text": "Next",
+              "value": "next",
+              "action": "q.dialogue.next_page;"
           }
       ]
   }
 },
     {
-      "id": "page7",
+      "id": "page8",
       "speaker": "npc",
-      "lines": ["You won't be an exception if you get in my way."],
+      "lines": ["You stay out of my way.\nYou won't be an exception if you get in my way."],
             "input": {
                 "type": "option",
                 "vertical": false,
@@ -136,9 +155,10 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [              
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.dialogue.close();",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue20');",
                             "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 95');"
                           ]
                     }
@@ -146,7 +166,5 @@
             }
         }
     ],
-    "escapeAction": [              
-      "q.dialogue.close();"
-      ]
+    "escapeAction": []
 }

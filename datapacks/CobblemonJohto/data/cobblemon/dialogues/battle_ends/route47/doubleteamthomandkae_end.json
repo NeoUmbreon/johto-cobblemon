@@ -1,12 +1,11 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $3,000 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 3000');"
         ],
   "speakers": {
-    "npc": {
+    "thom": {
       "name": "Thom",
       "face": {
         "type": "artificial",
@@ -14,13 +13,39 @@
         "identifier": "cobblemon:acetrainerm",
         "isLeftSide": true
       }
+    },
+    "kae": {
+      "name": "Kae",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:acetrainerf",
+        "isLeftSide": false
+      }
     }
   },
   "pages": [
     {
       "id": "greeting",
-      "speaker": "npc",
-      "lines": ["It seems your power is impossible to predict!"],
+      "speaker": "thom",
+      "lines": ["That wasn't what I expected..."],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [              
+                            "q.dialogue.next_page;"]
+                    }
+                ]
+            }
+        },
+    {
+      "id": "page2",
+      "speaker": "kae",
+      "lines": ["You're unusual, too!"],
             "input": {
                 "type": "option",
                 "vertical": false,

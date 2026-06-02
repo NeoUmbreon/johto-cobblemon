@@ -2,7 +2,6 @@
     "initializationAction": [
         "c.npc.set_chatting();",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $3,040 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 3040');"
     ],
@@ -31,7 +30,7 @@
             "id": "greeting",
             "speaker": "archer",
             "lines": [
-                "How could this be...? Our dreams have come to naught."
+                "No!\nForgive me, Giovanni!"
             ],
             "input": {
                 "type": "option",
@@ -40,7 +39,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -49,7 +48,25 @@
             "id": "page2",
             "speaker": "archer",
             "lines": [
-                "I was not up to the task after all."
+                "How could this be...?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "archer",
+            "lines": [
+                "Our dreams have come to naught.\nI was not up to the task after all."
             ],
             "input": {
                 "type": "option",
@@ -58,13 +75,13 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "page4",
             "speaker": "archer",
             "lines": [
                 "Like Giovanni has done before me, I will disband Team Rocket here today."
@@ -76,13 +93,13 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page4",
+            "id": "page5",
             "speaker": "archer",
             "lines": [
                 "Farewell..."
@@ -95,7 +112,7 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.dialogue.set_page('page5');",
+                            "q.dialogue.next_page;",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:story/rocket4');",
                             "q.run_command('execute as ' + q.player.username + ' run effect give @s minecraft:blindness 3 1 true');",
                             "q.run_command('execute as ' + q.player.username + ' at @s run tp @s ~ ~ ~-26');",
@@ -106,12 +123,12 @@
             }
         },
         {
-            "id": "page5",
+            "id": "page6",
             "speaker": "director",
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'' + q.player.username + ', thank you!';"
+                    "expression": "q.player.username + ', thank you!';"
                 }
             ],
             "input": {
@@ -121,13 +138,13 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page6');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page6",
+            "id": "page7",
             "speaker": "director",
             "lines": [
                 "Your courageous actions have saved Pokémon nationwide."
@@ -139,13 +156,13 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page7');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page7",
+            "id": "page8",
             "speaker": "director",
             "lines": [
                 "I know it's not much, but please take one of these."
@@ -217,7 +234,7 @@
             "id": "pickrainbow3",
             "speaker": "director",
             "lines": [
-                "I heard from a friend from Cianwood City that you can climb the Bell Tower in  Ecruteak City when you have a Rainbow Wing."
+                "I heard from a friend from Cianwood City that you can climb the Bell Tower in Ecruteak City when you have a Rainbow Wing."
             ],
             "input": {
                 "type": "option",

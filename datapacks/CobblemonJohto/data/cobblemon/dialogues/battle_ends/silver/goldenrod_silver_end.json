@@ -1,7 +1,8 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
+    "q.run_command('tag ' + q.player.username + ' add Dialogue68');",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+    "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 5');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $2,176 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 2176');"
         ],
@@ -21,7 +22,7 @@
       "id": "greeting",
       "speaker": "npc",
       "lines": [
-          "...I don't understand. Is what that Lance guy said true?"
+          "...Why...\nWhy do I lose?"
       ],
       "input": {
           "type": "option",
@@ -30,16 +31,70 @@
               {
                   "text": "Next",
                   "value": "next",
-                  "action": "q.dialogue.set_page('page2');"
+                  "action": "q.dialogue.next_page;"
+              }
+          ]
+      }
+  },
+    {
+      "id": "page2",
+      "speaker": "npc",
+      "lines": [
+          "I've assembled the toughest Pokémon.\nI didn't ease up on the gas."
+      ],
+      "input": {
+          "type": "option",
+          "vertical": false,
+          "options": [
+              {
+                  "text": "Next",
+                  "value": "next",
+                  "action": "q.dialogue.next_page;"
+              }
+          ]
+      }
+  },
+    {
+      "id": "page3",
+      "speaker": "npc",
+      "lines": [
+          "So why do I lose?"
+      ],
+      "input": {
+          "type": "option",
+          "vertical": false,
+          "options": [
+              {
+                  "text": "Next",
+                  "value": "next",
+                  "action": "q.dialogue.next_page;"
+              }
+          ]
+      }
+  },
+    {
+      "id": "page4",
+      "speaker": "npc",
+      "lines": [
+          "...I don't understand."
+      ],
+      "input": {
+          "type": "option",
+          "vertical": false,
+          "options": [
+              {
+                  "text": "Next",
+                  "value": "next",
+                  "action": "q.dialogue.next_page;"
               }
           ]
       }
   },
   {
-    "id": "page2",
+    "id": "page5",
     "speaker": "npc",
     "lines": [
-        "That I don't treat Pokémon properly?"
+        "Is what that Lance guy said true?\nThat I don't treat Pokémon properly?"
     ],
     "input": {
         "type": "option",
@@ -48,70 +103,16 @@
             {
                 "text": "Next",
                 "value": "next",
-                "action": "q.dialogue.set_page('page3');"
+                "action": "q.dialogue.next_page;"
             }
         ]
     }
 },
 {
-  "id": "page3",
-  "speaker": "npc",
-  "lines": [
-      "Love... Trust... Are they really what I lack?"
-  ],
-  "input": {
-      "type": "option",
-      "vertical": false,
-      "options": [
-          {
-              "text": "Next",
-              "value": "next",
-              "action": "q.dialogue.set_page('page4');"
-          }
-      ]
-  }
-},
-{
-  "id": "page4",
-  "speaker": "npc",
-  "lines": [
-      "Are they keeping me from winning?"
-  ],
-  "input": {
-      "type": "option",
-      "vertical": false,
-      "options": [
-          {
-              "text": "Next",
-              "value": "next",
-              "action": "q.dialogue.set_page('page5');"
-          }
-      ]
-  }
-},
-{
-  "id": "page5",
-  "speaker": "npc",
-  "lines": [
-      "I... I just don't understand. But it's not going to end here."
-  ],
-  "input": {
-      "type": "option",
-      "vertical": false,
-      "options": [
-          {
-              "text": "Next",
-              "value": "next",
-              "action": "q.dialogue.set_page('page6');"
-          }
-      ]
-  }
-},
-{
   "id": "page6",
   "speaker": "npc",
   "lines": [
-      "Not now. Not because of this."
+      "Love..."
   ],
   "input": {
       "type": "option",
@@ -120,13 +121,67 @@
           {
               "text": "Next",
               "value": "next",
-              "action": "q.dialogue.set_page('page7');"
+              "action": "q.dialogue.next_page;"
+          }
+      ]
+  }
+},
+{
+  "id": "page7",
+  "speaker": "npc",
+  "lines": [
+      "Trust..."
+  ],
+  "input": {
+      "type": "option",
+      "vertical": false,
+      "options": [
+          {
+              "text": "Next",
+              "value": "next",
+              "action": "q.dialogue.next_page;"
+          }
+      ]
+  }
+},
+{
+  "id": "page8",
+  "speaker": "npc",
+  "lines": [
+      "Are they really what I lack?\nAre they keeping me from winning?"
+  ],
+  "input": {
+      "type": "option",
+      "vertical": false,
+      "options": [
+          {
+              "text": "Next",
+              "value": "next",
+              "action": "q.dialogue.next_page;"
+          }
+      ]
+  }
+},
+{
+  "id": "page9",
+  "speaker": "npc",
+  "lines": [
+      "I... I just don't understand. But it's not going to end here. Not now.\nNot because of this."
+  ],
+  "input": {
+      "type": "option",
+      "vertical": false,
+      "options": [
+          {
+              "text": "Next",
+              "value": "next",
+              "action": "q.dialogue.next_page;"
           }
       ]
   }
 },
     {
-      "id": "page7",
+      "id": "page10",
       "speaker": "npc",
       "lines": ["I won't give up my dream of becoming the world's best Pokémon Trainer!"],
             "input": {
@@ -136,9 +191,10 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [              
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.dialogue.close();",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue68');",
                             "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 96');"
                           ]
                     }
@@ -146,7 +202,5 @@
             }
         }
     ],
-    "escapeAction": [              
-      "q.dialogue.close();"
-      ]
+    "escapeAction": []
 }
