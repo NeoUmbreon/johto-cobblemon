@@ -50,8 +50,8 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}",
-                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/kanto/badge7');",
                             "q.dialogue.next_page;"
                         ]

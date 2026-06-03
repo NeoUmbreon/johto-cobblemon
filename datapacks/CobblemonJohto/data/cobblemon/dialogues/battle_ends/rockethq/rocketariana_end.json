@@ -8,7 +8,7 @@
     ],
     "speakers": {
         "ariana": {
-            "name": "Rocket Admin Ariana",
+            "name": "Ariana",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",

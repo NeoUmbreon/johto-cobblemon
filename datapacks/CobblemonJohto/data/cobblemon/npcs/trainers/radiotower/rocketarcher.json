@@ -11,7 +11,7 @@
         "type": "dialogue",
         "dialogue": "cobblemon:rocketarcher_interaction"
     },
-        "name": "Team Rocket Archer",
+        "name": "Archer",
         "party": {
         "type": "simple",
         "pokemon": [

@@ -7,7 +7,7 @@
     ],
     "speakers": {
         "archer": {
-            "name": "Rocket Admin Archer",
+            "name": "Archer",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",

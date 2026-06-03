@@ -24,7 +24,7 @@
           "id": "greeting",
           "speaker": "npc",
           "lines": [
-              "You and your Pokémon should have no problem using this move."
+              "Ah, excellent!"
           ],
           "input": {
               "type": "option",
@@ -33,7 +33,7 @@
                   {
                       "text": "Next",
                       "value": "next",
-                      "action": "q.dialogue.set_page('page2');"
+                      "action": "q.dialogue.next_page;"
                   }
               ]
           }
@@ -42,7 +42,7 @@
           "id": "page2",
           "speaker": "npc",
           "lines": [
-              "Take this Flash HM."
+              "Hmmm...\nThe way you battle is quite elegant."
           ],
           "input": {
               "type": "option",
@@ -51,7 +51,7 @@
                   {
                       "text": "Next",
                       "value": "next",
-                      "action": "q.dialogue.set_page('page3');"
+                      "action": "q.dialogue.next_page;"
                   }
               ]
           }
@@ -60,7 +60,7 @@
           "id": "page3",
           "speaker": "npc",
           "lines": [
-              "Flash illuminates even the darkest of all places."
+              "You should be able to stand up to Falkner."
           ],
           "input": {
               "type": "option",
@@ -69,7 +69,7 @@
                   {
                       "text": "Next",
                       "value": "next",
-                      "action": "q.dialogue.set_page('page4');"
+                      "action": "q.dialogue.next_page;"
                   }
               ]
           }
@@ -78,7 +78,43 @@
           "id": "page4",
           "speaker": "npc",
           "lines": [
-              "I hope you learn and grow from your journey."
+              "And you should be able to make good use of this..."
+          ],
+          "input": {
+              "type": "option",
+              "vertical": false,
+              "options": [
+                  {
+                      "text": "Next",
+                      "value": "next",
+                      "action": "q.dialogue.next_page;"
+                  }
+              ]
+          }
+      },
+      {
+          "id": "page5",
+          "speaker": "npc",
+          "lines": [
+              "It is a Technical Machine called Flash. Take it with you!"
+          ],
+          "input": {
+              "type": "option",
+              "vertical": false,
+              "options": [
+                  {
+                      "text": "Next",
+                      "value": "next",
+                      "action": "q.dialogue.next_page;"
+                  }
+              ]
+          }
+      },
+      {
+          "id": "page6",
+          "speaker": "npc",
+          "lines": [
+              "With Flash, you can illuminate caves no matter how dark they may be."
           ],
           "input": {
               "type": "option",

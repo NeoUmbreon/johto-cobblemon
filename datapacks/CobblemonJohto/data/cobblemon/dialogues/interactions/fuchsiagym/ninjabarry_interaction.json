@@ -7,22 +7,52 @@
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.dialogue.close();"
         ],
-    "names": ["???"],
     "speakers": {
-        "npc": {
-            "name": {
-                "type": "expression",
-                "expression": "q.npc.name"
-            },
-            "face": "q.npc.face();"
+        "janine": {
+            "name": "Janine",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:janine",
+                "isLeftSide": true
+            }
+        },
+        "barry": {
+            "name": "Barry",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:camper",
+                "isLeftSide": true
+            }
         }
     },
     "pages": [
         {
             "id": "greeting",
-            "speaker": "npc",
+            "speaker": "barry",
             "lines": [
-                "Wahahaha! You betcha! I'm Janine!"
+                "Wahahaha!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "barry",
+            "lines": [
+                "You betcha! I'm Janine!"
             ],
             "input": {
                 "type": "option",

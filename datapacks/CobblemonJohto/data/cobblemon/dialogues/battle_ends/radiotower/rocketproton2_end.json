@@ -6,11 +6,11 @@
         ],
   "speakers": {
     "npc": {
-      "name": "Team Rocket Proton",
+      "name": "Proton",
       "face": {
         "type": "artificial",
         "modelType": "npc",
-        "identifier": "cobblemon:rocketgrunt",
+        "identifier": "cobblemon:proton",
         "isLeftSide": true
       }
     }

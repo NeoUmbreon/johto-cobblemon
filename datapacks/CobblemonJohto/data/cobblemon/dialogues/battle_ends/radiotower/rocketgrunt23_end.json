@@ -7,7 +7,7 @@
         ],
   "speakers": {
     "npc": {
-      "name": "Rocket Grunt",
+      "name": "Petrel",
       "face": {
         "type": "artificial",
         "modelType": "npc",

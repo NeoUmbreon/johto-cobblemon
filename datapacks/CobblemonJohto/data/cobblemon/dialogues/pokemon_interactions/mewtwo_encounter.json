@@ -19,7 +19,7 @@
             "id": "greeting",
             "speaker": "pokemon",
             "lines": [
-                "Vraaa-wooooom…"
+                "Vraaa-wooooom..."
             ],
             "input": {
                 "type": "option",

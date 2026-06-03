@@ -426,10 +426,10 @@ def main():
 
     for trainer_id, folder in processed:
 
-        is_gym_leader = "gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower()
+        #is_gym_leader = "gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower()
 
-        if not is_gym_leader:
-            generate_battle_end_copy(trainer_id, folder)
+        #if not is_gym_leader:
+        #    generate_battle_end_copy(trainer_id, folder)
 
         update_trainer_entity(trainer_id, folder)
 

@@ -21,7 +21,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "So here you are… Don’t make me wait!"
+                "So here you are... Don’t make me wait!"
             ],
             "input": {
                 "type": "option",

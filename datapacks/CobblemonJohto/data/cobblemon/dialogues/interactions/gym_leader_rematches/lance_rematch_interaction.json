@@ -68,7 +68,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "As the most powerful Trainer and as the Pokémon League Champion… "
+                "As the most powerful Trainer and as the Pokémon League Champion... "
             ],
             "input": {
                 "type": "option",
