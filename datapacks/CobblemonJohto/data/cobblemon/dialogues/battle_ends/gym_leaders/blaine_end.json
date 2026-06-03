@@ -2,7 +2,6 @@
     "initializationAction": [
         "c.npc.set_chatting();",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
-        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add Blaine');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $7,080 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 7080');"
@@ -23,7 +22,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Awesome. I have burned out..."
+                "My spirit has not been defeated!"
             ],
             "input": {
                 "type": "option",
@@ -32,7 +31,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -41,7 +40,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Take this Volcano Badge! "
+                "Awesome. I have burned out...\nTake this Volcano Badge!"
             ],
             "input": {
                 "type": "option",
@@ -51,8 +50,10 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/kanto/badge7');",
-                            "q.dialogue.set_page('page3');"
+                            "q.dialogue.next_page;"
                         ]
                     }
                 ]
@@ -62,7 +63,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "I did lose this time, but I'm going to win next time. "
+                "I did lose this time, but I'm going to win next time."
             ],
             "input": {
                 "type": "option",
@@ -71,7 +72,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -81,24 +82,6 @@
             "speaker": "npc",
             "lines": [
                 "When I rebuild my Cinnabar Gym, we have to hold a rematch."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page5",
-            "speaker": "npc",
-            "lines": [
-                "My Fire-type Pokémon will be even stronger! Just you watch!"
             ],
             "input": {
                 "type": "option",
@@ -115,6 +98,5 @@
             }
         }
     ],
-    "escapeAction": [
-    ]
+    "escapeAction": []
 }

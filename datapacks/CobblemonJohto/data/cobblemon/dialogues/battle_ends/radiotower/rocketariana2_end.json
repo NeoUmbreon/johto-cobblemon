@@ -1,13 +1,12 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $2,560 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 2560');"
         ],
   "speakers": {
     "npc": {
-      "name": "Rocket Admin Ariana",
+      "name": "Ariana",
       "face": {
         "type": "artificial",
         "modelType": "npc",
@@ -17,26 +16,10 @@
     }
   },
   "pages": [
-    {
-      "id": "greeting",
-      "speaker": "npc",
-      "lines": ["What a waste... not to use your strength to do bad things! Feh... "],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
-                    }
-                ]
-            }
-        },
         {
           "id": "page2",
           "speaker": "npc",
-          "lines": ["People like you will never in a million years understand our brilliance!"],
+          "lines": ["Aaaieeeee!\nThis can't be happening!"],
                 "input": {
                     "type": "option",
                     "vertical": false,
@@ -44,7 +27,7 @@
                         {
                             "text": "Next",
                             "value": "next",
-                            "action": "q.dialogue.set_page('page3');"
+                            "action": "q.dialogue.next_page;"
                         }
                     ]
                 }
@@ -52,7 +35,7 @@
         {
           "id": "page3",
           "speaker": "npc",
-          "lines": ["It's too bad... I've really come to respect your strength."],
+          "lines": ["I fought hard, but I still lost..."],
                 "input": {
                     "type": "option",
                     "vertical": false,

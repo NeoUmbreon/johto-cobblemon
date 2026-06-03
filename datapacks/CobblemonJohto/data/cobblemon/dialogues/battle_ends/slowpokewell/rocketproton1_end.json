@@ -1,13 +1,12 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $480 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 480');"
         ],
   "speakers": {
     "npc": {
-      "name": "Team Rocket Proton",
+      "name": "Proton",
       "face": {
         "type": "artificial",
         "modelType": "npc",

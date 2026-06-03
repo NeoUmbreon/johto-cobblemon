@@ -22,7 +22,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Uh-oh… Where am I now?"
+                "Uh-oh... Where am I now?"
             ],
             "input": {
                 "type": "option",

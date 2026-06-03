@@ -1,7 +1,8 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
+    "q.run_command('tag ' + q.player.username + ' add Dialogue35');",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+    "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 5');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,408 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 1408');"
         ],
@@ -21,6 +22,42 @@
       "id": "greeting",
       "speaker": "npc",
       "lines": [
+          "...Humph!"
+      ],
+      "input": {
+          "type": "option",
+          "vertical": false,
+          "options": [
+              {
+                  "text": "Next",
+                  "value": "next",
+                  "action": "q.dialogue.next_page;"
+              }
+          ]
+      }
+  },
+    {
+      "id": "page2",
+      "speaker": "npc",
+      "lines": [
+          "I'm not fighting with another weakling ever again. It's just too much playing around."
+      ],
+      "input": {
+          "type": "option",
+          "vertical": false,
+          "options": [
+              {
+                  "text": "Next",
+                  "value": "next",
+                  "action": "q.dialogue.next_page;"
+              }
+          ]
+      }
+  },
+    {
+      "id": "page3",
+      "speaker": "npc",
+      "lines": [
           "...Aw, whatever."
       ],
       "input": {
@@ -30,13 +67,13 @@
               {
                   "text": "Next",
                   "value": "next",
-                  "action": "q.dialogue.set_page('page2');"
+                  "action": "q.dialogue.next_page;"
               }
           ]
       }
   },
     {
-      "id": "page2",
+      "id": "page4",
       "speaker": "npc",
       "lines": ["You would never be able to catch a legendary Pokémon anyway."],
             "input": {
@@ -46,9 +83,10 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [              
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.dialogue.close();",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue35');",
                             "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 97');"
                           ]
                     }
@@ -56,7 +94,5 @@
             }
         }
     ],
-    "escapeAction": [              
-      "q.dialogue.close();"
-      ]
+    "escapeAction": []
 }

@@ -1,0 +1,52 @@
+{
+  "speakers": {
+    "npc": {
+      "name": "Morty",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:morty",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["I've lost again..."],
+                "input": {
+                    "type": "option",
+                    "vertical": false,
+                    "options": [
+                        {
+                            "text": "Next",
+                            "value": "next",
+                            "action": [              
+                                "q.dialogue.next_page;"]
+                        }
+                    ]
+                }
+            },
+    {
+      "id": "page2",
+      "speaker": "npc",
+      "lines": ["You may have something more than just strength."],
+                "input": {
+                    "type": "option",
+                    "vertical": false,
+                    "options": [
+                        {
+                            "text": "Close",
+                            "value": "close",
+                            "action": [              
+                                "q.dialogue.close();"]
+                        }
+                    ]
+                }
+            }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}

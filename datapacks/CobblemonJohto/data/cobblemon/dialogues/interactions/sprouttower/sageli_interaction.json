@@ -21,7 +21,7 @@
         {
             "id": "greeting",
             "speaker": "npc",
-            "lines": ["So good of you to come here! Sprout Tower is a place of training. People and Pokémon test their bonds to build a bright future together."],
+            "lines": ["So good of you to come here!"],
                   "input": {
                       "type": "option",
                       "vertical": false,
@@ -29,16 +29,32 @@
                           {
                               "text": "Next",
                               "value": "next",
-                              "action": "q.dialogue.set_page('page2');"
+                              "action": "q.dialogue.next_page;"
+                          }
+                      ]
+                  }
+              },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": ["Sprout Tower is a place of training.\nPeople and Pokémon test their bonds to build a bright future together.\nI am the final test."],
+                  "input": {
+                      "type": "option",
+                      "vertical": false,
+                      "options": [
+                          {
+                              "text": "Next",
+                              "value": "next",
+                              "action": "q.dialogue.next_page;"
                           }
                       ]
                   }
               },
           {
-              "id": "page2",
+              "id": "page3",
               "speaker": "npc",
               "lines": [
-                  "I am the final test. Allow me to check the ties between you and your Pokémon!"
+                  "Allow me to check the ties between you and your Pokémon!"
               ],
               "input": {
                   "type": "option",

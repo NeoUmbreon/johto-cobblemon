@@ -11,7 +11,7 @@
         "type": "dialogue",
         "dialogue": "cobblemon:rocketproton1_interaction"
     },
-        "name": "Rocket Admin Proton",
+        "name": "Proton",
         "party": {
         "type": "simple",
         "pokemon": [

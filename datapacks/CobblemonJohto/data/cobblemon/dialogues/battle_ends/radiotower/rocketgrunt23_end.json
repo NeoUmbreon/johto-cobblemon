@@ -1,14 +1,13 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue66');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 1200');"
         ],
   "speakers": {
     "npc": {
-      "name": "Rocket Grunt",
+      "name": "Petrel",
       "face": {
         "type": "artificial",
         "modelType": "npc",
@@ -29,7 +28,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -37,7 +36,7 @@
         {
           "id": "page2",
           "speaker": "npc",
-          "lines": ["We stashed the Director in the underground warehouse. It's at the far end of the Goldenrod Tunnel. "],
+          "lines": ["Listen carefully."],
                 "input": {
                     "type": "option",
                     "vertical": false,
@@ -45,15 +44,47 @@
                         {
                             "text": "Next",
                             "value": "next",
-                            "action": "q.dialogue.set_page('page3');"
+                            "action": "q.dialogue.next_page;"
                         }
                     ]
                 }
-            },
+        },
         {
           "id": "page3",
           "speaker": "npc",
-          "lines": ["Hahaha... I doubt a child like you'll get that far."],
+          "lines": ["We stashed the real Director in the underground warehouse. It's at the far end of the Goldenrod Tunnel."],
+                "input": {
+                    "type": "option",
+                    "vertical": false,
+                    "options": [
+                        {
+                            "text": "Next",
+                            "value": "next",
+                            "action": "q.dialogue.next_page;"
+                        }
+                    ]
+                }
+        },
+        {
+          "id": "page4",
+          "speaker": "npc",
+          "lines": ["I am a nice guy. I will give you the Basement Key to get to the underground warehouse."],
+                "input": {
+                    "type": "option",
+                    "vertical": false,
+                    "options": [
+                        {
+                            "text": "Next",
+                            "value": "next",
+                            "action": "q.dialogue.next_page;"
+                        }
+                    ]
+                }
+        },
+        {
+          "id": "page5",
+          "speaker": "npc",
+          "lines": ["Take it with gratitude!"],
                 "input": {
                     "type": "option",
                     "vertical": false,
@@ -67,9 +98,7 @@
                         }
                     ]
                 }
-            }
+        }
     ],
-    "escapeAction": [              
-      "q.dialogue.close();"
-      ]
+    "escapeAction": []
 }

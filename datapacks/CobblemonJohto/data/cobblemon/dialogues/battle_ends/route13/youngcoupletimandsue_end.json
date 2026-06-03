@@ -1,0 +1,66 @@
+{   "initializationAction": [              
+    "c.npc.set_chatting();",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $5,888 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 5888');"
+        ],
+  "speakers": {
+    "tim": {
+      "name": "Tim",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:youngcouplem",
+        "isLeftSide": true
+      }
+    },
+    "sue": {
+      "name": "Sue",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:youngcouplef",
+        "isLeftSide": false
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "tim",
+      "lines": ["You're the strongest!"],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [              
+                            "q.dialogue.next_page;"]
+                    }
+                ]
+            }
+        },
+    {
+      "id": "page2",
+      "speaker": "sue",
+      "lines": ["Wa ha..."],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [              
+                            "q.dialogue.close();"]
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}

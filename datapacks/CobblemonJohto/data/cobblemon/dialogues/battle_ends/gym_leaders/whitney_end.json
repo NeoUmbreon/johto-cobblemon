@@ -3,7 +3,6 @@
         "c.npc.set_chatting();",
         "q.run_command('execute as @e[x=-1007,y=64,z=529,dx=109,dy=12,dz=98,type=cobblemon:npc] if data entity @s Config.trainer_id run runmolangscript johto:clear_gym ' + q.player.username + ' @s');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
-        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add Whitney');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $2,280 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 2280');"
@@ -33,7 +32,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -42,7 +41,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Waaaaah! Waaaaah! ...Snivel, hic. ... You meanie!"
+                "Waaaaah!"
             ],
             "input": {
                 "type": "option",
@@ -51,7 +50,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -60,7 +59,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Sniff... What? What do you want?"
+                "Waaaaah!"
             ],
             "input": {
                 "type": "option",
@@ -69,7 +68,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -78,7 +77,61 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "A Badge? Oh, right. I forgot. Here's the Plain Badge."
+                "...Snivel, hic.\n...You meanie!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "Sniff..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "What? What do you want? A Badge?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "Oh, right. I forgot.\nHere's the Plain Badge."
             ],
             "input": {
                 "type": "option",
@@ -88,6 +141,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/badge3');",
                             "q.dialogue.close();"
                         ]

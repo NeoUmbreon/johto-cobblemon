@@ -7,22 +7,52 @@
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.dialogue.close();"
         ],
-    "names": ["???"],
     "speakers": {
-        "npc": {
-            "name": {
-                "type": "expression",
-                "expression": "q.npc.name"
-            },
-            "face": "q.npc.face();"
+        "janine": {
+            "name": "Janine",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:janine",
+                "isLeftSide": true
+            }
+        },
+        "cindy": {
+            "name": "Cindy",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:picknicker",
+                "isLeftSide": true
+            }
         }
     },
     "pages": [
         {
             "id": "greeting",
-            "speaker": "npc",
+            "speaker": "janine",
             "lines": [
-                "I'm Janine! How did you know I was real? Let's battle!"
+                "I'm Janine!\nHow did you know I was real?\nLet's battle!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "cindy",
+            "lines": [
+                "Or not!"
             ],
             "input": {
                 "type": "option",

@@ -11,7 +11,7 @@
         "type": "dialogue",
         "dialogue": "cobblemon:rocketariana_interaction"
     },
-        "name": "Rocket Admin Ariana",
+        "name": "Ariana",
         "party": {
         "type": "simple",
         "pokemon": [

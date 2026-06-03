@@ -7,7 +7,6 @@
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.dialogue.close();"
         ],
-    "names": ["Rocket Admin Proton"],
     "speakers": {
         "npc": {
             "name": {

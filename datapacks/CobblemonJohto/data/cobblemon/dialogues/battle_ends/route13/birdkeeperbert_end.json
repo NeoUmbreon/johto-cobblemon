@@ -1,13 +1,12 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,312 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
     "q.run_command('scoreboard players add ' + q.player.username + ' Money 1312');"
         ],
   "speakers": {
     "npc": {
-      "name": "Bert",
+      "name": "Bret",
       "face": {
         "type": "artificial",
         "modelType": "npc",
@@ -20,7 +19,7 @@
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["If you groom them, Pokémon get happy."],
+      "lines": ["Shoot!\nNot good enough!"],
             "input": {
                 "type": "option",
                 "vertical": false,

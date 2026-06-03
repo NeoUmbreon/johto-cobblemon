@@ -11,7 +11,7 @@
         "type": "dialogue",
         "dialogue": "cobblemon:rocketariana2_interaction"
     },
-        "name": "Team Rocket Ariana",
+        "name": "Ariana",
         "party": {
         "type": "simple",
         "pokemon": [

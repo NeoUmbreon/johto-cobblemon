@@ -2,7 +2,6 @@
     "initializationAction": [
         "c.npc.set_chatting();",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 3');",
-        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add Lance');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $10,000 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 10000');"
@@ -23,7 +22,7 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "...Whew. You have become truly powerful."
+                "...It's over."
             ],
             "input": {
                 "type": "option",
@@ -32,13 +31,91 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
             "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "But it's an odd feeling. I'm not angry that I lost. In fact, I feel happy."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Happy that I witnessed the rise of a great new Champion!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "...Whew."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'You have become truly powerful, ' + q.player.username + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
             "speaker": "npc",
             "lines": [
                 "Your Pokémon have responded to your strong and upstanding nature."
@@ -50,13 +127,13 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "page7",
             "speaker": "npc",
             "lines": [
                 "As a Trainer, you will continue to grow strong with your Pokémon."
@@ -68,15 +145,14 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [
-                            "q.dialogue.close();"
-                        ]
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }
         }
     ],
     "escapeAction": [
+        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.dialogue.close();"
     ]
 }

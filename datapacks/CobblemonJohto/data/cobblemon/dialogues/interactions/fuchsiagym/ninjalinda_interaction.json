@@ -7,22 +7,32 @@
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
         "q.dialogue.close();"
         ],
-    "names": ["???"],
     "speakers": {
-        "npc": {
-            "name": {
-                "type": "expression",
-                "expression": "q.npc.name"
-            },
-            "face": "q.npc.face();"
+        "janine": {
+            "name": "Janine",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:janine",
+                "isLeftSide": true
+            }
+        },
+        "linda": {
+            "name": "Linda",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:lass",
+                "isLeftSide": true
+            }
         }
     },
     "pages": [
         {
             "id": "greeting",
-            "speaker": "npc",
+            "speaker": "linda",
             "lines": [
-                "Fooled you! Hahaha!"
+                "Fooled you!\nHahaha!"
             ],
             "input": {
                 "type": "option",

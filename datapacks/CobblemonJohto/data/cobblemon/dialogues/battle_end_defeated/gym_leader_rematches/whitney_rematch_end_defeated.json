@@ -1,0 +1,34 @@
+{
+  "speakers": {
+    "npc": {
+      "name": "Whitney",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:whitney",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["You really are strong!\nBut I won't lose next time!"],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        }
+    ],
+    "escapeAction": [              
+      "q.dialogue.close();"
+      ]
+}
