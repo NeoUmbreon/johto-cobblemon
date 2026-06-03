@@ -1,5 +1,5 @@
 {   "initializationAction": [              
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 9');",
+    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 6');",
     "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');"
         ],
     "escapeAction": [              

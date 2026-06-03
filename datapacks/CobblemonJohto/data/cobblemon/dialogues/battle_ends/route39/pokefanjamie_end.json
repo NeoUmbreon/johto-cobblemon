@@ -10,7 +10,7 @@
       "face": {
         "type": "artificial",
         "modelType": "npc",
-        "identifier": "cobblemon:pokefan",
+        "identifier": "cobblemon:pokefanf",
         "isLeftSide": true
       }
     }
