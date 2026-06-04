@@ -1,20 +1,13 @@
-{   "initializationAction": [              
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 4');",
-    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');"
-        ],
-    "escapeAction": [              
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-        "q.dialogue.close();"
-        ],
-    "names": ["Moe"],
+{
     "speakers": {
         "npc": {
-            "name": {
-                "type": "expression",
-                "expression": "q.npc.name"
-            },
-            "face": "q.npc.face();"
+            "name": "Moe",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:youngcouplem",
+                "isLeftSide": true
+            }
         }
     },
     "pages": [
@@ -22,31 +15,21 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Do I look weak? Don't make me laugh! When I'm with Lulu, I've got a hundred times more courage!"
+                "You don't have enough Pokémon to fight with us."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "§c⚔ Battle ⚔§r",
-                        "value": "battle",
-                        "action": [                           
-                                    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 11');",
-                                    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-                                    "v.battle = q.npc.start_battle(q.player);"
-                            ]
-                    },
-                    {
-                        "text": "No",
-                        "value": "no",
-                        "action": [              
-                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
-                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-                            "q.dialogue.close();"]
-                        }
-                    ]
-                }
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
             }
-        ]
-    }
+        }
+    ]
+}

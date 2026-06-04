@@ -40,11 +40,11 @@
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue azalea_silver_end @s');"
         },
         {
-            "variableName": "tags",
-            "displayName": "Required Tags",
-            "description": "Tag(s) the player must have to battle this Trainer.",
+            "variableName": "requirements",
+            "displayName": "Requirements",
+            "description": "Boolean expression (stored as a string) that must evaluate to true in order for the player to battle this NPC.",
             "type": "TEXT",
-            "defaultValue": "q.array('Dialogue16')"
+            "defaultValue": "q.player.has_tag('Dialogue16')"
         }
     ],
     "ai": [

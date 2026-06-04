@@ -215,12 +215,13 @@ def build_battle_action(trainer_id: str, folder: str):
     battle_id = get_battle_music(trainer_id, folder)
 
     actions = [
-        "q.get_variable(q.file.load('data/molang/config.json'), 'hotReload') == true ? q.file.clear('data/molang/config.json');",
+        "q.set_query('config', q.file.load('data/molang/config.json'));",
+        "q.config.hot_reload ? q.file.clear('data/molang/config.json');",
         "v.format = ( q.npc.config.doubles == 0 ? 'singles' : 'doubles' );",
         "q.player.remove_tag('InDialogue');",
         f"q.run_command('scoreboard players set ' + q.player.username + ' BattleStart {battle_id}');",
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-        "q.get_variable(q.file.load('data/molang/config.json'), 'challengeMode') == true ? { q.run_script('johto:instantiate_rctapi_trainer') == 0 ? q.npc.start_battle(q.player, v.format); } : q.npc.start_battle(q.player, v.format);",
+        "!q.config.challenge_mode || !q.run_script('johto:instantiate_rctapi_trainer') ? q.npc.start_battle(q.player, v.format);",
         "q.dialogue.close;"
     ]
 

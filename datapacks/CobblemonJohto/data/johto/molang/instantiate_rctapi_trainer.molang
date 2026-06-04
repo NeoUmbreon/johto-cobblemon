@@ -1,7 +1,7 @@
 q.player == 0 || q.npc == 0 || !q.file.exists('data/molang/players/' + q.player.uuid + '.json') ? return 0;
 
 'fetch json name';
-t.trainer_id = q.get_variable(q.split_string(q.npc.class, 'cobblemon:'), '1');
+t.trainer_id = q.npc.config.trainer_id;
 q.is_included(t.trainer_id, 'silver') ? { t.trainer_id = t.trainer_id + math.clamp(q.to_int(q.player.data.starter.species), 1, 3) };
 
 'fallback to regular party if challenge json missing';
@@ -26,7 +26,7 @@ for_each(t.raw_data, t.trainer.party, {
 
     t.pokemon_out.nature = ( t.raw_data.nature != 0 ? t.raw_data.nature : q.random('hardy','docile','bashful','quirky','serious') );
     t.pokemon_out.ability = ( t.raw_data.ability != 0 ? t.raw_data.ability : q.pokemon_in.ability );
-    t.raw_data.ivs != 0 && q.is_int(t.raw_data.ivs) ? { for_each(t.stat, q.array('hp','atk','def','spa','spd','spe'), { q.set_variable(t.pokemon_out.ivs, t.stat, t.raw_data.ivs); }); };
+    t.raw_data.ivs != 0 && q.is_int(t.raw_data.ivs) ? { t.pokemon_out.ivs.hp = 0; for_each(t.stat, q.array('hp','atk','def','spa','spd','spe'), { q.set_variable(t.pokemon_out.ivs, t.stat, t.raw_data.ivs); }); };
     q.length(t.raw_data.evs) != 0 ? { t.pokemon_out.evs = t.raw_data.evs };
     t.raw_data.helditem != 0 ? { q.set_variable(t.pokemon_out, 'heldItem', t.raw_data.helditem) };
     t.pokemon_out.moveset = q.array();
@@ -59,6 +59,6 @@ t.trainer.name != 0 ? { t.rct_trainer.name = t.trainer.name } : { t.rct_trainer.
 q.file.save('data/molang/players/' + q.player.uuid + '.json', t.rct_trainer);
 
 q.run_command('tbcs reload tbcs:' + q.player.uuid);
-q.run_command('tbcs battle GEN_9_SINGLES ' + q.player.uuid + ' vs ' + q.npc.uuid + ' as tbcs:' + q.player.uuid);
+q.run_command('tbcs battle GEN_9_' + q.to_upper(v.format) + ' ' + q.player.uuid + ' vs ' + q.npc.uuid + ' as tbcs:' + q.player.uuid);
 
 return 1;

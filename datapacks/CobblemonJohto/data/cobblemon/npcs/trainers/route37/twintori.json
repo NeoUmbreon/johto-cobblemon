@@ -11,11 +11,12 @@
         "type": "dialogue",
         "dialogue": "cobblemon:twintori_interaction"
     },
-        "name": "Tori",
+        "name": "Tori & Til",
         "party": {
         "type": "simple",
         "pokemon": [
-            "Marill level=16"
+            "Marill level=16",
+            "Mareep level=16"
         ]
     },
     "config": [
@@ -39,7 +40,21 @@
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue twintori_end @s');"
-          }
+        },
+        {
+            "variableName": "doubles",
+            "displayName": "Doubles",
+            "description": "",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "trainer_id",
+            "displayName": "npc.variable.trainer_id.name",
+            "description": "npc.variable.trainer_id.desc",
+            "type": "TEXT",
+            "defaultValue": "twinstoriandtil"
+        }
     ],
     "ai": [
 

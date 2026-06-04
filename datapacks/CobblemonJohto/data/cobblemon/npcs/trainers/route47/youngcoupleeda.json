@@ -11,10 +11,11 @@
         "type": "dialogue",
         "dialogue": "cobblemon:youngcoupleeda_interaction"
     },
-        "name": "Eda",
+        "name": "Duff & Eda",
         "party": {
         "type": "simple",
         "pokemon": [
+            "Cloyster level=22",
             "Onix level=22"
         ]
     },
@@ -39,7 +40,21 @@
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue youngcoupleeda_end @s');"
-          }
+        },
+        {
+            "variableName": "doubles",
+            "displayName": "Doubles",
+            "description": "",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "trainer_id",
+            "displayName": "npc.variable.trainer_id.name",
+            "description": "npc.variable.trainer_id.desc",
+            "type": "TEXT",
+            "defaultValue": "youngcoupleduffandeda"
+        }
     ],
     "ai": [
 

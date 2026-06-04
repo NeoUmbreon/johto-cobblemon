@@ -1,8 +1,8 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $3,000 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-    "q.run_command('scoreboard players add ' + q.player.username + ' Money 3000');"
+    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $6,000 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+    "q.run_command('scoreboard players add ' + q.player.username + ' Money 6000');"
         ],
   "speakers": {
     "thom": {

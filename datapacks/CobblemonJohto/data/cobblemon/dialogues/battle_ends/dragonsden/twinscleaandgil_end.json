@@ -20,7 +20,7 @@
         "type": "artificial",
         "modelType": "npc",
         "identifier": "cobblemon:twin",
-        "isLeftSide": true
+        "isLeftSide": false
       }
     }
   },

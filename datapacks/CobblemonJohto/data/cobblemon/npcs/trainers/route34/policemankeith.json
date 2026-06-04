@@ -39,7 +39,14 @@
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue policemankeith_end @s');"
-          }
+        },
+        {
+            "variableName": "requirements",
+            "displayName": "Requirements",
+            "description": "Boolean expression (stored as a string) that must evaluate to true in order for the player to battle this NPC.",
+            "type": "TEXT",
+            "defaultValue": "q.npc.world.is_time_of_day('night') && !q.npc.world.is_time_of_day('twilight')"
+        }
     ],
     "ai": [
 

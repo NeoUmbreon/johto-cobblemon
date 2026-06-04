@@ -1,23 +1,23 @@
 c.battle.is_pvw == false ? return 0;
 
 for_each(t.actor, c.battle.actors, {
-    t.actor.is_wild ? { t.pokemon = t.actor.pokemon; };
-    t.actor.is_player ? { t.player = t.actor.player; };
+    t.actor.is_wild ? { t.pokemon = t.actor.pokemon };
+    t.actor.is_player ? { t.player = t.actor.player };
 });
 
 t.species = t.pokemon.species.name;
-t.time = t.player.world.time_of_day;
+t.time = ( t.player.world.is_time_of_day('night') && !t.player.world.is_time_of_day('twilight') ? 'night' : 'day' );
 t.x = t.player.x;
 t.z = t.player.z;
 
-( t.x > -763 ) || ( t.x > -1060 && t.z > -417 ) || ( t.x > -1200 && t.z > -245 && t.z < -180 ) ? ( t.time < 12000 ? { t.battle_start = 20; } : { t.battle_start = 24; }) : { t.battle_start = 28; };
+t.battle_start = ( t.x > -763 ) || ( t.x > -1060 && t.z > -417 ) || ( t.x > -1200 && t.z > -245 && t.z < -180 ) ? ( t.time == 'day' ? 20 : 24 ) : 28;
 
-t.species == 'Lugia' && t.battle_start <= 24 ? { t.battle_start = t.battle_start + 1; };
-t.species == 'Ho-Oh' && t.battle_start <= 24 ? { t.battle_start = t.battle_start + 2; };
-(t.species == 'Groudon' || t.species == 'Kyogre' || t.species == 'Rayquaza') && t.battle_start <= 24 ? { t.battle_start = t.battle_start + 3; };
-t.species == 'Raikou' ? { t.battle_start = 29; };
-t.species == 'Entei' ? { t.battle_start = 30; };
-t.species == 'Suicune' ? { t.battle_start = 31; };
+t.species == 'Lugia' && t.battle_start <= 24 ? { t.battle_start = t.battle_start + 1 };
+t.species == 'Ho-Oh' && t.battle_start <= 24 ? { t.battle_start = t.battle_start + 2 };
+(t.species == 'Groudon' || t.species == 'Kyogre' || t.species == 'Rayquaza') && t.battle_start <= 24 ? { t.battle_start = t.battle_start + 3 };
+t.species == 'Raikou' ? { t.battle_start = 29 };
+t.species == 'Entei' ? { t.battle_start = 30 };
+t.species == 'Suicune' ? { t.battle_start = 31 };
 
 
 q.run_command('scoreboard players set ' + t.player.username + ' BattleStart ' + t.battle_start);

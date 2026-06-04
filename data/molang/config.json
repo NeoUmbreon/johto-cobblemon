@@ -1,5 +1,5 @@
 {
-  "challengeMode": false,
-  "hotReload": false,
-  "maxChallengeDistance": 6.0
+  "challenge_mode": false,
+  "hot_reload": false,
+  "max_challenge_distance": 6.0
 }

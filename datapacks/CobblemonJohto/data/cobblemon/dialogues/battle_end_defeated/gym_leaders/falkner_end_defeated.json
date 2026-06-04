@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.get_variable(q.file.load('data/molang/config.json'), 'challengeMode') == true ? q.dialogue.set_page('page3');"
+        "q.get_variable(q.file.load('data/molang/config.json'), 'challenge_mode') == true ? q.dialogue.set_page('page3');"
     ],
     "speakers": {
         "npc": {

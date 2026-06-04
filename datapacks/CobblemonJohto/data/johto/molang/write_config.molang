@@ -1,11 +1,8 @@
 !q.file.exists('data/molang/config.json') ? {
-    t.config.0 = 0;
-    q.delete_variable(t.config, '0');
-
     'set defaults';
-    q.set_variable(t.config, 'maxChallengeDistance', 6);
-    q.set_variable(t.config, 'challengeMode', false);
-    q.set_variable(t.config, 'hotReload', false);
+    t.config.max_challenge_distance = 6;
+    t.config.challenge_mode = false;
+    t.config.hot_reload = false;
 
     q.file.save('data/molang/config.json', t.config);
 } : {

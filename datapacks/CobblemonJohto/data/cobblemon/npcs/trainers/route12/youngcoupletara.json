@@ -11,10 +11,11 @@
         "type": "dialogue",
         "dialogue": "cobblemon:youngcoupletara_interaction"
     },
-        "name": "Tara",
+        "name": "Vic & Tara",
         "party": {
         "type": "simple",
         "pokemon": [
+            "Magmar level=43",
             "Sunflora level=43"
         ]
     },
@@ -39,7 +40,21 @@
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue youngcoupletara_end @s');"
-          }
+        },
+        {
+            "variableName": "doubles",
+            "displayName": "Doubles",
+            "description": "",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "trainer_id",
+            "displayName": "npc.variable.trainer_id.name",
+            "description": "npc.variable.trainer_id.desc",
+            "type": "TEXT",
+            "defaultValue": "youngcouplevicandtara"
+        }
     ],
     "ai": [
 

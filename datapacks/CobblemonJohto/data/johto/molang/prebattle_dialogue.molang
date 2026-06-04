@@ -1,12 +1,23 @@
-q.run_script('store_battle_data', q.player, q.npc);
+q.run_script('store_battle_data');
 q.player.add_tag('InDialogue');
-q.npc.run_dialogue(q.player, q.npc.Config.trainer_id + '_interaction');
+q.npc.run_dialogue(q.player, q.npc.config.trainer_id + '_interaction');
 
-'update config';
-!q.is_included(q.npc.config.on_player_wins, 'add_tag') ? {
-    t.name = q.get_variable(q.split_string(q.npc.class, 'cobblemon:'), '1');
-    t.dialogue = q.get_variable(q.split_string(q.get_variable(q.split_string(q.npc.config.on_player_wins, 'opendialogue '), '1'), ' @s'), '0');
-    q.npc.config.on_player_wins = 'q.player.add_tag(\'defeated.' + t.name + '\'); q.npc.run_dialogue(q.player, \'' + t.dialogue + '\');';
+'janky ass config updater';
+'this is really really bad, defeated tag application should be moved to end of dialogue. but this works for now';
+!q.is_included(q.npc.config.on_player_wins, 'run_dialogue') ? {
+    q.npc.config.doubles ? {
+        t.dialogue = q.npc.config.trainer_id;
+    } : {
+        t.dialogue = q.replace(q.get_variable(q.split_string(q.npc.config.on_player_wins, 'opendialogue '), '1'), ' @s', '');
+    };
+    q.npc.config.on_player_wins = 'q.player.add_tag(\'defeated.' + q.npc.config.trainer_id + '\'); q.npc.run_dialogue(q.player, \'' + t.dialogue + '\');';
+};
+
+'janky ass doubles party updater';
+q.npc.config.doubles && !(q.npc.party.count >= 2) ? {
+    t.temp = q.npc.world.spawn_npc(-800, -50000, -280, q.npc.class, 1);
+    q.npc.set_npc_party(t.temp.party);
+    t.temp.discard;
 };
 
 return 1;

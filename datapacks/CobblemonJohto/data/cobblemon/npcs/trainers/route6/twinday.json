@@ -11,11 +11,12 @@
         "type": "dialogue",
         "dialogue": "cobblemon:twinday_interaction"
     },
-        "name": "Day",
+        "name": "Day & Dani",
         "party": {
         "type": "simple",
         "pokemon": [
-            "Plusle level=41"
+            "Plusle level=41",
+            "Minun level=41"
         ]
     },
     "config": [
@@ -39,7 +40,21 @@
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue twinday_end @s');"
-          }
+        },
+        {
+            "variableName": "doubles",
+            "displayName": "Doubles",
+            "description": "",
+            "type": "BOOLEAN",
+            "defaultValue": true
+        },
+        {
+            "variableName": "trainer_id",
+            "displayName": "npc.variable.trainer_id.name",
+            "description": "npc.variable.trainer_id.desc",
+            "type": "TEXT",
+            "defaultValue": "twinsdayanddani"
+        }
     ],
     "ai": [
 
