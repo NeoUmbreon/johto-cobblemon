@@ -38,7 +38,7 @@ jobs:
 
     - name: Compress resource pack
       run: |
-        zip -r CobblemonJohtoAddonResourcePack.zip ./resourcepack
+        zip -r CobblemonJohtoAddonPack.zip ./resourcepack/*
 
     - name: Build file structure
       run : |
@@ -46,7 +46,7 @@ jobs:
         mkdir ./resourcepacks
         cp -r ./data ./serverconfig ./Johto
         cp ./datapacks/*.zip ./Johto/datapacks
-        cp CobblemonJohtoAddonResourcePack.zip ./resourcepacks
+        cp CobblemonJohtoAddonPack.zip ./resourcepacks
 
     - name: Create release zip
       run: |

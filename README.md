@@ -10,7 +10,6 @@ The project is a work in progress, so some features may be broken or missing.
 > Download each mod's dependencies as well.
 
 ### Mods
-
 **Required**
 - [Cobblemon](https://modrinth.com/mod/cobblemon/versions?g=1.21.1)
 - [Cobblemon Trainer Battle Commands](https://modrinth.com/mod/tbcs/versions?g=1.21.1)
@@ -18,18 +17,21 @@ The project is a work in progress, so some features may be broken or missing.
 **Recommended**
 - [Fix Cobblemon Pokemon Experience](https://modrinth.com/mod/fix-cobblemon-pokemon-experience/versions?g=1.21.1)
 
-### Datapack
-The datapack can be downloaded from the [Releases](../../releases) page.
-1. Download the `johto-cobblemon.zip` file from the Releases section.
-2. Copy and paste all files/folders from within the zip file into your world folder. You should be prompted to overwrite files; click yes.
+### Files
+1. Download `johto-cobblemon.zip` from the [Releases](../../releases) page, under the Assets section.
+2. From within the downloaded zip file:
+    - Copy/move the `config` and `resourcepacks` folders into your minecraft folder.
+    - Copy/move all files/folders within the `Johto` folder into your world folder.
 
 ### Music Pack
 > [!NOTE]
 > The original "Cobblemon Johto Music Pack" is not required.  
 > If you have already installed the original, you can unload and/or delete it if you wish.
-1. Download the `CobblemonJohtoMusicPack.zip` file from [here](https://www.github.com/spacky1/cobblemon-johto-music-pack/releases/tag/nightly).
-3. Copy the zip file to your `resourcepacks` folder.
-4. In Minecraft, activate the resource pack named `Cobblemon Johto - Expanded Music Pack`
+1. Download `CobblemonJohtoMusicPack.zip` from [here](https://www.github.com/spacky1/cobblemon-johto-music-pack/releases/tag/nightly).
+2. Copy/move the zip file into your `resourcepacks` folder.
+
+### Enabling the Resource Packs
+In Minecraft, activate the resource packs named `CobblemonJohtoAddonPack` and `CobblemonJohtoMusicPack`.
 
 ## Features
 ### Audio
@@ -47,6 +49,7 @@ The datapack can be downloaded from the [Releases](../../releases) page.
 ### Battle
 - Trainers spot you for battle from a distance!
     - Boss trainers like Gym Leaders do not
+- Double battles
 - Trainers are no longer rebattleable
     - Trainers that *should* be rebattleable still are (Pokemon League, Gym Leader rematches, Red)
 - Trainer battles prevent you from running away
@@ -70,6 +73,8 @@ The datapack can be downloaded from the [Releases](../../releases) page.
     - Multiple battle formats: singles, doubles, triples, multi with NPC or player partners
     - Multiple rooms
     - Accurate-to-cart mechanics
+- Updated Trainer skins
+- Updated Trainer dialogue
 - Dynamic Surfing music
     - Instead of playing by area, it plays whenever you are riding a Pokemon that is in water
 - Bicycle music no longer overwrites all other music
