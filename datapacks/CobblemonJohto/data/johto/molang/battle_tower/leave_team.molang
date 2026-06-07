@@ -12,5 +12,6 @@ q.length(q.player.data.temp.players) > 1 ? {
 };
 
 'reset';
+q.delete_variables(q.player.data.temp);
 q.player.data.temp.players = q.array(q.player);
 q.player.data.temp.npcs = q.array();

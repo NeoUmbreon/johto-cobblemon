@@ -1,0 +1,131 @@
+{
+    "initializationAction": [
+        "for_each(t.npc, q.player.data.temp.npcs, { t.npc == q.npc.name ? { v.joined = true; break }; });",
+        "q.length(q.player.data.temp.npcs) > 0 && !v.joined ? q.dialogue.close;",
+        "q.run_script('johto:generate_partner');",
+        "v.pokemon = q.run_script('johto:partner_pokemon');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'...My ' + v.pokemon.0.species + ' uses ' + v.pokemon.0.move + ' well...'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'And my ' + v.pokemon.1.species + ' likes to use ' + v.pokemon.1.move + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "isVisible": "!v.joined",
+                        "action": "q.dialogue.next_page;"
+                    },
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "isVisible": "v.joined",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "prompt",
+            "speaker": "npc",
+            "lines": [
+                "...What do you want?",
+                "Am I supposed to go with you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.append(q.player.data.temp.npcs, q.npc.name);",
+                            "q.dialogue.set_page('accept');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('decline');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "accept",
+            "speaker": "npc",
+            "lines": [
+                "...I'll be waiting..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "decline",
+            "speaker": "npc",
+            "lines": [
+                "...Whatever..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        }
+    ]
+}

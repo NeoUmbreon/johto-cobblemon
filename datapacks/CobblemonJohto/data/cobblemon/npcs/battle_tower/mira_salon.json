@@ -3,5 +3,9 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Mira",
-    "resourceIdentifier": "cobblemon:mira"
+    "resourceIdentifier": "cobblemon:mira",
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:mira_salon_interaction"
+    }
 }

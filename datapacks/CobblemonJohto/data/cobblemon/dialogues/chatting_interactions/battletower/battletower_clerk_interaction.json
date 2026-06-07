@@ -114,6 +114,7 @@
                         "text": "Multi Battle",
                         "value": "multi",
                         "action": [
+                            "q.player.data.temp.npcs = q.array;",
                             "q.dialogue.set_page('salon1');"
                         ]
                     },

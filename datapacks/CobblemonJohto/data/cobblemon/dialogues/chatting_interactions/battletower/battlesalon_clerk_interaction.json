@@ -198,6 +198,7 @@
                         "value": "yes",
                         "action": [
                             "q.player.remove_tag('BattleSalon');",
+                            "q.delete_variables(q.player.data.temp);",
                             "q.player.teleport(903, 64, 68);",
                             "q.dialogue.set_page('leave');"
                         ]

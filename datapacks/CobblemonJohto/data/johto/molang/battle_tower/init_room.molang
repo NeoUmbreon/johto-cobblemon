@@ -1,14 +1,35 @@
 t.y = 64.0625 + (v.room * 12);
+q.player.data.temp.team = q.array;
+for_each(t.player, q.player.data.temp.players, {
+    q.append(q.player.data.temp.team, t.player);
+});
 
 'Spawn handler (dumb)';
 t.entity = q.player.world.spawn_npc(903.0, t.y, 67.0, 'battle_tower_nursejoy', 1);
 t.entities = q.player.world.get_entities_around(903.0, t.y, 67.0, 0.00001);
 t.nursejoy = t.entities.0;
 
-'TODO: Spawn partner NPCs';
+'Spawn partner NPCs';
 t.npcs = q.array();
-for_each(t.id, q.player.data.temp.npcs, {
+for_each(t.name, q.player.data.temp.npcs, {
     'spawn npcs, create rct jsons and tbcs attach, append to array';
+    t.id = q.to_lower(t.name);
+    q.player.world.spawn_npc(898.5, t.y, 67.0, t.id + '_salon', 1);
+    t.entities = q.player.world.get_entities_around(898.5, t.y, 67.0, 0.00001);
+    for_each(t.entity, t.entities, {
+        t.entity.name == t.name ? break;
+    });
+    t.entity.set_dialogue_interaction('none');
+    q.append(t.npcs, t.entity);
+    q.append(q.player.data.temp.team, t.entity);
+
+    t.partner.name = t.name;
+    t.partner.team = q.run_script('johto:partner_pokemon', t.id);
+    t.filename = 'battletower_floor_' + v.room + '_partner_' + q.length(t.npcs);
+    t.entity.data.rct = t.filename;
+    q.file.save('data/molang/battle_frontier/' + t.filename + '.json', t.partner);
+    q.run_command('tbcs reload tbcs:' + t.filename);
+    q.run_command('tbcs attach tbcs:' + t.filename + ' ' + t.entity.uuid);
 });
 
 'Finalize';
@@ -32,6 +53,7 @@ for_each(v.player, q.player.data.temp.players, {
     v.player.remove_tag('BattleSalon');
     v.player.teleport(898.5, t.y, 67.0, 0);
     v.player.data.temp.npc = t.nursejoy;
+    v.player.data.temp.team = q.player.data.temp.team;
     v.player.data.temp.partners = t.npcs;
     q.run_script('johto:flatten_party_levels');
 });

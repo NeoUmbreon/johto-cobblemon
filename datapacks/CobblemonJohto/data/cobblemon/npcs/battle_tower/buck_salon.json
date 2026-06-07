@@ -3,5 +3,9 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Buck",
-    "resourceIdentifier": "cobblemon:buck"
+    "resourceIdentifier": "cobblemon:buck",
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:buck_salon_interaction"
+    }
 }

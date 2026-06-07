@@ -3,5 +3,9 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Cheryl",
-    "resourceIdentifier": "cobblemon:cheryl"
+    "resourceIdentifier": "cobblemon:cheryl",
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:cheryl_salon_interaction"
+    }
 }

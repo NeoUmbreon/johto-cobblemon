@@ -2,7 +2,7 @@
 v.species_list == 0 ? { v.species_list = q.array() };
 t.item_list = q.array();
 t.filename_list = q.array();
-t.trainer.team = q.array();
+t.team = q.array();
 
 
 v.npc.name == 'Palmer' ? {
@@ -83,16 +83,8 @@ for_each(t.filename, t.filename_list, {
     q.delete_variable(t.pokemon, 'item');
 
     'Append edited Pokemon object to team';
-    q.append(t.trainer.team, t.pokemon);
+    q.append(t.team, t.pokemon);
 });
 t.pokemon == 0 ? return 0;
 
-'Write trainer to json';
-t.trainer.name = v.npc.name;
-q.file.save('data/molang/battle_frontier/' + v.rct_name + '.json',t.trainer);
-
-'TBCS: Reload trainer and attach';
-q.run_command('tbcs reload tbcs:' + v.rct_name);
-q.run_command('tbcs attach tbcs:' + v.rct_name + ' ' + v.npc.uuid);
-
-return 1;
+return t.team;

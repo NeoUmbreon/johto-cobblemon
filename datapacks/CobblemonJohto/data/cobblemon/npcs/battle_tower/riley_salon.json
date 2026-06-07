@@ -3,5 +3,9 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Riley",
-    "resourceIdentifier": "cobblemon:riley"
+    "resourceIdentifier": "cobblemon:riley",
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:riley_salon_interaction"
+    }
 }

@@ -3,5 +3,9 @@
         "cobblemon:battle_tower_trainer"
     ],
     "name": "Marley",
-    "resourceIdentifier": "cobblemon:marley"
+    "resourceIdentifier": "cobblemon:marley",
+    "interaction": {
+        "type": "dialogue",
+        "dialogue": "cobblemon:marley_salon_interaction"
+    }
 }

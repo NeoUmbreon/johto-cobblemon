@@ -6,6 +6,7 @@
     "allowProjectileHits": false,
     "isInvulnerable": true,
     "canDespawn": false,
+    "hideNameTag": true,
     "ai": [
 
         {

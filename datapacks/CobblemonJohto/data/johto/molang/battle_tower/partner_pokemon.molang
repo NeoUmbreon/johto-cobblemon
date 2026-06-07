@@ -1,0 +1,23 @@
+t.partner = q.get_variable(q.player.data.temp, (c.arg_1 == 0 ? q.to_lower(q.npc.name) : c.arg_1));
+
+t.chosen = q.array();
+for_each(t.pokemon, t.partner, {
+    q.player.party.find_by_properties('species=' + t.pokemon.species) == false ? q.append(t.chosen, t.pokemon);
+    q.length(t.chosen) >= 2 ? break;
+});
+c.arg_1 != 0 ? return t.chosen;
+q.length(t.chosen) < 2 ? { t.chosen = q.array(t.partner.0, t.partner.1) };
+
+'retrieve formatted names';
+t.out = q.array(q.array, q.array);
+for_each(t.pokemon, t.chosen, {
+    t.party = q.npc.create_npc_party;
+    t.party.add_by_properties(t.pokemon.species);
+    q.set_variable(t.out[t.i], 'species', t.party.pokemon.0.species.name);
+    t.move = q.get_move_from_id(t.pokemon.moveset.0);
+    q.set_variable(t.out[t.i], 'move', t.move.display_name);
+
+    t.i = t.i + 1;
+});
+
+return t.out;
