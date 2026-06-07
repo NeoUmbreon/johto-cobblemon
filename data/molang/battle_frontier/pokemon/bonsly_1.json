@@ -1,8 +1,8 @@
 {
     "species": "bonsly",
     "nature": "adamant",
-    "heldItem": "cobblemon:rock_incense",
-    "item": "cobblemon:rock_incense",
+    "heldItem": "cobblemon:hard_stone",
+    "item": "cobblemon:hard_stone",
     "moveset": {
         "1": "rockslide",
         "2": "lowkick",

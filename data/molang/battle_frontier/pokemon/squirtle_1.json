@@ -1,8 +1,8 @@
 {
     "species": "squirtle",
     "nature": "adamant",
-    "heldItem": "cobblemon:sea_incense",
-    "item": "cobblemon:sea_incense",
+    "heldItem": "cobblemon:mystic_water",
+    "item": "cobblemon:mystic_water",
     "moveset": {
         "1": "aquajet",
         "2": "bite",

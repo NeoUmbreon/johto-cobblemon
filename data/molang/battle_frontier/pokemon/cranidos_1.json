@@ -1,8 +1,8 @@
 {
     "species": "cranidos",
     "nature": "careful",
-    "heldItem": "cobblemon:rock_incense",
-    "item": "cobblemon:rock_incense",
+    "heldItem": "cobblemon:hard_stone",
+    "item": "cobblemon:hard_stone",
     "moveset": {
         "1": "rocktomb",
         "2": "pursuit",

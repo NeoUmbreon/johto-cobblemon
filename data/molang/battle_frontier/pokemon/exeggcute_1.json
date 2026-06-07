@@ -1,8 +1,8 @@
 {
     "species": "exeggcute",
     "nature": "modest",
-    "heldItem": "cobblemon:odd_incense",
-    "item": "cobblemon:odd_incense",
+    "heldItem": "cobblemon:twisted_spoon",
+    "item": "cobblemon:twisted_spoon",
     "moveset": {
         "1": "confusion",
         "2": "grassknot",

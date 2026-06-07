@@ -1,8 +1,8 @@
 {
     "species": "oddish",
     "nature": "bold",
-    "heldItem": "cobblemon:rose_incense",
-    "item": "cobblemon:rose_incense",
+    "heldItem": "cobblemon:miracle_seed",
+    "item": "cobblemon:miracle_seed",
     "moveset": {
         "1": "megadrain",
         "2": "acid",

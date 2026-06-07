@@ -1,8 +1,8 @@
 {
     "species": "shedinja",
     "nature": "adamant",
-    "heldItem": "cobblemon:lax_incense",
-    "item": "cobblemon:lax_incense",
+    "heldItem": "cobblemon:bright_powder",
+    "item": "cobblemon:bright_powder",
     "moveset": {
         "1": "shadowsneak",
         "2": "furycutter",

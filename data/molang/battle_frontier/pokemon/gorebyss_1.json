@@ -1,8 +1,8 @@
 {
     "species": "gorebyss",
     "nature": "bold",
-    "heldItem": "cobblemon:wave_incense",
-    "item": "cobblemon:wave_incense",
+    "heldItem": "cobblemon:mystic_water",
+    "item": "cobblemon:mystic_water",
     "moveset": {
         "1": "waterpulse",
         "2": "confusion",

@@ -1,8 +1,8 @@
 {
     "species": "cherubi",
     "nature": "modest",
-    "heldItem": "cobblemon:rose_incense",
-    "item": "cobblemon:rose_incense",
+    "heldItem": "cobblemon:miracle_seed",
+    "item": "cobblemon:miracle_seed",
     "moveset": {
         "1": "magicalleaf",
         "2": "toxic",

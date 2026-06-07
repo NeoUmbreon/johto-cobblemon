@@ -1,8 +1,8 @@
 {
     "species": "walrein",
     "nature": "bold",
-    "heldItem": "cobblemon:lax_incense",
-    "item": "cobblemon:lax_incense",
+    "heldItem": "cobblemon:bright_powder",
+    "item": "cobblemon:bright_powder",
     "moveset": {
         "1": "sheercold",
         "2": "fissure",

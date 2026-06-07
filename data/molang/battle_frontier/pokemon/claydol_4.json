@@ -1,8 +1,8 @@
 {
     "species": "claydol",
     "nature": "adamant",
-    "heldItem": "cobblemon:lax_incense",
-    "item": "cobblemon:lax_incense",
+    "heldItem": "cobblemon:bright_powder",
+    "item": "cobblemon:bright_powder",
     "moveset": {
         "1": "earthquake",
         "2": "zenheadbutt",
