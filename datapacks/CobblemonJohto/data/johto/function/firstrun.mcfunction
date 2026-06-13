@@ -20,10 +20,6 @@ execute if score #firstrun click matches 2 run return 1
 
 # Battle Tower renovation
 forceload add 875 50 930 108
-fill 875 63 50 930 112 108 air replace #minecraft:banners
-fill 875 63 50 930 112 108 air replace #minecraft:signs
-fill 875 63 50 930 112 108 air replace #minecraft:wool_carpets
-fill 875 63 50 930 112 108 air
 place template johto:battletower 875 63 50
 place template johto:battlesalon 890 43 66
 npcspawnat 903 45 72 battlesalon_clerk
