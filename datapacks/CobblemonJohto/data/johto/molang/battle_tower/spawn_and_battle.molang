@@ -12,10 +12,10 @@ t.npcs = q.array;
 t.team_size = q.length(t.team);
 v.party_size = ( t.team_size != 1 ? 2 : ( t.format == 'SINGLES' ? 3 : ( t.format == 'DOUBLES' ? 4 : ( t.format == 'TRIPLES' ? 6 ))));
 t.music_id = 11;
-t.player_z = ( t.team_size == 1 ? q.array(67) : ( t.team_size == 2 ? q.array(63.5, 70.5) : q.array(63.5, 67, 70.5)));
-t.npc_z = ( t.team_size == 1 ? q.array(67) : ( t.team_size == 2 ? q.array(70.5, 63.5) : q.array(70.5, 67, 63.5)));
-t.player_pos = q.array(898.5, math.floor(q.npc.y) + 0.0625, t.player_z);
-t.npc_pos = q.array(907.5, math.floor(q.npc.y) + 0.0625, t.npc_z);
+t.player_z = ( t.team_size == 1 ? q.array(67.0) : ( t.team_size == 2 ? q.array(61.5, 72.5) : q.array(61.5, 67.0, 72.5)));
+t.npc_z = ( t.team_size == 1 ? q.array(67.0) : ( t.team_size == 2 ? q.array(72.5, 61.5) : q.array(72.5, 67.0, 61.5)));
+t.player_pos = q.array(897.5, math.floor(q.npc.y) + 0.0625, t.player_z);
+t.npc_pos = q.array(908.5, math.floor(q.npc.y) + 0.0625, t.npc_z);
 
 
 'Frontier Brain handling';
