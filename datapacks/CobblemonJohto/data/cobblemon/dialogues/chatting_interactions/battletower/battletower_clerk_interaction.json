@@ -187,6 +187,7 @@
             "speaker": "npc",
             "escapeAction": [
                 "q.player.add_tag('BattleSalon');",
+                "q.player.teleport(903.5, 45, 67.5);",
                 "q.dialogue.close;"
             ],
             "lines": [
@@ -197,11 +198,31 @@
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Close",
-                        "value": "close",
+                        "text": "Next",
+                        "value": "next",
                         "action": [
                             "q.player.add_tag('BattleSalon');",
                             "q.player.teleport(903.5, 45, 67.5);",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "salon2",
+            "speaker": "npc",
+            "lines": [
+                "Please find a partner from the Trainers that are gathered here."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
                             "q.dialogue.close;"
                         ]
                     }
