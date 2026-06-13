@@ -1,4 +1,4 @@
-fillbiome ~ ~3 ~ ~123 ~20 ~95 desert
+fillbiome ~ ~1 ~ ~123 ~26 ~95 desert
 
 #79 - 81: Base
 fill ~ ~ ~ ~123 ~2 ~95 stone

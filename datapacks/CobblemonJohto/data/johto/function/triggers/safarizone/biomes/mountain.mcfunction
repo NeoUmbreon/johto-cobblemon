@@ -1,4 +1,4 @@
-fillbiome ~ ~3 ~ ~123 ~20 ~95 windswept_hills
+fillbiome ~ ~1 ~ ~123 ~26 ~95 windswept_hills
 
 
 #79 - 82: Base

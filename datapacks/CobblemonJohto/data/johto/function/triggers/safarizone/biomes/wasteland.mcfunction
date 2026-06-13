@@ -1,4 +1,4 @@
-fillbiome ~ ~3 ~ ~123 ~20 ~95 badlands
+fillbiome ~ ~1 ~ ~123 ~26 ~95 badlands
 
 #79 - 81: Base
 fill ~ ~ ~ ~123 ~2 ~95 stone

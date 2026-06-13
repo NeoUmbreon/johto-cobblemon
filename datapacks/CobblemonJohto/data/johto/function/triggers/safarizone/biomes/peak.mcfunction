@@ -1,4 +1,4 @@
-fillbiome ~ ~3 ~ ~123 ~20 ~95 jagged_peaks
+fillbiome ~ ~1 ~ ~123 ~26 ~95 jagged_peaks
 
 #79 - 82: Base
 fill ~ ~ ~ ~123 ~3 ~95 stone

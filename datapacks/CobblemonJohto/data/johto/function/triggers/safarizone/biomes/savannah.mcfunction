@@ -1,4 +1,4 @@
-fillbiome ~ ~3 ~ ~123 ~20 ~95 savanna
+fillbiome ~ ~1 ~ ~123 ~26 ~95 savanna
 
 #79 - 81: Base
 fill ~ ~ ~ ~123 ~2 ~95 stone

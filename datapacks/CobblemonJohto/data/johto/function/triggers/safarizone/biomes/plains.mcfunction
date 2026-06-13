@@ -1,4 +1,4 @@
-fillbiome ~ ~3 ~ ~123 ~20 ~95 plains
+fillbiome ~ ~1 ~ ~123 ~26 ~95 plains
 
 #79 - 82: Base
 fill ~ ~ ~ ~123 ~3 ~95 stone
