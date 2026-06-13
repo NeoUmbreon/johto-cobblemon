@@ -1,8 +1,7 @@
 {
     "species": "magmar",
     "nature": "jolly",
-    "heldItem": "cobblemon:lansat_berry",
-    "item": "cobblemon:lansat_berry",
+    "helditem": "cobblemon:lansat_berry",
     "moveset": {
         "1": "firepunch",
         "2": "machpunch",

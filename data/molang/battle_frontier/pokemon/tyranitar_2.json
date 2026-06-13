@@ -1,8 +1,7 @@
 {
     "species": "tyranitar",
     "nature": "jolly",
-    "heldItem": "cobblemon:choice_scarf",
-    "item": "cobblemon:choice_scarf",
+    "helditem": "cobblemon:choice_scarf",
     "moveset": {
         "1": "firepunch",
         "2": "thunderpunch",

@@ -1,8 +1,7 @@
 {
     "species": "drifblim",
     "nature": "adamant",
-    "heldItem": "cobblemon:black_sludge",
-    "item": "cobblemon:black_sludge",
+    "helditem": "cobblemon:black_sludge",
     "moveset": {
         "1": "payback",
         "2": "facade",

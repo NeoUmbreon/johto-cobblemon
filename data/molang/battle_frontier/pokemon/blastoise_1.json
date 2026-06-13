@@ -1,8 +1,7 @@
 {
     "species": "blastoise",
     "nature": "modest",
-    "heldItem": "cobblemon:mystic_water",
-    "item": "cobblemon:mystic_water",
+    "helditem": "cobblemon:mystic_water",
     "moveset": {
         "1": "hydropump",
         "2": "signalbeam",

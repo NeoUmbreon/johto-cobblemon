@@ -1,8 +1,7 @@
 {
     "species": "poliwrath",
     "nature": "modest",
-    "heldItem": "cobblemon:rindo_berry",
-    "item": "cobblemon:rindo_berry",
+    "helditem": "cobblemon:rindo_berry",
     "moveset": {
         "1": "surf",
         "2": "vacuumwave",

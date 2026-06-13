@@ -1,8 +1,7 @@
 {
     "species": "medicham",
     "nature": "jolly",
-    "heldItem": "cobblemon:salac_berry",
-    "item": "cobblemon:salac_berry",
+    "helditem": "cobblemon:salac_berry",
     "moveset": {
         "1": "zenheadbutt",
         "2": "reversal",

@@ -1,8 +1,7 @@
 {
     "species": "venomoth",
     "nature": "modest",
-    "heldItem": "cobblemon:silver_powder",
-    "item": "cobblemon:silver_powder",
+    "helditem": "cobblemon:silver_powder",
     "moveset": {
         "1": "bugbuzz",
         "2": "sludgebomb",

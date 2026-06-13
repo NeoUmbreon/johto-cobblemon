@@ -1,8 +1,7 @@
 {
     "species": "crobat",
     "nature": "jolly",
-    "heldItem": "cobblemon:payapa_berry",
-    "item": "cobblemon:payapa_berry",
+    "helditem": "cobblemon:payapa_berry",
     "moveset": {
         "1": "crosspoison",
         "2": "aerialace",

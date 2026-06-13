@@ -1,8 +1,7 @@
 {
     "species": "kecleon",
     "nature": "careful",
-    "heldItem": "cobblemon:lansat_berry",
-    "item": "cobblemon:lansat_berry",
+    "helditem": "cobblemon:lansat_berry",
     "moveset": {
         "1": "slash",
         "2": "shadowsneak",

@@ -1,8 +1,7 @@
 {
     "species": "machamp",
     "nature": "adamant",
-    "heldItem": "cobblemon:quick_claw",
-    "item": "cobblemon:quick_claw",
+    "helditem": "cobblemon:quick_claw",
     "moveset": {
         "1": "crosschop",
         "2": "earthquake",

@@ -1,8 +1,7 @@
 {
     "species": "sceptile",
     "nature": "adamant",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "leafblade",
         "2": "xscissor",

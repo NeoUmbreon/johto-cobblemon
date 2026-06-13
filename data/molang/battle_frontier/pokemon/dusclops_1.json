@@ -1,8 +1,7 @@
 {
     "species": "dusclops",
     "nature": "impish",
-    "heldItem": "cobblemon:rawst_berry",
-    "item": "cobblemon:rawst_berry",
+    "helditem": "cobblemon:rawst_berry",
     "moveset": {
         "1": "shadowsneak",
         "2": "painsplit",

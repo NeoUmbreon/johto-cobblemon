@@ -1,8 +1,7 @@
 {
     "species": "torchic",
     "nature": "docile",
-    "heldItem": "cobblemon:charcoal",
-    "item": "cobblemon:charcoal",
+    "helditem": "cobblemon:charcoal",
     "moveset": {
         "1": "ember",
         "2": "mirrormove",

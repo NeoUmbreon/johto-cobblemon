@@ -1,8 +1,7 @@
 {
     "species": "umbreon",
     "nature": "impish",
-    "heldItem": "cobblemon:bright_powder",
-    "item": "cobblemon:bright_powder",
+    "helditem": "cobblemon:bright_powder",
     "moveset": {
         "1": "feintattack",
         "2": "swagger",

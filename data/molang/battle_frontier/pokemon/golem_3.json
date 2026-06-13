@@ -1,8 +1,7 @@
 {
     "species": "golem",
     "nature": "brave",
-    "heldItem": "cobblemon:iron_ball",
-    "item": "cobblemon:iron_ball",
+    "helditem": "cobblemon:iron_ball",
     "moveset": {
         "1": "gyroball",
         "2": "earthquake",

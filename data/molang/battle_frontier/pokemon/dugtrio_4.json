@@ -1,8 +1,7 @@
 {
     "species": "dugtrio",
     "nature": "adamant",
-    "heldItem": "cobblemon:muscle_band",
-    "item": "cobblemon:muscle_band",
+    "helditem": "cobblemon:muscle_band",
     "moveset": {
         "1": "earthquake",
         "2": "stoneedge",

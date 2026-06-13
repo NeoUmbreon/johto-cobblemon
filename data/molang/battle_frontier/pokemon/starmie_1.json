@@ -1,8 +1,7 @@
 {
     "species": "starmie",
     "nature": "timid",
-    "heldItem": "cobblemon:lum_berry",
-    "item": "cobblemon:lum_berry",
+    "helditem": "cobblemon:lum_berry",
     "moveset": {
         "1": "surf",
         "2": "psychic",

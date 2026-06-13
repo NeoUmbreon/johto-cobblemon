@@ -1,8 +1,7 @@
 {
     "species": "drifblim",
     "nature": "quirky",
-    "heldItem": "cobblemon:bright_powder",
-    "item": "cobblemon:bright_powder",
+    "helditem": "cobblemon:bright_powder",
     "moveset": {
         "1": "shadowball",
         "2": "aircutter",

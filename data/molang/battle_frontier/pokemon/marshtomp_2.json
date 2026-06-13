@@ -1,8 +1,7 @@
 {
     "species": "marshtomp",
     "nature": "quiet",
-    "heldItem": "cobblemon:persim_berry",
-    "item": "cobblemon:persim_berry",
+    "helditem": "cobblemon:persim_berry",
     "moveset": {
         "1": "muddywater",
         "2": "earthquake",

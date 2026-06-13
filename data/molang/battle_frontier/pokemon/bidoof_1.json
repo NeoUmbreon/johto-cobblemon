@@ -1,8 +1,7 @@
 {
     "species": "bidoof",
     "nature": "adamant",
-    "heldItem": "cobblemon:silk_scarf",
-    "item": "cobblemon:silk_scarf",
+    "helditem": "cobblemon:silk_scarf",
     "moveset": {
         "1": "headbutt",
         "2": "pluck",

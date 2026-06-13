@@ -1,8 +1,7 @@
 {
     "species": "ivysaur",
     "nature": "careful",
-    "heldItem": "cobblemon:salac_berry",
-    "item": "cobblemon:salac_berry",
+    "helditem": "cobblemon:salac_berry",
     "moveset": {
         "1": "razorleaf",
         "2": "poisonpowder",

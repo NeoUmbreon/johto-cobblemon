@@ -1,8 +1,7 @@
 {
     "species": "gengar",
     "nature": "timid",
-    "heldItem": "cobblemon:payapa_berry",
-    "item": "cobblemon:payapa_berry",
+    "helditem": "cobblemon:payapa_berry",
     "moveset": {
         "1": "shadowball",
         "2": "sludgebomb",

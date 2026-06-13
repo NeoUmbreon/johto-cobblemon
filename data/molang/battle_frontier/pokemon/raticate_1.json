@@ -1,8 +1,7 @@
 {
     "species": "raticate",
     "nature": "jolly",
-    "heldItem": "cobblemon:silk_scarf",
-    "item": "cobblemon:silk_scarf",
+    "helditem": "cobblemon:silk_scarf",
     "moveset": {
         "1": "endeavor",
         "2": "pursuit",

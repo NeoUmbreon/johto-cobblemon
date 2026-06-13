@@ -1,8 +1,7 @@
 {
     "species": "crobat",
     "nature": "adamant",
-    "heldItem": "cobblemon:razor_claw",
-    "item": "cobblemon:razor_claw",
+    "helditem": "cobblemon:razor_claw",
     "moveset": {
         "1": "crosspoison",
         "2": "bravebird",

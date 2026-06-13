@@ -1,8 +1,7 @@
 {
     "species": "numel",
     "nature": "serious",
-    "heldItem": "cobblemon:bright_powder",
-    "item": "cobblemon:bright_powder",
+    "helditem": "cobblemon:bright_powder",
     "moveset": {
         "1": "magnitude",
         "2": "ember",

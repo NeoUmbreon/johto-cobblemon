@@ -1,8 +1,7 @@
 {
     "species": "floatzel",
     "nature": "jolly",
-    "heldItem": "cobblemon:sitrus_berry",
-    "item": "cobblemon:sitrus_berry",
+    "helditem": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "waterfall",
         "2": "icepunch",

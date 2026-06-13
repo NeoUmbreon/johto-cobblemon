@@ -1,8 +1,7 @@
 {
     "species": "steelix",
     "nature": "brave",
-    "heldItem": "cobblemon:quick_claw",
-    "item": "cobblemon:quick_claw",
+    "helditem": "cobblemon:quick_claw",
     "moveset": {
         "1": "gyroball",
         "2": "earthquake",

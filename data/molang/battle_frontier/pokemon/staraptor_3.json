@@ -1,8 +1,7 @@
 {
     "species": "staraptor",
     "nature": "adamant",
-    "heldItem": "cobblemon:muscle_band",
-    "item": "cobblemon:muscle_band",
+    "helditem": "cobblemon:muscle_band",
     "moveset": {
         "1": "bravebird",
         "2": "return",

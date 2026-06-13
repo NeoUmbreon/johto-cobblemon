@@ -1,8 +1,7 @@
 {
     "species": "hippowdon",
     "nature": "impish",
-    "heldItem": "cobblemon:sitrus_berry",
-    "item": "cobblemon:sitrus_berry",
+    "helditem": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "earthquake",
         "2": "swagger",

@@ -1,8 +1,7 @@
 {
     "species": "weezing",
     "nature": "sassy",
-    "heldItem": "cobblemon:bright_powder",
-    "item": "cobblemon:bright_powder",
+    "helditem": "cobblemon:bright_powder",
     "moveset": {
         "1": "sludgebomb",
         "2": "thunderbolt",

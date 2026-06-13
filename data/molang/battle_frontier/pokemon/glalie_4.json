@@ -1,8 +1,7 @@
 {
     "species": "glalie",
     "nature": "modest",
-    "heldItem": "cobblemon:bright_powder",
-    "item": "cobblemon:bright_powder",
+    "helditem": "cobblemon:bright_powder",
     "moveset": {
         "1": "blizzard",
         "2": "darkpulse",

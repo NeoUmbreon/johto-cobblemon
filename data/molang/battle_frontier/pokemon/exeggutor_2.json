@@ -1,8 +1,7 @@
 {
     "species": "exeggutor",
     "nature": "modest",
-    "heldItem": "cobblemon:lum_berry",
-    "item": "cobblemon:lum_berry",
+    "helditem": "cobblemon:lum_berry",
     "moveset": {
         "1": "dreameater",
         "2": "hypnosis",

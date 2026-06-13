@@ -1,8 +1,7 @@
 {
     "species": "porygon",
     "nature": "modest",
-    "heldItem": "cobblemon:persim_berry",
-    "item": "cobblemon:persim_berry",
+    "helditem": "cobblemon:persim_berry",
     "moveset": {
         "1": "swift",
         "2": "psybeam",

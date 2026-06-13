@@ -1,8 +1,7 @@
 {
     "species": "chimecho",
     "nature": "quiet",
-    "heldItem": "cobblemon:twisted_spoon",
-    "item": "cobblemon:twisted_spoon",
+    "helditem": "cobblemon:twisted_spoon",
     "moveset": {
         "1": "psychic",
         "2": "shadowball",

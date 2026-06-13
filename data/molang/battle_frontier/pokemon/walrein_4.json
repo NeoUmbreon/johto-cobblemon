@@ -1,8 +1,7 @@
 {
     "species": "walrein",
     "nature": "modest",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "surf",
         "2": "icebeam",

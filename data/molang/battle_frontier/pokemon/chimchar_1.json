@@ -1,8 +1,7 @@
 {
     "species": "chimchar",
     "nature": "adamant",
-    "heldItem": "cobblemon:passho_berry",
-    "item": "cobblemon:passho_berry",
+    "helditem": "cobblemon:passho_berry",
     "moveset": {
         "1": "flamewheel",
         "2": "facade",

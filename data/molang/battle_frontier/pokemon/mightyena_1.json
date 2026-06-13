@@ -1,8 +1,7 @@
 {
     "species": "mightyena",
     "nature": "jolly",
-    "heldItem": "cobblemon:razor_fang",
-    "item": "cobblemon:razor_fang",
+    "helditem": "cobblemon:razor_fang",
     "moveset": {
         "1": "bite",
         "2": "poisonfang",

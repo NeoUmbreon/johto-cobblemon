@@ -1,8 +1,7 @@
 {
     "species": "marowak",
     "nature": "adamant",
-    "heldItem": "cobblemon:thick_club",
-    "item": "cobblemon:thick_club",
+    "helditem": "cobblemon:thick_club",
     "moveset": {
         "1": "bonerush",
         "2": "firepunch",

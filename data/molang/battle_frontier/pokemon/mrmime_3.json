@@ -1,8 +1,7 @@
 {
     "species": "mrmime",
     "nature": "modest",
-    "heldItem": "cobblemon:kasib_berry",
-    "item": "cobblemon:kasib_berry",
+    "helditem": "cobblemon:kasib_berry",
     "moveset": {
         "1": "psychic",
         "2": "thunderbolt",

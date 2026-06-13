@@ -1,8 +1,7 @@
 {
     "species": "empoleon",
     "nature": "brave",
-    "heldItem": "cobblemon:quick_claw",
-    "item": "cobblemon:quick_claw",
+    "helditem": "cobblemon:quick_claw",
     "moveset": {
         "1": "hydrocannon",
         "2": "flashcannon",

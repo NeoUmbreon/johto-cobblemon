@@ -1,8 +1,7 @@
 {
     "species": "lairon",
     "nature": "impish",
-    "heldItem": "cobblemon:metal_coat",
-    "item": "cobblemon:metal_coat",
+    "helditem": "cobblemon:metal_coat",
     "moveset": {
         "1": "metalclaw",
         "2": "rocktomb",

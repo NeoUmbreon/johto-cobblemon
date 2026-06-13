@@ -1,8 +1,7 @@
 {
     "species": "furret",
     "nature": "adamant",
-    "heldItem": "cobblemon:choice_band",
-    "item": "cobblemon:choice_band",
+    "helditem": "cobblemon:choice_band",
     "moveset": {
         "1": "frustration",
         "2": "shadowclaw",

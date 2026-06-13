@@ -1,8 +1,7 @@
 {
     "species": "primeape",
     "nature": "jolly",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "karatechop",
         "2": "furyswipes",

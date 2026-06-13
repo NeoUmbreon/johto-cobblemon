@@ -1,8 +1,7 @@
 {
     "species": "alakazam",
     "nature": "timid",
-    "heldItem": "cobblemon:wise_glasses",
-    "item": "cobblemon:wise_glasses",
+    "helditem": "cobblemon:wise_glasses",
     "moveset": {
         "1": "psychic",
         "2": "chargebeam",

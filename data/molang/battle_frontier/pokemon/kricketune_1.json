@@ -1,8 +1,7 @@
 {
     "species": "kricketune",
     "nature": "adamant",
-    "heldItem": "cobblemon:metronome",
-    "item": "cobblemon:metronome",
+    "helditem": "cobblemon:metronome",
     "moveset": {
         "1": "furycutter",
         "2": "rocksmash",

@@ -1,8 +1,7 @@
 {
     "species": "lanturn",
     "nature": "modest",
-    "heldItem": "cobblemon:expert_belt",
-    "item": "cobblemon:expert_belt",
+    "helditem": "cobblemon:expert_belt",
     "moveset": {
         "1": "surf",
         "2": "thunderbolt",

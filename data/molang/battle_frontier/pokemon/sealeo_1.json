@@ -1,8 +1,7 @@
 {
     "species": "sealeo",
     "nature": "relaxed",
-    "heldItem": "cobblemon:icy_rock",
-    "item": "cobblemon:icy_rock",
+    "helditem": "cobblemon:icy_rock",
     "moveset": {
         "1": "aurorabeam",
         "2": "waterpulse",

@@ -1,8 +1,7 @@
 {
     "species": "venomoth",
     "nature": "timid",
-    "heldItem": "cobblemon:black_sludge",
-    "item": "cobblemon:black_sludge",
+    "helditem": "cobblemon:black_sludge",
     "moveset": {
         "1": "silverwind",
         "2": "psybeam",

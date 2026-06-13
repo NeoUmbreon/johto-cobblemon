@@ -1,8 +1,7 @@
 {
     "species": "cradily",
     "nature": "calm",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "stoneedge",
         "2": "seedbomb",

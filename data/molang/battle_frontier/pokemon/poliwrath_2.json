@@ -1,8 +1,7 @@
 {
     "species": "poliwrath",
     "nature": "adamant",
-    "heldItem": "cobblemon:bright_powder",
-    "item": "cobblemon:bright_powder",
+    "helditem": "cobblemon:bright_powder",
     "moveset": {
         "1": "waterfall",
         "2": "dynamicpunch",

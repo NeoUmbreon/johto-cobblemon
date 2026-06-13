@@ -1,8 +1,7 @@
 {
     "species": "hitmonlee",
     "nature": "careful",
-    "heldItem": "cobblemon:black_belt",
-    "item": "cobblemon:black_belt",
+    "helditem": "cobblemon:black_belt",
     "moveset": {
         "1": "rollingkick",
         "2": "facade",

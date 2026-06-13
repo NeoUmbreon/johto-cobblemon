@@ -1,8 +1,7 @@
 {
     "species": "scyther",
     "nature": "jolly",
-    "heldItem": "cobblemon:metronome",
-    "item": "cobblemon:metronome",
+    "helditem": "cobblemon:metronome",
     "moveset": {
         "1": "furycutter",
         "2": "wingattack",

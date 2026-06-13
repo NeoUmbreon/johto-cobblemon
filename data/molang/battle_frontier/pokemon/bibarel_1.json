@@ -1,8 +1,7 @@
 {
     "species": "bibarel",
     "nature": "quirky",
-    "heldItem": "cobblemon:chople_berry",
-    "item": "cobblemon:chople_berry",
+    "helditem": "cobblemon:chople_berry",
     "moveset": {
         "1": "headbutt",
         "2": "waterpulse",

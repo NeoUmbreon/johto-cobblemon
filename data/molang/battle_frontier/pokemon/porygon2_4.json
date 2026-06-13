@@ -1,8 +1,7 @@
 {
     "species": "porygon2",
     "nature": "modest",
-    "heldItem": "cobblemon:lum_berry",
-    "item": "cobblemon:lum_berry",
+    "helditem": "cobblemon:lum_berry",
     "moveset": {
         "1": "triattack",
         "2": "signalbeam",

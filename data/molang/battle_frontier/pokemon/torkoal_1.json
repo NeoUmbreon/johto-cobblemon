@@ -1,8 +1,7 @@
 {
     "species": "torkoal",
     "nature": "bold",
-    "heldItem": "cobblemon:petaya_berry",
-    "item": "cobblemon:petaya_berry",
+    "helditem": "cobblemon:petaya_berry",
     "moveset": {
         "1": "ember",
         "2": "mudslap",

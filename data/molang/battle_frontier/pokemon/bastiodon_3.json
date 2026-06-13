@@ -1,8 +1,7 @@
 {
     "species": "bastiodon",
     "nature": "careful",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "ironhead",
         "2": "fissure",

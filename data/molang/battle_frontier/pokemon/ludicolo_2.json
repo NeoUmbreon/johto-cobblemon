@@ -1,8 +1,7 @@
 {
     "species": "ludicolo",
     "nature": "impish",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "leechseed",
         "2": "toxic",

@@ -1,8 +1,7 @@
 {
     "species": "luxray",
     "nature": "adamant",
-    "heldItem": "cobblemon:white_herb",
-    "item": "cobblemon:white_herb",
+    "helditem": "cobblemon:white_herb",
     "moveset": {
         "1": "thunderfang",
         "2": "icefang",

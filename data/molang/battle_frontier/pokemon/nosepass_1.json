@@ -1,8 +1,7 @@
 {
     "species": "nosepass",
     "nature": "modest",
-    "heldItem": "cobblemon:hard_stone",
-    "item": "cobblemon:hard_stone",
+    "helditem": "cobblemon:hard_stone",
     "moveset": {
         "1": "ancientpower",
         "2": "shockwave",

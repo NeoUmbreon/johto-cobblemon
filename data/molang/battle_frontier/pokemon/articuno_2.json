@@ -1,8 +1,7 @@
 {
     "species": "articuno",
     "nature": "brave",
-    "heldItem": "cobblemon:wacan_berry",
-    "item": "cobblemon:wacan_berry",
+    "helditem": "cobblemon:wacan_berry",
     "moveset": {
         "1": "avalanche",
         "2": "aerialace",

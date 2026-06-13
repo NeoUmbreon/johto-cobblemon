@@ -1,8 +1,7 @@
 {
     "species": "meganium",
     "nature": "bold",
-    "heldItem": "cobblemon:light_clay",
-    "item": "cobblemon:light_clay",
+    "helditem": "cobblemon:light_clay",
     "moveset": {
         "1": "leafstorm",
         "2": "wringout",

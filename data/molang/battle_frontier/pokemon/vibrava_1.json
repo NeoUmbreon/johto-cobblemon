@@ -1,8 +1,7 @@
 {
     "species": "vibrava",
     "nature": "modest",
-    "heldItem": "cobblemon:aspear_berry",
-    "item": "cobblemon:aspear_berry",
+    "helditem": "cobblemon:aspear_berry",
     "moveset": {
         "1": "dragonbreath",
         "2": "mudslap",

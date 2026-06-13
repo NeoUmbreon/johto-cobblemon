@@ -1,8 +1,7 @@
 {
     "species": "venusaur",
     "nature": "modest",
-    "heldItem": "cobblemon:wise_glasses",
-    "item": "cobblemon:wise_glasses",
+    "helditem": "cobblemon:wise_glasses",
     "moveset": {
         "1": "frenzyplant",
         "2": "sludgebomb",

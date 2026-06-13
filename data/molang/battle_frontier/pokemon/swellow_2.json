@@ -1,8 +1,7 @@
 {
     "species": "swellow",
     "nature": "adamant",
-    "heldItem": "cobblemon:toxic_orb",
-    "item": "cobblemon:toxic_orb",
+    "helditem": "cobblemon:toxic_orb",
     "moveset": {
         "1": "facade",
         "2": "aerialace",

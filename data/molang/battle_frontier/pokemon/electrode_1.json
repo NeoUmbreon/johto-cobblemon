@@ -1,8 +1,7 @@
 {
     "species": "electrode",
     "nature": "modest",
-    "heldItem": "cobblemon:chesto_berry",
-    "item": "cobblemon:chesto_berry",
+    "helditem": "cobblemon:chesto_berry",
     "moveset": {
         "1": "thunderbolt",
         "2": "swift",

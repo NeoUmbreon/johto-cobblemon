@@ -1,8 +1,7 @@
 {
     "species": "zapdos",
     "nature": "serious",
-    "heldItem": "cobblemon:yache_berry",
-    "item": "cobblemon:yache_berry",
+    "helditem": "cobblemon:yache_berry",
     "moveset": {
         "1": "thunder",
         "2": "drillpeck",

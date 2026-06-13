@@ -1,8 +1,7 @@
 {
     "species": "chansey",
     "nature": "impish",
-    "heldItem": "cobblemon:lucky_punch",
-    "item": "cobblemon:lucky_punch",
+    "helditem": "cobblemon:lucky_punch",
     "moveset": {
         "1": "eggbomb",
         "2": "focuspunch",

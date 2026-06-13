@@ -1,8 +1,7 @@
 {
     "species": "typhlosion",
     "nature": "adamant",
-    "heldItem": "cobblemon:shuca_berry",
-    "item": "cobblemon:shuca_berry",
+    "helditem": "cobblemon:shuca_berry",
     "moveset": {
         "1": "flareblitz",
         "2": "earthquake",

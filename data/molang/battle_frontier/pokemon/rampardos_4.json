@@ -1,8 +1,7 @@
 {
     "species": "rampardos",
     "nature": "jolly",
-    "heldItem": "cobblemon:choice_scarf",
-    "item": "cobblemon:choice_scarf",
+    "helditem": "cobblemon:choice_scarf",
     "moveset": {
         "1": "headsmash",
         "2": "earthquake",

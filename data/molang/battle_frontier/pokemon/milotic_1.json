@@ -1,8 +1,7 @@
 {
     "species": "milotic",
     "nature": "modest",
-    "heldItem": "cobblemon:shell_bell",
-    "item": "cobblemon:shell_bell",
+    "helditem": "cobblemon:shell_bell",
     "moveset": {
         "1": "surf",
         "2": "icebeam",

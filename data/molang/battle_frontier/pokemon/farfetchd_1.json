@@ -1,8 +1,7 @@
 {
     "species": "farfetchd",
     "nature": "adamant",
-    "heldItem": "cobblemon:stick",
-    "item": "cobblemon:stick",
+    "helditem": "cobblemon:stick",
     "moveset": {
         "1": "slash",
         "2": "aircutter",

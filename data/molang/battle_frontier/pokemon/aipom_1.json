@@ -1,8 +1,7 @@
 {
     "species": "aipom",
     "nature": "adamant",
-    "heldItem": "cobblemon:silk_scarf",
-    "item": "cobblemon:silk_scarf",
+    "helditem": "cobblemon:silk_scarf",
     "moveset": {
         "1": "doublehit",
         "2": "uturn",

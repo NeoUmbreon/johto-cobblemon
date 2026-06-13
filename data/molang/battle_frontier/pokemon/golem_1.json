@@ -1,8 +1,7 @@
 {
     "species": "golem",
     "nature": "impish",
-    "heldItem": "cobblemon:focus_band",
-    "item": "cobblemon:focus_band",
+    "helditem": "cobblemon:focus_band",
     "moveset": {
         "1": "earthquake",
         "2": "rockslide",

@@ -1,8 +1,7 @@
 {
     "species": "forretress",
     "nature": "adamant",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "dig",
         "2": "swagger",

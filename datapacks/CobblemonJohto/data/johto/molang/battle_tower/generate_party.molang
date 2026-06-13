@@ -1,90 +1,81 @@
 'Init variables';
-v.species_list == 0 ? { v.species_list = q.array() };
-t.item_list = q.array();
-t.filename_list = q.array();
-t.team = q.array();
+v.species_list == 0 ? { v.species_list.0 = 0; q.delete_variables(v.species_list) };
+t.item_list.0 = 0;
+q.delete_variables(t.item_list);
+t.team = q.array;
 
 
-v.npc.name == 'Palmer' ? {
-    ':3 ugly lil palmer rng, only 6 permutations so i just hardcoded them';
-    v.battle_num == 21 ? { t.filename_list = q.random( q.array('milotic_1','rhyperior_1','dragonite_1'), q.array('milotic_1','dragonite_1','rhyperior_1'), q.array('rhyperior_1','milotic_1','dragonite_1'), q.array('rhyperior_1','dragonite_1','milotic_1'), q.array('dragonite_1','milotic_1','rhyperior_1'), q.array('dragonite_1','rhyperior_1','milotic_1') ) };
-    v.battle_num == 49 ? { t.filename_list = q.random( q.array('regigigas_4','heatran_4','cresselia_4'), q.array('regigigas_4','cresselia_4','heatran_4'), q.array('cresselia_4','regigigas_4','heatran_4'), q.array('cresselia_4','heatran_4','regigigas_4'), q.array('heatran_4','regigigas_4','cresselia_4'), q.array('heatran_4','cresselia_4','regigigas_4') ) };
-} : {
-    'Else, generate species from rosters';
-    loop(100, {
-        'Retrieve Pokemon';
-        t.filename = q.run_script('johto:generate_pokemon');
-        t.pokemon = q.file.load('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
+'Get roster';
+t.roster = q.run_script('johto:generate_pokemon');
+t.roster_size = q.length(t.roster);
+
+'shuffle';
+t.i = 0;
+loop(t.roster_size - 1, {
+    t.i = t.i + 1;
+    t.j = math.random_integer(0, t.i);
+    t.temp = t.roster.[t.i];
+    t.roster.[t.i] = t.roster.[t.j];
+    t.roster.[t.j] = t.temp;
+});
+
+'scan';
+t.index = 0;
+loop(v.party_size, {
+    t.found = 0;
+    loop(t.roster_size, {
+        'Load Pokemon data';
+        t.pokemon = q.file.load('data/molang/battle_frontier/pokemon/' + (t.roster.[t.index]) + '.json');
         t.pokemon == 0 ? {
-            q.run_command('say Error loading Pokemon json ' + t.filename + ', canceling battle');
+            q.run_command('say Error loading Pokemon json ' + (t.roster.[t.index]) + ', canceling battle');
             break;
         };
+        t.index = t.index + 1;
 
-        'Compare species and item to already picked lists';
-        t.match = 0;
-        for_each(t.species, v.species_list, {
-            t.pokemon.species == t.species ? { t.match = 1; break };
-        });
-        !t.match ? { for_each(t.item, t.item_list, {
-            t.pokemon.item == t.item ? { t.match = 1; break };
-        });};
+        'Check for unique species and item';
+        q.get_variable(v.species_list, t.pokemon.species) == 0 && q.get_variable(t.item_list, t.pokemon.helditem) == 0 ? {
+            q.set_variable(v.species_list, t.pokemon.species, 1);
+            q.set_variable(t.item_list, t.pokemon.helditem, 1);
 
-        'Append filename if species and item not already picked';
-        !t.match ? {
-            q.append(v.species_list, t.pokemon.species);
-            q.append(t.item_list, t.pokemon.item);
-            q.append(t.filename_list, t.filename);
+            'Reformat moveset and item to comply with RCT';
+            t.moveset = q.array;
+            t.i = 0;
+            loop(4, {
+                t.i = t.i + 1;
+                q.append(t.moveset, t.pokemon.moveset.[t.i])
+            });
+            t.pokemon.moveset = t.moveset;
+            q.set_variable(t.pokemon, 'heldItem', t.pokemon.helditem);
+            q.delete_variable(t.pokemon, 'helditem');
 
-            'Break when party is filled';
-            q.length(t.filename_list) == v.party_size ? break;
+            'Set constants';
+            t.pokemon.level = 50;
+
+            'Determine IVs';
+            t.ivs = 3;
+            v.trainer.id >= 101 ? { t.ivs = 6 };
+            v.trainer.id >= 121 ? { t.ivs = 9 };
+            v.trainer.id >= 141 ? { t.ivs = 12 };
+            v.trainer.id >= 161 ? { t.ivs = 15 };
+            v.trainer.id >= 181 ? { t.ivs = 18 };
+            v.trainer.id >= 201 ? { t.ivs = 21 };
+            v.trainer.id >= 221 ? { t.ivs = 31 };
+
+            t.pokemon.ivs.hp = t.ivs;
+            t.pokemon.ivs.atk = t.ivs;
+            t.pokemon.ivs.def = t.ivs;
+            t.pokemon.ivs.spa = t.ivs;
+            t.pokemon.ivs.spd = t.ivs;
+            t.pokemon.ivs.spe = t.ivs;
+
+            'Append edited Pokemon object to team';
+            q.append(t.team, t.pokemon);
+            t.found = 1;
+            break;
         };
     });
-    t.pokemon == 0 ? return 0;
-};
-
-'Fill team array';
-for_each(t.filename, t.filename_list, {
-    'Load Pokemon json';
-    t.pokemon = q.file.load('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
-    t.pokemon == 0 ? {
-        q.run_command('say Error loading Pokemon json ' + t.filename + ', canceling battle');
-        break;
-    };
-
-    'Reformat moveset as array';
-    t.moveset = q.array();
-    t.i = 0;
-    loop(4, {
-        t.i = t.i + 1;
-        q.append(t.moveset, t.pokemon.moveset.[t.i])
-    });
-    t.pokemon.moveset = t.moveset;
-
-    'Set constants';
-    t.pokemon.level = 50;
-
-    'Determine IVs from trainer numeric id';
-    v.trainer.id <= 100 ? { t.ivs = 3; };
-    v.trainer.id >= 101 && v.trainer.id <= 120 ? { t.ivs = 6; };
-    v.trainer.id >= 121 && v.trainer.id <= 140 ? { t.ivs = 9; };
-    v.trainer.id >= 141 && v.trainer.id <= 160 ? { t.ivs = 12; };
-    v.trainer.id >= 161 && v.trainer.id <= 180 ? { t.ivs = 15; };
-    v.trainer.id >= 181 && v.trainer.id <= 200 ? { t.ivs = 18; };
-    v.trainer.id >= 201 && v.trainer.id <= 220 ? { t.ivs = 21; };
-    v.trainer.id >= 221 ? { t.ivs = 31; };
-
-    t.pokemon.ivs.hp = t.ivs;
-    t.pokemon.ivs.atk = t.ivs;
-    t.pokemon.ivs.def = t.ivs;
-    t.pokemon.ivs.spa = t.ivs;
-    t.pokemon.ivs.spd = t.ivs;
-    t.pokemon.ivs.spe = t.ivs;
-
-    q.delete_variable(t.pokemon, 'item');
-
-    'Append edited Pokemon object to team';
-    q.append(t.team, t.pokemon);
+    !t.found ? break;
 });
-t.pokemon == 0 ? return 0;
+q.length(t.team) != v.party_size ? return 0;
 
 return t.team;

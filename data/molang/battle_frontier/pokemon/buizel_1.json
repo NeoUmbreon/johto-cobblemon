@@ -1,8 +1,7 @@
 {
     "species": "buizel",
     "nature": "jolly",
-    "heldItem": "cobblemon:mystic_water",
-    "item": "cobblemon:mystic_water",
+    "helditem": "cobblemon:mystic_water",
     "moveset": {
         "1": "aquajet",
         "2": "quickattack",

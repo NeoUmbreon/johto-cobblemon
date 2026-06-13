@@ -1,8 +1,7 @@
 {
     "species": "machoke",
     "nature": "adamant",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "crosschop",
         "2": "facade",

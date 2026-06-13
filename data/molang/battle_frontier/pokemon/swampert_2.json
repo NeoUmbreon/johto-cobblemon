@@ -1,8 +1,7 @@
 {
     "species": "swampert",
     "nature": "adamant",
-    "heldItem": "cobblemon:lum_berry",
-    "item": "cobblemon:lum_berry",
+    "helditem": "cobblemon:lum_berry",
     "moveset": {
         "1": "aquatail",
         "2": "earthquake",

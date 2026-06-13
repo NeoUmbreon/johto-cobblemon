@@ -1,8 +1,7 @@
 {
     "species": "burmy",
     "nature": "adamant",
-    "heldItem": "cobblemon:sitrus_berry",
-    "item": "cobblemon:sitrus_berry",
+    "helditem": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "bugbite",
         "2": "tackle",

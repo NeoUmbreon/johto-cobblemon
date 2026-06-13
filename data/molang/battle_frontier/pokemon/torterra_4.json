@@ -1,8 +1,7 @@
 {
     "species": "torterra",
     "nature": "adamant",
-    "heldItem": "cobblemon:quick_claw",
-    "item": "cobblemon:quick_claw",
+    "helditem": "cobblemon:quick_claw",
     "moveset": {
         "1": "woodhammer",
         "2": "earthquake",

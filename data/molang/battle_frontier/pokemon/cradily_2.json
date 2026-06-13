@@ -1,8 +1,7 @@
 {
     "species": "cradily",
     "nature": "impish",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "toxic",
         "2": "stockpile",

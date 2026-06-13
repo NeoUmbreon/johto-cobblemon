@@ -1,8 +1,7 @@
 {
     "species": "spoink",
     "nature": "modest",
-    "heldItem": "cobblemon:sitrus_berry",
-    "item": "cobblemon:sitrus_berry",
+    "helditem": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "psywave",
         "2": "swift",

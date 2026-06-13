@@ -1,8 +1,7 @@
 {
     "species": "ambipom",
     "nature": "jolly",
-    "heldItem": "cobblemon:metronome",
-    "item": "cobblemon:metronome",
+    "helditem": "cobblemon:metronome",
     "moveset": {
         "1": "lastresort",
         "2": "thunderwave",

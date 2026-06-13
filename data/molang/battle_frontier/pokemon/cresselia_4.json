@@ -1,8 +1,7 @@
 {
     "species": "cresselia",
     "nature": "modest",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "psychic",
         "2": "icebeam",

@@ -1,8 +1,7 @@
 {
     "species": "regice",
     "nature": "impish",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "avalanche",
         "2": "hammerarm",

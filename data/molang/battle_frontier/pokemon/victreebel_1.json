@@ -1,8 +1,7 @@
 {
     "species": "victreebel",
     "nature": "modest",
-    "heldItem": "cobblemon:payapa_berry",
-    "item": "cobblemon:payapa_berry",
+    "helditem": "cobblemon:payapa_berry",
     "moveset": {
         "1": "leafstorm",
         "2": "sludgebomb",

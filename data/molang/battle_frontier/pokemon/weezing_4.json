@@ -1,8 +1,7 @@
 {
     "species": "weezing",
     "nature": "modest",
-    "heldItem": "cobblemon:quick_claw",
-    "item": "cobblemon:quick_claw",
+    "helditem": "cobblemon:quick_claw",
     "moveset": {
         "1": "sludgebomb",
         "2": "flamethrower",

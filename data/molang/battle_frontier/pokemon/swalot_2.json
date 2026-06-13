@@ -1,8 +1,7 @@
 {
     "species": "swalot",
     "nature": "modest",
-    "heldItem": "cobblemon:black_sludge",
-    "item": "cobblemon:black_sludge",
+    "helditem": "cobblemon:black_sludge",
     "moveset": {
         "1": "sludgebomb",
         "2": "shadowball",

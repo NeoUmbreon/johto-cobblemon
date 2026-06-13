@@ -1,8 +1,7 @@
 {
     "species": "beedrill",
     "nature": "jolly",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "twineedle",
         "2": "toxic",

@@ -1,8 +1,7 @@
 {
     "species": "torterra",
     "nature": "sassy",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "gigadrain",
         "2": "leechseed",

@@ -1,8 +1,7 @@
 {
     "species": "weepinbell",
     "nature": "quiet",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "razorleaf",
         "2": "acid",

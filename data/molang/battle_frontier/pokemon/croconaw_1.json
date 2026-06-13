@@ -1,8 +1,7 @@
 {
     "species": "croconaw",
     "nature": "serious",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "waterpulse",
         "2": "slash",

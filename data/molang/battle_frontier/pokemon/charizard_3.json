@@ -1,8 +1,7 @@
 {
     "species": "charizard",
     "nature": "adamant",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "flareblitz",
         "2": "earthquake",

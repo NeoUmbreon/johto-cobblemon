@@ -1,8 +1,7 @@
 {
     "species": "natu",
     "nature": "timid",
-    "heldItem": "cobblemon:twisted_spoon",
-    "item": "cobblemon:twisted_spoon",
+    "helditem": "cobblemon:twisted_spoon",
     "moveset": {
         "1": "nightshade",
         "2": "aircutter",

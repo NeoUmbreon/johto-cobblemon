@@ -1,8 +1,7 @@
 {
     "species": "electrode",
     "nature": "hardy",
-    "heldItem": "cobblemon:focus_sash",
-    "item": "cobblemon:focus_sash",
+    "helditem": "cobblemon:focus_sash",
     "moveset": {
         "1": "thunderbolt",
         "2": "signalbeam",

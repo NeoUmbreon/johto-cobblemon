@@ -1,8 +1,7 @@
 {
     "species": "golbat",
     "nature": "adamant",
-    "heldItem": "cobblemon:black_sludge",
-    "item": "cobblemon:black_sludge",
+    "helditem": "cobblemon:black_sludge",
     "moveset": {
         "1": "poisonfang",
         "2": "aerialace",

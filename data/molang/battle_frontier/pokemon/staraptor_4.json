@@ -1,8 +1,7 @@
 {
     "species": "staraptor",
     "nature": "adamant",
-    "heldItem": "cobblemon:choice_band",
-    "item": "cobblemon:choice_band",
+    "helditem": "cobblemon:choice_band",
     "moveset": {
         "1": "bravebird",
         "2": "gigaimpact",

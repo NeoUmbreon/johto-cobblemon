@@ -1,8 +1,7 @@
 {
     "species": "abomasnow",
     "nature": "brave",
-    "heldItem": "cobblemon:shell_bell",
-    "item": "cobblemon:shell_bell",
+    "helditem": "cobblemon:shell_bell",
     "moveset": {
         "1": "woodhammer",
         "2": "avalanche",

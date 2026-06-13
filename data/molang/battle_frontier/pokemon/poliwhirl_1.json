@@ -1,8 +1,7 @@
 {
     "species": "poliwhirl",
     "nature": "hardy",
-    "heldItem": "cobblemon:liechi_berry",
-    "item": "cobblemon:liechi_berry",
+    "helditem": "cobblemon:liechi_berry",
     "moveset": {
         "1": "bubblebeam",
         "2": "doubleslap",

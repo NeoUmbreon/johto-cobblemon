@@ -1,8 +1,7 @@
 {
     "species": "shuppet",
     "nature": "adamant",
-    "heldItem": "cobblemon:spell_tag",
-    "item": "cobblemon:spell_tag",
+    "helditem": "cobblemon:spell_tag",
     "moveset": {
         "1": "shadowsneak",
         "2": "knockoff",

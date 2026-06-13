@@ -1,8 +1,7 @@
 {
     "species": "victreebel",
     "nature": "modest",
-    "heldItem": "cobblemon:power_herb",
-    "item": "cobblemon:power_herb",
+    "helditem": "cobblemon:power_herb",
     "moveset": {
         "1": "sludgebomb",
         "2": "solarbeam",

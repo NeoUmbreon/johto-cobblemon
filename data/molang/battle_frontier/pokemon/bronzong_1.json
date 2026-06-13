@@ -1,8 +1,7 @@
 {
     "species": "bronzong",
     "nature": "impish",
-    "heldItem": "cobblemon:kings_rock",
-    "item": "cobblemon:kings_rock",
+    "helditem": "cobblemon:kings_rock",
     "moveset": {
         "1": "extrasensory",
         "2": "ironhead",

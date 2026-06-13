@@ -1,8 +1,7 @@
 {
     "species": "victreebel",
     "nature": "modest",
-    "heldItem": "cobblemon:focus_band",
-    "item": "cobblemon:focus_band",
+    "helditem": "cobblemon:focus_band",
     "moveset": {
         "1": "solarbeam",
         "2": "sludgebomb",

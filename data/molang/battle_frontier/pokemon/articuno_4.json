@@ -1,8 +1,7 @@
 {
     "species": "articuno",
     "nature": "modest",
-    "heldItem": "cobblemon:charti_berry",
-    "item": "cobblemon:charti_berry",
+    "helditem": "cobblemon:charti_berry",
     "moveset": {
         "1": "icebeam",
         "2": "aircutter",

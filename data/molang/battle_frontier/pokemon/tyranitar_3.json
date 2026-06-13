@@ -1,8 +1,7 @@
 {
     "species": "tyranitar",
     "nature": "adamant",
-    "heldItem": "cobblemon:white_herb",
-    "item": "cobblemon:white_herb",
+    "helditem": "cobblemon:white_herb",
     "moveset": {
         "1": "superpower",
         "2": "dragonclaw",

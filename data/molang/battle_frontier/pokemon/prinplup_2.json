@@ -1,8 +1,7 @@
 {
     "species": "prinplup",
     "nature": "bashful",
-    "heldItem": "cobblemon:focus_band",
-    "item": "cobblemon:focus_band",
+    "helditem": "cobblemon:focus_band",
     "moveset": {
         "1": "surf",
         "2": "drillpeck",

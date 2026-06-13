@@ -1,8 +1,7 @@
 {
     "species": "kabuto",
     "nature": "adamant",
-    "heldItem": "cobblemon:liechi_berry",
-    "item": "cobblemon:liechi_berry",
+    "helditem": "cobblemon:liechi_berry",
     "moveset": {
         "1": "aquajet",
         "2": "rocktomb",

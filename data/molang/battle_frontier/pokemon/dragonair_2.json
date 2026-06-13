@@ -1,8 +1,7 @@
 {
     "species": "dragonair",
     "nature": "quirky",
-    "heldItem": "cobblemon:haban_berry",
-    "item": "cobblemon:haban_berry",
+    "helditem": "cobblemon:haban_berry",
     "moveset": {
         "1": "dragonpulse",
         "2": "aquatail",

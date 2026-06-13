@@ -1,8 +1,7 @@
 {
     "species": "pidgeot",
     "nature": "adamant",
-    "heldItem": "cobblemon:cheri_berry",
-    "item": "cobblemon:cheri_berry",
+    "helditem": "cobblemon:cheri_berry",
     "moveset": {
         "1": "wingattack",
         "2": "facade",

@@ -1,8 +1,7 @@
 {
     "species": "bagon",
     "nature": "naughty",
-    "heldItem": "cobblemon:dragon_fang",
-    "item": "cobblemon:dragon_fang",
+    "helditem": "cobblemon:dragon_fang",
     "moveset": {
         "1": "dragonbreath",
         "2": "headbutt",

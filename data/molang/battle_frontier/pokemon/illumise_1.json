@@ -1,8 +1,7 @@
 {
     "species": "illumise",
     "nature": "timid",
-    "heldItem": "cobblemon:petaya_berry",
-    "item": "cobblemon:petaya_berry",
+    "helditem": "cobblemon:petaya_berry",
     "moveset": {
         "1": "silverwind",
         "2": "swift",

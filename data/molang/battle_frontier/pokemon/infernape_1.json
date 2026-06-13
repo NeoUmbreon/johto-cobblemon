@@ -1,8 +1,7 @@
 {
     "species": "infernape",
     "nature": "jolly",
-    "heldItem": "cobblemon:coba_berry",
-    "item": "cobblemon:coba_berry",
+    "helditem": "cobblemon:coba_berry",
     "moveset": {
         "1": "closecombat",
         "2": "firepunch",

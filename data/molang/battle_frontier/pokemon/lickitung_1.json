@@ -1,8 +1,7 @@
 {
     "species": "lickitung",
     "nature": "adamant",
-    "heldItem": "cobblemon:chesto_berry",
-    "item": "cobblemon:chesto_berry",
+    "helditem": "cobblemon:chesto_berry",
     "moveset": {
         "1": "secretpower",
         "2": "rocktomb",

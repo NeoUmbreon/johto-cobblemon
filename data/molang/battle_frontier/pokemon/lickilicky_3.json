@@ -1,8 +1,7 @@
 {
     "species": "lickilicky",
     "nature": "brave",
-    "heldItem": "cobblemon:lum_berry",
-    "item": "cobblemon:lum_berry",
+    "helditem": "cobblemon:lum_berry",
     "moveset": {
         "1": "return",
         "2": "gyroball",

@@ -1,8 +1,7 @@
 {
     "species": "stantler",
     "nature": "adamant",
-    "heldItem": "cobblemon:chople_berry",
-    "item": "cobblemon:chople_berry",
+    "helditem": "cobblemon:chople_berry",
     "moveset": {
         "1": "frustration",
         "2": "zenheadbutt",

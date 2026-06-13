@@ -1,8 +1,7 @@
 {
     "species": "togekiss",
     "nature": "adamant",
-    "heldItem": "cobblemon:power_herb",
-    "item": "cobblemon:power_herb",
+    "helditem": "cobblemon:power_herb",
     "moveset": {
         "1": "skyattack",
         "2": "extremespeed",

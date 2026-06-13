@@ -1,8 +1,7 @@
 {
     "species": "skuntank",
     "nature": "timid",
-    "heldItem": "cobblemon:shuca_berry",
-    "item": "cobblemon:shuca_berry",
+    "helditem": "cobblemon:shuca_berry",
     "moveset": {
         "1": "sludgebomb",
         "2": "darkpulse",

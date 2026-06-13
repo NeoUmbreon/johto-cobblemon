@@ -6,8 +6,9 @@ v.battle_num = q.npc.data.battle_num;
 t.floor = q.npc.data.floor;
 t.prefix = 'battletower_floor_' + t.floor + '_trainer_';
 t.tbcs_prefix = 'tbcs:' + t.prefix;
-t.trainer_list = q.array();
-t.npcs = q.array();
+t.class_list.0 = 0;
+q.delete_variables(t.class_list);
+t.npcs = q.array;
 t.team_size = q.length(t.team);
 v.party_size = ( t.team_size != 1 ? 2 : ( t.format == 'SINGLES' ? 3 : ( t.format == 'DOUBLES' ? 4 : ( t.format == 'TRIPLES' ? 6 ))));
 t.music_id = 11;
@@ -17,72 +18,58 @@ t.player_pos = q.array(898.5, math.floor(q.npc.y) + 0.0625, t.player_z);
 t.npc_pos = q.array(907.5, math.floor(q.npc.y) + 0.0625, t.npc_z);
 
 
-'Palmer handling';
-t.team_size == 1 && t.format == 'SINGLES' ? {
-    v.battle_num == 21 || v.battle_num == 49 ? { t.palmer.class = 'towertycoon'; t.palmer.name = 'palmer'; t.palmer.id = 300; };
-};
-
-t.palmer != 0 ? {
-    'If Palmer, set variables';
+'Frontier Brain handling';
+t.format == 'SINGLES' && ( v.battle_num == 21 || v.battle_num == 49 ) ? {
+    t.brain.class = 'towertycoon';
+    t.brain.name = 'palmer';
+    t.brain.id = 300;
+    t.brain.roster = ( v.battle_num == 21 ? 'palmer_1' : 'palmer_2' );
     t.music_id = 15;
-    q.append(t.trainer_list, t.palmer);
-} : {
-    'Else, generate random trainers';
-    loop(100, {
-        'Generate trainer';
-        t.trainer = q.run_script('johto:generate_trainer');
-
-        'Compare trainer class to already picked list';
-        t.match = 0;
-        for_each(t.element, t.trainer_list, {
-            t.trainer.class == t.element.class ? { t.match = 1; break };
-        });
-
-        'Append trainer if not already picked';
-        !t.match ? {
-            q.append(t.trainer_list, t.trainer);
-
-            'Break when team is filled';
-            q.length(t.trainer_list) == t.team_size ? break;
-        };
-    });
 };
 
-'Spawn trainers, generate and attach TBCS teams';
-t.trainer = 0;
-for_each(v.trainer, t.trainer_list, {
+'Build team';
+loop(t.team_size, {
+    t.brain != 0 ? {
+        v.trainer = t.brain;
+    } : {
+        t.found = 0;
+        loop(50, {
+            v.trainer = q.run_script('johto:generate_trainer');
+            q.get_variable(t.class_list, v.trainer.class) == 0 ? {
+                q.set_variable(t.class_list, v.trainer.class, 1);
+                t.found = 1;
+                break;
+            };
+        });
+        !t.found ? break;
+    };
+
     'Spawn NPC';
     t.filename = v.trainer.class + v.trainer.name;
     v.npc = q.npc.world.spawn_npc(t.npc_pos.0, t.npc_pos.1, t.npc_pos.2.[t.i], t.filename, 1);
     v.npc == 0 ? {
-        t.fail = 1;
         q.run_command('say Error spawning NPC with class ' + t.filename + ', canceling battle');
         break;
     };
+    t.trainer.name = v.npc.name;
 
     'Generate party';
     t.i = t.i + 1;
     t.rct_name = t.prefix + t.i;
     t.trainer.team = q.run_script('johto:generate_party');
     t.trainer.team == 0 ? {
-        t.fail = 1;
         break;
     };
-
-    'Write trainer to json';
-    t.trainer.name = v.npc.name;
+    
+    'Done';
     q.file.save('data/molang/battle_frontier/' + t.rct_name + '.json', t.trainer);
-
-    'TBCS: Reload trainer and attach';
     q.run_command('tbcs reload tbcs:' + t.rct_name);
     q.run_command('tbcs attach tbcs:' + t.rct_name + ' ' + v.npc.uuid);
-
-    'Store NPC';
     q.append(t.npcs, v.npc);
 });
-t.fail ? return 0;
+q.length(t.npcs) != t.team_size ? return 0;
 
-'Store NPC objects in entity to discard after battle';
+'Store NPCs to discard after battle';
 q.npc.data.npcs = t.npcs;
 q.npc.save_data;
 

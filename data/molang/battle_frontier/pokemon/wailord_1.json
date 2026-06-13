@@ -1,8 +1,7 @@
 {
     "species": "wailord",
     "nature": "modest",
-    "heldItem": "cobblemon:sitrus_berry",
-    "item": "cobblemon:sitrus_berry",
+    "helditem": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "surf",
         "2": "icebeam",

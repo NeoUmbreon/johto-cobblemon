@@ -1,8 +1,7 @@
 {
     "species": "combusken",
     "nature": "docile",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "flamethrower",
         "2": "skyuppercut",

@@ -1,8 +1,7 @@
 {
     "species": "octillery",
     "nature": "modest",
-    "heldItem": "cobblemon:wacan_berry",
-    "item": "cobblemon:wacan_berry",
+    "helditem": "cobblemon:wacan_berry",
     "moveset": {
         "1": "octazooka",
         "2": "icywind",

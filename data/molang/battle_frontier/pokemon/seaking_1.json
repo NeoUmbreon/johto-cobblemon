@@ -1,8 +1,7 @@
 {
     "species": "seaking",
     "nature": "modest",
-    "heldItem": "cobblemon:pecha_berry",
-    "item": "cobblemon:pecha_berry",
+    "helditem": "cobblemon:pecha_berry",
     "moveset": {
         "1": "waterpulse",
         "2": "psybeam",

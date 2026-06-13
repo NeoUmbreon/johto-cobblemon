@@ -1,8 +1,7 @@
 {
     "species": "primeape",
     "nature": "adamant",
-    "heldItem": "cobblemon:expert_belt",
-    "item": "cobblemon:expert_belt",
+    "helditem": "cobblemon:expert_belt",
     "moveset": {
         "1": "crosschop",
         "2": "earthquake",

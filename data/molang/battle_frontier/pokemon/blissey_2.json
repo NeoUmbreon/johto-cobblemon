@@ -1,8 +1,7 @@
 {
     "species": "blissey",
     "nature": "calm",
-    "heldItem": "cobblemon:chesto_berry",
-    "item": "cobblemon:chesto_berry",
+    "helditem": "cobblemon:chesto_berry",
     "moveset": {
         "1": "toxic",
         "2": "doubleteam",

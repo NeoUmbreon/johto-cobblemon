@@ -1,8 +1,7 @@
 {
     "species": "gliscor",
     "nature": "adamant",
-    "heldItem": "cobblemon:expert_belt",
-    "item": "cobblemon:expert_belt",
+    "helditem": "cobblemon:expert_belt",
     "moveset": {
         "1": "earthquake",
         "2": "aerialace",

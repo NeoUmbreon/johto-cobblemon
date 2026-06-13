@@ -1,8 +1,7 @@
 {
     "species": "porygon2",
     "nature": "modest",
-    "heldItem": "cobblemon:wise_glasses",
-    "item": "cobblemon:wise_glasses",
+    "helditem": "cobblemon:wise_glasses",
     "moveset": {
         "1": "triattack",
         "2": "thunderbolt",

@@ -1,8 +1,7 @@
 {
     "species": "murkrow",
     "nature": "jolly",
-    "heldItem": "cobblemon:black_glasses",
-    "item": "cobblemon:black_glasses",
+    "helditem": "cobblemon:black_glasses",
     "moveset": {
         "1": "feintattack",
         "2": "wingattack",

@@ -1,8 +1,7 @@
 {
     "species": "skuntank",
     "nature": "adamant",
-    "heldItem": "cobblemon:razor_claw",
-    "item": "cobblemon:razor_claw",
+    "helditem": "cobblemon:razor_claw",
     "moveset": {
         "1": "suckerpunch",
         "2": "poisonjab",

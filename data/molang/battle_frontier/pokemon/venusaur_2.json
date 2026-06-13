@@ -1,8 +1,7 @@
 {
     "species": "venusaur",
     "nature": "bold",
-    "heldItem": "cobblemon:big_root",
-    "item": "cobblemon:big_root",
+    "helditem": "cobblemon:big_root",
     "moveset": {
         "1": "gigadrain",
         "2": "ingrain",

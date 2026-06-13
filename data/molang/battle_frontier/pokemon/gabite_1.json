@@ -1,8 +1,7 @@
 {
     "species": "gabite",
     "nature": "adamant",
-    "heldItem": "cobblemon:yache_berry",
-    "item": "cobblemon:yache_berry",
+    "helditem": "cobblemon:yache_berry",
     "moveset": {
         "1": "dragonrage",
         "2": "sandtomb",

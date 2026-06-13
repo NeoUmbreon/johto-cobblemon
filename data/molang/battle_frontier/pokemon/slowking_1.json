@@ -1,8 +1,7 @@
 {
     "species": "slowking",
     "nature": "quiet",
-    "heldItem": "cobblemon:shell_bell",
-    "item": "cobblemon:shell_bell",
+    "helditem": "cobblemon:shell_bell",
     "moveset": {
         "1": "psychic",
         "2": "brine",

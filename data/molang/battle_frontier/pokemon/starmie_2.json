@@ -1,8 +1,7 @@
 {
     "species": "starmie",
     "nature": "timid",
-    "heldItem": "cobblemon:wide_lens",
-    "item": "cobblemon:wide_lens",
+    "helditem": "cobblemon:wide_lens",
     "moveset": {
         "1": "hydropump",
         "2": "blizzard",

@@ -1,8 +1,7 @@
 {
     "species": "vaporeon",
     "nature": "modest",
-    "heldItem": "cobblemon:leftovers",
-    "item": "cobblemon:leftovers",
+    "helditem": "cobblemon:leftovers",
     "moveset": {
         "1": "muddywater",
         "2": "blizzard",

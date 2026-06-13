@@ -1,8 +1,7 @@
 {
     "species": "fearow",
     "nature": "adamant",
-    "heldItem": "cobblemon:sharp_beak",
-    "item": "cobblemon:sharp_beak",
+    "helditem": "cobblemon:sharp_beak",
     "moveset": {
         "1": "pluck",
         "2": "facade",

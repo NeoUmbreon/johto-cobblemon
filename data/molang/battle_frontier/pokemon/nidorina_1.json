@@ -1,8 +1,7 @@
 {
     "species": "nidorina",
     "nature": "adamant",
-    "heldItem": "cobblemon:poison_barb",
-    "item": "cobblemon:poison_barb",
+    "helditem": "cobblemon:poison_barb",
     "moveset": {
         "1": "poisonfang",
         "2": "doublekick",

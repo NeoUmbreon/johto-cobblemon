@@ -1,8 +1,7 @@
 {
     "species": "porygonz",
     "nature": "timid",
-    "heldItem": "cobblemon:choice_scarf",
-    "item": "cobblemon:choice_scarf",
+    "helditem": "cobblemon:choice_scarf",
     "moveset": {
         "1": "triattack",
         "2": "thunderwave",

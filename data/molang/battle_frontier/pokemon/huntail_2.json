@@ -1,8 +1,7 @@
 {
     "species": "huntail",
     "nature": "adamant",
-    "heldItem": "cobblemon:shell_bell",
-    "item": "cobblemon:shell_bell",
+    "helditem": "cobblemon:shell_bell",
     "moveset": {
         "1": "aquatail",
         "2": "crunch",

@@ -1,8 +1,7 @@
 {
     "species": "altaria",
     "nature": "modest",
-    "heldItem": "cobblemon:white_herb",
-    "item": "cobblemon:white_herb",
+    "helditem": "cobblemon:white_herb",
     "moveset": {
         "1": "dracometeor",
         "2": "aircutter",

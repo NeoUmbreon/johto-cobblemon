@@ -1,8 +1,7 @@
 {
     "species": "turtwig",
     "nature": "adamant",
-    "heldItem": "cobblemon:occa_berry",
-    "item": "cobblemon:occa_berry",
+    "helditem": "cobblemon:occa_berry",
     "moveset": {
         "1": "razorleaf",
         "2": "bite",

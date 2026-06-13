@@ -1,8 +1,7 @@
 {
     "species": "mantyke",
     "nature": "docile",
-    "heldItem": "cobblemon:mystic_water",
-    "item": "cobblemon:mystic_water",
+    "helditem": "cobblemon:mystic_water",
     "moveset": {
         "1": "bubblebeam",
         "2": "aerialace",

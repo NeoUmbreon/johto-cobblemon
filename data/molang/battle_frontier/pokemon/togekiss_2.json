@@ -1,8 +1,7 @@
 {
     "species": "togekiss",
     "nature": "modest",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "airslash",
         "2": "ominouswind",

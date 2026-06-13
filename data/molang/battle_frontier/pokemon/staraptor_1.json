@@ -1,8 +1,7 @@
 {
     "species": "staraptor",
     "nature": "jolly",
-    "heldItem": "cobblemon:kings_rock",
-    "item": "cobblemon:kings_rock",
+    "helditem": "cobblemon:kings_rock",
     "moveset": {
         "1": "return",
         "2": "aerialace",

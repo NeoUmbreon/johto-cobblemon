@@ -1,8 +1,7 @@
 {
     "species": "lunatone",
     "nature": "modest",
-    "heldItem": "cobblemon:passho_berry",
-    "item": "cobblemon:passho_berry",
+    "helditem": "cobblemon:passho_berry",
     "moveset": {
         "1": "psychic",
         "2": "ancientpower",

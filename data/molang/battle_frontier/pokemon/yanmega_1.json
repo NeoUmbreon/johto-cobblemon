@@ -1,8 +1,7 @@
 {
     "species": "yanmega",
     "nature": "timid",
-    "heldItem": "cobblemon:coba_berry",
-    "item": "cobblemon:coba_berry",
+    "helditem": "cobblemon:coba_berry",
     "moveset": {
         "1": "signalbeam",
         "2": "aircutter",

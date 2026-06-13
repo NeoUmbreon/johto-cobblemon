@@ -1,8 +1,7 @@
 {
     "species": "probopass",
     "nature": "modest",
-    "heldItem": "cobblemon:life_orb",
-    "item": "cobblemon:life_orb",
+    "helditem": "cobblemon:life_orb",
     "moveset": {
         "1": "flashcannon",
         "2": "powergem",

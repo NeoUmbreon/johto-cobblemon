@@ -1,8 +1,7 @@
 {
     "species": "slaking",
     "nature": "impish",
-    "heldItem": "cobblemon:bright_powder",
-    "item": "cobblemon:bright_powder",
+    "helditem": "cobblemon:bright_powder",
     "moveset": {
         "1": "facade",
         "2": "shadowclaw",

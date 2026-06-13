@@ -1,8 +1,7 @@
 {
     "species": "gyarados",
     "nature": "careful",
-    "heldItem": "cobblemon:razor_fang",
-    "item": "cobblemon:razor_fang",
+    "helditem": "cobblemon:razor_fang",
     "moveset": {
         "1": "aquatail",
         "2": "icefang",

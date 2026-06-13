@@ -1,8 +1,7 @@
 {
     "species": "shinx",
     "nature": "adamant",
-    "heldItem": "cobblemon:kings_rock",
-    "item": "cobblemon:kings_rock",
+    "helditem": "cobblemon:kings_rock",
     "moveset": {
         "1": "thunderfang",
         "2": "bite",

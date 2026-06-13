@@ -1,8 +1,7 @@
 {
     "species": "miltank",
     "nature": "impish",
-    "heldItem": "cobblemon:cheri_berry",
-    "item": "cobblemon:cheri_berry",
+    "helditem": "cobblemon:cheri_berry",
     "moveset": {
         "1": "return",
         "2": "ironhead",

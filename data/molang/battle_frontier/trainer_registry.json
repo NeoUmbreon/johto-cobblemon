@@ -1,0 +1,1502 @@
+{
+    "1": {
+        "class": "youngster",
+        "name": "jim",
+        "roster": 1
+    },
+    "2": {
+        "class": "youngster",
+        "name": "erroll",
+        "roster": 1
+    },
+    "3": {
+        "class": "youngster",
+        "name": "casimir",
+        "roster": 1
+    },
+    "4": {
+        "class": "lass",
+        "name": "cameron",
+        "roster": 1
+    },
+    "5": {
+        "class": "lass",
+        "name": "peaches",
+        "roster": 1
+    },
+    "6": {
+        "class": "lass",
+        "name": "yasmin",
+        "roster": 1
+    },
+    "7": {
+        "class": "schoolkid",
+        "name": "mfoster",
+        "roster": 2
+    },
+    "8": {
+        "class": "schoolkid",
+        "name": "mken",
+        "roster": 2
+    },
+    "9": {
+        "class": "schoolkid",
+        "name": "mowen",
+        "roster": 2
+    },
+    "10": {
+        "class": "schoolkid",
+        "name": "fmarcy",
+        "roster": 2
+    },
+    "11": {
+        "class": "schoolkid",
+        "name": "fshelly",
+        "roster": 2
+    },
+    "12": {
+        "class": "schoolkid",
+        "name": "faspen",
+        "roster": 2
+    },
+    "13": {
+        "class": "richboy",
+        "name": "matt",
+        "roster": 2
+    },
+    "14": {
+        "class": "richboy",
+        "name": "alvan",
+        "roster": 2
+    },
+    "15": {
+        "class": "richboy",
+        "name": "asa",
+        "roster": 2
+    },
+    "16": {
+        "class": "lady",
+        "name": "isabel",
+        "roster": 2
+    },
+    "17": {
+        "class": "lady",
+        "name": "nichole",
+        "roster": 2
+    },
+    "18": {
+        "class": "lady",
+        "name": "juanita",
+        "roster": 2
+    },
+    "19": {
+        "class": "camper",
+        "name": "bernard",
+        "roster": 3
+    },
+    "20": {
+        "class": "camper",
+        "name": "herbert",
+        "roster": 3
+    },
+    "21": {
+        "class": "camper",
+        "name": "colbert",
+        "roster": 3
+    },
+    "22": {
+        "class": "picnicker",
+        "name": "maggie",
+        "roster": 3
+    },
+    "23": {
+        "class": "picnicker",
+        "name": "melanie",
+        "roster": 3
+    },
+    "24": {
+        "class": "picnicker",
+        "name": "ann",
+        "roster": 3
+    },
+    "25": {
+        "class": "tuber",
+        "name": "mmanford",
+        "roster": 4
+    },
+    "26": {
+        "class": "tuber",
+        "name": "mhank",
+        "roster": 4
+    },
+    "27": {
+        "class": "tuber",
+        "name": "mpercy",
+        "roster": 4
+    },
+    "28": {
+        "class": "tuber",
+        "name": "fdakota",
+        "roster": 4
+    },
+    "29": {
+        "class": "tuber",
+        "name": "fjenny",
+        "roster": 4
+    },
+    "30": {
+        "class": "tuber",
+        "name": "ftia",
+        "roster": 4
+    },
+    "31": {
+        "class": "guitarist",
+        "name": "malcolm",
+        "roster": 5
+    },
+    "32": {
+        "class": "guitarist",
+        "name": "tad",
+        "roster": 5
+    },
+    "33": {
+        "class": "guitarist",
+        "name": "concord",
+        "roster": 5
+    },
+    "34": {
+        "class": "idol",
+        "name": "penny",
+        "roster": 6
+    },
+    "35": {
+        "class": "idol",
+        "name": "lana",
+        "roster": 6
+    },
+    "36": {
+        "class": "idol",
+        "name": "crimson",
+        "roster": 6
+    },
+    "37": {
+        "class": "pokefan",
+        "name": "mewan",
+        "roster": 7
+    },
+    "38": {
+        "class": "pokefan",
+        "name": "mkane",
+        "roster": 7
+    },
+    "39": {
+        "class": "pokefan",
+        "name": "mtheo",
+        "roster": 7
+    },
+    "40": {
+        "class": "pokefan",
+        "name": "falexia",
+        "roster": 7
+    },
+    "41": {
+        "class": "pokefan",
+        "name": "fluna",
+        "roster": 7
+    },
+    "42": {
+        "class": "pokefan",
+        "name": "fcelene",
+        "roster": 7
+    },
+    "43": {
+        "class": "waiter",
+        "name": "cyan",
+        "roster": 8
+    },
+    "44": {
+        "class": "waiter",
+        "name": "indigo",
+        "roster": 8
+    },
+    "45": {
+        "class": "waiter",
+        "name": "orin",
+        "roster": 8
+    },
+    "46": {
+        "class": "waitress",
+        "name": "ashley",
+        "roster": 8
+    },
+    "47": {
+        "class": "waitress",
+        "name": "noelle",
+        "roster": 8
+    },
+    "48": {
+        "class": "waitress",
+        "name": "kandace",
+        "roster": 8
+    },
+    "49": {
+        "class": "bugcatcher",
+        "name": "floyd",
+        "roster": 9
+    },
+    "50": {
+        "class": "bugcatcher",
+        "name": "hoffman",
+        "roster": 9
+    },
+    "51": {
+        "class": "bugcatcher",
+        "name": "amadeus",
+        "roster": 9
+    },
+    "52": {
+        "class": "ninjaboy",
+        "name": "shia",
+        "roster": 1
+    },
+    "53": {
+        "class": "ninjaboy",
+        "name": "vincent",
+        "roster": 1
+    },
+    "54": {
+        "class": "ninjaboy",
+        "name": "pierre",
+        "roster": 1
+    },
+    "55": {
+        "class": "pokekid",
+        "name": "alice",
+        "roster": 1
+    },
+    "56": {
+        "class": "pokekid",
+        "name": "anita",
+        "roster": 1
+    },
+    "57": {
+        "class": "pokekid",
+        "name": "allison",
+        "roster": 1
+    },
+    "58": {
+        "class": "fisherman",
+        "name": "kiefer",
+        "roster": 10
+    },
+    "59": {
+        "class": "fisherman",
+        "name": "basil",
+        "roster": 10
+    },
+    "60": {
+        "class": "ruinmaniac",
+        "name": "henrik",
+        "roster": 11
+    },
+    "61": {
+        "class": "ruinmaniac",
+        "name": "aubry",
+        "roster": 11
+    },
+    "62": {
+        "class": "collector",
+        "name": "upton",
+        "roster": 12
+    },
+    "63": {
+        "class": "collector",
+        "name": "emil",
+        "roster": 12
+    },
+    "64": {
+        "class": "parasollady",
+        "name": "bridget",
+        "roster": 2
+    },
+    "65": {
+        "class": "parasollady",
+        "name": "blanche",
+        "roster": 2
+    },
+    "66": {
+        "class": "parasollady",
+        "name": "colette",
+        "roster": 2
+    },
+    "67": {
+        "class": "beauty",
+        "name": "tiffany",
+        "roster": 3
+    },
+    "68": {
+        "class": "beauty",
+        "name": "britney",
+        "roster": 3
+    },
+    "69": {
+        "class": "beauty",
+        "name": "harmony",
+        "roster": 3
+    },
+    "70": {
+        "class": "aromalady",
+        "name": "lucy",
+        "roster": 13
+    },
+    "71": {
+        "class": "aromalady",
+        "name": "jackie",
+        "roster": 13
+    },
+    "72": {
+        "class": "aromalady",
+        "name": "kara",
+        "roster": 13
+    },
+    "73": {
+        "class": "guitarist",
+        "name": "bernie",
+        "roster": 5
+    },
+    "74": {
+        "class": "guitarist",
+        "name": "curtis",
+        "roster": 5
+    },
+    "75": {
+        "class": "birdkeeper",
+        "name": "nancy",
+        "roster": 14
+    },
+    "76": {
+        "class": "birdkeeper",
+        "name": "trinity",
+        "roster": 14
+    },
+    "77": {
+        "class": "birdkeeper",
+        "name": "shawna",
+        "roster": 14
+    },
+    "78": {
+        "class": "sailor",
+        "name": "layton",
+        "roster": 15
+    },
+    "79": {
+        "class": "sailor",
+        "name": "godwin",
+        "roster": 15
+    },
+    "80": {
+        "class": "hiker",
+        "name": "everett",
+        "roster": 16
+    },
+    "81": {
+        "class": "hiker",
+        "name": "raiden",
+        "roster": 16
+    },
+    "82": {
+        "class": "idol",
+        "name": "ada",
+        "roster": 6
+    },
+    "83": {
+        "class": "idol",
+        "name": "annie",
+        "roster": 6
+    },
+    "84": {
+        "class": "idol",
+        "name": "basia",
+        "roster": 6
+    },
+    "85": {
+        "class": "jogger",
+        "name": "steve",
+        "roster": 2
+    },
+    "86": {
+        "class": "jogger",
+        "name": "dave",
+        "roster": 3
+    },
+    "87": {
+        "class": "worker",
+        "name": "shane",
+        "roster": 17
+    },
+    "88": {
+        "class": "worker",
+        "name": "benji",
+        "roster": 17
+    },
+    "89": {
+        "class": "rancher",
+        "name": "pierce",
+        "roster": 3
+    },
+    "90": {
+        "class": "rancher",
+        "name": "etienne",
+        "roster": 3
+    },
+    "91": {
+        "class": "rancher",
+        "name": "leon",
+        "roster": 3
+    },
+    "92": {
+        "class": "cowgirl",
+        "name": "doris",
+        "roster": 3
+    },
+    "93": {
+        "class": "cowgirl",
+        "name": "paisley",
+        "roster": 3
+    },
+    "94": {
+        "class": "cowgirl",
+        "name": "leslie",
+        "roster": 3
+    },
+    "95": {
+        "class": "cameraman",
+        "name": "hudson",
+        "roster": 1
+    },
+    "96": {
+        "class": "cameraman",
+        "name": "xenon",
+        "roster": 2
+    },
+    "97": {
+        "class": "cameraman",
+        "name": "amleth",
+        "roster": 3
+    },
+    "98": {
+        "class": "reporter",
+        "name": "dot",
+        "roster": 1
+    },
+    "99": {
+        "class": "reporter",
+        "name": "marble",
+        "roster": 2
+    },
+    "100": {
+        "class": "reporter",
+        "name": "gingham",
+        "roster": 3
+    },
+    "101": {
+        "class": "cyclist",
+        "name": "mgaspar",
+        "roster": 18
+    },
+    "102": {
+        "class": "cyclist",
+        "name": "mignatio",
+        "roster": 18
+    },
+    "103": {
+        "class": "cyclist",
+        "name": "fkaylene",
+        "roster": 18
+    },
+    "104": {
+        "class": "cyclist",
+        "name": "fkaya",
+        "roster": 18
+    },
+    "105": {
+        "class": "blackbelt",
+        "name": "clement",
+        "roster": 19
+    },
+    "106": {
+        "class": "blackbelt",
+        "name": "mason",
+        "roster": 19
+    },
+    "107": {
+        "class": "battlegirl",
+        "name": "kodi",
+        "roster": 19
+    },
+    "108": {
+        "class": "battlegirl",
+        "name": "aileen",
+        "roster": 19
+    },
+    "109": {
+        "class": "blackbelt",
+        "name": "jericho",
+        "roster": 19
+    },
+    "110": {
+        "class": "blackbelt",
+        "name": "harris",
+        "roster": 19
+    },
+    "111": {
+        "class": "blackbelt",
+        "name": "soren",
+        "roster": 19
+    },
+    "112": {
+        "class": "battlegirl",
+        "name": "trina",
+        "roster": 19
+    },
+    "113": {
+        "class": "battlegirl",
+        "name": "alta",
+        "roster": 19
+    },
+    "114": {
+        "class": "battlegirl",
+        "name": "ingrid",
+        "roster": 19
+    },
+    "115": {
+        "class": "veteran",
+        "name": "beck",
+        "roster": 20
+    },
+    "116": {
+        "class": "veteran",
+        "name": "eric",
+        "roster": 20
+    },
+    "117": {
+        "class": "veteran",
+        "name": "padgett",
+        "roster": 20
+    },
+    "118": {
+        "class": "socialite",
+        "name": "barbara",
+        "roster": 20
+    },
+    "119": {
+        "class": "socialite",
+        "name": "isabel",
+        "roster": 20
+    },
+    "120": {
+        "class": "socialite",
+        "name": "carmen",
+        "roster": 20
+    },
+    "121": {
+        "class": "psychic",
+        "name": "malpha",
+        "roster": 21
+    },
+    "122": {
+        "class": "psychic",
+        "name": "mbeta",
+        "roster": 21
+    },
+    "123": {
+        "class": "psychic",
+        "name": "messie",
+        "roster": 21
+    },
+    "124": {
+        "class": "psychic",
+        "name": "famelia",
+        "roster": 21
+    },
+    "125": {
+        "class": "psychic",
+        "name": "fceline",
+        "roster": 21
+    },
+    "126": {
+        "class": "psychic",
+        "name": "fjillian",
+        "roster": 21
+    },
+    "127": {
+        "class": "pokemonbreeder",
+        "name": "mhoward",
+        "roster": 22
+    },
+    "128": {
+        "class": "pokemonbreeder",
+        "name": "mderrell",
+        "roster": 22
+    },
+    "129": {
+        "class": "pokemonbreeder",
+        "name": "mbaldwin",
+        "roster": 22
+    },
+    "130": {
+        "class": "pokemonbreeder",
+        "name": "fadriana",
+        "roster": 22
+    },
+    "131": {
+        "class": "pokemonbreeder",
+        "name": "fsonya",
+        "roster": 22
+    },
+    "132": {
+        "class": "pokemonbreeder",
+        "name": "ftatyana",
+        "roster": 22
+    },
+    "133": {
+        "class": "gentleman",
+        "name": "zante",
+        "roster": 22
+    },
+    "134": {
+        "class": "gentleman",
+        "name": "giliam",
+        "roster": 22
+    },
+    "135": {
+        "class": "roughneck",
+        "name": "rodney",
+        "roster": 23
+    },
+    "136": {
+        "class": "roughneck",
+        "name": "rainier",
+        "roster": 23
+    },
+    "137": {
+        "class": "scientist",
+        "name": "jean",
+        "roster": 24
+    },
+    "138": {
+        "class": "scientist",
+        "name": "brad",
+        "roster": 24
+    },
+    "139": {
+        "class": "clown",
+        "name": "francis",
+        "roster": 25
+    },
+    "140": {
+        "class": "clown",
+        "name": "prescot",
+        "roster": 25
+    },
+    "141": {
+        "class": "acetrainer",
+        "name": "myardley",
+        "roster": 26
+    },
+    "142": {
+        "class": "acetrainer",
+        "name": "mstavros",
+        "roster": 26
+    },
+    "143": {
+        "class": "acetrainer",
+        "name": "mzane",
+        "roster": 26
+    },
+    "144": {
+        "class": "acetrainer",
+        "name": "fkim",
+        "roster": 26
+    },
+    "145": {
+        "class": "acetrainer",
+        "name": "fmacy",
+        "roster": 26
+    },
+    "146": {
+        "class": "acetrainer",
+        "name": "ffaun",
+        "roster": 26
+    },
+    "147": {
+        "class": "pokemonranger",
+        "name": "mdoyle",
+        "roster": 27
+    },
+    "148": {
+        "class": "pokemonranger",
+        "name": "mduke",
+        "roster": 27
+    },
+    "149": {
+        "class": "pokemonranger",
+        "name": "mdeacon",
+        "roster": 27
+    },
+    "150": {
+        "class": "pokemonranger",
+        "name": "fmena",
+        "roster": 27
+    },
+    "151": {
+        "class": "pokemonranger",
+        "name": "fmercy",
+        "roster": 27
+    },
+    "152": {
+        "class": "pokemonranger",
+        "name": "fevita",
+        "roster": 27
+    },
+    "153": {
+        "class": "dragontamer",
+        "name": "harold",
+        "roster": 28
+    },
+    "154": {
+        "class": "dragontamer",
+        "name": "herman",
+        "roster": 28
+    },
+    "155": {
+        "class": "dragontamer",
+        "name": "emmett",
+        "roster": 28
+    },
+    "156": {
+        "class": "dragontamer",
+        "name": "erich",
+        "roster": 28
+    },
+    "157": {
+        "class": "acetrainer",
+        "name": "mgarvey",
+        "roster": 29
+    },
+    "158": {
+        "class": "acetrainer",
+        "name": "mcruz",
+        "roster": 29
+    },
+    "159": {
+        "class": "acetrainer",
+        "name": "fpamela",
+        "roster": 29
+    },
+    "160": {
+        "class": "acetrainer",
+        "name": "fdaniela",
+        "roster": 29
+    },
+    "161": {
+        "class": "youngster",
+        "name": "kaden",
+        "roster": 30
+    },
+    "162": {
+        "class": "youngster",
+        "name": "kolby",
+        "roster": 30
+    },
+    "163": {
+        "class": "lass",
+        "name": "karissa",
+        "roster": 30
+    },
+    "164": {
+        "class": "lass",
+        "name": "liliana",
+        "roster": 30
+    },
+    "165": {
+        "class": "schoolkid",
+        "name": "mjonas",
+        "roster": 31
+    },
+    "166": {
+        "class": "schoolkid",
+        "name": "mkeon",
+        "roster": 31
+    },
+    "167": {
+        "class": "schoolkid",
+        "name": "fchelsie",
+        "roster": 31
+    },
+    "168": {
+        "class": "schoolkid",
+        "name": "fregina",
+        "roster": 31
+    },
+    "169": {
+        "class": "richboy",
+        "name": "daulton",
+        "roster": 31
+    },
+    "170": {
+        "class": "richboy",
+        "name": "hanson",
+        "roster": 31
+    },
+    "171": {
+        "class": "lady",
+        "name": "amory",
+        "roster": 31
+    },
+    "172": {
+        "class": "lady",
+        "name": "juliana",
+        "roster": 31
+    },
+    "173": {
+        "class": "bugcatcher",
+        "name": "camui",
+        "roster": 32
+    },
+    "174": {
+        "class": "bugcatcher",
+        "name": "orlando",
+        "roster": 32
+    },
+    "175": {
+        "class": "ninjaboy",
+        "name": "zack",
+        "roster": 33
+    },
+    "176": {
+        "class": "ninjaboy",
+        "name": "vance",
+        "roster": 33
+    },
+    "177": {
+        "class": "pokekid",
+        "name": "kyla",
+        "roster": 33
+    },
+    "178": {
+        "class": "pokekid",
+        "name": "ruby",
+        "roster": 33
+    },
+    "179": {
+        "class": "idol",
+        "name": "kiley",
+        "roster": 34
+    },
+    "180": {
+        "class": "idol",
+        "name": "utah",
+        "roster": 34
+    },
+    "181": {
+        "class": "jogger",
+        "name": "colt",
+        "roster": 35
+    },
+    "182": {
+        "class": "jogger",
+        "name": "tory",
+        "roster": 35
+    },
+    "183": {
+        "class": "fisherman",
+        "name": "farley",
+        "roster": 36
+    },
+    "184": {
+        "class": "fisherman",
+        "name": "mark",
+        "roster": 36
+    },
+    "185": {
+        "class": "ruinmaniac",
+        "name": "samuel",
+        "roster": 37
+    },
+    "186": {
+        "class": "ruinmaniac",
+        "name": "penn",
+        "roster": 37
+    },
+    "187": {
+        "class": "collector",
+        "name": "marquez",
+        "roster": 38
+    },
+    "188": {
+        "class": "collector",
+        "name": "arnold",
+        "roster": 38
+    },
+    "189": {
+        "class": "guitarist",
+        "name": "fred",
+        "roster": 39
+    },
+    "190": {
+        "class": "guitarist",
+        "name": "chase",
+        "roster": 39
+    },
+    "191": {
+        "class": "birdkeeper",
+        "name": "mckenna",
+        "roster": 40
+    },
+    "192": {
+        "class": "birdkeeper",
+        "name": "sally",
+        "roster": 40
+    },
+    "193": {
+        "class": "sailor",
+        "name": "casper",
+        "roster": 41
+    },
+    "194": {
+        "class": "sailor",
+        "name": "derrian",
+        "roster": 41
+    },
+    "195": {
+        "class": "hiker",
+        "name": "monty",
+        "roster": 42
+    },
+    "196": {
+        "class": "hiker",
+        "name": "rocky",
+        "roster": 42
+    },
+    "197": {
+        "class": "policeman",
+        "name": "reggie",
+        "roster": 43
+    },
+    "198": {
+        "class": "policeman",
+        "name": "quincy",
+        "roster": 43
+    },
+    "199": {
+        "class": "pi",
+        "name": "neil",
+        "roster": 44
+    },
+    "200": {
+        "class": "pi",
+        "name": "sergei",
+        "roster": 44
+    },
+    "201": {
+        "class": "camper",
+        "name": "freddy",
+        "roster": 45
+    },
+    "202": {
+        "class": "camper",
+        "name": "andre",
+        "roster": 45
+    },
+    "203": {
+        "class": "picnicker",
+        "name": "inga",
+        "roster": 45
+    },
+    "204": {
+        "class": "picnicker",
+        "name": "tonya",
+        "roster": 45
+    },
+    "205": {
+        "class": "guitarist",
+        "name": "tobias",
+        "roster": 46
+    },
+    "206": {
+        "class": "guitarist",
+        "name": "cecil",
+        "roster": 46
+    },
+    "207": {
+        "class": "idol",
+        "name": "maranda",
+        "roster": 47
+    },
+    "208": {
+        "class": "idol",
+        "name": "helene",
+        "roster": 47
+    },
+    "209": {
+        "class": "pokefan",
+        "name": "msimon",
+        "roster": 48
+    },
+    "210": {
+        "class": "pokefan",
+        "name": "mturner",
+        "roster": 48
+    },
+    "211": {
+        "class": "pokefan",
+        "name": "feuropa",
+        "roster": 48
+    },
+    "212": {
+        "class": "pokefan",
+        "name": "fpandora",
+        "roster": 48
+    },
+    "213": {
+        "class": "rancher",
+        "name": "vern",
+        "roster": 48
+    },
+    "214": {
+        "class": "rancher",
+        "name": "boris",
+        "roster": 48
+    },
+    "215": {
+        "class": "cowgirl",
+        "name": "carly",
+        "roster": 48
+    },
+    "216": {
+        "class": "cowgirl",
+        "name": "ginger",
+        "roster": 48
+    },
+    "217": {
+        "class": "pokemonbreeder",
+        "name": "mpeter",
+        "roster": 45
+    },
+    "218": {
+        "class": "pokemonbreeder",
+        "name": "mtyron",
+        "roster": 45
+    },
+    "219": {
+        "class": "pokemonbreeder",
+        "name": "fzorya",
+        "roster": 45
+    },
+    "220": {
+        "class": "pokemonbreeder",
+        "name": "fantonia",
+        "roster": 45
+    },
+    "221": {
+        "class": "acetrainer",
+        "name": "msawyer",
+        "roster": 49
+    },
+    "222": {
+        "class": "acetrainer",
+        "name": "mcharlie",
+        "roster": 50
+    },
+    "223": {
+        "class": "acetrainer",
+        "name": "fchloe",
+        "roster": 49
+    },
+    "224": {
+        "class": "acetrainer",
+        "name": "fdaphne",
+        "roster": 50
+    },
+    "225": {
+        "class": "acetrainer",
+        "name": "mthad",
+        "roster": 51
+    },
+    "226": {
+        "class": "acetrainer",
+        "name": "mlew",
+        "roster": 51
+    },
+    "227": {
+        "class": "acetrainer",
+        "name": "fopal",
+        "roster": 51
+    },
+    "228": {
+        "class": "acetrainer",
+        "name": "fleda",
+        "roster": 51
+    },
+    "229": {
+        "class": "pokemonranger",
+        "name": "mgeoff",
+        "roster": 49
+    },
+    "230": {
+        "class": "pokemonranger",
+        "name": "mgunther",
+        "roster": 50
+    },
+    "231": {
+        "class": "pokemonranger",
+        "name": "falma",
+        "roster": 49
+    },
+    "232": {
+        "class": "pokemonranger",
+        "name": "felise",
+        "roster": 52
+    },
+    "233": {
+        "class": "dragontamer",
+        "name": "harvey",
+        "roster": 53
+    },
+    "234": {
+        "class": "dragontamer",
+        "name": "nicolas",
+        "roster": 53
+    },
+    "235": {
+        "class": "blackbelt",
+        "name": "fergus",
+        "roster": 54
+    },
+    "236": {
+        "class": "blackbelt",
+        "name": "ronni",
+        "roster": 54
+    },
+    "237": {
+        "class": "battlegirl",
+        "name": "eve",
+        "roster": 54
+    },
+    "238": {
+        "class": "battlegirl",
+        "name": "mariane",
+        "roster": 54
+    },
+    "239": {
+        "class": "veteran",
+        "name": "costin",
+        "roster": 49
+    },
+    "240": {
+        "class": "veteran",
+        "name": "alfred",
+        "roster": 55
+    },
+    "241": {
+        "class": "socialite",
+        "name": "rioha",
+        "roster": 49
+    },
+    "242": {
+        "class": "socialite",
+        "name": "janice",
+        "roster": 56
+    },
+    "243": {
+        "class": "psychic",
+        "name": "mdenver",
+        "roster": 57
+    },
+    "244": {
+        "class": "psychic",
+        "name": "mberkley",
+        "roster": 57
+    },
+    "245": {
+        "class": "psychic",
+        "name": "firene",
+        "roster": 57
+    },
+    "246": {
+        "class": "psychic",
+        "name": "fsylvie",
+        "roster": 57
+    },
+    "247": {
+        "class": "waiter",
+        "name": "xander",
+        "roster": 58
+    },
+    "248": {
+        "class": "waiter",
+        "name": "warren",
+        "roster": 59
+    },
+    "249": {
+        "class": "waitress",
+        "name": "leslie",
+        "roster": 58
+    },
+    "250": {
+        "class": "waitress",
+        "name": "kathy",
+        "roster": 59
+    },
+    "251": {
+        "class": "cameraman",
+        "name": "darren",
+        "roster": 60
+    },
+    "252": {
+        "class": "cameraman",
+        "name": "skip",
+        "roster": 60
+    },
+    "253": {
+        "class": "reporter",
+        "name": "katie",
+        "roster": 60
+    },
+    "254": {
+        "class": "reporter",
+        "name": "elaine",
+        "roster": 60
+    },
+    "255": {
+        "class": "cyclist",
+        "name": "mclive",
+        "roster": 61
+    },
+    "256": {
+        "class": "cyclist",
+        "name": "mward",
+        "roster": 61
+    },
+    "257": {
+        "class": "cyclist",
+        "name": "fhilda",
+        "roster": 61
+    },
+    "258": {
+        "class": "cyclist",
+        "name": "fvanita",
+        "roster": 61
+    },
+    "259": {
+        "class": "pi",
+        "name": "ralph",
+        "roster": 62
+    },
+    "260": {
+        "class": "pi",
+        "name": "conway",
+        "roster": 62
+    },
+    "261": {
+        "class": "idol",
+        "name": "kristi",
+        "roster": 63
+    },
+    "262": {
+        "class": "idol",
+        "name": "trista",
+        "roster": 63
+    },
+    "263": {
+        "class": "jogger",
+        "name": "austin",
+        "roster": 56
+    },
+    "264": {
+        "class": "jogger",
+        "name": "dimitri",
+        "roster": 55
+    },
+    "265": {
+        "class": "fisherman",
+        "name": "delaney",
+        "roster": 64
+    },
+    "266": {
+        "class": "fisherman",
+        "name": "keaton",
+        "roster": 64
+    },
+    "267": {
+        "class": "sailor",
+        "name": "carlo",
+        "roster": 65
+    },
+    "268": {
+        "class": "sailor",
+        "name": "horatio",
+        "roster": 65
+    },
+    "269": {
+        "class": "hiker",
+        "name": "lyle",
+        "roster": 66
+    },
+    "270": {
+        "class": "hiker",
+        "name": "glen",
+        "roster": 66
+    },
+    "271": {
+        "class": "ruinmaniac",
+        "name": "isadore",
+        "roster": 67
+    },
+    "272": {
+        "class": "ruinmaniac",
+        "name": "walton",
+        "roster": 67
+    },
+    "273": {
+        "class": "guitarist",
+        "name": "roget",
+        "roster": 68
+    },
+    "274": {
+        "class": "guitarist",
+        "name": "iggy",
+        "roster": 68
+    },
+    "275": {
+        "class": "collector",
+        "name": "leroy",
+        "roster": 69
+    },
+    "276": {
+        "class": "collector",
+        "name": "newman",
+        "roster": 70
+    },
+    "277": {
+        "class": "roughneck",
+        "name": "ross",
+        "roster": 71
+    },
+    "278": {
+        "class": "roughneck",
+        "name": "ron",
+        "roster": 71
+    },
+    "279": {
+        "class": "scientist",
+        "name": "irwin",
+        "roster": 59
+    },
+    "280": {
+        "class": "scientist",
+        "name": "flynn",
+        "roster": 58
+    },
+    "281": {
+        "class": "gentleman",
+        "name": "joachim",
+        "roster": 49
+    },
+    "282": {
+        "class": "gentleman",
+        "name": "karston",
+        "roster": 50
+    },
+    "283": {
+        "class": "worker",
+        "name": "boyce",
+        "roster": 72
+    },
+    "284": {
+        "class": "worker",
+        "name": "tyrell",
+        "roster": 72
+    },
+    "285": {
+        "class": "clown",
+        "name": "frank",
+        "roster": 73
+    },
+    "286": {
+        "class": "clown",
+        "name": "enzo",
+        "roster": 73
+    },
+    "287": {
+        "class": "policeman",
+        "name": "hugh",
+        "roster": 74
+    },
+    "288": {
+        "class": "policeman",
+        "name": "kegan",
+        "roster": 74
+    },
+    "289": {
+        "class": "pi",
+        "name": "chester",
+        "roster": 62
+    },
+    "290": {
+        "class": "pi",
+        "name": "river",
+        "roster": 62
+    },
+    "291": {
+        "class": "birdkeeper",
+        "name": "kira",
+        "roster": 75
+    },
+    "292": {
+        "class": "birdkeeper",
+        "name": "eliza",
+        "roster": 75
+    },
+    "293": {
+        "class": "parasollady",
+        "name": "angie",
+        "roster": 76
+    },
+    "294": {
+        "class": "parasollady",
+        "name": "sami",
+        "roster": 55
+    },
+    "295": {
+        "class": "beauty",
+        "name": "nadia",
+        "roster": 76
+    },
+    "296": {
+        "class": "beauty",
+        "name": "becky",
+        "roster": 56
+    },
+    "297": {
+        "class": "aromalady",
+        "name": "elisha",
+        "roster": 77
+    },
+    "298": {
+        "class": "aromalady",
+        "name": "ambre",
+        "roster": 77
+    },
+    "299": {
+        "class": "idol",
+        "name": "cocoa",
+        "roster": 78
+    },
+    "300": {
+        "class": "idol",
+        "name": "nissa",
+        "roster": 78
+    }
+}

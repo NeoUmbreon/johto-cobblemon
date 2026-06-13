@@ -1,8 +1,7 @@
 {
     "species": "chansey",
     "nature": "sassy",
-    "heldItem": "cobblemon:sitrus_berry",
-    "item": "cobblemon:sitrus_berry",
+    "helditem": "cobblemon:sitrus_berry",
     "moveset": {
         "1": "metronome",
         "2": "refresh",

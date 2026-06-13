@@ -1,8 +1,7 @@
 {
     "species": "electivire",
     "nature": "modest",
-    "heldItem": "cobblemon:wise_glasses",
-    "item": "cobblemon:wise_glasses",
+    "helditem": "cobblemon:wise_glasses",
     "moveset": {
         "1": "thunderbolt",
         "2": "psychic",

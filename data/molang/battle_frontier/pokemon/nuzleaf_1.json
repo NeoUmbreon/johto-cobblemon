@@ -1,8 +1,7 @@
 {
     "species": "nuzleaf",
     "nature": "adamant",
-    "heldItem": "cobblemon:aspear_berry",
-    "item": "cobblemon:aspear_berry",
+    "helditem": "cobblemon:aspear_berry",
     "moveset": {
         "1": "razorleaf",
         "2": "feintattack",

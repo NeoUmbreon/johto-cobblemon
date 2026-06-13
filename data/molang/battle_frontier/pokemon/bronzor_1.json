@@ -1,8 +1,7 @@
 {
     "species": "bronzor",
     "nature": "brave",
-    "heldItem": "cobblemon:twisted_spoon",
-    "item": "cobblemon:twisted_spoon",
+    "helditem": "cobblemon:twisted_spoon",
     "moveset": {
         "1": "confusion",
         "2": "gyroball",

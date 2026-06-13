@@ -1,8 +1,7 @@
 {
     "species": "tentacruel",
     "nature": "timid",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "hydropump",
         "2": "sludgebomb",

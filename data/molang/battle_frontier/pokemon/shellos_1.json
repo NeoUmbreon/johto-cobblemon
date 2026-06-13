@@ -1,8 +1,7 @@
 {
     "species": "shellos",
     "nature": "bold",
-    "heldItem": "cobblemon:bright_powder",
-    "item": "cobblemon:bright_powder",
+    "helditem": "cobblemon:bright_powder",
     "moveset": {
         "1": "waterpulse",
         "2": "mudslap",

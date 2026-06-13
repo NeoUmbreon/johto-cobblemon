@@ -1,8 +1,7 @@
 {
     "species": "tentacool",
     "nature": "modest",
-    "heldItem": "cobblemon:cheri_berry",
-    "item": "cobblemon:cheri_berry",
+    "helditem": "cobblemon:cheri_berry",
     "moveset": {
         "1": "bubblebeam",
         "2": "acid",

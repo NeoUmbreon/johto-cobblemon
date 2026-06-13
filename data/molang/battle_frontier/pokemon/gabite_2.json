@@ -1,8 +1,7 @@
 {
     "species": "gabite",
     "nature": "adamant",
-    "heldItem": "cobblemon:muscle_band",
-    "item": "cobblemon:muscle_band",
+    "helditem": "cobblemon:muscle_band",
     "moveset": {
         "1": "dragonclaw",
         "2": "earthquake",

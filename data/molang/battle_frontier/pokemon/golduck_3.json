@@ -1,8 +1,7 @@
 {
     "species": "golduck",
     "nature": "adamant",
-    "heldItem": "cobblemon:scope_lens",
-    "item": "cobblemon:scope_lens",
+    "helditem": "cobblemon:scope_lens",
     "moveset": {
         "1": "aquatail",
         "2": "crosschop",

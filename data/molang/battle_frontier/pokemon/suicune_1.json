@@ -1,8 +1,7 @@
 {
     "species": "suicune",
     "nature": "calm",
-    "heldItem": "cobblemon:focus_sash",
-    "item": "cobblemon:focus_sash",
+    "helditem": "cobblemon:focus_sash",
     "moveset": {
         "1": "surf",
         "2": "icywind",
