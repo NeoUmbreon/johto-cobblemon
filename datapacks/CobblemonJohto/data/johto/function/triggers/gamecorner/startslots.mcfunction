@@ -4,7 +4,7 @@
 #16/128   8-23       - triple gold, player wins medium, +25
 #41/128   24-64      - triple iron, player wins roll, +10
 #64/128   65-128     - No wins
-#comment: these odds are absolutely fucked
+#spacky: these returns are absolutely fucked
 #-----------------------------------------------------------------------------------------------------------------------------------------
 #Resets button (avoids repeating in case of failure)
 $setblock $(button_pos) stone_button[powered=false,facing=$(facing)]
@@ -20,54 +20,56 @@ execute unless score @s Coins matches 1.. run return run tellraw @s {"text":"You
 scoreboard players remove @s Coins 1
 #Marks respective armor stand as active to lock slot machine from being restarted and to activate the ticking function
 tag @e[distance=0,limit=1] add SlotRolled
+#Tag player
+$tag @s add RolledSlot$(num)
 #Displays coin balance
 function johto:triggers/gamecorner/coinbal
 
 #Just in case
-$scoreboard players set @s SlotTimer$(num) 0
+scoreboard players set @e[distance=0,limit=1] SlotTimer 0
 #Rolls RNG
-$execute store result score @s SlotRNG$(num) run random value 1..128
+execute store result score @e[distance=0,limit=1] SlotRNG run random value 1..128
 #For testing
-$execute if score @s RigSlots matches 1..128 run scoreboard players operation @s SlotRNG$(num) = @s RigSlots
+execute if score @s RigSlots matches 1..128 run scoreboard players operation @e[distance=0,limit=1] SlotRNG = @s RigSlots
 
 #Translates RNG Score to y-coordinate roll should start at (43-62)
 #Emerald
-$execute if score @s SlotRNG$(num) matches 1 run return run scoreboard players set @s SlotRNG$(num) 61
+execute if score @e[distance=0,limit=1] SlotRNG matches 1 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 61
 #Diamond
-$execute if score @s SlotRNG$(num) matches 2..7 run return run scoreboard players set @s SlotRNG$(num) 45
+execute if score @e[distance=0,limit=1] SlotRNG matches 2..7 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 45
 #Gold
-$execute if score @s SlotRNG$(num) matches 8..23 run return run scoreboard players set @s SlotRNG$(num) 51
+execute if score @e[distance=0,limit=1] SlotRNG matches 8..23 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 51
 #Iron
-$execute if score @s SlotRNG$(num) matches 24..64 run return run scoreboard players set @s SlotRNG$(num) 55
+execute if score @e[distance=0,limit=1] SlotRNG matches 24..64 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 55
 #L1
-$execute if score @s SlotRNG$(num) matches 65..68 run return run scoreboard players set @s SlotRNG$(num) 57
+execute if score @e[distance=0,limit=1] SlotRNG matches 65..68 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 57
 #L2
-$execute if score @s SlotRNG$(num) matches 69..72 run return run scoreboard players set @s SlotRNG$(num) 58
+execute if score @e[distance=0,limit=1] SlotRNG matches 69..72 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 58
 #L3
-$execute if score @s SlotRNG$(num) matches 73..76 run return run scoreboard players set @s SlotRNG$(num) 59
+execute if score @e[distance=0,limit=1] SlotRNG matches 73..76 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 59
 #L4
-$execute if score @s SlotRNG$(num) matches 77..80 run return run scoreboard players set @s SlotRNG$(num) 60
+execute if score @e[distance=0,limit=1] SlotRNG matches 77..80 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 60
 #L5
-$execute if score @s SlotRNG$(num) matches 81..84 run return run scoreboard players set @s SlotRNG$(num) 62
+execute if score @e[distance=0,limit=1] SlotRNG matches 81..84 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 62
 #L6
-$execute if score @s SlotRNG$(num) matches 85..88 run return run scoreboard players set @s SlotRNG$(num) 43
+execute if score @e[distance=0,limit=1] SlotRNG matches 85..88 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 43
 #L7
-$execute if score @s SlotRNG$(num) matches 89..92 run return run scoreboard players set @s SlotRNG$(num) 44
+execute if score @e[distance=0,limit=1] SlotRNG matches 89..92 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 44
 #L8
-$execute if score @s SlotRNG$(num) matches 93..96 run return run scoreboard players set @s SlotRNG$(num) 46
+execute if score @e[distance=0,limit=1] SlotRNG matches 93..96 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 46
 #L9
-$execute if score @s SlotRNG$(num) matches 97..100 run return run scoreboard players set @s SlotRNG$(num) 47
+execute if score @e[distance=0,limit=1] SlotRNG matches 97..100 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 47
 #L10
-$execute if score @s SlotRNG$(num) matches 101..104 run return run scoreboard players set @s SlotRNG$(num) 48
+execute if score @e[distance=0,limit=1] SlotRNG matches 101..104 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 48
 #L11
-$execute if score @s SlotRNG$(num) matches 105..108 run return run scoreboard players set @s SlotRNG$(num) 49
+execute if score @e[distance=0,limit=1] SlotRNG matches 105..108 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 49
 #L12
-$execute if score @s SlotRNG$(num) matches 109..112 run return run scoreboard players set @s SlotRNG$(num) 50
+execute if score @e[distance=0,limit=1] SlotRNG matches 109..112 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 50
 #L13
-$execute if score @s SlotRNG$(num) matches 113..116 run return run scoreboard players set @s SlotRNG$(num) 52
+execute if score @e[distance=0,limit=1] SlotRNG matches 113..116 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 52
 #L14
-$execute if score @s SlotRNG$(num) matches 117..120 run return run scoreboard players set @s SlotRNG$(num) 53
+execute if score @e[distance=0,limit=1] SlotRNG matches 117..120 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 53
 #L15
-$execute if score @s SlotRNG$(num) matches 121..124 run return run scoreboard players set @s SlotRNG$(num) 54
+execute if score @e[distance=0,limit=1] SlotRNG matches 121..124 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 54
 #L16
-$execute if score @s SlotRNG$(num) matches 125..128 run return run scoreboard players set @s SlotRNG$(num) 56
+execute if score @e[distance=0,limit=1] SlotRNG matches 125..128 run return run scoreboard players set @e[distance=0,limit=1] SlotRNG 56

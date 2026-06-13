@@ -9,7 +9,7 @@ execute as @a[scores={BattleStart=0,BattleCD=0},tag=!InDialogue] run runmolangsc
 execute as @a at @s if block ~ ~ ~ minecraft:magenta_carpet run function johto:world/portals
 
 #Runs the Game Corner slots if any of the armor stands are tagged as active
-execute if entity @e[x=485,y=59,z=-370,dx=22,dy=4,type=armor_stand,tag=SlotRolled] run function johto:triggers/gamecorner
+execute as @e[x=485,y=59,z=-370,dx=22,dy=4,type=armor_stand,tag=SlotRolled] at @s run function johto:triggers/gamecorner
 
 
 #Ilex Forest Farfetch'd running function
