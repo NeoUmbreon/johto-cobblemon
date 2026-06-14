@@ -1,9 +1,15 @@
-t.round = math.clamp(v.streak / 7, 1, 7);
-'multiplayer bonus';
-q.length(q.player.data.temp.players) > 1 ? { t.bonus = t.round + 4 };
+t.round = v.streak / 7;
 
+'brain';
 ( t.round == 3 || t.round == 7 ) && q.npc.data.format == 'SINGLES' ? return 20;
-t.round == 1 || t.round == 2 ? return 3 + t.bonus;
-t.round == 3 || t.round == 4 ? return 4 + t.bonus;
-t.round == 5 || t.round == 6 ? return 5 + t.bonus;
-t.round == 7 ? return 7 + t.bonus;
+
+'multiplayer bonus';
+t.round = math.clamp(t.round, 1, 7);
+q.length(q.player.data.temp.players) > 1 ? { t.base = t.base + t.round + 4 };
+
+t.base = 2;
+t.growth = 1;
+t.round == 7 ? return t.base + t.growth * 5;
+t.round >= 5 ? return t.base + t.growth * 3;
+t.round >= 3 ? return t.base + t.growth * 2;
+t.round >= 1 ? return t.base + t.growth * 1;
