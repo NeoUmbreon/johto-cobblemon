@@ -79,10 +79,8 @@ def load_excel_teams(valid_items, valid_moves):
 
         pokemon = {}
 
-        species = str(row["Species"]).strip().lower().replace("'", "").replace("’", "").replace(".", "").replace(" ", "")
-        level = int(row["Level"]) if not pd.isna(row["Level"]) else 1
-
-        pokemon["properties"] = f"{species} level={level}"
+        pokemon["species"] = str(row["Species"]).strip().lower().replace("'", "").replace("’", "").replace(".", "").replace(" ", "")
+        pokemon["level"] = int(row["Level"]) if not pd.isna(row["Level"]) else 1
         
         if "Item" in row and not pd.isna(row["Item"]):
             item = (
@@ -131,8 +129,8 @@ def load_excel_teams(valid_items, valid_moves):
         if not pd.isna(row["IVs"]):
             pokemon["ivs"] = int(row["IVs"])
 
-        moveset = {}
-        for i, col in enumerate(["Move1", "Move2", "Move3", "Move4"]):
+        moveset = []
+        for col in ["Move1", "Move2", "Move3", "Move4"]:
             if col in row and not pd.isna(row[col]):
                 move = (
                     str(row[col])
@@ -145,10 +143,10 @@ def load_excel_teams(valid_items, valid_moves):
                 if move not in valid_moves:
                     raise ValueError(f"Invalid move: {move}")
                 else:
-                    moveset[i] = move
+                    moveset.append(move)
 
         if moveset:
-            pokemon["moveset"] = moveset
+            pokemon["moveset"] = ",".join(moveset)
 
         teams[trainer]["party"][len(teams[trainer]["party"])] = pokemon
 

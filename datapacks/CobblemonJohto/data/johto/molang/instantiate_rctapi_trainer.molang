@@ -1,58 +1,56 @@
 q.player == 0 || q.npc == 0 || !q.file.exists('data/molang/players/' + q.player.uuid + '.json') ? return 0;
 
-'fetch json name';
+'fetch json';
 t.trainer_id = q.npc.config.trainer_id;
 q.is_included(t.trainer_id, 'silver') ? { t.trainer_id = t.trainer_id + math.clamp(q.to_int(q.player.data.starter.species), 1, 3) };
 
-'fallback to regular party if challenge json missing';
+'fallback if challenge json missing';
 !q.file.exists('data/molang/challengemode_trainers/' + t.trainer_id + '.json') ? return 0;
 
-'load file';
+q.config.hot_reload ? q.file.clear('data/molang/challengemode_trainers/' + t.trainer_id + '.json');
 t.trainer = q.file.load('data/molang/challengemode_trainers/' + t.trainer_id + '.json');
 
-'create party';
+'build party';
 t.party_store = q.npc.create_npc_party;
-t.rct_trainer.team = q.array();
+t.rct_trainer.team = q.array;
 for_each(t.raw_data, t.trainer.party, {
-    'parse species and level with cobblemon to fetch moveset, ability, etc';
-    t.party_store.add_by_properties(q.to_string(t.raw_data.properties));
+    t.raw_data.species == 0 ? { q.print('ERROR: Pokemon missing species (trainer: ' + t.trainer_id + ', index: ' + t.i + ')'); break; };
+    t.raw_data.level == 0 ? { q.print('ERROR: Pokemon missing level (trainer: ' + t.trainer_id + ', index: ' + t.i + ')'); break; };
 
-    'reformat to rctapi';
+    'create pokemon with cobblemon to fetch moves, ability, etc';
+    t.properties = t.raw_data.species + ' level=' + t.raw_data.level;
+    t.raw_data.moveset != 0 ? { t.properties = t.properties + ' moves=' + t.raw_data.moveset };
+    t.party_store.add_by_properties(q.to_string(t.properties));
+
+    'reformat data to rctapi';
     q.set_query('pokemon_in', t.party_store.pokemon.[t.i]);
     t.pokemon_out = 0;
+
     t.pokemon_out.species = q.pokemon_in.species.identifier;
     t.pokemon_out.level = q.pokemon_in.level;
-    t.raw_data.properties == 0 ? { q.player.tell('Something went wrong! (trainer: ' + t.trainer_id + ', #: ' + t.i); break; };
-
     t.pokemon_out.nature = ( t.raw_data.nature != 0 ? t.raw_data.nature : q.random('hardy','docile','bashful','quirky','serious') );
     t.pokemon_out.ability = ( t.raw_data.ability != 0 ? t.raw_data.ability : q.pokemon_in.ability );
     t.raw_data.ivs != 0 && q.is_int(t.raw_data.ivs) ? { t.pokemon_out.ivs.hp = 0; for_each(t.stat, q.array('hp','atk','def','spa','spd','spe'), { q.set_variable(t.pokemon_out.ivs, t.stat, t.raw_data.ivs); }); };
     q.length(t.raw_data.evs) != 0 ? { t.pokemon_out.evs = t.raw_data.evs };
     t.raw_data.helditem != 0 ? { q.set_variable(t.pokemon_out, 'heldItem', t.raw_data.helditem) };
-    t.pokemon_out.moveset = q.array();
-    q.length(t.raw_data.moveset) != 0 ? {
-        for_each(t.move, t.raw_data.moveset, {
-            q.append(t.pokemon_out.moveset, t.move);
-        });
-    } : {
-        'this may be excessive, but probably prudent to check moveset length';
-        t.j = 0;
-        loop(4, {
-            t.move = q.pokemon_in.moveset.[t.j];
-            t.move.name != 0 ? q.append(t.pokemon_out.moveset, t.move.name) : break;
-            t.j = t.j + 1;
-        });
-    };
+
+    t.pokemon_out.moveset = q.array;
+    t.j = 0;
+    loop(4, {
+        t.move = q.pokemon_in.moveset.[t.j];
+        t.move.name != 0 ? q.append(t.pokemon_out.moveset, t.move.name) : break;
+        t.j = t.j + 1;
+    });
 
     q.append(t.rct_trainer.team, t.pokemon_out);
 
     t.i = t.i + 1;
     t.i == 6 ? break;
 });
+'fallback check 2';
+math.clamp(q.length(t.trainer.party), 1, 6) != q.length(t.rct_trainer.team) ? { q.player.tell('Error, falling back to normal trainer party'); return 0 };
 
-math.clamp(q.length(t.trainer.party), 0, 6) != q.length(t.rct_trainer.team) ? { q.player.tell('Error, falling back to normal trainer party'); return 0 };
-
-'write, save, battle';
+'write to file, battle';
 t.trainer.ai != 0 ? { t.rct_trainer.ai = t.trainer.ai };
 t.trainer.name != 0 ? { t.rct_trainer.name = t.trainer.name } : { t.rct_trainer.name = q.npc.name };
 
