@@ -65,8 +65,8 @@ execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entit
 # Sprout Tower
 execute if score @s MusicTitles matches 214 run return run function johto:sound/playrecord {track:"ds/areas/sprouttower", duration:1680}
 
-# Union Cave (& Ruins of Alph Exterior/Chambers, Ilex Forest, Mt. Moon, Mt. Moon Square, Mt. Mortar, Whirl Islands, Tohjo Falls, Embedded Tower, Giovanni, Slowpoke Well) 17 21 26 27 28 87 93 95 100 205 209
-execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":17}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":21}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":26,"max":28}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":87}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":93}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":95}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":99}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":205}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":209}}]} run return run function johto:sound/playrecord {track:"ds/areas/unioncave", duration:2740}
+# Union Cave (& Ruins of Alph Exterior/Chambers, Ilex Forest, Mt. Moon, Mt. Moon Square, Mt. Mortar, Whirl Islands, Tohjo Falls, Embedded Tower, Giovanni, Slowpoke Well) 17 21 26 27 28 87 93 95 100 205 208 209
+execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":17}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":21}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":26,"max":28}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":87}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":93}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":95}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":99}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":205}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":208,"max":209}}}]} run return run function johto:sound/playrecord {track:"ds/areas/unioncave", duration:2740}
 
 # Ruins of Alph (Basement)
 execute if score @s MusicTitles matches 203 run return run function johto:sound/playrecord {track:"ds/areas/ruinsofalph", duration:1660}
@@ -77,8 +77,8 @@ execute if score @s MusicTitles matches 301..302 run return run function johto:s
 # Routes 34-37, Routes 40-41, Routes 45-46, Cliff Edge Gate
 execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":72,"max":75}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":78,"max":79}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":{"min":83,"max":84}}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":101}}]} run return run function johto:sound/playrecord {track:"ds/routes/34", duration:2000}
 
-# Goldenrod City (& Goldenrod Radio Tower, Goldenrod Underground)
-execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":310}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":206}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":208}}]} run return run function johto:sound/playrecord {track:"ds/settlements/goldenrodcity", duration:1740}
+# Goldenrod City (& Goldenrod Radio Tower)
+execute if predicate {condition:"any_of",terms:[{condition:"entity_scores",entity:"this",scores:{"MusicTitles":310}},{condition:"entity_scores",entity:"this",scores:{"MusicTitles":206}}]} run return run function johto:sound/playrecord {track:"ds/settlements/goldenrodcity", duration:1740}
 
 # Goldenrod Radio Tower (Occupied)
 execute if score @s MusicTitles matches 207 run return run function johto:sound/playrecord {track:"ds/areas/radiotoweroccupied", duration:1700}
