@@ -1,8 +1,9 @@
 import json
 from pathlib import Path
-import re
 import pandas as pd
 import os
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 
@@ -59,15 +60,15 @@ if TEAMS_XLSX_PATH.exists():
 else:
     ENABLE_CHALLENGE_MODE = False
 
-def load_excel_teams(valid_items, valid_moves):
+def load_excel_teams(valid_items, valid_moves, excel_file):
     if not ENABLE_CHALLENGE_MODE:
         return {}
 
-    df = pd.read_excel(TEAMS_XLSX_PATH)
+    df = excel_file.parse()
 
     teams = {}
 
-    for _, row in df.iterrows():
+    for row in df.to_dict('records'):
         if pd.isna(row["Folder"]) or pd.isna(row["Trainer"]):
             break
         
@@ -113,6 +114,7 @@ def load_excel_teams(valid_items, valid_moves):
             try:
                 evs = json.loads(row["EVs"])
             except:
+                species = pokemon["species"]
                 print(f"Error: Couldn't load EVs for {trainer}'s {species}")
             else:
                 pokemon["evs"] = evs
@@ -152,8 +154,8 @@ def load_excel_teams(valid_items, valid_moves):
 
     return teams
 
-def load_validation_lists():
-    df = pd.read_excel(TEAMS_XLSX_PATH, sheet_name="Lists")
+def load_validation_lists(excel_file):
+    df = excel_file.parse("Lists")
 
     def normalize_item(val):
         return (
@@ -291,7 +293,8 @@ def update_trainer_entity(trainer_id: str, folder: str):
     entity_file = NPC_DIR / folder / f"{trainer_id}.json"
 
     if not entity_file.exists():
-        return
+        print(f"NPC file not found: {folder}/{trainer_id}.json")
+        return False
 
     with open(entity_file, "r", encoding="utf-8") as f:
         entity_data = json.load(f)
@@ -311,6 +314,8 @@ def update_trainer_entity(trainer_id: str, folder: str):
 
     #print(f"Updated entity: {entity_file}")
 
+    return True
+
 def export_challenge_trainers(excel_teams):
     TBCS_TRAINERS_EXPORT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -329,6 +334,8 @@ def update_interaction_file(path: Path):
     folder = path.parent.name
 
     # Update battle pages
+    battle_action = build_battle_action(trainer_id, folder)
+
     for page in data.get("pages", []):
         input_data = page.get("input")
         if not isinstance(input_data, dict):
@@ -344,7 +351,7 @@ def update_interaction_file(path: Path):
 
         # Keep only battle option
         input_data["options"] = battle_options
-        input_data["options"][0]["action"] = build_battle_action(trainer_id, folder)
+        input_data["options"][0]["action"] = battle_action
 
         # Timeout/escape: Goto to battle action
         #page_id = page["id"]
@@ -363,7 +370,7 @@ def update_interaction_file(path: Path):
         #}
 
         # Add dialogue skip to battle
-        data["escapeAction"] = build_battle_action(trainer_id, folder)
+        data["escapeAction"] = battle_action
 
 
     with open(path, "w", encoding="utf-8") as f:
@@ -383,58 +390,67 @@ def should_check(folder, trainer):
     return True
 
 def main():
-    files = sorted(INTERACTIONS_DIR.rglob("*_interaction.json"))
-    print(f"Found {len(files)} interaction files\n")
-
+    start = time.time()
     if ENABLE_CHALLENGE_MODE:
-        valid_items, valid_moves = load_validation_lists()
+        load_excel_start = time.time()
+        excel_file = pd.ExcelFile(TEAMS_XLSX_PATH)
+        print(f"Loaded Excel file in {time.time() - load_excel_start:.2f}s")
+
+        validation_start = time.time()
+        valid_items, valid_moves = load_validation_lists(excel_file)
+        print(f"Validation lists loaded in {time.time() - validation_start:.2f}s")
+
         if not valid_items:
             raise ValueError("No items loaded from Lists sheet!")
 
         if not valid_moves:
             raise ValueError("No moves loaded from Lists sheet!")
         
-        excel_df = pd.read_excel(TEAMS_XLSX_PATH)
+        process_excel_start = time.time()
+        excel_teams = load_excel_teams(valid_items, valid_moves, excel_file)
         
-        excel_teams = load_excel_teams(valid_items, valid_moves)
-        print(f"Loaded {len(excel_teams)} Excel trainer entries")
-        
-        """
         # Show a few samples
-        for i, (k, v) in enumerate(excel_teams.items()):
-            print(f"Sample {i}: {k} -> {len(v)} mons")
-            if i >= 70:
-                break
-        """
+        #for i, (k, v) in enumerate(excel_teams.items()):
+        #    print(f"Sample {i}: {k} -> {len(v)} mons")
+        #    if i >= 70:
+        #        break
 
         export_challenge_trainers(excel_teams)
+        print(f"Processed {len(excel_teams)} Excel teams in {time.time() - process_excel_start:.2f}s")
     else:
         print("Challenge mode disabled, skipping Excel loading")
 
-    processed = []
+    processing_start = time.time()
+    files = list(INTERACTIONS_DIR.rglob("*_interaction.json"))
+    interaction_count = 0
+    npc_count = 0
 
-    for file_path in files:
+    def _process_trainer(interaction_path: Path):
+        interaction_success = False
+        npc_success = False
         try:
-            result = update_interaction_file(file_path)
+            result = update_interaction_file(interaction_path)
             if result:
                 trainer_id, folder = result
-                processed.append((trainer_id, folder))
-
+                interaction_success = True
+                npc_success = update_trainer_entity(trainer_id, folder)
+            return interaction_success, npc_success
         except Exception as e:
-            print(f"FAILED: {file_path}")
+            print(f"FAILED: {interaction_path}")
             print(e)
+            return interaction_success, npc_success
 
-    for trainer_id, folder in processed:
-
-        #is_gym_leader = "gym_leaders" in folder.lower() or "gym_leader_rematches" in folder.lower()
-
-        #if not is_gym_leader:
-        #    generate_battle_end_copy(trainer_id, folder)
-
-        update_trainer_entity(trainer_id, folder)
-
-    print("\nDone.")
-
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = [executor.submit(_process_trainer, f) for f in files]
+        for future in as_completed(futures):
+            interaction_success, npc_success = future.result()
+            if interaction_success:
+                interaction_count += 1
+            if npc_success:
+                npc_count += 1
+    
+    print(f"Modified {interaction_count}/{len(files)} interaction files and {npc_count}/{len(files)} NPC files in {time.time() - processing_start:.2f}s")
+    print(f"Done. Total time: {time.time() - start:.2f}s")
 
 if __name__ == "__main__":
     main()
