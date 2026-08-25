@@ -1,6 +1,6 @@
 {  
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:twin",
+    "resourceIdentifier": "cobblemon:daisy",
     "presets": [],
     "variation": {
         "dirt": [

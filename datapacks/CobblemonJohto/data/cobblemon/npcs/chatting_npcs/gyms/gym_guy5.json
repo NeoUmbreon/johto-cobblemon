@@ -1,6 +1,6 @@
 {  
     "hitbox": "player",
-    "resourceIdentifier": "cobblemon:scientistm",
+    "resourceIdentifier": "cobblemon:gymguide",
     "presets": [],
     "variation": {
         "dirt": [

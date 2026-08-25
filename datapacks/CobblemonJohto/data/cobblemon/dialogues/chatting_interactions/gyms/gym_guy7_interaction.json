@@ -2,12 +2,7 @@
     "speakers": {
         "npc": {
           "name": "Gym Guy",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:scientistm",
-            "isLeftSide": true
-          }
+          "face": "q.npc.face"
         }
       },
     "pages": [

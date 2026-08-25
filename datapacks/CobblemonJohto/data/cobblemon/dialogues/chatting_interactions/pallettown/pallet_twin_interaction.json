@@ -2,12 +2,7 @@
     "speakers": {
         "npc": {
           "name": "Daisy",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:twin",
-            "isLeftSide": true
-          }
+          "face": "q.npc.face"
         }
       },
       "pages": [
