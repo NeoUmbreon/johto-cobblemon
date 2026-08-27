@@ -1,6 +1,7 @@
 'Init variables';
-v.species_list == 0 ? { v.species_list.0 = 0; q.delete_variables(v.species_list) };
+t.species_list.0 = 0;
 t.item_list.0 = 0;
+q.delete_variables(t.species_list);
 q.delete_variables(t.item_list);
 t.team = q.array;
 
@@ -33,8 +34,8 @@ loop(v.party_size, {
         t.index = t.index + 1;
 
         'Check for unique species and item';
-        q.get_variable(v.species_list, t.pokemon.species) == 0 && q.get_variable(t.item_list, t.pokemon.helditem) == 0 ? {
-            q.set_variable(v.species_list, t.pokemon.species, 1);
+        q.get_variable(t.species_list, t.pokemon.species) == 0 && q.get_variable(t.item_list, t.pokemon.helditem) == 0 ? {
+            q.set_variable(t.species_list, t.pokemon.species, 1);
             q.set_variable(t.item_list, t.pokemon.helditem, 1);
 
             'Reformat moveset and item to comply with RCT';
