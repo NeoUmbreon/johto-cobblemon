@@ -24,7 +24,7 @@ for_each(t.name, q.player.data.temp.npcs, {
     q.append(q.player.data.temp.team, t.entity);
 
     t.partner.name = t.name;
-    t.partner.team = q.run_script('johto:partner_pokemon', t.id);
+    t.partner.team = q.run_script('johto:get_partner_party', t.id);
     t.filename = 'battletower_floor_' + v.room + '_partner_' + q.length(t.npcs);
     t.entity.data.rct = t.filename;
     q.file.save('data/molang/battle_frontier/' + t.filename + '.json', t.partner);

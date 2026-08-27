@@ -71,7 +71,7 @@
             "id": "yes",
             "speaker": "npc",
             "escapeAction": [
-                "q.run_script('johto:spawn_and_battle') == 0 ? { q.npc.remove_tag('Locked') };",
+                "q.run_script('johto:start_battle') == 0 ? { q.npc.remove_tag('Locked') };",
                 "q.dialogue.close;"
             ],
             "lines": [
@@ -83,7 +83,7 @@
                 "allowSkip": true,
                 "showTimer": true,
                 "action": [
-                    "q.run_script('johto:spawn_and_battle') == 0 ? { q.npc.remove_tag('Locked') };",
+                    "q.run_script('johto:start_battle') == 0 ? { q.npc.remove_tag('Locked') };",
                     "q.dialogue.close;"
                 ]
             }

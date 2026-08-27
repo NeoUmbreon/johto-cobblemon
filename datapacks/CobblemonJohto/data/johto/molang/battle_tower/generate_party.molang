@@ -7,7 +7,7 @@ t.team = q.array;
 
 
 'Get roster';
-t.roster = q.run_script('johto:generate_pokemon');
+t.roster = q.run_script('johto:get_roster');
 t.roster_size = q.length(t.roster);
 
 'shuffle';
