@@ -26,9 +26,11 @@ loop(v.party_size, {
     t.found = 0;
     loop(t.roster_size, {
         'Load Pokemon data';
-        t.pokemon = q.file.load('data/molang/battle_frontier/pokemon/' + (t.roster.[t.index]) + '.json');
+        t.filename = t.roster.[t.index];
+        t.pokemon = q.file.load('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
+        q.file.clear('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
         t.pokemon == 0 ? {
-            q.run_command('say Error loading Pokemon json ' + (t.roster.[t.index]) + ', canceling battle');
+            q.run_command('say Error loading Pokemon json ' + t.filename + ', canceling battle');
             break;
         };
         t.index = t.index + 1;
