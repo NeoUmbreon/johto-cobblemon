@@ -1,4 +1,4 @@
-t.team_pokemon = q.array();
+t.team_pokemon = q.array;
 for_each(t.player, q.player.data.temp.players, {
     for_each(t.pokemon, t.player.party.pokemon, {
         q.append(t.team_pokemon, t.pokemon);
@@ -6,16 +6,15 @@ for_each(t.player, q.player.data.temp.players, {
 });
 
 'Duplicate species';
-t.party_string = ' ';
-t.found = ' ';
+t.team_species = q.array;
 for_each(t.pokemon, t.team_pokemon, {
-    q.is_included(t.party_string, t.pokemon.species.name) ? {
-        q.string_length(t.found) == 1 ? { t.found = t.pokemon.species.name } : { t.found = q.replace(t.found, ' and', ','); t.found = t.found + ' and ' + t.pokemon.species.name; };
-    };
-
-    t.party_string = t.party_string + t.pokemon.species.name + ' ';
+    for_each(t.seen, t.team_species, {
+        t.seen == t.pokemon.species.name ? {
+            t.found == 0 ? { t.found = t.pokemon.species.name } : { t.found = q.replace(t.found, ' and', ','); t.found = t.found + ' and ' + t.pokemon.species.name; };
+        };
+    });
+    q.append(t.team_species, t.pokemon.species.name);
 });
-q.string_length(t.found) > 1 ? { t.fail.duplicate_species = t.found };
 
 'Return pass/fail';
-t.fail == 0 ? return 1 : { return t.fail.duplicate_species };
+t.found == 0 ? return 1 : return t.found;
