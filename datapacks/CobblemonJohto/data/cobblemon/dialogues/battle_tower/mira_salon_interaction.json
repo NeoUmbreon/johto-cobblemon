@@ -1,9 +1,6 @@
 {
     "initializationAction": [
-        "for_each(t.npc, q.player.data.temp.npcs, { t.npc == q.npc.name ? { v.joined = true; break }; });",
-        "q.length(q.player.data.temp.npcs) > 0 && !v.joined ? q.dialogue.close;",
-        "q.run_script('johto:generate_partner_party');",
-        "v.pokemon = q.run_script('johto:get_partner_party');"
+        "q.run_script('johto:init_partner_dialogue');"
     ],
     "speakers": {
         "npc": {
@@ -22,11 +19,11 @@
                 "Hi, hi!",
                 {
                     "type": "expression",
-                    "expression": "'I\\'m with my ' + v.pokemon.0.species + '!'"
+                    "expression": "'I\\'m with my ' + v.display_party.0.species + '!'"
                 },
                 {
                     "type": "expression",
-                    "expression": "'It\\'s really good with ' + v.pokemon.0.move + '!'"
+                    "expression": "'It\\'s really good with ' + v.display_party.0.move + '!'"
                 }
             ],
             "input": {
@@ -47,11 +44,11 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "'The other one is my ' + v.pokemon.1.species + '.'"
+                    "expression": "'The other one is my ' + v.display_party.1.species + '.'"
                 },
                 {
                     "type": "expression",
-                    "expression": "'Its ' + v.pokemon.1.move + ' is awesome!'"
+                    "expression": "'Its ' + v.display_party.1.move + ' is awesome!'"
                 }
             ],
             "input": {
