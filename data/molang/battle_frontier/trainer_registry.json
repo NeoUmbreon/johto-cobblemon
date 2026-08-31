@@ -2,1501 +2,3095 @@
     "1": {
         "class": "youngster",
         "name": "jim",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "And we're off!",
+            "win": "We did it, yeah!",
+            "lose": "Uncle!"
+        }
     },
     "2": {
         "class": "youngster",
         "name": "erroll",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "My Pokémon are a cut apart from the usual. Maybe even two cuts!",
+            "win": "Their cutting intensity and solid attack... Top class, yeah?",
+            "lose": "Grr... Rendered harmless..."
+        }
     },
     "3": {
         "class": "youngster",
         "name": "casimir",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "The prince among shorts-wearing Youngsters, that is me!",
+            "win": "I hope I lived up to my title of the prince among the shorts wearers.",
+            "lose": "I can't lose here! Not as the prince among the wearers of shorts!"
+        }
     },
     "4": {
         "class": "lass",
         "name": "cameron",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "I can't bear this tension. Would they be mad if I went home?",
+            "win": "I did it! I won somehow!",
+            "lose": "That's gone past my limit! I need to be excused!"
+        }
     },
     "5": {
         "class": "lass",
         "name": "peaches",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "I'm not very good at this, but please don't hold back.",
+            "win": "Oh, didn't I say? You shouldn't have held back.",
+            "lose": "Fweh! I wish you would have held back a little bit!"
+        }
     },
     "6": {
         "class": "lass",
         "name": "yasmin",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "In romance, fashion, and Pokémon! Today's girls want it all!",
+            "win": "The greed of today's girls knows no bounds!",
+            "lose": "Did being greedy end up costing me everything?"
+        }
     },
     "7": {
         "class": "schoolkid",
         "name": "mfoster",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "I'm thinking hard about why everyone likes battling so much.",
+            "win": "Why does winning a battle make people happy?",
+            "lose": "Why is losing a battle so downright infuriating?"
+        }
     },
     "8": {
         "class": "schoolkid",
         "name": "mken",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "I'm trying to keep up with my Pokémon training and my own schooling.",
+            "win": "I'd like to think I've struck the right balance of fun and education.",
+            "lose": "This isn't going to work? My grades are the best in class, but..."
+        }
     },
     "9": {
         "class": "schoolkid",
         "name": "mowen",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "I crammed hard for this. I can't possibly fail!",
+            "win": "Yes! I get the win! I'm glad I kept with this!",
+            "lose": "It means I need to study at home some more."
+        }
     },
     "10": {
         "class": "schoolkid",
         "name": "fmarcy",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "My Pokémon are my treasures. I'll let you see them. Just you.",
+            "win": "See? Cute and strong! Eheheheh.",
+            "lose": "See? They're cute even when losing. Eheheheh."
+        }
     },
     "11": {
         "class": "schoolkid",
         "name": "fshelly",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "I won't lose ever! Please abide by my rule!",
+            "win": "Thank you so much! I owe this win to you!",
+            "lose": "I so did not want to lose..."
+        }
     },
     "12": {
         "class": "schoolkid",
         "name": "faspen",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "I can do this... I can shine here, too!",
+            "win": "Yes! I won! I'm going to be a star!",
+            "lose": "One day, I'm going to shine as the brightest star in the world!"
+        }
     },
     "13": {
         "class": "richboy",
         "name": "matt",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "Don't be shy. You can bring it any which way.",
+            "win": "Yeah, I figured you'd be like this. Heh.",
+            "lose": "W-well, sometimes I have to lose, just so I don't crush everyone. Ahaha..."
+        }
     },
     "14": {
         "class": "richboy",
         "name": "alvan",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "My father's wealthy. There's nothing he can't afford.",
+            "win": "My father's money bought my Pokémon.",
+            "lose": "There are things that money can't buy. I know that..."
+        }
     },
     "15": {
         "class": "richboy",
         "name": "asa",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "Well, shall we? Time is money, and the meter is running.",
+            "win": "Well, I'll take my leave. Yet another fancy dinner date, you know. Adieu!",
+            "lose": "It's my loss, is it? So be it. I had to leave for a date anyway."
+        }
     },
     "16": {
         "class": "lady",
         "name": "isabel",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "Uphold the rules of etiquette and courtesy... That's what a lady does.",
+            "win": "If I couldn't unwind this way, I would lose my ladylike composure.",
+            "lose": "I wish I could be free like the bird Pokémon in the skies..."
+        }
     },
     "17": {
         "class": "lady",
         "name": "nichole",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "If I were Honey, then you would be Gooey Mulch, I would think.",
+            "win": "Do you see now? How different we are in level and class?",
+            "lose": "How dare you! I won't forget this humiliation ever!"
+        }
     },
     "18": {
         "class": "lady",
         "name": "juanita",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "Partying, shopping, dining... Darling, I've grown bored of it all.",
+            "win": "Excitement is so lacking in my life. What will send my heart racing?",
+            "lose": "Only battling lifts me from this idle existence of boredom and apathy..."
+        }
     },
     "19": {
         "class": "camper",
         "name": "bernard",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "I'm glad to make your acquaintance! May this friendship be fruitful!",
+            "win": "Thank you very much! Thank you so very much!",
+            "lose": "Thank you very much... ...Pah."
+        }
     },
     "20": {
         "class": "camper",
         "name": "herbert",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "The most natural Trainer is... Oh, why hide it? None other than me!",
+            "win": "This is the natural outcome. It was inevitable!",
+            "lose": "I was battling naturally, and ended up with the loss."
+        }
     },
     "21": {
         "class": "camper",
         "name": "colbert",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "Yes! Not a grown-up! Lucky me! I stand a chance!",
+            "win": "Yup, battling another kid is a lot less scary.",
+            "lose": "I get really nervous in front of grown-ups."
+        }
     },
     "22": {
         "class": "picnicker",
         "name": "maggie",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "It's hard to keep the streak alive but the battles are fun.",
+            "win": "It's more fun to win, of course!",
+            "lose": "Even losing is fun. It's the wonder of Pokémon!"
+        }
     },
     "23": {
         "class": "picnicker",
         "name": "melanie",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "My daddy is a real mountain man. Does that make my mom a mountain woman?",
+            "win": "Mountain woman sounds icky. Not for me, thank you!",
+            "lose": "I'm their daughter. Is being a mountain woman my destiny?"
+        }
     },
     "24": {
         "class": "picnicker",
         "name": "ann",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "I have a packed lunch all ready, and of course I have some snacks.",
+            "win": "My favorite Pokémon make winning so easy!",
+            "lose": "Oh, no, no! I forgot to bring my favorite Pokémon!"
+        }
     },
     "25": {
         "class": "tuber",
         "name": "mmanford",
-        "roster": 4
+        "roster": 4,
+        "dialogue": {
+            "intro": "I frolic with my water Pokémon in a pool all the time.",
+            "win": "It sure makes me happy winning with my Pokémon favorites.",
+            "lose": "I'd love to swim in a pool full of water Pokémon."
+        }
     },
     "26": {
         "class": "tuber",
         "name": "mhank",
-        "roster": 4
+        "roster": 4,
+        "dialogue": {
+            "intro": "I promised Mommy I'll practice swimming if I lose.",
+            "win": "Yay! I won't have to go to the pool with Mommy today!",
+            "lose": "Aww, I lost. Now I'll have to go to swimming practice today."
+        }
     },
     "27": {
         "class": "tuber",
         "name": "mpercy",
-        "roster": 4
+        "roster": 4,
+        "dialogue": {
+            "intro": "I went and caught my Pokémon with my daddy.",
+            "win": "I won, Daddy! Daddy, thank you!",
+            "lose": "I wonder if Daddy will show me how to train my Pokémon next?"
+        }
     },
     "28": {
         "class": "tuber",
         "name": "fdakota",
-        "roster": 4
+        "roster": 4,
+        "dialogue": {
+            "intro": "I'm on the way home from the pool, but OK, I can battle.",
+            "win": "I hope I can go home soon. I need some dry clothes!",
+            "lose": "Ah-ah-atchoo! Aww... Atchoo! We lost..."
+        }
     },
     "29": {
         "class": "tuber",
         "name": "fjenny",
-        "roster": 4
+        "roster": 4,
+        "dialogue": {
+            "intro": "I'm the captain of a heroic vessel among the crashing waves of a storm!",
+            "win": "Made it to shore with the ease of a real swashbuckler!",
+            "lose": "That was a bigger crash than I wanted!"
+        }
     },
     "30": {
         "class": "tuber",
         "name": "ftia",
-        "roster": 4
+        "roster": 4,
+        "dialogue": {
+            "intro": "I just now got back from my vacation.",
+            "win": "The beach is a good place to show off.",
+            "lose": "Ooh, my sunburn is itching."
+        }
     },
     "31": {
         "class": "guitarist",
         "name": "malcolm",
-        "roster": 5
+        "roster": 5,
+        "dialogue": {
+            "intro": "Hunh? A battle, is that it? Sure thing, sure thing.",
+            "win": "Hey, you're something special, huh?",
+            "lose": "Yeah, thanks for your time."
+        }
     },
     "32": {
         "class": "guitarist",
         "name": "tad",
-        "roster": 5
+        "roster": 5,
+        "dialogue": {
+            "intro": "This is going out to all the ladies. Babes, I sing and battle for you!",
+            "win": "My ladies, my babes, I won for you. Your love is my power, right?",
+            "lose": "I lost, but my love for the babes can't be beat...maybe."
+        }
     },
     "33": {
         "class": "guitarist",
         "name": "concord",
-        "roster": 5
+        "roster": 5,
+        "dialogue": {
+            "intro": "This is no guitar I have here. It's traditional and Japanese.",
+            "win": "It has only three strings. Can you tell what this is?",
+            "lose": "My instrument is called a shamisen."
+        }
     },
     "34": {
         "class": "idol",
         "name": "penny",
-        "roster": 6
+        "roster": 6,
+        "dialogue": {
+            "intro": "We teen Idols have a secret code of conduct that's strictly enforced.",
+            "win": "For example, if an Idol wins, she has to squeal and jump around.",
+            "lose": "If an Idol loses, she must never act angry. That's a big no-no."
+        }
     },
     "35": {
         "class": "idol",
         "name": "lana",
-        "roster": 6
+        "roster": 6,
+        "dialogue": {
+            "intro": "Do the monster Meteor Mash! It's my catchphrase!",
+            "win": "My Meteor Mash goes to your heart!",
+            "lose": "All Idols need a catchphrase especially right after their debut."
+        }
     },
     "36": {
         "class": "idol",
         "name": "crimson",
-        "roster": 6
+        "roster": 6,
+        "dialogue": {
+            "intro": "You're ever so lucky to get the chance to battle with me.",
+            "win": "You're super lucky to even battle an Idol like me. Don't you get it?",
+            "lose": "Huh? Huh? Now, why did you win? You know I'm supposed to win!"
+        }
     },
     "37": {
         "class": "pokefan",
         "name": "mewan",
-        "roster": 7
+        "roster": 7,
+        "dialogue": {
+            "intro": "Krink... Krak... Heheheh. Let me limber up for this.",
+            "win": "Hah! Weak, even for a joke!",
+            "lose": "Gnnrrr... I have only myself to blame..."
+        }
     },
     "38": {
         "class": "pokefan",
         "name": "mkane",
-        "roster": 7
+        "roster": 7,
+        "dialogue": {
+            "intro": "Aren't they pretty? Adorable? They're my beloved Pokémon.",
+            "win": "You worked so hard! I'll give you a nice massage at home.",
+            "lose": "What are you doing to my Pokémon?! What if you hurt them?!"
+        }
     },
     "39": {
         "class": "pokefan",
         "name": "mtheo",
-        "roster": 7
+        "roster": 7,
+        "dialogue": {
+            "intro": "I come before you as a member of the Pokémon Fan Club! En garde!",
+            "win": "Long live the Pokémon Fan Club! May it always be glorious!",
+            "lose": "This is hardly a taste of what the Pokémon Fan Club can bring down..."
+        }
     },
     "40": {
         "class": "pokefan",
         "name": "falexia",
-        "roster": 7
+        "roster": 7,
+        "dialogue": {
+            "intro": "Fan Club Department Manager... I hereby accept your challenge.",
+            "win": "Heheh... Honestly, you thought you stood a chance against the Fan Club?",
+            "lose": "Gwah! I will be avenged... B-by the Division Manager..."
+        }
     },
     "41": {
         "class": "pokefan",
         "name": "fluna",
-        "roster": 7
+        "roster": 7,
+        "dialogue": {
+            "intro": "Raising Pokémon with love isn't the same as coddling them. Don't you see?",
+            "win": "Ooh, you did it! Oh, I love you so! My luvly, wuvly Pokémon!",
+            "lose": "How could you?! What if my Pokémon are injured?!"
+        }
     },
     "42": {
         "class": "pokefan",
         "name": "fcelene",
-        "roster": 7
+        "roster": 7,
+        "dialogue": {
+            "intro": "On behalf of my village, I take on this challenge!",
+            "win": "Thank you, everyone! Thank you for your vocal support!",
+            "lose": "Fellow villagers, I'm sorry! My best wasn't enough!"
+        }
     },
     "43": {
         "class": "waiter",
         "name": "cyan",
-        "roster": 8
+        "roster": 8,
+        "dialogue": {
+            "intro": "Thank you for your patience. Here is the battle you'd ordered.",
+            "win": "I trust you were satisfied? I feel shortchanged somewhat.",
+            "lose": "I trust you were satisfied? I've had my fill."
+        }
     },
     "44": {
         "class": "waiter",
         "name": "indigo",
-        "roster": 8
+        "roster": 8,
+        "dialogue": {
+            "intro": "Work is fun, and Pokémon also. I am happy I come to this country.",
+            "win": "Having fun I am! I hoping to live here forever.",
+            "lose": "Oh, why you beat me? So mean! I want go home to my country."
+        }
     },
     "45": {
         "class": "waiter",
         "name": "orin",
-        "roster": 8
+        "roster": 8,
+        "dialogue": {
+            "intro": "I'm cool, right? So, everywhere I work they make me the maitre d'...",
+            "win": "I'm a good battler, too. I can't help it that the ladies fall for me.",
+            "lose": "I dream of evolving from a maitre d' to a celebrity chef."
+        }
     },
     "46": {
         "class": "waitress",
         "name": "ashley",
-        "roster": 8
+        "roster": 8,
+        "dialogue": {
+            "intro": "There are no free deals on a battle. You'll get the full course, though.",
+            "win": "Where's the fun if you don't battle like you mean it?",
+            "lose": "I take work and play seriously. That's what sparks my passion!"
+        }
     },
     "47": {
         "class": "waitress",
         "name": "noelle",
-        "roster": 8
+        "roster": 8,
+        "dialogue": {
+            "intro": "Hi, may I interest you in a meal combo? ...I'm so used to saying that at work!",
+            "win": "Thank you, and have a great day! ...What am I saying?",
+            "lose": "We look forward to your next visit! ...What am I thinking?"
+        }
     },
     "48": {
         "class": "waitress",
         "name": "kandace",
-        "roster": 8
+        "roster": 8,
+        "dialogue": {
+            "intro": "Your team looks impressive. Will I be OK...?",
+            "win": "Oh, what? Are those Pokémon only for Contests?",
+            "lose": "Ouch! I said ouch! It was too much! Way, way too much!"
+        }
     },
     "49": {
         "class": "bugcatcher",
         "name": "floyd",
-        "roster": 9
+        "roster": 9,
+        "dialogue": {
+            "intro": "I love bug Pokémon! I love my bug net even more!",
+            "win": "I caught my Pokémon using my trusty bug net.",
+            "lose": "It'd be cool if there was a bug net Pokémon."
+        }
     },
     "50": {
         "class": "bugcatcher",
         "name": "hoffman",
-        "roster": 9
+        "roster": 9,
+        "dialogue": {
+            "intro": "The bugs are my minions, and I'm the boss. Are you prepared to lose?",
+            "win": "Wahaha! Well done, my minions!",
+            "lose": "We were mowed down... My minions have learned the hard way!"
+        }
     },
     "51": {
         "class": "bugcatcher",
         "name": "amadeus",
-        "roster": 9
+        "roster": 9,
+        "dialogue": {
+            "intro": "I'm breaking out of my shell! I'm taking it to the next level!",
+            "win": "It's like I've sprouted wings! Viva to the new me!",
+            "lose": "Is it not my time yet? Do I need to stay in my shell longer?"
+        }
     },
     "52": {
         "class": "ninjaboy",
         "name": "shia",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "You transgressor! Hold still, I say!",
+            "win": "I willed myself to victory!",
+            "lose": "C-curses... I've brought dishonor on us..."
+        }
     },
     "53": {
         "class": "ninjaboy",
         "name": "vincent",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "Hey, hey, what's that over there? It's... It's a legendary Pokémon!",
+            "win": "Kekeke... Ninjutsu misdirection! It worked to perfection!",
+            "lose": "Ninjutsu misdirection was a failure! I'll disappear in a puff of smoke!"
+        }
     },
     "54": {
         "class": "ninjaboy",
         "name": "pierre",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "You'll be befuddled by my dazzling speed!",
+            "win": "Your movements... It's as if you're moving in molasses.",
+            "lose": "I didn't need to do all that dashing around, did I?"
+        }
     },
     "55": {
         "class": "pokekid",
         "name": "alice",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "I've been wearing these clothes for a long time. Bathing is for the birds!",
+            "win": "Changing clothes takes too much effort. Taking a bath is even worse!",
+            "lose": "No, no, no! I won't take a bath!"
+        }
     },
     "56": {
         "class": "pokekid",
         "name": "anita",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "I like my mommy, Pikachu, and my daddy too.",
+            "win": "A weak Trainer isn't cool. I don't like you.",
+            "lose": "A not-wimpy Trainer is cool. I like you."
+        }
     },
     "57": {
         "class": "pokekid",
         "name": "allison",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "Pikapika pikaah! Pikka! Pikachuuuh!",
+            "win": "Piika pikapikka! Pikka pikkachuuh!",
+            "lose": "Pikka ppi pi piii..."
+        }
     },
     "58": {
         "class": "fisherman",
         "name": "kiefer",
-        "roster": 10
+        "roster": 10,
+        "dialogue": {
+            "intro": "When I enter battle, I picture the vast sea in my mind.",
+            "win": "When I can envision the sea, I feel as if I could never lose.",
+            "lose": "When I envision the sea, I don't feel the sting of defeat."
+        }
     },
     "59": {
         "class": "fisherman",
         "name": "basil",
-        "roster": 10
+        "roster": 10,
+        "dialogue": {
+            "intro": "In battle and in love, one needs to know when it is best to back off.",
+            "win": "After all, both battle and romance can become quagmires of despair.",
+            "lose": "I may have lost, but I said something deep, in an endless bog kind of way."
+        }
     },
     "60": {
         "class": "ruinmaniac",
         "name": "henrik",
-        "roster": 11
+        "roster": 11,
+        "dialogue": {
+            "intro": "I'm afraid I got cursed on our last exploration of ancient ruins. Ehehe.",
+            "win": "Even just now, I have no idea how I won. Heeheehee.",
+            "lose": "I may be cursed, but this is fun. It is all so very good. Heeheehee."
+        }
     },
     "61": {
         "class": "ruinmaniac",
         "name": "aubry",
-        "roster": 11
+        "roster": 11,
+        "dialogue": {
+            "intro": "Seeing buildings and towns from the old ages sends my pulse racing.",
+            "win": "People interested in old architecture are potential Ruin Maniacs.",
+            "lose": "Open your eyes in towns. There will be exciting new discoveries. I mean it."
+        }
     },
     "62": {
         "class": "collector",
         "name": "upton",
-        "roster": 12
+        "roster": 12,
+        "dialogue": {
+            "intro": "I put this team together with my Internet buddies. It took us all day!",
+            "win": "We won! I need to thank my Internet buddies for their advice!",
+            "lose": "Aww, darn it! We lost?! I'll report it to my Internet buddies!"
+        }
     },
     "63": {
         "class": "collector",
         "name": "emil",
-        "roster": 12
+        "roster": 12,
+        "dialogue": {
+            "intro": "I'm the main character of this story. It's impossible for me to lose.",
+            "win": "You're good! Though, as a supporting character, you're a bit too strong.",
+            "lose": "...The hero has to suffer a bit so the audience feels more empathy."
+        }
     },
     "64": {
         "class": "parasollady",
         "name": "bridget",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "I'm very fickle. I can't stick with any one thing for very long.",
+            "win": "I won, and it's enough for me. I'm going to check out the Wi-Fi Plaza.",
+            "lose": "I lost, so that's enough. I'll go to the Safari Zone."
+        }
     },
     "65": {
         "class": "parasollady",
         "name": "blanche",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "I have a ton more experience than you. What will you do about it?",
+            "win": "Not bad, but you need more maturing.",
+            "lose": "Experience alone doesn't ensure any wins, I'm learning."
+        }
     },
     "66": {
         "class": "parasollady",
         "name": "colette",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "Don't you think Pokémon battles are a lot like the weather?",
+            "win": "Winning makes me feel warm and cheerful like a sunny day.",
+            "lose": "Losing makes me sad like a dreary cloudy day."
+        }
     },
     "67": {
         "class": "beauty",
         "name": "tiffany",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "I was out all night at a party again. I'm feeling dizzy from playing games!",
+            "win": "I'm so bored of fancy parties and silly games, too.",
+            "lose": "Urp...!"
+        }
     },
     "68": {
         "class": "beauty",
         "name": "britney",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "Ooh, aren't you the most darling thing! Can you win a smile from me?",
+            "win": "Ooh, sweetie, I win, so no smile! Be sure to win next time!",
+            "lose": "I don't feel like smiling now...but I'll be happy to wave good-bye!"
+        }
     },
     "69": {
         "class": "beauty",
         "name": "harmony",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "...Oh, wait one second. I have to take this call.",
+            "win": "Hi, yup... Yeah, battling... Uh-huh... Yup, I won... Well, duh... LOL...",
+            "lose": "Hi, yup... Yes, just battled... Nope... Kid beat me... Uh-huh..."
+        }
     },
     "70": {
         "class": "aromalady",
         "name": "lucy",
-        "roster": 13
+        "roster": 13,
+        "dialogue": {
+            "intro": "Snivel! Hnurrff! Snort! This hay fever is a wicked misery...",
+            "win": "Hnurrff! Snivel! Snivel! Snivel! I won, but the misery continues!",
+            "lose": "Sniffle. Snivel. Snort. I'm not crying. My nose is running."
+        }
     },
     "71": {
         "class": "aromalady",
         "name": "jackie",
-        "roster": 13
+        "roster": 13,
+        "dialogue": {
+            "intro": "My acute sense of smell tells me how tough a Trainer is.",
+            "win": "Keep trying. My nose tells me you have great potential.",
+            "lose": "Sniff, sniff... Snort! My nose tells me you've been working hard!"
+        }
     },
     "72": {
         "class": "aromalady",
         "name": "kara",
-        "roster": 13
+        "roster": 13,
+        "dialogue": {
+            "intro": "Kyahaha! I smell a powerful battle in the making!",
+            "win": "The sweet smell of success!",
+            "lose": "Defeat smells like a Skuntank!"
+        }
     },
     "73": {
         "class": "guitarist",
         "name": "bernie",
-        "roster": 5
+        "roster": 5,
+        "dialogue": {
+            "intro": "I like hard, fast beats in my battling and my rock 'n' roll! Let's wail!",
+            "win": "And, bam! That rhythm pattern ruled if I may say so myself!",
+            "lose": "Ouch! That's an insult to the ears! Those beats were offensive, man!"
+        }
     },
     "74": {
         "class": "guitarist",
         "name": "curtis",
-        "roster": 5
+        "roster": 5,
+        "dialogue": {
+            "intro": "To show you how much this means to me I'll use sound effects from now on.",
+            "win": "Raaaah! Dun dun! Dun dun! Oompa-oompa-oompapa!",
+            "lose": "Blip-bip, blip-bip... Blip... Bweeee..."
+        }
     },
     "75": {
         "class": "birdkeeper",
         "name": "nancy",
-        "roster": 14
+        "roster": 14,
+        "dialogue": {
+            "intro": "Wait, please wait... The winds... I hear them...",
+            "win": "I can hear them... The winds are laughing...",
+            "lose": "I can hear them... The winds... They are in tears..."
+        }
     },
     "76": {
         "class": "birdkeeper",
         "name": "trinity",
-        "roster": 14
+        "roster": 14,
+        "dialogue": {
+            "intro": "I can't fly... But these babies can soar...",
+            "win": "My spirit has been uplifted to the skies... Thank you, everyone...",
+            "lose": "You broke my wings... I won't ever forget you..."
+        }
     },
     "77": {
         "class": "birdkeeper",
         "name": "shawna",
-        "roster": 14
+        "roster": 14,
+        "dialogue": {
+            "intro": "Every day, I'm like a migratory bird but I go in all cardinal directions.",
+            "win": "I gained experience while traveling to all sorts of places.",
+            "lose": "I'd love to live somewhere where I can find other Trainers like you."
+        }
     },
     "78": {
         "class": "sailor",
         "name": "layton",
-        "roster": 15
+        "roster": 15,
+        "dialogue": {
+            "intro": "I was born unto rolling waves that washed me, with the beach, my cradle.",
+            "win": "I was born and grew up on the seas. That's what made me the big man I am.",
+            "lose": "I lost, did I? Time to go to the sea and stare inscrutably at it."
+        }
     },
     "79": {
         "class": "sailor",
         "name": "godwin",
-        "roster": 15
+        "roster": 15,
+        "dialogue": {
+            "intro": "Youths of today aim for the world! How's that for deep!",
+            "win": "There'd be some mighty cool Trainers around the world. I'm sure of that.",
+            "lose": "Go on, kid! Take on the world! I'll look forward to your return!"
+        }
     },
     "80": {
         "class": "hiker",
         "name": "everett",
-        "roster": 16
+        "roster": 16,
+        "dialogue": {
+            "intro": "What's that? I smell dusty? Don't you know the aroma of soil?",
+            "win": "See, that's what you get! Your team had to eat dirt, get it?",
+            "lose": "Dropped in the dirt by some kid who doesn't know the smell of soil!"
+        }
     },
     "81": {
         "class": "hiker",
         "name": "raiden",
-        "roster": 16
+        "roster": 16,
+        "dialogue": {
+            "intro": "Sorry for looking so scruffy and dirty. I've been holed up in the mountains.",
+            "win": "I wasn't really holed up, at least not on purpose. I was lost out there.",
+            "lose": "It's better to be holed up in the mountains than in your room, I say."
+        }
     },
     "82": {
         "class": "idol",
         "name": "ada",
-        "roster": 6
+        "roster": 6,
+        "dialogue": {
+            "intro": "I'm not supposed to be here. Can we do this on the sly?",
+            "win": "Even battling can draw attention. It's not easy being a pop star.",
+            "lose": "Pop stars are ordinary girls at heart. We want to enjoy our Pokémon, too!"
+        }
     },
     "83": {
         "class": "idol",
         "name": "annie",
-        "roster": 6
+        "roster": 6,
+        "dialogue": {
+            "intro": "I'm a self-made celebrity. Do you have a problem with that?",
+            "win": "A celebrity is a celebrity, even if it's in my own mind.",
+            "lose": "I want to be the center of attention just me and only me."
+        }
     },
     "84": {
         "class": "idol",
         "name": "basia",
-        "roster": 6
+        "roster": 6,
+        "dialogue": {
+            "intro": "I'm facing retirement soon... I was never admired as an Idol.",
+            "win": "I'm going to shine as a star battler of Pokémon!",
+            "lose": "I would have liked to end my career with a win in this match..."
+        }
     },
     "85": {
         "class": "jogger",
         "name": "steve",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "I think training Pokémon shares a lot of similarities with a marathon. You agree?",
+            "win": "There's meaning in sticking with your training regimen every day.",
+            "lose": "If you don't pace yourself, you can't win."
+        }
     },
     "86": {
         "class": "jogger",
         "name": "dave",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "Howdy! Let's keep it clean, fair refreshing, and pleasant!",
+            "win": "Whew, I feel invigorated! Pokémon are the greatest!",
+            "lose": "Uh, haha...ha... It actually feels kinda cleansing to be thrashed this badly."
+        }
     },
     "87": {
         "class": "worker",
         "name": "shane",
-        "roster": 17
+        "roster": 17,
+        "dialogue": {
+            "intro": "It's the Workers of the world like us who keep the world going.",
+            "win": "There are times we would like to lay down our tools and rest.",
+            "lose": "Don't forget how Workers like us work for you."
+        }
     },
     "88": {
         "class": "worker",
         "name": "benji",
-        "roster": 17
+        "roster": 17,
+        "dialogue": {
+            "intro": "My wife and boy are waiting on me back home. I can't afford to lose!",
+            "win": "I'm sorry, but I had to do this. You'll get tougher with a family behind you.",
+            "lose": "Oh, no! How am I supposed to show my face around my dear wife and boy now?"
+        }
     },
     "89": {
         "class": "rancher",
         "name": "pierce",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "Pokémon are like family to me. ...Nah, they are family.",
+            "win": "Yes! My family, you did it! We knocked off that mean Trainer!",
+            "lose": "Fwaaaah! That's cruel! My family's hurting!"
+        }
     },
     "90": {
         "class": "rancher",
         "name": "etienne",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "I was too lenient with my Pokémon. They grew up all selfish on me.",
+            "win": "Hey, now, enough. Stop attacking! The battle's long over already.",
+            "lose": "Hey, now, the battle's over and done. No attacking the Trainer."
+        }
     },
     "91": {
         "class": "rancher",
         "name": "leon",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "You, there. Don't look around now. Pay attention to me. Focus.",
+            "win": "Kid, you're grossly underpowered. You ought to train with me.",
+            "lose": "Oh, yeah. You're better than you look. I was wrong about you, kid."
+        }
     },
     "92": {
         "class": "cowgirl",
         "name": "doris",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "Go, my Pokémon. But don't strain yourselves.",
+            "win": "Oh, wow, I like how tough everyone was. Our Pokémon and you, yup.",
+            "lose": "OK, nice try, gang. Thanks much for trying."
+        }
     },
     "93": {
         "class": "cowgirl",
         "name": "paisley",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "My papa's dream... I'm going to make it real.",
+            "win": "Papa, did you see? We did it all for you...",
+            "lose": "We lost... Papa, I am so sorry..."
+        }
     },
     "94": {
         "class": "cowgirl",
         "name": "leslie",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "I'd like to take a break. ...No? We have to begin right away?",
+            "win": "Aww, see? You should have taken a break with me before.",
+            "lose": "Ooh, aren't you a tough one? You should take breaks, though."
+        }
     },
     "95": {
         "class": "cameraman",
         "name": "hudson",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "Yes, yes, looking good! I need a smile now. Can you do that?",
+            "win": "No, no, no. I need a smile from you. Let's see those teeth sparkle!",
+            "lose": "Yes, that's a good smile! Now tilt your head toward me."
+        }
     },
     "96": {
         "class": "cameraman",
         "name": "xenon",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "You probably can't tell, but I can see right down to your pores.",
+            "win": "Yes, I see it, indeed. I can see you clearly.",
+            "lose": "I zoomed in on you too much. I couldn't see your Pokémon."
+        }
     },
     "97": {
         "class": "cameraman",
         "name": "amleth",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "While battling, I'll keep looking for the best shot of you.",
+            "win": "There! And there again! Decisive moments in time!",
+            "lose": "Shots of me losing? Those get deleted immediately."
+        }
     },
     "98": {
         "class": "reporter",
         "name": "dot",
-        "roster": 1
+        "roster": 1,
+        "dialogue": {
+            "intro": "I'll be bringing you live coverage from my imminent battle!",
+            "win": "Our intrepid and beautiful Reporter has carried the day! Go, me!",
+            "lose": "Our intrepid and beautiful Reporter has gone down in defeat. Take pity on me!"
+        }
     },
     "99": {
         "class": "reporter",
         "name": "marble",
-        "roster": 2
+        "roster": 2,
+        "dialogue": {
+            "intro": "I hate admitting it, but I wanted to be an Idol, too.",
+            "win": "I didn't want to lose to any Idol. That motivated me to train.",
+            "lose": "This is crushing... I work so much harder than any silly Idol..."
+        }
     },
     "100": {
         "class": "reporter",
         "name": "gingham",
-        "roster": 3
+        "roster": 3,
+        "dialogue": {
+            "intro": "This microphone is what made me a star. It's my all and everything.",
+            "win": "Even for a battle, I don't let this microphone leave my hand.",
+            "lose": "...Thud. Bzzzzt..."
+        }
     },
     "101": {
         "class": "cyclist",
         "name": "mgaspar",
-        "roster": 18
+        "roster": 18,
+        "dialogue": {
+            "intro": "Hey, 'sup. I should warn you, I'm right fast, Trainer. Hold on to your hat.",
+            "win": "Trainer, from now on, you can start adding Mister to my name.",
+            "lose": "Trainer, that was a real learning experience. Thank you, seriously."
+        }
     },
     "102": {
         "class": "cyclist",
         "name": "mignatio",
-        "roster": 18
+        "roster": 18,
+        "dialogue": {
+            "intro": "This Bike has become an extension of my very being.",
+            "win": "Any damage to my Bike, I feel the pain as if it were mine to bear.",
+            "lose": "Please! I'll ask you to keep your filthy hands off my Bike."
+        }
     },
     "103": {
         "class": "cyclist",
         "name": "fkaylene",
-        "roster": 18
+        "roster": 18,
+        "dialogue": {
+            "intro": "When I was little, I hated cycling. I couldn't get the hang of it.",
+            "win": "I love cycling now. I've made many friends riding.",
+            "lose": "Can you ride a Bike? It's healthy and a lot of fun."
+        }
     },
     "104": {
         "class": "cyclist",
         "name": "fkaya",
-        "roster": 18
+        "roster": 18,
+        "dialogue": {
+            "intro": "I'll ride toward the breaking dawn with you on my mind.",
+            "win": "I will shift my gears higher and higher until I catch up to you...",
+            "lose": "My tires have deflated, and so has my heart..."
+        }
     },
     "105": {
         "class": "blackbelt",
         "name": "clement",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "Let the curtains rise on the festivities of muscles and Pokémon!",
+            "win": "Did you enjoy our demonstration of muscles and Pokémon?",
+            "lose": "Though I've lost, my muscles and Pokémon are seared into your mind."
+        }
     },
     "106": {
         "class": "blackbelt",
         "name": "mason",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "They say I have fists of steel and the heart of a child.",
+            "win": "Oh, yay! Yippee! I won, I won!",
+            "lose": "Oh, boo! Boo! This stinks! I'm not talking to you!"
+        }
     },
     "107": {
         "class": "battlegirl",
         "name": "kodi",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "Hwoaaah... Hwoaaah...",
+            "win": "Howatchah! Howaaatchaah!",
+            "lose": "Fweeeh... Fweeehhh..."
+        }
     },
     "108": {
         "class": "battlegirl",
         "name": "aileen",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "In my dictionary, there is no entry for “restraint.”",
+            "win": "The greatest show of respect among Trainers is to battle all out.",
+            "lose": "I went all out and still lost. Of course it stings."
+        }
     },
     "109": {
         "class": "blackbelt",
         "name": "jericho",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "A professional martial artist is in perpetual control of his body.",
+            "win": "A martial artist must be more than strong. He must also be wise.",
+            "lose": "Gah! I overdid my training and ran out of stamina early..."
+        }
     },
     "110": {
         "class": "blackbelt",
         "name": "harris",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "When I close my eyes, I can picture you being defeated. Come on.",
+            "win": "Why be sad? You knew this was coming.",
+            "lose": "I berate myself for my own lack of care..."
+        }
     },
     "111": {
         "class": "blackbelt",
         "name": "soren",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "I don't like to move much. I trained using the Net and TV.",
+            "win": "Uhihi! I'm a naturally talented pro at both karate and Pokémon, I am.",
+            "lose": "Oh, man, this is rotten! I'm tired and hungry and want to go home!"
+        }
     },
     "112": {
         "class": "battlegirl",
         "name": "trina",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "...To get this far, I had to make sacrifices. Many, many sacrifices.",
+            "win": "It's for this one moment that I live.",
+            "lose": "What else do I have to give up so I can beat you?"
+        }
     },
     "113": {
         "class": "battlegirl",
         "name": "alta",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "First, let's battle. Talking can wait.",
+            "win": "That wasn't bad at all, yup. That goes for you and your Pokémon.",
+            "lose": "You're a tough one, yup. Where do you do your training?"
+        }
     },
     "114": {
         "class": "battlegirl",
         "name": "ingrid",
-        "roster": 19
+        "roster": 19,
+        "dialogue": {
+            "intro": "Cute little Trainer! We'll squash you flat.",
+            "win": "Eheh! You're so cute when you look angry and frustrated!",
+            "lose": "What do you think you're doing? I hate to lose, I'll have you know!"
+        }
     },
     "115": {
         "class": "veteran",
         "name": "beck",
-        "roster": 20
+        "roster": 20,
+        "dialogue": {
+            "intro": "My precious Pokémon will set you right!",
+            "win": "My Pokémon have no flaws that you can exploit!",
+            "lose": "I apologize, my dear Pokémon... I was caught unprepared..."
+        }
     },
     "116": {
         "class": "veteran",
         "name": "eric",
-        "roster": 20
+        "roster": 20,
+        "dialogue": {
+            "intro": "Fwo-fwo-fwo. Youngster, what's most important is to never give up.",
+            "win": "If you give up, that's it. The game's over.",
+            "lose": "Fwo-fwo-fwo. You're an admirable Trainer already."
+        }
     },
     "117": {
         "class": "veteran",
         "name": "padgett",
-        "roster": 20
+        "roster": 20,
+        "dialogue": {
+            "intro": "I can tell by the way you look, you're quite taken with my dandy style!",
+            "win": "You shouldn't be so mesmerized by me. Like a Mothim drawn to a flame!",
+            "lose": "Oh, you're not interested in me? You're just Shellos, if I say so myself."
+        }
     },
     "118": {
         "class": "socialite",
         "name": "barbara",
-        "roster": 20
+        "roster": 20,
+        "dialogue": {
+            "intro": "Oh, hello, aren't you a sweetie! Are you sure you're up to this?",
+            "win": "Oh, now, please don't cry. You should be proud of yourself, dear.",
+            "lose": "Oh, my... You're quite the capable practitioner of the art."
+        }
     },
     "119": {
         "class": "socialite",
         "name": "isabel",
-        "roster": 20
+        "roster": 20,
+        "dialogue": {
+            "intro": "You and your Pokémon could use an obedience lesson from me.",
+            "win": "This isn't over until I say. Once more.",
+            "lose": "You defy me? How very amusing."
+        }
     },
     "120": {
         "class": "socialite",
         "name": "carmen",
-        "roster": 20
+        "roster": 20,
+        "dialogue": {
+            "intro": "Over the years, I've crossed paths with many a Trainer.",
+            "win": "They were all wonderful Trainers in their own way. All fond memories now...",
+            "lose": "You're one among those many Trainers. I'm sorry I wasn't younger."
+        }
     },
     "121": {
         "class": "psychic",
         "name": "malpha",
-        "roster": 21
+        "roster": 21,
+        "dialogue": {
+            "intro": "I am a Psychic, though I may not look like one. I'll do something psychic.",
+            "win": "I didn't use any psychic power to win. No, really.",
+            "lose": "Did you notice? I was levitating while I was in battle with you."
+        }
     },
     "122": {
         "class": "psychic",
         "name": "mbeta",
-        "roster": 21
+        "roster": 21,
+        "dialogue": {
+            "intro": "Fwazzam! So! You are my next victim!",
+            "win": "Fwazzam! Have you no spine?!",
+            "lose": "Fwizzle... Don't think there will be a next time!"
+        }
     },
     "123": {
         "class": "psychic",
         "name": "messie",
-        "roster": 21
+        "roster": 21,
+        "dialogue": {
+            "intro": "I can use psychic power, but I prefer ordinary sleight-of-hand magic tricks.",
+            "win": "It's my opinion that psychic power should be left to the Pokémon.",
+            "lose": "I'm a Psychic, but I'm also a student of a magician's school."
+        }
     },
     "124": {
         "class": "psychic",
         "name": "famelia",
-        "roster": 21
+        "roster": 21,
+        "dialogue": {
+            "intro": "In the next few minutes, you will learn true terror at my hands!",
+            "win": "Hah! Too weak! Too weak! What pitiful resistance!",
+            "lose": "Noooo! I cannot lose!"
+        }
     },
     "125": {
         "class": "psychic",
         "name": "fceline",
-        "roster": 21
+        "roster": 21,
+        "dialogue": {
+            "intro": "I see what I have no right seeing... Like there. Behind you.",
+            "win": "Oh? You can't see it? Then, you're fortunate. Giggle...",
+            "lose": "I wouldn't ask about what I see. It's better not to know. Really."
+        }
     },
     "126": {
         "class": "psychic",
         "name": "fjillian",
-        "roster": 21
+        "roster": 21,
+        "dialogue": {
+            "intro": "The great unseeable power... I beseech you for help...",
+            "win": "Oh, great unseeable power... I thank you for coming to my aid...",
+            "lose": "Oh... Great unseeable power... Why have you forsaken me..."
+        }
     },
     "127": {
         "class": "pokemonbreeder",
         "name": "mhoward",
-        "roster": 22
+        "roster": 22,
+        "dialogue": {
+            "intro": "Why do I raise Pokémon? Because they are there!",
+            "win": "I think I said something deep and cool! Didn't I?",
+            "lose": "That's no reason at all? That's the reason in itself!"
+        }
     },
     "128": {
         "class": "pokemonbreeder",
         "name": "mderrell",
-        "roster": 22
+        "roster": 22,
+        "dialogue": {
+            "intro": "My team has been raised with care. I have absolute confidence in them.",
+            "win": "You should pay closer attention to the unique aspects of your Pokémon.",
+            "lose": "How did you find my Pokémon? Did you notice their significance?"
+        }
     },
     "129": {
         "class": "pokemonbreeder",
         "name": "mbaldwin",
-        "roster": 22
+        "roster": 22,
+        "dialogue": {
+            "intro": "Everyone, it's showtime! Get out and do some clobbering!",
+            "win": "Oh, bravo! Nicely won!",
+            "lose": "Arrgh! How humiliating! Quick! Out of the spotlight!"
+        }
     },
     "130": {
         "class": "pokemonbreeder",
         "name": "fadriana",
-        "roster": 22
+        "roster": 22,
+        "dialogue": {
+            "intro": "I love raising Pokémon. It's what I live for!",
+            "win": "Seeing them try so hard to please... It's so unbearably adorable.",
+            "lose": "Don't you dare do that again!"
+        }
     },
     "131": {
         "class": "pokemonbreeder",
         "name": "fsonya",
-        "roster": 22
+        "roster": 22,
+        "dialogue": {
+            "intro": "I've been devising ways of raising tough Pokémon from the genetic level.",
+            "win": "You can't overlook the role of knowledge in raising tough Pokémon.",
+            "lose": "I need to study and understand what genetics is about first."
+        }
     },
     "132": {
         "class": "pokemonbreeder",
         "name": "ftatyana",
-        "roster": 22
+        "roster": 22,
+        "dialogue": {
+            "intro": "Raise them with love, and Pokémon will answer in kind. Probably.",
+            "win": "They responded to my love. Probably.",
+            "lose": "You're raising your Pokémon with a lot of love. I think."
+        }
     },
     "133": {
         "class": "gentleman",
         "name": "zante",
-        "roster": 22
+        "roster": 22,
+        "dialogue": {
+            "intro": "I believe I will approach this battle from the perspective of a newborn.",
+            "win": "Abuboo dah.",
+            "lose": "Ababaa. Manmaa."
+        }
     },
     "134": {
         "class": "gentleman",
         "name": "giliam",
-        "roster": 22
+        "roster": 22,
+        "dialogue": {
+            "intro": "If you prevail, I'll recount to you a tale from my youth.",
+            "win": "Seeing you brings back a flood of memories. Ah, yes, indeed...",
+            "lose": "...Hm? I seem to have forgotten..."
+        }
     },
     "135": {
         "class": "roughneck",
         "name": "rodney",
-        "roster": 23
+        "roster": 23,
+        "dialogue": {
+            "intro": "There's no end to either adolescence or Pokémon.",
+            "win": "See ya! That was fun! Enjoy your youth!",
+            "lose": "I'm still a dreamer. A precious, unspoiled snowflake..."
+        }
     },
     "136": {
         "class": "roughneck",
         "name": "rainier",
-        "roster": 23
+        "roster": 23,
+        "dialogue": {
+            "intro": "Daddy... Mommy... Can you hear me? Please watch over me...",
+            "win": "Daddy... Mommy... Did you see? I won, and it's all for you...",
+            "lose": "Oh... Daddy... Mommy... I couldn't win..."
+        }
     },
     "137": {
         "class": "scientist",
         "name": "jean",
-        "roster": 24
+        "roster": 24,
+        "dialogue": {
+            "intro": "Finally... The time has come to put the fruits of my research to the test...",
+            "win": "Success... Sacrificing my youth was worthwhile.",
+            "lose": "No! Nooooooo! Give me back my youth!"
+        }
     },
     "138": {
         "class": "scientist",
         "name": "brad",
-        "roster": 24
+        "roster": 24,
+        "dialogue": {
+            "intro": "I developed a special Pokémon drink. Have some! Bottoms up!",
+            "win": "Glug, glug... Belch! It'll make you strong! Don't waste it!",
+            "lose": "My Pokémon drink contains no actual Pokémon or their byproducts."
+        }
     },
     "139": {
         "class": "clown",
         "name": "francis",
-        "roster": 25
+        "roster": 25,
+        "dialogue": {
+            "intro": "An analogy for battling is... I'd say a bachelor guy.",
+            "win": "Heheh, do you get it? I doubt you'd get it. No one does.",
+            "lose": "Do you get what I'm saying? I doubt you'd get it. No one ever does."
+        }
     },
     "140": {
         "class": "clown",
         "name": "prescot",
-        "roster": 25
+        "roster": 25,
+        "dialogue": {
+            "intro": "Myself, I have been born, raised, and spent my life under a circus tent.",
+            "win": "My Pokémon, too. They were born and raised under a circus tent.",
+            "lose": "The outside world is so very cruel... We shall return to our circus tent."
+        }
     },
     "141": {
         "class": "acetrainer",
         "name": "myardley",
-        "roster": 26
+        "roster": 26,
+        "dialogue": {
+            "intro": "Oi, you! Yeah, you! Snap to it! I'll be training you!",
+            "win": "What?! You're down and out already?! This is no bed! Get up!",
+            "lose": "Good! Enough! That will do for today!"
+        }
     },
     "142": {
         "class": "acetrainer",
         "name": "mstavros",
-        "roster": 26
+        "roster": 26,
+        "dialogue": {
+            "intro": "Fwah? You mean to challenge me?",
+            "win": "Fwahaha! I win! Better luck next time, punk!",
+            "lose": "Fwaah?! You defeated me? Who are you to do that?!"
+        }
     },
     "143": {
         "class": "acetrainer",
         "name": "mzane",
-        "roster": 26
+        "roster": 26,
+        "dialogue": {
+            "intro": "Ooh, it gives me shivers... I live for this moment.",
+            "win": "Oh, yeah... That's it... Perfection doesn't come better...",
+            "lose": "It's gotten so I can't live without battling anymore."
+        }
     },
     "144": {
         "class": "acetrainer",
         "name": "fkim",
-        "roster": 26
+        "roster": 26,
+        "dialogue": {
+            "intro": "OK! I'm going to do it! I'm going to show you my best!",
+            "win": "Gasp, gasp...",
+            "lose": "Never again! You can forget about a next time!"
+        }
     },
     "145": {
         "class": "acetrainer",
         "name": "fmacy",
-        "roster": 26
+        "roster": 26,
+        "dialogue": {
+            "intro": "Um... I'm honestly quite tough. Please keep up.",
+            "win": "I'm sorry. I don't think you measure up after all.",
+            "lose": "I'm amazed. I didn't think you'd win..."
+        }
     },
     "146": {
         "class": "acetrainer",
         "name": "ffaun",
-        "roster": 26
+        "roster": 26,
+        "dialogue": {
+            "intro": "Let's go, me! Go, me, go! Don't lose, don't lose, rah, rah, rah!",
+            "win": "Way to go, me! I'm so wonderful! Rah, rah, rah! Gooooooo, me!",
+            "lose": "It's OK, me! Don't cry! Don't cry! Go home, go home, goooooo!"
+        }
     },
     "147": {
         "class": "pokemonranger",
         "name": "mdoyle",
-        "roster": 27
+        "roster": 27,
+        "dialogue": {
+            "intro": "Woohoo! Here comes a cool Trainer! Let's see what you can bring!",
+            "win": "Yes! Bravo! You have some good attacks, Trainer!",
+            "lose": "Whaaaaat?! Nooooo! I can't get over how tough you are!"
+        }
     },
     "148": {
         "class": "pokemonranger",
         "name": "mduke",
-        "roster": 27
+        "roster": 27,
+        "dialogue": {
+            "intro": "To serve and protect Pokémon and nature. That's my mission!",
+            "win": "My skills I developed in the embrace of Mother Nature!",
+            "lose": "My mission needs me! This is where we bid good-bye!"
+        }
     },
     "149": {
         "class": "pokemonranger",
         "name": "mdeacon",
-        "roster": 27
+        "roster": 27,
+        "dialogue": {
+            "intro": "Never fear, this Pokémon Ranger is here to protect my own personal peace!",
+            "win": "My personal peace has been protected!",
+            "lose": "You vile Trainer, you! You've shattered my peace!"
+        }
     },
     "150": {
         "class": "pokemonranger",
         "name": "fmena",
-        "roster": 27
+        "roster": 27,
+        "dialogue": {
+            "intro": "Any bad kids littering the fields? Any bad kids fouling the sea?",
+            "win": "Be sure to sort your recyclables from the trash when you're throwing it out!",
+            "lose": "Trash is like a battle. Don't be too quick to throw it!"
+        }
     },
     "151": {
         "class": "pokemonranger",
         "name": "fmercy",
-        "roster": 27
+        "roster": 27,
+        "dialogue": {
+            "intro": "Watch me, darling! I'm putting my best into this!",
+            "win": "See, darling? Did you see? I put in my best effort for you.",
+            "lose": "I can't have my darling see me like this. How pathetic I must look..."
+        }
     },
     "152": {
         "class": "pokemonranger",
         "name": "fevita",
-        "roster": 27
+        "roster": 27,
+        "dialogue": {
+            "intro": "So, I lead with this... Then, counter... Ugh, I can't get our strategy right!",
+            "win": "To overanalyze can be a bad thing I guess.",
+            "lose": "Waaah! Couldn't you have waited? Until I'm ready at least?"
+        }
     },
     "153": {
         "class": "dragontamer",
         "name": "harold",
-        "roster": 28
+        "roster": 28,
+        "dialogue": {
+            "intro": "How do you like my cape? I had it specially made!",
+            "win": "What is my cape made of? I'm afraid I can't tell you.",
+            "lose": "Rip... Riiiiiiiiiiiipppppp! ...What?! My cape! Waaaaah!"
+        }
     },
     "154": {
         "class": "dragontamer",
         "name": "herman",
-        "roster": 28
+        "roster": 28,
+        "dialogue": {
+            "intro": "Do you know what real terror is? I am familiar with it. Intimately so...",
+            "win": "You learned something today, yes? The true meaning of terror.",
+            "lose": "Aiyeeh! What's with you? I'm pleading for mercy here!"
+        }
     },
     "155": {
         "class": "dragontamer",
         "name": "emmett",
-        "roster": 28
+        "roster": 28,
+        "dialogue": {
+            "intro": "See it! Hear it! Smell it! Marvel at my power!",
+            "win": "That's right! Use all your senses and realize what you were up against!",
+            "lose": "I didn't see anything! I'm not listening! And I don't smell a thing!"
+        }
     },
     "156": {
         "class": "dragontamer",
         "name": "erich",
-        "roster": 28
+        "roster": 28,
+        "dialogue": {
+            "intro": "Unluckily for you, your winning streak ends with me.",
+            "win": "You lost to me, but you're still on your feet. Kudos to you!",
+            "lose": "This can't be. I won't accept it. There has to be a mistake somewhere."
+        }
     },
     "157": {
         "class": "acetrainer",
         "name": "mgarvey",
-        "roster": 29
+        "roster": 29,
+        "dialogue": {
+            "intro": "I c-c-can't stop shivering. B-but this is a b-battle. I have to.",
+            "win": "Urrff... Ch-chatter... I won, I won...",
+            "lose": "Sh-shiver... Urf... My eyelids are getting droopy..."
+        }
     },
     "158": {
         "class": "acetrainer",
         "name": "mcruz",
-        "roster": 29
+        "roster": 29,
+        "dialogue": {
+            "intro": "I'll say good-bye to you now. Battles always end in tears.",
+            "win": "Fweeeeh! My tears of joy flow freely!",
+            "lose": "Fweeeeh! My tears of anguish flow freely!"
+        }
     },
     "159": {
         "class": "acetrainer",
         "name": "fpamela",
-        "roster": 29
+        "roster": 29,
+        "dialogue": {
+            "intro": "How amusing! You came here knowing of your certain defeat?",
+            "win": "Ahahahah! Very entertaining! I shall be happy to see you again!",
+            "lose": "Wh-what is happening...? M-my vision is turning milky white..."
+        }
     },
     "160": {
         "class": "acetrainer",
         "name": "fdaniela",
-        "roster": 29
+        "roster": 29,
+        "dialogue": {
+            "intro": "A Trainer am I, a new ray of hope from the land of the midnight sun.",
+            "win": "In the frigid falls of the north, I honed my skills. With them, I made you fall.",
+            "lose": "Your foul trickery deserves contempt. But effective it was, too."
+        }
     },
     "161": {
         "class": "youngster",
         "name": "kaden",
-        "roster": 30
+        "roster": 30,
+        "dialogue": {
+            "intro": "I've been pondering lately... How much longer will I be wearing shorts?",
+            "win": "Will I still be in shorts as a grown-up?",
+            "lose": "If I grow old like this, will they call me something silly like “Shorts Man”?"
+        }
     },
     "162": {
         "class": "youngster",
         "name": "kolby",
-        "roster": 30
+        "roster": 30,
+        "dialogue": {
+            "intro": "That's right, I'm the legendary kid in shorts who's the talk of the town.",
+            "win": "Even a Youngster in shorts like me can be the stuff of a legend or two.",
+            "lose": "My legend is over..."
+        }
     },
     "163": {
         "class": "lass",
         "name": "karissa",
-        "roster": 30
+        "roster": 30,
+        "dialogue": {
+            "intro": "Uh... Um... H-hello. P-pleased to meet you.",
+            "win": "S-s-sorry. I'm r-really n-nervous.",
+            "lose": "Uh... Th-thank you. That was f-fun."
+        }
     },
     "164": {
         "class": "lass",
         "name": "liliana",
-        "roster": 30
+        "roster": 30,
+        "dialogue": {
+            "intro": "Oh, this place is so passé now. I'm missing out on shopping.",
+            "win": "You're kind of stylish, actually. Oh, I wish I had new clothes.",
+            "lose": "Maybe I'll collect Accessories for some Contests..."
+        }
     },
     "165": {
         "class": "schoolkid",
         "name": "mjonas",
-        "roster": 31
+        "roster": 31,
+        "dialogue": {
+            "intro": "Exam season's coming up, but I'm neck-deep in battling...",
+            "win": "Mom's going to cut me off. I just know it...",
+            "lose": "I have to keep up on both my studying and Pokémon..."
+        }
     },
     "166": {
         "class": "schoolkid",
         "name": "mkeon",
-        "roster": 31
+        "roster": 31,
+        "dialogue": {
+            "intro": "Hiya, you Trainer there! Slip on some glasses. They'll make you look better.",
+            "win": "Nothing's the matter with my eyes. I wear glasses for the looks I get.",
+            "lose": "Whoops! My glasses, my glasses."
+        }
     },
     "167": {
         "class": "schoolkid",
         "name": "fchelsie",
-        "roster": 31
+        "roster": 31,
+        "dialogue": {
+            "intro": "I've been taught every opponent has a weakness. If I can find yours...",
+            "win": "Eheheh. I figured out your weakness.",
+            "lose": "Did you figure out my weakness?"
+        }
     },
     "168": {
         "class": "schoolkid",
         "name": "fregina",
-        "roster": 31
+        "roster": 31,
+        "dialogue": {
+            "intro": "It's been so long since I had my last battle.",
+            "win": "You know, battling is fun after all.",
+            "lose": "Battling is so much fun, but..."
+        }
     },
     "169": {
         "class": "richboy",
         "name": "daulton",
-        "roster": 31
+        "roster": 31,
+        "dialogue": {
+            "intro": "The age of money has come to Pokémon battling. I'll teach you who is right.",
+            "win": "You understand, don't you? What is right, and who is stronger?",
+            "lose": "M-my Pokémon! What have you done? What am I to do?!"
+        }
     },
     "170": {
         "class": "richboy",
         "name": "hanson",
-        "roster": 31
+        "roster": 31,
+        "dialogue": {
+            "intro": "You're my opponent? Oh, all right... Try not to disappoint me too badly.",
+            "win": "My Pokémon are all tops in luxury. Do you see? This is what power is about.",
+            "lose": "Nyah! I don't care! I've got enough money to fill a swimming pool!"
+        }
     },
     "171": {
         "class": "lady",
         "name": "amory",
-        "roster": 31
+        "roster": 31,
+        "dialogue": {
+            "intro": "You there. Yes, you. I'm feeling rather bored.",
+            "win": "I suppose that was enjoyable for what it was. I thank you for it.",
+            "lose": "You are rather good. Quite remarkable, even."
+        }
     },
     "172": {
         "class": "lady",
         "name": "juliana",
-        "roster": 31
+        "roster": 31,
+        "dialogue": {
+            "intro": "I can sink your sort with minimal effort.",
+            "win": "It took the barest of efforts to win this match.",
+            "lose": "You swamped us with no effort at all..."
+        }
     },
     "173": {
         "class": "bugcatcher",
         "name": "camui",
-        "roster": 32
+        "roster": 32,
+        "dialogue": {
+            "intro": "My room is always full of bugs. That drives my mom just wild.",
+            "win": "I want to collect more bug Pokémon for my bug appreciation station.",
+            "lose": "Bugs are loose under my shirt. I'm starting to itch..."
+        }
     },
     "174": {
         "class": "bugcatcher",
         "name": "orlando",
-        "roster": 32
+        "roster": 32,
+        "dialogue": {
+            "intro": "People claim I'm like an adult. Whatever could they mean, do you suppose?",
+            "win": "Ah, yes, quite enjoyable! We must do this again, surely.",
+            "lose": "Oh, yes! Smashing! That chilled me to my toes, it did!"
+        }
     },
     "175": {
         "class": "ninjaboy",
         "name": "zack",
-        "roster": 33
+        "roster": 33,
+        "dialogue": {
+            "intro": "I have made my choice. When I fall, it shall be forward!",
+            "win": "You lack conviction.",
+            "lose": "...Thud."
+        }
     },
     "176": {
         "class": "ninjaboy",
         "name": "vance",
-        "roster": 33
+        "roster": 33,
+        "dialogue": {
+            "intro": "So, what exactly is a ninja you may ask.",
+            "win": "A ninja is powerful. That will do as a start.",
+            "lose": "Maybe some ninjas are weak?"
+        }
     },
     "177": {
         "class": "pokekid",
         "name": "kyla",
-        "roster": 33
+        "roster": 33,
+        "dialogue": {
+            "intro": "I once saw a lady wearing the same outfit as me.",
+            "win": "She said, “You're showing serious fashion chops.”",
+            "lose": "She said, “You're kidding me am I right?”"
+        }
     },
     "178": {
         "class": "pokekid",
         "name": "ruby",
-        "roster": 33
+        "roster": 33,
+        "dialogue": {
+            "intro": "Will you believe that inside this costume is a grown-up Beauty?",
+            "win": "My dream is to live as a Pokémon one day. To become a Pokémon!",
+            "lose": "I'm an adult, but I want to be a Pokémon. Does that make me weird?"
+        }
     },
     "179": {
         "class": "idol",
         "name": "kiley",
-        "roster": 34
+        "roster": 34,
+        "dialogue": {
+            "intro": "My profile's riding high now, so my schedule's filled solid!",
+            "win": "Oh, no! It's this late already? I'd better check my timetable!",
+            "lose": "Talent manager! Do I have time for a rematch?"
+        }
     },
     "180": {
         "class": "idol",
         "name": "utah",
-        "roster": 34
+        "roster": 34,
+        "dialogue": {
+            "intro": "Are you another of my fans? I can give you an autograph if you'd lose?",
+            "win": "Here's your autograph! Cherish it! Oh, sorry! I don't do handshakes.",
+            "lose": "I'm sorry, I was acting Gastly! It was very Delcatty of me!"
+        }
     },
     "181": {
         "class": "jogger",
         "name": "colt",
-        "roster": 35
+        "roster": 35,
+        "dialogue": {
+            "intro": "I need to diet. I have to get out jogging.",
+            "win": "Well, I guess I'll go for a quick trot around here...",
+            "lose": "Your Pokémon know how to punch hard. You see, I'm really a boxer."
+        }
     },
     "182": {
         "class": "jogger",
         "name": "tory",
-        "roster": 35
+        "roster": 35,
+        "dialogue": {
+            "intro": "I look to bug Pokémon for hints on running all the time.",
+            "win": "I admire the light and agile footwork of bug Pokémon.",
+            "lose": "Skitter..."
+        }
     },
     "183": {
         "class": "fisherman",
         "name": "farley",
-        "roster": 36
+        "roster": 36,
+        "dialogue": {
+            "intro": "Listen, I'm feeling bushed today. Can we do this tomorrow first thing?",
+            "win": "Oh, all right. You're impatient. Couldn't wait till tomorrow, oh no.",
+            "lose": "That's why I said tomorrow. I can barely stay awake now."
+        }
     },
     "184": {
         "class": "fisherman",
         "name": "mark",
-        "roster": 36
+        "roster": 36,
+        "dialogue": {
+            "intro": "Feed the Pokémon you catch, or they will flee. Do you see?",
+            "win": "Once a Pokémon has fled, it will never return. Do you see?",
+            "lose": "What I said about Pokémon--it is a parable. Do you see?"
+        }
     },
     "185": {
         "class": "ruinmaniac",
         "name": "samuel",
-        "roster": 37
+        "roster": 37,
+        "dialogue": {
+            "intro": "When I was younger, I went out on digs chasing rumors of hidden treasures.",
+            "win": "Of course, there are no such things. But it's about chasing a dream.",
+            "lose": "Well, it sure left huge holes... In the ground and in my bank account."
+        }
     },
     "186": {
         "class": "ruinmaniac",
         "name": "penn",
-        "roster": 37
+        "roster": 37,
+        "dialogue": {
+            "intro": "I'll launch an avalanche of moves! I'll test your limits of endurance!",
+            "win": "Well, Trainer? Should I try out some more moves?",
+            "lose": "That's it! I'm all out of stock! I'd like you to leave so I can close up!"
+        }
     },
     "187": {
         "class": "collector",
         "name": "marquez",
-        "roster": 38
+        "roster": 38,
+        "dialogue": {
+            "intro": "I collect and battle Pokémon so I can brag to my peers.",
+            "win": "I'm not all that interested in winning or losing to begin with.",
+            "lose": "You've won the battle. But, in terms of the Pokémon involved, I clearly win."
+        }
     },
     "188": {
         "class": "collector",
         "name": "arnold",
-        "roster": 38
+        "roster": 38,
+        "dialogue": {
+            "intro": "Did you want to see my Pokémon? OK, sure. Just a peek, though.",
+            "win": "How's that for classy? My Pokémon are tops in both moves and character.",
+            "lose": "Hold it right there! You can look, but don't touch!"
+        }
     },
     "189": {
         "class": "guitarist",
         "name": "fred",
-        "roster": 39
+        "roster": 39,
+        "dialogue": {
+            "intro": "Rock? Samba? Traditional folk? I can play in any style. It's all good!",
+            "win": "Music and Pokémon uplift me! I'm carried up among the stars!",
+            "lose": "Sigh... I'm seeing stars... You've got me singing the blues..."
+        }
     },
     "190": {
         "class": "guitarist",
         "name": "chase",
-        "roster": 39
+        "roster": 39,
+        "dialogue": {
+            "intro": "Let my exquisite melody ring out! Hear my Pokémon shout out!",
+            "win": "The melody from my Pokémon and me... Did it reach out and touch your heart?",
+            "lose": "I've been known to throw matches, but I'll never throw a guitar on stage!"
+        }
     },
     "191": {
         "class": "birdkeeper",
         "name": "mckenna",
-        "roster": 40
+        "roster": 40,
+        "dialogue": {
+            "intro": "I'm free like a bird! I feel like I could fly!",
+            "win": "That's how I ended up becoming a Bird Keeper.",
+            "lose": "Like most birds, I can't see very well at night."
+        }
     },
     "192": {
         "class": "birdkeeper",
         "name": "sally",
-        "roster": 40
+        "roster": 40,
+        "dialogue": {
+            "intro": "As a Trainer, I'm as fragile as an egg. Please be gentle on me.",
+            "win": "Do you think I'm getting ready to take flight?",
+            "lose": "One of these days, I'll break out of my shell and defeat you."
+        }
     },
     "193": {
         "class": "sailor",
         "name": "casper",
-        "roster": 41
+        "roster": 41,
+        "dialogue": {
+            "intro": "Bear witness to my display of machismo and masculinity!",
+            "win": "There! That's how a real man lives and battles!",
+            "lose": "Waaaah! Waaaah! Mommy!"
+        }
     },
     "194": {
         "class": "sailor",
         "name": "derrian",
-        "roster": 41
+        "roster": 41,
+        "dialogue": {
+            "intro": "I've got a showdown coming up with a Hiker. Let me see if I'm ready!",
+            "win": "Yep, I'd say my team's about ready. That Hiker won't know what hit him!",
+            "lose": "Aww, blast it, no! I can't beat that Hiker like this!"
+        }
     },
     "195": {
         "class": "hiker",
         "name": "monty",
-        "roster": 42
+        "roster": 42,
+        "dialogue": {
+            "intro": "My showdown against a man of the sea draws near! Let me test my team!",
+            "win": "Everything went as calculated... Be ready for me, man of the sea!",
+            "lose": "Beating the man of the sea is impossible with an outcome this lame..."
+        }
     },
     "196": {
         "class": "hiker",
         "name": "rocky",
-        "roster": 42
+        "roster": 42,
+        "dialogue": {
+            "intro": "Uhho uho-uho uhho hohoi! This dance I use to psych myself up.",
+            "win": "Uhho uho-uho uhho hohoi! So much fun, I cannot stop.",
+            "lose": "Uhho uho-uho uhho hohoi! I dance to stem my tears from losing..."
+        }
     },
     "197": {
         "class": "policeman",
         "name": "reggie",
-        "roster": 43
+        "roster": 43,
+        "dialogue": {
+            "intro": "I'm not really with the police. I'm a collector of uniforms.",
+            "win": "Battling as a Policeman made for a very fun battle, it did.",
+            "lose": "That's it for me. I bid you a fond farewell."
+        }
     },
     "198": {
         "class": "policeman",
         "name": "quincy",
-        "roster": 43
+        "roster": 43,
+        "dialogue": {
+            "intro": "I'm a Policeman. But on holidays, I'm an entirely different kind of guy.",
+            "win": "Usually, I chase after bad guys as a Policeman.",
+            "lose": "On my days off, I chase after the waves and the ladies as a Swimmer."
+        }
     },
     "199": {
         "class": "pi",
         "name": "neil",
-        "roster": 44
+        "roster": 44,
+        "dialogue": {
+            "intro": "Perseverance pays off. A case can turn on that.",
+            "win": "It makes for more excitement when you come from behind to take the win.",
+            "lose": "That was more thrilling than any stakeout! Thanks for that!"
+        }
     },
     "200": {
         "class": "pi",
         "name": "sergei",
-        "roster": 44
+        "roster": 44,
+        "dialogue": {
+            "intro": "My present case can go either way. It's a coin toss.",
+            "win": "So, I won this time... All decided by a fickle coin...",
+            "lose": "Best two out of three?"
+        }
     },
     "201": {
         "class": "camper",
         "name": "freddy",
-        "roster": 45
+        "roster": 45,
+        "dialogue": {
+            "intro": "I live in the woods. You know, I'm a Camper.",
+            "win": "I'm working on making camp life more comfortable.",
+            "lose": "I am sick and tired of camping out in the woods..."
+        }
     },
     "202": {
         "class": "camper",
         "name": "andre",
-        "roster": 45
+        "roster": 45,
+        "dialogue": {
+            "intro": "No, no, I can't do this! I'm not cut out for battling!",
+            "win": "Oh, wow! I won! What'll I do? You're not mad at me, are you?",
+            "lose": "See! I told you before we started! Battling just isn't for me."
+        }
     },
     "203": {
         "class": "picnicker",
         "name": "inga",
-        "roster": 45
+        "roster": 45,
+        "dialogue": {
+            "intro": "Trainer spotted! It's time to get cooking!",
+            "win": "A battle should be enjoyed like a tasty meal!",
+            "lose": "I ended up getting cooked!"
+        }
     },
     "204": {
         "class": "picnicker",
         "name": "tonya",
-        "roster": 45
+        "roster": 45,
+        "dialogue": {
+            "intro": "Fweeoo-fwee-fwee-fyoo... I saunter into battle, whistling...",
+            "win": "Too easy! I was whistling all the way through that.",
+            "lose": "Fwee-ooo fwee-ooo fwee-ooo... I switched to an ambulance siren..."
+        }
     },
     "205": {
         "class": "guitarist",
         "name": "tobias",
-        "roster": 46
+        "roster": 46,
+        "dialogue": {
+            "intro": "I can hear it... The screaming adulation of 100,000 fans rising in unison...",
+            "win": "Right on, everyone! You saw that! I dedicate my win to you!",
+            "lose": "You're scorching... You've made a fan out of me."
+        }
     },
     "206": {
         "class": "guitarist",
         "name": "cecil",
-        "roster": 46
+        "roster": 46,
+        "dialogue": {
+            "intro": "Number one worldwide, that's my dream. Well, to start, anyway.",
+            "win": "“Number one worldwide,” now doesn't that have a good ring to it?",
+            "lose": "I can't quite decide what I should be number one worldwide at."
+        }
     },
     "207": {
         "class": "idol",
         "name": "maranda",
-        "roster": 47
+        "roster": 47,
+        "dialogue": {
+            "intro": "I'm not some cheap Idol! I'm an actress! Please remember that!",
+            "win": "My career isn't anything like your typical Idol's career!",
+            "lose": "I'm an actress... It sounds so deliciously right..."
+        }
     },
     "208": {
         "class": "idol",
         "name": "helene",
-        "roster": 47
+        "roster": 47,
+        "dialogue": {
+            "intro": "We're not here for a long time, so let's make it a good time!",
+            "win": "Thank you! That was soooo fun! I really hope we can battle again!",
+            "lose": "It makes me sad having to say good-bye... Please come see me again!"
+        }
     },
     "209": {
         "class": "pokefan",
         "name": "msimon",
-        "roster": 48
+        "roster": 48,
+        "dialogue": {
+            "intro": "I am the Fan Club Division Manager... Bring your best to bear...",
+            "win": "Kneel before the might of the Fan Club!",
+            "lose": "Gweh! But I did my best! Regrets, I have none!"
+        }
     },
     "210": {
         "class": "pokefan",
         "name": "mturner",
-        "roster": 48
+        "roster": 48,
+        "dialogue": {
+            "intro": "I welcome you, young Trainer. Allow me to demonstrate my power.",
+            "win": "Young Trainer, do you have any idea what my power signifies?",
+            "lose": "You've surpassed me in your love of Pokémon. You're the truest of fans."
+        }
     },
     "211": {
         "class": "pokefan",
         "name": "feuropa",
-        "roster": 48
+        "roster": 48,
+        "dialogue": {
+            "intro": "I think I'll try out the TM the woman next door gave me.",
+            "win": "I am impressed. That woman actually gave me something useful.",
+            "lose": "Oh, that nasty woman! This TM is worthless!"
+        }
     },
     "212": {
         "class": "pokefan",
         "name": "fpandora",
-        "roster": 48
+        "roster": 48,
+        "dialogue": {
+            "intro": "I heard that! I may be old enough to be your mom, but I'm still young!",
+            "win": "Look at my skin tone and my Pokémon! Both firm but supple!",
+            "lose": "Please don't make that mistake again! I'm young, I tell you!"
+        }
     },
     "213": {
         "class": "rancher",
         "name": "vern",
-        "roster": 48
+        "roster": 48,
+        "dialogue": {
+            "intro": "Whether it be work or play, I'm with my Pokémon all day.",
+            "win": "Life without Pokémon? I can't picture that.",
+            "lose": "It's like I'm married to my Pokémon. I'm not married, though."
+        }
     },
     "214": {
         "class": "rancher",
         "name": "boris",
-        "roster": 48
+        "roster": 48,
+        "dialogue": {
+            "intro": "You get to be the best by working harder than everyone else.",
+            "win": "I reckon I've been a hard worker.",
+            "lose": "Work at battling over and over. Your star will shine one day."
+        }
     },
     "215": {
         "class": "cowgirl",
         "name": "carly",
-        "roster": 48
+        "roster": 48,
+        "dialogue": {
+            "intro": "I'm going to become famous here so I can rebuild the ranch.",
+            "win": "I can't lose. It's for my pa and ma.",
+            "lose": "If I can get famous, folks'll pay to visit my ranch..."
+        }
     },
     "216": {
         "class": "cowgirl",
         "name": "ginger",
-        "roster": 48
+        "roster": 48,
+        "dialogue": {
+            "intro": "From sundown, I live by candlelight until I go to sleep.",
+            "win": "That's not to say I don't have electric power on the homestead.",
+            "lose": "Candlelight can be very romantic."
+        }
     },
     "217": {
         "class": "pokemonbreeder",
         "name": "mpeter",
-        "roster": 45
+        "roster": 45,
+        "dialogue": {
+            "intro": "I'd like to introduce you to my cherished partners.",
+            "win": "Good, good. Good going, gang. You guys all did great.",
+            "lose": "Wheeze... Wheeze... I'm feeling faint..."
+        }
     },
     "218": {
         "class": "pokemonbreeder",
         "name": "mtyron",
-        "roster": 45
+        "roster": 45,
+        "dialogue": {
+            "intro": "I'm no green thumb at growing Berries. Raising Pokémon is where I shine.",
+            "win": "I can give you tips on raising Pokémon so they'll grow tough.",
+            "lose": "Raising a living thing is never an easy job..."
+        }
     },
     "219": {
         "class": "pokemonbreeder",
         "name": "fzorya",
-        "roster": 45
+        "roster": 45,
+        "dialogue": {
+            "intro": "Pokémon are Pokémon, no matter how tough, weak, cute, or scary.",
+            "win": "Raise Pokémon with love, and they'll return it.",
+            "lose": "I think it's the Trainer who needs to pick up the pace here."
+        }
     },
     "220": {
         "class": "pokemonbreeder",
         "name": "fantonia",
-        "roster": 45
+        "roster": 45,
+        "dialogue": {
+            "intro": "Raising a Pokémon right takes money and time.",
+            "win": "But it's all worthwhile when the Pokémon grows up.",
+            "lose": "To raise the ideal Pokémon I'm willing to work hard."
+        }
     },
     "221": {
         "class": "acetrainer",
         "name": "msawyer",
-        "roster": 49
+        "roster": 49,
+        "dialogue": {
+            "intro": "That's right, I'm tough. I won't lose. I don't think losing's possible.",
+            "win": "Yup, I'm so tough... Ehehe... Heeheehee...",
+            "lose": "I lost? But, how...? What now? What do I do?"
+        }
     },
     "222": {
         "class": "acetrainer",
         "name": "mcharlie",
-        "roster": 50
+        "roster": 50,
+        "dialogue": {
+            "intro": "I'm an Ace Trainer, so this is for bragging rights.",
+            "win": "Yup, you did good. No, seriously.",
+            "lose": "Heh... I've got a long ways to go..."
+        }
     },
     "223": {
         "class": "acetrainer",
         "name": "fchloe",
-        "roster": 49
+        "roster": 49,
+        "dialogue": {
+            "intro": "I was looking forward to a battle with you!",
+            "win": "I was right! You are pretty decent. Why not become an Ace Trainer?",
+            "lose": "You're as good as the rumors say... May I have a rematch one day?"
+        }
     },
     "224": {
         "class": "acetrainer",
         "name": "fdaphne",
-        "roster": 50
+        "roster": 50,
+        "dialogue": {
+            "intro": "Look at me. I'm what you should be aspiring to be.",
+            "win": "You expected anything else?",
+            "lose": "You've already surpassed me. But you can aim so much higher."
+        }
     },
     "225": {
         "class": "acetrainer",
         "name": "mthad",
-        "roster": 51
+        "roster": 51,
+        "dialogue": {
+            "intro": "My whole life hinges on this one battle! ...Lose for me, pretty please?",
+            "win": "Yeah! I won! It's all smooth sailing for me now!",
+            "lose": "I wasn't supposed to lose... That's my life derailed..."
+        }
     },
     "226": {
         "class": "acetrainer",
         "name": "mlew",
-        "roster": 51
+        "roster": 51,
+        "dialogue": {
+            "intro": "I'm running a fever here. Just so's you know.",
+            "win": "Oogh, my head's burning up. It makes me feel more inspired.",
+            "lose": "Like I said, I have a cold. I'm not on top of my game."
+        }
     },
     "227": {
         "class": "acetrainer",
         "name": "fopal",
-        "roster": 51
+        "roster": 51,
+        "dialogue": {
+            "intro": "When we battle, I want you to be very careful. My coat's very expensive.",
+            "win": "Yikes! Eek! Watch out! You almost got Pokémon sweat on my coat!",
+            "lose": "I was worried about getting my coat dirty. Who cares about your battle?"
+        }
     },
     "228": {
         "class": "acetrainer",
         "name": "fleda",
-        "roster": 51
+        "roster": 51,
+        "dialogue": {
+            "intro": "I wish you'd leave. I don't want to see you lose.",
+            "win": "I told you so... Can you leave, please?",
+            "lose": "Listen...is being tough not always a good thing?"
+        }
     },
     "229": {
         "class": "pokemonranger",
         "name": "mgeoff",
-        "roster": 49
+        "roster": 49,
+        "dialogue": {
+            "intro": "Whoa-whoa-whoa... Careful now! Maintaining balance is the key!",
+            "win": "Whoops...! Almost went over! Have to be careful here...",
+            "lose": "...Waaaaaah... Thud!"
+        }
     },
     "230": {
         "class": "pokemonranger",
         "name": "mgunther",
-        "roster": 50
+        "roster": 50,
+        "dialogue": {
+            "intro": "Now don't you worry about a thing. You leave everything to me, OK?",
+            "win": "What do you say? Fun, hey? It'd be nice if we could meet again.",
+            "lose": "Well, I'll be! You sure got the best of me!"
+        }
     },
     "231": {
         "class": "pokemonranger",
         "name": "falma",
-        "roster": 49
+        "roster": 49,
+        "dialogue": {
+            "intro": "I will battle. It's not likely I will lose. I'm tough.",
+            "win": "I win. I could do a dance right now.",
+            "lose": "What is the matter? Why couldn't I win?"
+        }
     },
     "232": {
         "class": "pokemonranger",
         "name": "felise",
-        "roster": 52
+        "roster": 52,
+        "dialogue": {
+            "intro": "Mother Nature, I beseech you! Please, lend me strength!",
+            "win": "Oh, Mother Nature, I thank you! To you, I dedicate this victory!",
+            "lose": "I'm sorry, Mother Nature! I'm sorry to disappoint you!"
+        }
     },
     "233": {
         "class": "dragontamer",
         "name": "harvey",
-        "roster": 53
+        "roster": 53,
+        "dialogue": {
+            "intro": "A good Trainer takes on all challenges regardless of the foe or the rules.",
+            "win": "No Trainer can be considered bad if they battle the best they can.",
+            "lose": "A good Trainer doesn't gloat over a win. They just prepare for the next battle."
+        }
     },
     "234": {
         "class": "dragontamer",
         "name": "nicolas",
-        "roster": 53
+        "roster": 53,
+        "dialogue": {
+            "intro": "Come hither, my Pokémon! Please get rid of this mean Trainer!",
+            "win": "Ooh, yes, I love you, my sweeties! Come here and give me a kiss!",
+            "lose": "How could you?! You hurt my sweet little ones!"
+        }
     },
     "235": {
         "class": "blackbelt",
         "name": "fergus",
-        "roster": 54
+        "roster": 54,
+        "dialogue": {
+            "intro": "I'm fine with practice and training, but I wilt when the chips are down.",
+            "win": "I feel sick from tension! I'd rather be at home practicing!",
+            "lose": "If it's about practice, I'd be the champ without a doubt."
+        }
     },
     "236": {
         "class": "blackbelt",
         "name": "ronni",
-        "roster": 54
+        "roster": 54,
+        "dialogue": {
+            "intro": "Hi-yah! Hah! Hah! One more! Hah! Hah!",
+            "win": "Boo-yah!",
+            "lose": "Hi-yah! ...No, wait! No!"
+        }
     },
     "237": {
         "class": "battlegirl",
         "name": "eve",
-        "roster": 54
+        "roster": 54,
+        "dialogue": {
+            "intro": "Wanna?",
+            "win": "Heh...",
+            "lose": "You beat me? Where's your dojo?"
+        }
     },
     "238": {
         "class": "battlegirl",
         "name": "mariane",
-        "roster": 54
+        "roster": 54,
+        "dialogue": {
+            "intro": "Come oooon! C'mon, c'mon! Hey! Hey! C'mon, hey!",
+            "win": "Oh, yesssss!",
+            "lose": "Oh, noooooo!"
+        }
     },
     "239": {
         "class": "veteran",
         "name": "costin",
-        "roster": 49
+        "roster": 49,
+        "dialogue": {
+            "intro": "Your eyes are unclouded by doubt. This match will be entertaining...",
+            "win": "From the bottom of my heart, I look forward to your return.",
+            "lose": "Whew... A most entertaining match. I hope you'll grant me a rematch."
+        }
     },
     "240": {
         "class": "veteran",
         "name": "alfred",
-        "roster": 55
+        "roster": 55,
+        "dialogue": {
+            "intro": "You need to be taught what wisdom of age means in battle!",
+            "win": "I'll have you know that no child can hope to defeat me!",
+            "lose": "That did not happen! Unfair! I demand a rematch right now!"
+        }
     },
     "241": {
         "class": "socialite",
         "name": "rioha",
-        "roster": 49
+        "roster": 49,
+        "dialogue": {
+            "intro": "I'm feeling cranky today! Help me get my mind off it!",
+            "win": "Whew... A battle is the perfect stress reliever!",
+            "lose": "Eeeeeeeeh! You've pushed me over to furious!"
+        }
     },
     "242": {
         "class": "socialite",
         "name": "janice",
-        "roster": 56
+        "roster": 56,
+        "dialogue": {
+            "intro": "Cue battle music, please! I want to trumpet my victory!",
+            "win": "I love the battle music. It sets my heart racing.",
+            "lose": "Fine, that will do. Back to the regular theme music."
+        }
     },
     "243": {
         "class": "psychic",
         "name": "mdenver",
-        "roster": 57
+        "roster": 57,
+        "dialogue": {
+            "intro": "When you've been a Trainer as long as I have, let's just say you'll see a lot.",
+            "win": "Things like this happen. Don't let it get you down.",
+            "lose": "People and Pokémon are all different. Isn't that what makes it beautiful?"
+        }
     },
     "244": {
         "class": "psychic",
         "name": "mberkley",
-        "roster": 57
+        "roster": 57,
+        "dialogue": {
+            "intro": "My big brother told me to go for the eyes! Aim for the eyes!",
+            "win": "I did it, big brother!",
+            "lose": "My big brother told me to wreck the other Trainer's accuracy!"
+        }
     },
     "245": {
         "class": "psychic",
         "name": "firene",
-        "roster": 57
+        "roster": 57,
+        "dialogue": {
+            "intro": "I hear my Pokémon calling out... They clamor to battle...",
+            "win": "I hear my Pokémon calling out... They call for your return...",
+            "lose": "I hear my Pokémon calling out... They tell me of the fun they had..."
+        }
     },
     "246": {
         "class": "psychic",
         "name": "fsylvie",
-        "roster": 57
+        "roster": 57,
+        "dialogue": {
+            "intro": "Behind you, I see light. What is its significance?",
+            "win": "I thought I saw an aura of invincibility. I must have been mistaken.",
+            "lose": "Now I see... You glow with the light of victory..."
+        }
     },
     "247": {
         "class": "waiter",
         "name": "xander",
-        "roster": 58
+        "roster": 58,
+        "dialogue": {
+            "intro": "I'll deliver defeat to you elegantly and speedily.",
+            "win": "Thank you for your patience!",
+            "lose": "I'm so terribly sorry. I ended up with your intended defeat."
+        }
     },
     "248": {
         "class": "waiter",
         "name": "warren",
-        "roster": 59
+        "roster": 59,
+        "dialogue": {
+            "intro": "Great, another tough-looking Trainer. The fun never ends for me.",
+            "win": "Bleah, that was too close for comfort. Nothing ever comes easy for me.",
+            "lose": "Yeah, see? I knew I'd lose. If only that move landed..."
+        }
     },
     "249": {
         "class": "waitress",
         "name": "leslie",
-        "roster": 58
+        "roster": 58,
+        "dialogue": {
+            "intro": "Everyone has too much to say about Pokémon! If it's fun, that's enough!",
+            "win": "Excuse me, but are you all right? Maybe you're a little too tired?",
+            "lose": "If you get too caught up in winning and losing, you'll burn yourself out."
+        }
     },
     "250": {
         "class": "waitress",
         "name": "kathy",
-        "roster": 59
+        "roster": 59,
+        "dialogue": {
+            "intro": "Aren't you the cutest guest! You can expect the best service from me!",
+            "win": "Well, were you impressed by the level of service I provided?",
+            "lose": "Oh, wait, please! I'm not done serving you!"
+        }
     },
     "251": {
         "class": "cameraman",
         "name": "darren",
-        "roster": 60
+        "roster": 60,
+        "dialogue": {
+            "intro": "I keep a journal about the lives of the Trainers who arrive here.",
+            "win": "In our vast world, I wonder how many Trainers will cross my path?",
+            "lose": "Every encounter ends in parting. That's why I keep a journal."
+        }
     },
     "252": {
         "class": "cameraman",
         "name": "skip",
-        "roster": 60
+        "roster": 60,
+        "dialogue": {
+            "intro": "I've waited all my life for someone like you. I'm never letting you go.",
+            "win": "It was a ploy to confuse you with words out of some romance movie.",
+            "lose": "Now, go on, don't let me hold you back. Seize your chance at happiness!"
+        }
     },
     "253": {
         "class": "reporter",
         "name": "katie",
-        "roster": 60
+        "roster": 60,
+        "dialogue": {
+            "intro": "Will you give me an interview if you win?",
+            "win": "You made my job too easy. You need to buckle down.",
+            "lose": "Your feelings now, in a word! Shout it into the mike, please!"
+        }
     },
     "254": {
         "class": "reporter",
         "name": "elaine",
-        "roster": 60
+        "roster": 60,
+        "dialogue": {
+            "intro": "I'm on a diet... I'm so famished...",
+            "win": "I'm happy, but if I get excited, I'll get hungry. No thanks...",
+            "lose": "Oh... Your Pokémon look delicious..."
+        }
     },
     "255": {
         "class": "cyclist",
         "name": "mclive",
-        "roster": 61
+        "roster": 61,
+        "dialogue": {
+            "intro": "Let me make it clear right now, I'm tougher than you can stand!",
+            "win": "See? I wasn't exaggerating!",
+            "lose": "Who are you exactly?!"
+        }
     },
     "256": {
         "class": "cyclist",
         "name": "mward",
-        "roster": 61
+        "roster": 61,
+        "dialogue": {
+            "intro": "Clear the way! Out of the way! Wait! Don't go! We have to battle!",
+            "win": "Come on, take it up a gear! Keep up with me!",
+            "lose": "OK, out of the way! Clear the way! Let this loser run away!"
+        }
     },
     "257": {
         "class": "cyclist",
         "name": "fhilda",
-        "roster": 61
+        "roster": 61,
+        "dialogue": {
+            "intro": "Safe driving and safer battling. That's my motto.",
+            "win": "You can be patient in a battle. Victory will come eventually.",
+            "lose": "I'll keep to my own pace. I'll catch up to you one day."
+        }
     },
     "258": {
         "class": "cyclist",
         "name": "fvanita",
-        "roster": 61
+        "roster": 61,
+        "dialogue": {
+            "intro": "I only have this Bike to look good for the guys. I can't actually ride.",
+            "win": "It was a pain getting this Bike here. I had to push it all the way!",
+            "lose": "I'm only concerned about looking good. I don't practice enough."
+        }
     },
     "259": {
         "class": "pi",
         "name": "ralph",
-        "roster": 62
+        "roster": 62,
+        "dialogue": {
+            "intro": "I'm not looking for any excitement. I don't need any drama.",
+            "win": "A battle is all the excitement I need.",
+            "lose": "I recently realized that I'm not cut out for this scary job."
+        }
     },
     "260": {
         "class": "pi",
         "name": "conway",
-        "roster": 62
+        "roster": 62,
+        "dialogue": {
+            "intro": "I'll battle my way. You battle yours.",
+            "win": "People are people. I'll go my own way.",
+            "lose": "People are people. You go your own way."
+        }
     },
     "261": {
         "class": "idol",
         "name": "kristi",
-        "roster": 63
+        "roster": 63,
+        "dialogue": {
+            "intro": "Today, I have a special treat for all my fans!",
+            "win": "Thank you! I love your support!",
+            "lose": "Are you really one of my fans?"
+        }
     },
     "262": {
         "class": "idol",
         "name": "trista",
-        "roster": 63
+        "roster": 63,
+        "dialogue": {
+            "intro": "I'm burnt out on being an Idol. I want to go home to the country...",
+            "win": "I can't quit now! Kids dream of being me!",
+            "lose": "I miss hearing my mother's voice..."
+        }
     },
     "263": {
         "class": "jogger",
         "name": "austin",
-        "roster": 56
+        "roster": 56,
+        "dialogue": {
+            "intro": "I'm one of a kind. That's what I'm saying.",
+            "win": "I keep it real. That's what makes me tough.",
+            "lose": "I kept it real, but you won anyway. Your reality was more real."
+        }
     },
     "264": {
         "class": "jogger",
         "name": "dimitri",
-        "roster": 55
+        "roster": 55,
+        "dialogue": {
+            "intro": "Hi! Are you my next opponent? Let's keep it clean and fair!",
+            "win": "It feels great going all out with no dirty tricks.",
+            "lose": "That was an awesome workout! We have to do this again sometime!"
+        }
     },
     "265": {
         "class": "fisherman",
         "name": "delaney",
-        "roster": 64
+        "roster": 64,
+        "dialogue": {
+            "intro": "My needs are simple. Fishing and Moomoo Milk are all I need.",
+            "win": "Winning or losing isn't something I pay heed to.",
+            "lose": "I could use some Moomoo Milk right about now."
+        }
     },
     "266": {
         "class": "fisherman",
         "name": "keaton",
-        "roster": 64
+        "roster": 64,
+        "dialogue": {
+            "intro": "You there! Take a look at the Pokémon I fished up the other day.",
+            "win": "I can tell you're impressed. This guy I don't know how long it took to land.",
+            "lose": "A word of advice: when an older person is bragging, pretend to be interested."
+        }
     },
     "267": {
         "class": "sailor",
         "name": "carlo",
-        "roster": 65
+        "roster": 65,
+        "dialogue": {
+            "intro": "You're a Trainer. Let your Pokémon do the talking.",
+            "win": "Where's your spirit? That didn't speak to me at all.",
+            "lose": "Great! Great! Your feelings came across!"
+        }
     },
     "268": {
         "class": "sailor",
         "name": "horatio",
-        "roster": 65
+        "roster": 65,
+        "dialogue": {
+            "intro": "Here comes your prey! Get 'em! Chaaaarge!",
+            "win": "Gaahahaha! That's it! Good job!",
+            "lose": "We're outmatched! Pull back, guys! Run away!"
+        }
     },
     "269": {
         "class": "hiker",
         "name": "lyle",
-        "roster": 66
+        "roster": 66,
+        "dialogue": {
+            "intro": "Bring it on! Ooooh! Haaah!",
+            "win": "Thank you kindly!",
+            "lose": "Thanks for having me!"
+        }
     },
     "270": {
         "class": "hiker",
         "name": "glen",
-        "roster": 66
+        "roster": 66,
+        "dialogue": {
+            "intro": "I am captivated by the mountains. They're the main thing in my life!",
+            "win": "The mountains mean more to me than any battle, no matter how fun!",
+            "lose": "Your battle skills are impressive, but I can't wait to return to the mountains."
+        }
     },
     "271": {
         "class": "ruinmaniac",
         "name": "isadore",
-        "roster": 67
+        "roster": 67,
+        "dialogue": {
+            "intro": "We're going to hammer you, kid. Don't freeze up and close your eyes.",
+            "win": "I like how you stay defiant even after losing. Good attitude, kid.",
+            "lose": "Honest, I didn't let up one bit or let down my guard because you're a kid."
+        }
     },
     "272": {
         "class": "ruinmaniac",
         "name": "walton",
-        "roster": 67
+        "roster": 67,
+        "dialogue": {
+            "intro": "I battle around the globe. I'm a worldwide bad boy!",
+            "win": "I don't lose at battling. I can't get over how cool I am!",
+            "lose": "I'm hitting the road over that loss. It's good-bye to the old me!"
+        }
     },
     "273": {
         "class": "guitarist",
         "name": "roget",
-        "roster": 68
+        "roster": 68,
+        "dialogue": {
+            "intro": "Battles, I'm good at. But musical aptitude? Forget it.",
+            "win": "This whole battling thing is good, but I wish I could play music as well.",
+            "lose": "Music or Pokémon... It's a tough choice."
+        }
     },
     "274": {
         "class": "guitarist",
         "name": "iggy",
-        "roster": 68
+        "roster": 68,
+        "dialogue": {
+            "intro": "I wrote a song using the cries of Pokémon. I'd like you to hear it.",
+            "win": "Graaah wagyaaah! Wagyaaaah! Chu! Chu! Gyaroooh-gah!",
+            "lose": "Giiyaaaah! Drundundun! Garoo-gah! Wawawaaah!"
+        }
     },
     "275": {
         "class": "collector",
         "name": "leroy",
-        "roster": 69
+        "roster": 69,
+        "dialogue": {
+            "intro": "I'm bored of collecting and hoarding. I'm getting rid of everything now.",
+            "win": "There's nothing that I really want now. Maybe I'll become a clown...",
+            "lose": "I threw the match for a start. It's nice to be unburdened of things."
+        }
     },
     "276": {
         "class": "collector",
         "name": "newman",
-        "roster": 70
+        "roster": 70,
+        "dialogue": {
+            "intro": "Oh! Hold on a second! Incoming text message!",
+            "win": "Ticka-ticka-ticka... Ticka-tick... Huh? Is it over already?",
+            "lose": "Hey, stop that! No peeking at my text messages!"
+        }
     },
     "277": {
         "class": "roughneck",
         "name": "ross",
-        "roster": 71
+        "roster": 71,
+        "dialogue": {
+            "intro": "There's no meaning to this battle! Pokémon should be about love!",
+            "win": "Battling leaves me empty. Hug your Pokémon and show your love!",
+            "lose": "Battling creates nothing. Hug your Pokémon and show your love!"
+        }
     },
     "278": {
         "class": "roughneck",
         "name": "ron",
-        "roster": 71
+        "roster": 71,
+        "dialogue": {
+            "intro": "Are you challenging me? ...You are. Kids these days...",
+            "win": "Now run along home, and go help your mommy with her chores!",
+            "lose": "Hey, you... If you think playtime will last forever, you'll end up like me."
+        }
     },
     "279": {
         "class": "scientist",
         "name": "irwin",
-        "roster": 59
+        "roster": 59,
+        "dialogue": {
+            "intro": "How will you counter my implacable logic?",
+            "win": "Everything according to calculation... This victory is a complete one.",
+            "lose": "You outcalculated me. I'm incredulous."
+        }
     },
     "280": {
         "class": "scientist",
         "name": "flynn",
-        "roster": 58
+        "roster": 58,
+        "dialogue": {
+            "intro": "I've been ensconced in the lab. My shoulders are all knotted up.",
+            "win": "What a refreshing break! I'm feeling loose and relaxed now.",
+            "lose": "My Pokémon and I, we all need to get outside and exercise more."
+        }
     },
     "281": {
         "class": "gentleman",
         "name": "joachim",
-        "roster": 49
+        "roster": 49,
+        "dialogue": {
+            "intro": "Hmmm... So young... I may have to go easy...",
+            "win": "You're so depressingly young... It's fine. You may go.",
+            "lose": "Consider the loser's feelings. That's where you young people fail..."
+        }
     },
     "282": {
         "class": "gentleman",
         "name": "karston",
-        "roster": 50
+        "roster": 50,
+        "dialogue": {
+            "intro": "You see an old man, yes? Don't be fooled by the way I look.",
+            "win": "I find it abhorrent to lose to any young Trainer.",
+            "lose": "I was fooled by your youth. Foolish, foolish me..."
+        }
     },
     "283": {
         "class": "worker",
         "name": "boyce",
-        "roster": 72
+        "roster": 72,
+        "dialogue": {
+            "intro": "As a Worker, it's my job to both build and demolish.",
+            "win": "Why don't you become a Worker, too? I find it fun and rewarding.",
+            "lose": "Making things is harder than demolishing, but it's more satisfying."
+        }
     },
     "284": {
         "class": "worker",
         "name": "tyrell",
-        "roster": 72
+        "roster": 72,
+        "dialogue": {
+            "intro": "You and your Pokémon, I'll clean up on you easily.",
+            "win": "Well, well, how pathetic was that. Take your passengers and go home.",
+            "lose": "Gwaah... So heavy... My guys buckled under the load."
+        }
     },
     "285": {
         "class": "clown",
         "name": "frank",
-        "roster": 73
+        "roster": 73,
+        "dialogue": {
+            "intro": "Outstanding athleticism and a great sense of humor; that's a clown!",
+            "win": "A clown is a job of greatness. Only the chosen can become one!",
+            "lose": "The ability to laugh off disappointment is another requirement for a clown!"
+        }
     },
     "286": {
         "class": "clown",
         "name": "enzo",
-        "roster": 73
+        "roster": 73,
+        "dialogue": {
+            "intro": "Laugh with the face and cry with the heart; that's how a clown lives.",
+            "win": "Ahahahahaha!",
+            "lose": "Gah! ...Ahahahaha!"
+        }
     },
     "287": {
         "class": "policeman",
         "name": "hugh",
-        "roster": 74
+        "roster": 74,
+        "dialogue": {
+            "intro": "Oi, listen! I'm a Policeman, sure, but a Trainer before that!",
+            "win": "What? A Policeman can't lose his temper?",
+            "lose": "Yes, I'm a Policeman, but I have dreams and aspirations, and, and... Snivel..."
+        }
     },
     "288": {
         "class": "policeman",
         "name": "kegan",
-        "roster": 74
+        "roster": 74,
+        "dialogue": {
+            "intro": "Hands up! Put 'em where I can see 'em! You're all under arrest!",
+            "win": "Case closed!",
+            "lose": "This is a gross miscarriage of justice!"
+        }
     },
     "289": {
         "class": "pi",
         "name": "chester",
-        "roster": 62
+        "roster": 62,
+        "dialogue": {
+            "intro": "I'll have you know that I'm an Internet detective.",
+            "win": "My powers of observation and logic prevailed!",
+            "lose": "Think you've outsmarted me? Maybe this was just a sting operation!"
+        }
     },
     "290": {
         "class": "pi",
         "name": "river",
-        "roster": 62
+        "roster": 62,
+        "dialogue": {
+            "intro": "Wherever, whenever, and with whomever. That's my motto!",
+            "win": "When, where, or whom... It doesn't matter at all to me.",
+            "lose": "Hahaha! This is great! I want to keep this going!"
+        }
     },
     "291": {
         "class": "birdkeeper",
         "name": "kira",
-        "roster": 75
+        "roster": 75,
+        "dialogue": {
+            "intro": "The loser has to pretend to be a Stunky, OK?",
+            "win": "Giggle, you lose. I want to see your Stunky impression!",
+            "lose": "OK, here's my Stunky impression! Three, two, one..."
+        }
     },
     "292": {
         "class": "birdkeeper",
         "name": "eliza",
-        "roster": 75
+        "roster": 75,
+        "dialogue": {
+            "intro": "A good breeze has sprung up... This is good! I can win this!",
+            "win": "The tailwind put us over the top! ...As they say!",
+            "lose": "The headwind worked against us! ...As they say!"
+        }
     },
     "293": {
         "class": "parasollady",
         "name": "angie",
-        "roster": 76
+        "roster": 76,
+        "dialogue": {
+            "intro": "Even though I always have my parasol up, I actually like sunny days.",
+            "win": "I hope it will be sunny tomorrow...",
+            "lose": "The heavy downpour in my heart... When will it ever stop...?"
+        }
     },
     "294": {
         "class": "parasollady",
         "name": "sami",
-        "roster": 55
+        "roster": 55,
+        "dialogue": {
+            "intro": "My, you're very eager to go. I'd better take the tension up a notch, too!",
+            "win": "I had a lot of fun with that match! Wouldn't it be nice to see you again!",
+            "lose": "You're so full of energy! Why, I feel energized, too!"
+        }
     },
     "295": {
         "class": "beauty",
         "name": "nadia",
-        "roster": 76
+        "roster": 76,
+        "dialogue": {
+            "intro": "How much longer do I have to wait for a Trainer that's any good?",
+            "win": "I'm so bored by the weak competition. Maybe I'll just retire.",
+            "lose": "Oh, hello, there. Now, you're a little special."
+        }
     },
     "296": {
         "class": "beauty",
         "name": "becky",
-        "roster": 56
+        "roster": 56,
+        "dialogue": {
+            "intro": "My ladylike charms don't mean a thing to a little kid...",
+            "win": "That was too close for comfort! It doesn't pay to underestimate foes.",
+            "lose": "Battling fair and square doesn't appeal to me. I'd rather win."
+        }
     },
     "297": {
         "class": "aromalady",
         "name": "elisha",
-        "roster": 77
+        "roster": 77,
+        "dialogue": {
+            "intro": "Like everything else, people have likes and dislikes when it comes to scents.",
+            "win": "I love how Pokémon smell after a battle.",
+            "lose": "I feel a little thrill if I catch a whiff of intense effort postbattle."
+        }
     },
     "298": {
         "class": "aromalady",
         "name": "ambre",
-        "roster": 77
+        "roster": 77,
+        "dialogue": {
+            "intro": "Sniff, sniff... Yes! Here it comes! Aroma power!",
+            "win": "With aroma power, I'm invincible!",
+            "lose": "Fizzle... I'm out of aroma power..."
+        }
     },
     "299": {
         "class": "idol",
         "name": "cocoa",
-        "roster": 78
+        "roster": 78,
+        "dialogue": {
+            "intro": "Turn, step, turn, turn... I'll practice my dance steps while battling!",
+            "win": "I dance with passion and precision. How can there be a weakness?",
+            "lose": "You're throwing off my rhythm! My dance routine is ruined!"
+        }
     },
     "300": {
         "class": "idol",
         "name": "nissa",
-        "roster": 78
+        "roster": 78,
+        "dialogue": {
+            "intro": "I'm always ready for the public eye. You can come at me at your own pace.",
+            "win": "That's why people consider me the perfect Idol.",
+            "lose": "I didn't know how bad it feels to lose. This is a first for me."
+        }
+    },
+    "306": {
+        "class": "towertycoon",
+        "name": "palmer",
+        "roster": "palmer_1",
+        "dialogue": {
+            "win": "Ah, wonderful! That was fantastic! Do come again!",
+            "lose": "I have no problem with losing to a spectacular Trainer like you!"
+        }
+    },
+    "307": {
+        "class": "towertycoon",
+        "name": "palmer",
+        "roster": "palmer_2",
+        "dialogue": {
+            "win": "Ah, wonderful! That was fantastic! Do come again!",
+            "lose": "I have no problem with losing to a spectacular Trainer like you!"
+        }
+    },
+    "308": {
+        "class": "hallmatron",
+        "name": "argenta",
+        "dialogue": {
+            "intro": "What Pokémon do you want up on stage? I can't wait!",
+            "win": "That was a most enjoyable time! Thank you! Come again, please.",
+            "lose": "Oh... I detest how fun times seem to end so quickly."
+        }
+    },
+    "309": {
+        "class": "hallmatron",
+        "name": "argenta",
+        "dialogue": {
+            "intro": "What Pokémon do you want to show off this time? I can't wait!",
+            "win": "How wonderful that was! Thank you! Come again, please.",
+            "lose": "It's so sad how the truly fun times seem to last only a moment."
+        }
+    },
+    "310": {
+        "class": "factoryhead",
+        "name": "thorton",
+        "dialogue": {
+            "intro": "It doesn't matter what you throw at me. I'll always win. My investigative and analytical system is truly amazing.",
+            "win": "See? Just as analyzed.",
+            "lose": "Whoa! You sure showed me!"
+        }
+    },
+    "311": {
+        "class": "factoryhead",
+        "name": "thorton",
+        "dialogue": {
+            "intro": "It doesn't matter what you throw at me. I'll always win. I'll stake my investigative and analytical system on it!",
+            "win": "See? Just as analyzed.",
+            "lose": "Whoa! You sure showed me!"
+        }
+    },
+    "312": {
+        "class": "arcadestar",
+        "name": "dahlia",
+        "roster": "dahlia_1",
+        "dialogue": {
+            "intro": "Always be smiling! Luck comes to those who are happy! That's why I always keep a big smile and believe in my Pokémon when I battle.",
+            "win": "You're very good! I had a lot of fun!",
+            "lose": "You're so very, very good! My Pokémon had a good time, too!"
+        }
+    },
+    "313": {
+        "class": "arcadestar",
+        "name": "dahlia",
+        "roster": "dahlia_2",
+        "dialogue": {
+            "intro": "Whenever I battle someone tough I smile. I cannot help it! How about you? What do you do? Do you laugh? Cry? Get angry?",
+            "win": "Win or lose, whenever I battle someone wonderful, I am happy!",
+            "lose": "Battling a wonderful Trainer is always a happy occasion!"
+        }
+    },
+    "314": {
+        "class": "castlevalet",
+        "name": "darach",
+        "roster": "darach_1",
+        "dialogue": {
+            "intro": "Very well... Shall we begin?",
+            "win": "Ah, a most valiant effort. Though I was lucky enough to win this time, the next time...",
+            "lose": "My Pokémon could not be faulted in any way, shape, or form. My hat's off to you."
+        }
+    },
+    "315": {
+        "class": "castlevalet",
+        "name": "darach",
+        "roster": "darach_2",
+        "dialogue": {
+            "intro": "This is for Lady Caitlin's sake. I'm afraid I must go all out.",
+            "win": "Ah, a most valiant effort. Though I was lucky enough to win this time, the next time...",
+            "lose": "Your skills are superlative as ever! My admiration knows no bounds."
+        }
     }
 }
