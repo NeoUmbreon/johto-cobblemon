@@ -27,6 +27,7 @@ for_each(t.entity, t.entities, {
 
 t.match ? {
     q.npc.world.spawn_bedrock_particles('cobblemon:exclamation',q.npc.x, q.npc.y + 2.25, q.npc.z);
+    q.run_script('johto:prebattle_dialogue');
     
     return 1;
 } : {
