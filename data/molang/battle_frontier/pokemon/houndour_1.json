@@ -1,7 +1,7 @@
 {
     "species": "houndour",
     "nature": "adamant",
-    "helditem": "cobblemon:charcoal",
+    "helditem": "cobblemon:charcoal_stick",
     "moveset": {
         "1": "firefang",
         "2": "bite",
