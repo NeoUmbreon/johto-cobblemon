@@ -11,5 +11,6 @@
     "evs": {
         "atk": 252,
         "spd": 252
-    }
+    },
+    "friendship": 0
 }
