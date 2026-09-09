@@ -77,26 +77,28 @@ This is an overhaul of Jond's [Cobblemon Johto](https://www.curseforge.com/minec
 - [Cobblemon Trainer Battle Commands](https://modrinth.com/mod/tbcs/versions?g=1.21.1)
 
 **Recommended**
+- [AllTheMons](https://modrinth.com/datapack/allthemons/versions?g=1.21.1)
+    - Adds many models that are missing from Cobblemon.
+    - **Delete these folders**: `data/special_spawn`, `data/cobblemon/spawn_pool_world`
 - [Fix Cobblemon Pokemon Experience](https://modrinth.com/mod/fix-cobblemon-pokemon-experience/versions?g=1.21.1)
+    - Applies experience gain at defeat instead of end-of-battle.
 
 ### World
 > [!IMPORTANT]
 > Use a fresh install of the map for the best experience.  
 
 1. Download the map from [CurseForge](https://www.curseforge.com/minecraft/worlds/cobblemon-johto/files/7507302).
-2. From within the downloaded zip file:
-    - Copy/move the `Johto` folder into your `minecraft/saves` folder.
-    - Ignore all other files in the download.
+2. From the downloaded zip file:
+    - Copy/move the `Johto` folder into your `minecraft/saves` folder. **Do not rename it.**
 
 
 ## Installation
 
 ### Files
 1. Download `johto-cobblemon.zip` from the [Releases](../../releases) page.
-2. From within the downloaded zip file:
+2. From the downloaded zip file:
     - Copy/move the `config` and `resourcepacks` folders into your `minecraft` folder.
     - Copy/move the `Johto` folder into your `minecraft/saves` folder.
-        - You should be prompted to overwrite files here.
 
 ### Music Pack
 > [!NOTE]
@@ -104,10 +106,26 @@ This is an overhaul of Jond's [Cobblemon Johto](https://www.curseforge.com/minec
 > The original is not required, and will not function with this datapack loaded.  
 
 1. Download `CobblemonJohtoMusicPack.zip` from [here](https://www.github.com/spacky1/cobblemon-johto-music-pack/releases/tag/nightly).
-2. Copy/move the zip file into your `resourcepacks` folder.
+2. Copy/move the `.zip` file into your `resourcepacks` folder.
 
 ### Enabling the Resource Packs
-Enable the resource packs named `CobblemonJohtoAddonPack` and `CobblemonJohtoMusicPack` in Minecraft.
+- Enable the resource packs named `CobblemonJohtoAddonPack` and `CobblemonJohtoMusicPack` in Minecraft.
+
+**You're done. Enjoy!**
+
+
+## Optional Configuration
+
+#### Map-specific settings (e.g. challenge mode)
+- Edit this file: `Johto/data/molang/config.json`
+
+#### Running this on a dedicated server?
+- Ensure these values are set in your `server.properties`
+```properties
+difficulty=peaceful
+gamemode=adventure
+level-name=Johto
+```
 
 
 ## Credits & Thanks
