@@ -122,6 +122,7 @@ This is an overhaul of Jond's [Cobblemon Johto](https://www.curseforge.com/minec
 #### Running this on a dedicated server?
 - Ensure these values are set in your `server.properties`
 ```properties
+enable-command-block=true
 difficulty=peaceful
 gamemode=adventure
 level-name=Johto
