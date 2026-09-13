@@ -1,0 +1,77 @@
+t.qualities = q.array(
+    q.array('low','1'),
+    q.array('mid','1'),
+    q.array('mid','2'),
+    q.array('high','1'),
+    q.array('high','2'),
+    q.array('high','3'),
+    q.array('high','4'),
+    q.array('max')
+);
+t.ivs = q.array(0, 4, 8, 12, 16, 20, 24, 31);
+t.quality_index = c.arg_1;
+t.max_index = q.length(t.qualities) - 1;
+c.arg_2 == 100 ? { t.quality_index = math.min(t.quality_index + 3, t.max_index) }; 'if open level, add 3 to quality';
+c.arg_3 != 0 ? { t.do_upgrades = true };
+t.species_list.0 = 0;
+t.item_list.0 = 0;
+q.delete_variables(t.species_list);
+q.delete_variables(t.item_list);
+t.party = q.array;
+
+'Get roster(s)';
+t.quality_normal = t.qualities.[t.quality_index];
+t.roster_normal = q.run_script('johto:get_roster', t.quality_normal.0);
+t.do_upgrades ? {
+    t.quality_upgraded = t.qualities.[math.min(t.quality_index + 1, t.max_index)];
+    t.roster_upgraded = q.run_script('johto:get_roster', t.quality_upgraded.0);
+};
+
+loop(v.party_size, {
+    t.found = 0;
+
+    c.arg_3.[q.length(t.party)] ? { 
+        q.set_query('roster', t.roster_upgraded);
+        q.set_query('quality', t.quality_upgraded);
+        q.set_query('tier', t.quality_upgraded.0);
+        q.set_query('iv', t.ivs.[math.min(c.arg_1 + 1, t.max_index)]);
+    } : {
+        q.set_query('roster', t.roster_normal);
+        q.set_query('quality', t.quality_normal);
+        q.set_query('tier', t.quality_normal.0);
+        q.set_query('iv', t.ivs.[c.arg_1]);
+    };
+
+    loop(50, {
+        t.species = q.roster.[math.random_integer(0, q.length(q.roster) - 1)];
+
+        'check unique species';
+        q.get_variable(t.species_list, t.species) == 0 ? {
+            q.tier == 'max' ? {
+                t.set = math.random_integer(1, 4);
+            } : {
+                t.set = q.quality.1;
+            };
+
+            t.filename = t.species + '_' + t.set;
+            t.pokemon = q.file.load('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
+            q.file.clear('data/molang/battle_frontier/pokemon/' + t.filename + '.json');
+
+            'check unique item';
+            q.get_variable(t.item_list, t.pokemon.helditem) == 0 ? {
+                q.set_variable(t.species_list, t.species, 1);
+                q.set_variable(t.item_list, t.pokemon.helditem, 1);
+
+                t.pokemon.level = q.to_int(c.arg_2);
+                t.pokemon.ivs = q.iv;
+                q.append(t.party, t.pokemon);
+                t.found = 1;
+                break;
+            };
+        };
+    });
+    !t.found ? break;
+});
+q.length(t.party) != v.party_size ? return 0;
+
+return t.party;
