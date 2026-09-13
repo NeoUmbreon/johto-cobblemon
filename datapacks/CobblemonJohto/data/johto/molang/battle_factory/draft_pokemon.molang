@@ -1,0 +1,40 @@
+'PLACEHOLDERS';
+t.battle_num = 0;
+t.swaps = 0;
+t.level = 50;
+'PLACEHOLDERS';
+
+v.party_size = 6;
+t.quality = math.clamp(math.ceil(t.battle_num / 7) - 1, 0, 7);
+
+'boo, hiss. there has to be a better way to do this';
+t.upgrades_num = math.clamp(math.floor(t.swaps / 7), 0, 5);
+t.upgrades_num != 0 ? {
+    loop(1, {
+        t.upgrades_num == 1 ? { t.upgraded_pokemon = q.array(0,0,0,0,0,1); break };
+        t.upgrades_num == 2 ? { t.upgraded_pokemon = q.array(0,0,0,0,1,1); break };
+        t.upgrades_num == 3 ? { t.upgraded_pokemon = q.array(0,0,0,1,1,1); break };
+        t.upgrades_num == 4 ? { t.upgraded_pokemon = q.array(0,0,1,1,1,1); break };
+        t.upgraded_pokemon = q.array(0,1,1,1,1,1);
+    });
+    t.i = 0;
+    loop(q.length(t.upgraded_pokemon) - 1, {
+        t.i = t.i + 1;
+        t.j = math.random_integer(0, t.i);
+        t.temp = t.upgraded_pokemon.[t.i];
+        t.upgraded_pokemon.[t.i] = t.upgraded_pokemon.[t.j];
+        t.upgraded_pokemon.[t.j] = t.temp;
+    });
+};
+
+t.party = q.run_script('johto:generate_party_factory', t.quality, t.level, t.upgraded_pokemon);
+
+'format json objects into properties string';
+for_each(t.pokemon, t.party, {
+    t.evs = 'hp_ev=' + t.pokemon.evs.hp + ' attack_ev=' + t.pokemon.evs.atk + ' defence_ev=' + t.pokemon.evs.def + ' special_attack_ev=' + t.pokemon.evs.spa + ' special_defence_ev=' + t.pokemon.evs.spd + ' speed_ev=' + t.pokemon.evs.spe;
+    t.ivs = 'hp_iv=' + t.pokemon.ivs + ' attack_iv=' + t.pokemon.ivs + ' defence_iv=' + t.pokemon.ivs + ' special_attack_iv=' + t.pokemon.ivs + ' special_defence_iv=' + t.pokemon.ivs + ' speed_iv=' + t.pokemon.ivs;
+    t.moves = t.pokemon.moveset.1 + ',' + t.pokemon.moveset.2 + ',' + t.pokemon.moveset.3 + ',' + t.pokemon.moveset.4;
+    t.properties = t.pokemon.species + ' level=' + t.pokemon.level + ' nature=' + t.pokemon.nature + ' helditem=' + t.pokemon.helditem + ' moves=' + t.moves + ' ' + t.evs + ' ' + t.ivs + ' friendship=' + t.pokemon.friendship;
+    
+    q.player.party.add_by_properties(t.properties);
+});
