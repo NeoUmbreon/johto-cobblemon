@@ -6,8 +6,8 @@ v.battle_num = q.npc.data.battle_num;
 t.floor = q.npc.data.floor;
 t.prefix = 'battletower_floor_' + t.floor + '_trainer_';
 t.tbcs_prefix = 'tbcs:' + t.prefix;
-t.class_list.0 = 0;
-q.delete_variables(t.class_list);
+t.name_list.0 = 0;
+q.delete_variables(t.name_list);
 t.npcs = q.array;
 t.team_size = q.length(t.team);
 v.party_size = ( t.team_size != 1 ? 2 : ( t.format == 'SINGLES' ? 3 : ( t.format == 'DOUBLES' ? 4 : ( t.format == 'TRIPLES' ? 6 ))));
@@ -35,8 +35,8 @@ loop(t.team_size, {
         t.found = 0;
         loop(50, {
             v.trainer = q.run_script('johto:generate_trainer');
-            q.get_variable(t.class_list, v.trainer.class) == 0 ? {
-                q.set_variable(t.class_list, v.trainer.class, 1);
+            q.get_variable(t.name_list, v.trainer.name) == 0 ? {
+                q.set_variable(t.name_list, v.trainer.name, 1);
                 t.found = 1;
                 break;
             };
