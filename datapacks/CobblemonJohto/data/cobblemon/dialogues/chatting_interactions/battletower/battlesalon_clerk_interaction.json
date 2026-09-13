@@ -31,7 +31,7 @@
                         "value": "yes",
                         "action": [
                             "v.room = q.run_script('johto:assign_room');",
-                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.validated = q.run_script('johto:validate_party', 'tower');",
                             "v.room == 0 ? q.dialogue.set_page('full1');",
                             "v.validated != 1 ? q.dialogue.set_page('invalidparty1');",
 
@@ -42,7 +42,7 @@
                         "text": "Check Party",
                         "value": "validate",
                         "action": [
-                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.validated = q.run_script('johto:validate_party', 'tower');",
                             "v.validated == 1 ? { q.dialogue.set_page('validparty') } : { q.dialogue.set_page('invalidparty2') };"
                         ]
                     },
@@ -207,7 +207,7 @@
                         "text": "Check Party",
                         "value": "validate",
                         "action": [
-                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.validated = q.run_script('johto:validate_party', 'tower');",
                             "v.validated == 1 ? { q.dialogue.set_page('validparty') } : { q.dialogue.set_page('invalidparty2') };"
                         ]
                     },
