@@ -1,0 +1,6 @@
+t.owner = c.pokemon.owner;
+
+t.owner.has_tag('BattleFactory') ? {
+    'not cancelable, so i think this is the best we can do';
+    c.new_friendship < 255 ? q.set_new_friendship(0);
+};

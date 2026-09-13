@@ -1,1 +1,1 @@
-c.player.has_tag('BattleTower') ? q.cancel;
+c.player.has_tag('BattleTower') || c.player.has_tag('BattleFactory') ? q.cancel;

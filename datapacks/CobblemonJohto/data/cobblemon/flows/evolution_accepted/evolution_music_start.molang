@@ -1,3 +1,11 @@
 t.owner = c.pokemon.owner;
+
+t.owner.has_tag('BattleFactory') ? {
+    q.run_command('tellraw ' + t.owner.username + ' {"text":"You can\'t do that!","color":"gray","italic":true}');
+    q.run_command('execute as ' + t.owner.username + ' run function johto:sound/playlocalsfx {sfx:"wrong"}');
+    q.cancel;
+    return 0;
+};
+
 t.owner.add_tag('Evolving');
 q.run_command('scoreboard players set ' + t.owner.username + ' MusicCooldown -1');
