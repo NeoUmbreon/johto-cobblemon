@@ -4,31 +4,6 @@
 #/scoreboard players enable @p TriggerCommand
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#1 - Battle Tower Trainer Refreshes
-execute as @a[scores={TriggerCommand=1}] run tp @e[x=908,y=100,z=66,dy=3,dz=1,type=cobblemon:npc] -800 -50000 -280
-execute as @a[scores={TriggerCommand=1}] run particle cloud 908 100 67.0 1 1 1 1 25
-execute as @a[scores={TriggerCommand=1}] run pokeheal @s
-execute as @a[scores={TriggerCommand=1,BattleStreak=0..10}] run npcspawnat 908 100 67.0 battle_tower_group1
-execute as @a[scores={TriggerCommand=1,BattleStreak=11..20}] run npcspawnat 908 100 67.0 battle_tower_group2
-execute as @a[scores={TriggerCommand=1,BattleStreak=21..}] run npcspawnat 908 100 67.0 battle_tower_group3
-
-#Battle Tower, tps the player in
-#Checks first if there's someone in the tower room already
-execute as @a[scores={TriggerCommand=2}] if entity @a[x=875,y=99,z=52,dx=55,dy=10,dz=26] run opendialogue battletower_clerk_roombusy @s
-execute as @a[scores={TriggerCommand=2}] if entity @a[x=875,y=99,z=52,dx=55,dy=10,dz=26] run scoreboard players set @s TriggerCommand 0
-
-execute as @a[scores={TriggerCommand=2}] run tp @e[x=908,y=100,z=66,dy=3,dz=1,type=cobblemon:npc] -800 -50000 -280
-execute as @a[scores={TriggerCommand=2}] run particle cloud 908 100 67.0 1 1 1 1 25
-execute as @a[scores={TriggerCommand=2,BattleStreak=0..10}] run npcspawnat 908 100 67.0 battle_tower_group1
-execute as @a[scores={TriggerCommand=2,BattleStreak=11..20}] run npcspawnat 908 100 67.0 battle_tower_group2
-execute as @a[scores={TriggerCommand=2,BattleStreak=21..}] run npcspawnat 908 100 67.0 battle_tower_group3
-execute as @a[scores={TriggerCommand=2}] run tp @s 894 100 67.0 -90 ~
-execute as @a[scores={TriggerCommand=2}] run tellraw @s ["",{"text":"Your battle streak is currently ","italic":true,"color":"gray"},{"score":{"name":"*","objective":"BattleStreak"},"italic":true,"color":"gray"},{"text":"!","italic":true,"color":"gray"}]
-
-
-
-
 #10 - Makes Sudowoodo battleable and catchable
 execute as @a[scores={TriggerCommand=10}] run data merge entity @e[x=332,y=64,z=-17,distance=..5,type=cobblemon:pokemon,limit=1,name=Sudowoodo] {Pokemon:{PokemonData:["catchable"]}}
 execute as @a[scores={TriggerCommand=10}] run data merge entity @e[x=332,y=64,z=-17,distance=..5,type=cobblemon:pokemon,limit=1,name=Sudowoodo] {NoAI:0b}

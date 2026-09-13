@@ -170,17 +170,6 @@ tag @a[scores={click=1..},tag=!TempDelay,nbt={SelectedItem:{components:{"minecra
 #Detects if player has switched the slot of their radio, and refreshes their sound if so
 execute as @a[tag=!RadioOff] at @s run function johto:world/switchradiostation
 
-#Runs battle music and post-battle events
-#Battle endings
-#execute as @a[scores={BattleEnd=1..},tag=!Overwrite] run function johto:triggers/battles/battleend
-
-#Battle start and music
-#execute as @a[scores={BattleStart=1..,MusicCooldown=0},tag=BattleMusicCooldown] run tag @s remove BattleMusicCooldown
-#execute as @a[scores={BattleStart=1..},tag=!BattleMusicCooldown] run function johto:triggers/battles/battlestart
-
-#Removes a MusicCooldown score each refresh if present
-#scoreboard players remove @a[scores={MusicCooldown=1..}] MusicCooldown 1
-
 #-------------------------------------------------------------------------------------------------------------------------
 #Unlocks Fly spots by visiting respective Pokemon Centers, sets spawnpoint if player dies
 
@@ -296,18 +285,8 @@ spawnpoint @a[x=127,y=64,z=-582,distance=..5] 127 64 -582
 #Keep players inside radius
 execute as @a[scores={BattleStart=11..18}] run runmolangscript cobblemon:prevent_flee @s
 
-#Free trainer if no active battle players nearby
-#execute as @e[type=cobblemon:npc,tag=trainerBusy] run runmolangscript cobblemon:clear_trainerbusy
-
 #Runs Whiteout function
 execute as @a[tag=Whiteout] run scoreboard players set @s BattleStart 0
-#Battle tower, ends a player's streak if they lose.
-execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run tp @e[x=908,y=100,z=67,distance=..4,type=cobblemon:pokemon] -800 -50000 -280
-execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run scoreboard players set @s BattleStreak 0
-execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run scoreboard players set @s TriggerCommand 1
-execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run pokeheal
-execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run function johto:tools/forceclick
-execute as @a[x=858,y=75,z=-15,dx=102,dy=100,dz=143,tag=Whiteout] run tag @s remove Whiteout
 
 #Removes tag if Whiteout is disabled via lobby rule
 execute if entity @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] as @a[tag=Whiteout] run function johto:tools/forceclick

@@ -1,7 +1,0 @@
-q.is_blank(q.entity.data.battle) ? return 0;
-
-t.player = q.entity.world.server.get_player_by_username(q.entity.data.battle.player);
-t.player.data.battle.trainer == q.entity.Config.trainer_id ? return 0;
-
-q.entity.remove_tag('trainerBusy');
-q.delete_variable(q.entity.data, 'battle');
