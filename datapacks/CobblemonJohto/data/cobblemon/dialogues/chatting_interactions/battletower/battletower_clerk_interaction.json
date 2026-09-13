@@ -86,7 +86,7 @@
                         "action": [
                             "v.format = 'SINGLES';",
                             "v.room = q.run_script('johto:assign_room');",
-                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.validated = q.run_script('johto:validate_party', 'tower');",
                             "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.player.add_tag('BattleTower'); q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
                         ]
                     },
@@ -96,7 +96,7 @@
                         "action": [
                             "v.format = 'DOUBLES';",
                             "v.room = q.run_script('johto:assign_room');",
-                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.validated = q.run_script('johto:validate_party', 'tower');",
                             "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.player.add_tag('BattleTower'); q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
                         ]
                     },
@@ -106,7 +106,7 @@
                         "action": [
                             "v.format = 'TRIPLES';",
                             "v.room = q.run_script('johto:assign_room');",
-                            "v.validated = q.run_script('johto:validate_party');",
+                            "v.validated = q.run_script('johto:validate_party', 'tower');",
                             "v.room != 0 && v.validated == 1 ? { q.npc.world.server.data.battle_tower.room.[v.room] = 1; q.npc.world.server.save_data; q.player.add_tag('BattleTower'); q.dialogue.set_page('success1') } : { v.room == 0 ? q.dialogue.set_page('full1') : q.dialogue.set_page('invalidparty1'); };"
                         ]
                     },
