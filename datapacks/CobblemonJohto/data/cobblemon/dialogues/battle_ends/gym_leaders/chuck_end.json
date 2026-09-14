@@ -16,6 +16,9 @@
                 "identifier": "cobblemon:chuck",
                 "isLeftSide": true
             }
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -59,7 +62,108 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "How about that!\nAll right. You're worthy of the Storm Badge!"
+                "How about that!",
+                "All right. You're worthy of the Storm Badge!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/badge5');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "badge",
+            "speaker": "none",
+            "lines": [
+                "You received the Storm Badge from Chuck!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Here, take these, too!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm focuspunch 5');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Focus Punch TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "That is Focus Punch."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "It doesn't land if the foe you're attacking hits you first, but it's very powerful if it manages to hit!"
             ],
             "input": {
                 "type": "option",
@@ -68,12 +172,7 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [
-                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
-                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
-                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/badge5');",
-                            "q.dialogue.close();"
-                        ]
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }

@@ -16,6 +16,9 @@
                 "identifier": "cobblemon:surge",
                 "isLeftSide": true
             }
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -41,7 +44,8 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Arrrgh!\nYou are strong!"
+                "Arrrgh!",
+                "You are strong!"
             ],
             "input": {
                 "type": "option",
@@ -59,7 +63,146 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "OK, kid.\nYou get the Thunder Badge!"
+                "OK, kid.",
+                "You get the Thunder Badge!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/kanto/badge3');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "badge",
+            "speaker": "none",
+            "lines": [
+                "You received the Thunder Badge from Lt. Surge!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "That Thunder Badge suits those who've defeated me!",
+                "Take good care of it, OK?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "There is something else.",
+                "Here is a great TM for you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm shockwave 5');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Shock Wave TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "Those TMs contain Shock Wave... Zzzap!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "Use it to go like lightning!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "When you go north, you will see a big city called Saffron!"
             ],
             "input": {
                 "type": "option",
@@ -68,12 +211,7 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [
-                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
-                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
-                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/kanto/badge3');",
-                            "q.dialogue.close();"
-                        ]
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }

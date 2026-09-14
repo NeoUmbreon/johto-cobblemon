@@ -18,7 +18,25 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "There are Pokémon Gyms in cities and towns ahead. You should test your skills at these Gyms."
+                "There are Pokémon Gyms in cities and towns ahead."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page1",
+            "speaker": "npc",
+            "lines": [
+                "You should test your skills at these Gyms."
             ],
             "input": {
                 "type": "option",
@@ -36,7 +54,8 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "As for your next move...\nI would suggest Azalea Town."
+                "As for your next move...",
+                "I would suggest Azalea Town."
             ],
             "input": {
                 "type": "option",
@@ -64,7 +83,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();"
+                            "q.dialogue.close;"
                         ]
                     }
                 ]

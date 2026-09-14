@@ -16,6 +16,9 @@
                 "identifier": "cobblemon:pryce",
                 "isLeftSide": true
             }
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -59,7 +62,8 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "With your strong will, I know you will overcome all life's obstacles.\nYou are worthy of this Badge!"
+                "With your strong will, I know you will overcome all life's obstacles.",
+                "You are worthy of this Badge!"
             ],
             "input": {
                 "type": "option",
@@ -72,8 +76,103 @@
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/badge7');",
-                            "q.dialogue.close();"
+                            "q.dialogue.next_page;"
                         ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "You received the Glacier Badge from Pryce!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "And these... These are a gift from me!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm hail 5');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Hail TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "Those TMs contain Hail."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "It summons a hailstorm that lasts for five turns. The hailstorm damages all types except Ice."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }

@@ -16,6 +16,9 @@
                 "identifier": "cobblemon:brock",
                 "isLeftSide": true
             }
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -59,21 +62,103 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "You're stronger than I expected...\nGo ahead--take this Badge."
+                "You're stronger than I expected...",
+                "Go ahead--take this Badge."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Close",
-                        "value": "close",
+                        "text": "Next",
+                        "value": "next",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/kanto/badge1');",
-                            "q.dialogue.close();"
+                            "q.dialogue.next_page;"
                         ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "badge",
+            "speaker": "none",
+            "lines": [
+                "You received the Boulder Badge from Brock!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'I really enjoyed the battle with you, ' + q.player.username + '!'"
+                },
+                "I'll give you the move Rock Slide, too."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "It can sometimes cause your foe to flinch."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm rockslide 5');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Rock Slide TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.npc.run_dialogue(q.player, 'brock_end_defeated');"
                     }
                 ]
             }
