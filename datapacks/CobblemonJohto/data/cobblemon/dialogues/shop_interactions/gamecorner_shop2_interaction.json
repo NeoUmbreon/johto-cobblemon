@@ -1,23 +1,30 @@
 {
     "initializationAction": [
-        "q.run_command('team join Coins ' + q.player.username + '');"
+        "q.run_command('team join Coins ' + q.player.username);",
+        "v.page_length = 3;",
+        "v.message = 'We exchange your Coins for fabulous prizes!';",
+        "v.names = q.array('Abra','Ekans','Sandshrew','Dratini');",
+        "v.species = q.array('abra','ekans','sandshrew','dratini','mrmime','eevee','porygon');",
+        "v.prices = q.array(200,700,700,2100,3333,6666,9999);",
+        "q.player.has_tag('FlyCeladon') ? { v.expanded_stock = true };",
+        "v.expanded_stock && !q.player.data.update_gc_stock ? { v.message = 'We have some new stock in from the old Game Corner in Kanto.\nTake a look!'; q.player.data.update_gc_stock = 1; q.player.save_data };",
+        "v.expanded_stock ? { v.names = q.array('Abra','Ekans','Sandshrew','Dratini','Mr. Mime','Eevee','Porygon') };",
+        "v.max_index = v.page_length * math.ceil(q.length(v.names) / v.page_length);"
     ],
     "escapeAction": [
-        "q.run_command('team join default ' + q.player.username + '');",
-        "q.dialogue.close();"
-    ],
-    "names": [
-        "Game Corner Clerk"
+        "q.run_command('team join default ' + q.player.username);",
+        "q.dialogue.close;"
     ],
     "speakers": {
         "npc": {
-            "name": "Game Corner Clerk",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:shopman",
-                "isLeftSide": true
-            }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -25,92 +32,103 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-               "We exchange your Coins for prizes."
+               "Welcome!"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": "q.dialogue.set_page('buy1');"
-                    },
-                    {
-                        "text": "No Thanks",
-                        "value": "nothanks",
-                        "action": "q.dialogue.set_page('end');"
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
+
+
         {
-            "id": "buy1",
+            "id": "selection",
             "speaker": "npc",
             "lines": [
-                "Which prize would you like?"
+                {
+                    "type": "expression",
+                    "expression": "v.message"
+                }
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Abra",
-                        "value": "abra",
-                        "action": "q.dialogue.set_page('pickabra');"
+                        "value": "page_forward",
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Page ' + (v.index / v.page_length + 1) + ' / ' + (v.max_index / v.page_length) + ' >>';"
+                        },
+                        "isVisible": "q.length(v.names) > v.page_length + 1;",
+                        "action": [
+                            "v.index = v.index + v.page_length; v.index >= v.max_index ? { v.index = 0 };",
+                            "q.dialogue.set_page('selection');"
+                        ]
                     },
                     {
-                        "text": "Ekans",
-                        "value": "ekans",
-                        "action": "q.dialogue.set_page('pickekans');"
+                        "value": "sel0",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 0; v.names.[t.index] == 0 ? return '' : { return v.names.[t.index] + ': ' + (v.prices.[t.index]) + ' Coins' };"
+                        },
+                        "isVisible": "q.length(v.names) > 0;",
+                        "isSelectable": "v.names.[v.index + 0] != 0;",
+                        "action": [
+                            "v.sel_index = v.index + 0;",
+                            "q.dialogue.next_page;"
+                        ]
+
                     },
                     {
-                        "text": "Sandshrew",
-                        "value": "sandshrew",
-                        "action": "q.dialogue.set_page('picksandshrew');"
+                        "value": "sel1",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 1; v.names.[t.index] == 0 ? return '' : { return v.names.[t.index] + ': ' + (v.prices.[t.index]) + ' Coins'};"
+                        },
+                        "isVisible": "q.length(v.names) > 1;",
+                        "isSelectable": "v.names.[v.index + 1] != 0;",
+                        "action": [
+                            "v.sel_index = v.index + 1;",
+                            "q.dialogue.next_page;"
+                        ]
                     },
                     {
-                        "text": "Dratini",
-                        "value": "dratini",
-                        "action": "q.dialogue.set_page('pickdratini');"
+                        "value": "sel2",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 2; v.names.[t.index] == 0 ? return '' : { return v.names.[t.index] + ': ' + (v.prices.[t.index]) + ' Coins'};"
+                        },
+                        "isVisible": "q.length(v.names) > 2;",
+                        "isSelectable": "v.names.[v.index + 2] != 0;",
+                        "action": [
+                            "v.sel_index = v.index + 2;",
+                            "q.dialogue.next_page;"
+                        ]
                     },
                     {
-                        "text": "Page 2 >>",
-                        "value": "page2",
-                        "action": "q.dialogue.set_page('buy2');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "buy2",
-            "speaker": "npc",
-            "lines": [
-                "Which prize would you like?"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": true,
-                "options": [
-                    {
-                        "text": "Mr. Mime",
-                        "value": "mrmime",
-                        "action": "q.dialogue.set_page('pickmrmime');"
+                        "value": "selend",
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.names.[v.page_length] == 0 ? return '' : { return v.names.[v.page_length] + ': ' + (v.prices.[v.page_length]) + ' Coins'};"
+                        },
+                        "isVisible": "q.length(v.names) - 1 == v.page_length;",
+                        "action": [
+                            "v.sel_index = v.page_length;",
+                            "q.dialogue.next_page;"
+                        ]
                     },
                     {
-                        "text": "Eevee",
-                        "value": "eevee",
-                        "action": "q.dialogue.set_page('pickeevee');"
-                    },
-                    {
-                        "text": "Porygon",
-                        "value": "porygon",
-                        "action": "q.dialogue.set_page('pickporygon');"
-                    },
-                    {
-                        "text": "<< Page 1",
-                        "value": "page1",
-                        "action": "q.dialogue.set_page('buy1');"
+                        "text": "Exit",
+                        "value": "exit",
+                        "action": "q.dialogue.set_page('leave');"
                     }
                 ]
             }
@@ -118,196 +136,38 @@
 
 
         {
-            "id": "pickabra",
+            "id": "confirmation",
             "speaker": "npc",
             "lines": [
-                "So, you want an Abra? It'll be 100 Coins."
+                {
+                    "type": "expression",
+                    "expression": "'Would you like ' + (v.names.[v.sel_index]) + '?'"
+                }
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Buy",
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Buy: ' + (v.prices.[v.sel_index]) + ' Coins'"
+                        },
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 256');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.message = 'Is there anything else you\\'d like?';",
+                            "q.run_command('execute as ' + q.player.username + ' if score @s Coins matches ' + (v.prices.[v.sel_index]) + '.. run tag @s add CanBuy');",
+                            "!q.player.has_tag('CanBuy') ? { v.result_page = 'buyfail' };",
+                            "q.player.has_tag('CanBuy') ? { q.player.remove_tag('CanBuy'); q.run_command('scoreboard players remove ' + q.player.username + ' Coins ' + (v.prices.[v.sel_index])); q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"transaction\"}'); q.player.party.add_by_properties(v.species.[v.sel_index] + ' level=15'); v.result_page = 'buysuccess' };",
+                            "q.dialogue.set_page(v.result_page);"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
+                        "text": "Cancel",
+                        "value": "cancel",
                         "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickekans",
-            "speaker": "npc",
-            "lines": [
-                "So, you want a Clefairy? It'll be 350 Coins."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 257');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "picksandshrew",
-            "speaker": "npc",
-            "lines": [
-                "So, you want a Sandshrew? It'll be 350 Coins."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 258');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickdratini",
-            "speaker": "npc",
-            "lines": [
-                "So, you want a Dratini? It'll be 1550 Coins."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 259');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickmrmime",
-            "speaker": "npc",
-            "lines": [
-                "So, you want a Mr. Mime? It'll be 1666 Coins."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 260');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickeevee",
-            "speaker": "npc",
-            "lines": [
-                "So, you want an Eevee? It'll be 3333 Coins."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 261');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickporygon",
-            "speaker": "npc",
-            "lines": [
-                "So, you want a Porygon? It'll be 4999 Coins."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 262');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
+                            "v.message = 'Is there anything else you\\'d like?';",
+                            "q.dialogue.set_page('selection');"
                         ]
                     }
                 ]
@@ -316,10 +176,53 @@
 
 
         {
-            "id": "buyend",
+            "id": "buysuccess",
+            "speaker": "none",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'You received the ' + (v.names.[v.sel_index]) + '!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('selection');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyfail",
             "speaker": "npc",
             "lines": [
-                "Here you are! Thank you!"
+                "Sorry! You need more Coins."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('selection');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "leave",
+            "speaker": "npc",
+            "lines": [
+                "Please save your Coins and come again!"
             ],
             "input": {
                 "type": "option",
@@ -329,29 +232,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "end",
-            "speaker": "npc",
-            "lines": [
-                "Please come again!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
                         ]
                     }
                 ]
