@@ -44,6 +44,10 @@ execute positioned 774 64 207 rotated 270 0 run function johto:load/spawnmiltank
 # Clair interaction boxes
 forceload add -856 720
 
+# New Shopkeepers
+npcspawnat -2302 77 373 celadon_tmshop
+npcspawnat 462 88 -406 goldenrod_tmshop
+
 # Auto-battle scoreboard objectives
 scoreboard objectives add TrainerUID dummy
 scoreboard objectives add ActiveTrainer dummy
