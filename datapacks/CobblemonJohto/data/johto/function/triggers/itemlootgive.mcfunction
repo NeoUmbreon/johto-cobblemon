@@ -703,9 +703,9 @@ execute as @s[x=445,y=64,z=320,distance=..4,tag=!ItemLoot116] run function johto
 execute as @s[x=445,y=64,z=320,distance=..4,tag=!ItemLoot116] run tag @s add ItemLoot116
 
 execute as @s[x=452,y=57,z=329,distance=..4,tag=ItemLoot117] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run give @s cobblemon:antidote
-execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run tellraw @s {"text":"You found an Antidote!","italic":true,"color":"gray"}
-execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run function johto:sound/playlocalsfx {sfx:"item"}
+execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run givetm taunt
+execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run tellraw @s {"text":"You found a Taunt TM!","italic":true,"color":"gray"}
+execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run function johto:sound/playlocalsfx {sfx:"gettm"}
 execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run tag @s add ItemLoot117
 
 execute as @s[x=654,y=64,z=210,distance=..4,tag=ItemLoot118] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
@@ -2498,9 +2498,9 @@ execute as @s[x=-560,y=64,z=-143,distance=..4,tag=!ItemLoot412] run function joh
 execute as @s[x=-560,y=64,z=-143,distance=..4,tag=!ItemLoot412] run tag @s add ItemLoot412
 
 execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=ItemLoot413] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run scoreboard players add @s Money 5000
-execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run tellraw @s {"text":"You found $5000!","italic":true,"color":"gray"}
-execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run function johto:sound/playlocalsfx {sfx:"item"}
+execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run givetm dragonclaw
+execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run tellraw @s {"text":"You found a Dragon Claw TM!","italic":true,"color":"gray"}
+execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run function johto:sound/playlocalsfx {sfx:"gettm"}
 execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run tag @s add ItemLoot413
 
 execute as @s[x=-1225,y=64,z=-509,distance=..4,tag=ItemLoot414] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
@@ -2699,6 +2699,228 @@ execute as @s[x=426,y=38,z=-304,distance=..4,tag=!ItemLoot445] run tag @s add It
 execute as @s[x=1230,y=64,z=-429,distance=..5,tag=!ItemLoot446] run function johto:sound/playlocalsfx {sfx:"keyitem"}
 execute as @s[x=1230,y=64,z=-429,distance=..5,tag=!ItemLoot446] run pokegive @s shuckle level=15
 execute as @s[x=1230,y=64,z=-429,distance=..5,tag=!ItemLoot446] run tag @s add ItemLoot446
+
+execute as @s[x=-1091,y=64,z=-546,distance=..4,tag=ItemLoot447] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-1091,y=64,z=-546,distance=..4,tag=!ItemLoot447] run givetm dragonclaw
+execute as @s[x=-1091,y=64,z=-546,distance=..4,tag=!ItemLoot447] run tellraw @s {"text":"You found a Dragon Claw TM!","italic":true,"color":"gray"}
+execute as @s[x=-1091,y=64,z=-546,distance=..4,tag=!ItemLoot447] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-1091,y=64,z=-546,distance=..4,tag=!ItemLoot447] run tag @s add ItemLoot447
+
+execute as @s[x=188,y=64,z=-537,distance=..4,tag=ItemLoot448] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=188,y=64,z=-537,distance=..4,tag=!ItemLoot448] run givetm bulletseed
+execute as @s[x=188,y=64,z=-537,distance=..4,tag=!ItemLoot448] run tellraw @s {"text":"You found a Bullet Seed TM!","italic":true,"color":"gray"}
+execute as @s[x=188,y=64,z=-537,distance=..4,tag=!ItemLoot448] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=188,y=64,z=-537,distance=..4,tag=!ItemLoot448] run tag @s add ItemLoot448
+
+execute as @s[x=432,y=57,z=328,distance=..4,tag=ItemLoot449] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=432,y=57,z=328,distance=..4,tag=!ItemLoot449] run givetm taunt
+execute as @s[x=432,y=57,z=328,distance=..4,tag=!ItemLoot449] run tellraw @s {"text":"You found a Taunt TM!","italic":true,"color":"gray"}
+execute as @s[x=432,y=57,z=328,distance=..4,tag=!ItemLoot449] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=432,y=57,z=328,distance=..4,tag=!ItemLoot449] run tag @s add ItemLoot449
+
+execute as @s[x=-2054,y=21,z=-876,distance=..4,tag=ItemLoot450] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-2054,y=21,z=-876,distance=..4,tag=!ItemLoot450] run givetm icebeam
+execute as @s[x=-2054,y=21,z=-876,distance=..4,tag=!ItemLoot450] run tellraw @s {"text":"You found an Ice Beam TM!","italic":true,"color":"gray"}
+execute as @s[x=-2054,y=21,z=-876,distance=..4,tag=!ItemLoot450] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-2054,y=21,z=-876,distance=..4,tag=!ItemLoot450] run tag @s add ItemLoot450
+
+execute as @s[x=253,y=29,z=-677,distance=..4,tag=ItemLoot451] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=253,y=29,z=-677,distance=..4,tag=!ItemLoot451] run givetm raindance
+execute as @s[x=253,y=29,z=-677,distance=..4,tag=!ItemLoot451] run tellraw @s {"text":"You found a Rain Dance TM!","italic":true,"color":"gray"}
+execute as @s[x=253,y=29,z=-677,distance=..4,tag=!ItemLoot451] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=253,y=29,z=-677,distance=..4,tag=!ItemLoot451] run tag @s add ItemLoot451
+
+execute as @s[x=-2647,y=75,z=859,distance=..4,tag=ItemLoot452] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-2647,y=75,z=859,distance=..4,tag=!ItemLoot452] run givetm thunderbolt
+execute as @s[x=-2647,y=75,z=859,distance=..4,tag=!ItemLoot452] run tellraw @s {"text":"You found a Thunderbolt TM!","italic":true,"color":"gray"}
+execute as @s[x=-2647,y=75,z=859,distance=..4,tag=!ItemLoot452] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-2647,y=75,z=859,distance=..4,tag=!ItemLoot452] run tag @s add ItemLoot452
+
+execute as @s[x=-1429,y=39,z=478,distance=..4,tag=ItemLoot453] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-1429,y=39,z=478,distance=..4,tag=!ItemLoot453] run givetm earthquake
+execute as @s[x=-1429,y=39,z=478,distance=..4,tag=!ItemLoot453] run tellraw @s {"text":"You found an Earthquake TM!","italic":true,"color":"gray"}
+execute as @s[x=-1429,y=39,z=478,distance=..4,tag=!ItemLoot453] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-1429,y=39,z=478,distance=..4,tag=!ItemLoot453] run tag @s add ItemLoot453
+
+execute as @s[x=608,y=64,z=-29,distance=..4,tag=ItemLoot454] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=608,y=64,z=-29,distance=..4,tag=!ItemLoot454] run givetm dig
+execute as @s[x=608,y=64,z=-29,distance=..4,tag=!ItemLoot454] run tellraw @s {"text":"You found a Dig TM!","italic":true,"color":"gray"}
+execute as @s[x=608,y=64,z=-29,distance=..4,tag=!ItemLoot454] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=608,y=64,z=-29,distance=..4,tag=!ItemLoot454] run tag @s add ItemLoot454
+
+execute as @s[x=-1166,y=64,z=56,distance=..4,tag=ItemLoot455] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-1166,y=64,z=56,distance=..4,tag=!ItemLoot455] run givetm flamethrower
+execute as @s[x=-1166,y=64,z=56,distance=..4,tag=!ItemLoot455] run tellraw @s {"text":"You found a Flamethrower TM!","italic":true,"color":"gray"}
+execute as @s[x=-1166,y=64,z=56,distance=..4,tag=!ItemLoot455] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-1166,y=64,z=56,distance=..4,tag=!ItemLoot455] run tag @s add ItemLoot455
+
+execute as @s[x=210,y=28,z=-662,distance=..4,tag=ItemLoot456] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=210,y=28,z=-662,distance=..4,tag=!ItemLoot456] run givetm rocktomb
+execute as @s[x=210,y=28,z=-662,distance=..4,tag=!ItemLoot456] run tellraw @s {"text":"You found a Rock Tomb TM!","italic":true,"color":"gray"}
+execute as @s[x=210,y=28,z=-662,distance=..4,tag=!ItemLoot456] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=210,y=28,z=-662,distance=..4,tag=!ItemLoot456] run tag @s add ItemLoot456
+
+execute as @s[x=77,y=79,z=445,distance=..4,tag=ItemLoot457] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=77,y=79,z=445,distance=..4,tag=!ItemLoot457] run givetm aerialace
+execute as @s[x=77,y=79,z=445,distance=..4,tag=!ItemLoot457] run tellraw @s {"text":"You found an Aerial Ace TM!","italic":true,"color":"gray"}
+execute as @s[x=77,y=79,z=445,distance=..4,tag=!ItemLoot457] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=77,y=79,z=445,distance=..4,tag=!ItemLoot457] run tag @s add ItemLoot457
+
+execute as @s[x=-2980,y=64,z=343,distance=..4,tag=ItemLoot458] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-2980,y=64,z=343,distance=..4,tag=!ItemLoot458] run givetm torment
+execute as @s[x=-2980,y=64,z=343,distance=..4,tag=!ItemLoot458] run tellraw @s {"text":"You found a Torment TM!","italic":true,"color":"gray"}
+execute as @s[x=-2980,y=64,z=343,distance=..4,tag=!ItemLoot458] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-2980,y=64,z=343,distance=..4,tag=!ItemLoot458] run tag @s add ItemLoot458
+
+execute as @s[x=-232,y=64,z=733,distance=..4,tag=ItemLoot459] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-232,y=64,z=733,distance=..4,tag=!ItemLoot459] run givetm secretpower
+execute as @s[x=-232,y=64,z=733,distance=..4,tag=!ItemLoot459] run tellraw @s {"text":"You found a Secret Power TM!","italic":true,"color":"gray"}
+execute as @s[x=-232,y=64,z=733,distance=..4,tag=!ItemLoot459] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-232,y=64,z=733,distance=..4,tag=!ItemLoot459] run tag @s add ItemLoot459
+
+execute as @s[x=-163,y=45,z=185,distance=..4,tag=ItemLoot460] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-163,y=45,z=185,distance=..4,tag=!ItemLoot460] run givetm thief
+execute as @s[x=-163,y=45,z=185,distance=..4,tag=!ItemLoot460] run tellraw @s {"text":"You found a Thief TM!","italic":true,"color":"gray"}
+execute as @s[x=-163,y=45,z=185,distance=..4,tag=!ItemLoot460] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-163,y=45,z=185,distance=..4,tag=!ItemLoot460] run tag @s add ItemLoot460
+
+execute as @s[x=-136,y=34,z=204,distance=..4,tag=ItemLoot461] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-136,y=34,z=204,distance=..4,tag=!ItemLoot461] run givetm snatch
+execute as @s[x=-136,y=34,z=204,distance=..4,tag=!ItemLoot461] run tellraw @s {"text":"You found a Snatch TM!","italic":true,"color":"gray"}
+execute as @s[x=-136,y=34,z=204,distance=..4,tag=!ItemLoot461] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-136,y=34,z=204,distance=..4,tag=!ItemLoot461] run tag @s add ItemLoot461
+
+execute as @s[x=-316,y=64,z=12,distance=..4,tag=ItemLoot462] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-316,y=64,z=12,distance=..4,tag=!ItemLoot462] run givetm falseswipe
+execute as @s[x=-316,y=64,z=12,distance=..4,tag=!ItemLoot462] run tellraw @s {"text":"You found a False Swipe TM!","italic":true,"color":"gray"}
+execute as @s[x=-316,y=64,z=12,distance=..4,tag=!ItemLoot462] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-316,y=64,z=12,distance=..4,tag=!ItemLoot462] run tag @s add ItemLoot462
+
+execute as @s[x=-2408,y=64,z=-683,distance=..4,tag=ItemLoot463] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-2408,y=64,z=-683,distance=..4,tag=!ItemLoot463] run givetm brine
+execute as @s[x=-2408,y=64,z=-683,distance=..4,tag=!ItemLoot463] run tellraw @s {"text":"You found a Brine TM!","italic":true,"color":"gray"}
+execute as @s[x=-2408,y=64,z=-683,distance=..4,tag=!ItemLoot463] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-2408,y=64,z=-683,distance=..4,tag=!ItemLoot463] run tag @s add ItemLoot463
+
+execute as @s[x=-3199,y=49,z=575,distance=..4,tag=ItemLoot464] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-3199,y=49,z=575,distance=..4,tag=!ItemLoot464] run givetm fling
+execute as @s[x=-3199,y=49,z=575,distance=..4,tag=!ItemLoot464] run tellraw @s {"text":"You found a Fling TM!","italic":true,"color":"gray"}
+execute as @s[x=-3199,y=49,z=575,distance=..4,tag=!ItemLoot464] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-3199,y=49,z=575,distance=..4,tag=!ItemLoot464] run tag @s add ItemLoot464
+
+execute as @s[x=687,y=64,z=-11,distance=..4,tag=ItemLoot465] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=687,y=64,z=-11,distance=..4,tag=!ItemLoot465] run givetm chargebeam
+execute as @s[x=687,y=64,z=-11,distance=..4,tag=!ItemLoot465] run tellraw @s {"text":"You found a Charge Beam TM!","italic":true,"color":"gray"}
+execute as @s[x=687,y=64,z=-11,distance=..4,tag=!ItemLoot465] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=687,y=64,z=-11,distance=..4,tag=!ItemLoot465] run tag @s add ItemLoot465
+
+execute as @s[x=791,y=64,z=171,distance=..4,tag=ItemLoot466] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=791,y=64,z=171,distance=..4,tag=!ItemLoot466] run givetm drainpunch
+execute as @s[x=791,y=64,z=171,distance=..4,tag=!ItemLoot466] run tellraw @s {"text":"You found a Drain Punch TM!","italic":true,"color":"gray"}
+execute as @s[x=791,y=64,z=171,distance=..4,tag=!ItemLoot466] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=791,y=64,z=171,distance=..4,tag=!ItemLoot466] run tag @s add ItemLoot466
+
+execute as @s[x=-2703,y=64,z=92,distance=..4,tag=ItemLoot467] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-2703,y=64,z=92,distance=..4,tag=!ItemLoot467] run givetm silverwind
+execute as @s[x=-2703,y=64,z=92,distance=..4,tag=!ItemLoot467] run tellraw @s {"text":"You found a Silver Wind TM!","italic":true,"color":"gray"}
+execute as @s[x=-2703,y=64,z=92,distance=..4,tag=!ItemLoot467] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-2703,y=64,z=92,distance=..4,tag=!ItemLoot467] run tag @s add ItemLoot467
+
+execute as @s[x=444,y=64,z=-525,distance=..4,tag=ItemLoot468] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=444,y=64,z=-525,distance=..4,tag=!ItemLoot468] run givetm embargo
+execute as @s[x=444,y=64,z=-525,distance=..4,tag=!ItemLoot468] run tellraw @s {"text":"You found an Embargo TM!","italic":true,"color":"gray"}
+execute as @s[x=444,y=64,z=-525,distance=..4,tag=!ItemLoot468] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=444,y=64,z=-525,distance=..4,tag=!ItemLoot468] run tag @s add ItemLoot468
+
+execute as @s[x=-10,y=64,z=162,distance=..4,tag=ItemLoot469] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-10,y=64,z=162,distance=..4,tag=!ItemLoot469] run givetm shadowclaw
+execute as @s[x=-10,y=64,z=162,distance=..4,tag=!ItemLoot469] run tellraw @s {"text":"You found a Shadow Claw TM!","italic":true,"color":"gray"}
+execute as @s[x=-10,y=64,z=162,distance=..4,tag=!ItemLoot469] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-10,y=64,z=162,distance=..4,tag=!ItemLoot469] run tag @s add ItemLoot469
+
+execute as @s[x=431,y=64,z=-222,distance=..4,tag=ItemLoot470] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=431,y=64,z=-222,distance=..4,tag=!ItemLoot470] run givetm payback
+execute as @s[x=431,y=64,z=-222,distance=..4,tag=!ItemLoot470] run tellraw @s {"text":"You found a Payback TM!","italic":true,"color":"gray"}
+execute as @s[x=431,y=64,z=-222,distance=..4,tag=!ItemLoot470] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=431,y=64,z=-222,distance=..4,tag=!ItemLoot470] run tag @s add ItemLoot470
+
+execute as @s[x=-2491,y=64,z=391,distance=..4,tag=ItemLoot471] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-2491,y=64,z=391,distance=..4,tag=!ItemLoot471] run givetm recycle
+execute as @s[x=-2491,y=64,z=391,distance=..4,tag=!ItemLoot471] run tellraw @s {"text":"You found a Recycle TM!","italic":true,"color":"gray"}
+execute as @s[x=-2491,y=64,z=391,distance=..4,tag=!ItemLoot471] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-2491,y=64,z=391,distance=..4,tag=!ItemLoot471] run tag @s add ItemLoot471
+
+execute as @s[x=-3273,y=64,z=445,distance=..4,tag=ItemLoot472] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-3273,y=64,z=445,distance=..4,tag=!ItemLoot472] run givetm rockpolish
+execute as @s[x=-3273,y=64,z=445,distance=..4,tag=!ItemLoot472] run tellraw @s {"text":"You found a Rock Polish TM!","italic":true,"color":"gray"}
+execute as @s[x=-3273,y=64,z=445,distance=..4,tag=!ItemLoot472] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-3273,y=64,z=445,distance=..4,tag=!ItemLoot472] run tag @s add ItemLoot472
+
+execute as @s[x=-807,y=27,z=382,distance=..4,tag=ItemLoot473] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-807,y=27,z=382,distance=..4,tag=!ItemLoot473] run givetm avalanche
+execute as @s[x=-807,y=27,z=382,distance=..4,tag=!ItemLoot473] run tellraw @s {"text":"You found an Avalanche TM!","italic":true,"color":"gray"}
+execute as @s[x=-807,y=27,z=382,distance=..4,tag=!ItemLoot473] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-807,y=27,z=382,distance=..4,tag=!ItemLoot473] run tag @s add ItemLoot473
+
+execute as @s[x=-979,y=64,z=209,distance=..4,tag=ItemLoot474] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-979,y=64,z=209,distance=..4,tag=!ItemLoot474] run givetm stealthrock
+execute as @s[x=-979,y=64,z=209,distance=..4,tag=!ItemLoot474] run tellraw @s {"text":"You found a Stealth Rock TM!","italic":true,"color":"gray"}
+execute as @s[x=-979,y=64,z=209,distance=..4,tag=!ItemLoot474] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-979,y=64,z=209,distance=..4,tag=!ItemLoot474] run tag @s add ItemLoot474
+
+execute as @s[x=-1701,y=64,z=307,distance=..4,tag=ItemLoot475] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-1701,y=64,z=307,distance=..4,tag=!ItemLoot475] run givetm psychup
+execute as @s[x=-1701,y=64,z=307,distance=..4,tag=!ItemLoot475] run tellraw @s {"text":"You found a Psych Up TM!","italic":true,"color":"gray"}
+execute as @s[x=-1701,y=64,z=307,distance=..4,tag=!ItemLoot475] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-1701,y=64,z=307,distance=..4,tag=!ItemLoot475] run tag @s add ItemLoot475
+
+execute as @s[x=518,y=64,z=-387,distance=..4,tag=ItemLoot476] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=518,y=64,z=-387,distance=..4,tag=!ItemLoot476] run givetm captivate
+execute as @s[x=518,y=64,z=-387,distance=..4,tag=!ItemLoot476] run tellraw @s {"text":"You found a Captivate TM!","italic":true,"color":"gray"}
+execute as @s[x=518,y=64,z=-387,distance=..4,tag=!ItemLoot476] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=518,y=64,z=-387,distance=..4,tag=!ItemLoot476] run tag @s add ItemLoot476
+
+execute as @s[x=-1437,y=39,z=466,distance=..4,tag=ItemLoot477] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-1437,y=39,z=466,distance=..4,tag=!ItemLoot477] run givetm darkpulse
+execute as @s[x=-1437,y=39,z=466,distance=..4,tag=!ItemLoot477] run tellraw @s {"text":"You found a Dark Pulse TM!","italic":true,"color":"gray"}
+execute as @s[x=-1437,y=39,z=466,distance=..4,tag=!ItemLoot477] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-1437,y=39,z=466,distance=..4,tag=!ItemLoot477] run tag @s add ItemLoot477
+
+execute as @s[x=421,y=38,z=-301,distance=..4,tag=ItemLoot478] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=421,y=38,z=-301,distance=..4,tag=!ItemLoot478] run givetm sleeptalk
+execute as @s[x=421,y=38,z=-301,distance=..4,tag=!ItemLoot478] run tellraw @s {"text":"You found a Sleep Talk TM!","italic":true,"color":"gray"}
+execute as @s[x=421,y=38,z=-301,distance=..4,tag=!ItemLoot478] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=421,y=38,z=-301,distance=..4,tag=!ItemLoot478] run tag @s add ItemLoot478
+
+execute as @s[x=-3161,y=64,z=-16,distance=..4,tag=ItemLoot479] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-3161,y=64,z=-16,distance=..4,tag=!ItemLoot479] run givetm grassknot
+execute as @s[x=-3161,y=64,z=-16,distance=..4,tag=!ItemLoot479] run tellraw @s {"text":"You found a Grass Knot TM!","italic":true,"color":"gray"}
+execute as @s[x=-3161,y=64,z=-16,distance=..4,tag=!ItemLoot479] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-3161,y=64,z=-16,distance=..4,tag=!ItemLoot479] run tag @s add ItemLoot479
+
+execute as @s[x=711,y=108,z=-46,distance=..4,tag=ItemLoot480] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=711,y=108,z=-46,distance=..4,tag=!ItemLoot480] run givetm swagger
+execute as @s[x=711,y=108,z=-46,distance=..4,tag=!ItemLoot480] run tellraw @s {"text":"You found a Swagger TM!","italic":true,"color":"gray"}
+execute as @s[x=711,y=108,z=-46,distance=..4,tag=!ItemLoot480] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=711,y=108,z=-46,distance=..4,tag=!ItemLoot480] run tag @s add ItemLoot480
+
+execute as @s[x=883,y=64,z=-85,distance=..4,tag=ItemLoot481] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=883,y=64,z=-85,distance=..4,tag=!ItemLoot481] run givetm pluck
+execute as @s[x=883,y=64,z=-85,distance=..4,tag=!ItemLoot481] run tellraw @s {"text":"You found a Pluck TM!","italic":true,"color":"gray"}
+execute as @s[x=883,y=64,z=-85,distance=..4,tag=!ItemLoot481] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=883,y=64,z=-85,distance=..4,tag=!ItemLoot481] run tag @s add ItemLoot481
+
+execute as @s[x=-3185,y=64,z=773,distance=..4,tag=ItemLoot482] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-3185,y=64,z=773,distance=..4,tag=!ItemLoot482] run givetm flashcannon
+execute as @s[x=-3185,y=64,z=773,distance=..4,tag=!ItemLoot482] run tellraw @s {"text":"You found a Flash Cannon TM!","italic":true,"color":"gray"}
+execute as @s[x=-3185,y=64,z=773,distance=..4,tag=!ItemLoot482] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-3185,y=64,z=773,distance=..4,tag=!ItemLoot482] run tag @s add ItemLoot482
+
+execute as @s[x=-721,y=49,z=385,distance=..4,tag=ItemLoot483] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
+execute as @s[x=-721,y=49,z=385,distance=..4,tag=!ItemLoot483] run givetm waterfall
+execute as @s[x=-721,y=49,z=385,distance=..4,tag=!ItemLoot483] run tellraw @s {"text":"You found a Waterfall TM!","italic":true,"color":"gray"}
+execute as @s[x=-721,y=49,z=385,distance=..4,tag=!ItemLoot483] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-721,y=49,z=385,distance=..4,tag=!ItemLoot483] run tag @s add ItemLoot483
 
 
 #Pewter City Legendary feathers
