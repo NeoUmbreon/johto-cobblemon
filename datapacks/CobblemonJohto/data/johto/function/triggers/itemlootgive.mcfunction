@@ -703,9 +703,9 @@ execute as @s[x=445,y=64,z=320,distance=..4,tag=!ItemLoot116] run function johto
 execute as @s[x=445,y=64,z=320,distance=..4,tag=!ItemLoot116] run tag @s add ItemLoot116
 
 execute as @s[x=452,y=57,z=329,distance=..4,tag=ItemLoot117] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run givetm taunt
-execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run tellraw @s {"text":"You found a Taunt TM!","italic":true,"color":"gray"}
-execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run give @s cobblemon:antidote
+execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run tellraw @s {"text":"You found an Antidote!","italic":true,"color":"gray"}
+execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run function johto:sound/playlocalsfx {sfx:"item"}
 execute as @s[x=452,y=57,z=329,distance=..4,tag=!ItemLoot117] run tag @s add ItemLoot117
 
 execute as @s[x=654,y=64,z=210,distance=..4,tag=ItemLoot118] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
@@ -2498,9 +2498,9 @@ execute as @s[x=-560,y=64,z=-143,distance=..4,tag=!ItemLoot412] run function joh
 execute as @s[x=-560,y=64,z=-143,distance=..4,tag=!ItemLoot412] run tag @s add ItemLoot412
 
 execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=ItemLoot413] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
-execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run givetm dragonclaw
-execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run tellraw @s {"text":"You found a Dragon Claw TM!","italic":true,"color":"gray"}
-execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run function johto:sound/playlocalsfx {sfx:"gettm"}
+execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run scoreboard players add @s Money 5000
+execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run tellraw @s {"text":"You found $5000!","italic":true,"color":"gray"}
+execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run function johto:sound/playlocalsfx {sfx:"item"}
 execute as @s[x=-1105,y=64,z=-539,distance=..4,tag=!ItemLoot413] run tag @s add ItemLoot413
 
 execute as @s[x=-1225,y=64,z=-509,distance=..4,tag=ItemLoot414] run tellraw @s {"text":"You've already claimed this loot!","italic":true,"color":"gray"}
