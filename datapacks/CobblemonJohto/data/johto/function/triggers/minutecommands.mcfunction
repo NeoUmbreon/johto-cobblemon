@@ -123,7 +123,9 @@ execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={DayTime=0.
 execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={DayTime=0..12999}] if entity @e[x=787,y=64,z=157,dy=3,type=cobblemon:npc] run tp @e[x=787,y=64,z=157,dy=3,type=cobblemon:npc] -800 -50000 -280
 
 
-
+#Goldenrod Dept. Store Friendship Rater (Sunday)
+execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=7}] positioned 462 88 -409 if entity @a[distance=..75] unless entity @e[distance=..3,type=cobblemon:npc] run npcspawnat ~ ~ ~ goldenrod_friendshiprater
+execute unless entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=7}] positioned 462 88 -409 run tp @e[distance=..3,type=cobblemon:npc] -800 -50000 -280
 
 
 

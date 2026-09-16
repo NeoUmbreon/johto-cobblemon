@@ -1,21 +1,27 @@
-{   
+{
+    "initializationAction": [
+        "q.player.data.loot.tms.taunt ? q.dialogue.set_page('aftergift');"
+    ],
     "speakers": {
         "npc": {
-          "name": "     ",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:medium",
-            "isLeftSide": true
-          }
+            "name": "     ",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:medium",
+                "isLeftSide": true
+            }
+        },
+        "none": {
+            "name": " "
         }
-      },
-      "pages": [
+    },
+    "pages": [
         {
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Oh, honey. You're making a Pokédex? You must be battling all kinds of Pokémon."
+                "Oh, honey. You're making a Pokédex?"
             ],
             "input": {
                 "type": "option",
@@ -24,7 +30,25 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page1",
+            "speaker": "npc",
+            "lines": [
+                "You must be battling all kinds of Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +57,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Try using this TM for a change."
+                "Try using these TMs for a change."
             ],
             "input": {
                 "type": "option",
@@ -42,7 +66,49 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm taunt 3');",
+                            "q.player.data.loot.tms.taunt = 1; q.player.save_data;",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Taunt TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift",
+            "speaker": "npc",
+            "lines": [
+                "It's Taunt."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -51,7 +117,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "It's Taunt. Use it and the target Pokémon can only use moves that do damage to your Pokémon for a while."
+                "Use it and the target Pokémon can only use moves that do damage to your Pokémon for a while."
             ],
             "input": {
                 "type": "option",
@@ -61,11 +127,11 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();"
-                            ]
+                            "q.dialogue.close;"
+                        ]
                     }
                 ]
             }
         }
-        ]
-    }
+    ]
+}

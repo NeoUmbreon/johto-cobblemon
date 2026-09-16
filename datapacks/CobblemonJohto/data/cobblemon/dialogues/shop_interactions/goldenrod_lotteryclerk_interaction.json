@@ -1,0 +1,320 @@
+{
+    "initializationAction": [
+        "q.run_command('team join shops ' + q.player.username);",
+        "v.day = q.npc.world.server.data.weekday;",
+        "v.weekdays = q.array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');",
+        "v.tms = q.array('Shadow Claw TM','Flash Cannon TM','Charge Beam TM','Drain Punch TM','Facade TM','Silver Wind TM','Dragon Claw TM');",
+        "v.balls = q.array('Nest Ball','Repeat Ball','Net Ball','Quick Ball','Dusk Ball','Timer Ball','Luxury Ball');",
+        "v.berries = q.array('Cheri Berry','Chesto Berry','Pecha Berry','Rawst Berry','Aspear Berry','Oran Berry','Persim Berry');",
+        "v.weekday = v.weekdays.[v.day];",
+        "v.tm = v.tms.[v.day];",
+        "v.ball = v.balls.[v.day];",
+        "v.rng = math.random_integer(0,99);",
+        "v.num = ( v.rng >= 40 ? 3 : (v.rng >= 4 ? 2 : 1) );",
+        "v.item = ( v.rng >= 40 ? (v.berries.[math.random_integer(0,6)]) : (v.rng >= 4 ? v.ball : v.tm) );",
+        "v.item_formatted = q.to_lower(v.num == 1 ? q.replace(q.replace(v.item,' TM',''),' ','') : q.replace(v.item,' ','_'))"
+    ],
+    "escapeAction": [
+        "q.run_command('team join default ' + q.player.username);",
+        "q.dialogue.close;"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting1",
+            "speaker": "npc",
+            "lines": [
+                "The must-try of the Goldenrod Department Store!",
+                "Welcome to the Daily Drawing Corner!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "You can try it for $300, and we have wonderful prizes!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "prompt",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to try it?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "v.price = 300;",
+                            "q.run_command('execute as ' + q.player.username + ' if score @s Money matches ' + v.price + '.. run tag @s add CanBuy');",
+                            "!q.player.has_tag('CanBuy') ? { v.result_page = 'buyfail' };",
+                            "q.player.has_tag('CanBuy') ? { q.player.remove_tag('CanBuy'); q.run_command('scoreboard players remove ' + q.player.username + ' Money ' + v.price); q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"transaction\"}'); v.result_page = 'buysuccess' };",
+                            "q.dialogue.set_page(v.result_page);"
+                        ]
+                    },
+                    {
+                        "text": "Today's Prizes",
+                        "value": "viewprizes",
+                        "action": "q.dialogue.set_page('viewprizes')"
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('declined');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "viewprizes",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "v.weekday + '\\'s prizes will be:"
+                },
+                {
+                    "type": "expression",
+                    "expression": "'No. 1, a ' + v.tm + '!'"
+                },
+                {
+                    "type": "expression",
+                    "expression": "'No. 2, a ' + v.ball + '!'"
+                },
+                {
+                    "type": "expression",
+                    "expression": "'Or No. 3, a Berry!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('prompt');"
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "buysuccess",
+            "speaker": "npc",
+            "lines": [
+                "All right. Please draw one!"
+            ],
+            "escapeAction": [],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buysuccess2",
+            "speaker": "npc",
+            "lines": [
+                "...",
+                "..."
+            ],
+            "escapeAction": [],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "'sfx would go here';",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buysuccess3",
+            "speaker": "npc",
+            "lines": [
+                "Wow!",
+                {
+                    "type": "expression",
+                    "expression": "'You\\'ve got yourself the no. ' + v.num + ' prize!'"
+                }
+            ],
+            "escapeAction": [],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buysuccess4",
+            "speaker": "npc",
+            "lines": [
+                "Please take it."
+            ],
+            "escapeAction": [],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "v.cmd = ( v.num == 1 ? ('givetm ' + v.item_formatted + ' ' + q.player.username) : ('give ' + q.player.username + ' cobblemon:' + v.item_formatted) );",
+                            "v.sound = ( v.num == 1 ? 'gettm' : 'item' );",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"' + v.sound + '\"}');",
+                            "q.run_command(v.cmd);",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "buysuccess5",
+            "speaker": "none",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Obtained the ' + v.item + '!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyfail",
+            "speaker": "npc",
+            "lines": [
+                "Oh my...",
+                "You're short of money."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyfail2",
+            "speaker": "npc",
+            "lines": [
+                "Please come again."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined",
+            "speaker": "npc",
+            "lines": [
+                "Oh my..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

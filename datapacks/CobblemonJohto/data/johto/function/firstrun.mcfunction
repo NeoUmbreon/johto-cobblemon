@@ -1,4 +1,5 @@
 # Prevent rerunning this
+execute if score #firstrun click matches 2.. run return fail
 scoreboard players add #firstrun click 1
 
 # Stage 2 (entity target selectors)
@@ -41,14 +42,41 @@ execute positioned 748 64 216 rotated 90 0 run function johto:load/spawnmiltank
 execute positioned 788 64 219 rotated 180 0 run function johto:load/spawnmiltank
 execute positioned 774 64 207 rotated 270 0 run function johto:load/spawnmiltank
 
+# Summon Moomoo in the paddock
+execute positioned 804.0 64 271.0 rotated 180 0 run function johto:load/spawnmiltank
+execute positioned 804.0 64 271.0 run summon interaction ~ ~ ~ {width:1,height:1.5,response:1b,Tags:[NPCs]}
+
+# Goldenrod Dept. Store Daily Drawing Corner
+fill 434 94 -404 432 97 -407 air
+fill 432 95 -403 435 94 -403 white_stained_glass_pane
+fill 432 95 -409 435 94 -409 white_stained_glass_pane
+fill 435 94 -409 435 95 -403 white_stained_glass_pane
+fill 432 95 -403 435 95 -409 lime_carpet replace white_stained_glass_pane
+npcspawnat 434 94 -407 goldenrod_lotteryclerk
+
 # Clair interaction boxes
 forceload add -856 720
 
 # New Shopkeepers
 npcspawnat -2302 77 373 celadon_tmshop
-npcspawnat 462 88 -406 goldenrod_tmshop
+npcspawnat 462 88 -403 goldenrod_tmshop
 
-# New TN Loot
+# New NPCs
+npcspawnat 482 64 -267 goldenrod_engineer
+npcspawnat -72 64 734 lake_artist
+npcspawnat 505 43 -246 radiotower_takeover_beauty
+npcspawnat 505 43 -272 radiotower_beauty
+npcspawnat 454 88 -417 goldenrod_lass6
+npcspawnat -2802 64 291 saffron_mrpsychic
+npcspawnat -1096 64 59 route28_lass
+npcspawnat -958 64 -507 route27_oldlady
+npcspawnat 805 64 271.0 moomoofarm_twin1
+npcspawnat 802 64 271.0 moomoofarm_twin2
+npcspawnat 781 64 279 moomoofarm_woman
+npcspawnat -211 64 192 mahogany_ragecandybarman
+npcspawnat -2792 58 347 saffron_ragecandybarmaniac
+
+# New TM Loot
 execute positioned -1091 64 -546 run function johto:spawn/itemloot
 execute positioned 188 64 -537 run function johto:spawn/itemloot
 execute positioned 432 57 328 run function johto:spawn/itemloot

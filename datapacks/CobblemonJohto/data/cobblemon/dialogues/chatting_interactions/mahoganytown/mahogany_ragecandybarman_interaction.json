@@ -1,0 +1,353 @@
+{
+    "initializationAction": [
+        "q.player.data.flags.bought_ragecandybar && q.player.has_tag('Dialogue72') ? q.dialogue.set_page('aftertakeoverbought');",
+        "q.player.data.flags.bought_ragecandybar && !q.player.has_tag('Dialogue72') ? q.dialogue.set_page('beforetakeoverbought');",
+        "!q.player.data.flags.bought_ragecandybar && q.player.has_tag('Dialogue72') ? q.dialogue.set_page('aftertakeover');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": " ",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:explorer",
+                "isLeftSide": true
+            }
+        },
+        "none": {
+            "name": " "
+        }
+    },
+    "pages": [
+        {
+            "id": "beforetakeover",
+            "speaker": "npc",
+            "lines": [
+                "Hiya, kid!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "beforetakeover2",
+            "speaker": "npc",
+            "lines": [
+                "I see you're new in Mahogany Town.",
+                "Since you're new, you should try a yummy RageCandyBar!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "v.message = 'Right now, it can be yours for just $300! Want one?';",
+                            "q.dialogue.next_page();"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "prompt",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "v.message"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "accepted",
+                        "action": [
+                            "v.price = 300;",
+                            "q.run_command('execute as ' + q.player.username + ' if score @s Money matches ' + v.price + '.. run tag @s add CanBuy');",
+                            "!q.player.has_tag('CanBuy') ? { v.result_page = 'buyfail' };",
+                            "q.player.has_tag('CanBuy') ? { q.player.remove_tag('CanBuy'); q.run_command('scoreboard players remove ' + q.player.username + ' Money ' + v.price); q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"keyitem\"}'); q.run_command('give ' + q.player.username + ' cobblemon:rage_candy_bar'); q.player.data.flags.bought_ragecandybar = 1; q.player.save_data; v.result_page = 'buysuccess' };",
+                            "q.dialogue.set_page(v.result_page);"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "declined",
+                        "action": "q.dialogue.set_page('declined');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buysuccess",
+            "speaker": "none",
+            "lines": [
+                "You obtained the RageCandyBar!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "bought1",
+            "speaker": "npc",
+            "lines": [
+                "I remember a person from as far as Kanto came to buy one a long time ago."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "bought2",
+            "speaker": "npc",
+            "lines": [
+                "I happened to have none in stock then.",
+                "That person left rather upset."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "bought3",
+            "speaker": "npc",
+            "lines": [
+                "I felt kind of sorry for that."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyfail",
+            "speaker": "npc",
+            "lines": [
+                "You don't have enough money."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined",
+            "speaker": "npc",
+            "lines": [
+                "Oh, fine then..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftertakeover",
+            "speaker": "npc",
+            "lines": [
+                "What? RageCandyBar?",
+                "You want to buy one?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftertakeover2",
+            "speaker": "npc",
+            "lines": [
+                "Right on!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "v.message = 'Same as before, it can be yours for just $300! Want one?';",
+                            "q.dialogue.set_page('prompt');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "beforetakeoverbought",
+            "speaker": "npc",
+            "lines": [
+                "I don't want to upset you after buying one from me, but..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "beforetakeoverbought2",
+            "speaker": "npc",
+            "lines": [
+                "Buying a RageCandyBar has nothing to do with whether I'd allow you to pass through here."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "beforetakeoverbought3",
+            "speaker": "npc",
+            "lines": [
+                "...Johto has many places to visit, such as the Lighthouse at Olivine and the Pharmacy at Cianwood."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "beforetakeoverbought4",
+            "speaker": "npc",
+            "lines": [
+                "Why don't you slow down and enjoy sightseeing?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftertakeoverbought",
+            "speaker": "npc",
+            "lines": [
+                "What? RageCandyBar?",
+                "You want to buy another?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftertakeoverbought2",
+            "speaker": "npc",
+            "lines": [
+                "I think one is enough for you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        }
+    ]
+}

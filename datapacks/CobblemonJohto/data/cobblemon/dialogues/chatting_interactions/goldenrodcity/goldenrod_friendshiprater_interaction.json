@@ -1,0 +1,204 @@
+{
+    "initializationAction": [
+        "q.length(q.player.party.pokemon) == 0 || (q.player.data.loot.tms.return && q.player.data.loot.tms.frustration) ? { q.dialogue.set_page('aftergift'); return 0 };",
+        "q.set_query('friendship', q.player.party.pokemon.0.friendship);",
+        "'NOTE: the thresholds below do not match HGSS because of base friendship changes in gen8. i did my best';",
+        "q.friendship >= 139 ? { v.result = 'high' } : ( q.friendship <= 30 ? { v.result = 'low' } : { v.result = 'medium' } );",
+        "v.result == 'high' && q.player.data.loot.tms.return ? q.dialogue.set_page('aftergift');",
+        "v.result == 'low' && q.player.data.loot.tms.frustration ? q.dialogue.set_page('aftergift');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Hello. Oh, your ' + q.player.party.pokemon.0.species.name + '...'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page(v.result);"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "medium",
+            "speaker": "npc",
+            "lines": [
+                "It's adorable!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "medium2",
+            "speaker": "npc",
+            "lines": [
+                "You should teach it good TM moves."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "high",
+            "speaker": "npc",
+            "lines": [
+                "It's very attached to you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "high2",
+            "speaker": "npc",
+            "lines": [
+                "This move should be perfect for a pair like you."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm return 3');",
+                            "q.player.data.loot.tms.return = 1; q.player.save_data;",
+                            "q.dialogue.set_page('lootreturn');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "low",
+            "speaker": "npc",
+            "lines": [
+                "It looks a little bit evil.",
+                "How about this TM for it?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm frustration 3');",
+                            "q.player.data.loot.tms.frustration = 1; q.player.save_data;",
+                            "q.dialogue.set_page('lootfrustration');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "lootreturn",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Return TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('aftergift');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "lootfrustration",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Frustration TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('aftergift');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift",
+            "speaker": "npc",
+            "lines": [
+                "There are sure to be TMs that are just perfect for your Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

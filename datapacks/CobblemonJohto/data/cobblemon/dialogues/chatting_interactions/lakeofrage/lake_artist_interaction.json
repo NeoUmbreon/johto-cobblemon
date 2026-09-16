@@ -1,38 +1,25 @@
-{   
+{
+    "initializationAction": [
+        "q.player.data.loot.tms.hiddenpower ? q.dialogue.set_page('aftergift');"
+    ],
     "speakers": {
         "npc": {
-          "name": "     ",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:artist",
-            "isLeftSide": true
-          }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
         }
-      },
+    },
     "pages": [
         {
-            "id": "greeting",
+            "id": "greeting1",
             "speaker": "npc",
             "lines": [
-                "You have strayed far..."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page2",
-            "speaker": "npc",
-            "lines": [
+                "...You have strayed far...",
                 "Here I have meditated. Inside me, a new power has been awakened."
             ],
             "input": {
@@ -42,7 +29,49 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "Let me share my power with your Pokémon. Take these, child."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm hiddenpower 3');",
+                            "q.player.data.loot.tms.hiddenpower = 1; q.player.save_data;",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Hidden Power TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -51,7 +80,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Let me share my power with your Pokémon. Take this, child."
+                "Do you see it? It is Hidden Power!"
             ],
             "input": {
                 "type": "option",
@@ -60,7 +89,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -69,7 +98,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "It draw out the power of Pokémon for attacking. "
+                "It draws out the power of Pokémon for attacking."
             ],
             "input": {
                 "type": "option",
@@ -78,7 +107,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -97,11 +126,31 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();"
-                            ]
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift",
+            "speaker": "npc",
+            "lines": [
+                "I am meditating..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
                     }
                 ]
             }
         }
-        ]
-    }
+    ]
+}

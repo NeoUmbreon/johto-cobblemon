@@ -1,21 +1,29 @@
-{   
+{
+    "initializationAction": [
+        "q.player.data.flags.spearowmail_received && !q.player.data.loot.tms.rest ? q.dialogue.set_page('hasmail');"
+    ],
+    "escapeAction": [
+        "v.took_mail && !q.player.data.loot.tms.rest ? { q.run_command('execute as ' + q.player.username + ' run givetm rest 3'); q.player.data.loot.tms.rest = 1; q.player.save_data };",
+        "q.dialogue.close;"
+    ],
     "speakers": {
         "npc": {
-          "name": "Hermann",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:hiker",
-            "isLeftSide": true
-          }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
         }
-      },
-      "pages": [
+    },
+    "pages": [
         {
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                ".... Hnuurg? Huh? "
+                "...Hnuurg ...Huh?"
             ],
             "input": {
                 "type": "option",
@@ -24,7 +32,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -33,7 +41,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "I walked too far today looking for Pokemon."
+                "I walked too far today looking for Pokémon."
             ],
             "input": {
                 "type": "option",
@@ -42,7 +50,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -51,7 +59,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "My feet hurt and I'm sleepy ..."
+                "My feet hurt and I'm sleepy..."
             ],
             "input": {
                 "type": "option",
@@ -60,7 +68,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -69,7 +77,27 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "If I were a wild Pokemon, I'd be easy to catch..."
+                "If I were a wild Pokémon, I'd be easy to catch..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "Next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "...Zzzz..."
             ],
             "input": {
                 "type": "option",
@@ -79,11 +107,611 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();"
-                            ]
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "hasmail",
+            "speaker": "npc",
+            "lines": [
+                "...Hnuurg! ...Huh?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "hasmail2",
+            "speaker": "npc",
+            "lines": [
+                "I feel like reading some words on a piece of paper or something..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "hasmail3",
+            "speaker": "npc",
+            "lines": [
+                "...Zzz...",
+                "...!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "value": "slot0",
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.player.party.pokemon.0.species.name"
+                        },
+                        "isVisible": "q.player.party.count > 0",
+                        "action": [
+                            "v.index = 0;",
+                            "q.set_query('pokemon',q.player.party.pokemon.[v.index]);",
+                            "q.pokemon.matches('ot=Webster ottype=NPC') ? { v.is_kenya = 1 };",
+                            "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
+                            "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
+                            "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
+                            "v.took_mail = 1;",
+                            "q.player.party.remove_by_id(q.pokemon.id);",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
+                            "q.dialogue.set_page('takekenya');"
+                        ]
+                    },
+                    {
+                        "value": "slot1",
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.player.party.pokemon.1.species.name"
+                        },
+                        "isVisible": "q.player.party.count > 1",
+                        "action": [
+                            "v.index = 1;",
+                            "q.set_query('pokemon',q.player.party.pokemon.[v.index]);",
+                            "q.pokemon.matches('ot=Webster ottype=NPC') ? { v.is_kenya = 1 };",
+                            "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
+                            "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
+                            "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
+                            "v.took_mail = 1;",
+                            "q.player.party.remove_by_id(q.pokemon.id);",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
+                            "q.dialogue.set_page('takekenya');"
+                        ]
+                    },
+                    {
+                        "value": "slot2",
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.player.party.pokemon.2.species.name"
+                        },
+                        "isVisible": "q.player.party.count > 2",
+                        "action": [
+                            "v.index = 2;",
+                            "q.set_query('pokemon',q.player.party.pokemon.[v.index]);",
+                            "q.pokemon.matches('ot=Webster ottype=NPC') ? { v.is_kenya = 1 };",
+                            "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
+                            "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
+                            "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
+                            "v.took_mail = 1;",
+                            "q.player.party.remove_by_id(q.pokemon.id);",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
+                            "q.dialogue.set_page('takekenya');"
+                        ]
+                    },
+                    {
+                        "value": "slot3",
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.player.party.pokemon.3.species.name"
+                        },
+                        "isVisible": "q.player.party.count > 3",
+                        "action": [
+                            "v.index = 3;",
+                            "q.set_query('pokemon',q.player.party.pokemon.[v.index]);",
+                            "q.pokemon.matches('ot=Webster ottype=NPC') ? { v.is_kenya = 1 };",
+                            "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
+                            "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
+                            "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
+                            "v.took_mail = 1;",
+                            "q.player.party.remove_by_id(q.pokemon.id);",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
+                            "q.dialogue.set_page('takekenya');"
+                        ]
+                    },
+                    {
+                        "value": "slot4",
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.player.party.pokemon.4.species.name"
+                        },
+                        "isVisible": "q.player.party.count > 4",
+                        "action": [
+                            "v.index = 4;",
+                            "q.set_query('pokemon',q.player.party.pokemon.[v.index]);",
+                            "q.pokemon.matches('ot=Webster ottype=NPC') ? { v.is_kenya = 1 };",
+                            "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
+                            "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
+                            "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
+                            "v.took_mail = 1;",
+                            "q.player.party.remove_by_id(q.pokemon.id);",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
+                            "q.dialogue.set_page('takekenya');"
+                        ]
+                    },
+                    {
+                        "value": "slot5",
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.player.party.pokemon.5.species.name"
+                        },
+                        "isVisible": "q.player.party.count > 5",
+                        "action": [
+                            "v.index = 5;",
+                            "q.set_query('pokemon',q.player.party.pokemon.[v.index]);",
+                            "q.pokemon.matches('ot=Webster ottype=NPC') ? { v.is_kenya = 1 };",
+                            "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
+                            "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
+                            "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
+                            "v.took_mail = 1;",
+                            "q.player.party.remove_by_id(q.pokemon.id);",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
+                            "q.dialogue.set_page('takekenya');"
+                        ]
+                    },
+                    {
+                        "text": "Cancel",
+                        "value": "cancel",
+                        "action": "q.dialogue.set_page('cancel');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "cancel",
+            "speaker": "npc",
+            "lines": [
+                "...I'm",
+                "sleepy..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "nomail",
+            "speaker": "npc",
+            "lines": [
+                "Huh? What?",
+                "What about that Pokémon?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "nomail2",
+            "speaker": "npc",
+            "lines": [
+                "I don't have any mail."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "nomail3",
+            "speaker": "npc",
+            "lines": [
+                "Zzz..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+
+
+        
+        {
+            "id": "takekenya",
+            "speaker": "none",
+            "lines": [
+                "You handed over the Pokémon holding the Mail."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('readmail');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "takemail",
+            "speaker": "npc",
+            "lines": [
+                "Oh, hey! I got an email!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "takemail2",
+            "speaker": "npc",
+            "lines": [
+                "...",
+                "Huh?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "takemail3",
+            "speaker": "npc",
+            "lines": [
+                "I don't know this Pokémon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "takemail4",
+            "speaker": "npc",
+            "lines": [
+                "I'll just let you take care of it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "v.took_mail = 1;",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
+                            "q.pokemon.remove_held_item;",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "takemail5",
+            "speaker": "none",
+            "lines": [
+                "You handed over the Mail."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('readmail');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "readmail",
+            "speaker": "npc",
+            "lines": [
+                "Let's see..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "readmail2",
+            "speaker": "npc",
+            "lines": [
+                "\"Thank you for your Mail.",
+                "It was such an exciting adventure."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "readmail3",
+            "speaker": "npc",
+            "lines": [
+                "I did not like Zubat, though...\"",
+                "That's what it says."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "readmail4",
+            "speaker": "npc",
+            "lines": [
+                "I went to a dark cave the other day with a friend."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "readmail5",
+            "speaker": "npc",
+            "lines": [
+                "That cave leads to another route.",
+                "By the way, I must thank you for being so kind."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "readmail6",
+            "speaker": "npc",
+            "lines": [
+                "I'd like to do something good in return."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm rest 3');",
+                            "q.player.data.loot.tms.rest = 1; q.player.save_data;",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Rest TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift",
+            "speaker": "npc",
+            "lines": [
+                "Those are...",
+                "...Zzz..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift2",
+            "speaker": "npc",
+            "lines": [
+                "..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift3",
+            "speaker": "npc",
+            "lines": [
+                "...Umm... Rest!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift4",
+            "speaker": "npc",
+            "lines": [
+                "The phrase \"recover fast\" became shortened to \"Rest,\" you see?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift5",
+            "speaker": "npc",
+            "lines": [
+                "This is a move to sleep and recover HP."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }
         }
-        ]
-    }
+    ]
+}

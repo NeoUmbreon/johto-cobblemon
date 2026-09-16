@@ -43,6 +43,9 @@ execute as @s[x=514,y=31,z=-272,distance=..4,tag=RadioCard] run opendialogue rad
 execute as @s[x=423,y=64,z=-426,distance=..6,tag=!Dialogue23] run opendialogue bicycle_gift @s
 execute as @s[x=423,y=64,z=-426,distance=..6,tag=Dialogue23] run opendialogue goldenrod_blacksmith_interaction @s
 
+#Moomoo Farm
+execute as @s[x=804.0,y=64,z=271.0,distance=..6] run opendialogue moomoo_interaction @s
+
 #Clair, post-Dragon's-Den
 execute as @s[x=-856,y=65,z=720,distance=..6,tag=!Clair] at @s run runmolangscript johto:trainer_dialogue_handler @s @n[type=cobblemon:npc,distance=..16,nbt={Config:{trainer_id:clair}}]
 execute as @s[x=-856,y=65,z=720,distance=..6,tag=Clair] run opendialogue clair_end_defeated_afterbadge @s
