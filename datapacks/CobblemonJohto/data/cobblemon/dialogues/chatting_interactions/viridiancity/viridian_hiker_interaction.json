@@ -4,10 +4,7 @@
     ],
     "speakers": {
         "npc": {
-            "name": {
-                "type": "expression",
-                "expression": "q.npc.name"
-            },
+            "name": " ",
             "face": "q.npc.face"
         },
         "none": {
