@@ -4,14 +4,8 @@ q.npc.run_dialogue(q.player, q.npc.config.trainer_id + '_interaction');
 
 'janky ass config updater';
 'this is really really bad, defeated tag application should be moved to end of dialogue. but this works for now';
-!q.is_included(q.npc.config.on_player_wins, 'run_dialogue') ? {
-    q.npc.config.doubles ? {
-        t.dialogue = q.npc.config.trainer_id + '_end';
-    } : {
-        t.dialogue = q.replace(q.get_variable(q.split_string(q.npc.config.on_player_wins, 'opendialogue '), '1'), ' @s', '');
-    };
-    q.npc.config.on_player_wins = 'q.player.add_tag(\'defeated.' + q.npc.config.trainer_id + '\'); q.npc.run_dialogue(q.player, \'' + t.dialogue + '\');';
-};
+t.dialogue = q.npc.config.trainer_id + '_end';
+q.npc.config.on_player_wins = 'q.player.add_tag(\'defeated.' + q.npc.config.trainer_id + '\'); q.npc.run_dialogue(q.player, \'' + t.dialogue + '\');';
 
 'janky ass doubles party updater';
 q.npc.config.doubles && !(q.npc.party.count >= 2) ? {
