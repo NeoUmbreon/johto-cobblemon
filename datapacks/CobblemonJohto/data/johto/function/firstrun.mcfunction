@@ -15,6 +15,21 @@ execute if score #firstrun click matches 2 run forceload remove 875 50 930 108
 execute if score #firstrun click matches 2 positioned -856 65 720 run function johto:spawn/npcboxes
 execute if score #firstrun click matches 2 run forceload remove -856 720
 
+# Summon 4 Miltank on the ranch
+execute if score #firstrun click matches 2 positioned 792 64 202 rotated 0 0 run function johto:load/spawnmiltank
+execute if score #firstrun click matches 2 positioned 748 64 216 rotated 90 0 run function johto:load/spawnmiltank
+execute if score #firstrun click matches 2 positioned 788 64 219 rotated 180 0 run function johto:load/spawnmiltank
+execute if score #firstrun click matches 2 positioned 774 64 207 rotated 270 0 run function johto:load/spawnmiltank
+
+# Summon Moomoo in the paddock
+execute if score #firstrun click matches 2 positioned 804.0 64 271.0 run summon interaction ~ ~ ~ {width:1,height:1.5,response:1b,Tags:[NPCs]}
+execute if score #firstrun click matches 2 positioned 804.0 64 271.0 rotated 180 0 run function johto:load/spawnmiltank
+
+# Goldenrod North Gate
+execute if score #firstrun click matches 2 run setblock 482 64 -267 air
+execute if score #firstrun click matches 2 positioned 482 64 -267 run kill @e[distance=..1,type=interaction]
+execute if score #firstrun click matches 2 run forceload remove 482 -267
+
 # Done
 execute if score #firstrun click matches 2 run return 1
 #-------------------------------------
@@ -37,25 +52,29 @@ forceload add -968 -360 -970 -345
 execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run function johto:tools/togglewhiteout
 
 # Summon 4 Miltank on the ranch
-execute positioned 792 64 202 rotated 0 0 run function johto:load/spawnmiltank
-execute positioned 748 64 216 rotated 90 0 run function johto:load/spawnmiltank
-execute positioned 788 64 219 rotated 180 0 run function johto:load/spawnmiltank
-execute positioned 774 64 207 rotated 270 0 run function johto:load/spawnmiltank
+forceload add 792 202
+forceload add 748 216
+forceload add 788 219
+forceload add 774 207
 
 # Summon Moomoo in the paddock
-execute positioned 804.0 64 271.0 rotated 180 0 run function johto:load/spawnmiltank
-execute positioned 804.0 64 271.0 run summon interaction ~ ~ ~ {width:1,height:1.5,response:1b,Tags:[NPCs]}
+forceload add 804 271
 
 # Goldenrod Dept. Store Daily Drawing Corner
+forceload add 434 -407
 fill 434 94 -404 432 97 -407 air
 fill 432 95 -403 435 94 -403 white_stained_glass_pane
 fill 432 95 -409 435 94 -409 white_stained_glass_pane
 fill 435 94 -409 435 95 -403 white_stained_glass_pane
 fill 432 95 -403 435 95 -409 lime_carpet replace white_stained_glass_pane
 npcspawnat 434 94 -407 goldenrod_lotteryclerk
+forceload remove 434 -407
 
 # Clair interaction boxes
 forceload add -856 720
+
+# Goldenrod North Gate
+forceload add 482 -267
 
 # New Shopkeepers
 npcspawnat -2302 77 373 celadon_tmshop
