@@ -1,0 +1,14 @@
+{
+	"parent": "item/handheld_rod",
+	"textures": {
+	"layer0": "items/carrot_on_a_stick"
+	},
+	"overrides": [
+	{"predicate": {"custom_model_data":0}, "model": "playeritems/radio"},
+	{"predicate": {"custom_model_data":1}, "model": "hms/fly"},
+	{"predicate": {"custom_model_data":2}, "model": "world/rocksmash"},
+	{"predicate": {"custom_model_data":3}, "model": "world/rocksmash1"},
+	{"predicate": {"custom_model_data":4}, "model": "hms/flash"},
+	{"predicate": {"custom_model_data":5}, "model": "playeritems/bicycle"}
+]
+}

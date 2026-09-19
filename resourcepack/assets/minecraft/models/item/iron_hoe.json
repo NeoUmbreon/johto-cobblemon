@@ -1,0 +1,12 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "item/iron_hoe"
+	},
+	"overrides": [
+	{"predicate": {"custom_model_data":1}, "model": "hats/malehat"},
+	{"predicate": {"custom_model_data":2}, "model": "hats/femalehat"},
+	{"predicate": {"custom_model_data":3}, "model": "world/rocksmash"},
+	{"predicate": {"custom_model_data":4}, "model": "world/rocksmash1"}
+]
+}
