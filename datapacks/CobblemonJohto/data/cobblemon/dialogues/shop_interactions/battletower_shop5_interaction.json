@@ -1,224 +1,151 @@
 {
     "initializationAction": [
-        "q.run_command('team join battletower ' + q.player.username + '');"
+        "q.run_command('team join battletower ' + q.player.username);",
+        "v.page_length = 3;",
+        "v.item_names = q.array('Toxic Orb','Flame Orb','White Herb','Power Herb','Bright Powder','Focus Band','Focus Sash','Choice Band','Choice Scarf','Scope Lens','Muscle Band','Razor Claw','Razor Fang');",
+        "v.item_prices = q.array(16,16,32,32,48,48,48,48,48,48,48,48,48);",
+        "v.item_descs = q.array('Badly poisons the holder during battle.','Burns the holder during battle.','Restores the holder\\'s stats to their usual value when they are lowered. Single-use.','Allows the holder to immediately use a move that normally requires a turn to charge. Single-use.','Slightly lowers the accuracy of moves used by opponents against the holder.','If the holder takes damage from a move that would knock it out, there\\'s a slight chance the holder will endure the hit with 1 HP.','If the holder has full HP and takes damage from a move that would knock it out in one hit, it will endure the hit with 1 HP. Single-use.','Massively boosts the holder\\'s Attack stat. However, once the holder uses a move, it becomes unable to use any other move but that one until it switches out of battle.','Massively boosts the holder\\'s Speed stat. However, once the holder uses a move, it becomes unable to use any other move but that one until it switches out of battle.','Boosts the holder\\'s critical-hit ratio.','Slightly boosts the power of the holder\\'s physical moves.','Boosts the holder\\'s critical-hit ratio.','When the holder deals damage with its moves, there is a slight chance that targets will flinch.');",
+        "v.max_index = v.page_length * math.ceil(q.length(v.item_names) / v.page_length);"
     ],
     "escapeAction": [
-        "q.run_command('team join default ' + q.player.username + '');",
-        "q.dialogue.close();"
+        "q.run_command('team join default ' + q.player.username);",
+        "q.dialogue.close;"
     ],
     "names": [
         "Battle Tower Clerk"
     ],
     "speakers": {
         "npc": {
-            "name": "Battle Tower Clerk",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:shopman",
-                "isLeftSide": true
-            }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
         {
-            "id": "greeting",
+            "id": "greeting1",
             "speaker": "npc",
             "lines": [
-                "Welcome to the Exchange Service Corner! Would you like to trade in your BP for some prizes?"
+                "Welcome to the Exchange Service Corner!"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": "q.dialogue.set_page('buy1');"
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },{
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to trade in your BP for some prizes?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": "q.dialogue.next_page;"
                     },
                     {
-                        "text": "No Thanks",
-                        "value": "nothanks",
-                        "action": "q.dialogue.set_page('end');"
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('leave');"
                     }
                 ]
             }
         },
+
         {
-            "id": "buy1",
+            "id": "itemlist",
             "speaker": "npc",
             "lines": [
-                "Which item would you like to purchase?"
+                "Please choose the item you would like."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Toxic Orb",
-                        "value": "toxicorb",
-                        "action": "q.dialogue.set_page('picktoxicorb');"
+                        "value": "page_forward",
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Page ' + (v.index / v.page_length + 1) + ' / ' + (v.max_index / v.page_length) + ' >>';"
+                        },
+                        "isVisible": "q.length(v.item_names) > v.page_length + 1;",
+                        "action": [
+                            "v.index = v.index + v.page_length; v.index >= v.max_index ? { v.index = 0 };",
+                            "q.dialogue.set_page('itemlist');"
+                        ]
                     },
                     {
-                        "text": "Flame Orb",
-                        "value": "flameorb",
-                        "action": "q.dialogue.set_page('pickflameorb');"
-                    },
-                    {
-                        "text": "White Herb",
-                        "value": "whiteherb",
-                        "action": "q.dialogue.set_page('pickwhiteherb');"
-                    },
-                    {
-                        "text": "Power Herb",
-                        "value": "powerherb",
-                        "action": "q.dialogue.set_page('pickpowerherb');"
-                    },
-                    {
-                        "text": "Bright Powder",
-                        "value": "brightpowder",
-                        "action": "q.dialogue.set_page('pickbrightpowder');"
-                    }
-                ]
-            }
-        },
+                        "value": "sel0",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 0; v.item_names.[t.index] == 0 ? return '' : { return v.item_names.[t.index] + ': ' + (v.item_prices.[t.index]) + ' BP' };"
+                        },
+                        "isVisible": "q.length(v.item_names) > 0;",
+                        "isSelectable": "v.item_names.[v.index + 0] != 0;",
+                        "action": [
+                            "v.sel_index = v.index + 0;",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
 
-        {
-            "id": "picktoxicorb",
-            "speaker": "npc",
-            "lines": [
-                "A Toxic Orb is a held item that badly poisons its holder at the end of the turn. One goes for 16BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
+                    },
                     {
-                        "text": "Buy",
-                        "value": "buy",
+                        "value": "sel1",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 1; v.item_names.[t.index] == 0 ? return '' : { return v.item_names.[t.index] + ': ' + (v.item_prices.[t.index]) + ' BP'};"
+                        },
+                        "isVisible": "q.length(v.item_names) > 1;",
+                        "isSelectable": "v.item_names.[v.index + 1] != 0;",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 202');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.sel_index = v.index + 1;",
+                            "q.dialogue.set_page('confirmation');"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
+                        "value": "sel2",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 2; v.item_names.[t.index] == 0 ? return '' : { return v.item_names.[t.index] + ': ' + (v.item_prices.[t.index]) + ' BP'};"
+                        },
+                        "isVisible": "q.length(v.item_names) > 2;",
+                        "isSelectable": "v.item_names.[v.index + 2] != 0;",
                         "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickflameorb",
-            "speaker": "npc",
-            "lines": [
-                "A Flame Orb is a held item that burns its holder at the end of the turn. One goes for 16BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 203');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.sel_index = v.index + 2;",
+                            "q.dialogue.set_page('confirmation');"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
+                        "value": "selend",
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.item_names.[v.page_length] == 0 ? return '' : { return v.item_names.[v.page_length] + ': ' + (v.item_prices.[v.page_length]) + ' BP'};"
+                        },
+                        "isVisible": "q.length(v.item_names) - 1 == v.page_length;",
                         "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickwhiteherb",
-            "speaker": "npc",
-            "lines": [
-                "A White Herb is a held item that restores all of the holder's decreased stats. It will be consumed after use. One goes for 32BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 204');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.sel_index = v.page_length;",
+                            "q.dialogue.set_page('confirmation');"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickpowerherb",
-            "speaker": "npc",
-            "lines": [
-                "A Power Herb is a held item that allows the holder to immediately use a move that would normally require a turn to charge. It is consumed after use. One goes for 32BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 205');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickbrightpowder",
-            "speaker": "npc",
-            "lines": [
-                "Bright Powder is a held item that causes the opponent's attacks targeted at the holder to have a 10% extra reduction in accuracy. One goes for 48BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 206');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
+                        "text": "Exit",
+                        "value": "exit",
+                        "action": "q.dialogue.set_page('leave');"
                     }
                 ]
             }
@@ -226,10 +153,90 @@
 
 
         {
-            "id": "buyend",
+            "id": "confirmation",
             "speaker": "npc",
             "lines": [
-                "Here you are! Thank you!"
+                {
+                    "type": "expression",
+                    "expression": "(v.item_names.[v.sel_index]) + ': ' + (v.item_descs.[v.sel_index])"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Buy: ' + (v.item_prices.[v.sel_index]) + ' BP'"
+                        },
+                        "value": "buy",
+                        "action": [
+                            "v.id = 'cobblemon:' + q.to_lower(q.replace(v.item_names.[v.sel_index],' ','_'));",
+                            "q.run_command('execute as ' + q.player.username + ' if score @s BattlePoints matches ' + (v.item_prices.[v.sel_index]) + '.. run tag @s add CanBuy');",
+                            "!q.player.has_tag('CanBuy') ? { v.result_page = 'buyfail' };",
+                            "q.player.has_tag('CanBuy') ? { q.player.remove_tag('CanBuy'); q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints ' + (v.item_prices.[v.sel_index])); q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"transaction\"}'); q.run_command('give ' + q.player.username + ' ' + v.id); v.result_page = 'buysuccess' };",
+                            "q.dialogue.set_page(v.result_page);"
+                        ]
+                    },
+                    {
+                        "text": "Cancel",
+                        "value": "cancel",
+                        "action": [
+                            "q.dialogue.set_page('itemlist');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "buysuccess",
+            "speaker": "none",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Obtained the ' + (v.item_names.[v.sel_index]) + '!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('itemlist');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyfail",
+            "speaker": "npc",
+            "lines": [
+                "I'm sorry, but you don't have enough BP."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('itemlist');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "leave",
+            "speaker": "npc",
+            "lines": [
+                "Please come back any time you want!"
             ],
             "input": {
                 "type": "option",
@@ -239,29 +246,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "end",
-            "speaker": "npc",
-            "lines": [
-                "Please come again!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
                         ]
                     }
                 ]

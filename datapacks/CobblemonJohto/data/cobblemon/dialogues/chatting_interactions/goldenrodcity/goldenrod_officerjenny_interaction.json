@@ -1,18 +1,57 @@
-{   
+{
+    "initializationAction": [
+        "q.player.has_tag('Dialogue72') ? q.dialogue.set_page('aftertakeover');"
+    ],
     "speakers": {
         "npc": {
-          "name": "Officer Jenny",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:officerjenny",
-            "isLeftSide": true
-          }
+            "name": "Officer Jenny",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:officerjenny",
+                "isLeftSide": true
+            }
         }
-      },
+    },
     "pages": [
         {
-            "id": "greeting",
+            "id": "beforetakeover",
+            "speaker": "npc",
+            "lines": [
+                "Sorry. Authorized personnel only beyond this point."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "beforetakeover2",
+            "speaker": "npc",
+            "lines": [
+                "It wasn't that way before. There's something wrong with the Director..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftertakeover",
             "speaker": "npc",
             "lines": [
                 "Feel free to look around anywhere."
@@ -24,7 +63,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -44,10 +83,10 @@
                         "value": "close",
                         "action": [
                             "q.dialogue.close();"
-                            ]
+                        ]
                     }
                 ]
             }
         }
-        ]
-    }
+    ]
+}

@@ -1,18 +1,84 @@
-{   
+{
+    "initializationAction": [
+        "q.player.data.flags.moomoofarm_quest == 0 ? { q.player.data.flags.moomoofarm_quest = 1; q.player.save_data };",
+        "q.player.data.flags.moomoofarm_quest >= 8 ? { q.run_command('team join shops ' + q.player.username); q.dialogue.set_page('buymilk') };"
+    ],
+    "escapeAction": [
+        "q.run_command('team join default ' + q.player.username);",
+        "q.dialogue.close;"
+    ],
     "speakers": {
         "npc": {
-          "name": "     ",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:oldman",
-            "isLeftSide": true
-          }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
         }
-      },
-      "pages": [
+    },
+    "pages": [
         {
             "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "My Miltank ain't givin' me milk n'more."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "This here farm's got famous milk."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "Most everyone wants a drink.",
+                "It'll give me lots o' milk if'n I feed it lots o' Berries, I reckon."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "buymilk",
             "speaker": "npc",
             "lines": [
                 "How'd you like my Moomoo Milk?"
@@ -24,13 +90,13 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page2",
+            "id": "buymilk2",
             "speaker": "npc",
             "lines": [
                 "It's my pride and joy, there."
@@ -40,14 +106,164 @@
                 "vertical": false,
                 "options": [
                     {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buymilk3",
+            "speaker": "npc",
+            "lines": [
+                "Give it to Pokémon to clear their stat changes!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "prompt",
+            "speaker": "npc",
+            "lines": [
+                "I'll give it to ya fer just $500."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": "Buy 1 Bottle",
+                        "value": "buy1",
+                        "action": [
+                            "v.amount = 1;",
+                            "v.price = 500;",
+                            "q.run_command('execute as ' + q.player.username + ' if score @s Money matches ' + v.price + '.. run tag @s add CanBuy');",
+                            "!q.player.has_tag('CanBuy') ? { v.result_page = 'buyfail' };",
+                            "q.player.has_tag('CanBuy') ? { q.player.remove_tag('CanBuy'); v.result_page = 'buysuccess' };",
+                            "q.dialogue.set_page(v.result_page);"
+                        ]
+                    },
+                    {
+                        "text": "Buy 1 Dozen",
+                        "value": "buy12",
+                        "action": [
+                            "v.amount = 12;",
+                            "v.price = 6000;",
+                            "q.run_command('execute as ' + q.player.username + ' if score @s Money matches ' + v.price + '.. run tag @s add CanBuy');",
+                            "!q.player.has_tag('CanBuy') ? { v.result_page = 'buyfail' };",
+                            "q.player.has_tag('CanBuy') ? { q.player.remove_tag('CanBuy'); v.result_page = 'buysuccess' };",
+                            "q.dialogue.set_page(v.result_page);"
+                        ]
+                    },
+                    {
+                        "text": "No Thanks",
+                        "value": "declined",
+                        "action": "q.dialogue.set_page('declined');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buysuccess",
+            "speaker": "npc",
+            "lines": [
+                "Here ya go!",
+                "Drink up'n enjoy!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('scoreboard players remove ' + q.player.username + ' Money ' + v.price);",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
+                            "q.run_command('give ' + q.player.username + ' cobblemon:moomoo_milk ' + v.amount);",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buysuccess2",
+            "speaker": "none",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Obtained the Moomoo Milk' + (v.amount > 1 ? 's!' : '!')"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.dialogue.close();"
-                            ]
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyfail",
+            "speaker": "npc",
+            "lines": [
+                "Sorry, there.",
+                "No cash, no sale!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined",
+            "speaker": "npc",
+            "lines": [
+                "You don't want it?",
+                "Come again, hear?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
+                        ]
                     }
                 ]
             }
         }
-        ]
-    }
+    ]
+}

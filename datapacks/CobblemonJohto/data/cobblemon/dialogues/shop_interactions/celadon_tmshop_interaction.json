@@ -1,0 +1,220 @@
+{
+    "initializationAction": [
+        "q.run_command('team join shops ' + q.player.username);",
+        "v.page_length = 3;",
+        "q.set_query('moves', q.array('frustration','return','swagger','captivate','taunt','torment','safeguard','dig','stealthrock','brine','avalanche','darkpulse'));",
+        "q.set_query('prices', q.array(1000,1000,1500,1500,1500,1500,2000,2000,2000,3000,3000,3000));",
+        "v.index = 0;",
+        "v.max_index = v.page_length * math.ceil(q.length(q.moves) / v.page_length);",
+        "v.message = 'Welcome!\nWhat do you need?'"
+    ],
+    "escapeAction": [
+        "q.run_command('team join default ' + q.player.username);",
+        "q.dialogue.close;"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
+        }
+    },
+    "pages": [
+        {
+            "id": "movelist",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "v.message"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "value": "page_forward",
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Page ' + (v.index / v.page_length + 1) + ' / ' + (v.max_index / v.page_length) + ' >>';"
+                        },
+                        "isVisible": "q.length(q.moves) > v.page_length + 1;",
+                        "action": [
+                            "v.index = v.index + v.page_length; v.index >= v.max_index ? { v.index = 0 };",
+                            "q.dialogue.set_page('movelist');"
+                        ]
+                    },
+                    {
+                        "value": "move0",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 0; q.moves.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(q.moves.[t.index]); return t.move.display_name + ' TM: $' + (q.prices.[t.index]);"
+                        },
+                        "isVisible": "q.length(q.moves) > 0;",
+                        "isSelectable": "q.moves.[v.index + 0] != 0;",
+                        "action": [
+                            "v.move = q.get_move_from_id(q.moves.[v.index + 0]);",
+                            "v.price = q.prices.[v.index + 0];",
+                            "q.dialogue.next_page;"
+                        ]
+
+                    },
+                    {
+                        "value": "move1",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 1; q.moves.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(q.moves.[t.index]); return t.move.display_name + ' TM: $' + (q.prices.[t.index]);"
+                        },
+                        "isVisible": "q.length(q.moves) > 1;",
+                        "isSelectable": "q.moves.[v.index + 1] != 0;",
+                        "action": [
+                            "v.move = q.get_move_from_id(q.moves.[v.index + 1]);",
+                            "v.price = q.prices.[v.index + 1];",
+                            "q.dialogue.next_page;"
+                        ]
+                    },
+                    {
+                        "value": "move2",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 2; q.moves.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(q.moves.[t.index]); return t.move.display_name + ' TM: $' + (q.prices.[t.index]);"
+                        },
+                        "isVisible": "q.length(q.moves) > 2;",
+                        "isSelectable": "q.moves.[v.index + 2] != 0;",
+                        "action": [
+                            "v.move = q.get_move_from_id(q.moves.[v.index + 2]);",
+                            "v.price = q.prices.[v.index + 2];",
+                            "q.dialogue.next_page;"
+                        ]
+                    },
+                    {
+                        "value": "moveend",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.page_length; q.moves.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(q.moves.[t.index]); return t.move.display_name + ' TM: $' + (q.prices.[t.index]);"
+                        },
+                        "isVisible": "q.length(q.moves) - 1 == v.page_length;",
+                        "action": [
+                            "v.move = q.get_move_from_id(q.moves.[v.page_length]);",
+                            "v.price = q.prices.[v.page_length];",
+                            "q.dialogue.next_page;"
+                        ]
+                    },
+                    {
+                        "text": "Exit",
+                        "value": "exit",
+                        "action": "q.dialogue.set_page('leave');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "confirmation",
+            "speaker": "none",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "v.move.display_name + ': ' + v.move.description"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Buy: $' + v.price"
+                        },
+                        "value": "buy",
+                        "action": [
+                            "v.message = 'Is there anything else I may do for you?';",
+                            "q.run_command('execute as ' + q.player.username + ' if score @s Money matches ' + v.price + '.. run tag @s add CanBuy');",
+                            "!q.player.has_tag('CanBuy') ? { v.result_page = 'buyfail' };",
+                            "q.player.has_tag('CanBuy') ? { q.player.remove_tag('CanBuy'); q.run_command('scoreboard players remove ' + q.player.username + ' Money ' + v.price); q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"transaction\"}'); q.run_command('givetm ' + v.move.name + ' ' + q.player.username); v.result_page = 'buysuccess' };",
+                            "q.dialogue.set_page(v.result_page);"
+                        ]
+                    },
+                    {
+                        "text": "Cancel",
+                        "value": "cancel",
+                        "action": [
+                            "v.message = 'Is there anything else I may do for you?';",
+                            "q.dialogue.set_page('movelist');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "buysuccess",
+            "speaker": "npc",
+            "lines": [
+                "Here you are!",
+                "Thank you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('movelist');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyfail",
+            "speaker": "npc",
+            "lines": [
+                "You don't have enough money."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('movelist');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "leave",
+            "speaker": "npc",
+            "lines": [
+                "Please come again!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

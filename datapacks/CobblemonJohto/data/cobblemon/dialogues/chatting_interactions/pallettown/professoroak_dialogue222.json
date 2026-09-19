@@ -2,9 +2,6 @@
     "initializationAction": [
         "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
-    "names": [
-        "Professor Oak"
-    ],
     "escapeAction": [],
     "speakers": {
         "npc": {
@@ -15,6 +12,9 @@
                 "identifier": "cobblemon:professoroak",
                 "isLeftSide": true
             }
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -22,7 +22,8 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Those Badges are... Wow!"
+                "Good to see you!",
+                "This is what I've wanted to give to you!"
             ],
             "input": {
                 "type": "option",
@@ -31,7 +32,49 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm rockclimb 3');",
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue222');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Rock Climb TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page1",
+            "speaker": "npc",
+            "lines": [
+                "Those Technical Machines contain the move Rock Climb!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -40,7 +83,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "You have not only become the Johto Champion, but you've collected all the Kanto Badges!"
+                "Those Badges are..."
             ],
             "input": {
                 "type": "option",
@@ -49,7 +92,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -58,7 +101,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Well done! Hmm... No wonder I sensed something in you when we met."
+                "Wow! You have not only become the Johto Champion, but you've collected all the Kanto Badges! Well done!"
             ],
             "input": {
                 "type": "option",
@@ -67,7 +110,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -76,7 +119,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "Tell you what. I'll make arrangements so that you can go to Mt. Silver."
+                "Hmm... No wonder I sensed something in you when we met."
             ],
             "input": {
                 "type": "option",
@@ -85,13 +128,52 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
             "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Tell you what, ' + q.player.username + '.'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "I'll make arrangements so that you can go to Mt. Silver."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
             "speaker": "npc",
             "lines": [
                 "Mt. Silver is a big mountain that is home to many wild Pokémon."
@@ -103,13 +185,13 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page6');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page6",
+            "id": "page8",
             "speaker": "npc",
             "lines": [
                 "It's too dangerous for your average Trainer, so it's off limits."
@@ -121,16 +203,19 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page7');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page7",
+            "id": "page9",
             "speaker": "npc",
             "lines": [
-                "But we can make an exception in your case."
+                {
+                    "type": "expression",
+                    "expression": "'But we can make an exception in your case, ' + q.player.username + '.'"
+                }
             ],
             "input": {
                 "type": "option",
@@ -139,16 +224,34 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page8');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page8",
+            "id": "page10",
             "speaker": "npc",
             "lines": [
-                "Go to the Pokémon League Reception Gate. You can reach Mt. Silver from there."
+                "Go to the Pokémon League Reception Gate."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "npc",
+            "lines": [
+                "You can reach Mt. Silver from there."
             ],
             "input": {
                 "type": "option",
@@ -158,9 +261,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue222');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
-                            "q.dialogue.close();"
+                            "q.dialogue.close;"
                         ]
                     }
                 ]

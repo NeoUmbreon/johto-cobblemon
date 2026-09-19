@@ -24,6 +24,9 @@ execute at @a[x=83,y=63,z=-222,dx=11,dy=10,dz=5,tag=!SageLi] run tp @a[x=83,y=63
 tellraw @a[x=243,y=54,z=-715,dx=2,dy=5,dz=2,tag=!Dialogue14] ["",{"text":"<Team Rocket Grunt> Get out of here, kid! ","color":"white"}]
 execute at @a[x=243,y=54,z=-715,dx=2,dy=5,dz=2,tag=!Dialogue14] run tp @a[x=243,y=54,z=-715,dx=2,dy=5,dz=2,tag=!Dialogue14] ~3 ~ ~
 
+#Radio Tower Pre-Takeover, prevents going beyond second floor
+opendialogue goldenrod_officerjenny_interaction @s[x=523,y=37,z=-260,dx=9,dy=10,dz=6,tag=!Dialogue72]
+tp @s[x=523,y=37,z=-260,dx=9,dy=10,dz=6,tag=!Dialogue72] 529 37 -263
 
 #Rocket HQ Admin Gate without passwords
 execute as @a[x=-101,y=33,z=185,distance=..10,tag=RocketPW1,tag=RocketPW2] run fill -98 34 187 -105 37 187 air
@@ -38,15 +41,8 @@ execute as @a[x=-122,y=44,z=176,dx=10,dy=5,dz=5,tag=!Dialogue62] at @s run tp @s
 
 
 #Mahogany Town Story Checks
-tellraw @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,scores={Cooldown=0},tag=!Jasmine] {"text":"<...> Hiya, kid! I see you're new in Mahogany Town. Since you're new, you should try a yummy RageCandyBar! Right now, it can be yours for just $300! Want one?"}
-tellraw @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,scores={Cooldown=0},tag=!Morty] {"text":"<...> Hiya, kid! I see you're new in Mahogany Town. Since you're new, you should try a yummy RageCandyBar! Right now, it can be yours for just $300! Want one?"}
-tellraw @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,scores={Cooldown=0},tag=!Pryce] {"text":"<...> Hiya, kid! I see you're new in Mahogany Town. Since you're new, you should try a yummy RageCandyBar! Right now, it can be yours for just $300! Want one?"}
-scoreboard players set @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Morty] Cooldown 25
-scoreboard players set @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Pryce] Cooldown 25
-scoreboard players set @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Jasmine] Cooldown 25
-execute at @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Jasmine] run tp @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Jasmine] ~10 ~ ~
-execute at @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Pryce] run tp @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Pryce] ~10 ~ ~
-execute at @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Morty] run tp @a[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Morty] ~10 ~ ~
+opendialogue mahogany_ragecandybarman_interaction @s[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Dialogue72]
+execute at @s[x=-222,y=63,z=183,dx=10,dy=10,dz=13,tag=!Dialogue72] run tp @s -207 ~ ~
 
 
 #Johto/Kanto/IP Connector Johto Gate Block

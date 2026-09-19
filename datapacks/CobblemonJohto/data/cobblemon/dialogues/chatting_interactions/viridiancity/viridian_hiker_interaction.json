@@ -1,21 +1,23 @@
-{   
+{
+    "initializationAction": [
+        "q.player.data.loot.tms.dreameater ? q.dialogue.set_page('aftergift');"
+    ],
     "speakers": {
         "npc": {
-          "name": "     ",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:hiker",
-            "isLeftSide": true
-          }
+            "name": " ",
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
         }
-      },
-      "pages": [
+    },
+    "pages": [
         {
-            "id": "greeting",
+            "id": "greeting1",
             "speaker": "npc",
             "lines": [
-                "Yawn!"
+                "Yawn!",
+                "I must have dozed off in the sun."
             ],
             "input": {
                 "type": "option",
@@ -24,16 +26,16 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page2",
+            "id": "greeting2",
             "speaker": "npc",
             "lines": [
-                "I must have dozed off in the sun. ...I had his dream about a Drowzee eating my dream."
+                "...I had this dream about a Drowzee eating my dream."
             ],
             "input": {
                 "type": "option",
@@ -42,16 +44,16 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "greeting3",
             "speaker": "npc",
             "lines": [
-                "Weird, huh? Huh? What's this? Where did this TM come from?"
+                "Weird, huh?"
             ],
             "input": {
                 "type": "option",
@@ -60,16 +62,97 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page4",
+            "id": "greeting4",
             "speaker": "npc",
             "lines": [
+                "Huh?",
+                "What's this?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greeting5",
+            "speaker": "npc",
+            "lines": [
+                "Where did these TMs come from?",
                 "This is spooky!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greeting6",
+            "speaker": "npc",
+            "lines": [
+                "Here, you can have them."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm dreameater 3');",
+                            "q.player.data.loot.tms.dreameater = 1; q.player.save_data;",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Dream Eater TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift",
+            "speaker": "npc",
+            "lines": [
+                "Those TMs contain Dream Eater...",
+                "...Zzzzz..."
             ],
             "input": {
                 "type": "option",
@@ -78,12 +161,10 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [
-                            "q.dialogue.close();"
-                            ]
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }
         }
-        ]
-    }
+    ]
+}

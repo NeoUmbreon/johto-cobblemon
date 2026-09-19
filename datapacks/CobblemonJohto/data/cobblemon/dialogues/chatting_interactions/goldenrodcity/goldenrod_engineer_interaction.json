@@ -1,0 +1,399 @@
+{
+    "initializationAction": [
+        "q.player.data.flags.spearowmail_completed ? { q.dialogue.set_page('questcomplete'); return 0 };",
+        "q.player.data.loot.tms.rest ? { q.dialogue.set_page('delivered'); return 0 };",
+        "q.player.data.flags.spearowmail_received ? q.dialogue.set_page(q.player.has_tag('Dialogue30') ? 'received' : 'presudowoodo');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Excuse me, kid!",
+                "I received this letter the other day from a friend of mine."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Here's the reply that I wrote."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "I am stuck here and was wondering if you could deliver it..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "He's on Route 31.",
+                "Can you help a guy out?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": [
+                            "q.dialogue.set_page(q.player.party.count == 6 ? 'partyfull' : 'accepted');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "no",
+                        "action": [
+                            "q.dialogue.set_page('declined');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "partyfull",
+            "speaker": "npc",
+            "lines": [
+                "Huh?",
+                "Your party is full!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined",
+            "speaker": "npc",
+            "lines": [
+                "Oh... Never mind, then...",
+                "You must be busy, too."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "accepted",
+            "speaker": "npc",
+            "lines": [
+                "Wow, thanks!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"giftedmon\"}');",
+                            "q.player.party.add_by_properties('spearow nick=Kenya ot=Webster ottype=NPC level=20 gender=female helditem=written_book nature=hasty hp_iv=15 attack_iv=20 defence_iv=15 special_attack_iv=20 special_defence_iv=20 speed_iv=20');",
+                            "q.player.data.flags.spearowmail_received = 1; q.player.save_data;",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "accepted2",
+            "speaker": "none",
+            "lines": [
+                "You received the Spearow with Mail!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "received",
+            "speaker": "npc",
+            "lines": [
+                "My friend is on Route 31."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "received2",
+            "speaker": "npc",
+            "lines": [
+                "He looks obviously eager to read letters, so you'll know who he is right away!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "presudowoodo",
+            "speaker": "npc",
+            "lines": [
+                "My friend is on Route 31."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "presudowood2",
+            "speaker": "npc",
+            "lines": [
+                "Oh, yeah.",
+                "There was a weird tree blocking the road."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "presudowoodo3",
+            "speaker": "npc",
+            "lines": [
+                "I wonder if it's been cleared?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "delivered",
+            "speaker": "npc",
+            "lines": [
+                "Thank you for making the delivery!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "delivered2",
+            "speaker": "npc",
+            "lines": [
+                "...What about a cave exploration?",
+                "Ah, you can go right through here."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "delivered3",
+            "speaker": "npc",
+            "lines": [
+                "I want you to have this for your kindness!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('give ' + q.player.username + ' cobblemon:hp_up');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
+                            "q.player.data.flags.spearowmail_completed = 1; q.player.save_data;",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "delivered3",
+            "speaker": "none",
+            "lines": [
+                "Obtained the HP Up!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "delivered4",
+            "speaker": "npc",
+            "lines": [
+                "My pal was snoozing, right?",
+                "Heh, he's always sleeping."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        
+
+        {
+            "id": "questcomplete",
+            "speaker": "npc",
+            "lines": [
+                "Everything is fine!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        }
+    ]
+}

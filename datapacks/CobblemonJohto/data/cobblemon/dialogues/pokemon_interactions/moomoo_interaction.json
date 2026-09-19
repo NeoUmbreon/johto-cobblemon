@@ -1,0 +1,252 @@
+{
+    "initializationAction": [
+        "q.set_query('stage', q.player.data.flags.moomoofarm_quest);",
+        "q.stage >= 8 ? q.dialogue.set_page('healed');",
+        "v.cry_pitch = q.stage >= 8 ? 1 : 0.92;",
+        "q.run_command('playsound common/cries/miltank neutral ' + q.player.username + ' 804.0 65 271.0 1 ' + v.cry_pitch);"
+    ],
+    "speakers": {
+        "pokemon": {
+            "name": "Miltank",
+            "face": {
+                "type": "artificial",
+                "modelType": "pokemon",
+                "identifier": "cobblemon:miltank",
+                "isLeftSide": true
+            }
+        },
+        "none": {
+            "name": " "
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "pokemon",
+            "lines": [
+                "...Moo..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "none",
+            "lines": [
+                "Its cry is weak..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.stage > 0 ? 'Next' : 'Close';"
+                        },
+                        "value": "check",
+                        "action": "q.stage > 0 ? q.dialogue.next_page : q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "prompt",
+            "speaker": "none",
+            "lines": [
+                "Give an Oran Berry to Miltank?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "accept",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if items entity @s container.* cobblemon:oran_berry run tag @s add HasOranBerry');",
+                            "q.run_command('execute as ' + q.player.username + ' if items entity @s weapon.offhand cobblemon:oran_berry run tag @s add HasOranBerry');",
+                            "!q.player.has_tag('HasOranBerry') ? { q.dialogue.set_page('noberries'); return 0 };",
+                            "q.run_command('clear ' + q.player.username + ' cobblemon:oran_berry 1');",
+                            "q.player.remove_tag('HasOranBerry');",
+                            "q.player.data.flags.moomoofarm_quest = q.stage + 1; q.player.save_data;",
+                            "q.set_query('stage', q.player.data.flags.moomoofarm_quest);",
+                            "q.stage == 4 || q.stage == 6 || q.stage == 8 ? { v.advance = true };",
+                            "q.stage == 4 ? { v.message = 'Miltank became a little healthier!' };",
+                            "q.stage == 6 ? { v.message = 'Miltank is getting healthier!' };",
+                            "q.stage == 8 ? { v.message = 'Miltank became totally healthy!' };",
+                            "q.dialogue.set_page('gaveberry');"
+                        ]
+                    },
+                    {
+                        "text": "No",
+                        "value": "declined",
+                        "action": "q.dialogue.set_page('declined');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "gaveberry",
+            "speaker": "none",
+            "lines": [
+                "You gave an Oran Berry to Miltank."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.advance ? 'Next' : 'Close';"
+                        },
+                        "value": "check",
+                        "action": [
+                            "q.stage == 8 ? q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"pokemonhealed\"}');",
+                            "v.advance ? q.dialogue.set_page('advancestage') : q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "advancestage",
+            "speaker": "none",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "v.message"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "stage8",
+            "speaker": "none",
+            "lines": [
+                "Miltank became totally healthy!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "noberries",
+            "speaker": "none",
+            "lines": [
+                "You have no Oran Berries..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined",
+            "speaker": "none",
+            "lines": [
+                "You didn't give an Oran Berry."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined2",
+            "speaker": "none",
+            "lines": [
+                "Miltank looks sad."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "healed",
+            "speaker": "pokemon",
+            "lines": [
+                "Mooo!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "healed2",
+            "speaker": "none",
+            "lines": [
+                "It's brimming with energy."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,23 +1,33 @@
 {
     "initializationAction": [
-        "q.run_command('team join Coins ' + q.player.username + '');"
+        "q.run_command('team join Coins ' + q.player.username);",
+        "v.page_length = 3;",
+        "v.message = 'We exchange your Coins for fabulous prizes!';",
+        "v.item_names = q.array('Silk Scarf','Wide Lens','Zoom Lens','Metronome');",
+        "v.item_ids = q.array('silk_scarf','wide_lens','zoom_lens','metronome');",
+        "v.item_prices = q.array(1000,1000,1000,1000);",
+        "v.item_descs = q.array('Boosts the power of the holder\\'s Normal-type moves.','Slightly boosts the accuracy of the holder\\'s moves.','Greatly boosts the accuracy of the holder\\'s moves when the holder acts after its target.','Boosts the power of a move that is used repeatedly. If the streak is broken, the move\\'s power returns to its usual value.');",
+        "v.tm_ids = q.array('substitute','swordsdance','rest','flamethrower','icebeam','thunderbolt');",
+        "v.tm_prices = q.array(2000,4000,6000,10000,10000,10000);",
+        "q.player.has_tag('FlyCeladon') ? { v.expanded_stock = true };",
+        "v.expanded_stock && !q.player.data.update_gc_stock ? { v.message = 'We have some new stock in from the old Game Corner in Kanto.\nTake a look!'; q.player.data.update_gc_stock = 1; q.player.save_data };",
+        "v.expanded_stock ? { v.tm_ids = q.array('endure','substitute','doubleteam','swordsdance','hiddenpower','rest','flamethrower','gyroball','icebeam','psychic','thunderbolt','gigaimpact') };",
+        "v.expanded_stock ? { v.tm_prices = q.array(2000,2000,4000,4000,6000,6000,10000,10000,10000,10000,10000,15000) };"
     ],
     "escapeAction": [
-        "q.run_command('team join default ' + q.player.username + '');",
-        "q.dialogue.close();"
-    ],
-    "names": [
-        "Game Corner Clerk"
+        "q.run_command('team join default ' + q.player.username);",
+        "q.dialogue.close;"
     ],
     "speakers": {
         "npc": {
-            "name": "Game Corner Clerk",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:shopman",
-                "isLeftSide": true
-            }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -25,59 +35,57 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-               "We exchange your Coins for prizes."
+               "Welcome!"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": "q.dialogue.set_page('buy1');"
-                    },
-                    {
-                        "text": "No Thanks",
-                        "value": "nothanks",
-                        "action": "q.dialogue.set_page('end');"
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "buy1",
+            "id": "categories",
             "speaker": "npc",
             "lines": [
-                "Which prize would you like?"
+                {
+                    "type": "expression",
+                    "expression": "v.message"
+                }
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Silk Scarf",
-                        "value": "silkscarf",
-                        "action": "q.dialogue.set_page('picksilkscarf');"
+                        "text": "Technical Machines",
+                        "value": "tm",
+                        "action": [
+                            "v.callback = 'tmlist';",
+                            "v.index = 0;",
+                            "v.max_index = v.page_length * math.ceil(q.length(v.tm_ids) / v.page_length);",
+                            "q.dialogue.set_page(v.callback);"
+                        ]
                     },
                     {
-                        "text": "Wide Lens",
-                        "value": "widelens",
-                        "action": "q.dialogue.set_page('pickwidelens');"
+                        "text": "Held Items",
+                        "value": "item",
+                        "action": [
+                            "v.callback = 'itemlist';",
+                            "v.index = 0;",
+                            "v.max_index = v.page_length * math.ceil(q.length(v.tm_ids) / v.page_length);",
+                            "q.dialogue.set_page(v.callback);"
+                        ]
                     },
                     {
-                        "text": "Zoom Lens",
-                        "value": "zoomlens",
-                        "action": "q.dialogue.set_page('pickzoomlens');"
-                    },
-                    {
-                        "text": "Metronome",
-                        "value": "metronome",
-                        "action": "q.dialogue.set_page('pickmetronome');"
-                    },
-                    {
-                        "text": "No Thanks",
-                        "value": "nothanks",
-                        "action": "q.dialogue.set_page('end');"
+                        "text": "Exit",
+                        "value": "leave",
+                        "action": "q.dialogue.set_page('leave');"
                     }
                 ]
             }
@@ -85,112 +93,234 @@
 
 
         {
-            "id": "picksilkscarf",
+            "id": "tmlist",
             "speaker": "npc",
             "lines": [
-                "So, you want the Silk Scarf? It'll be 1000 Coins."
+                {
+                    "type": "expression",
+                    "expression": "v.message"
+                }
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
-                        "text": "Buy",
-                        "value": "buy",
+                        "value": "page_forward",
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Page ' + (v.index / v.page_length + 1) + ' / ' + (v.max_index / v.page_length) + ' >>';"
+                        },
+                        "isVisible": "q.length(v.tm_ids) > v.page_length + 1;",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 263');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.index = v.index + v.page_length; v.index >= v.max_index ? { v.index = 0 };",
+                            "q.dialogue.set_page('tmlist');"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
+                        "value": "move0",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 0; v.tm_ids.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(v.tm_ids.[t.index]); return t.move.display_name + ': ' + (v.tm_prices.[t.index]) + ' Coins';"
+                        },
+                        "isVisible": "q.length(v.tm_ids) > 0;",
+                        "isSelectable": "v.tm_ids.[v.index + 0] != 0;",
                         "action": [
-                            "q.dialogue.set_page('buy1');"
+                            "v.id = v.tm_ids.[v.index + 0];",
+                            "v.price = v.tm_prices.[v.index + 0];",
+                            "v.move = q.get_move_from_id(v.id);",
+                            "v.confirm_msg = v.move.display_name + ': ' + v.move.description;",
+                            "q.dialogue.set_page('confirmation');"
                         ]
+
+                    },
+                    {
+                        "value": "move1",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 1; v.tm_ids.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(v.tm_ids.[t.index]); return t.move.display_name + ': ' + (v.tm_prices.[t.index]) + ' Coins';"
+                        },
+                        "isVisible": "q.length(v.tm_ids) > 1;",
+                        "isSelectable": "v.tm_ids.[v.index + 1] != 0;",
+                        "action": [
+                            "v.id = v.tm_ids.[v.index + 1];",
+                            "v.price = v.tm_prices.[v.index + 1];",
+                            "v.move = q.get_move_from_id(v.id);",
+                            "v.confirm_msg = v.move.display_name + ': ' + v.move.description;",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
+                    },
+                    {
+                        "value": "move2",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 2; v.tm_ids.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(v.tm_ids.[t.index]); return t.move.display_name + ': ' + (v.tm_prices.[t.index]) + ' Coins';"
+                        },
+                        "isVisible": "q.length(v.tm_ids) > 2;",
+                        "isSelectable": "v.tm_ids.[v.index + 2] != 0;",
+                        "action": [
+                            "v.id = v.tm_ids.[v.index + 2];",
+                            "v.price = v.tm_prices.[v.index + 2];",
+                            "v.move = q.get_move_from_id(v.id);",
+                            "v.confirm_msg = v.move.display_name + ': ' + v.move.description;",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
+                    },
+                    {
+                        "value": "moveend",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.page_length; v.tm_ids.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(v.tm_ids.[t.index]); return t.move.display_name + ': ' + (v.tm_prices.[t.index]) + ' Coins';"
+                        },
+                        "isVisible": "q.length(v.tm_ids) - 1 == v.page_length;",
+                        "action": [
+                            "v.id = v.tm_ids.[v.page_length];",
+                            "v.price = v.tm_prices.[v.page_length];",
+                            "v.move = q.get_move_from_id(v.id);",
+                            "v.confirm_msg = v.move.display_name + ': ' + v.move.description;",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('categories');"
                     }
                 ]
             }
         },
+
+
         {
-            "id": "pickwidelens",
+            "id": "itemlist",
             "speaker": "npc",
             "lines": [
-                "So, you want the Wide Lens? It'll be 1000 Coins."
+                {
+                    "type": "expression",
+                    "expression": "v.message"
+                }
             ],
             "input": {
                 "type": "option",
-                "vertical": false,
+                "vertical": true,
                 "options": [
                     {
-                        "text": "Buy",
-                        "value": "buy",
+                        "value": "page_forward",
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Page ' + (v.index / v.page_length + 1) + ' / ' + (v.max_index / v.page_length) + ' >>';"
+                        },
+                        "isVisible": "q.length(v.item_names) > v.page_length + 1;",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 264');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.index = v.index + v.page_length; v.index >= v.max_index ? { v.index = 0 };",
+                            "q.dialogue.set_page('itemlist');"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
+                        "value": "sel0",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 0; v.item_names.[t.index] == 0 ? return '' : { return v.item_names.[t.index] + ': ' + (v.item_prices.[t.index]) + ' Coins' };"
+                        },
+                        "isVisible": "q.length(v.item_names) > 0;",
+                        "isSelectable": "v.item_names.[v.index + 0] != 0;",
                         "action": [
-                            "q.dialogue.set_page('buy1');"
+                            "v.id = v.item_ids.[v.index + 0];",
+                            "v.price = v.item_prices.[v.index + 0];",
+                            "v.confirm_msg = (v.item_names.[v.index + 0]) + ': ' + (v.item_descs.[v.index + 0]);",
+                            "q.dialogue.set_page('confirmation');"
                         ]
+
+                    },
+                    {
+                        "value": "sel1",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 1; v.item_names.[t.index] == 0 ? return '' : { return v.item_names.[t.index] + ': ' + (v.item_prices.[t.index]) + ' Coins'};"
+                        },
+                        "isVisible": "q.length(v.item_names) > 1;",
+                        "isSelectable": "v.item_names.[v.index + 1] != 0;",
+                        "action": [
+                            "v.id = v.item_ids.[v.index + 1];",
+                            "v.price = v.item_prices.[v.index + 1];",
+                            "v.confirm_msg = (v.item_names.[v.index + 1]) + ': ' + (v.item_descs.[v.index + 1]);",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
+                    },
+                    {
+                        "value": "sel2",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 2; v.item_names.[t.index] == 0 ? return '' : { return v.item_names.[t.index] + ': ' + (v.item_prices.[t.index]) + ' Coins'};"
+                        },
+                        "isVisible": "q.length(v.item_names) > 2;",
+                        "isSelectable": "v.item_names.[v.index + 2] != 0;",
+                        "action": [
+                            "v.id = v.item_ids.[v.index + 2];",
+                            "v.price = v.item_prices.[v.index + 2];",
+                            "v.confirm_msg = (v.item_names.[v.index + 2]) + ': ' + (v.item_descs.[v.index + 2]);",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
+                    },
+                    {
+                        "value": "selend",
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.item_names.[v.page_length] == 0 ? return '' : { return v.item_names.[v.page_length] + ': ' + (v.item_prices.[v.page_length]) + ' Coins'};"
+                        },
+                        "isVisible": "q.length(v.item_names) - 1 == v.page_length;",
+                        "action": [
+                            "v.id = v.item_ids.[v.page_length];",
+                            "v.price = v.item_prices.[v.page_length];",
+                            "v.confirm_msg = (v.item_names.[v.page_length]) + ': ' + (v.item_descs.[v.page_length]);",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('categories');"
                     }
                 ]
             }
         },
+
+
         {
-            "id": "pickzoomlens",
+            "id": "confirmation",
             "speaker": "npc",
             "lines": [
-                "So, you want the Zoom Lens? It'll be 1000 Coins."
+                {
+                    "type": "expression",
+                    "expression": "v.confirm_msg"
+                }
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Buy",
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Buy: ' + v.price + ' Coins'"
+                        },
                         "value": "buy",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 265');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.message = 'Is there anything else you\\'d like?';",
+                            "v.callback == 'tmlist' ? { v.cmd = 'givetm ' + v.id + ' ' + q.player.username };",
+                            "v.callback == 'itemlist' ? { v.cmd = 'give ' + q.player.username + ' cobblemon:' + v.id };",
+                            "q.run_command('execute as ' + q.player.username + ' if score @s Coins matches ' + v.price + '.. run tag @s add CanBuy');",
+                            "!q.player.has_tag('CanBuy') ? { v.result_page = 'buyfail' };",
+                            "q.player.has_tag('CanBuy') ? { q.player.remove_tag('CanBuy'); q.run_command('scoreboard players remove ' + q.player.username + ' Coins ' + v.price); q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"transaction\"}'); q.run_command(v.cmd); v.result_page = 'buysuccess' };",
+                            "q.dialogue.set_page(v.result_page);"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
+                        "text": "Cancel",
+                        "value": "cancel",
                         "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickmetronome",
-            "speaker": "npc",
-            "lines": [
-                "So, you want the Metronome? It'll be 1000 Coins."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 266');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
+                            "v.message = 'Is there anything else you\\'d like?';",
+                            "q.dialogue.set_page(v.callback);"
                         ]
                     }
                 ]
@@ -199,10 +329,50 @@
 
 
         {
-            "id": "buyend",
+            "id": "buysuccess",
             "speaker": "npc",
             "lines": [
-                "Here you are! Thank you!"
+                "Here you go!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page(v.callback);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyfail",
+            "speaker": "npc",
+            "lines": [
+                "Sorry! You need more Coins."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page(v.callback);"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "leave",
+            "speaker": "npc",
+            "lines": [
+                "Please save your Coins and come again!"
             ],
             "input": {
                 "type": "option",
@@ -212,29 +382,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "end",
-            "speaker": "npc",
-            "lines": [
-                "Please come again!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
                         ]
                     }
                 ]

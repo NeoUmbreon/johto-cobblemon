@@ -5,7 +5,8 @@
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
         "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add Falkner');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,560 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 1560');"
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 1560');",
+        "v.challenge_mode = q.get_variable(q.file.load('data/molang/config.json'), 'challenge_mode');"
     ],
     "speakers": {
         "npc": {
@@ -16,6 +17,9 @@
                 "identifier": "cobblemon:falkner",
                 "isLeftSide": true
             }
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -23,7 +27,8 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I understand...\nI'll bow out gracefully."
+                "I understand...",
+                "I'll bow out gracefully."
             ],
             "input": {
                 "type": "option",
@@ -41,7 +46,8 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "...For pity's sake!\nMy dad's cherished bird Pokémon... But a defeat is a defeat."
+                "...For pity's sake!",
+                "My dad's cherished bird Pokémon..."
             ],
             "input": {
                 "type": "option",
@@ -59,7 +65,8 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "But a defeat is a defeat.\nAll right."
+                "But a defeat is a defeat.",
+                "All right."
             ],
             "input": {
                 "type": "option",
@@ -77,7 +84,151 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "Take this official Pokémon League Badge.\nThis one is the Zephyr Badge."
+                "Take this official Pokémon League Badge.",
+                "This one is the Zephyr Badge."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/badge1');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "badge",
+            "speaker": "none",
+            "lines": [
+                "You received the Zephyr Badge from Falkner!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm roost 5');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Roost TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "v.challenge_mode ? q.dialogue.set_page('page6') : q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "By using a TM, a Pokémon will instantly learn a new move."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "Think before you act--a TM can be used only once."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "Those TMs contain Roost.",
+                "It restores half the max HP."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "v.challenge_mode ? 'Close' : 'Next';"
+                        },
+                        "value": "next",
+                        "action": "v.challenge_mode ? q.dialogue.close : q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                "There are Pokémon Gyms in cities and towns ahead. Make good use of them!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "npc",
+            "lines": [
+                "As for your next move...",
+                "I would suggest Azalea Town."
             ],
             "input": {
                 "type": "option",
@@ -86,12 +237,7 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [
-                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
-                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
-                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/badge1');",
-                            "q.dialogue.close();"
-                        ]
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }

@@ -1,346 +1,206 @@
 {
     "initializationAction": [
-        "q.run_command('team join battletower ' + q.player.username + '');"
+        "q.run_command('team join battletower ' + q.player.username);",
+        "v.page_length = 3;",
+        "v.physical_moves = q.array('aerialace','brickbreak','uturn','xscissor','stoneedge','earthquake');",
+        "v.physical_prices = q.array(40,40,40,64,80,80);",
+        "v.special_moves = q.array('shadowball','energyball','sludgebomb','dragonpulse');",
+        "v.special_prices = q.array(64,64,80,80);",
+        "v.status_moves = q.array('toxic','thunderwave','willowisp','attract','bulkup','calmmind');",
+        "v.status_prices = q.array(32,32,32,32,48,48);"
     ],
     "escapeAction": [
-        "q.run_command('team join default ' + q.player.username + '');",
-        "q.dialogue.close();"
-    ],
-    "names": [
-        "Battle Tower Clerk"
+        "q.run_command('team join default ' + q.player.username);",
+        "q.dialogue.close;"
     ],
     "speakers": {
         "npc": {
-            "name": "Battle Tower Clerk",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:shopman",
-                "isLeftSide": true
-            }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
         {
-            "id": "greeting",
+            "id": "greeting1",
             "speaker": "npc",
             "lines": [
-                "Welcome to the Exchange Service Corner! Would you like to trade in your BP for some prizes?"
+                "Welcome to the Exchange Service Corner!"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": "q.dialogue.set_page('buy1');"
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },{
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "Would you like to trade in your BP for some prizes?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Yes",
+                        "value": "yes",
+                        "action": "q.dialogue.next_page;"
                     },
                     {
-                        "text": "No Thanks",
-                        "value": "nothanks",
-                        "action": "q.dialogue.set_page('end');"
+                        "text": "No",
+                        "value": "no",
+                        "action": "q.dialogue.set_page('leave');"
                     }
                 ]
             }
         },
         {
-            "id": "buy1",
+            "id": "categories",
             "speaker": "npc",
             "lines": [
-                "Which item would you like to purchase?"
+                "Please choose the TM you would like."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Choice Band",
-                        "value": "choiceband",
-                        "action": "q.dialogue.set_page('pickchoiceband');"
+                        "text": "Physical",
+                        "value": "physical",
+                        "action": [
+                            "q.set_query('moves', v.physical_moves);",
+                            "q.set_query('prices', v.physical_prices);",
+                            "v.index = 0;",
+                            "v.max_index = v.page_length * math.ceil(q.length(q.moves) / v.page_length);",
+                            "q.dialogue.next_page;"
+                        ]
                     },
                     {
-                        "text": "Focus Band",
-                        "value": "focusband",
-                        "action": "q.dialogue.set_page('pickfocusband');"
+                        "text": "Special",
+                        "value": "special",
+                        "action": [
+                            "q.set_query('moves', v.special_moves);",
+                            "q.set_query('prices', v.special_prices);",
+                            "v.index = 0;",
+                            "v.max_index = v.page_length * math.ceil(q.length(q.moves) / v.page_length);",
+                            "q.dialogue.next_page;"
+                        ]
                     },
                     {
-                        "text": "Scope Lens",
-                        "value": "scopelens",
-                        "action": "q.dialogue.set_page('pickscopelens');"
+                        "text": "Status",
+                        "value": "status",
+                        "action": [
+                            "q.set_query('moves', v.status_moves);",
+                            "q.set_query('prices', v.status_prices);",
+                            "v.index = 0;",
+                            "v.max_index = v.page_length * math.ceil(q.length(q.moves) / v.page_length);",
+                            "q.dialogue.next_page;"
+                        ]
                     },
                     {
-                        "text": "Muscle Band",
-                        "value": "muscleband",
-                        "action": "q.dialogue.set_page('pickmuscleband');"
-                    },
-                    {
-                        "text": "Next Page >>",
-                        "value": "nextpage",
-                        "action": "q.dialogue.set_page('buy2');"
+                        "text": "Exit",
+                        "value": "leave",
+                        "action": "q.dialogue.set_page('leave');"
                     }
                 ]
             }
         },
+
+
         {
-            "id": "buy2",
+            "id": "movelist",
             "speaker": "npc",
             "lines": [
-                "Which item would you like to purchase?"
+                "Please choose the TM you would like."
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Focus Sash",
-                        "value": "focussash",
-                        "action": "q.dialogue.set_page('pickfocussash');"
+                        "value": "page_forward",
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Page ' + (v.index / v.page_length + 1) + ' / ' + (v.max_index / v.page_length) + ' >>';"
+                        },
+                        "isVisible": "q.length(q.moves) > v.page_length + 1;",
+                        "action": [
+                            "v.index = v.index + v.page_length; v.index >= v.max_index ? { v.index = 0 };",
+                            "q.dialogue.set_page('movelist');"
+                        ]
                     },
                     {
-                        "text": "Choice Scarf",
-                        "value": "choicescarf",
-                        "action": "q.dialogue.set_page('pickchoicescarf');"
-                    },
-                    {
-                        "text": "Razor Claw",
-                        "value": "razorclaw",
-                        "action": "q.dialogue.set_page('pickrazorclaw');"
-                    },
-                    {
-                        "text": "Razor Fang",
-                        "value": "razorfang",
-                        "action": "q.dialogue.set_page('pickrazorfang');"
-                    },
-                    {
-                        "text": "<< Back",
-                        "value": "nextpage",
-                        "action": "q.dialogue.set_page('buy1');"
-                    }
-                ]
-            }
-        },
+                        "value": "move0",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 0; q.moves.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(q.moves.[t.index]); return t.move.display_name + ': ' + (q.prices.[t.index]) + ' BP';"
+                        },
+                        "isVisible": "q.length(q.moves) > 0;",
+                        "isSelectable": "q.moves.[v.index + 0] != 0;",
+                        "action": [
+                            "v.move = q.get_move_from_id(q.moves.[v.index + 0]);",
+                            "v.price = q.prices.[v.index + 0];",
+                            "q.dialogue.next_page;"
+                        ]
 
-        {
-            "id": "pickchoiceband",
-            "speaker": "npc",
-            "lines": [
-                "A held item that boosts the Attack of the Pokémon holding it by 50%, but only allows the use of the first move selected each time it is sent into battle. One goes for 48BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
+                    },
                     {
-                        "text": "Buy",
-                        "value": "buy",
+                        "value": "move1",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 1; q.moves.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(q.moves.[t.index]); return t.move.display_name + ': ' + (q.prices.[t.index]) + ' BP';"
+                        },
+                        "isVisible": "q.length(q.moves) > 1;",
+                        "isSelectable": "q.moves.[v.index + 1] != 0;",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 207');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.move = q.get_move_from_id(q.moves.[v.index + 1]);",
+                            "v.price = q.prices.[v.index + 1];",
+                            "q.dialogue.next_page;"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
+                        "value": "move2",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.index + 2; q.moves.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(q.moves.[t.index]); return t.move.display_name + ': ' + (q.prices.[t.index]) + ' BP';"
+                        },
+                        "isVisible": "q.length(q.moves) > 2;",
+                        "isSelectable": "q.moves.[v.index + 2] != 0;",
                         "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickfocusband",
-            "speaker": "npc",
-            "lines": [
-                "A held item that has a 10% chance of preventing the Pokémon holding it from fainting with 1 HP remaining. One goes for 48BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 208');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.move = q.get_move_from_id(q.moves.[v.index + 2]);",
+                            "v.price = q.prices.[v.index + 2];",
+                            "q.dialogue.next_page;"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
+                        "value": "moveend",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.index = v.page_length; q.moves.[t.index] == 0 ? return ''; t.move = q.get_move_from_id(q.moves.[t.index]); return t.move.display_name + ': ' + (q.prices.[t.index]) + ' BP';"
+                        },
+                        "isVisible": "q.length(q.moves) - 1 == v.page_length;",
                         "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickscopelens",
-            "speaker": "npc",
-            "lines": [
-                "A Scope Lens is a held item that increases the holder's critical hit ratio by one stage. One goes for 48BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 209');",
-                            "q.dialogue.set_page('buyend');"
+                            "v.move = q.get_move_from_id(q.moves.[v.page_length]);",
+                            "v.price = q.prices.[v.page_length];",
+                            "q.dialogue.next_page;"
                         ]
                     },
                     {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickmuscleband",
-            "speaker": "npc",
-            "lines": [
-                "A Muscle Band is a held item that boosts the power of the holder's physical moves by 10%. It is consumed after use. One goes for 48BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 210');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickfocussash",
-            "speaker": "npc",
-            "lines": [
-                "A held item that, if the Pokémon is at full HP, prevents the Pokémon holding it from fainting in one hit. One goes for 48BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 211');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickchoicescarf",
-            "speaker": "npc",
-            "lines": [
-                "A held item that boosts the Speed of the Pokémon holding it by 50%, but only allows the use of the first move selected each time it is sent into battle. One goes for 48BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 212');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickrazorclaw",
-            "speaker": "npc",
-            "lines": [
-                "A Razor Claw is a held item that raises the holder's critical hit ratio by one stage. One goes for 48BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 213');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickrazorfang",
-            "speaker": "npc",
-            "lines": [
-                "A Razor Fang is a held item that grants the holder's damaging attacks a 10% chance of causing the target to flinch. One goes for 48BP."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 214');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('categories');"
                     }
                 ]
             }
@@ -348,10 +208,89 @@
 
 
         {
-            "id": "buyend",
+            "id": "confirmation",
             "speaker": "npc",
             "lines": [
-                "Here you are! Thank you!"
+                {
+                    "type": "expression",
+                    "expression": "v.move.display_name + ': ' + v.move.description"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Buy: ' + v.price + ' BP'"
+                        },
+                        "value": "buy",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if score @s BattlePoints matches ' + v.price + '.. run tag @s add CanBuy');",
+                            "!q.player.has_tag('CanBuy') ? { v.result_page = 'buyfail' };",
+                            "q.player.has_tag('CanBuy') ? { q.player.remove_tag('CanBuy'); q.run_command('scoreboard players remove ' + q.player.username + ' BattlePoints ' + v.price); q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"transaction\"}'); q.run_command('givetm ' + v.move.name + ' ' + q.player.username); v.result_page = 'buysuccess' };",
+                            "q.dialogue.set_page(v.result_page);"
+                        ]
+                    },
+                    {
+                        "text": "Cancel",
+                        "value": "cancel",
+                        "action": [
+                            "q.dialogue.set_page('movelist');"
+                        ]
+                    }
+                ]
+            }
+        },
+
+        
+        {
+            "id": "buysuccess",
+            "speaker": "none",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Obtained the ' + v.move.display_name + ' TM!'"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('movelist');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buyfail",
+            "speaker": "npc",
+            "lines": [
+                "I'm sorry, but you don't have enough BP."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('movelist');"
+                    }
+                ]
+            }
+        },
+
+
+        {
+            "id": "leave",
+            "speaker": "npc",
+            "lines": [
+                "Please come back any time you want!"
             ],
             "input": {
                 "type": "option",
@@ -361,29 +300,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "end",
-            "speaker": "npc",
-            "lines": [
-                "Please come again!"
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
                         ]
                     }
                 ]

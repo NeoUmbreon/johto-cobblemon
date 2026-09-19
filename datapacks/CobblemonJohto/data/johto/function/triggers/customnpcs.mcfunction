@@ -12,7 +12,7 @@ execute as @s[x=-683,y=64,z=-471,distance=..4,scores={IP=1..}] run opendialogue 
 
 #Rock Smash guy before and after clearing Sudowoodo
 execute as @s[x=247,y=64,z=-20,distance=..6,tag=!Dialogue30] run opendialogue route36_blackbelt_interaction @s
-execute as @s[x=247,y=64,z=-20,distance=..6,tag=Dialogue30,tag=!RockSmash] run opendialogue route36_blackbelt_interaction2 @s
+execute as @s[x=247,y=64,z=-20,distance=..6,tag=Dialogue30,tag=!RockSmash] run opendialogue route36_blackbelt_interaction @s
 execute as @s[x=247,y=64,z=-20,distance=..6,tag=Dialogue30,tag=RockSmash] run opendialogue route36_blackbelt_interaction @s
 
 
@@ -42,6 +42,9 @@ execute as @s[x=514,y=31,z=-272,distance=..4,tag=RadioCard] run opendialogue rad
 #Goldenrod Bicycle Man
 execute as @s[x=423,y=64,z=-426,distance=..6,tag=!Dialogue23] run opendialogue bicycle_gift @s
 execute as @s[x=423,y=64,z=-426,distance=..6,tag=Dialogue23] run opendialogue goldenrod_blacksmith_interaction @s
+
+#Moomoo Farm
+execute as @s[x=804.0,y=64,z=271.0,distance=..6] run opendialogue moomoo_interaction @s
 
 #Clair, post-Dragon's-Den
 execute as @s[x=-856,y=65,z=720,distance=..6,tag=!Clair] at @s run runmolangscript johto:trainer_dialogue_handler @s @n[type=cobblemon:npc,distance=..16,nbt={Config:{trainer_id:clair}}]
@@ -131,10 +134,9 @@ execute as @s[x=-2554,y=55,z=854,distance=..10] run opendialogue mewtwo_encounte
 
 
 #Professor Oak
-execute as @s[x=-1715,y=64,z=-307,distance=..6,tag=!Dialogue153] run opendialogue professoroak_dialogue153 @s
-execute as @s[x=-1715,y=64,z=-307,distance=..6,tag=Dialogue153,tag=!AllGyms] run opendialogue pallet_oak_interaction @s
-execute as @s[x=-1715,y=64,z=-307,distance=..6,tag=AllGyms,tag=!Dialogue222] run opendialogue professoroak_dialogue222 @s
-execute as @s[x=-1715,y=64,z=-307,distance=..6,tag=Dialogue222] run opendialogue pallet_oak_interaction @s
+execute as @s[x=-1715,y=64,z=-307,distance=..6,tag=AllGyms,tag=!Dialogue222] run return run opendialogue professoroak_dialogue222 @s
+execute as @s[x=-1715,y=64,z=-307,distance=..6,tag=Red,tag=!Dialogue153] run return run opendialogue professoroak_dialogue153 @s
+execute as @s[x=-1715,y=64,z=-307,distance=..6] run return run opendialogue pallet_oak_interaction @s
 
 
 

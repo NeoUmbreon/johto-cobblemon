@@ -43,7 +43,7 @@ tag @s add Dialogue40
 tag @s add Dialogue41
 tag @s add Dialogue42
 tag @s add Dialogue43
-#tag @s add Dialogue44
+tag @s add Dialogue44
 #tag @s add Dialogue45
 #tag @s add Dialogue46
 #tag @s add Dialogue47
@@ -166,7 +166,7 @@ tag @s add Dialogue163
 tag @s add Dialogue164
 tag @s add Dialogue165
 tag @s add Dialogue166
-#tag @s add Dialogue167
+tag @s add Dialogue167
 tag @s add Dialogue168
 tag @s add Dialogue169
 tag @s add Dialogue170

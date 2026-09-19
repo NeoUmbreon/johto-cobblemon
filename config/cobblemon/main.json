@@ -8,5 +8,7 @@
   "infiniteHealerCharge": true,
   "faintAwakenHealthPercent": 0.0,
   "healPercent": 0.0,
-  "playerDamagePokemon": false
+  "playerDamagePokemon": false,
+  "awardExperienceToFaintedPokemon": true,
+  "awardExperienceOnBattleLoss": true
 }

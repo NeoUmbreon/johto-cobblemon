@@ -2,19 +2,21 @@
     "initializationAction": [
         "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
-    "escapeAction": [              
-        ],
+    "escapeAction": [],
     "speakers": {
         "npc": {
-          "name": "Old Man",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:oldman",
-            "isLeftSide": true
-          }
+            "name": "Old Man",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:oldman",
+                "isLeftSide": true
+            }
+        },
+        "none": {
+            "name": " "
         }
-      },
+    },
     "pages": [
         {
             "id": "greeting",
@@ -29,7 +31,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -38,7 +40,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "It was a rare treat to see! I want you to have this."
+                "It was a rare treat to see! Here, I'll teach you how to Surf."
             ],
             "input": {
                 "type": "option",
@@ -47,7 +49,29 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Surf');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot1",
+            "speaker": "none",
+            "lines": [
+                "You learned the Secret Technique Surf!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -56,7 +80,8 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Don't worry--take it!"
+                "Now you can swim across water with ease!",
+                "You should have your Pokémon learn Surf, too, with these TMs."
             ],
             "input": {
                 "type": "option",
@@ -65,7 +90,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -74,7 +99,30 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "That's Surf. It's a move that lets you swim across water."
+                "Don't be shy--take them!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm surf 3');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot2",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Surf TMs!"
             ],
             "input": {
                 "type": "option",
@@ -84,15 +132,13 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"gettm\"}');",
-                            "q.run_command('tag ' + q.player.username + ' add Surf');",
                             "q.run_command('tag ' + q.player.username + ' add Dialogue33');",
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.dialogue.close();"
-                            ]
+                        ]
                     }
                 ]
             }
         }
-        ]
-    }
+    ]
+}

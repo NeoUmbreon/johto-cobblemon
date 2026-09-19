@@ -1,134 +1,221 @@
 {
-  "initializationAction": [
-      "c.npc.set_chatting();",
-      "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-      "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add SageLi');",
-      "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/flashhm');",
-      "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-      "q.run_command('scoreboard players add ' + q.player.username + ' Money 1200');"
-  ],
-  "escapeAction": [],
-  "speakers": {
-      "npc": {
-          "name": "Li",
-          "face": {
-              "type": "artificial",
-              "modelType": "npc",
-              "identifier": "cobblemon:sage",
-              "isLeftSide": true
-          }
-      }
-  },
-  "pages": [
-      {
-          "id": "greeting",
-          "speaker": "npc",
-          "lines": [
-              "Ah, excellent!"
-          ],
-          "input": {
-              "type": "option",
-              "vertical": false,
-              "options": [
-                  {
-                      "text": "Next",
-                      "value": "next",
-                      "action": "q.dialogue.next_page;"
-                  }
-              ]
-          }
-      },
-      {
-          "id": "page2",
-          "speaker": "npc",
-          "lines": [
-              "Hmmm...\nThe way you battle is quite elegant."
-          ],
-          "input": {
-              "type": "option",
-              "vertical": false,
-              "options": [
-                  {
-                      "text": "Next",
-                      "value": "next",
-                      "action": "q.dialogue.next_page;"
-                  }
-              ]
-          }
-      },
-      {
-          "id": "page3",
-          "speaker": "npc",
-          "lines": [
-              "You should be able to stand up to Falkner."
-          ],
-          "input": {
-              "type": "option",
-              "vertical": false,
-              "options": [
-                  {
-                      "text": "Next",
-                      "value": "next",
-                      "action": "q.dialogue.next_page;"
-                  }
-              ]
-          }
-      },
-      {
-          "id": "page4",
-          "speaker": "npc",
-          "lines": [
-              "And you should be able to make good use of this..."
-          ],
-          "input": {
-              "type": "option",
-              "vertical": false,
-              "options": [
-                  {
-                      "text": "Next",
-                      "value": "next",
-                      "action": "q.dialogue.next_page;"
-                  }
-              ]
-          }
-      },
-      {
-          "id": "page5",
-          "speaker": "npc",
-          "lines": [
-              "It is a Technical Machine called Flash. Take it with you!"
-          ],
-          "input": {
-              "type": "option",
-              "vertical": false,
-              "options": [
-                  {
-                      "text": "Next",
-                      "value": "next",
-                      "action": "q.dialogue.next_page;"
-                  }
-              ]
-          }
-      },
-      {
-          "id": "page6",
-          "speaker": "npc",
-          "lines": [
-              "With Flash, you can illuminate caves no matter how dark they may be."
-          ],
-          "input": {
-              "type": "option",
-              "vertical": false,
-              "options": [
-                  {
-                      "text": "Close",
-                      "value": "close",
-                      "action": [
-                          "q.dialogue.close();"
-                      ]
-                  }
-              ]
-          }
-      }
-  ]
+    "initializationAction": [
+        "c.npc.set_chatting();",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+        "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add SageLi');",
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 1200');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "npc": {
+            "name": "Li",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:sage",
+                "isLeftSide": true
+            }
+        },
+        "none": {
+            "name": " "
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "Ah, excellent!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "Hmmm...",
+                "The way you battle is quite elegant."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page3",
+            "speaker": "npc",
+            "lines": [
+                "You should be able to stand up to Falkner."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "And you should be able to make good use of this..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/flashhm');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot1",
+            "speaker": "none",
+            "lines": [
+                "You learned the Secret Technique Flash!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "Using that Secret Technique, you can illuminate caves no matter how dark they may be."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "I want you to have these as well.",
+                "They are Technical Machines. Take them with you!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm flash 3');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Flash TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "When a Pokémon learns Flash, it can be used to lower the foe's accuracy."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "npc",
+            "lines": [
+                "You can try it on Bellsprout, for example..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.dialogue.close;"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
 }

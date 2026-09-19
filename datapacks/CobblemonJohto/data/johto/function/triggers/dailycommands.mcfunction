@@ -14,6 +14,16 @@ scoreboard players reset Friday
 scoreboard players reset Saturday
 scoreboard players reset Sunday
 
+#molang global
+execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=1}] run runmolang "q.entity.world.server.data.weekday = 0;"
+execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=2}] run runmolang "q.entity.world.server.data.weekday = 1;"
+execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run runmolang "q.entity.world.server.data.weekday = 2;"
+execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] run runmolang "q.entity.world.server.data.weekday = 3;"
+execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=5}] run runmolang "q.entity.world.server.data.weekday = 4;"
+execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=6}] run runmolang "q.entity.world.server.data.weekday = 5;"
+execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=7}] run runmolang "q.entity.world.server.data.weekday = 6;"
+execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand] run runmolang "q.entity.world.server.save_data;"
+
 execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=1}] run scoreboard players set Monday Weekday 1
 execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=2}] run scoreboard players set Tuesday Weekday 1
 execute as @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run scoreboard players set Wednesday Weekday 1

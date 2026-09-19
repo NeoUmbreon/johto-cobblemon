@@ -1,21 +1,82 @@
-{   
+{
+    "initializationAction": [
+        "q.player.has_tag('RockSmash') ? { q.dialogue.set_page('aftergift'); return 0 };",
+        "q.player.has_tag('Dialogue30') ? q.dialogue.set_page('clearedsudowoodo');"
+    ],
     "speakers": {
         "npc": {
-          "name": "     ",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:blackbelt",
-            "isLeftSide": true
-          }
+            "name": "     ",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:blackbelt",
+                "isLeftSide": true
+            }
+        },
+        "none": {
+            "name": " "
         }
-      },
-      "pages": [
+    },
+    "pages": [
         {
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Yo! Haven't you had trouble with a boulder blocking your way?"
+                "Yo!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "greeting2",
+            "speaker": "npc",
+            "lines": [
+                "Haven't you had trouble with a boulder blocking your way? Of course you have!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.set_page('page2');"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "clearedsudowoodo",
+            "speaker": "npc",
+            "lines": [
+                "Are you the one who took care of the odd tree in the way?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "clearedsudowoodo2",
+            "speaker": "npc",
+            "lines": [
+                "You're quite the Trainer!"
             ],
             "input": {
                 "type": "option",
@@ -33,7 +94,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Of course you have!"
+                "I'll teach you this Secret Technique!"
             ],
             "input": {
                 "type": "option",
@@ -42,7 +103,28 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot1",
+            "speaker": "none",
+            "lines": [
+                "You learned the Secret Technique Rock Smash!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -51,7 +133,85 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "For people like you, there's an HM that will come to your rescue!"
+                "You can use it to smash boulders once you've earned the Violet City Gym Badge!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "npc",
+            "lines": [
+                "Take these TMs, too!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm rocksmash 3');",
+                            "q.player.add_tag('RockSmash');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot2",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Rock Smash TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "aftergift",
+            "speaker": "npc",
+            "lines": [
+                "They contain make-'em-faint Rock Smash."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "npc",
+            "lines": [
+                "You should think carefully which Pokémon should learn it."
             ],
             "input": {
                 "type": "option",
@@ -60,12 +220,10 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [
-                            "q.dialogue.close();"
-                            ]
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }
         }
-        ]
-    }
+    ]
+}
