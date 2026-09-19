@@ -42,7 +42,8 @@ This is an overhaul of Jond's [Cobblemon Johto](https://www.curseforge.com/minec
     - All trainers have custom teams
     - Gym Leaders and important trainers have custom movesets, held items, and stats
 
-### Other Tweaks
+### Other Features
+- TMs
 - Enhanced Safari Zone:
     - Multiplayer!
     - Faster generation & teardown
@@ -52,6 +53,7 @@ This is an overhaul of Jond's [Cobblemon Johto](https://www.curseforge.com/minec
     - Accurate-to-cart mechanics
 - Updated Trainer skins, courtesy of [Skycrafts](https://www.planetminecraft.com/member/skycrafts/)
 - Updated Trainer dialogue
+- Re-implemented missing quests/events
 - Dynamic Surfing music
     - Instead of playing by area, it plays whenever you are riding a Pokemon that is in water
 - Bicycle music no longer overwrites all other music
@@ -80,8 +82,8 @@ This is an overhaul of Jond's [Cobblemon Johto](https://www.curseforge.com/minec
 - [AllTheMons](https://modrinth.com/datapack/allthemons/versions?g=1.21.1)
     - Adds many models that are missing from Cobblemon.
     - **Delete these folders**: `data/special_spawn`, `data/cobblemon/spawn_pool_world`
-- [Fix Cobblemon Pokemon Experience](https://modrinth.com/mod/fix-cobblemon-pokemon-experience/versions?g=1.21.1)
-    - Applies experience gain at defeat instead of end-of-battle.
+- A Backpack or TM case mod
+    - Without one, you will struggle with inventory space.
 
 ### World
 > [!IMPORTANT]
