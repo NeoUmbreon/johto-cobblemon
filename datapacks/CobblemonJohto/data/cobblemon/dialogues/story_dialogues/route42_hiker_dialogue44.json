@@ -1,19 +1,15 @@
 {
     "initializationAction": [
-        "c.npc.set_chatting();",
-        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-        "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add SageLi');",
-        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $1,200 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-        "q.run_command('scoreboard players add ' + q.player.username + ' Money 1200');"
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
         "npc": {
-            "name": "Li",
+            "name": " ",
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:sage",
+                "identifier": "cobblemon:hiker",
                 "isLeftSide": true
             }
         },
@@ -24,9 +20,9 @@
     "pages": [
         {
             "id": "greeting",
-            "speaker": "npc",
+            "speaker": "none",
             "lines": [
-                "Ah, excellent!"
+                "Thud!"
             ],
             "input": {
                 "type": "option",
@@ -44,8 +40,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "Hmmm...",
-                "The way you battle is quite elegant."
+                "Oh, boy!"
             ],
             "input": {
                 "type": "option",
@@ -63,7 +58,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "You should be able to stand up to Falkner."
+                "Sorry that I bumped into you."
             ],
             "input": {
                 "type": "option",
@@ -81,29 +76,7 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "And you should be able to make good use of this..."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/flashhm');",
-                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
-                            "q.dialogue.next_page;"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "loot1",
-            "speaker": "none",
-            "lines": [
-                "You learned the Secret Technique Flash!"
+                "Did I hurt you?"
             ],
             "input": {
                 "type": "option",
@@ -121,26 +94,8 @@
             "id": "page5",
             "speaker": "npc",
             "lines": [
-                "Using that Secret Technique, you can illuminate caves no matter how dark they may be."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.next_page;"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "page6",
-            "speaker": "npc",
-            "lines": [
-                "I want you to have these as well.",
-                "They are Technical Machines. Take them with you!"
+                "Please don't cry.",
+                "Here, take these."
             ],
             "input": {
                 "type": "option",
@@ -152,7 +107,7 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
-                            "q.run_command('execute as ' + q.player.username + ' run givetm flash 3');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm strength 3');",
                             "q.dialogue.next_page;"
                         ]
                     }
@@ -163,7 +118,28 @@
             "id": "loot",
             "speaker": "none",
             "lines": [
-                "Obtained the Flash TMs!"
+                "Obtained the Strength TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Dialogue44');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "npc",
+            "lines": [
+                "It's a move called Strength!"
             ],
             "input": {
                 "type": "option",
@@ -178,30 +154,10 @@
             }
         },
         {
-            "id": "page7",
-            "speaker": "npc",
-            "lines": [
-                "When a Pokémon learns Flash, it can be used to lower the foe's accuracy."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": [
-                            "q.dialogue.next_page;"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
             "id": "page8",
             "speaker": "npc",
             "lines": [
-                "You can try it on Bellsprout, for example..."
+                "Enjoy a happy mountain-climbing life!"
             ],
             "input": {
                 "type": "option",
@@ -211,6 +167,9 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.run_command('particle cloud 192.0 64 207 1 1 1 1 100');",
+                            "q.run_command('tp @e[x=192,y=64,z=207,type=cobblemon:npc] -800 -50000 -280');",
                             "q.dialogue.close;"
                         ]
                     }

@@ -12,6 +12,9 @@
                 "identifier": "cobblemon:lance",
                 "isLeftSide": true
             }
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -79,7 +82,7 @@
             "id": "page4",
             "speaker": "lance",
             "lines": [
-                "Oh, yes. You should take this. I found it here, but I don't have any need for it."
+                "Oh, yes. You should take these. I found them here, but I don't have any need for them."
             ],
             "input": {
                 "type": "option",
@@ -89,9 +92,49 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"gettm\"}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm whirlpool 3');",
                             "q.run_command('tag ' + q.player.username + ' add Whirlpool');",
-                            "q.dialogue.set_page('page5');"
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Whirlpool TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "lance",
+            "lines": [
+                "That's Whirlpool. Have it with you to get across wild water."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.set_page('page6');"
                         ]
                     }
                 ]

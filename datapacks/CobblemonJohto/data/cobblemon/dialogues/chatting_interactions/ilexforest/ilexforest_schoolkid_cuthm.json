@@ -1,25 +1,29 @@
-{   
+{
     "initializationAction": [
         "q.run_command('tag ' + q.player.username + ' add InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
         "npc": {
-          "name": "     ",
-          "face": {
-            "type": "artificial",
-            "modelType": "npc",
-            "identifier": "cobblemon:schoolkid",
-            "isLeftSide": true
-          }
+            "name": "     ",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:schoolkid",
+                "isLeftSide": true
+            }
+        },
+        "none": {
+            "name": " "
         }
-      },
+    },
     "pages": [
         {
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Wow! Thanks a whole bunch!"
+                "Wow!",
+                "You got me both of them."
             ],
             "input": {
                 "type": "option",
@@ -28,7 +32,25 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page1",
+            "speaker": "npc",
+            "lines": [
+                "Thank you so much!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -46,7 +68,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -55,7 +77,7 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Without it, we wouldn't be able to Cut trees for charcoal."
+                "Without them, we wouldn't be able to cut trees for charcoal."
             ],
             "input": {
                 "type": "option",
@@ -64,7 +86,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -82,7 +104,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page5');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -91,7 +113,7 @@
             "id": "page5",
             "speaker": "npc",
             "lines": [
-                "I know! Here, take this."
+                "I know! Here, let me show you something..."
             ],
             "input": {
                 "type": "option",
@@ -100,7 +122,29 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page6');"
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' add Cut');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"caughtmon\"}');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot1",
+            "speaker": "none",
+            "lines": [
+                "You learned the Secret Technique Cut!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -109,7 +153,7 @@
             "id": "page6",
             "speaker": "npc",
             "lines": [
-                "That's the Cut HM. You can use that to clear small trees."
+                "You can use that Secret Technique to clear small trees."
             ],
             "input": {
                 "type": "option",
@@ -118,13 +162,54 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page7');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
             "id": "page7",
+            "speaker": "npc",
+            "lines": [
+                "Take these TMs, too!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
+                            "q.run_command('execute as ' + q.player.username + ' run givetm cut 3');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "loot2",
+            "speaker": "none",
+            "lines": [
+                "Obtained the Cut TMs!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
             "speaker": "npc",
             "lines": [
                 "Thanks again for your help!"
@@ -139,12 +224,11 @@
                         "action": [
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"gettm\"}');",
-                            "q.run_command('tag ' + q.player.username + ' add Cut');",
                             "q.dialogue.close();"
-                            ]
+                        ]
                     }
                 ]
             }
         }
-        ]
-    }
+    ]
+}

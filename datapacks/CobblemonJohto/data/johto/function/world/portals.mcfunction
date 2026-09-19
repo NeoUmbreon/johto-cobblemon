@@ -353,6 +353,7 @@ tp @s[x=-1751,y=64,z=95,dx=4,dy=3,tag=!Dialogue235] ~ ~ ~-10
 tag @s[x=-1751,y=64,z=95,dx=4,dy=3] remove GymVictory
 execute as @s[x=-1751,y=64,z=95,dx=4,dy=3] at @s run function johto:tools/tpwithsfx {xyz:"-1131 65 738",sfx:"enterdoor"}
 
+execute as @s[x=-1134,y=65,z=737,dx=9,dy=6,tag=!Dialogue167] at @s run opendialogue oak_allbadges_call @s
 execute as @s[x=-1134,y=65,z=737,dx=9,dy=6] at @s run function johto:tools/tpwithsfx {xyz:"-1749 64 94",sfx:"exitbuilding"}
 
 
@@ -489,6 +490,13 @@ execute as @s[x=1226,y=31,z=165,dx=3,dy=3] at @s run function johto:tools/tpwith
 execute as @s[x=1238,y=95,z=234,dx=3,dy=3] at @s run function johto:tools/tpwithsfx {xyz:"1229 31 166",sfx:"exitbuilding"}
 
 #--------------------------------------------------
+
+#Mt. Mortar Hiker Dialogue
+execute as @s[x=190,y=64,z=207,dx=4,dy=4,tag=!Dialogue44] positioned 192.0 64 207 run function johto:sound/playglobalsfx {sfx:"exitbuilding",category:"player"}
+execute as @s[x=190,y=64,z=207,dx=4,dy=4,tag=!Dialogue44] run particle cloud 192.0 64 207 1 1 1 1 100
+execute as @s[x=190,y=64,z=207,dx=4,dy=4,tag=!Dialogue44] run npcspawnat 192.0 64 207 route42_hiker
+execute as @s[x=190,y=64,z=207,dx=4,dy=4,tag=!Dialogue44] run opendialogue route42_hiker_dialogue44 @s
+execute as @s[x=190,y=64,z=207,dx=4,dy=4,tag=!Dialogue44] run return run tp @s 192.0 64 205 0 0
 
 #Mt. Mortar Ecruteak Side
 scoreboard players set @s[x=190,y=64,z=207,dx=4,dy=4] EscapeRope 14
