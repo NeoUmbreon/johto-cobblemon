@@ -1,15 +1,8 @@
 {
-    "hitbox": "player",
     "resourceIdentifier": "cobblemon:lance",
-    "autoHealParty": true,
-    "isMovable": false,
-    "isLeashable": false,
-    "allowProjectileHits": false,
-    "isInvulnerable": true,
-    "canDespawn": false,
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:lance_interaction"
+        "dialogue": "cobblemon:lance_rematch_interaction"
     },
     "config": [
         {
@@ -20,43 +13,11 @@
             "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
         },
         {
-            "variableName": "can_rechallenge",
-            "displayName": "Rechallenging",
-            "description": "This NPC can be battled multiple times.",
-            "type": "BOOLEAN",
-            "defaultValue": true
-        },
-        {
             "variableName": "on_player_wins",
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue lance_rematch_end @s');"
-          }
-    ],
-    "ai": [
-
-        {
-            "type": "add_tasks_to_activity",
-            "activity": "core",
-            "tasksByPriority": {
-                "0": [
-                    "look_at_target",
-                    "stay_afloat"
-                ]
-            }
-        },
-        {
-            "type": "add_tasks_to_activity",
-            "activity": "idle",
-            "tasksByPriority": {
-                "0": [
-                    "look_at_target"
-                ],
-                "1": [
-                    "look_at_entities"
-                ]
-            }
         }
     ],
     "name": "Lance",
@@ -70,5 +31,8 @@
             "Charizard level=68 moves=flamethrower,hyperbeam,dragonclaw,airslash",
             "Dragonite level=75 moves=dracometeor,safeguard,fireblast,hyperbeam"
         ]
-    }
+    },
+    "presets": [
+        "cobblemon:default"
+    ]
 }

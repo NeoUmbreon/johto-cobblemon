@@ -1,0 +1,41 @@
+c.battle.is_pvn == false ? return 0;
+
+'clear stored battle data';
+for_each(t.player, c.players, {
+    q.delete_variable(t.player.player.data, 'battle');
+});
+
+for_each(t.loser, c.scriptable_losers, {
+    t.loser.is_npc ? q.set_query('npc', t.loser);
+
+    !q.is_blank(t.loser.config.on_player_wins) ? {
+        for_each(t.player_winner, c.player_winners, {
+            q.set_query('player', t.player_winner.player);
+            q.run_molang(t.loser.config.on_player_wins);
+        });
+    };
+});
+
+for_each(t.winner, c.scriptable_winners, {
+    t.winner.is_npc ? q.set_query('npc', t.winner);
+    
+    !q.is_blank(t.winner.config.on_player_loses) ? {
+        for_each(t.player_loser, c.player_losers, {
+            q.set_query('player', t.player_loser.player);
+            q.run_molang(t.winner.config.on_player_loses);
+        });
+    };
+});
+
+return 1;
+
+'currently unused, might be useful in the future?';
+for_each(t.npc_actor, c.npcs, {
+    t.npc_actor.npc.config.challenge_cooldown != 0 ? {
+        for_each(t.player_actor, c.players, {
+            t.data = t.player_actor.player.get_npc_data(t.npc_actor.npc.uuid);
+            t.data.last_challenged_time = t.player_actor.player.world.game_time;
+            t.player_actor.player.save_data();
+        });
+    };
+});

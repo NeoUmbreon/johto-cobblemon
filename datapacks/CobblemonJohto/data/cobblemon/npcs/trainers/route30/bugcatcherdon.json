@@ -1,18 +1,11 @@
-{  
-    "hitbox": "player",
+{
     "resourceIdentifier": "cobblemon:bugcatcher",
-    "autoHealParty": true,
-    "isMovable": false,
-    "isLeashable": false,
-    "allowProjectileHits": false,
-    "isInvulnerable": true,
-    "canDespawn": false,
     "interaction": {
         "type": "dialogue",
         "dialogue": "cobblemon:bugcatcherdon_interaction"
     },
-        "name": "Don",
-        "party": {
+    "name": "Don",
+    "party": {
         "type": "simple",
         "pokemon": [
             "Caterpie level=3",
@@ -28,18 +21,14 @@
             "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
         },
         {
-            "variableName": "can_rechallenge",
-            "displayName": "Rechallenging",
-            "description": "This NPC can be battled multiple times.",
-            "type": "BOOLEAN",
-            "defaultValue": true
-        },
-        {
             "variableName": "on_player_wins",
             "displayName": "npc.variable.on_player_wins.name",
             "description": "npc.variable.on_player_wins.desc",
             "type": "TEXT",
             "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue bugcatcherdon_end @s');"
-          }
-        ]
-    }
+        }
+    ],
+    "presets": [
+        "cobblemon:default"
+    ]
+}

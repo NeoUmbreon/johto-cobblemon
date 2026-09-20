@@ -1,6 +1,6 @@
 {
     "presets": [
-        "cobblemon:battle_tower_trainer"
+        "cobblemon:default"
     ],
     "name": "Giliam",
     "resourceIdentifier": "cobblemon:gentleman"

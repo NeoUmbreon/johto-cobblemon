@@ -1,6 +1,6 @@
 {
     "presets": [
-        "cobblemon:battle_tower_trainer"
+        "cobblemon:default"
     ],
     "name": "Skip",
     "resourceIdentifier": "cobblemon:cameraman"

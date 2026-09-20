@@ -1,25 +1,40 @@
-{   "initializationAction": [              
-    "c.npc.set_chatting();",
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
-    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $480 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-    "q.run_command('scoreboard players add ' + q.player.username + ' Money 480');"
-        ],
-  "speakers": {
-    "npc": {
-      "name": "Proton",
-      "face": {
-        "type": "artificial",
-        "modelType": "npc",
-        "identifier": "cobblemon:proton",
-        "isLeftSide": true
-      }
-    }
-  },
-  "pages": [
-    {
-      "id": "greeting",
-      "speaker": "npc",
-      "lines": ["Humph... Team Rocket was indeed broken up three years ago. But we continued our activities underground."],
+{
+    "initializationAction": [
+        "q.run_command('tag ' + q.player.username + ' add Dialogue16');",
+        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $480 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 480');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
+        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');"
+    ],
+    "escapeAction": [],
+    "speakers": {
+        "kurt": {
+            "name": "Kurt",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:kurt",
+                "isLeftSide": true
+            }
+        },
+        "proton": {
+            "name": "Proton",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:proton",
+                "isLeftSide": false
+            }
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "proton",
+            "lines": [
+                "Grr...\nFor a kid to be this good...\nI didn't see it coming."
+            ],
             "input": {
                 "type": "option",
                 "vertical": false,
@@ -27,30 +42,276 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-          "id": "page2",
-          "speaker": "npc",
-          "lines": ["A small obstacle like you won't be much of a problem for our mission. I advise you to be very afraid of what is to come!"],
-                "input": {
-                    "type": "option",
-                    "vertical": false,
-                    "options": [
-                        {
-                            "text": "Close",
-                            "value": "close",
-                            "action": [              
-                                "q.dialogue.close();"]
-                        }
-                    ]
-                }
+            "id": "page2",
+            "speaker": "proton",
+            "lines": [
+                "Humph...\nTeam Rocket was indeed broken up three years ago. But we continued our activities underground."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
             }
-    ],
-    "escapeAction": [              
-      "q.dialogue.close();"
-      ]
+        },
+        {
+            "id": "page3",
+            "speaker": "proton",
+            "lines": [
+                "A small obstacle like you won't be much of a problem for our mission."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page4",
+            "speaker": "proton",
+            "lines": [
+                "I advise you to be very afraid of what is to come!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 86');",
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page5",
+            "speaker": "kurt",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'Way to go, ' + q.player.username + '!';"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page6",
+            "speaker": "kurt",
+            "lines": [
+                "Team Rocket has taken off. My back's better, too."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page7",
+            "speaker": "kurt",
+            "lines": [
+                "Let's get out of here."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 87');",
+                            "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s Farfetchd 0');",
+                            "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:story/rocket1');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page8",
+            "speaker": "kurt",
+            "lines": [
+                "You handled yourself like a real hero."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page9",
+            "speaker": "kurt",
+            "lines": [
+                "As I mentioned before, Team Rocket was disbanded by a boy called Red three years ago."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page10",
+            "speaker": "kurt",
+            "lines": [
+                "Now that they have come back...\nI have a bad feeling about it..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page11",
+            "speaker": "kurt",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "'In any case, it would please me greatly to make Poké Balls for a Trainer like you, ' + q.player.username + '.'"
+                },
+                "This is all I have now, but take it."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;",
+                            "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:fast_ball 5');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page12",
+            "speaker": "kurt",
+            "lines": [
+                "I make Poké Balls from Apricorns."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page13",
+            "speaker": "kurt",
+            "lines": [
+                "Collect them from trees and bring 'em to me."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": [
+                            "q.dialogue.next_page;"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page14",
+            "speaker": "kurt",
+            "lines": [
+                "I'll make Poké Balls out of them."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": [
+                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
 }

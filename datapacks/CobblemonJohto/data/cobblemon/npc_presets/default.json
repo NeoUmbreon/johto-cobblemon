@@ -1,4 +1,7 @@
-{  
+{
+    "names": [
+        " "
+    ],
     "hitbox": "player",
     "autoHealParty": true,
     "isMovable": false,
@@ -8,7 +11,6 @@
     "canDespawn": false,
     "hideNameTag": true,
     "ai": [
-
         {
             "type": "add_tasks_to_activity",
             "activity": "core",

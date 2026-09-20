@@ -1,18 +1,11 @@
-{  
-    "hitbox": "player",
+{
     "resourceIdentifier": "cobblemon:youngcouplem",
-    "autoHealParty": true,
-    "isMovable": false,
-    "isLeashable": false,
-    "allowProjectileHits": false,
-    "isInvulnerable": true,
-    "canDespawn": false,
     "interaction": {
         "type": "dialogue",
         "dialogue": "cobblemon:youngcouplemoe_interaction"
     },
-        "name": "Moe & Lulu",
-        "party": {
+    "name": "Moe & Lulu",
+    "party": {
         "type": "simple",
         "pokemon": [
             "Seedot level=43",
@@ -26,13 +19,6 @@
             "description": "npc.variable.on_player_loses.desc",
             "type": "TEXT",
             "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
-        },
-        {
-            "variableName": "can_rechallenge",
-            "displayName": "Rechallenging",
-            "description": "This NPC can be battled multiple times.",
-            "type": "BOOLEAN",
-            "defaultValue": true
         },
         {
             "variableName": "on_player_wins",
@@ -56,29 +42,7 @@
             "defaultValue": "youngcouplemoeandlulu"
         }
     ],
-    "ai": [
-
-        {
-            "type": "add_tasks_to_activity",
-            "activity": "core",
-            "tasksByPriority": {
-                "0": [
-                    "look_at_target",
-                    "stay_afloat"
-                ]
-            }
-        },
-        {
-            "type": "add_tasks_to_activity",
-            "activity": "idle",
-            "tasksByPriority": {
-                "0": [
-                    "look_at_target"
-                ],
-                "1": [
-                    "look_at_entities"
-                ]
-            }
-        }
+    "presets": [
+        "cobblemon:default"
     ]
 }
