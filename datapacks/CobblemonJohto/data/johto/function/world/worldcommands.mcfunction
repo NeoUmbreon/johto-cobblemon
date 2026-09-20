@@ -6,8 +6,8 @@ tag @e[x=-792,y=65,z=-284,dy=3,type=armor_stand] remove ReloadCheck
 function johto:triggers/autoreload
 execute if entity @e[x=-792,y=65,z=-284,dy=3,type=armor_stand,tag=!ReloadCheck] run reload
 
-#Aligns and gets rid of nametag
-execute as @e[type=cobblemon:npc,nbt={PersistenceRequired:0b}] run data merge entity @s {Rotation:[180f,0.0f],PersistenceRequired:1b,HideNPCNameTag:1b}
+#Gets rid of nametag
+execute as @e[x=0,type=cobblemon:npc,nbt={HideNPCNameTag:0b}] run data merge entity @s {HideNPCNameTag:1b}
 
 #Runs custom clickable loots
 execute as @a[tag=ItemLoot] run function johto:triggers/itemlootgive
