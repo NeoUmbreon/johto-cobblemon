@@ -1,6 +1,7 @@
 {
   "maxNearbyBlocksHorizontalRange": 1,
   "maxNearbyBlocksVerticalRange": 1,
+  "exportStarterConfig": true,
   "defaultFleeDistance": 24.0,
   "allowExperienceFromPvP": false,
   "experienceMultiplier": 1.0,
