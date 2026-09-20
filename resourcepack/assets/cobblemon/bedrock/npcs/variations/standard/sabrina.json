@@ -3,7 +3,7 @@
   "variations": [
     {
       "poser": "cobblemon:standard",
-      "model": "cobblemon:trainer.geo",
+      "model": "cobblemon:steve.geo",
       "texture": "cobblemon:textures/npcs/standard/sabrina.png"
     }
   ]
