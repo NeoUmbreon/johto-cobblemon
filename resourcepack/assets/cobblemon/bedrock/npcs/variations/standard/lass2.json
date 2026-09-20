@@ -3,7 +3,7 @@
   "variations": [
     {
       "poser": "cobblemon:standard",
-      "model": "cobblemon:steve.geo",
+      "model": "cobblemon:alex.geo",
       "texture": "cobblemon:textures/npcs/standard/lass2.png"
     }
   ]

@@ -1,10 +1,10 @@
 {
-  "name": "cobblemon:cynthia",
+  "name": "cobblemon:shopwoman",
   "variations": [
     {
       "poser": "cobblemon:standard",
       "model": "cobblemon:steve.geo",
-      "texture": "cobblemon:textures/npcs/chatting/cynthia.png"
+      "texture": "cobblemon:textures/npcs/chatting/shopwoman.png"
     }
   ]
 }

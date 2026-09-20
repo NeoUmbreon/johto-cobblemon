@@ -1,10 +1,10 @@
 {
-  "name": "cobblemon:bugcatcherf",
+  "name": "cobblemon:giovanni",
   "variations": [
     {
       "poser": "cobblemon:standard",
       "model": "cobblemon:steve.geo",
-      "texture": "cobblemon:textures/npcs/chatting/bugcatcherf.png"
+      "texture": "cobblemon:textures/npcs/standard/giovanni.png"
     }
   ]
 }

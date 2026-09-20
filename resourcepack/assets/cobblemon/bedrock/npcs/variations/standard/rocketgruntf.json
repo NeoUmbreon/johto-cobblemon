@@ -1,10 +1,10 @@
 {
-  "name": "cobblemon:richman",
+  "name": "cobblemon:rocketgruntf",
   "variations": [
     {
       "poser": "cobblemon:standard",
       "model": "cobblemon:steve.geo",
-      "texture": "cobblemon:textures/npcs/chatting/richman.png"
+      "texture": "cobblemon:textures/npcs/standard/rocketgruntf.png"
     }
   ]
 }
