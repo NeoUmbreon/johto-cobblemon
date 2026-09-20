@@ -90,7 +90,7 @@ This is an overhaul of Jond's [Cobblemon Johto](https://www.curseforge.com/minec
 > Use a fresh install of the map for the best experience.  
 
 1. Download the map from [CurseForge](https://www.curseforge.com/minecraft/worlds/cobblemon-johto/files/7507302).
-2. From the downloaded zip file:
+2. From the downloaded `.zip` file:
     - Copy/move the `Johto` folder into your `minecraft/saves` folder. **Do not rename it.**
 
 
@@ -98,25 +98,23 @@ This is an overhaul of Jond's [Cobblemon Johto](https://www.curseforge.com/minec
 
 ### Files
 1. Download `johto-cobblemon.zip` from the [Releases](../../releases) page.
-2. From the downloaded zip file:
-    - Copy/move the `config` and `resourcepacks` folders into your `minecraft` folder.
-    - Copy/move the `Johto` folder into your `minecraft/saves` folder.
+2. From the downloaded `.zip` file:
+    - Copy/move the `config` folder into your `minecraft` folder.
+    - Copy/move the `Johto` folder into your `minecraft/saves` folder, overwriting files when asked.
 
-### Music Pack
+**You're done. Enjoy!**
+
+
+## Optional Configuration
+
+#### Music Pack
 > [!NOTE]
 > This replaces the original "Cobblemon Johto Music Pack".  
 > The original is not required, and will not function with this datapack loaded.  
 
 1. Download `CobblemonJohtoMusicPack.zip` from [here](https://www.github.com/spacky1/cobblemon-johto-music-pack/releases/tag/nightly).
 2. Copy/move the `.zip` file into your `resourcepacks` folder.
-
-### Enabling the Resource Packs
-- Enable the resource packs named `CobblemonJohtoAddonPack` and `CobblemonJohtoMusicPack` in Minecraft.
-
-**You're done. Enjoy!**
-
-
-## Optional Configuration
+3. In Minecraft, enable the resource pack named `CobblemonJohtoMusicPack`.
 
 #### Map-specific settings (e.g. challenge mode)
 - Edit this file: `Johto/data/molang/config.json`
@@ -128,7 +126,9 @@ enable-command-block=true
 difficulty=peaceful
 gamemode=adventure
 level-name=Johto
+resource-pack=https://github.com/NeoUmbreon/johto-cobblemon/releases/download/nightly/CobblemonJohtoResourcePack.zip
 ```
+- Clients will need to install the optional Music Pack themselves.
 
 
 ## Credits & Thanks

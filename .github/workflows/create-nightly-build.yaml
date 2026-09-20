@@ -39,19 +39,18 @@ jobs:
 
     - name: Compress resource pack
       run: |
-        zip -r CobblemonJohtoAddonPack.zip ./resourcepack/*
+        zip -r CobblemonJohtoResourcePack.zip ./resourcepack/*
 
     - name: Build file structure
-      run : |
+      run: |
         mkdir -p ./Johto/datapacks
-        mkdir -p ./resourcepacks
-        cp -r ./data ./serverconfig ./Johto
-        cp ./datapacks/*.zip ./Johto/datapacks
-        cp CobblemonJohtoAddonPack.zip ./resourcepacks
+        mv ./data ./serverconfig ./Johto
+        mv ./datapacks/*.zip ./Johto/datapacks
+        cp CobblemonJohtoResourcePack.zip ./Johto/resources.zip
 
     - name: Create release zip
       run: |
-        zip -r johto-cobblemon.zip ./Johto ./config ./resourcepacks
+        zip -r johto-cobblemon.zip ./Johto ./config
     
     - name: Update nightly tag
       run: |
@@ -66,6 +65,6 @@ jobs:
 
     - name: Upload release assets
       run: |
-        gh release upload $NIGHTLY_TAG johto-cobblemon.zip --clobber
+        gh release upload $NIGHTLY_TAG johto-cobblemon.zip CobblemonJohtoResourcePack.zip --clobber
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
