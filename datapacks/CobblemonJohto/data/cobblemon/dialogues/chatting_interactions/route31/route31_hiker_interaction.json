@@ -2,10 +2,6 @@
     "initializationAction": [
         "q.player.data.flags.spearowmail_received && !q.player.data.loot.tms.rest ? q.dialogue.set_page('hasmail');"
     ],
-    "escapeAction": [
-        "v.took_mail && !q.player.data.loot.tms.rest ? { q.run_command('execute as ' + q.player.username + ' run givetm rest 3'); q.player.data.loot.tms.rest = 1; q.player.save_data };",
-        "q.dialogue.close;"
-    ],
     "speakers": {
         "npc": {
             "name": {
@@ -176,8 +172,6 @@
                             "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
                             "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
                             "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
-                            "v.took_mail = 1;",
-                            "q.player.party.remove_by_id(q.pokemon.id);",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.dialogue.set_page('takekenya');"
                         ]
@@ -196,8 +190,6 @@
                             "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
                             "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
                             "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
-                            "v.took_mail = 1;",
-                            "q.player.party.remove_by_id(q.pokemon.id);",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.dialogue.set_page('takekenya');"
                         ]
@@ -216,8 +208,6 @@
                             "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
                             "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
                             "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
-                            "v.took_mail = 1;",
-                            "q.player.party.remove_by_id(q.pokemon.id);",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.dialogue.set_page('takekenya');"
                         ]
@@ -236,8 +226,6 @@
                             "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
                             "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
                             "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
-                            "v.took_mail = 1;",
-                            "q.player.party.remove_by_id(q.pokemon.id);",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.dialogue.set_page('takekenya');"
                         ]
@@ -256,8 +244,6 @@
                             "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
                             "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
                             "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
-                            "v.took_mail = 1;",
-                            "q.player.party.remove_by_id(q.pokemon.id);",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.dialogue.set_page('takekenya');"
                         ]
@@ -276,8 +262,6 @@
                             "q.pokemon.held_item.is_of('minecraft:written_book') ? { v.has_mail = 1 };",
                             "!v.has_mail ? { q.dialogue.set_page('nomail'); return 0 };",
                             "!v.is_kenya ? { q.dialogue.set_page('takemail'); return 0 };",
-                            "v.took_mail = 1;",
-                            "q.player.party.remove_by_id(q.pokemon.id);",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.dialogue.set_page('takekenya');"
                         ]
@@ -458,9 +442,7 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "v.took_mail = 1;",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
-                            "q.pokemon.remove_held_item;",
                             "q.dialogue.next_page;"
                         ]
                     }
@@ -510,7 +492,8 @@
             "speaker": "npc",
             "lines": [
                 "\"Thank you for your Mail.",
-                "It was such an exciting adventure."
+                "It was such an exciting adventure.",
+                "I did not like Zubat, though...\""
             ],
             "input": {
                 "type": "option",
@@ -528,7 +511,6 @@
             "id": "readmail3",
             "speaker": "npc",
             "lines": [
-                "I did not like Zubat, though...\"",
                 "That's what it says."
             ],
             "input": {
@@ -594,6 +576,8 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
+                            "!v.is_kenya ? q.pokemon.remove_held_item;",
+                            "v.is_kenya ? q.player.party.remove_by_id(q.pokemon.id);",
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
                             "q.run_command('execute as ' + q.player.username + ' run givetm rest 3');",
