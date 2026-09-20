@@ -1,19 +1,10 @@
 {
   "name": "cobblemon:bugcatcher2",
-  "order": 1,
   "variations": [
     {
-      "aspects": [],
       "poser": "cobblemon:standard",
       "model": "cobblemon:trainer.geo",
-      "texture": "cobblemon:textures/npcs/chatting/bugcatcher2.png",
-      "layers": []
-    },
-    {
-      "aspects": [
-        "hasty"
-      ],
-      "poser": "cobblemon:standard"
+      "texture": "cobblemon:textures/npcs/chatting/bugcatcher2.png"
     }
   ]
 }

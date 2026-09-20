@@ -1,0 +1,10 @@
+{
+  "name": "cobblemon:scientistf",
+  "variations": [
+    {
+      "poser": "cobblemon:standard",
+      "model": "cobblemon:trainer.geo",
+      "texture": "cobblemon:textures/npcs/standard/scientistf.png"
+    }
+  ]
+}

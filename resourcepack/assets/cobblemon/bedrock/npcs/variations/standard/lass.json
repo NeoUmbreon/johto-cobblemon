@@ -1,0 +1,10 @@
+{
+  "name": "cobblemon:lass",
+  "variations": [
+    {
+      "poser": "cobblemon:standard",
+      "model": "cobblemon:trainer.geo",
+      "texture": "cobblemon:textures/npcs/standard/lass.png"
+    }
+  ]
+}

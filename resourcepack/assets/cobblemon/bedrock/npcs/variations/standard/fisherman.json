@@ -1,0 +1,10 @@
+{
+  "name": "cobblemon:fisherman",
+  "variations": [
+    {
+      "poser": "cobblemon:standard",
+      "model": "cobblemon:trainer.geo",
+      "texture": "cobblemon:textures/npcs/standard/fisherman.png"
+    }
+  ]
+}

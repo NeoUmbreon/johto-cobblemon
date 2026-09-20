@@ -1,0 +1,10 @@
+{
+  "name": "cobblemon:bugcatcher2",
+  "variations": [
+    {
+      "poser": "cobblemon:standard",
+      "model": "cobblemon:trainer.geo",
+      "texture": "cobblemon:textures/npcs/standard/bugcatcher2.png"
+    }
+  ]
+}

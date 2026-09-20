@@ -1,13 +1,10 @@
 {
   "name": "cobblemon:reporter",
-  "order": 0,
   "variations": [
     {
-      "aspects": [],
       "poser": "cobblemon:standard",
       "model": "cobblemon:trainer.geo",
-      "texture": "cobblemon:textures/npcs/standard/reporter.png",
-      "layers": []
+      "texture": "cobblemon:textures/npcs/standard/reporter.png"
     }
   ]
 }

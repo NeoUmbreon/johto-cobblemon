@@ -1,19 +1,10 @@
 {
   "name": "cobblemon:jond",
-  "order": 1,
   "variations": [
     {
-      "aspects": [],
       "poser": "cobblemon:standard",
       "model": "cobblemon:trainer.geo",
-      "texture": "cobblemon:textures/npcs/chatting/jond.png",
-      "layers": []
-    },
-    {
-      "aspects": [
-        "hasty"
-      ],
-      "poser": "cobblemon:standard"
+      "texture": "cobblemon:textures/npcs/chatting/jond.png"
     }
   ]
 }

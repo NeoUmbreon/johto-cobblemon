@@ -1,0 +1,10 @@
+{
+  "name": "cobblemon:silver",
+  "variations": [
+    {
+      "poser": "cobblemon:standard",
+      "model": "cobblemon:trainer.geo",
+      "texture": "cobblemon:textures/npcs/standard/silver.png"
+    }
+  ]
+}

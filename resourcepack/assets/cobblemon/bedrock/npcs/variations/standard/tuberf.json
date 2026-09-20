@@ -1,13 +1,10 @@
 {
   "name": "cobblemon:tuberf",
-  "order": 0,
   "variations": [
     {
-      "aspects": [],
       "poser": "cobblemon:standard",
       "model": "cobblemon:trainer.geo",
-      "texture": "cobblemon:textures/npcs/standard/tuberf.png",
-      "layers": []
+      "texture": "cobblemon:textures/npcs/standard/tuberf.png"
     }
   ]
 }

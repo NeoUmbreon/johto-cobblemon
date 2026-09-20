@@ -1,0 +1,10 @@
+{
+  "name": "cobblemon:boarder",
+  "variations": [
+    {
+      "poser": "cobblemon:standard",
+      "model": "cobblemon:trainer.geo",
+      "texture": "cobblemon:textures/npcs/standard/boarder.png"
+    }
+  ]
+}

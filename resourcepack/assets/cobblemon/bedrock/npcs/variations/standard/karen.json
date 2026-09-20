@@ -1,0 +1,10 @@
+{
+  "name": "cobblemon:karen",
+  "variations": [
+    {
+      "poser": "cobblemon:standard",
+      "model": "cobblemon:trainer.geo",
+      "texture": "cobblemon:textures/npcs/standard/karen.png"
+    }
+  ]
+}
