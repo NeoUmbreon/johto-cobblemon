@@ -1,8 +1,8 @@
 {
-  "entity.ghast.ambient": {"sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
-  "entity.ghast.death": {"sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
-  "entity.ghast.hurt": {"sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
-  "entity.ghast.scream": {"sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
-  "entity.ghast.shoot": {"sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
-  "entity.ghast.warn": {"sounds": [{"name":"entity.arrow.shoot", "type": "event"}]}
+  "entity.ghast.ambient": {"replace":true, "sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
+  "entity.ghast.death": {"replace":true, "sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
+  "entity.ghast.hurt": {"replace":true, "sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
+  "entity.ghast.scream": {"replace":true, "sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
+  "entity.ghast.shoot": {"replace":true, "sounds": [{"name":"entity.arrow.shoot", "type": "event"}]},
+  "entity.ghast.warn": {"replace":true, "sounds": [{"name":"entity.arrow.shoot", "type": "event"}]}
 }
