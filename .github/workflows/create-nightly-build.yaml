@@ -33,13 +33,10 @@ jobs:
       run: python process_files.py
 
     - name: Compress datapack(s)
-      run: |
-        cd ./datapacks/CobblemonJohto
-        zip -r ../CobblemonJohto.zip .
+      run: cd ./datapacks/CobblemonJohto && zip -r ../CobblemonJohto.zip .
 
     - name: Compress resource pack
-      run: |
-        zip -r CobblemonJohtoResourcePack.zip ./resourcepack/*
+      run: cd ./resourcepack && zip -r ../CobblemonJohtoResourcePack.zip .
 
     - name: Build file structure
       run: |
