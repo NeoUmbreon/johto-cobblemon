@@ -1,13 +1,11 @@
 {
     "speakers": {
         "npc": {
-            "name": "Rocket Grunt",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:rocketgrunt",
-                "isLeftSide": true
-            }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face;"
         }
     },
     "pages": [

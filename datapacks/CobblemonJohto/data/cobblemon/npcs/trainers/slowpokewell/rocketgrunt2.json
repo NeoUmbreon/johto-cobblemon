@@ -1,5 +1,5 @@
 {
-    "resourceIdentifier": "cobblemon:rocketgrunt",
+    "resourceIdentifier": "cobblemon:rocketgruntf",
     "interaction": {
         "type": "dialogue",
         "dialogue": "cobblemon:rocketgrunt2_interaction"

@@ -1,26 +1,27 @@
-{   "initializationAction": [              
-    "c.npc.set_chatting();",
-    "q.run_command('execute as ' + q.player.username + ' run tag @s add RocketPW1');",
-    "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
-    "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $720 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
-    "q.run_command('scoreboard players add ' + q.player.username + ' Money 720');"
-        ],
-  "speakers": {
-    "npc": {
-      "name": "Rocket Grunt",
-      "face": {
-        "type": "artificial",
-        "modelType": "npc",
-        "identifier": "cobblemon:rocketgrunt",
-        "isLeftSide": true
-      }
-    }
-  },
-  "pages": [
-    {
-      "id": "greeting",
-      "speaker": "npc",
-      "lines": ["The password for the boss's door--"],
+{
+    "initializationAction": [
+        "c.npc.set_chatting();",
+        "q.run_command('execute as ' + q.player.username + ' run tag @s add RocketPW1');",
+        "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
+        "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $720 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
+        "q.run_command('scoreboard players add ' + q.player.username + ' Money 720');"
+    ],
+    "speakers": {
+        "npc": {
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face;"
+        }
+    },
+    "pages": [
+        {
+            "id": "greeting",
+            "speaker": "npc",
+            "lines": [
+                "The password for the boss's door--"
+            ],
             "input": {
                 "type": "option",
                 "vertical": false,
@@ -34,9 +35,11 @@
             }
         },
         {
-          "id": "page2",
-          "speaker": "npc",
-          "lines": ["SLOWPOKETAIL."],
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "SLOWPOKETAIL."
+            ],
             "input": {
                 "type": "option",
                 "vertical": false,
@@ -44,14 +47,15 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [              
-                            "q.dialogue.close();"]
+                        "action": [
+                            "q.dialogue.close();"
+                        ]
                     }
                 ]
             }
         }
     ],
-    "escapeAction": [              
-      "q.dialogue.close();"
-      ]
+    "escapeAction": [
+        "q.dialogue.close();"
+    ]
 }

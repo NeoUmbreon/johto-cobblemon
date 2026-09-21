@@ -1,5 +1,5 @@
 {
-    "resourceIdentifier": "cobblemon:rocketgrunt",
+    "resourceIdentifier": "cobblemon:petrel",
     "interaction": {
         "type": "dialogue",
         "dialogue": "cobblemon:rocketgrunt33_interaction"
