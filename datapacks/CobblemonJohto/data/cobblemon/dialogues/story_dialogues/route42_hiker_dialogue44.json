@@ -169,7 +169,7 @@
                         "action": [
                             "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
                             "q.run_command('particle cloud 192.0 64 207 1 1 1 1 100');",
-                            "q.run_command('tp @e[x=192,y=64,z=207,type=cobblemon:npc] -800 -50000 -280');",
+                            "q.run_command('tp @e[x=192,y=64,z=207,dx=0,dy=0,dz=0,type=cobblemon:npc] -800 -50000 -280');",
                             "q.dialogue.close;"
                         ]
                     }
