@@ -11,29 +11,6 @@
             "Growlithe level=17"
         ]
     },
-    "config": [
-        {
-            "variableName": "on_player_loses",
-            "displayName": "npc.variable.on_player_loses.name",
-            "description": "npc.variable.on_player_loses.desc",
-            "type": "TEXT",
-            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
-        },
-        {
-            "variableName": "on_player_wins",
-            "displayName": "npc.variable.on_player_wins.name",
-            "description": "npc.variable.on_player_wins.desc",
-            "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue policemankeith_end @s');"
-        },
-        {
-            "variableName": "requirements",
-            "displayName": "Requirements",
-            "description": "Boolean expression (stored as a string) that must evaluate to true in order for the player to battle this NPC.",
-            "type": "TEXT",
-            "defaultValue": "q.npc.world.is_time_of_day('night') && !q.npc.world.is_time_of_day('twilight')"
-        }
-    ],
     "presets": [
         "cobblemon:default"
     ]

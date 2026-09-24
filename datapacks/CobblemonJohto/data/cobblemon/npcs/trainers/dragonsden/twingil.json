@@ -12,36 +12,6 @@
             "Dratini level=35"
         ]
     },
-    "config": [
-        {
-            "variableName": "on_player_loses",
-            "displayName": "npc.variable.on_player_loses.name",
-            "description": "npc.variable.on_player_loses.desc",
-            "type": "TEXT",
-            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
-        },
-        {
-            "variableName": "on_player_wins",
-            "displayName": "npc.variable.on_player_wins.name",
-            "description": "npc.variable.on_player_wins.desc",
-            "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue twingil_end @s');"
-        },
-        {
-            "variableName": "doubles",
-            "displayName": "Doubles",
-            "description": "",
-            "type": "BOOLEAN",
-            "defaultValue": true
-        },
-        {
-            "variableName": "trainer_id",
-            "displayName": "npc.variable.trainer_id.name",
-            "description": "npc.variable.trainer_id.desc",
-            "type": "TEXT",
-            "defaultValue": "twinscleaandgil"
-        }
-    ],
     "presets": [
         "cobblemon:default"
     ]

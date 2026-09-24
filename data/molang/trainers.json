@@ -1,0 +1,635 @@
+{
+  "acetrainerallen": {},
+  "acetraineralton": {},
+  "acetrainerblake": {},
+  "acetrainerbrian": {},
+  "acetrainercody": {},
+  "acetrainercybil": {},
+  "acetrainerfemma": {},
+  "acetrainerfgwen": {},
+  "acetrainerfran": {},
+  "acetrainerfrench": {},
+  "acetrainergaven": {},
+  "acetrainerirene": {},
+  "acetrainerjake": {},
+  "acetrainerjamie": {},
+  "acetrainerjen": {
+    "doubles_id": "doubleteamzacandjen"
+  },
+  "acetrainerjenn": {},
+  "acetrainerjoyce": {},
+  "acetrainerkae": {
+    "doubles_id": "doubleteamthomandkae"
+  },
+  "acetrainerkate": {},
+  "acetrainerkelly": {},
+  "acetrainerkevin": {},
+  "acetrainerkobe": {},
+  "acetrainerlois": {},
+  "acetrainerlola": {},
+  "acetrainermegan": {},
+  "acetrainermike": {},
+  "acetrainermnick": {},
+  "acetrainerpaulo": {},
+  "acetrainerpiper": {},
+  "acetrainerquinn": {},
+  "acetrainerreena": {},
+  "acetrainerryan": {},
+  "acetrainerthom": {
+    "doubles_id": "doubleteamthomandkae"
+  },
+  "acetrainerzac": {
+    "doubles_id": "doubleteamzacandjen"
+  },
+  "azalea_silver": {
+    "requirements": "q.player.has_tag('Dialogue16')"
+  },
+  "beautycallie": {},
+  "beautyjulia": {},
+  "beautykassandra": {},
+  "beautyolivia": {},
+  "beautysamantha": {},
+  "beautyvalerie": {},
+  "beautyvictoria": {},
+  "bikeraiden": {},
+  "bikercharles": {},
+  "bikerdale": {},
+  "bikerdan": {},
+  "bikerdwayne": {},
+  "bikerernest": {},
+  "bikerglenn": {},
+  "bikerharris": {},
+  "bikerjacob": {},
+  "bikerjoel": {},
+  "bikermarkey": {},
+  "bikerreese": {},
+  "bikerteddy": {},
+  "bikertheron": {},
+  "bikerzeke": {},
+  "birdkeeperabe": {},
+  "birdkeeperbert": {},
+  "birdkeeperbob": {},
+  "birdkeeperboris": {},
+  "birdkeeperbryan": {},
+  "birdkeeperdenis": {},
+  "birdkeepereaston": {},
+  "birdkeeperernie": {},
+  "birdkeepergail": {},
+  "birdkeeperhank": {},
+  "birdkeeperjose": {},
+  "birdkeeperjosh": {},
+  "birdkeeperjust": {},
+  "birdkeeperkinsley": {},
+  "birdkeeperperry": {},
+  "birdkeeperpeter": {},
+  "birdkeeperrod": {},
+  "birdkeeperroy": {},
+  "birdkeepertheo": {},
+  "birdkeepertoby": {},
+  "birdkeepervance": {},
+  "blackbeltander": {},
+  "blackbeltkenji": {},
+  "blackbeltkiyo": {},
+  "blackbeltlao": {},
+  "blackbeltlung": {},
+  "blackbeltmanford": {},
+  "blackbeltnob": {},
+  "blackbeltyoshi": {},
+  "blaine": {
+    "no_autobattle": true
+  },
+  "blaine_rematch": {
+    "no_autobattle": true
+  },
+  "blue": {
+    "no_autobattle": true
+  },
+  "blue_rematch": {
+    "no_autobattle": true
+  },
+  "boarderbrad": {},
+  "boarderbryce": {},
+  "boarderdouglas": {},
+  "boarderronald": {},
+  "boardershaun": {},
+  "brock": {
+    "no_autobattle": true
+  },
+  "brock_rematch": {
+    "no_autobattle": true
+  },
+  "bruno": {
+    "no_autobattle": true
+  },
+  "bruno_rematch": {
+    "no_autobattle": true
+  },
+  "bugcatcherabner": {},
+  "bugcatcheral": {},
+  "bugcatcherarnie": {},
+  "bugcatcherbenny": {},
+  "bugcatcherdane": {},
+  "bugcatcherdion": {},
+  "bugcatcherdon": {},
+  "bugcatcherdoug": {},
+  "bugcatchered": {},
+  "bugcatcherellis": {},
+  "bugcatcherjosh": {},
+  "bugcatcherrob": {},
+  "bugcatcherstacey": {},
+  "bugcatcherwade": {},
+  "bugcatcherwayne": {},
+  "bugsy": {
+    "no_autobattle": true
+  },
+  "bugsy_rematch": {
+    "no_autobattle": true
+  },
+  "burglararnie": {},
+  "burglarduncan": {},
+  "burglarlewis": {},
+  "burglarorson": {},
+  "burglarsimon": {},
+  "burnedtower_silver": {},
+  "camperclark": {},
+  "camperdean": {},
+  "campereliott": {},
+  "campergrant": {},
+  "camperivan": {},
+  "camperjerry": {},
+  "camperlloyd": {},
+  "camperpedro": {},
+  "camperquentin": {},
+  "camperroland": {},
+  "campersid": {},
+  "camperspencer": {},
+  "campertanner": {},
+  "camperted": {},
+  "campertodd": {},
+  "campervirgil": {},
+  "cherrygrove_silver": {
+    "requirements": "q.player.has_tag('Dialogue5')"
+  },
+  "chuck": {
+    "no_autobattle": true
+  },
+  "chuck_rematch": {
+    "no_autobattle": true
+  },
+  "clair": {
+    "no_autobattle": true
+  },
+  "clair_rematch": {
+    "no_autobattle": true
+  },
+  "erika": {
+    "no_autobattle": true
+  },
+  "erika_rematch": {
+    "no_autobattle": true
+  },
+  "falkner": {
+    "no_autobattle": true
+  },
+  "falkner_rematch": {
+    "no_autobattle": true
+  },
+  "firebreatherbill": {},
+  "firebreatherburt": {},
+  "firebreatherlyle": {},
+  "firebreatherotis": {},
+  "firebreatherray": {},
+  "firebreatherwalt": {},
+  "fishermanandre": {},
+  "fishermanarnold": {},
+  "fishermanbarney": {},
+  "fishermanedgar": {},
+  "fishermangideon": {},
+  "fishermanhenry": {},
+  "fishermanjustin": {},
+  "fishermankyle": {},
+  "fishermankyler": {},
+  "fishermanliam": {},
+  "fishermanmartin": {},
+  "fishermanmarvin": {},
+  "fishermanmurphy": {},
+  "fishermanralph": {},
+  "fishermanraymond": {},
+  "fishermanscott": {},
+  "fishermanstephen": {},
+  "fishermantully": {},
+  "fishermanwilton": {},
+  "gentlemanalfred": {},
+  "gentlemanandrew": {},
+  "gentlemangregory": {},
+  "gentlemanmilton": {},
+  "gentlemanpreston": {},
+  "goldenrod_silver": {},
+  "guitaristvincent": {},
+  "hikeranthony": {},
+  "hikerbailey": {},
+  "hikerbenjamin": {},
+  "hikerbruce": {},
+  "hikerclarke": {},
+  "hikerdaniel": {},
+  "hikerdevin": {},
+  "hikerdwight": {},
+  "hikeredwin": {},
+  "hikereoin": {},
+  "hikererik": {},
+  "hikerjim": {},
+  "hikerkenny": {},
+  "hikerleonard": {},
+  "hikermichael": {},
+  "hikernoland": {},
+  "hikerparry": {},
+  "hikerphillip": {},
+  "hikerrussel": {},
+  "hikertimothy": {},
+  "janine": {
+    "no_autobattle": true
+  },
+  "janine_rematch": {
+    "no_autobattle": true
+  },
+  "jasmine": {
+    "no_autobattle": true
+  },
+  "jasmine_rematch": {
+    "no_autobattle": true
+  },
+  "jugglerfritz": {},
+  "jugglerhorton": {},
+  "jugglerirwin": {},
+  "karen": {
+    "no_autobattle": true
+  },
+  "karen_rematch": {
+    "no_autobattle": true
+  },
+  "kimonokuni": {},
+  "kimonomiki": {},
+  "kimononaoko": {},
+  "kimonosayo": {},
+  "kimonozuki": {},
+  "koga": {
+    "no_autobattle": true
+  },
+  "koga_rematch": {
+    "no_autobattle": true
+  },
+  "lance": {
+    "no_autobattle": true
+  },
+  "lance_rematch": {
+    "no_autobattle": true
+  },
+  "lasscarrie": {},
+  "lasscathy": {},
+  "lassconnie": {},
+  "lassdana": {},
+  "lassellen": {},
+  "lasskrise": {},
+  "lasslaura": {},
+  "lassmichelle": {},
+  "lassshannon": {},
+  "mediumdarcy": {},
+  "mediumedith": {},
+  "mediumgeorgina": {},
+  "mediumgrace": {},
+  "mediummartha": {},
+  "mediumrebecca": {},
+  "misty": {
+    "no_autobattle": true
+  },
+  "misty_rematch": {
+    "no_autobattle": true
+  },
+  "morty": {
+    "no_autobattle": true
+  },
+  "morty_rematch": {
+    "no_autobattle": true
+  },
+  "mtmoon_silver": {},
+  "ninjaalice": {
+    "no_autobattle": true
+  },
+  "ninjabarry": {
+    "no_autobattle": true
+  },
+  "ninjacindy": {
+    "no_autobattle": true
+  },
+  "ninjalinda": {
+    "no_autobattle": true
+  },
+  "picknickeradrian": {},
+  "picknickerbrooke": {},
+  "picknickercheyenne": {},
+  "picknickerdebra": {},
+  "picknickeredna": {},
+  "picknickererin": {},
+  "picknickergina": {},
+  "picknickerginger": {},
+  "picknickerheidi": {},
+  "picknickerhope": {},
+  "picknickerkim": {},
+  "picknickerliz": {},
+  "picknickerpiper": {},
+  "picknickerselina": {},
+  "picknickersharon": {},
+  "picknickertanya": {},
+  "picknickertiffany": {},
+  "pokefanalex": {},
+  "pokefanallan": {},
+  "pokefanbeverly": {},
+  "pokefanboone": {},
+  "pokefanbrandon": {},
+  "pokefancarter": {},
+  "pokefancolin": {},
+  "pokefanderek": {},
+  "pokefaneleanor": {},
+  "pokefanjamie": {},
+  "pokefanjoshua": {},
+  "pokefanrex": {},
+  "pokefanrobert": {},
+  "pokefanruth": {},
+  "pokefantrevor": {},
+  "pokefanwilliam": {},
+  "pokemaniacbeckett": {},
+  "pokemaniacbrent": {},
+  "pokemaniaccalvin": {},
+  "pokemaniacdonald": {},
+  "pokemaniacharrison": {},
+  "pokemaniacissac": {},
+  "pokemaniaclarry": {},
+  "pokemaniacron": {},
+  "pokemaniacshane": {},
+  "pokemaniaczach": {},
+  "policemandirk": {
+    "requirements": "q.npc.world.is_time_of_day('night') && !q.npc.world.is_time_of_day('twilight')"
+  },
+  "policemankeith": {
+    "requirements": "q.npc.world.is_time_of_day('night') && !q.npc.world.is_time_of_day('twilight')"
+  },
+  "pryce": {
+    "no_autobattle": true
+  },
+  "pryce_rematch": {
+    "no_autobattle": true
+  },
+  "psychiceli": {},
+  "psychicfidel": {},
+  "psychicfranklin": {},
+  "psychicgreg": {},
+  "psychicherman": {},
+  "psychicjared": {},
+  "psychicmark": {},
+  "psychicnathan": {},
+  "psychicnelson": {},
+  "psychicphil": {},
+  "psychicvernon": {},
+  "red": {
+    "no_autobattle": true
+  },
+  "rocketarcher": {},
+  "rocketariana": {},
+  "rocketariana2": {},
+  "rocketgrunt1": {},
+  "rocketgrunt10": {},
+  "rocketgrunt11": {},
+  "rocketgrunt12": {},
+  "rocketgrunt13": {},
+  "rocketgrunt14": {},
+  "rocketgrunt15": {},
+  "rocketgrunt16": {},
+  "rocketgrunt17": {},
+  "rocketgrunt18": {},
+  "rocketgrunt19": {},
+  "rocketgrunt2": {},
+  "rocketgrunt20": {},
+  "rocketgrunt21": {},
+  "rocketgrunt22": {},
+  "rocketgrunt23": {},
+  "rocketgrunt24": {},
+  "rocketgrunt25": {},
+  "rocketgrunt26": {},
+  "rocketgrunt27": {},
+  "rocketgrunt28": {},
+  "rocketgrunt29": {},
+  "rocketgrunt3": {},
+  "rocketgrunt30": {},
+  "rocketgrunt31": {},
+  "rocketgrunt32": {},
+  "rocketgrunt33": {},
+  "rocketgrunt34": {},
+  "rocketgrunt4": {},
+  "rocketgrunt5": {},
+  "rocketgrunt6": {},
+  "rocketgrunt7": {},
+  "rocketgrunt8": {},
+  "rocketgrunt9": {},
+  "rocketproton1": {
+    "no_autobattle": true
+  },
+  "rocketproton2": {},
+  "sabrina": {
+    "no_autobattle": true
+  },
+  "sabrina_rematch": {
+    "no_autobattle": true
+  },
+  "sagechow": {},
+  "sageedmond": {},
+  "sagegaku": {},
+  "sagejin": {},
+  "sagekoji": {},
+  "sageli": {
+    "no_autobattle": true
+  },
+  "sagemasa": {},
+  "sageneal": {},
+  "sagenico": {},
+  "sagetroy": {},
+  "sailoreddie": {},
+  "sailoreugene": {},
+  "sailorharry": {},
+  "sailorhuey": {},
+  "sailorjeff": {},
+  "sailorkent": {},
+  "sailorparker": {},
+  "sailorroberto": {},
+  "sailorstanly": {},
+  "sailorterrell": {},
+  "schoolkidalan": {},
+  "schoolkidbilly": {},
+  "schoolkidchad": {},
+  "schoolkidconnor": {},
+  "schoolkiddanny": {},
+  "schoolkiddudley": {},
+  "schoolkidjack": {},
+  "schoolkidjoe": {},
+  "schoolkidjohnny": {},
+  "schoolkidkipp": {},
+  "schoolkidsherman": {},
+  "schoolkidtommy": {},
+  "schoolkidtorin": {},
+  "schoolkidtravis": {},
+  "scientistbraydon": {},
+  "scientistdaniel": {},
+  "scientistivan": {},
+  "scientistjed": {},
+  "scientistlinden": {},
+  "scientistlowell": {},
+  "scientistmitch": {},
+  "scientistross": {},
+  "scientistted": {},
+  "skiercady": {},
+  "skierclarissa": {},
+  "skierroxanne": {},
+  "supernerdcary": {},
+  "supernerderic": {},
+  "supernerdhugh": {},
+  "supernerdmarkus": {},
+  "supernerdmerie": {},
+  "supernerdpat": {},
+  "supernerdsam": {},
+  "supernerdteru": {},
+  "supernerdtyrone": {},
+  "supernerdwaldo": {},
+  "surge": {
+    "no_autobattle": true
+  },
+  "surge_rematch": {
+    "no_autobattle": true
+  },
+  "swimmerberke": {},
+  "swimmerbriana": {},
+  "swimmercharlie": {},
+  "swimmerchelan": {},
+  "swimmerdebbie": {},
+  "swimmerdenise": {},
+  "swimmerdiana": {},
+  "swimmerduane": {},
+  "swimmerelaine": {},
+  "swimmerelmo": {},
+  "swimmeresteban": {},
+  "swimmerfrankie": {},
+  "swimmergeorge": {},
+  "swimmerharold": {},
+  "swimmerjerome": {},
+  "swimmerjoy": {},
+  "swimmerkara": {},
+  "swimmerkaylee": {},
+  "swimmerkendra": {},
+  "swimmerleona": {},
+  "swimmerlori": {},
+  "swimmerluis": {},
+  "swimmermatthew": {},
+  "swimmermina": {},
+  "swimmernicole": {},
+  "swimmernikki": {},
+  "swimmerpaula": {},
+  "swimmerrandall": {},
+  "swimmerronald": {},
+  "swimmersimon": {},
+  "swimmersusie": {},
+  "swimmertucker": {},
+  "swimmertyson": {},
+  "swimmerwendy": {},
+  "teacherclarice": {},
+  "teachercolette": {},
+  "teacherhillary": {},
+  "twinamy": {
+    "doubles_id": "twinsamyandmimi"
+  },
+  "twinclea": {
+    "doubles_id": "twinscleaandgil"
+  },
+  "twindani": {
+    "doubles_id": "twinsdayanddani"
+  },
+  "twinday": {
+    "doubles_id": "twinsdayanddani"
+  },
+  "twingil": {
+    "doubles_id": "twinscleaandgil"
+  },
+  "twinjo": {
+    "doubles_id": "twinsjoandzoe"
+  },
+  "twinkay": {
+    "doubles_id": "twinskayandtia"
+  },
+  "twinmeg": {
+    "doubles_id": "twinsmegandpeg"
+  },
+  "twinmimi": {
+    "doubles_id": "twinsamyandmimi"
+  },
+  "twinpeg": {
+    "doubles_id": "twinsmegandpeg"
+  },
+  "twintia": {
+    "doubles_id": "twinskayandtia"
+  },
+  "twintil": {
+    "doubles_id": "twinstoriandtil"
+  },
+  "twintori": {
+    "doubles_id": "twinstoriandtil"
+  },
+  "twinzoe": {
+    "doubles_id": "twinsjoandzoe"
+  },
+  "victoryroad_silver": {},
+  "whitney": {
+    "no_autobattle": true
+  },
+  "whitney_rematch": {
+    "no_autobattle": true
+  },
+  "will": {
+    "no_autobattle": true
+  },
+  "will_rematch": {
+    "no_autobattle": true
+  },
+  "youngcoupleduff": {
+    "doubles_id": "youngcoupleduffandeda"
+  },
+  "youngcoupleeda": {
+    "doubles_id": "youngcoupleduffandeda"
+  },
+  "youngcouplelulu": {
+    "doubles_id": "youngcouplemoeandlulu"
+  },
+  "youngcouplemoe": {
+    "doubles_id": "youngcouplemoeandlulu"
+  },
+  "youngcouplesue": {
+    "doubles_id": "youngcoupletimandsue"
+  },
+  "youngcoupletara": {
+    "doubles_id": "youngcouplevicandtara"
+  },
+  "youngcoupletim": {
+    "doubles_id": "youngcoupletimandsue"
+  },
+  "youngcouplevic": {
+    "doubles_id": "youngcouplevicandtara"
+  },
+  "youngsteralbert": {},
+  "youngstergordon": {},
+  "youngsterian": {},
+  "youngsterjason": {},
+  "youngsterjimmy": {},
+  "youngsterjoey": {},
+  "youngsterjohnson": {},
+  "youngstermikey": {},
+  "youngsterowen": {},
+  "youngsterregis": {},
+  "youngstersamuel": {},
+  "youngsterwarren": {}
+}

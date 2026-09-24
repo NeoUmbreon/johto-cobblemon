@@ -1,8 +1,8 @@
 q.set_query('config', q.file.load('data/molang/config.json'));
 q.config.hot_reload ? q.file.clear('data/molang/config.json');
 
-q.player.data.battle.whiteout_on_disconnect = !q.npc.config.auto_battle;
+q.player.data.battle.whiteout_on_disconnect = v.trainer_data.no_autobattle;
 q.player.data.battle.x = (q.player.x + q.npc.x) / 2;
 q.player.data.battle.y = q.npc.y;
 q.player.data.battle.z = (q.player.z + q.npc.z) / 2;
-q.player.data.battle.max_battle_distance = (q.is_blank(q.npc.config.challenge_distance) ? q.config.max_challenge_distance : q.npc.config.challenge_distance);
+q.player.data.battle.max_battle_distance = (q.is_blank(v.trainer_data.challenge_distance) ? q.config.max_challenge_distance : v.trainer_data.challenge_distance);

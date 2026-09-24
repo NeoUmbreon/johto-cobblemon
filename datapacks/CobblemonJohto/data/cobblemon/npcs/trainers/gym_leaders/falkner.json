@@ -4,22 +4,6 @@
         "type": "dialogue",
         "dialogue": "cobblemon:falkner_interaction"
     },
-    "config": [
-        {
-            "variableName": "on_player_loses",
-            "displayName": "npc.variable.on_player_loses.name",
-            "description": "npc.variable.on_player_loses.desc",
-            "type": "TEXT",
-            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
-        },
-        {
-            "variableName": "on_player_wins",
-            "displayName": "npc.variable.on_player_wins.name",
-            "description": "npc.variable.on_player_wins.desc",
-            "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue falkner_end @s');"
-        }
-    ],
     "name": "Falkner",
     "party": {
         "type": "simple",

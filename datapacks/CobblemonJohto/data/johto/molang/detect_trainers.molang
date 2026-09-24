@@ -7,16 +7,20 @@ for_each(t.pokemon, q.player.party.pokemon, {
 q.set_query('config', q.file.load('data/molang/config.json'));
 q.config.hot_reload ? q.file.clear('data/molang/config.json');
 t.entities = q.player.get_nearby_entities(q.config.max_challenge_distance * 2);
+t.trainers = q.file.load('data/molang/trainers.json');
 
 for_each(t.entity, t.entities, {
     q.set_query('npc', t.entity);
+    t.class = q.get_variable(q.split_string(q.npc.class,'cobblemon:'), '1');
+    v.trainer_data = q.get_variable(t.trainers, t.class);
 
     loop(1, {
-        q.npc.config.auto_battle ? {
-            !q.is_blank(q.npc.config.requirements) && !q.run_molang(q.npc.config.requirements) ? break;
-            q.npc.config.doubles && t.usable_pokemon < 2 ? break;
-            q.player.has_tag('defeated.' + q.npc.config.trainer_id) ? break;
-            !q.npc.can_see(q.player, ( q.is_blank(q.npc.config.challenge_distance) ? q.config.max_challenge_distance : q.npc.config.challenge_distance ) ) ? break;
+        v.trainer_data != 0 && !v.trainer_data.no_autobattle ? {
+            v.trainer_id = v.trainer_data.doubles_id != 0 ? v.trainer_data.doubles_id : t.class;
+            !q.is_blank(v.trainer_data.requirements) && !q.run_molang(v.trainer_data.requirements) ? break;
+            !q.is_blank(v.trainer_data.doubles_id) && t.usable_pokemon < 2 ? break;
+            q.player.has_tag('defeated.' + v.trainer_id) ? break;
+            !q.npc.can_see(q.player, ( q.is_blank(v.trainer_data.challenge_distance) ? q.config.max_challenge_distance : v.trainer_data.challenge_distance ) ) ? break;
 
             t.match = true;
         };

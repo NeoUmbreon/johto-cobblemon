@@ -300,7 +300,7 @@ def update_trainer_entity(trainer_id: str, folder: str):
         entity_data = json.load(f)
 
     # inject config
-    inject_trainer_config(entity_data, trainer_id, auto_battle)
+    #inject_trainer_config(entity_data, trainer_id, auto_battle)
 
     # interaction handling
     entity_data["interaction"] = {

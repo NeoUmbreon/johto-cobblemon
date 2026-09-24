@@ -1,7 +1,10 @@
 q.player == 0 || q.npc == 0 || !q.file.exists('data/molang/players/' + q.player.uuid + '.json') ? return 0;
 
 'fetch json';
-t.trainer_id = q.npc.config.trainer_id;
+t.trainers = q.file.load('data/molang/trainers.json');
+t.class = q.get_variable(q.split_string(q.npc.class,'cobblemon:'), '1');
+t.trainer_data = q.get_variable(t.trainers, t.class);
+t.trainer_id = t.trainer_data.doubles_id != 0 ? t.trainer_data.doubles_id : t.class;
 q.is_included(t.trainer_id, 'silver') ? { t.trainer_id = t.trainer_id + math.clamp(q.to_int(q.player.data.starter.species), 1, 3) };
 
 'fallback if challenge json missing';

@@ -1,16 +1,21 @@
 q.player.in_battle || q.player.has_tag('Whiteout') ? return 0;
 
-!q.is_blank(q.npc.config.requirements) && !q.run_molang(q.npc.config.requirements) ? return q.npc.run_dialogue(q.player, q.npc.config.trainer_id + '_interaction_fail');
+t.trainers = q.file.load('data/molang/trainers.json');
+t.class = q.get_variable(q.split_string(q.npc.class,'cobblemon:'), '1');
+v.trainer_data = q.get_variable(t.trainers, t.class);
+v.trainer_id = v.trainer_data.doubles_id != 0 ? v.trainer_data.doubles_id : t.class;
 
-q.player.has_tag('defeated.' + q.npc.config.trainer_id) ? return q.npc.run_dialogue(q.player, q.npc.class + '_end_defeated');
+!q.is_blank(v.trainer_data.requirements) && !q.run_molang(v.trainer_data.requirements) ? return q.npc.run_dialogue(q.player, v.trainer_id + '_interaction_fail');
+
+q.player.has_tag('defeated.' + v.trainer_id) ? return q.npc.run_dialogue(q.player, v.trainer_id + '_end_defeated');
 
 !q.player.party.has_usable_pokemon ? return q.run_command('tellraw ' + q.player.username + ' {"text":"You have no usable Pokémon!","italic":true,"color":"gray"}');
 
-q.npc.config.doubles ? {
+!q.is_blank(v.trainer_data.doubles_id) ? {
     for_each(t.pokemon, q.player.party.pokemon, {
         t.pokemon.current_hp > 0 ? { t.usable_pokemon = t.usable_pokemon + 1 };
     });
-    t.usable_pokemon < 2 ? return q.npc.run_dialogue(q.player, q.npc.class + '_interaction');
+    t.usable_pokemon < 2 ? return q.npc.run_dialogue(q.player, v.trainer_id + '_interaction');
 };
 
 q.run_script('johto:prebattle_dialogue');

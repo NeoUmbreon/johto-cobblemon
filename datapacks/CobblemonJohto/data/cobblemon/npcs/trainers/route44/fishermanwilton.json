@@ -13,22 +13,6 @@
             "Seaking level=28"
         ]
     },
-    "config": [
-        {
-            "variableName": "on_player_loses",
-            "displayName": "npc.variable.on_player_loses.name",
-            "description": "npc.variable.on_player_loses.desc",
-            "type": "TEXT",
-            "defaultValue": "q.run_script('cobblemon:generic_forfeit');"
-        },
-        {
-            "variableName": "on_player_wins",
-            "displayName": "npc.variable.on_player_wins.name",
-            "description": "npc.variable.on_player_wins.desc",
-            "type": "TEXT",
-            "defaultValue": "q.run_command('execute as ' + q.player.username + ' run opendialogue fishermanwilton_end @s');"
-        }
-    ],
     "presets": [
         "cobblemon:default"
     ]

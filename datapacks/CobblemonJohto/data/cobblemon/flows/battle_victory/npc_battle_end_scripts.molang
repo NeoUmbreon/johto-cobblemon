@@ -5,24 +5,34 @@ for_each(t.player, c.players, {
     q.delete_variable(t.player.player.data, 'battle');
 });
 
-for_each(t.loser, c.scriptable_losers, {
-    t.loser.is_npc ? q.set_query('npc', t.loser);
+t.trainers = q.file.load('data/molang/trainers.json');
 
-    !q.is_blank(t.loser.config.on_player_wins) ? {
+for_each(t.loser, c.npc_losers, {
+    q.set_query('npc', t.loser.npc);
+    t.class = q.get_variable(q.split_string(q.npc.class,'cobblemon:'), '1');
+    t.trainer_data = q.get_variable(t.trainers, t.class);
+
+    !q.is_blank(t.trainer_data) ? {
         for_each(t.player_winner, c.player_winners, {
             q.set_query('player', t.player_winner.player);
-            q.run_molang(t.loser.config.on_player_wins);
+
+            t.trainer_id = t.trainer_data.doubles_id != 0 ? t.trainer_data.doubles_id : t.class;
+            q.player.add_tag('defeated.' + t.trainer_id);
+            q.npc.run_dialogue(q.player, t.trainer_id + '_end');
         });
     };
 });
 
-for_each(t.winner, c.scriptable_winners, {
-    t.winner.is_npc ? q.set_query('npc', t.winner);
-    
-    !q.is_blank(t.winner.config.on_player_loses) ? {
+for_each(t.winner, c.npc_winners, {
+    q.set_query('npc', t.winner.npc);
+    t.class = q.get_variable(q.split_string(q.npc.class,'cobblemon:'), '1');
+    t.trainer_data = q.get_variable(t.trainers, t.class);
+
+    !q.is_blank(t.trainer_data) ? {
         for_each(t.player_loser, c.player_losers, {
             q.set_query('player', t.player_loser.player);
-            q.run_molang(t.winner.config.on_player_loses);
+
+            q.run_script('cobblemon:generic_forfeit');
         });
     };
 });
