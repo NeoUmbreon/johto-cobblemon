@@ -11,5 +11,8 @@
     "evs": {
         "atk": 252,
         "spd": 252
-    }
+    },
+    "aspects": [
+        "plant-cloak"
+    ]
 }

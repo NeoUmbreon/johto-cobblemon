@@ -11,5 +11,8 @@
     "evs": {
         "hp": 252,
         "atk": 252
-    }
+    },
+    "aspects": [
+        "plant-cloak"
+    ]
 }

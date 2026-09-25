@@ -11,5 +11,8 @@
     "evs": {
         "def": 252,
         "spa": 252
-    }
+    },
+    "aspects": [
+        "plant-cloak"
+    ]
 }
