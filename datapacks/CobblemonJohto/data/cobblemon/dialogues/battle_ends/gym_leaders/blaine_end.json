@@ -1,6 +1,7 @@
 {
     "initializationAction": [
         "c.npc.set_chatting();",
+        "q.run_script('johto:clear_gym','cinnabar');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
         "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add Blaine');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $7,080 for winning!\",\"italic\":true,\"color\":\"gray\"}');",

@@ -1,1 +1,25 @@
-q.player.add_tag('defeated.' + q.npc.Config.trainer_id);
+c.arg_1 == 0 ? return 0;
+
+t.gyms.violet = q.array('birdkeeperabe','birdkeeperrod');
+t.gyms.azalea = q.array('bugcatcheral','bugcatcherbenny','bugcatcherjosh','twinsamyandmimi');
+t.gyms.goldenrod = q.array('beautysamantha','beautyvictoria','lasscarrie','lasscathy');
+t.gyms.ecruteak = q.array('mediumedith','mediumgeorgina','mediumgrace','mediummartha');
+t.gyms.cianwood = q.array('blackbeltlao','blackbeltlung','blackbeltnob','blackbeltyoshi');
+t.gyms.mahogany = q.array('boarderbrad','boarderdouglas','boarderronald','skierclarissa','skierroxanne');
+t.gyms.blackthorn = q.array('acetrainercody','acetrainerfran','acetrainerlola','acetrainermike','acetrainerpaulo');
+t.gyms.pewter = q.array('camperjerry','hikeredwin');
+t.gyms.cerulean = q.array('sailoreddie','sailorparker','swimmerbriana','swimmerdiana','swimmerjoy');
+t.gyms.vermilion = q.array('gentlemangregory','guitaristvincent','jugglerhorton');
+t.gyms.celadon = q.array('beautyjulia','lassmichelle','picknickertanya','twinsjoandzoe');
+t.gyms.fuchsia = q.array('ninjaalice','ninjabarry','ninjacindy','ninjalinda');
+t.gyms.saffron = q.array('mediumdarcy','mediumrebecca','psychicfranklin','psychicjared');
+t.gyms.cinnabar = q.array('scientistdaniel','scientistlinden','scientistlowell','supernerdcary','supernerdmerie','supernerdwaldo');
+
+t.trainer_ids = q.get_variable(t.gyms, c.arg_1);
+q.is_blank(t.trainer_ids) ? return 0;
+
+for_each(t.id, t.trainer_ids, {
+    q.player.add_tag('defeated.' + t.id);
+});
+
+return 1;
