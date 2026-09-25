@@ -2,9 +2,9 @@
     "resourceIdentifier": "cobblemon:birdkeeper",
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:birdkeeperbert_interaction"
+        "dialogue": "cobblemon:birdkeeperbret_interaction"
     },
-    "name": "Bert",
+    "name": "Bret",
     "party": {
         "type": "simple",
         "pokemon": [
