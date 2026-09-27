@@ -1,6 +1,6 @@
-#Summons uncatchable, noAI Miltank
-forceload add ~ ~
-pokespawnat ~ ~ ~ miltank no_ai=yes uncatchable=yes level=10
+#Summons uncatchable, noAI Pokemon
+#Because of the target selectors, forceloading needs to be done on a previous tick
+$pokespawnat ~ ~ ~ $(species) no_ai=yes uncatchable=yes level=$(level)
 data modify entity @n[type=cobblemon:pokemon,distance=0] PersistenceRequired set value 1b
 data modify entity @n[type=cobblemon:pokemon,distance=0] Unbattleable set value 1b
 data modify entity @n[type=cobblemon:pokemon,distance=0] Invulnerable set value true
