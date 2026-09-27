@@ -1,55 +1,16 @@
-# Prevent rerunning this
-execute if score #firstrun click matches 2.. run return fail
-scoreboard players add #firstrun click 1
+# Change scores below to match target version
+execute if score #world_version click matches 1.. run return fail
+scoreboard players set #world_version click 1
 
-# Stage 2 (entity target selectors)
+# If you need to load an unloaded region and use entity target selectors, it needs to be done after a delay
+# Based on my testing 2t seems to be enough, should test on very low-end hardware
+# 1st Pass
 #-------------------------------------
-# Remove Clear Weather and Whiteout from the lobby
-execute if score #firstrun click matches 2 run function johto:load/removelobbytoggles
-
-# Battle Tower renovation
-execute if score #firstrun click matches 2 run kill @e[x=894,y=100,z=56,dx=17,dy=3,dz=22,type=cobblemon:npc]
-execute if score #firstrun click matches 2 run forceload remove 875 50 930 108
-
-# Clair interaction boxes
-execute if score #firstrun click matches 2 positioned -856 65 720 run function johto:spawn/npcboxes
-execute if score #firstrun click matches 2 run forceload remove -856 720
-
-# Summon 4 Miltank on the ranch
-execute if score #firstrun click matches 2 positioned 792 64 202 rotated 0 0 run function johto:load/spawnmiltank
-execute if score #firstrun click matches 2 positioned 748 64 216 rotated 90 0 run function johto:load/spawnmiltank
-execute if score #firstrun click matches 2 positioned 788 64 219 rotated 180 0 run function johto:load/spawnmiltank
-execute if score #firstrun click matches 2 positioned 774 64 207 rotated 270 0 run function johto:load/spawnmiltank
-
-# Summon Moomoo in the paddock
-execute if score #firstrun click matches 2 positioned 804.0 64 271.0 run summon interaction ~ ~ ~ {width:1,height:1.5,response:1b,Tags:[NPCs]}
-execute if score #firstrun click matches 2 positioned 804.0 64 271.0 rotated 180 0 run function johto:load/spawnmiltank
-
-# Goldenrod North Gate
-execute if score #firstrun click matches 2 run setblock 482 64 -267 air
-execute if score #firstrun click matches 2 positioned 482 64 -267 run kill @e[distance=..1,type=interaction]
-execute if score #firstrun click matches 2 run forceload remove 482 -267
-
-# Done
-execute if score #firstrun click matches 2 run return 1
-#-------------------------------------
-
-# Battle Tower renovation
-forceload add 875 50 930 108
-place template johto:battletower 875 63 50
-place template johto:battlesalon 890 43 66
-npcspawnat 903 45 72 battlesalon_clerk
-npcspawnat 901 45 77 buck_salon
-npcspawnat 893 45.5 77 marley_salon
-npcspawnat 912 45.5 77 cheryl_salon
-npcspawnat 895 45.5 73 mira_salon
-npcspawnat 910 45.5 75 riley_salon
-
 # Remove Clear Weather and Whiteout from the lobby
 forceload add -968 -360 -970 -345
 
-# Whiteout enabled by default
-execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run function johto:tools/togglewhiteout
+# Battle Tower renovation
+forceload add 875 50 930 108
 
 # Summon 4 Miltank on the ranch
 forceload add 792 202
@@ -60,6 +21,26 @@ forceload add 774 207
 # Summon Moomoo in the paddock
 forceload add 804 271
 
+# Goldenrod North Gate
+forceload add 482 -267
+#-------------------------------------
+# 2nd Pass (schedule)
+schedule function johto:updates/v1/pass2 2t
+#-------------------------------------
+
+# Battle Tower renovation
+place template johto:battletower 875 63 50
+place template johto:battlesalon 890 43 66
+npcspawnat 903 45 72 battlesalon_clerk
+npcspawnat 901 45 77 buck_salon
+npcspawnat 893 45.5 77 marley_salon
+npcspawnat 912 45.5 77 cheryl_salon
+npcspawnat 895 45.5 73 mira_salon
+npcspawnat 910 45.5 75 riley_salon
+
+# Whiteout enabled by default
+execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run function johto:tools/togglewhiteout
+
 # Goldenrod Dept. Store Daily Drawing Corner
 forceload add 434 -407
 fill 434 94 -404 432 97 -407 air
@@ -69,12 +50,6 @@ fill 435 94 -409 435 95 -403 white_stained_glass_pane
 fill 432 95 -403 435 95 -409 lime_carpet replace white_stained_glass_pane
 npcspawnat 434 94 -407 goldenrod_lotteryclerk
 forceload remove 434 -407
-
-# Clair interaction boxes
-forceload add -856 720
-
-# Goldenrod North Gate
-forceload add 482 -267
 
 # New Shopkeepers
 npcspawnat -2302 77 373 celadon_tmshop

@@ -1,4 +1,7 @@
 {
+    "initializationAction": [
+        "q.player.has_tag('Clair') ? q.npc.run_dialogue(q.player, 'clair_end_defeated_afterbadge');"
+    ],
     "speakers": {
         "npc": {
             "name": "Clair",
