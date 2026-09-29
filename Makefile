@@ -1,20 +1,23 @@
 BUILD_DIR := build
+DATA_DIR := $(BUILD_DIR)/data/molang
 
 ifeq ($(OS),Windows_NT)
     # Batch
     PYTHON := py
-    MKDIR := if not exist "$(BUILD_DIR)" mkdir "$(BUILD_DIR)"
-    DELETE := if exist "$(BUILD_DIR)" rmdir /s /q "$(BUILD_DIR)"
-    COPY_F = copy /Y "$(1)" "$(BUILD_DIR)" >nul
-    COPY_R = robocopy "$(CURDIR)\$(1)" "$(CURDIR)\$(BUILD_DIR)\$(1)" /MIR /XD players /NFL /NDL /NJH /NJS | findstr /v "^$$" || rem
+    MKDIR = if not exist "$(1)" mkdir "$(1)"
+    DELETE = if exist "$(1)" rmdir /s /q "$(1)"
+    COPY_F = copy /Y "$(subst /,\,$(1))" "$(2)" >nul
+    COPY_R = robocopy "$(1)" "$(2)\$(1)" /MIR /NFL /NDL /NJH /NJS | findstr /v "^$$" || rem
+    COPY_IF_MISSING = if not exist "$(2)" copy /Y "$(subst /,\,$(1))" "$(2)" >nul
     TIME := %time:~0,8%
 else
     # POSIX
     PYTHON := python
-    MKDIR := mkdir -p $(BUILD_DIR)
-    DELETE := rm -rf $(BUILD_DIR)
-    COPY_F = cp $(1) $(BUILD_DIR)/
-    COPY_R = rsync -a --delete --exclude=players $(1)/ $(BUILD_DIR)/$(1)/
+    MKDIR = mkdir -p $(1)
+    DELETE = rm -rf $(1)
+    COPY_F = cp $(1) $(2)/
+    COPY_R = rsync -a --delete $(1)/ $(2)/$(1)/
+    COPY_IF_MISSING = test -f $(2) || cp $(1) $(2)
     TIME := $$(date +%H:%M:%S)
 endif
 
@@ -28,14 +31,16 @@ all:
 	$(ECHO_END)
 
 copy:
-	$(MKDIR)
-	$(call COPY_R,datapacks)
-	$(call COPY_R,data)
-	$(call COPY_F,challengemode_trainers.xlsx)
-	$(call COPY_F,process_files.py)
+	$(call MKDIR,$(BUILD_DIR))
+	$(call COPY_R,datapacks,$(BUILD_DIR))
+	$(call COPY_F,challengemode_trainers.xlsx,$(BUILD_DIR))
+	$(call COPY_F,process_files.py,$(BUILD_DIR))
+	$(call COPY_R,data/molang/battle_frontier,$(BUILD_DIR))
+	$(call COPY_F,data/molang/trainers.json,$(DATA_DIR))
+	$(call COPY_IF_MISSING,data/molang/config.json,$(DATA_DIR)/config.json)
 
 clean:
-	$(DELETE)
+	$(call DELETE,$(BUILD_DIR))
 
 revert: # if process_files was run in the repo
 	git restore datapacks/CobblemonJohto/data/cobblemon/dialogues/interactions/
