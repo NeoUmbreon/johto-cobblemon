@@ -78,10 +78,27 @@ def load_excel_teams(valid_items, valid_moves, excel_file):
 
         pokemon = {}
 
-        pokemon["species"] = str(row["Species"]).strip().lower().replace("'", "").replace("’", "").replace(".", "").replace(" ", "")
-        pokemon["level"] = int(row["Level"]) if not pd.isna(row["Level"]) else 1
+        pokemon["species"] = (
+            str(row["Species"])
+            .strip()
+            .lower()
+            .replace("'", "")
+            .replace("’", "")
+            .replace(".", "")
+            .replace(" ", "")
+        )
         
-        if "Item" in row and not pd.isna(row["Item"]):
+        if not pd.isna(row["Gender"]):
+            opt = {
+                "M": "MALE",
+                "F": "FEMALE"
+            }
+            gender = opt.get(str(row["Gender"]).upper())
+
+            if gender:
+                pokemon["gender"] = gender
+        
+        if not pd.isna(row["Item"]):
             item = (
                 str(row["Item"])
                 .strip()
@@ -95,7 +112,7 @@ def load_excel_teams(valid_items, valid_moves, excel_file):
             else:
                 pokemon["helditem"] = item
 
-        if "Ability" in row and not pd.isna(row["Ability"]):
+        if not pd.isna(row["Ability"]):
             ability = (
                 str(row["Ability"])
                 .strip()
@@ -108,6 +125,8 @@ def load_excel_teams(valid_items, valid_moves, excel_file):
             # validate?
             pokemon["ability"] = ability
         
+        pokemon["level"] = int(row["Level"]) if not pd.isna(row["Level"]) else 1
+        
         if not pd.isna(row["EVs"]):
             try:
                 evs = json.loads(row["EVs"])
@@ -117,7 +136,7 @@ def load_excel_teams(valid_items, valid_moves, excel_file):
             else:
                 pokemon["evs"] = evs
 
-        if "Nature" in row and not pd.isna(row["Nature"]):
+        if not pd.isna(row["Nature"]):
             nature = (
                 str(row["Nature"])
                 .strip()
@@ -131,7 +150,7 @@ def load_excel_teams(valid_items, valid_moves, excel_file):
 
         moveset = []
         for col in ["Move1", "Move2", "Move3", "Move4"]:
-            if col in row and not pd.isna(row[col]):
+            if not pd.isna(row[col]):
                 move = (
                     str(row[col])
                     .strip()
