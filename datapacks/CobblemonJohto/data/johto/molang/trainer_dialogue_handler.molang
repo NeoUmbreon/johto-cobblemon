@@ -15,7 +15,7 @@ q.player.has_tag('defeated.' + v.trainer_id) ? return q.npc.run_dialogue(q.playe
     for_each(t.pokemon, q.player.party.pokemon, {
         t.pokemon.current_hp > 0 ? { t.usable_pokemon = t.usable_pokemon + 1 };
     });
-    t.usable_pokemon < 2 ? return q.npc.run_dialogue(q.player, v.trainer_id + '_interaction');
+    t.usable_pokemon < 2 ? return q.npc.run_dialogue(q.player, t.class + '_interaction');
 };
 
 q.run_script('johto:prebattle_dialogue');
