@@ -1,26 +1,22 @@
-q.player == 0 || q.npc == 0 || !q.file.exists('data/molang/players/' + q.player.uuid + '.json') ? return 0;
+'check prerequisites';
+!q.file.exists('data/molang/players/' + q.player.uuid + '.json') ? return 0;
+q.player == 0 || q.npc == 0 || q.trainer_data == 0 || q.class == 0 || q.format == 0 ? return 0;
 
-'fetch json';
-t.trainers = q.file.load('data/molang/trainers.json');
-t.class = q.get_variable(q.split_string(q.npc.class,'cobblemon:'), '1');
-t.trainer_data = q.get_variable(t.trainers, t.class);
-t.trainer_id = t.trainer_data.doubles_id != 0 ? t.trainer_data.doubles_id : t.class;
+'fetch trainer json; fail if missing';
+t.trainer_id = q.is_blank(q.trainer_data.doubles_id) ? q.class : q.trainer_data.doubles_id;
 q.is_included(t.trainer_id, 'silver') ? { t.trainer_id = t.trainer_id + math.clamp(q.to_int(q.player.data.starter.species), 1, 3) };
-
-'fallback if challenge json missing';
 !q.file.exists('data/molang/challengemode_trainers/' + t.trainer_id + '.json') ? return 0;
-
 q.config.hot_reload ? q.file.clear('data/molang/challengemode_trainers/' + t.trainer_id + '.json');
 t.trainer = q.file.load('data/molang/challengemode_trainers/' + t.trainer_id + '.json');
 
-'build party';
+'build rctapi party from json data';
 t.party_store = q.npc.create_npc_party;
 t.rct_trainer.team = q.array;
 for_each(t.raw_data, t.trainer.party, {
     t.raw_data.species == 0 ? { q.print('ERROR: Pokemon missing species (trainer: ' + t.trainer_id + ', index: ' + t.i + ')'); break; };
     t.raw_data.level == 0 ? { q.print('ERROR: Pokemon missing level (trainer: ' + t.trainer_id + ', index: ' + t.i + ')'); break; };
 
-    'create pokemon with cobblemon to fetch moves, ability, etc';
+    'create pokemon object with cobblemon to fetch moves, ability, etc';
     t.properties = t.raw_data.species + ' level=' + t.raw_data.level;
     t.raw_data.moveset != 0 ? { t.properties = t.properties + ' moves=' + t.raw_data.moveset };
     t.party_store.add_by_properties(q.to_string(t.properties));
@@ -45,21 +41,24 @@ for_each(t.raw_data, t.trainer.party, {
         t.j = t.j + 1;
     });
 
+    'done';
     q.append(t.rct_trainer.team, t.pokemon_out);
-
     t.i = t.i + 1;
     t.i == 6 ? break;
 });
-'fallback check 2';
-math.clamp(q.length(t.trainer.party), 1, 6) != q.length(t.rct_trainer.team) ? { q.player.tell('Error, falling back to normal trainer party'); return 0 };
 
-'write to file, battle';
-t.trainer.ai != 0 ? { t.rct_trainer.ai = t.trainer.ai };
-t.trainer.name != 0 ? { t.rct_trainer.name = t.trainer.name } : { t.rct_trainer.name = q.npc.name };
+'failure check 2';
+math.clamp(q.length(t.trainer.party), 1, 6) != q.length(t.rct_trainer.team) ? {
+    q.player.tell('Challenge mode error, falling back to normal trainer party');
+    return 0;
+};
 
+'write data to per-player file';
+!q.is_blank(t.trainer.ai) ? { t.rct_trainer.ai = t.trainer.ai };
+t.rct_trainer.name = q.is_blank(t.trainer.name) ? q.npc.name : t.trainer.name;
 q.file.save('data/molang/players/' + q.player.uuid + '.json', t.rct_trainer);
-
 q.run_command('tbcs reload tbcs:' + q.player.uuid);
-q.run_command('tbcs battle GEN_9_' + q.to_upper(v.format) + ' ' + q.player.uuid + ' vs ' + q.npc.uuid + ' as tbcs:' + q.player.uuid);
 
+'battle';
+q.run_command('tbcs battle GEN_9_' + q.to_upper(q.format) + ' ' + q.player.uuid + ' vs ' + q.npc.uuid + ' as tbcs:' + q.player.uuid);
 return 1;

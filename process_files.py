@@ -212,17 +212,11 @@ def get_battle_music(trainer_id: str, folder: str) -> int:
     return 11  # Default Johto trainer
 
 def build_battle_action(trainer_id: str, folder: str):
-    battle_id = get_battle_music(trainer_id, folder)
+    music_id = get_battle_music(trainer_id, folder)
 
     actions = [
-        "q.set_query('config', q.file.load('data/molang/config.json'));",
-        "q.config.hot_reload ? q.file.clear('data/molang/config.json');",
-        "v.format = ( q.npc.config.doubles == 0 ? 'singles' : 'doubles' );",
-        "q.player.remove_tag('InDialogue');",
-        f"q.run_command('scoreboard players set ' + q.player.username + ' BattleStart {battle_id}');",
-        "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-        "!q.config.challenge_mode || !q.run_script('johto:instantiate_rctapi_trainer') ? q.npc.start_battle(q.player, v.format);",
-        "q.dialogue.close;"
+        "q.dialogue.close;",
+        f"q.run_script('cobblemon:start_battle', {music_id});"
     ]
 
     return actions
