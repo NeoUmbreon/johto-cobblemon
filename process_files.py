@@ -34,16 +34,6 @@ NPC_DIR = (
     / "trainers"
 )
 
-BATTLE_END_DIR = (
-    PROJECT_ROOT
-    / "datapacks"
-    / "CobblemonJohto"
-    / "data"
-    / "cobblemon"
-    / "dialogues"
-    / "battle_ends"
-)
-
 KANTO_FOLDERS = {
     "route1","route2","route3","route4","route5","route6","route7","route8","route9",
     "route10","route11","route12","route13","route14","route15","route17","route18",
@@ -221,69 +211,7 @@ def build_battle_action(trainer_id: str, folder: str):
 
     return actions
 
-def generate_battle_end_copy(trainer_id: str, folder: str):
-    end_file = BATTLE_END_DIR / folder / f"{trainer_id}_end.json"
-    if not end_file.exists():
-        #print(f"Battle end file not found: {end_file}")
-        return None
-
-    with open(end_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    # Remove scoreboard and tellraw commands
-    init_actions = data.get("initializationAction", [])
-    cleaned_actions = [
-        cmd
-        for cmd in init_actions
-        if not (
-            cmd.startswith("q.run_command('scoreboard")
-            or cmd.startswith("q.run_command('tellraw")
-            or "johto:tools/forceclick" in cmd
-        )
-    ]
-    data["initializationAction"] = cleaned_actions
-
-    new_file = BATTLE_END_DIR / folder / f"{trainer_id}_end_defeated.json"
-    with open(new_file, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4, ensure_ascii=False)
-
-    #print(f"Generated battle end copy: {new_file}")
-    return new_file
-
-# Inject Trainer Variables into config
-def inject_trainer_config(entity_data, trainer_id, auto_battle):
-    if "config" not in entity_data or not isinstance(entity_data["config"], list):
-        entity_data["config"] = []
-
-    existing_vars = {c.get("variableName") for c in entity_data["config"]}
-
-    def add_var(obj):
-        entity_data["config"].append(obj)
-
-    if "auto_battle" not in existing_vars:
-        add_var({
-            "variableName": "auto_battle",
-            "displayName": "npc.variable.auto_battle.name",
-            "description": "npc.variable.auto_battle.desc",
-            "type": "BOOLEAN",
-            "defaultValue": auto_battle
-        })
-
-    if "trainer_id" not in existing_vars:
-        add_var({
-            "variableName": "trainer_id",
-            "displayName": "npc.variable.trainer_id.name",
-            "description": "npc.variable.trainer_id.desc",
-            "type": "TEXT",
-            "defaultValue": trainer_id
-        })
-
 def update_trainer_entity(trainer_id: str, folder: str):
-    # Auto-battle exclusions
-    exclude_folder = ["gym_leaders","gym_leader_rematches","fuchsiagym"]
-    exclude_trainer = ["sageli","rocketproton1"]
-    auto_battle = not (folder.lower() in exclude_folder or trainer_id in exclude_trainer)
-
     entity_file = NPC_DIR / folder / f"{trainer_id}.json"
 
     if not entity_file.exists():
@@ -292,9 +220,6 @@ def update_trainer_entity(trainer_id: str, folder: str):
 
     with open(entity_file, "r", encoding="utf-8") as f:
         entity_data = json.load(f)
-
-    # inject config
-    #inject_trainer_config(entity_data, trainer_id, auto_battle)
 
     # interaction handling
     entity_data["interaction"] = {
@@ -372,16 +297,6 @@ def update_interaction_file(path: Path):
 
     #print(f"Updated entity interaction: {path}")
     return trainer_id, folder
-    
-def should_check(folder, trainer):
-    # Skip generated or special cases
-    if trainer.endswith("_end") or trainer.endswith("_end_defeated"):
-        return False
-
-    if folder == "silver" or folder == "pokemonmansion":
-        return False
-
-    return True
 
 def main():
     start = time.time()
