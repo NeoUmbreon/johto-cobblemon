@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 import pandas as pd
 import os
@@ -12,6 +13,13 @@ TBCS_TRAINERS_EXPORT_DIR = (
     / "data"
     / "molang"
     / "challengemode_trainers"
+)
+
+TRAINER_REGISTRY = (
+    PROJECT_ROOT
+    / "data"
+    / "molang"
+    / "trainers.json"
 )
 
 INTERACTIONS_DIR = (
@@ -185,7 +193,47 @@ def load_validation_lists(excel_file):
     #print("Sample moves:", list(moves)[:10])
 
     return items, moves
-        
+
+def index_files_by_name(root: Path, suffix: str = "") -> dict:
+    """Map each file's name (minus `suffix`) to the folder holding it"""
+    return {path.stem.removesuffix(suffix): path.parent.name for path in root.rglob(f"*{suffix}.json")}
+
+def get_trainer_files(registry: dict, npc_folders: dict, interaction_folders: dict):
+    """List the files to rewrite for every registered trainer
+    For NPC classes, treat registry key as filename.
+    For interaction files, instead use doubles_id if it exists."""
+    interaction_files = set()
+    npc_files = []
+
+    for npc_class, data in registry.items():
+        trainer_id = data.get("doubles_id") or npc_class
+        interaction_files.add((trainer_id, interaction_folders[trainer_id]))
+        npc_files.append((npc_class, npc_folders[npc_class]))
+
+    return sorted(interaction_files), sorted(npc_files)
+
+def validate_challenge_trainers(trainer_ids, registry: dict, doubles_teams: set):
+    problems = []
+
+    # Doubles teams are battled under their shared name
+    battleable = {npc_class for npc_class, data in registry.items() if not data.get("doubles_id")} | doubles_teams
+
+    for trainer_id in trainer_ids:
+        # Numeric variants (e.g. "azalea_silver1") are keyed off their base NPC class
+        base_class = re.sub(r"\d+$", "", trainer_id)
+
+        if trainer_id in battleable or base_class in battleable:
+            continue
+
+        doubles_id = registry.get(base_class, {}).get("doubles_id")
+        if doubles_id:
+            problems.append(f"'{trainer_id}' should be '{doubles_id}'")
+        else:
+            problems.append(f"'{trainer_id}' is not registered in {TRAINER_REGISTRY.name}")
+
+    if problems:
+        raise ValueError("Challenge mode trainers are not registered in the map:\n  " + "\n  ".join(problems))
+
 def get_battle_music(trainer_id: str, folder: str) -> int:
     if trainer_id.startswith("lance") or trainer_id == "red":
         return 16  # Champion music
@@ -211,27 +259,23 @@ def build_battle_action(trainer_id: str, folder: str):
 
     return actions
 
-def update_trainer_entity(trainer_id: str, folder: str):
-    entity_file = NPC_DIR / folder / f"{trainer_id}.json"
+def update_npc_class(npc_class: str, folder: str):
+    """Point an NPC class's interaction field at the shared molang script"""
+    npc_file = NPC_DIR / folder / f"{npc_class}.json"
 
-    if not entity_file.exists():
-        print(f"NPC file not found: {folder}/{trainer_id}.json")
-        return False
+    with open(npc_file, "r", encoding="utf-8") as f:
+        npc_data = json.load(f)
 
-    with open(entity_file, "r", encoding="utf-8") as f:
-        entity_data = json.load(f)
-
-    # interaction handling
-    entity_data["interaction"] = {
+    npc_data["interaction"] = {
         "type": "script",
         "script": "johto:trainer_dialogue_handler"
     }
 
     # write back
-    with open(entity_file, "w", encoding="utf-8") as f:
-        json.dump(entity_data, f, indent=4, ensure_ascii=False)
+    with open(npc_file, "w", encoding="utf-8") as f:
+        json.dump(npc_data, f, indent=4, ensure_ascii=False)
 
-    #print(f"Updated entity: {entity_file}")
+    #print(f"Updated NPC: {npc_file}")
 
     return True
 
@@ -245,12 +289,12 @@ def export_challenge_trainers(excel_teams):
 
         #print(f"Exported trainer file: {output_file}")
 
-def update_interaction_file(path: Path):
-    with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+def update_trainer_interaction(trainer_id: str, folder: str):
+    """Modify a trainer's dialogue file to always flow to battle, and to use our battle script"""
+    interaction_file = INTERACTIONS_DIR / folder / f"{trainer_id}_interaction.json"
 
-    trainer_id = path.stem.replace("_interaction", "")
-    folder = path.parent.name
+    with open(interaction_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
 
     # Update battle pages
     battle_action = build_battle_action(trainer_id, folder)
@@ -292,14 +336,24 @@ def update_interaction_file(path: Path):
         data["escapeAction"] = battle_action
 
 
-    with open(path, "w", encoding="utf-8") as f:
+    with open(interaction_file, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
-    #print(f"Updated entity interaction: {path}")
-    return trainer_id, folder
+    #print(f"Updated interaction: {interaction_file}")
+    return True
 
 def main():
     start = time.time()
+
+    load_registry_start = time.time()
+    with open(TRAINER_REGISTRY, "r", encoding="utf-8") as f:
+        registry = json.load(f)
+
+    npc_folders = index_files_by_name(NPC_DIR)
+    interaction_folders = index_files_by_name(INTERACTIONS_DIR, "_interaction")
+    doubles_teams = {data["doubles_id"] for data in registry.values() if data.get("doubles_id")}
+    print(f"Loaded {len(registry)} trainers from {TRAINER_REGISTRY.name} in {time.time() - load_registry_start:.2f}s")
+
     if ENABLE_CHALLENGE_MODE:
         load_excel_start = time.time()
         excel_file = pd.ExcelFile(TEAMS_XLSX_PATH)
@@ -324,41 +378,42 @@ def main():
         #    if i >= 70:
         #        break
 
+        validate_challenge_trainers(excel_teams, registry, doubles_teams)
+
         export_challenge_trainers(excel_teams)
         print(f"Processed {len(excel_teams)} Excel teams in {time.time() - process_excel_start:.2f}s")
     else:
         print("Challenge mode disabled, skipping Excel loading")
 
     processing_start = time.time()
-    files = list(INTERACTIONS_DIR.rglob("*_interaction.json"))
-    interaction_count = 0
-    npc_count = 0
+    interaction_files, npc_files = get_trainer_files(registry, npc_folders, interaction_folders)
 
-    def _process_trainer(interaction_path: Path):
-        interaction_success = False
-        npc_success = False
+    def _update_trainer_interaction(trainer_id: str, folder: str):
         try:
-            result = update_interaction_file(interaction_path)
-            if result:
-                trainer_id, folder = result
-                interaction_success = True
-                npc_success = update_trainer_entity(trainer_id, folder)
-            return interaction_success, npc_success
+            update_trainer_interaction(trainer_id, folder)
+            return True
         except Exception as e:
-            print(f"FAILED: {interaction_path}")
+            print(f"FAILED: {folder}/{trainer_id}_interaction.json")
             print(e)
-            return interaction_success, npc_success
+            return False
+
+    def _update_npc_class(npc_class: str, folder: str):
+        try:
+            update_npc_class(npc_class, folder)
+            return True
+        except Exception as e:
+            print(f"FAILED: {folder}/{npc_class}.json")
+            print(e)
+            return False
 
     with ThreadPoolExecutor(max_workers=8) as executor:
-        futures = [executor.submit(_process_trainer, f) for f in files]
-        for future in as_completed(futures):
-            interaction_success, npc_success = future.result()
-            if interaction_success:
-                interaction_count += 1
-            if npc_success:
-                npc_count += 1
+        interaction_futures = [executor.submit(_update_trainer_interaction, *file) for file in interaction_files]
+        npc_futures = [executor.submit(_update_npc_class, *file) for file in npc_files]
+
+        interaction_count = sum(1 for future in as_completed(interaction_futures) if future.result())
+        npc_count = sum(1 for future in as_completed(npc_futures) if future.result())
     
-    print(f"Modified {interaction_count}/{len(files)} interaction files and {npc_count}/{len(files)} NPC files in {time.time() - processing_start:.2f}s")
+    print(f"Modified {interaction_count}/{len(interaction_files)} interaction files and {npc_count}/{len(npc_files)} NPC files in {time.time() - processing_start:.2f}s")
     print(f"Done. Total time: {time.time() - start:.2f}s")
 
 if __name__ == "__main__":
