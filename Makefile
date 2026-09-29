@@ -6,7 +6,7 @@ ifeq ($(OS),Windows_NT)
     MKDIR := if not exist "$(BUILD_DIR)" mkdir "$(BUILD_DIR)"
     DELETE := if exist "$(BUILD_DIR)" rmdir /s /q "$(BUILD_DIR)"
     COPY_F = copy /Y "$(1)" "$(BUILD_DIR)" >nul
-    COPY_R = robocopy "$(1)" "$(BUILD_DIR)\$(1)" /MIR /NFL /NDL /NJH /NJS | findstr /v "^$$" || rem
+    COPY_R = robocopy "$(CURDIR)\$(1)" "$(CURDIR)\$(BUILD_DIR)\$(1)" /MIR /XD players /NFL /NDL /NJH /NJS | findstr /v "^$$" || rem
     TIME := %time:~0,8%
 else
     # POSIX
@@ -14,7 +14,7 @@ else
     MKDIR := mkdir -p $(BUILD_DIR)
     DELETE := rm -rf $(BUILD_DIR)
     COPY_F = cp $(1) $(BUILD_DIR)/
-    COPY_R = rsync -a --delete $(1)/ $(BUILD_DIR)/$(1)/
+    COPY_R = rsync -a --delete --exclude=players $(1)/ $(BUILD_DIR)/$(1)/
     TIME := $$(date +%H:%M:%S)
 endif
 
