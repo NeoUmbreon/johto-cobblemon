@@ -34,7 +34,7 @@
                             "q.run_command('data merge entity @e[x=-3239,y=64,z=570,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:zapdos\"}}] {NoAI:0b}');",
                             "q.run_command('data modify entity @e[x=-3239,y=64,z=570,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:zapdos\"}}] Unbattleable set value 0b');",
                             "q.run_command('kill @e[x=-3239,y=64,z=570,distance=..5,type=minecraft:interaction]');",
-                            "q.run_command('tag ' + q.player.username + ' add ZapdosEncounter');"
+                            "q.player.add_tag('ZapdosEncounter');"
                         ]
                     }
                 ]

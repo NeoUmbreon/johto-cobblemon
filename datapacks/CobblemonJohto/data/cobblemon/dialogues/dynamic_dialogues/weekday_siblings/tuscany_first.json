@@ -123,7 +123,7 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:twisted_spoon');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue188');",
+                            "q.player.add_tag('Dialogue188');",
                             "q.dialogue.close();"
                             ]
                     }

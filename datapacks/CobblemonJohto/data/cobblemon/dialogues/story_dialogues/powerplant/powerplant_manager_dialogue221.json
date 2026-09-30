@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -163,7 +163,7 @@
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
                             "q.run_command('execute as ' + q.player.username + ' run givetm chargebeam 3');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:story/powerplant');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue221');",
+                            "q.player.add_tag('Dialogue221');",
                             "q.dialogue.next_page;"
                         ]
                     }

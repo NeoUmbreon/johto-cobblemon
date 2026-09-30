@@ -2,7 +2,7 @@
     "initializationAction": [
         "c.npc.set_chatting();",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 3');",
-        "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add Will');",
+        "q.player.add_tag('Will');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $7,440 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 7440');"
     ],

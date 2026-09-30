@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -74,8 +74,8 @@
                             "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 11');",
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud -83 45 169 1 1 1 1 100');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-83,y=44,z=169,dy=3,type=cobblemon:npc] -800 -50000 -280');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue54');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue54');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

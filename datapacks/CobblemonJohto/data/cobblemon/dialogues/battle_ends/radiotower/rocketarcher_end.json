@@ -177,7 +177,7 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"keyitem\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/rainbowfeather');",
-                            "q.run_command('tag ' + q.player.username + ' add GoldPick');",
+                            "q.player.add_tag('GoldPick');",
                             "q.dialogue.set_page('pickrainbow1');"
                         ]
                     },
@@ -187,7 +187,7 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"keyitem\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/silverfeather');",
-                            "q.run_command('tag ' + q.player.username + ' add SilverPick');",
+                            "q.player.add_tag('SilverPick');",
                             "q.dialogue.set_page('picksilver1');"
                         ]
                     }
@@ -319,7 +319,7 @@
                         "value": "close",
                         "action": [
                             "q.dialogue.close();",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue72');",
+                            "q.player.add_tag('Dialogue72');",
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud 503 55 -271 1 1 1 1 100');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:rocket4');"
                         ]

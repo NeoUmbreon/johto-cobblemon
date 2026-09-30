@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.player.add_tag('InDialogue');",
         "q.run_command('execute as ' + q.player.username + ' run particle cloud -688 74 540 1 1 1 1 100');",
         "q.run_command('execute as ' + q.player.username + ' run npcspawnat -688 74 540 dragonsden_clair');"
     ],
@@ -37,7 +37,7 @@
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/getbadge\",duration:99}');",
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/getbadge\",duration:124}');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:badges/badge8');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Clair');",
+                            "q.player.add_tag('Clair');",
                             "q.dialogue.next_page;"
                     ]
                     }
@@ -299,8 +299,8 @@
                             "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud -688 74 540 1 1 1 1 100');",
                             "q.run_command('execute as ' + q.player.username + ' run tp @e[x=-688,y=74,z=540,distance=..3,type=cobblemon:npc] -800 -50000 -280');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue79');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue79');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close;"
                         ]
                     }

@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -255,9 +255,9 @@
                         "value": "close",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:event5');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue136');",
-                            "q.run_command('tag ' + q.player.username + ' add StevenCooldown');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue136');",
+                            "q.player.add_tag('StevenCooldown');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

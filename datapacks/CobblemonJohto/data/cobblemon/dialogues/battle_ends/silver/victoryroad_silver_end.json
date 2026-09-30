@@ -1,6 +1,6 @@
 {   "initializationAction": [              
     "c.npc.set_chatting();",
-    "q.run_command('tag ' + q.player.username + ' add Dialogue85');",
+    "q.player.add_tag('Dialogue85');",
     "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 1');",
     "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 5');",
     "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $2,560 for winning!\",\"italic\":true,\"color\":\"gray\"}');",

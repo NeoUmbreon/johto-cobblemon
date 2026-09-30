@@ -248,7 +248,7 @@
                         "text": "Next",
                         "value": "next",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RadioCard');",
+                            "q.player.add_tag('RadioCard');",
                             "q.dialogue.set_page('quizend2');"
                         ]
                     }

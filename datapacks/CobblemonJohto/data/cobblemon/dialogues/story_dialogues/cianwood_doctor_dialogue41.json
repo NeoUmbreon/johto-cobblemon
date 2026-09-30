@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -87,8 +87,8 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run function johto:spawn/secretpotion');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"keyitem\"}');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue41');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue41');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.player.add_tag('InDialogue');",
         "q.run_command('clear ' + q.player.username + ' music_disc_11');"
     ],
     "escapeAction": [],
@@ -155,8 +155,8 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:story/lighthousepokemon');",
                             "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 85');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue42');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue42');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

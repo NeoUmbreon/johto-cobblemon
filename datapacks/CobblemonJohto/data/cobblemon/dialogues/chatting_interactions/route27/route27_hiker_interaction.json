@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add Dialogue83');"
+        "q.player.add_tag('Dialogue83');"
     ],
     "speakers": {
         "npc": {

@@ -97,7 +97,7 @@
                         "value": "s1",
                         "action": [
                             "q.dialogue.set_page('page5');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.player.add_tag('RibbonCooldown');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 1 cobblemon:ribbon_day_careless');"
                         ]
@@ -111,7 +111,7 @@
                         "value": "s2",
                         "action": [
                             "q.dialogue.set_page('page6');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.player.add_tag('RibbonCooldown');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 2 cobblemon:ribbon_day_careless');"
                 ]
@@ -125,7 +125,7 @@
                         "value": "s3",
                         "action": [
                             "q.dialogue.set_page('page7');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.player.add_tag('RibbonCooldown');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 3 cobblemon:ribbon_day_careless');"
                 ]
@@ -139,7 +139,7 @@
                         "value": "s4",
                         "action": [
                             "q.dialogue.set_page('page8');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.player.add_tag('RibbonCooldown');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 4 cobblemon:ribbon_day_careless');"
                     ]
@@ -153,7 +153,7 @@
                         "value": "s5",
                         "action": [
                             "q.dialogue.set_page('page9');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.player.add_tag('RibbonCooldown');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 5 cobblemon:ribbon_day_careless');"
                     ]
@@ -167,7 +167,7 @@
                         "value": "s6",
                         "action": [
                             "q.dialogue.set_page('page10');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add RibbonCooldown');",
+                            "q.player.add_tag('RibbonCooldown');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
                             "q.run_command('execute as ' + q.player.username + ' run givemark @s 6 cobblemon:ribbon_day_careless');"
                     ]

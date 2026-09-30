@@ -39,7 +39,7 @@
                             "q.run_command('data modify entity @e[x=-169,y=63,z=645,distance=..5,type=cobblemon:pokemon,limit=1,nbt={Pokemon:{Species:\"cobblemon:gyarados\"}}] Unbattleable set value 0b');",
                             "q.run_command('kill @e[x=-169,y=63,z=645,distance=..5,type=minecraft:interaction]');",
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:story/rocket2');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue49');"
+                            "q.player.add_tag('Dialogue49');"
                         ]
                     }
                 ]

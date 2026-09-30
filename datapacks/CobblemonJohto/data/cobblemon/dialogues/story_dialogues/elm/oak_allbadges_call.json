@@ -1,7 +1,7 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
-        "q.run_command('tag ' + q.player.username + ' add Dialogue167');",
+        "q.player.add_tag('InDialogue');",
+        "q.player.add_tag('Dialogue167');",
         "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"call\"}');"
     ],
     "escapeAction": [],
@@ -123,7 +123,7 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"hangup\"}');",
                             "q.dialogue.close;"
                         ]

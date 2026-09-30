@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.player.add_tag('InDialogue');",
         "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 11');"
     ],
     "escapeAction": [],
@@ -39,7 +39,7 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' positioned -117.5 47.0 175.5 run function johto:sound/playglobalsfx {sfx:\"opendoor\",category:\"block\"');",
                             "q.run_command('execute as ' + q.player.username + ' run fill -122 45 175 -114 48 175 air');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue63');",
+                            "q.player.add_tag('Dialogue63');",
                             "q.dialogue.set_page('page2');"
                         ]
                     }
@@ -126,7 +126,7 @@
                             "q.run_command('tp @e[x=-144,y=44,z=182,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.run_command('tp @e[x=-128,y=44,z=159,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.run_command('npcspawnat -144 45 182 lance_generic 1');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

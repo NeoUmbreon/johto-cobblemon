@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [              
         ],
@@ -534,8 +534,8 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:poke_ball 5');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue8');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue8');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

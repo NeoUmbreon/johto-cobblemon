@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "speakers": {
         "npc": {
@@ -130,8 +130,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue43');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue43');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close;"
                         ]
                     }

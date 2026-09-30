@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -267,9 +267,9 @@
                         "action": [
                             "q.run_command('particle cloud -2763 64 329 1 1 1 1 100');",
                             "q.run_command('tp @e[x=-2763,y=63,z=329,dy=3,type=cobblemon:npc] -800 -50000 -280');",
-                            "q.run_command('tag ' + q.player.username + ' add StevenCooldown');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue137');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('StevenCooldown');",
+                            "q.player.add_tag('Dialogue137');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

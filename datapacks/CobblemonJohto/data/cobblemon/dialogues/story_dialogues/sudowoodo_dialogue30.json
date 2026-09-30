@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -94,8 +94,8 @@
                         "value": "close",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run scoreboard players set @s TriggerCommand 10');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue30');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue30');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

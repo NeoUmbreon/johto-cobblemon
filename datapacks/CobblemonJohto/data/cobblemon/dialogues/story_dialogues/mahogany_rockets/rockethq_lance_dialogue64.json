@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -95,7 +95,7 @@
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=!DSSound] run function johto:sound/overwriterecord {track:\"gb/sfx_local/gettm\",duration:70}');",
                             "q.run_command('execute as ' + q.player.username + ' if entity @s[tag=DSSound] run function johto:sound/overwriterecord {track:\"ds/sfx_local/gettm\",duration:70}');",
                             "q.run_command('execute as ' + q.player.username + ' run givetm whirlpool 3');",
-                            "q.run_command('tag ' + q.player.username + ' add Whirlpool');",
+                            "q.player.add_tag('Whirlpool');",
                             "q.dialogue.next_page;"
                         ]
                     }
@@ -258,10 +258,10 @@
                         "value": "close",
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run advancement grant @s only johto:story/rocket3');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue64');",
+                            "q.player.add_tag('Dialogue64');",
                             "q.run_command('tp @e[x=-144,y=44,z=182,dy=3,type=cobblemon:npc] -800 -50000 -280');",
                             "q.run_command('particle cloud -144 45 182 1 1 1 1 100');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

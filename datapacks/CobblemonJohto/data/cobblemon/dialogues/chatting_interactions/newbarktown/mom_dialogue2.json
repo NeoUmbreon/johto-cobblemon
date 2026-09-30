@@ -2,7 +2,7 @@
     "initializationAction": [              
         "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 2');",
         "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -77,8 +77,8 @@
                             "q.dialogue.close();",
                             "q.run_command('scoreboard players set ' + q.player.username + ' DialogueMusic 0');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue2');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');"
+                            "q.player.add_tag('Dialogue2');",
+                            "q.player.remove_tag('InDialogue');"
                             ]
                     }
                 ]

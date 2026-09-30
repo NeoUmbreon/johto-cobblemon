@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -481,8 +481,8 @@
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"pokemonhealed\"}');",
                             "q.run_command('scoreboard players set ' + q.player.username + ' Whiteout 1');",
                             "q.run_command('spawnpoint ' + q.player.username + ' -256 64 -489');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue5');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue5');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

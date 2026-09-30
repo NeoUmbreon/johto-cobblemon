@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [],
     "speakers": {
@@ -180,8 +180,8 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run particle cloud 371 64 -698 1 1 1 1 100');",
                             "q.run_command('execute as ' + q.player.username + ' positioned 371 64 -698 run function johto:sound/playglobalsfx {sfx:\"exitbuilding\",category:\"player\"}');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue14');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue14');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

@@ -87,7 +87,7 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:soft_sand');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue192');",
+                            "q.player.add_tag('Dialogue192');",
                             "q.dialogue.close();"
                             ]
                     }

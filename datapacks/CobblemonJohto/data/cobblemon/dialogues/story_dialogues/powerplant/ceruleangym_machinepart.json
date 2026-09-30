@@ -1,6 +1,6 @@
 {   
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');"
+        "q.player.add_tag('InDialogue');"
     ],
     "escapeAction": [              
     ],
@@ -49,8 +49,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('execute as ' + q.player.username + ' run tag @s add Dialogue220');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue220');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                             ]
                     }

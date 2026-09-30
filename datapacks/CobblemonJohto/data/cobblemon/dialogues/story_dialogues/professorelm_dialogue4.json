@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.run_command('tag ' + q.player.username + ' add InDialogue');",
+        "q.player.add_tag('InDialogue');",
         "q.run_command('advancement grant ' + q.player.username + ' only johto:root');"
     ],
     "escapeAction": [              
@@ -103,8 +103,8 @@
                         "action": [
                             "q.run_command('execute as ' + q.player.username + ' run give @s cobblemon:potion 5');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:\"item\"}');",
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue4');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue4');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.dialogue.close();"
                         ]
                     }

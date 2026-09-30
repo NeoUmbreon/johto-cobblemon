@@ -3,7 +3,7 @@
         "c.npc.set_chatting();",
         "q.run_script('johto:clear_gym','pewter');",
         "q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd 2');",
-        "q.run_command('execute as ' + q.player.username + ' run tag ' + q.player.username + ' add Brock');",
+        "q.player.add_tag('Brock');",
         "q.run_command('tellraw ' + q.player.username + ' {\"text\":\"You got $6,240 for winning!\",\"italic\":true,\"color\":\"gray\"}');",
         "q.run_command('scoreboard players add ' + q.player.username + ' Money 6240');"
     ],

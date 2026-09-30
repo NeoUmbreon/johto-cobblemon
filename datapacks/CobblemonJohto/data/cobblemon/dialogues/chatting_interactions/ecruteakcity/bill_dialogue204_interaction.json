@@ -136,8 +136,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('tag ' + q.player.username + ' add Dialogue204');",
-                            "q.run_command('tag ' + q.player.username + ' remove InDialogue');",
+                            "q.player.add_tag('Dialogue204');",
+                            "q.player.remove_tag('InDialogue');",
                             "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 93');",
                             "q.dialogue.close();"
                         ]
