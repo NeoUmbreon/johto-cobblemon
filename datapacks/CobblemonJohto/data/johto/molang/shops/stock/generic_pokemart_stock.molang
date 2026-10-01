@@ -13,13 +13,13 @@ t.stock.1.required_badges = 3;
 
 t.stock.2.name = 'Ultra Ball';
 t.stock.2.id = 'cobblemon:ultra_ball';
-t.stock.2.price = 1200;
+t.stock.2.price = 800;
 t.stock.2.desc = 'An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball.';
 t.stock.2.required_badges = 5;
 
 t.stock.3.name = 'Potion';
 t.stock.3.id = 'cobblemon:potion';
-t.stock.3.price = 300;
+t.stock.3.price = 200;
 t.stock.3.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.';
 t.stock.3.required_badges = 0;
 
@@ -31,7 +31,7 @@ t.stock.4.required_badges = 1;
 
 t.stock.5.name = 'Hyper Potion';
 t.stock.5.id = 'cobblemon:hyper_potion';
-t.stock.5.price = 1200;
+t.stock.5.price = 1500;
 t.stock.5.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 120 points.';
 t.stock.5.required_badges = 5;
 
@@ -49,13 +49,13 @@ t.stock.7.required_badges = 8;
 
 t.stock.8.name = 'Revive';
 t.stock.8.id = 'cobblemon:revive';
-t.stock.8.price = 1500;
+t.stock.8.price = 2000;
 t.stock.8.desc = 'A medicine that revives a fainted Pokémon. It restores half the Pokémon\'s maximum HP.';
 t.stock.8.required_badges = 3;
 
 t.stock.9.name = 'Antidote';
 t.stock.9.id = 'cobblemon:antidote';
-t.stock.9.price = 100;
+t.stock.9.price = 200;
 t.stock.9.desc = 'A spray-type medicine. It lifts the effect of poison from one Pokémon.';
 t.stock.9.required_badges = 0;
 
@@ -67,25 +67,25 @@ t.stock.10.required_badges = 0;
 
 t.stock.11.name = 'Awakening';
 t.stock.11.id = 'cobblemon:awakening';
-t.stock.11.price = 250;
+t.stock.11.price = 200;
 t.stock.11.desc = 'A spray-type medicine. It awakens a Pokémon from the clutches of sleep.';
 t.stock.11.required_badges = 1;
 
 t.stock.12.name = 'Burn Heal';
 t.stock.12.id = 'cobblemon:burn_heal';
-t.stock.12.price = 250;
+t.stock.12.price = 200;
 t.stock.12.desc = 'A spray-type medicine. It heals a single Pokémon that is suffering from a burn.';
 t.stock.12.required_badges = 1;
 
 t.stock.13.name = 'Ice Heal';
 t.stock.13.id = 'cobblemon:ice_heal';
-t.stock.13.price = 250;
+t.stock.13.price = 200;
 t.stock.13.desc = 'A spray-type medicine. It defrosts a Pokémon that has been frozen solid.';
 t.stock.13.required_badges = 1;
 
 t.stock.14.name = 'Full Heal';
 t.stock.14.id = 'cobblemon:full_heal';
-t.stock.14.price = 600;
+t.stock.14.price = 400;
 t.stock.14.desc = 'A spray-type medicine. It heals all the status problems of a single Pokémon.';
 t.stock.14.required_badges = 5;
 
