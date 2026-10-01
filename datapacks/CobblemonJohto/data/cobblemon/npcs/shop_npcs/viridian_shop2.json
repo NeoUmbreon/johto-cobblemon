@@ -5,7 +5,7 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:viridian_shop2_interaction"
+        "dialogue": "cobblemon:generic_pokemart_interaction"
     },
     "name": "Poké Mart Clerk"
 }

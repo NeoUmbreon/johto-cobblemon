@@ -1,0 +1,44 @@
+'note that Cobblemon item descriptions say +1 (legacy) but are actually +2 (modern)';
+'therefore, these reflect modern pricing and descriptions';
+
+t.stock.0.name = 'X Speed';
+t.stock.0.id = 'cobblemon:x_speed';
+t.stock.0.price = 1000;
+t.stock.0.desc = 'An item that sharply raises the Speed stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.';
+
+t.stock.1.name = 'X Attack';
+t.stock.1.id = 'cobblemon:x_attack';
+t.stock.1.price = 1000;
+t.stock.1.desc = 'An item that sharply raises the Attack stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.';
+
+t.stock.2.name = 'X Defense';
+t.stock.2.id = 'cobblemon:x_defence';
+t.stock.2.price = 2000;
+t.stock.2.desc = 'An item that sharply raises the Defense stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.';
+
+t.stock.3.name = 'Guard Spec';
+t.stock.3.id = 'cobblemon:guard_spec';
+t.stock.3.price = 1500;
+t.stock.3.desc = 'An item that prevents stat reduction among the Trainer\'s party Pokémon for five turns after use.';
+
+t.stock.4.name = 'Dire Hit';
+t.stock.4.id = 'cobblemon:dire_hit';
+t.stock.4.price = 1000;
+t.stock.4.desc = 'An item that sharply raises the critical-hit ratio of a Pokémon in battle. It wears off if the Pokémon is withdrawn.';
+
+t.stock.5.name = 'X Accuracy';
+t.stock.5.id = 'cobblemon:x_accuracy';
+t.stock.5.price = 1000;
+t.stock.5.desc = 'An item that sharply raises the Attack stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.';
+
+t.stock.6.name = 'X Sp. Atk';
+t.stock.6.id = 'cobblemon:x_special_attack';
+t.stock.6.price = 1000;
+t.stock.6.desc = 'An item that sharply raises the Special Attack stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.';
+
+t.stock.7.name = 'X Sp. Def';
+t.stock.7.id = 'cobblemon:x_special_defence';
+t.stock.7.price = 2000;
+t.stock.7.desc = 'An item that sharply raises the Special Defense stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.';
+
+return t.stock;

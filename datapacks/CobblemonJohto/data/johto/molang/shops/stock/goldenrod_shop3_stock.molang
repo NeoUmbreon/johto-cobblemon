@@ -1,0 +1,56 @@
+t.stock.0.name = 'Potion';
+t.stock.0.id = 'cobblemon:potion';
+t.stock.0.price = 200;
+t.stock.0.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.';
+
+t.stock.1.name = 'Super Potion';
+t.stock.1.id = 'cobblemon:super_potion';
+t.stock.1.price = 700;
+t.stock.1.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 60 points.';
+
+t.stock.2.name = 'Hyper Potion';
+t.stock.2.id = 'cobblemon:hyper_potion';
+t.stock.2.price = 1500;
+t.stock.2.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 120 points.';
+
+t.stock.3.name = 'Max Potion';
+t.stock.3.id = 'cobblemon:max_potion';
+t.stock.3.price = 2500;
+t.stock.3.desc = 'A spray-type medicine for wounds. It completely restores the HP of a single Pokémon.';
+
+t.stock.4.name = 'Revive';
+t.stock.4.id = 'cobblemon:revive';
+t.stock.4.price = 2000;
+t.stock.4.desc = 'A medicine that revives a fainted Pokémon. It restores half the Pokémon\'s maximum HP.';
+
+t.stock.5.name = 'Antidote';
+t.stock.5.id = 'cobblemon:antidote';
+t.stock.5.price = 200;
+t.stock.5.desc = 'A spray-type medicine. It lifts the effect of poison from one Pokémon.';
+
+t.stock.6.name = 'Paralyze Heal';
+t.stock.6.id = 'cobblemon:paralyze_heal';
+t.stock.6.price = 200;
+t.stock.6.desc = 'A spray-type medicine. It eliminates paralysis from a single Pokémon.';
+
+t.stock.7.name = 'Burn Heal';
+t.stock.7.id = 'cobblemon:burn_heal';
+t.stock.7.price = 200;
+t.stock.7.desc = 'A spray-type medicine. It heals a single Pokémon that is suffering from a burn.';
+
+t.stock.8.name = 'Ice Heal';
+t.stock.8.id = 'cobblemon:ice_heal';
+t.stock.8.price = 200;
+t.stock.8.desc = 'A spray-type medicine. It defrosts a Pokémon that has been frozen solid.';
+
+t.stock.9.name = 'Awakening';
+t.stock.9.id = 'cobblemon:awakening';
+t.stock.9.price = 200;
+t.stock.9.desc = 'A spray-type medicine. It awakens a Pokémon from the clutches of sleep.';
+
+t.stock.10.name = 'Full Heal';
+t.stock.10.id = 'cobblemon:full_heal';
+t.stock.10.price = 400;
+t.stock.10.desc = 'A spray-type medicine. It heals all the status problems of a single Pokémon.';
+
+return t.stock;

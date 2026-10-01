@@ -1,0 +1,1 @@
+return q.run_script('johto:vermilion_shop2_stock');

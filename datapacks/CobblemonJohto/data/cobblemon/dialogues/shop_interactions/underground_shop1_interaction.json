@@ -1,28 +1,32 @@
 {
     "initializationAction": [
-        "q.run_command('team join shops ' + q.player.username + '');"
+        "v.stock = q.run_script('johto:get_stock');",
+        "q.run_command('team join shops ' + q.player.username);",
+        "v.page_length = 3;",
+        "v.index = 0;",
+        "v.max_index = v.page_length * math.ceil(q.length(v.stock) / v.page_length);",
+        "v.message = 'Your Pokémon may not like them.\nHehehehe...';",
+        "v.message2 = 'Do you need anything else?\nAnything at all?';"
     ],
     "escapeAction": [
-        "q.run_command('team join default ' + q.player.username + '');",
-        "q.dialogue.close();"
-    ],
-    "names": [
-        "Herbal Shop"
+        "q.run_command('team join default ' + q.player.username);",
+        "q.dialogue.close;"
     ],
     "speakers": {
         "npc": {
-            "name": "Herbal Shop",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:oldlady",
-                "isLeftSide": true
-            }
+            "name": {
+                "type": "expression",
+                "expression": "q.npc.name"
+            },
+            "face": "q.npc.face"
+        },
+        "none": {
+            "name": " "
         }
     },
     "pages": [
         {
-            "id": "greeting",
+            "id": "greeting1",
             "speaker": "npc",
             "lines": [
                 "Hello, dear."
@@ -34,16 +38,17 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page2",
+            "id": "greeting2",
             "speaker": "npc",
             "lines": [
-                "I sell inexpensive herbal medicine. They're good, but a trifle bitter."
+                "I sell inexpensive herbal medicine.",
+                "They're good, but a trifle bitter."
             ],
             "input": {
                 "type": "option",
@@ -52,187 +57,204 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
-            "id": "page3",
+            "id": "list",
             "speaker": "npc",
             "lines": [
-                "Your Pokémon may not like them. Hehehehe..."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    },
-                    {
-                        "text": "No Thanks",
-                        "value": "nothanks",
-                        "action": "q.dialogue.set_page('end');"
-                    }
-                ]
-            }
-        },
-
-        {
-            "id": "buy1",
-            "speaker": "npc",
-            "lines": [
-                "Which item would you like to purchase?"
+                {
+                    "type": "expression",
+                    "expression": "v.message"
+                }
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Heal Powder",
-                        "value": "healpowder",
-                        "action": "q.dialogue.set_page('pickhealpowder');"
+                        "value": "page_forward",
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Page ' + (v.index / v.page_length + 1) + ' / ' + (v.max_index / v.page_length) + ' >>';"
+                        },
+                        "isVisible": "q.length(v.stock) > v.page_length + 1;",
+                        "action": [
+                            "v.index = v.index + v.page_length; v.index >= v.max_index ? { v.index = 0 };",
+                            "q.dialogue.set_page('list');"
+                        ]
                     },
                     {
-                        "text": "Energy Root",
-                        "value": "energyroot",
-                        "action": "q.dialogue.set_page('pickenergyroot');"
+                        "value": "sel0",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.elem = v.stock.[v.index + 0]; t.elem.name == 0 ? return '' : { return t.elem.name + ': $' + t.elem.price };"
+                        },
+                        "isVisible": "q.length(v.stock) > 0;",
+                        "isSelectable": "v.stock.[v.index + 0] != 0;",
+                        "action": [
+                            "q.set_query('elem', v.stock.[v.index + 0]);",
+                            "v.message = v.message2;",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
                     },
                     {
-                        "text": "Revival Herb",
-                        "value": "revivalherb",
-                        "action": "q.dialogue.set_page('pickrevivalherb');"
+                        "value": "sel1",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.elem = v.stock.[v.index + 1]; t.elem.name == 0 ? return '' : { return t.elem.name + ': $' + t.elem.price };"
+                        },
+                        "isVisible": "q.length(v.stock) > 1;",
+                        "isSelectable": "v.stock.[v.index + 1] != 0;",
+                        "action": [
+                            "q.set_query('elem', v.stock.[v.index + 1]);",
+                            "v.message = v.message2;",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
+                    },
+                    {
+                        "value": "sel2",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.elem = v.stock.[v.index + 2]; t.elem.name == 0 ? return '' : { return t.elem.name + ': $' + t.elem.price };"
+                        },
+                        "isVisible": "q.length(v.stock) > 2;",
+                        "isSelectable": "v.stock.[v.index + 2] != 0;",
+                        "action": [
+                            "q.set_query('elem', v.stock.[v.index + 2]);",
+                            "v.message = v.message2;",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
+                    },
+                    {
+                        "value": "selend",
+                        "text": {
+                            "type": "expression",
+                            "expression": "t.elem = v.stock.[v.page_length]; t.elem.name == 0 ? return '' : { return t.elem.name + ': $' + t.elem.price };"
+                        },
+                        "isVisible": "q.length(v.stock) - 1 == v.page_length;",
+                        "action": [
+                            "q.set_query('elem', v.stock.[v.page_length]);",
+                            "v.message = v.message2;",
+                            "q.dialogue.set_page('confirmation');"
+                        ]
+                    },
+                    {
+                        "text": "Exit",
+                        "value": "exit",
+                        "action": "q.dialogue.set_page('leave');"
                     }
                 ]
             }
         },
-
-
-
         {
-            "id": "pickhealpowder",
+            "id": "confirmation",
+            "speaker": "none",
+            "lines": [
+                {
+                    "type": "expression",
+                    "expression": "q.elem.name + ': ' + q.elem.desc"
+                }
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Buy 1: $' + q.elem.price"
+                        },
+                        "value": "buy1",
+                        "action": [
+                            "v.result = q.run_script('johto:buy_from_shop','item',q.elem.id,'Money',q.elem.price,1);",
+                            "q.dialogue.set_page(v.result == 1 ? 'buysuccess' : 'buyfail');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Buy 5: $' + q.elem.price * 5"
+                        },
+                        "value": "buy5",
+                        "action": [
+                            "v.result = q.run_script('johto:buy_from_shop','item',q.elem.id,'Money',q.elem.price,5);",
+                            "q.dialogue.set_page(v.result == 1 ? 'buysuccess' : 'buyfail');"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Buy 10: $' + q.elem.price * 10"
+                        },
+                        "value": "buy10",
+                        "action": [
+                            "v.result = q.run_script('johto:buy_from_shop','item',q.elem.id,'Money',q.elem.price,10);",
+                            "q.dialogue.set_page(v.result == 1 ? 'buysuccess' : 'buyfail');"
+                        ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": [
+                            "q.dialogue.set_page('list');"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "buysuccess",
             "speaker": "npc",
             "lines": [
-                "Heal Powder is a very bitter medicine powder. It heals all the status problems of a single Pokémon. Each one is $450."
+                "Here you are!",
+                "Thank you!",
+                {
+                    "type": "expression",
+                    "expression": "v.extra_dialogue == 0 ? '' : v.extra_dialogue"
+                }
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Buy",
-                        "value": "buy",
+                        "text": "Next",
+                        "value": "next",
                         "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 281');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "<< Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
+                            "v.extra_dialogue = 0;",
+                            "q.dialogue.set_page('list');"
                         ]
                     }
                 ]
             }
         },
         {
-            "id": "pickenergypowder",
+            "id": "buyfail",
             "speaker": "npc",
             "lines": [
-                "EnergyPowder is a very bitter medicine powder. It restores the HP of one Pokémon by 50 points. Each one is $500."
+                "You don't have enough money."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 282');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "<< Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('list');"
                     }
                 ]
             }
         },
         {
-            "id": "pickenergyroot",
+            "id": "leave",
             "speaker": "npc",
             "lines": [
-                "Energy Root is a very bitter root. It restores the HP of one Pokémon by 120 points. Each one is $800."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 283');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "<< Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "pickrevivalherb",
-            "speaker": "npc",
-            "lines": [
-                "Revival Herb is a very bitter medicinal herb. It revives a fainted Pokémon, fully restoring its HP. Each one is $2800."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Buy",
-                        "value": "buy",
-                        "action": [
-                            "q.run_command('scoreboard players set ' + q.player.username + ' TriggerCommand 284');",
-                            "q.dialogue.set_page('buyend');"
-                        ]
-                    },
-                    {
-                        "text": "<< Go Back",
-                        "value": "goback",
-                        "action": [
-                            "q.dialogue.set_page('buy1');"
-                        ]
-                    }
-                ]
-            }
-        },
-
-        
-        {
-            "id": "buyend",
-            "speaker": "npc",
-            "lines": [
-                "Come by again sometime."
+                "Come back again!"
             ],
             "input": {
                 "type": "option",
@@ -242,29 +264,8 @@
                         "text": "Close",
                         "value": "close",
                         "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "id": "end",
-            "speaker": "npc",
-            "lines": [
-                "Come by again sometime."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": [
-                            "q.run_command('team join default ' + q.player.username + '');",
-                            "q.dialogue.close();"
+                            "q.run_command('team join default ' + q.player.username);",
+                            "q.dialogue.close;"
                         ]
                     }
                 ]

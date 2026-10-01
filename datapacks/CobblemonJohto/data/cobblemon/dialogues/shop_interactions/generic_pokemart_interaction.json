@@ -1,11 +1,12 @@
 {
     "initializationAction": [
-        "v.stock = q.run_script('johto:generic_pokemart_stock');",
+        "v.stock = q.run_script('johto:get_stock');",
         "q.run_command('team join shops ' + q.player.username);",
         "v.page_length = 3;",
         "v.index = 0;",
         "v.max_index = v.page_length * math.ceil(q.length(v.stock) / v.page_length);",
-        "v.message = 'Welcome!\nWhat do you need?';"
+        "v.message = 'Welcome!\nWhat do you need?';",
+        "v.message2 = 'Is there anything else I may do for you?';"
     ],
     "escapeAction": [
         "q.run_command('team join default ' + q.player.username);",
@@ -59,7 +60,7 @@
                         "isSelectable": "v.stock.[v.index + 0] != 0;",
                         "action": [
                             "q.set_query('elem', v.stock.[v.index + 0]);",
-                            "v.message = 'Is there anything else I may do for you?';",
+                            "v.message = v.message2;",
                             "q.dialogue.set_page('confirmation');"
                         ]
                     },
@@ -73,7 +74,7 @@
                         "isSelectable": "v.stock.[v.index + 1] != 0;",
                         "action": [
                             "q.set_query('elem', v.stock.[v.index + 1]);",
-                            "v.message = 'Is there anything else I may do for you?';",
+                            "v.message = v.message2;",
                             "q.dialogue.set_page('confirmation');"
                         ]
                     },
@@ -87,7 +88,7 @@
                         "isSelectable": "v.stock.[v.index + 2] != 0;",
                         "action": [
                             "q.set_query('elem', v.stock.[v.index + 2]);",
-                            "v.message = 'Is there anything else I may do for you?';",
+                            "v.message = v.message2;",
                             "q.dialogue.set_page('confirmation');"
                         ]
                     },
@@ -100,7 +101,7 @@
                         "isVisible": "q.length(v.stock) - 1 == v.page_length;",
                         "action": [
                             "q.set_query('elem', v.stock.[v.page_length]);",
-                            "v.message = 'Is there anything else I may do for you?';",
+                            "v.message = v.message2;",
                             "q.dialogue.set_page('confirmation');"
                         ]
                     },
@@ -159,8 +160,8 @@
                         ]
                     },
                     {
-                        "text": "Cancel",
-                        "value": "cancel",
+                        "text": "Back",
+                        "value": "back",
                         "action": [
                             "q.dialogue.set_page('list');"
                         ]

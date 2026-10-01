@@ -1,0 +1,26 @@
+t.stock.0.name = 'Potion';
+t.stock.0.id = 'cobblemon:potion';
+t.stock.0.price = 200;
+t.stock.0.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.';
+
+t.stock.1.name = 'Super Potion';
+t.stock.1.id = 'cobblemon:super_potion';
+t.stock.1.price = 700;
+t.stock.1.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 60 points.';
+
+t.stock.2.name = 'Hyper Potion';
+t.stock.2.id = 'cobblemon:hyper_potion';
+t.stock.2.price = 1500;
+t.stock.2.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 120 points.';
+
+t.stock.3.name = 'Full Heal';
+t.stock.3.id = 'cobblemon:full_heal';
+t.stock.3.price = 400;
+t.stock.3.desc = 'A spray-type medicine. It heals all the status problems of a single Pokémon.';
+
+t.stock.4.name = 'Revive';
+t.stock.4.id = 'cobblemon:revive';
+t.stock.4.price = 2000;
+t.stock.4.desc = 'A medicine that revives a fainted Pokémon. It restores half the Pokémon\'s maximum HP.';
+
+return t.stock;

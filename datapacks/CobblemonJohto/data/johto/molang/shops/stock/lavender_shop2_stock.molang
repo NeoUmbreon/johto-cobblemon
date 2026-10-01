@@ -1,0 +1,11 @@
+t.stock.0.name = 'Dusk Ball';
+t.stock.0.id = 'cobblemon:dusk_ball';
+t.stock.0.price = 1000;
+t.stock.0.desc = 'A somewhat different Poké Ball that makes it easier to catch wild Pokémon in the dark.';
+
+t.stock.1.name = 'Quick Ball';
+t.stock.1.id = 'cobblemon:quick_ball';
+t.stock.1.price = 1000;
+t.stock.1.desc = 'A somewhat different Poké Ball that provides a better catch rate if it is used at the start of a wild encounter.';
+
+return t.stock;
