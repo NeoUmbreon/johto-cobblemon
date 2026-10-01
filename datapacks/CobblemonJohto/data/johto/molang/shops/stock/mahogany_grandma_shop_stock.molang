@@ -1,0 +1,31 @@
+t.stock.0.name = 'Great Ball';
+t.stock.0.id = 'cobblemon:great_ball';
+t.stock.0.price = 600;
+t.stock.0.desc = 'A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball.';
+
+t.stock.1.name = 'Super Potion';
+t.stock.1.id = 'cobblemon:super_potion';
+t.stock.1.price = 700;
+t.stock.1.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 60 points.';
+
+t.stock.2.name = 'Hyper Potion';
+t.stock.2.id = 'cobblemon:hyper_potion';
+t.stock.2.price = 1500;
+t.stock.2.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 120 points.';
+
+t.stock.3.name = 'Antidote';
+t.stock.3.id = 'cobblemon:antidote';
+t.stock.3.price = 200;
+t.stock.3.desc = 'A spray-type medicine. It lifts the effect of poison from one Pokémon.';
+
+t.stock.4.name = 'Paralyze Heal';
+t.stock.4.id = 'cobblemon:paralyze_heal';
+t.stock.4.price = 200;
+t.stock.4.desc = 'A spray-type medicine. It eliminates paralysis from a single Pokémon.';
+
+t.stock.5.name = 'Revive';
+t.stock.5.id = 'cobblemon:revive';
+t.stock.5.price = 2000;
+t.stock.5.desc = 'A medicine that revives a fainted Pokémon. It restores half the Pokémon\'s maximum HP.';
+
+return t.stock;
