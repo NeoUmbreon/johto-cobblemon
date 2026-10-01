@@ -26,13 +26,13 @@ t.stock.3.required_badges = 0;
 t.stock.4.name = 'Super Potion';
 t.stock.4.id = 'cobblemon:super_potion';
 t.stock.4.price = 700;
-t.stock.4.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 50 points.';
+t.stock.4.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 60 points.';
 t.stock.4.required_badges = 1;
 
 t.stock.5.name = 'Hyper Potion';
 t.stock.5.id = 'cobblemon:hyper_potion';
 t.stock.5.price = 1200;
-t.stock.5.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 200 points.';
+t.stock.5.desc = 'A spray-type medicine for wounds. It restores the HP of one Pokémon by 120 points.';
 t.stock.5.required_badges = 5;
 
 t.stock.6.name = 'Max Potion';
@@ -84,7 +84,7 @@ t.stock.13.desc = 'A spray-type medicine. It defrosts a Pokémon that has been f
 t.stock.13.required_badges = 1;
 
 t.stock.14.name = 'Full Heal';
-t.stock.14.id = 'cobblemon:ice_heal';
+t.stock.14.id = 'cobblemon:full_heal';
 t.stock.14.price = 600;
 t.stock.14.desc = 'A spray-type medicine. It heals all the status problems of a single Pokémon.';
 t.stock.14.required_badges = 5;
@@ -106,9 +106,9 @@ for_each(t.leader, q.array('Falkner','Bugsy','Whitney','Morty','Chuck','Jasmine'
 t.i = 0;
 t.filtered = q.array;
 loop(q.length(t.stock), {
-    q.set_query('item', t.stock.[t.i]);
-    t.badges >= q.item.required_badges ? {
-        q.append(t.filtered, q.item);
+    t.item = t.stock.[t.i];
+    t.badges >= t.item.required_badges ? {
+        q.append(t.filtered, t.item);
     };
     t.i = t.i + 1;
 });
