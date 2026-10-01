@@ -50,7 +50,7 @@ t.stock.7.required_badges = 8;
 t.stock.8.name = 'Revive';
 t.stock.8.id = 'cobblemon:revive';
 t.stock.8.price = 1500;
-t.stock.8.desc = 'A medicine that revives a fainted Pokémon. It restores half the Pokémons maximum HP.';
+t.stock.8.desc = 'A medicine that revives a fainted Pokémon. It restores half the Pokémon\'s maximum HP.';
 t.stock.8.required_badges = 3;
 
 t.stock.9.name = 'Antidote';
