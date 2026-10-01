@@ -1,0 +1,46 @@
+q.player.username == 0 ? return 0;
+
+'required params';
+t.type = c.arg_1; 'tm or item; informs this script what commands to run';
+t.id = c.arg_2; 'id of thing to give';
+t.currency = c.arg_3;
+t.price = c.arg_4;
+
+t.type == 0 || t.id == 0 || t.currency == 0 || t.price == 0 ? { q.print('Error in shopkeeper dialogue'); return 0 };
+
+'optional params';
+t.amount = math.max(1, c.arg_5);
+
+'check + deduct money';
+'note: the score check is unreliable if this is run from /runmolangscript (some timing issue?), but works from a molang env';
+t.cost = t.price * t.amount;
+q.run_command('execute as ' + q.player.username + ' if score @s ' + t.currency + ' matches ' + t.cost + '.. run tag @s add CanBuy');
+
+'fail';
+!q.player.has_tag('CanBuy') ? return 0;
+
+'success';
+q.player.remove_tag('CanBuy');
+q.run_command('scoreboard players remove ' + q.player.username + ' ' + t.currency + ' ' + t.cost);
+q.run_command('execute as ' + q.player.username + ' run function johto:sound/playlocalsfx {sfx:"transaction"}');
+
+t.type == 'item' ? {
+    q.run_command('give ' + q.player.username + ' ' + t.id + ' ' + t.amount);
+
+    'premier ball';
+    'complete mess because we cant check item tags from a bare id string, nor convert it to an itemstack to use *.is_in';
+    q.is_included(t.id, '_ball') && q.is_included(t.id, 'cobblemon:') && t.currency == 'Money' && t.amount >= 10 ? {
+        t.premier_balls = math.floor(t.amount / 10);
+        q.run_command('give ' + q.player.username + ' cobblemon:premier_ball ' + t.premier_balls);
+        v.extra_dialogue = 'You also get ' + t.premier_balls + ' Premier Ball' + (t.premier_balls > 1 ? 's ' : ' ') + 'as an added bonus.';
+    };
+
+    return 1;
+};
+t.type == 'tm' ? {
+    q.run_command('givetm ' + t.id + ' ' + q.player.username + ' ' + t.amount);
+
+    return 1;
+};
+
+return 0;
