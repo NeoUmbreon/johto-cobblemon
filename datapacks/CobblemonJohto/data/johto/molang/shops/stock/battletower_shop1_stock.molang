@@ -1,0 +1,1 @@
+return q.run_script('johto:battlefrontier_berryshop_stock');

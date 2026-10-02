@@ -1,0 +1,58 @@
+t.stock.physical.0.id = 'aerialace';
+t.stock.physical.0.price = 40;
+
+t.stock.physical.1.id = 'brickbreak';
+t.stock.physical.1.price = 40;
+
+t.stock.physical.2.id = 'uturn';
+t.stock.physical.2.price = 40;
+
+t.stock.physical.3.id = 'xscissor';
+t.stock.physical.3.price = 64;
+
+t.stock.physical.4.id = 'stoneedge';
+t.stock.physical.4.price = 80;
+
+t.stock.physical.5.id = 'earthquake';
+t.stock.physical.5.price = 80;
+
+t.stock.special.0.id = 'shadowball';
+t.stock.special.0.price = 64;
+
+t.stock.special.1.id = 'energyball';
+t.stock.special.1.price = 64;
+
+t.stock.special.2.id = 'sludgebomb';
+t.stock.special.2.price = 80;
+
+t.stock.special.3.id = 'dragonpulse';
+t.stock.special.3.price = 80;
+
+t.stock.status.0.id = 'toxic';
+t.stock.status.0.price = 32;
+
+t.stock.status.1.id = 'thunderwave';
+t.stock.status.1.price = 32;
+
+t.stock.status.2.id = 'willowisp';
+t.stock.status.2.price = 32;
+
+t.stock.status.3.id = 'attract';
+t.stock.status.3.price = 32;
+
+t.stock.status.4.id = 'bulkup';
+t.stock.status.4.price = 48;
+
+t.stock.status.5.id = 'calmmind';
+t.stock.status.5.price = 48;
+
+'fetch cobblemon names and descriptions';
+for_each(t.category, t.stock, {
+    for_each(t.tm, t.category, {
+        t.move = q.get_move_from_id(t.tm.id);
+        t.tm.name = t.move.display_name;
+        t.tm.desc = t.move.description;
+    });
+});
+
+return t.stock;

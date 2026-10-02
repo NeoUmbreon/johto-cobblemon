@@ -1,0 +1,121 @@
+t.stock.training.0.name = 'Kelpsy Berry';
+t.stock.training.0.id = 'cobblemon:kelpsy_berry';
+t.stock.training.0.price = 1;
+t.stock.training.0.desc = 'Using it on a Pokémon makes it more friendly, but it also lowers its base Attack stat. ';
+
+t.stock.training.1.name = 'Qualot Berry';
+t.stock.training.1.id = 'cobblemon:qualot_berry';
+t.stock.training.1.price = 1;
+t.stock.training.1.desc = 'Using it on a Pokémon makes it more friendly, but it also lowers its base Defense stat. ';
+
+t.stock.training.2.name = 'Hondew Berry';
+t.stock.training.2.id = 'cobblemon:hondew_berry';
+t.stock.training.2.price = 1;
+t.stock.training.2.desc = 'Using it on a Pokémon makes it more friendly, but it also lowers its base Special Attack stat. ';
+
+t.stock.training.3.name = 'Grepa Berry';
+t.stock.training.3.id = 'cobblemon:grepa_berry';
+t.stock.training.3.price = 1;
+t.stock.training.3.desc = 'Using it on a Pokémon makes it more friendly, but it also lowers its base Special Defense stat. ';
+
+t.stock.training.4.name = 'Tamato Berry';
+t.stock.training.4.id = 'cobblemon:tamato_berry';
+t.stock.training.4.price = 1;
+t.stock.training.4.desc = 'Using it on a Pokémon makes it more friendly, but it also lowers its base Speed stat. ';
+
+t.stock.training.5.name = 'Pomeg Berry';
+t.stock.training.5.id = 'cobblemon:pomeg_berry';
+t.stock.training.5.price = 1;
+t.stock.training.5.desc = 'Using it on a Pokémon makes it more friendly, but it also lowers its base HP stat. ';
+
+t.stock.fighting.0.name = 'Babiri Berry';
+t.stock.fighting.0.id = 'cobblemon:babiri_berry';
+t.stock.fighting.0.price = 1;
+t.stock.fighting.0.desc = 'Lessens the damage taken when the holder is hit with a supereffective Steel-type move. Single-use.';
+
+t.stock.fighting.1.name = 'Charti Berry';
+t.stock.fighting.1.id = 'cobblemon:charti_berry';
+t.stock.fighting.1.price = 1;
+t.stock.fighting.1.desc = 'Lessens the damage taken when the holder is hit with a supereffective Rock-type move. Single-use.';
+
+t.stock.fighting.2.name = 'Chilan Berry';
+t.stock.fighting.2.id = 'cobblemon:chilan_berry';
+t.stock.fighting.2.price = 1;
+t.stock.fighting.2.desc = 'Lessens the damage taken when the holder is hit with a Normal-type move. Single-use.';
+
+t.stock.fighting.3.name = 'Chople Berry';
+t.stock.fighting.3.id = 'cobblemon:chople_berry';
+t.stock.fighting.3.price = 1;
+t.stock.fighting.3.desc = 'Lessens the damage taken when the holder is hit with a supereffective Fighting-type move. Single-use.';
+
+t.stock.fighting.4.name = 'Coba Berry';
+t.stock.fighting.4.id = 'cobblemon:coba_berry';
+t.stock.fighting.4.price = 1;
+t.stock.fighting.4.desc = 'Lessens the damage taken when the holder is hit with a supereffective Flying-type move. Single-use.';
+
+t.stock.fighting.5.name = 'Colbur Berry';
+t.stock.fighting.5.id = 'cobblemon:colbur_berry';
+t.stock.fighting.5.price = 1;
+t.stock.fighting.5.desc = 'Lessens the damage taken when the holder is hit with a supereffective Dark-type move. Single-use.';
+
+t.stock.fighting.6.name = 'Haban Berry';
+t.stock.fighting.6.id = 'cobblemon:haban_berry';
+t.stock.fighting.6.price = 1;
+t.stock.fighting.6.desc = 'Lessens the damage taken when the holder is hit with a supereffective Dragon-type move. Single-use.';
+
+t.stock.fighting.7.name = 'Kasib Berry';
+t.stock.fighting.7.id = 'cobblemon:kasib_berry';
+t.stock.fighting.7.price = 1;
+t.stock.fighting.7.desc = 'Lessens the damage taken when the holder is hit with a supereffective Ghost-type move. Single-use.';
+
+t.stock.fighting.8.name = 'Kebia Berry';
+t.stock.fighting.8.id = 'cobblemon:kebia_berry';
+t.stock.fighting.8.price = 1;
+t.stock.fighting.8.desc = 'Lessens the damage taken when the holder is hit with a supereffective Poison-type move. Single-use.';
+
+t.stock.fighting.9.name = 'Occa Berry';
+t.stock.fighting.9.id = 'cobblemon:occa_berry';
+t.stock.fighting.9.price = 1;
+t.stock.fighting.9.desc = 'Lessens the damage taken when the holder is hit with a supereffective Fire-type move. Single-use.';
+
+t.stock.fighting.10.name = 'Passho Berry';
+t.stock.fighting.10.id = 'cobblemon:passho_berry';
+t.stock.fighting.10.price = 1;
+t.stock.fighting.10.desc = 'Lessens the damage taken when the holder is hit with a supereffective Water-type move. Single-use.';
+
+t.stock.fighting.11.name = 'Payapa Berry';
+t.stock.fighting.11.id = 'cobblemon:payapa_berry';
+t.stock.fighting.11.price = 1;
+t.stock.fighting.11.desc = 'Lessens the damage taken when the holder is hit with a supereffective Psychic-type move. Single-use.';
+
+t.stock.fighting.12.name = 'Rindo Berry';
+t.stock.fighting.12.id = 'cobblemon:rindo_berry';
+t.stock.fighting.12.price = 1;
+t.stock.fighting.12.desc = 'Lessens the damage taken when the holder is hit with a supereffective Grass-type move. Single-use.';
+
+t.stock.fighting.13.name = 'Roseli Berry';
+t.stock.fighting.13.id = 'cobblemon:roseli_berry';
+t.stock.fighting.13.price = 1;
+t.stock.fighting.13.desc = 'Lessens the damage taken when the holder is hit with a supereffective Fairy-type move. Single-use.';
+
+t.stock.fighting.14.name = 'Shuca Berry';
+t.stock.fighting.14.id = 'cobblemon:shuca_berry';
+t.stock.fighting.14.price = 1;
+t.stock.fighting.14.desc = 'Lessens the damage taken when the holder is hit with a supereffective Ground-type move. Single-use.';
+
+t.stock.fighting.15.name = 'Tanga Berry';
+t.stock.fighting.15.id = 'cobblemon:tanga_berry';
+t.stock.fighting.15.price = 1;
+t.stock.fighting.15.desc = 'Lessens the damage taken when the holder is hit with a supereffective Bug-type move. Single-use.';
+
+t.stock.fighting.16.name = 'Wacan Berry';
+t.stock.fighting.16.id = 'cobblemon:_berry';
+t.stock.fighting.16.price = 1;
+t.stock.fighting.16.desc = 'Lessens the damage taken when the holder is hit with a supereffective Electric-type move. Single-use.';
+
+t.stock.fighting.17.name = 'Yache Berry';
+t.stock.fighting.17.id = 'cobblemon:yache_berry';
+t.stock.fighting.17.price = 1;
+t.stock.fighting.17.desc = 'Lessens the damage taken when the holder is hit with a supereffective Ice-type move. Single-use.';
+
+return t.stock;

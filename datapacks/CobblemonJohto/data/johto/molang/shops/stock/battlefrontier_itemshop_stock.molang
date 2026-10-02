@@ -1,0 +1,131 @@
+t.stock.training_consumable.0.name = 'Protein';
+t.stock.training_consumable.0.id = 'cobblemon:protein';
+t.stock.training_consumable.0.price = 1;
+t.stock.training_consumable.0.desc = 'A nutritious drink for Pokémon. It raises the base Attack stat of a single Pokémon.';
+
+t.stock.training_consumable.1.name = 'Iron';
+t.stock.training_consumable.1.id = 'cobblemon:iron';
+t.stock.training_consumable.1.price = 1;
+t.stock.training_consumable.1.desc = 'A nutritious drink for Pokémon. It raises the base Defense stat of a single Pokémon.';
+
+t.stock.training_consumable.2.name = 'Calcium';
+t.stock.training_consumable.2.id = 'cobblemon:calcium';
+t.stock.training_consumable.2.price = 1;
+t.stock.training_consumable.2.desc = 'A nutritious drink for Pokémon. It raises the base Special Attack stat of a single Pokémon.';
+
+t.stock.training_consumable.3.name = 'Zinc';
+t.stock.training_consumable.3.id = 'cobblemon:zinc';
+t.stock.training_consumable.3.price = 1;
+t.stock.training_consumable.3.desc = 'A nutritious drink for Pokémon. It raises the base Special Defense stat of a single Pokémon.';
+
+t.stock.training_consumable.4.name = 'Carbos';
+t.stock.training_consumable.4.id = 'cobblemon:carbos';
+t.stock.training_consumable.4.price = 1;
+t.stock.training_consumable.4.desc = 'A nutritious drink for Pokémon. It raises the base Speed stat of a single Pokémon.';
+
+t.stock.training_consumable.5.name = 'HP Up';
+t.stock.training_consumable.5.id = 'cobblemon:hp_up';
+t.stock.training_consumable.5.price = 1;
+t.stock.training_consumable.5.desc = 'A nutritious drink for Pokémon. It raises the base HP of a single Pokémon.';
+
+t.stock.training_consumable.6.name = 'Rare Candy';
+t.stock.training_consumable.6.id = 'cobblemon:rare_candy';
+t.stock.training_consumable.6.price = 48;
+t.stock.training_consumable.6.desc = 'A candy that is packed with energy. It raises the level of a single Pokémon by one.';
+
+t.stock.training_held.0.name = 'Power Bracer';
+t.stock.training_held.0.id = 'cobblemon:power_bracer';
+t.stock.training_held.0.price = 16;
+t.stock.training_held.0.desc = 'A Pokémon held item that promotes Attack gain on leveling, but reduces its Speed in battle.';
+
+t.stock.training_held.1.name = 'Power Belt';
+t.stock.training_held.1.id = 'cobblemon:power_belt';
+t.stock.training_held.1.price = 16;
+t.stock.training_held.1.desc = 'A Pokémon held item that promotes Defense gain on leveling, but reduces its Speed in battle.';
+
+t.stock.training_held.2.name = 'Power Lens';
+t.stock.training_held.2.id = 'cobblemon:power_lens';
+t.stock.training_held.2.price = 16;
+t.stock.training_held.2.desc = 'A Pokémon held item that promotes Special Attack gain on leveling, but reduces its Speed in battle.';
+
+t.stock.training_held.3.name = 'Power Band';
+t.stock.training_held.3.id = 'cobblemon:power_band';
+t.stock.training_held.3.price = 16;
+t.stock.training_held.3.desc = 'A Pokémon held item that promotes Special Defense gain on leveling, but reduces its Speed in battle.';
+
+t.stock.training_held.4.name = 'Power Anklet';
+t.stock.training_held.4.id = 'cobblemon:power_anklet';
+t.stock.training_held.4.price = 16;
+t.stock.training_held.4.desc = 'A Pokémon held item that promotes Speed gain on leveling, but reduces its Speed in battle.';
+
+t.stock.training_held.5.name = 'Power Weight';
+t.stock.training_held.5.id = 'cobblemon:power_weight';
+t.stock.training_held.5.price = 16;
+t.stock.training_held.5.desc = 'A Pokémon held item that promotes HP gain on leveling, but reduces its Speed in battle.';
+
+t.stock.fighting_held.0.name = 'Toxic Orb';
+t.stock.fighting_held.0.id = 'cobblemon:toxic_orb';
+t.stock.fighting_held.0.price = 16;
+t.stock.fighting_held.0.desc = 'Badly poisons the holder during battle.';
+
+t.stock.fighting_held.1.name = 'Flame Orb';
+t.stock.fighting_held.1.id = 'cobblemon:flame_orb';
+t.stock.fighting_held.1.price = 16;
+t.stock.fighting_held.1.desc = 'Burns the holder during battle.';
+
+t.stock.fighting_held.2.name = 'White Herb';
+t.stock.fighting_held.2.id = 'cobblemon:white_herb';
+t.stock.fighting_held.2.price = 32;
+t.stock.fighting_held.2.desc = 'Restores the holder\'s stats to their usual value when they are lowered. Single-use.';
+
+t.stock.fighting_held.3.name = 'Power Herb';
+t.stock.fighting_held.3.id = 'cobblemon:power_herb';
+t.stock.fighting_held.3.price = 32;
+t.stock.fighting_held.3.desc = 'Allows the holder to immediately use a move that normally requires a turn to charge. Single-use.';
+
+t.stock.fighting_held.4.name = 'Bright Powder';
+t.stock.fighting_held.4.id = 'cobblemon:bright_powder';
+t.stock.fighting_held.4.price = 48;
+t.stock.fighting_held.4.desc = 'Slightly lowers the accuracy of moves used by opponents against the holder.';
+
+t.stock.fighting_held.5.name = 'Focus Band';
+t.stock.fighting_held.5.id = 'cobblemon:focus_band';
+t.stock.fighting_held.5.price = 48;
+t.stock.fighting_held.5.desc = 'If the holder takes damage from a move that would knock it out, there\'s a slight chance the holder will endure the hit with 1 HP.';
+
+t.stock.fighting_held.6.name = 'Focus Sash';
+t.stock.fighting_held.6.id = 'cobblemon:focus_sash';
+t.stock.fighting_held.6.price = 48;
+t.stock.fighting_held.6.desc = 'If the holder has full HP and takes damage from a move that would knock it out in one hit, it will endure the hit with 1 HP. Single-use.';
+
+t.stock.fighting_held.7.name = 'Choice Band';
+t.stock.fighting_held.7.id = 'cobblemon:choice_band';
+t.stock.fighting_held.7.price = 48;
+t.stock.fighting_held.7.desc = 'Massively boosts the holder\'s Attack stat. However, once the holder uses a move, it becomes unable to use any other move but that one until it switches out of battle.';
+
+t.stock.fighting_held.8.name = 'Choice Scarf';
+t.stock.fighting_held.8.id = 'cobblemon:choice_scarf';
+t.stock.fighting_held.8.price = 48;
+t.stock.fighting_held.8.desc = 'Massively boosts the holder\'s Speed stat. However, once the holder uses a move, it becomes unable to use any other move but that one until it switches out of battle.';
+
+t.stock.fighting_held.9.name = 'Scope Lens';
+t.stock.fighting_held.9.id = 'cobblemon:scope_lens';
+t.stock.fighting_held.9.price = 48;
+t.stock.fighting_held.9.desc = 'Boosts the holder\'s critical-hit ratio.';
+
+t.stock.fighting_held.10.name = 'Muscle Band';
+t.stock.fighting_held.10.id = 'cobblemon:muscle_band';
+t.stock.fighting_held.10.price = 48;
+t.stock.fighting_held.10.desc = 'Slightly boosts the power of the holder\'s physical moves.';
+
+t.stock.fighting_held.11.name = 'Razor Claw';
+t.stock.fighting_held.11.id = 'cobblemon:razor_claw';
+t.stock.fighting_held.11.price = 48;
+t.stock.fighting_held.11.desc = 'Boosts the holder\'s critical-hit ratio.';
+
+t.stock.fighting_held.12.name = 'Razor Fang';
+t.stock.fighting_held.12.id = 'cobblemon:razor_fang';
+t.stock.fighting_held.12.price = 48;
+t.stock.fighting_held.12.desc = 'When the holder deals damage with its moves, there is a slight chance that targets will flinch.';
+
+return t.stock;
