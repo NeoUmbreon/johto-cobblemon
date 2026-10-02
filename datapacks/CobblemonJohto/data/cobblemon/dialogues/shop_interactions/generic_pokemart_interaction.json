@@ -1,5 +1,6 @@
 {
     "initializationAction": [
+        "v.stock_type = q.is_included(q.npc.class, 'tmshop') ? 'tm' : 'item';",
         "v.stock = q.run_script('johto:get_stock');",
         "q.run_script('johto:shop_dialogue');",
         "q.run_command('team join shops ' + q.player.username);",
@@ -132,7 +133,7 @@
                         },
                         "value": "buy1",
                         "action": [
-                            "v.result = q.run_script('johto:buy_from_shop','item',q.elem.id,'Money',q.elem.price,1);",
+                            "v.result = q.run_script('johto:buy_from_shop',v.stock_type,q.elem.id,'Money',q.elem.price,1);",
                             "q.dialogue.set_page(v.result == 1 ? 'buysuccess' : 'buyfail');"
                         ]
                     },
@@ -143,7 +144,7 @@
                         },
                         "value": "buy5",
                         "action": [
-                            "v.result = q.run_script('johto:buy_from_shop','item',q.elem.id,'Money',q.elem.price,5);",
+                            "v.result = q.run_script('johto:buy_from_shop',v.stock_type,q.elem.id,'Money',q.elem.price,5);",
                             "q.dialogue.set_page(v.result == 1 ? 'buysuccess' : 'buyfail');"
                         ]
                     },
@@ -154,7 +155,7 @@
                         },
                         "value": "buy10",
                         "action": [
-                            "v.result = q.run_script('johto:buy_from_shop','item',q.elem.id,'Money',q.elem.price,10);",
+                            "v.result = q.run_script('johto:buy_from_shop',v.stock_type,q.elem.id,'Money',q.elem.price,10);",
                             "q.dialogue.set_page(v.result == 1 ? 'buysuccess' : 'buyfail');"
                         ]
                     },
