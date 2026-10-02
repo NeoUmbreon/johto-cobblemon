@@ -1,12 +1,11 @@
 {
     "initializationAction": [
         "v.stock = q.run_script('johto:get_stock');",
+        "q.run_script('johto:shop_dialogue');",
         "q.run_command('team join shops ' + q.player.username);",
         "v.page_length = 3;",
         "v.index = 0;",
-        "v.max_index = v.page_length * math.ceil(q.length(v.stock) / v.page_length);",
-        "v.message = 'Welcome!\nWhat do you need?';",
-        "v.message2 = 'Is there anything else I may do for you?';"
+        "v.max_index = v.page_length * math.ceil(q.length(v.stock) / v.page_length);"
     ],
     "escapeAction": [
         "q.run_command('team join default ' + q.player.username);",
@@ -31,7 +30,7 @@
             "lines": [
                 {
                     "type": "expression",
-                    "expression": "v.message"
+                    "expression": "q.replace(v.greeting_msg,'\\n','\n')"
                 }
             ],
             "input": {
@@ -60,7 +59,7 @@
                         "isSelectable": "v.stock.[v.index + 0] != 0;",
                         "action": [
                             "q.set_query('elem', v.stock.[v.index + 0]);",
-                            "v.message = v.message2;",
+                            "v.greeting_msg = v.reprompt_msg;",
                             "q.dialogue.set_page('confirmation');"
                         ]
                     },
@@ -74,7 +73,7 @@
                         "isSelectable": "v.stock.[v.index + 1] != 0;",
                         "action": [
                             "q.set_query('elem', v.stock.[v.index + 1]);",
-                            "v.message = v.message2;",
+                            "v.greeting_msg = v.reprompt_msg;",
                             "q.dialogue.set_page('confirmation');"
                         ]
                     },
@@ -88,7 +87,7 @@
                         "isSelectable": "v.stock.[v.index + 2] != 0;",
                         "action": [
                             "q.set_query('elem', v.stock.[v.index + 2]);",
-                            "v.message = v.message2;",
+                            "v.greeting_msg = v.reprompt_msg;",
                             "q.dialogue.set_page('confirmation');"
                         ]
                     },
@@ -101,7 +100,7 @@
                         "isVisible": "q.length(v.stock) - 1 == v.page_length;",
                         "action": [
                             "q.set_query('elem', v.stock.[v.page_length]);",
-                            "v.message = v.message2;",
+                            "v.greeting_msg = v.reprompt_msg;",
                             "q.dialogue.set_page('confirmation');"
                         ]
                     },
@@ -217,7 +216,10 @@
             "id": "leave",
             "speaker": "npc",
             "lines": [
-                "Please come again!"
+                {
+                    "type": "expression",
+                    "expression": "q.replace(v.farewell_msg,'\\n','\n')"
+                }
             ],
             "input": {
                 "type": "option",

@@ -1,0 +1,21 @@
+v.greeting_msg = 'Welcome!\nWhat do you need?';
+v.reprompt_msg = 'Is there anything else I may do for you?';
+v.farewell_msg = 'Please come again!';
+
+q.is_included(q.npc.class, 'mahogany_') ? {
+    v.greeting_msg = 'Enough about that.\nWhy don\'t you buy something?';
+};
+q.npc.class == 'cobblemon:mahogany_grandma_shop' ? {
+    v.reprompt_msg = 'Do you need anything else?\nHee hee!';
+    v.farewell_msg = 'Is that right?\nWell, come back anytime!\nHee hee!';
+};
+q.npc.class == 'cobblemon:cianwood_doctor' ? {
+    v.greeting_msg = 'What\'s up?\nNeed some medicine?';
+    v.reprompt_msg = 'Do you need anything else?';
+    v.farewell_msg = 'Is that right?\nWell, come back anytime!';
+};
+q.npc.class == 'cobblemon:underground_shop1' ? {
+    v.greeting_msg = 'Your Pokémon may not like them.\nHehehehe...';
+    v.reprompt_msg = 'Do you need anything else?\nAnything at all?';
+    v.farewell_msg = 'Come back again!';
+};
