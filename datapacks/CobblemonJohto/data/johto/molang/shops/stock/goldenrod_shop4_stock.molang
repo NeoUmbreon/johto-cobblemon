@@ -29,7 +29,7 @@ t.stock.4.desc = 'An item that sharply raises the critical-hit ratio of a Pokém
 t.stock.5.name = 'X Accuracy';
 t.stock.5.id = 'cobblemon:x_accuracy';
 t.stock.5.price = 1000;
-t.stock.5.desc = 'An item that sharply raises the Attack stat of a Pokémon in battle. It wears off if the Pokémon is withdrawn.';
+t.stock.5.desc = 'An item that sharply raises the accuracy of a Pokémon in battle. It wears off if the Pokémon is withdrawn.';
 
 t.stock.6.name = 'X Sp. Atk';
 t.stock.6.id = 'cobblemon:x_special_attack';
