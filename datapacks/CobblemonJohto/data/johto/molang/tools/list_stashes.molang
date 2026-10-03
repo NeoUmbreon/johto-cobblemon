@@ -1,0 +1,18 @@
+'lists all stashes';
+'/runmolangscript johto:list_stashes';
+
+'if no parties in stash, error';
+!q.entity.is_player && q.player == 0 ? { q.print('Error: list_stashes must be called from a player'); return 0 };
+q.player == 0 ? q.set_query('player', q.entity);
+q.length(q.player.data.party_stashes) == 0 ? { q.player.tell('Error: no parties in stash'); return 0 };
+
+q.player.tell('Stashes: (latest first)');
+q.set_query('stashes', q.player.data.party_stashes);
+t.i = 0;
+loop(q.length(q.stashes), {
+    q.set_query('stash', q.stashes.[t.i]);
+    q.player.tell('#'+t.i+', "'+q.stash.name+'": '+q.length(q.stash.party)+' Pokémon');
+    t.i = t.i + 1;
+});
+
+return 1;

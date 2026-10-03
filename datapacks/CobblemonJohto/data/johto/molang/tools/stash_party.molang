@@ -1,0 +1,59 @@
+'stashes current party at top (index 0): /runmolangscript johto:apply_stash';
+'names stash with utc timestamp. to apply custom name, instead use /runmolang and q.run_script; pass arg_1 as name';
+
+!q.entity.is_player && q.player == 0 ? { q.print('Error: stash_party must be called from a player'); return 0 };
+q.player == 0 ? q.set_query('player', q.entity);
+q.player.party.count == 0 ? { q.player.tell('Error: you have no pokemon lol'); return 0 };
+
+t.stash.name = c.arg_1;
+q.is_blank(t.stash.name) ? {
+    'lol. lmao, even';
+    t.minutes = math.mod(math.floor(q.system_time_millis / 60000), 1440);
+    t.hour = math.floor(t.minutes / 60);
+    t.minute = math.mod(t.minutes, 60);
+
+    'zero-padding';
+    t.hour_str = q.to_string(t.hour);
+    t.minute_str = q.to_string(t.minute);
+    q.string_length(t.hour_str) == 1 ? { t.hour_str = '0' + t.hour_str };
+    q.string_length(t.minute_str) == 1 ? { t.minute_str = '0' + t.minute_str };
+    t.time = t.hour_str + ':' + t.minute_str;
+
+    t.stash.name = q.date_local_time + ' ' + t.time;
+} : {
+    t.stash.name = q.to_string(t.stash.name);
+};
+
+'read party, convert to properties';
+t.i = 0;
+t.stash.party = q.array;
+loop(6, {
+    q.set_query('pokemon', q.player.party.get_pokemon(t.i));
+    t.entry = 0;
+
+    q.pokemon != 0 ? {
+        q.set_query('ev', q.pokemon.evs);
+        q.set_query('iv', q.pokemon.ivs);
+
+        t.species = q.pokemon.species;
+        t.level = 'lvl='+q.pokemon.level;
+        t.evs = 'attack_ev='+q.ev.atk+' defence_ev='+q.ev.def+' special_attack_ev='+q.ev.spa+' special_defence_ev='+q.ev.spd+' speed_ev='+q.ev.spe+' hp_ev='+q.ev.hp;
+        t.friendship = 'friendship='+q.pokemon.friendship;
+        t.moves = 'moves='+q.pokemon.moveset.0.name+','+q.pokemon.moveset.1.name+','+q.pokemon.moveset.2.name+','+q.pokemon.moveset.3.name;
+
+        t.entry.id = q.pokemon.id;
+        t.entry.index = t.i;
+        t.entry.props = t.species+' '+t.level+' '+t.evs+' '+t.friendship+' '+t.moves;
+
+        q.append(t.stash.party, t.entry);
+    };
+    t.i = t.i + 1;
+});
+
+'save';
+q.player.data.party_stashes == 0 ? { q.player.data.party_stashes = q.array };
+q.insert(q.player.data.party_stashes, 0, t.stash);
+q.player.save_data;
+
+q.player.tell('Party stashed with name: '+t.stash.name);
+return 1;

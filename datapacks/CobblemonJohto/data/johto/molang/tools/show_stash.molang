@@ -1,0 +1,25 @@
+'show latest stash: /runmolangscript johto:show_stash';
+'to show stash at specific index, instead use /runmolang and q.run_script; pass arg_1 as index';
+
+'if no parties in stash, error';
+!q.entity.is_player && q.player == 0 ? { q.print('Error: show_stash must be called from a player'); return 0 };
+q.player == 0 ? q.set_query('player', q.entity);
+q.length(q.player.data.party_stashes) == 0 ? { q.player.tell('Error: no parties in stash'); return 0 };
+
+'parse args';
+t.index = c.arg_1;
+!q.is_int(t.index) ? return 'Error: bad index';
+q.set_query('stash', q.player.data.party_stashes.[t.index]);
+q.stash == 0 ? { return 'Error: no stashed party found at index ' + t.index };
+
+q.player.tell('Stashed Party #'+t.index+':');
+t.i = 0;
+loop(q.length(q.stash.party), {
+    q.set_query('entry', q.stash.party.[t.i]);
+    q.player.tell('Slot '+q.entry.index);
+    q.player.tell('ID: '+q.entry.id);
+    q.player.tell('Props: '+q.entry.props);
+    t.i = t.i + 1;
+});
+
+return 1;

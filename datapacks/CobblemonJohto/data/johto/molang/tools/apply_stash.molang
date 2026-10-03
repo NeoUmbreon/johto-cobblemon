@@ -1,0 +1,53 @@
+'apply latest stash: /runmolangscript johto:apply_stash';
+'to apply stash from specific index, instead use /runmolang and q.run_script; pass arg_1 as index';
+
+'if no parties in stash, error';
+!q.entity.is_player && q.player == 0 ? { q.print('Error: apply_stash must be called from a player'); return 0 };
+q.player == 0 ? q.set_query('player', q.entity);
+q.length(q.player.data.party_stashes) == 0 ? { q.player.tell('Error: no parties in stash'); return 0 };
+
+'parse args';
+t.index = c.arg_1;
+!q.is_int(t.index) ? return 'Error: bad index';
+q.set_query('stash', q.player.data.party_stashes.[t.index]);
+q.stash == 0 ? { return 'Error: no stashed party found at index ' + t.index };
+
+'validate every stored pokemon exists before mutating anything';
+q.set_query('party', q.stash.party);
+for_each(t.entry, q.party, {
+    t.pokemon_party = q.player.party.find_by_id(t.entry.id);
+    t.pokemon_pc = q.player.pc.find_by_id(t.entry.id);
+    t.pokemon_party == 0 && t.pokemon_pc == 0 ? { t.pokemon_not_found = 1; break };
+    t.pokemon_party != 0 && t.pokemon_pc != 0 ? { t.duplicate_pokemon = 1; break };
+});
+t.pokemon_not_found ? { q.player.tell('Error: No Pokemon found with uuid ' + t.entry.id); return 0 };
+t.duplicate_pokemon ? { q.player.tell('Error: Found duplicate Pokemon with uuid ' + t.entry.id); return 0 };
+
+'move all pokemon from party to pc so we can set_pokemon directly into party slots';
+t.i = 0;
+loop(6, {
+    t.pokemon = q.player.party.get_pokemon(t.i);
+    t.pokemon != 0 ? {
+        q.player.party.remove_by_id(t.pokemon.id);
+        q.player.pc.add(t.pokemon);
+    };
+    t.i = t.i + 1;
+});
+
+'apply properties, then move each pokemon back into its recorded party slot';
+for_each(t.entry, q.party, {
+    t.pokemon = q.player.pc.find_by_id(t.entry.id);
+    t.j = 0;
+    loop(4, {
+        t.move = t.pokemon.moveset.[t.j];
+        t.move == 0 ? break : t.pokemon.unlearn_move(t.move.name);
+        t.j = t.j + 1;
+    });
+    t.pokemon.apply(t.entry.props);
+    t.pokemon.validate_moveset;
+    q.player.pc.remove_by_id(t.pokemon.id);
+    q.player.party.set_pokemon(t.entry.index, t.pokemon);
+});
+
+q.player.tell('Applied stashed party: '+q.stash.name);
+return 1;
