@@ -50,9 +50,19 @@ t.stock.status.5.price = 48;
 for_each(t.category, t.stock, {
     for_each(t.tm, t.category, {
         t.move = q.get_move_from_id(t.tm.id);
-        t.tm.name = t.move.display_name;
+        t.tm.name = t.move.display_name + ' TM';
         t.tm.desc = t.move.description;
     });
 });
+
+'dialogue queries';
+v.stock_type = 'tm';
+q.set_query('label_0', 'Physical');
+q.set_query('label_1', 'Special');
+q.set_query('label_2', 'Status');
+q.set_query('slot_0', t.stock.physical);
+q.set_query('slot_1', t.stock.special);
+q.set_query('slot_2', t.stock.status);
+v.noun = 'TM';
 
 return t.stock;

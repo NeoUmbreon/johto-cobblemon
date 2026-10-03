@@ -118,4 +118,12 @@ t.stock.fighting.17.id = 'cobblemon:yache_berry';
 t.stock.fighting.17.price = 1;
 t.stock.fighting.17.desc = 'Lessens the damage taken when the holder is hit with a supereffective Ice-type move. Single-use.';
 
+'dialogue queries';
+v.stock_type = 'item';
+q.set_query('label_0', 'Training Berries');
+q.set_query('label_1', 'Fighting Berries');
+q.set_query('slot_0', t.stock.training);
+q.set_query('slot_1', t.stock.fighting);
+v.noun = 'berry';
+
 return t.stock;

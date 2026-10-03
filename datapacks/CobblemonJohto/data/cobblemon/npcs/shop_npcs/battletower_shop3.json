@@ -5,7 +5,7 @@
     ],
     "interaction": {
         "type": "dialogue",
-        "dialogue": "cobblemon:battlefrontier_tmshop_interaction"
+        "dialogue": "cobblemon:battlefrontier_shop_interaction"
     },
     "name": "Battle Tower Clerk"
 }

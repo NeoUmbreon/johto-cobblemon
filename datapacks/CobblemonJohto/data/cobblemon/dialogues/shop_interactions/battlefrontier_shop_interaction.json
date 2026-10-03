@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.set_query('stock', q.run_script('johto:get_stock'));",
+        "q.run_script('johto:get_stock');",
         "q.run_command('team join battletower ' + q.player.username);",
         "v.page_length = 3;"
     ],
@@ -66,27 +66,52 @@
             "id": "categories",
             "speaker": "npc",
             "lines": [
-                "Please choose the berry you would like."
+                {
+                    "type": "expression",
+                    "expression": "'Please choose the ' + v.noun + ' you would like.'"
+                }
             ],
             "input": {
                 "type": "option",
                 "vertical": true,
                 "options": [
                     {
-                        "text": "Training Berries",
-                        "value": "training",
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.label_0"
+                        },
+                        "value": "slot_0",
+                        "isVisible": "q.length(q.slot_0) > 0",
                         "action": [
-                            "v.stock = q.stock.training;",
+                            "v.stock = q.slot_0;",
                             "v.index = 0;",
                             "v.max_index = v.page_length * math.ceil(q.length(v.stock) / v.page_length);",
                             "q.dialogue.next_page;"
                         ]
                     },
                     {
-                        "text": "Fighting Berries",
-                        "value": "fighting",
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.label_1"
+                        },
+                        "value": "slot_1",
+                        "isVisible": "q.length(q.slot_1) > 1",
                         "action": [
-                            "v.stock = q.stock.fighting;",
+                            "v.stock = q.slot_1;",
+                            "v.index = 0;",
+                            "v.max_index = v.page_length * math.ceil(q.length(v.stock) / v.page_length);",
+                            "q.dialogue.next_page;"
+                        ]
+                    },
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "q.label_2"
+                        },
+                        "value": "slot_2",
+                        "isVisible": "q.length(q.slot_2) > 0",
+                        "action": [
+                            "v.stock = q.slot_2;",
                             "v.index = 0;",
                             "v.max_index = v.page_length * math.ceil(q.length(v.stock) / v.page_length);",
                             "q.dialogue.next_page;"
@@ -104,7 +129,10 @@
             "id": "list",
             "speaker": "npc",
             "lines": [
-                "Please choose the berry you would like."
+                {
+                    "type": "expression",
+                    "expression": "'Please choose the ' + v.noun + ' you would like.'"
+                }
             ],
             "input": {
                 "type": "option",
@@ -201,7 +229,7 @@
                         },
                         "value": "buy1",
                         "action": [
-                            "v.result = q.run_script('johto:buy_from_shop','item',q.elem.id,'BattlePoints',q.elem.price,1);",
+                            "v.result = q.run_script('johto:buy_from_shop',v.stock_type,q.elem.id,'BattlePoints',q.elem.price,1);",
                             "q.dialogue.set_page(v.result == 1 ? 'buysuccess' : 'buyfail');"
                         ]
                     },

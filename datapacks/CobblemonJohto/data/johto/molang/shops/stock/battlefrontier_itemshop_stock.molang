@@ -128,4 +128,14 @@ t.stock.fighting_held.12.id = 'cobblemon:razor_fang';
 t.stock.fighting_held.12.price = 48;
 t.stock.fighting_held.12.desc = 'When the holder deals damage with its moves, there is a slight chance that targets will flinch.';
 
+'dialogue queries';
+v.stock_type = 'item';
+q.set_query('label_0', 'Training Consumables');
+q.set_query('label_1', 'Training Held Items');
+q.set_query('label_2', 'Fighting Held Items');
+q.set_query('slot_0', t.stock.training_consumable);
+q.set_query('slot_1', t.stock.training_held);
+q.set_query('slot_2', t.stock.fighting_held);
+v.noun = 'item';
+
 return t.stock;
