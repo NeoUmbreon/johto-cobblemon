@@ -1,0 +1,9 @@
+{
+    "spawnDetailType": "pokemon",
+    "bucket": "common",
+    "context": "fishing",
+    "condition": {
+        "minLureLevel": 3,
+        "maxLureLevel": 3
+    }
+}
