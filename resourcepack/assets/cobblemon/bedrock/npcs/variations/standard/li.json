@@ -1,10 +1,10 @@
 {
-  "name": "cobblemon:kimono",
+  "name": "cobblemon:li",
   "variations": [
     {
       "poser": "cobblemon:standard",
       "model": "cobblemon:steve.geo",
-      "texture": "cobblemon:textures/npcs/standard/kimono.png"
+      "texture": "cobblemon:textures/npcs/standard/li.png"
     }
   ]
 }

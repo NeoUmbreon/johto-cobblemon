@@ -13,7 +13,7 @@
             "face": {
                 "type": "artificial",
                 "modelType": "npc",
-                "identifier": "cobblemon:sage",
+                "identifier": "cobblemon:li",
                 "isLeftSide": true
             }
         },
