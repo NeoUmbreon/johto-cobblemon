@@ -1,0 +1,25 @@
+t.data = q.file.load('data/molang/wild_held_items.json');
+t.species = q.to_string(q.pokemon.species);
+t.items = q.get_variable(t.data, t.species);
+
+q.length(t.items) != 0 ? {
+    t.items.0 == t.items.1 && t.items.0 != 0 ? {
+        'guaranteed';
+        t.selected_item = t.items.0;
+    } : {
+        'slot 0: 1-5, slot 1: 51-100';
+        t.rand = math.random_integer(1,100);
+        t.rand > 50 ? { t.selected_item = t.items.1 };
+        t.rand <= 5 ? { t.selected_item = t.items.0 };
+    };
+
+    'apply item';
+    !q.is_blank(t.selected_item) ? {
+        'default to cobblemon';
+        !q.is_included(t.selected_item, ':') ? {
+            t.selected_item = 'cobblemon:' + t.selected_item;
+        };
+
+        q.pokemon.apply('helditem='+t.selected_item);
+    };
+};
