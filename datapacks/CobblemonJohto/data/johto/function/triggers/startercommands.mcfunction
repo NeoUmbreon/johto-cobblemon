@@ -18,8 +18,6 @@ team add default
 
 #Cobblemon specific gamerules
 gamerule doPokemonLoot false
-gamerule naturalRegeneration false
-gamerule disableRaids true
 gamerule doPokemonSpawning true
 
 #Gives starting items
@@ -27,7 +25,7 @@ give @s written_book[written_book_content={pages:['{"text":"Welcome to Cobblemon
 function johto:spawn/radio4
 function johto:spawn/runningshoes
 function johto:spawn/travelersbackpack
-scoreboard players add @s Money 2000
+scoreboard players add @s Money 3000
 
 
 #Sets Spawnpoint
@@ -1139,13 +1137,8 @@ tag @s remove ItemLoot500
 
 
 #Resets specifically my money and coins so they don't show in your shops
-scoreboard players reset Jond Money
-scoreboard players reset Jond Coins
-scoreboard players reset Jond BattlePoints
-
-scoreboard players reset JondGames Money
-scoreboard players reset JondGames Coins
-scoreboard players reset JondGames BattlePoints
+scoreboard players reset Jond
+scoreboard players reset JondGames
 
 
 
