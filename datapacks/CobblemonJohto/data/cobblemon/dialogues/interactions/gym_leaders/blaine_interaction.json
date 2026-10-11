@@ -1,5 +1,4 @@
 {
-    "names": ["Blaine"],
     "speakers": {
         "npc": {
             "name": {
@@ -7,13 +6,6 @@
                 "expression": "q.npc.name"
             },
             "face": "q.npc.face();"
-        },
-        "player": {
-            "face": "q.player.face();",
-            "name": {
-                "type": "expression",
-                "expression": "q.player.username"
-            }
         }
     },
     "pages": [
@@ -30,7 +22,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -48,7 +40,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -66,7 +58,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -84,7 +76,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('battle_prompt');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -100,14 +92,9 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "§c⚔ Battle ⚔§r",
-                        "value": "battle",
-                        "action": "q.dialogue.set_page('battle_start');"
-                    },
-                    {
-                        "text": "No",
-                        "value": "no",
-                        "action": "q.dialogue.close();"
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -123,13 +110,14 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Close",
-                        "value": "close",
-                        "action": [              
+                        "text": "§c⚔ Battle ⚔§r",
+                        "value": "battle",
+                        "action": [
                             "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 18');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.dialogue.close();",
-                            "v.battle = q.npc.start_battle(q.player);"]
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
                     }
                 ]
             }

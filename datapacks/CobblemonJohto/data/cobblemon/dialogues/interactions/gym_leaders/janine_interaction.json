@@ -1,27 +1,31 @@
 {
-    "names": ["???"],
     "speakers": {
-        "npc": {
-            "name": {
-                "type": "expression",
-                "expression": "q.npc.name"
-            },
-            "face": "q.npc.face();"
+        "janine": {
+            "name": "Janine",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:janine",
+                "isLeftSide": true
+            }
         },
-        "player": {
-            "face": "q.player.face();",
-            "name": {
-                "type": "expression",
-                "expression": "q.player.username"
+        "unknown": {
+            "name": "???",
+            "face": {
+                "type": "artificial",
+                "modelType": "npc",
+                "identifier": "cobblemon:janine",
+                "isLeftSide": true
             }
         }
     },
     "pages": [
         {
             "id": "greeting",
-            "speaker": "npc",
+            "speaker": "unknown",
             "lines": [
-                "Fufufufu... I'm sorry to disappoint you..."
+                "Fufufufu...",
+                "I'm sorry to disappoint you..."
             ],
             "input": {
                 "type": "option",
@@ -30,16 +34,34 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('battle_prompt');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
         },
         {
             "id": "battle_prompt",
-            "speaker": "npc",
+            "speaker": "unknown",
             "lines": [
-                "I'm only joking! I'm the real deal! Janine of Fuchsia Gym, that's me!"
+                "I'm only joking! I'm the real deal!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "battle_start",
+            "speaker": "janine",
+            "lines": [
+                "Janine of Fuchsia Gym, that's me!"
             ],
             "input": {
                 "type": "option",
@@ -48,34 +70,12 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "action": "q.dialogue.set_page('battle_start');"
-                    },
-                    {
-                        "text": "No",
-                        "value": "no",
-                        "action": "q.dialogue.close();"
-                    }
-                ]
-            }
-        },
-        {
-            "id": "battle_start",
-            "speaker": "npc",
-            "lines": [
-                "I see... You have defeated Koga, my father and a member of the Elite Four, to come here."
-            ],
-            "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": [              
+                        "action": [
                             "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 18');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
                             "q.dialogue.close();",
-                            "v.battle = q.npc.start_battle(q.player);"]
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
                     }
                 ]
             }

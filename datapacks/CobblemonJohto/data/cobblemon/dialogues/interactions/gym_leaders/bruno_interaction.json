@@ -1,5 +1,4 @@
 {
-    "names": ["Bruno"],
     "speakers": {
         "npc": {
             "name": {
@@ -7,13 +6,6 @@
                 "expression": "q.npc.name"
             },
             "face": "q.npc.face();"
-        },
-        "player": {
-            "face": "q.player.face();",
-            "name": {
-                "type": "expression",
-                "expression": "q.player.username"
-            }
         }
     },
     "pages": [
@@ -30,7 +22,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -48,7 +40,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -66,7 +58,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('battle_prompt');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -84,22 +76,23 @@
                     {
                         "text": "§c⚔ Battle ⚔§r",
                         "value": "battle",
-                        "action": [                           
-                                    "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 12');",
-                                    "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-                                    "v.battle = q.npc.start_battle(q.player);"
-                            ]
+                        "action": [
+                            "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 12');",
+                            "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
+                            "v.battle = q.npc.start_battle(q.player);"
+                        ]
                     },
                     {
                         "text": "No",
                         "value": "no",
-                        "action": [              
+                        "action": [
                             "q.run_command('scoreboard players set ' + q.player.username + ' BattleStart 0');",
                             "q.run_command('execute as ' + q.player.username + ' run function johto:tools/forceclick');",
-                            "q.dialogue.close();"]
-                        }
-                    ]
-                }
+                            "q.dialogue.close();"
+                        ]
+                    }
+                ]
             }
-        ]
-    }
+        }
+    ]
+}
