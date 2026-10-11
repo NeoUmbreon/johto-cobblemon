@@ -1,8 +1,12 @@
 c.battle.is_pvw == false ? return 0;
 
-for_each(t.player, c.players, {
-    t.player = t.player.player;
-    c.was_wild_capture ? { t.music = 4; } : { t.music = 5; };
+for_each(t.player, c.player_winners, {
+    q.set_query('player', t.player.player);
+    t.music = c.was_wild_capture ? 4 : 5;
+    q.run_command('scoreboard players set ' + q.player.username + ' BattleEnd ' + t.music);
+});
 
-    q.run_command('scoreboard players set ' + t.player.username + ' BattleEnd ' + t.music);
+for_each(t.player, c.player_losers, {
+    q.set_query('player', t.player.player);
+    q.run_script('cobblemon:generic_forfeit');
 });
