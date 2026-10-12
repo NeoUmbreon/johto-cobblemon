@@ -1,10 +1,7 @@
-# Change scores below to match target version
-execute if score #world_version click matches 1.. run return fail
-scoreboard players set #world_version click 1
-
-# If you need to load an unloaded region and use entity target selectors, it needs to be done after a delay
-# Based on my testing 2t seems to be enough, should test on very low-end hardware
-# 1st Pass
+# If you need to forceload an unloaded region and use entity target selectors, it must be done after a delay
+# See:
+# https://gist.github.com/GrantGryczan/f0a51fc195f76da570d67826974bf2de
+# https://mojira.dev/MC-227930
 #-------------------------------------
 # Remove Clear Weather and Whiteout from the lobby
 forceload add -968 -360 -970 -345
@@ -24,8 +21,49 @@ forceload add 804 271
 # Goldenrod North Gate
 forceload add 482 -267
 #-------------------------------------
-# 2nd Pass (schedule)
-schedule function johto:updates/v1/pass2 2t
+# Check if loaded
+#-------------------------------------
+# Remove Clear Weather and Whiteout from the lobby
+execute store success score #region_loaded click run function johto:tools/checkregionloaded {x1:-968,z1:-360,x2:-970,z2:-345}
+execute unless score #region_loaded click matches 1 run return fail
+
+# Battle Tower renovation
+execute store success score #region_loaded click run function johto:tools/checkregionloaded {x1:875,z1:50,x2:930,z2:108}
+execute unless score #region_loaded click matches 1 run return fail
+
+# Summon 4 Miltank on the ranch
+execute unless loaded 792 0 202 run return fail
+execute unless loaded 748 0 216 run return fail
+execute unless loaded 788 0 219 run return fail
+execute unless loaded 774 0 207 run return fail
+
+# Summon Moomoo in the paddock
+execute unless loaded 804 0 271 run return fail
+
+# Goldenrod North Gate
+execute unless loaded 482 0 -267 run return fail
+#-------------------------------------
+# Remove Clear Weather and Whiteout from the lobby
+function johto:updates/v1/removelobbytoggles
+
+# Battle Tower renovation
+kill @e[x=894,y=100,z=56,dx=17,dy=3,dz=22,type=cobblemon:npc]
+forceload remove 875 50 930 108
+
+# Summon 4 Miltank on the ranch
+execute positioned 792 64 202 rotated 0 0 run function johto:spawn/staticpokemon {species:"miltank",level:10}
+execute positioned 748 64 216 rotated 90 0 run function johto:spawn/staticpokemon {species:"miltank",level:10}
+execute positioned 788 64 219 rotated 180 0 run function johto:spawn/staticpokemon {species:"miltank",level:10}
+execute positioned 774 64 207 rotated 270 0 run function johto:spawn/staticpokemon {species:"miltank",level:10}
+
+# Summon Moomoo in the paddock
+execute positioned 804.0 64 271.0 run summon interaction ~ ~ ~ {width:1,height:1.5,response:1b,Tags:[NPCs]}
+execute positioned 804.0 64 271.0 rotated 180 0 run function johto:spawn/staticpokemon {species:"miltank",level:10}
+
+# Goldenrod North Gate
+setblock 482 64 -267 air
+execute positioned 482 64 -267 run kill @e[distance=..1,type=interaction]
+forceload remove 482 -267
 #-------------------------------------
 
 # Battle Tower renovation
@@ -110,8 +148,6 @@ execute positioned -3185 64 773 run function johto:spawn/itemloot
 execute positioned -721 49 385 run function johto:spawn/itemloot
 
 # Auto-battle scoreboard objectives
-scoreboard objectives add TrainerUID dummy
-scoreboard objectives add ActiveTrainer dummy
 scoreboard objectives add BattleCD dummy
 
 # Music scoreboard objectives
@@ -125,3 +161,5 @@ scoreboard objectives add SurfingCD dummy
 # Game Corner scoreboard objectives
 scoreboard objectives add SlotTimer dummy
 scoreboard objectives add SlotRNG dummy
+
+return 1
