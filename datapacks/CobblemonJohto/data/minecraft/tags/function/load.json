@@ -1,6 +1,7 @@
 {
   "values": [
     "johto:load/writeconfig",
+    "johto:load/autoreload",
     "johto:load/checkversion"
   ]
 }
