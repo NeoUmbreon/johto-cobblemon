@@ -48,6 +48,14 @@ function johto:updates/v1/removelobbytoggles
 
 # Battle Tower renovation
 kill @e[x=894,y=100,z=56,dx=17,dy=3,dz=22,type=cobblemon:npc]
+place template johto:battletower 875 63 50
+place template johto:battlesalon 890 43 66
+npcspawnat 903 45 72 battlesalon_clerk
+npcspawnat 901 45 77 buck_salon
+npcspawnat 893 45.5 77 marley_salon
+npcspawnat 912 45.5 77 cheryl_salon
+npcspawnat 895 45.5 73 mira_salon
+npcspawnat 910 45.5 75 riley_salon
 forceload remove 875 50 930 108
 
 # Summon 4 Miltank on the ranch
@@ -65,16 +73,6 @@ setblock 482 64 -267 air
 execute positioned 482 64 -267 run kill @e[distance=..1,type=interaction]
 forceload remove 482 -267
 #-------------------------------------
-
-# Battle Tower renovation
-place template johto:battletower 875 63 50
-place template johto:battlesalon 890 43 66
-npcspawnat 903 45 72 battlesalon_clerk
-npcspawnat 901 45 77 buck_salon
-npcspawnat 893 45.5 77 marley_salon
-npcspawnat 912 45.5 77 cheryl_salon
-npcspawnat 895 45.5 73 mira_salon
-npcspawnat 910 45.5 75 riley_salon
 
 # Whiteout enabled by default
 execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run function johto:tools/togglewhiteout
