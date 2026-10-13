@@ -1,9 +1,11 @@
 import json
 import re
+import subprocess
 from pathlib import Path
 import pandas as pd
 import os
 import time
+from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -361,12 +363,142 @@ def update_trainer_interaction(trainer_id: str, folder: str):
     #print(f"Updated interaction: {interaction_file}")
     return True
 
+
+def get_latest_tag():
+    """Get the most recent version tag (X.Y.Z) that is an ancestor of HEAD."""
+    try:
+        result = subprocess.run(
+            ["git", "tag", "-l", "*.*.*", "--merged", "HEAD"],
+            capture_output=True, text=True, check=True
+        )
+        tags = result.stdout.strip().split()
+        if not tags:
+            return None
+        
+        def parse_version(tag):
+            return tuple(map(int, tag.split('.')))
+        
+        return max(tags, key=parse_version)
+    except subprocess.CalledProcessError:
+        return None
+
+
+def get_version_info():
+    """Get version info from git. Returns None if git unavailable or not in a repo."""
+    # Check if git is available and we're in a git repo
+    try:
+        subprocess.run(
+            ["git", "rev-parse", "--git-dir"],
+            capture_output=True, check=True
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError, OSError):
+        return None
+
+    try:
+        sha = subprocess.run(
+            ["git", "rev-parse", "--short=7", "HEAD"],
+            capture_output=True, text=True, check=True
+        ).stdout.strip()
+
+        branch = subprocess.run(
+            ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+            capture_output=True, text=True, check=True
+        ).stdout.strip()
+
+        dirty = subprocess.run(
+            ["git", "status", "--porcelain"],
+            capture_output=True, text=True
+        ).stdout.strip()
+        if dirty:
+            sha += "-dirty"
+
+        # release if HEAD on a version tag (X.Y.Z)
+        try:
+            tag = subprocess.run(
+                ["git", "describe", "--tags", "--exact-match", "HEAD"],
+                capture_output=True, text=True, check=True
+            ).stdout.strip()
+            if re.match(r'^\d+\.\d+\.\d+$', tag):
+                return {"channel": "release", "version": tag, "commit": sha, "branch": branch}
+        except subprocess.CalledProcessError:
+            pass
+
+        # Else, nightly
+        latest_tag = get_latest_tag()
+        base_version = latest_tag if latest_tag else "1.0.0"
+        stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
+        
+        return {
+            "channel": "nightly",
+            "version": base_version,
+            "commit": sha,
+            "branch": branch,
+            "stamp": stamp
+        }
+    except subprocess.CalledProcessError:
+        return None
+
+
+def inject_infolist_version(version_info: dict):
+    infolist_path = PROJECT_ROOT / "datapacks" / "CobblemonJohto" / "data" / "tools" / "function" / "infolist.mcfunction"
+    
+    with open(infolist_path, "r", encoding="utf-8") as file:
+        lines = file.readlines()
+
+    commit = version_info["commit"]
+    # Get full SHA
+    full_sha = commit
+    try:
+        full_sha = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            capture_output=True, text=True, check=True
+        ).stdout.strip()
+    except subprocess.CalledProcessError:
+        # Fallback: strip -dirty from short SHA if present
+        full_sha = commit.replace("-dirty", "")
+
+    if version_info["channel"] == "release":
+        # Version: <tag>
+        components = [
+            {"text": "Version: "},
+            {"text": f'{version_info["version"]}', "color": "aqua"}
+        ]
+    else:
+        # Version: <tag>-nightly <date> <time> <branch> <commit> (full SHA on hover/click)
+        components = [
+            {"text": "Version: "},
+            {"text": f'{version_info["version"]}-nightly ', "color": "gold"},
+            {"text": f'{version_info["stamp"]} ', "color": "gray"},
+            {"text": f'{version_info["branch"]} ', "color": "dark_aqua"},
+            {
+                "text": commit,
+                "color": "dark_gray",
+                "hoverEvent": {"action": "show_text", "value": f"Click to copy: {full_sha}"},
+                "clickEvent": {"action": "copy_to_clipboard", "value": full_sha}
+            }
+        ]
+
+    new_line = f'tellraw @s {json.dumps(components)}\n'
+
+    lines[1] = new_line
+
+    with open(infolist_path, "w", encoding="utf-8") as f:
+        f.writelines(lines)
+
+
 def main():
     start = time.time()
 
     load_registry_start = time.time()
     with open(TRAINER_REGISTRY, "r", encoding="utf-8") as f:
         registry = json.load(f)
+
+    version_info = get_version_info()
+    if version_info:
+        print(f"Build version: {version_info['channel']} {version_info['version']} ({version_info['commit']})")
+        inject_infolist_version(version_info)
+    else:
+        print("No git repository or git not available; skipping version injection")
 
     npc_folders = index_files_by_name(NPC_DIR)
     interaction_folders = index_files_by_name(INTERACTIONS_DIR, "_interaction")

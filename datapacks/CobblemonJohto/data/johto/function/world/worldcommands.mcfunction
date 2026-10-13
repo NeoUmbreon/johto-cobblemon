@@ -48,7 +48,6 @@ execute if entity @p[x=-683,y=64,z=-471,distance=..6,scores={IP=1..}] run kill @
 
 #---------------------
 #Runs infolist command for non-ops
-scoreboard players enable @a Info
 scoreboard players enable @a info
 execute as @a[scores={Info=1..}] run function tools:infolist
 execute as @a[scores={info=1..}] run function tools:infolist

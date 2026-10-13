@@ -1,0 +1,2 @@
+tellraw @a[tag=infoverify] ["",{"text":"5) "},{"text":"Testing Command Blocks failed to activate.","color":"red"},{"text":" ["},{"text":"Info","hoverEvent":{"action":"show_text","value":"If this is running on a dedicated server, confirm that \"enable-command-block=true\" is set in your server.properties.\nOtherwise, try running /forceload query -771 -242"}},{"text":"]"}]
+tag @a remove infoverify
