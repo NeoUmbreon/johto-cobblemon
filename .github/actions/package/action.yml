@@ -1,0 +1,43 @@
+name: Build and package
+description: Process source files, then package the datapack, resource pack, and release zip
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v6.0.2
+      with:
+        fetch-depth: 0
+
+    - uses: actions/setup-python@v6.2.0
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: pip install pandas openpyxl
+      shell: bash
+
+    - name: Process files
+      id: process_files
+      run: python process_files.py
+      shell: bash
+
+    - name: Compress datapack(s)
+      run: cd ./datapacks/CobblemonJohto && zip -r ../CobblemonJohto.zip .
+      shell: bash
+
+    - name: Compress resource pack
+      run: cd ./resourcepack && zip -r ../CobblemonJohtoResourcePack.zip .
+      shell: bash
+
+    - name: Build file structure
+      run: |
+        mkdir -p ./Johto/datapacks
+        mv ./data ./serverconfig ./Johto
+        mv ./datapacks/*.zip ./Johto/datapacks
+        cp CobblemonJohtoResourcePack.zip ./Johto/resources.zip
+      shell: bash
+
+    - name: Create release zip
+      run: |
+        zip -r johto-cobblemon.zip ./Johto ./config
+      shell: bash

@@ -1,0 +1,40 @@
+name: Stable build
+description: Runs on `X.Y.Z` tag push
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: write
+
+jobs:
+  stable:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.ref_name }}
+    steps:
+      - uses: ./.github/actions/package
+
+      - name: Generate release notes
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0 --match '[0-9]+.[0-9]+.[0-9]+' "$TAG^" 2>/dev/null || echo "")
+          {
+            cat CHANGELOG.md
+            echo
+            echo "**Full Changelog**: https://github.com/$GITHUB_REPOSITORY/compare/$LAST_TAG...$TAG"
+          } > notes.md
+          cat notes.md
+
+      - name: Create release
+        run: |
+          gh release create "$TAG" --title "$TAG" --notes-file notes.md
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload release assets
+        run: |
+          gh release upload "$TAG" johto-cobblemon.zip CobblemonJohtoResourcePack.zip --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,4 +1,5 @@
 name: Nightly build
+description: Runs on push to main
 
 on:
   push:
@@ -6,6 +7,7 @@ on:
       - main
     paths-ignore:
       - 'README.md'
+      - 'CHANGELOG.md'
 
 permissions:
   contents: write
@@ -13,55 +15,52 @@ permissions:
 env:
   NIGHTLY_TAG: "nightly"
   NIGHTLY_NAME: "nightly"
-  NIGHTLY_BODY: "This is an automatic nightly release. It may have changes that are not fully tested."
+  NIGHTLY_BODY: |-
+    This is an automatic nightly release. It may have changes that are not fully tested.
+
+    If you are updating from a stable release: **BACK UP YOUR WORLD!**
 
 jobs:
-  build:
+  nightly:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v6.0.2
+      - uses: ./.github/actions/package
 
-    - uses: actions/setup-python@v6.2.0
-      with:
-        python-version: '3.x'
+      - name: Update nightly tag
+        run: |
+          git tag $NIGHTLY_TAG -f
+          git push origin $NIGHTLY_TAG -f
 
-    - name: Install dependencies
-      run: pip install pandas openpyxl
+      - name: Generate release notes
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0 --match '[0-9]+.[0-9]+.[0-9]+' HEAD 2>/dev/null || echo "")
+          if [ -n "$LAST_TAG" ]; then
+            {
+              echo "$NIGHTLY_BODY"
+              echo
+              echo "## Changes since $LAST_TAG"
+              echo
+              git log --no-merges --pretty='- %s (%h)' "$LAST_TAG..HEAD" -- . ':(exclude)CHANGELOG.md'
+              echo
+              echo "**Full Changelog**: https://github.com/$GITHUB_REPOSITORY/compare/$LAST_TAG...$NIGHTLY_TAG"
+            } > notes.md
+          else
+            echo "$NIGHTLY_BODY" > notes.md
+          fi
+          cat notes.md
 
-    - name: Process files
-      run: python process_files.py
+      - name: Create or update release
+        run: |
+          if gh release view $NIGHTLY_TAG >/dev/null 2>&1; then
+            gh release edit $NIGHTLY_TAG --title "$NIGHTLY_NAME" --notes-file notes.md --prerelease
+          else
+            gh release create $NIGHTLY_TAG --title "$NIGHTLY_NAME" --notes-file notes.md --prerelease
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Compress datapack(s)
-      run: cd ./datapacks/CobblemonJohto && zip -r ../CobblemonJohto.zip .
-
-    - name: Compress resource pack
-      run: cd ./resourcepack && zip -r ../CobblemonJohtoResourcePack.zip .
-
-    - name: Build file structure
-      run: |
-        mkdir -p ./Johto/datapacks
-        mv ./data ./serverconfig ./Johto
-        mv ./datapacks/*.zip ./Johto/datapacks
-        cp CobblemonJohtoResourcePack.zip ./Johto/resources.zip
-
-    - name: Create release zip
-      run: |
-        zip -r johto-cobblemon.zip ./Johto ./config
-    
-    - name: Update nightly tag
-      run: |
-        git tag $NIGHTLY_TAG -f
-        git push origin $NIGHTLY_TAG -f
-
-    - name: Create release if it doesn't exist
-      run: |
-        gh release view $NIGHTLY_TAG || gh release create $NIGHTLY_TAG --title "$NIGHTLY_NAME" --notes "$NIGHTLY_BODY"
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Upload release assets
-      run: |
-        gh release upload $NIGHTLY_TAG johto-cobblemon.zip CobblemonJohtoResourcePack.zip --clobber
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload release assets
+        run: |
+          gh release upload $NIGHTLY_TAG johto-cobblemon.zip CobblemonJohtoResourcePack.zip --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
