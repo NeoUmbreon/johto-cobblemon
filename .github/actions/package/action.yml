@@ -4,10 +4,6 @@ description: Process source files, then package the datapack, resource pack, and
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v6.0.2
-      with:
-        fetch-depth: 0
-
     - uses: actions/setup-python@v6.2.0
       with:
         python-version: '3.x'
