@@ -400,7 +400,7 @@ def get_version_info():
             capture_output=True, text=True, check=True
         ).stdout.strip()
 
-        branch = subprocess.run(
+        branch = os.environ.get('GITHUB_REF_NAME') or subprocess.run(
             ["git", "rev-parse", "--abbrev-ref", "HEAD"],
             capture_output=True, text=True, check=True
         ).stdout.strip()
@@ -412,18 +412,18 @@ def get_version_info():
         if dirty:
             sha += "-dirty"
 
-        # release if HEAD on a version tag (X.Y.Z)
+        # "stable" if HEAD on a version tag (X.Y.Z)
         try:
             tag = subprocess.run(
                 ["git", "describe", "--tags", "--exact-match", "HEAD"],
                 capture_output=True, text=True, check=True
             ).stdout.strip()
             if re.match(r'^\d+\.\d+\.\d+$', tag):
-                return {"channel": "release", "version": tag, "commit": sha, "branch": branch}
+                return {"channel": "stable", "version": tag, "commit": sha, "branch": branch}
         except subprocess.CalledProcessError:
             pass
 
-        # Else, nightly
+        # Else, "nightly"
         latest_tag = get_latest_tag()
         base_version = latest_tag if latest_tag else "1.0.0"
         stamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
@@ -457,7 +457,7 @@ def inject_infolist_version(version_info: dict):
         # Fallback: strip -dirty from short SHA if present
         full_sha = commit.replace("-dirty", "")
 
-    if version_info["channel"] == "release":
+    if version_info["channel"] == "stable":
         # Version: <tag>
         components = [
             {"text": "Version: "},
@@ -497,6 +497,8 @@ def main():
     if version_info:
         print(f"Build version: {version_info['channel']} {version_info['version']} ({version_info['commit']})")
         inject_infolist_version(version_info)
+    elif os.environ.get('GITHUB_ACTIONS'):
+        raise RuntimeError("Version detection failed in CI environment")
     else:
         print("No git repository or git not available; skipping version injection")
 
