@@ -159,5 +159,3 @@ scoreboard objectives add SurfingCD dummy
 # Game Corner scoreboard objectives
 scoreboard objectives add SlotTimer dummy
 scoreboard objectives add SlotRNG dummy
-
-return 1
