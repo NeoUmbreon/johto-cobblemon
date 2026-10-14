@@ -1,11 +1,6 @@
 #Runs cobblemon replacement blocks
 function johto:world/cobblemonblocks
 
-#Auto reloads the server if function fails to load (should thus fix itself by reloading)
-tag @e[x=-792,y=65,z=-284,dy=3,type=armor_stand] remove ReloadCheck
-function johto:triggers/autoreload
-execute if entity @e[x=-792,y=65,z=-284,dy=3,type=armor_stand,tag=!ReloadCheck] run reload
-
 #Gets rid of nametag
 execute as @e[x=0,type=cobblemon:npc,nbt={HideNPCNameTag:0b}] run data merge entity @s {HideNPCNameTag:1b}
 
@@ -53,7 +48,6 @@ execute if entity @p[x=-683,y=64,z=-471,distance=..6,scores={IP=1..}] run kill @
 
 #---------------------
 #Runs infolist command for non-ops
-scoreboard players enable @a Info
 scoreboard players enable @a info
 execute as @a[scores={Info=1..}] run function tools:infolist
 execute as @a[scores={info=1..}] run function tools:infolist
@@ -370,9 +364,3 @@ execute at @a[x=-1354,y=77,z=751,dx=24,dy=10,dz=34] run tp @a[x=-1354,y=77,z=751
 #Tps player from Blaine's gym chamber to Seafoam Islands
 execute as @a[x=-861,y=58,z=767,dx=2,dy=4,dz=2] run scoreboard players set @s EscapeRope 21
 execute as @a[x=-861,y=58,z=767,dx=2,dy=4,dz=2] run tp @s -2048 51 -878 0 9
-
-
-
-# Firstrun
-execute unless score #firstrun click matches 2.. run function johto:firstrun
-
