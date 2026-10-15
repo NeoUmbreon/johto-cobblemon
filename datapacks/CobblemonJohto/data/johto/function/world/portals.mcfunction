@@ -137,21 +137,13 @@ execute as @s[x=510,y=64,z=-76,dx=2,dy=2] at @s run function johto:tools/tpwiths
 #Mt. Silver
 
 #Moltres Room
-execute as @s[x=-967,y=124,z=249,dx=4,dy=5] at @s run function johto:tools/tpwithsfx {xyz:"-976 76 341",sfx:"exitbuilding"}
-
-execute as @s[x=-978,y=76,z=342,dx=3,dy=3] at @s run function johto:tools/tpwithsfx {xyz:"-965 124 250",sfx:"exitbuilding"}
-
-
-#Tells player a message based on which items they hold
-#tellraw @s[x=-1026,y=86,z=349,dx=3,dy=3,scores={PalkiaCD=0},nbt={Inventory:[{id:"pixelmon:lustrous_orb"}]}] ["",{"text":"Your Lustrous Orb is reacting to the alter!","color":"white","italic":true}]
-#tellraw @s[x=-1026,y=86,z=349,dx=3,dy=3,scores={GiratinaCD=0},nbt={Inventory:[{id:"pixelmon:griseous_orb"}]}] ["",{"text":"Your Griseous Orb is reacting to the alter!","color":"white","italic":true}]
-#tellraw @s[x=-1026,y=86,z=349,dx=3,dy=3,scores={DialgaCD=0},nbt={Inventory:[{id:"pixelmon:adamant_orb"}]}] ["",{"text":"Your Adamant Orb is reacting to the alter!","color":"white","italic":true}]
-
-execute as @s[x=-1026,y=86,z=349,dx=3,dy=3] at @s run function johto:tools/tpwithsfx {xyz:"-944 175 196",sfx:"exitbuilding"}
+execute as @s[x=-1026,y=86,z=349,dx=3,dy=3] at @s run function johto:tools/tpwithsfx {xyz:"-965 124 250",sfx:"exitbuilding"}
+execute as @s[x=-967,y=124,z=249,dx=4,dy=5] at @s run function johto:tools/tpwithsfx {xyz:"-1025 86 348",sfx:"exitbuilding"}
 
 
-
-execute as @s[x=-945,y=175,z=195,dx=3,dy=3] at @s run function johto:tools/tpwithsfx {xyz:"-1025 86 348",sfx:"exitbuilding"}
+#Summit
+execute as @s[x=-978,y=76,z=342,dx=3,dy=3] at @s run function johto:tools/tpwithsfx {xyz:"-944 175 196",sfx:"exitbuilding"}
+execute as @s[x=-945,y=175,z=195,dx=3,dy=3] at @s run function johto:tools/tpwithsfx {xyz:"-976 76 341",sfx:"exitbuilding"}
 
 
 
