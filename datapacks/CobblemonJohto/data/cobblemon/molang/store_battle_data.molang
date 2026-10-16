@@ -1,5 +1,4 @@
-q.set_query('config', q.file.load('data/molang/config.json'));
-q.config.hot_reload ? q.file.clear('data/molang/config.json');
+q.set_query('config', q.player.world.server.data);
 
 q.player.data.battle.whiteout_on_disconnect = v.trainer_data.no_autobattle;
 q.player.data.battle.x = (q.player.x + q.npc.x) / 2;

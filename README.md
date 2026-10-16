@@ -117,7 +117,7 @@ This is an overhaul of Jond's [Cobblemon Johto](https://www.curseforge.com/minec
 3. In Minecraft, enable the resource pack named `CobblemonJohtoMusicPack`.
 
 #### Map-specific settings (e.g. challenge mode)
-- Edit this file: `Johto/data/molang/config.json`
+- Run this command: `/opendialogue config @s`
 
 #### Running this on a dedicated server?
 - Ensure these values are set in your `server.properties`

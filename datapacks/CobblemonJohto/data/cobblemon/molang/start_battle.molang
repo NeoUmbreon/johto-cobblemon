@@ -1,6 +1,5 @@
 'load data';
-q.set_query('config', q.file.load('data/molang/config.json'));
-q.config.hot_reload ? q.file.clear('data/molang/config.json');
+q.set_query('config', q.player.world.server.data);
 
 t.trainers = q.file.load('data/molang/trainers.json');
 q.set_query('class', q.get_variable(q.split_string(q.npc.class,'cobblemon:'), '1'));
@@ -14,4 +13,4 @@ q.run_command('execute as ' + q.player.username + ' run function johto:tools/for
 'start battle';
 'if !challenge_mode, or challenge mode script fails, uses npc entity party';
 q.set_query('format', q.is_blank(q.trainer_data.doubles_id) ? 'singles' : 'doubles');
-!q.config.challenge_mode || !q.run_script('johto:instantiate_rctapi_trainer') ? q.npc.start_battle(q.player, q.format);
+q.config.challenge_mode_disabled || !q.run_script('johto:instantiate_rctapi_trainer') ? q.npc.start_battle(q.player, q.format);
