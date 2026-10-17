@@ -1,0 +1,71 @@
+{
+    "initializationAction": [
+        "q.set_query('server', q.player.world.server);",
+        "q.set_query('config', q.server.data);"
+    ],
+    "speakers": {
+        "none": {
+            "name": " "
+        }
+    },
+    "pages": [
+        {
+            "id": "list",
+            "speaker": "none",
+            "lines": [
+                "Click an option to view more info."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "'Challenge Mode: &l' + (q.config.challenge_mode_disabled ? 'Disabled' : 'Enabled')"
+                        },
+                        "value": "challenge_mode",
+                        "action": "q.dialogue.set_page('challenge_mode');"
+                    },
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "challenge_mode",
+            "speaker": "none",
+            "lines": [
+                "§nChallenge Mode",
+                "Loads custom, more difficult teams for NPC trainers."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": true,
+                "options": [
+                    {
+                        "text": {
+                            "type": "expression",
+                            "expression": "'&l' + (q.config.challenge_mode_disabled ? 'Disabled' : 'Enabled') + '&r (click to ' + (q.config.challenge_mode_disabled ? 'enable)' : 'disable)')"
+                        },
+                        "value": "toggle",
+                        "action": [
+                            "q.config.challenge_mode_disabled = q.config.challenge_mode_disabled ? false : true;",
+                            "q.server.save_data;",
+                            "q.server.broadcast('&7&oChallenge mode ' + (q.config.challenge_mode_disabled ? 'disabled!' : 'enabled!'));",
+                            "q.dialogue.set_page('challenge_mode');"
+                        ]
+                    },
+                    {
+                        "text": "Back",
+                        "value": "back",
+                        "action": "q.dialogue.set_page('list');"
+                    }
+                ]
+            }
+        }
+    ]
+}

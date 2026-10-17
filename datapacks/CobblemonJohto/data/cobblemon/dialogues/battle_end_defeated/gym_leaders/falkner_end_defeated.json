@@ -1,6 +1,6 @@
 {
     "initializationAction": [
-        "q.get_variable(q.file.load('data/molang/config.json'), 'challenge_mode') == true ? q.dialogue.set_page('page3');"
+        "!q.player.world.server.data.challenge_mode_disabled ? q.dialogue.set_page('page3');"
     ],
     "speakers": {
         "npc": {
