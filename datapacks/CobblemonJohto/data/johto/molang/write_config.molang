@@ -1,4 +1,4 @@
-q.set_query('server', c.player.world.server);
+q.set_query('server', q.player.world.server);
 q.set_query('config', q.server.data);
 
 'set defaults';
