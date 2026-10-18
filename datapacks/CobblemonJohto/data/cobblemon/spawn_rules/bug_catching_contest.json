@@ -1,0 +1,11 @@
+{
+  "displayName": "Bug Catching Contest",
+  "enabled": true,
+  "components": [
+    {
+      "type": "filter",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'national_park')",
+      "allow": "v.spawnable_position.world.server.data.bug_catching_contest != 0 ? q.is_included(v.spawn_detail.id, 'bug_catching_contest_'+v.spawnable_position.world.server.data.bug_catching_contest) : !q.is_included(v.spawn_detail.id, 'bug_catching_contest')"
+    }
+  ]
+}

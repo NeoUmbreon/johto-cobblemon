@@ -1,0 +1,11 @@
+{
+  "displayName": "Swarms",
+  "enabled": true,
+  "components": [
+    {
+      "type": "filter",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'swarm')",
+      "allow": "v.spawnable_position.world.server.data.swarm != 0 && q.is_included(v.spawn_detail.id, v.spawnable_position.world.server.data.swarm.zone) ? q.is_included(v.spawn_detail.id, 'swarm_active') && v.spawn_detail.pokemon.species == v.spawnable_position.world.server.data.swarm.species : q.is_included(v.spawn_detail.id, 'swarm_inactive')"
+    }
+  ]
+}
