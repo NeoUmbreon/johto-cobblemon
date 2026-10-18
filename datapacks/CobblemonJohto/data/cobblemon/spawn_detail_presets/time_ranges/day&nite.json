@@ -1,0 +1,5 @@
+{
+    "condition": {
+        "timeRange": "noon,afternoon,evening,midnight,predawn"
+    }
+}
