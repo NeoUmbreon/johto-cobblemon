@@ -7,7 +7,7 @@ v.trainer_id = v.trainer_data.doubles_id != 0 ? v.trainer_data.doubles_id : t.cl
 
 !q.is_blank(v.trainer_data.requirements) && !q.run_molang(v.trainer_data.requirements) ? return q.npc.run_dialogue(q.player, v.trainer_id + '_interaction_fail');
 
-q.player.has_tag('defeated.' + v.trainer_id) ? return q.npc.run_dialogue(q.player, v.trainer_id + '_end_defeated');
+!q.player.main_held_item.item.is_of('nether_star') && q.player.has_tag('defeated.' + v.trainer_id) ? return q.npc.run_dialogue(q.player, v.trainer_id + '_end_defeated');
 
 !q.player.party.has_usable_pokemon ? return q.run_command('tellraw ' + q.player.username + ' {"text":"You have no usable Pokémon!","italic":true,"color":"gray"}');
 
