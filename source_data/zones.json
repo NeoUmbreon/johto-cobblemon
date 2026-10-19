@@ -35,7 +35,7 @@
     "map": "D02R0104",
     "name": "MOUNT_MOON_SQUARE_CLEFAIRY_EVENT",
     "coords": [
-      { "minX": -2447, "minY": 40, "minZ": 832, "maxX": -2303, "maxY": 80, "maxZ": 909 }
+      
     ],
     "landContext": "none"
   },
@@ -235,9 +235,9 @@
     "map": "D22R0102",
     "name": "NATIONAL_PARK_BUG_CATCHING_CONTEST",
     "coords": [
-      { "minX": 465, "minZ": -57, "maxX": 621, "maxZ": 135 }
+      
     ],
-    "landContext": "grass"
+    "landContext": "none"
   },
   {
     "map": "D24R0101",
