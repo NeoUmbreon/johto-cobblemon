@@ -1,7 +1,9 @@
+t.class = q.get_variable(q.split_string(q.npc.class,'cobblemon:'), '1');
+q.player.main_held_item.item.is_of('blaze_rod') ? return q.player.tell(t.class);
+
 q.player.in_battle || q.player.has_tag('Whiteout') ? return 0;
 
 t.trainers = q.file.load('data/molang/trainers.json');
-t.class = q.get_variable(q.split_string(q.npc.class,'cobblemon:'), '1');
 v.trainer_data = q.get_variable(t.trainers, t.class);
 v.trainer_id = v.trainer_data.doubles_id != 0 ? v.trainer_data.doubles_id : t.class;
 
