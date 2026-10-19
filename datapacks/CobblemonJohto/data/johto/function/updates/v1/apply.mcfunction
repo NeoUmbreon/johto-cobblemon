@@ -74,9 +74,6 @@ execute positioned 482 64 -267 run kill @e[distance=..1,type=interaction]
 forceload remove 482 -267
 #-------------------------------------
 
-# Whiteout enabled by default
-execute as @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run function johto:tools/togglewhiteout
-
 # Goldenrod Dept. Store Daily Drawing Corner
 forceload add 434 -407
 fill 434 94 -404 432 97 -407 air

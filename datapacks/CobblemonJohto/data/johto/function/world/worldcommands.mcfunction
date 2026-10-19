@@ -280,12 +280,6 @@ spawnpoint @a[x=127,y=64,z=-582,distance=..5] 127 64 -582
 execute as @a[scores={BattleStart=11..18}] run runmolangscript cobblemon:prevent_flee @s
 
 #Runs Whiteout function
-execute as @a[tag=Whiteout] run scoreboard players set @s BattleStart 0
-
-#Removes tag if Whiteout is disabled via lobby rule
-execute if entity @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] as @a[tag=Whiteout] run function johto:tools/forceclick
-execute if entity @e[x=-792,y=65,z=-284,dy=3,tag=WhiteoutDisable] run tag @a[tag=Whiteout] remove Whiteout
-
 execute as @a[tag=Whiteout] run function johto:triggers/whiteout
 
 #-------------------------------------------------------------------------------------------------------------------------

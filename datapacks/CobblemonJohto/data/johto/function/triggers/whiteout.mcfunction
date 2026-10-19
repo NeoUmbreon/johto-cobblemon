@@ -1,7 +1,11 @@
-#Returns the player to their last-visited Pokemon Center if they lose or forefit a battle
+tag @s remove Whiteout
+scoreboard players set @s BattleStart 0
+function johto:tools/forceclick
 
+#Early return
+execute if entity @s[tag=WhiteoutDisable] run return 0
 
-
+#Returns the player to their last-visited Pokemon Center
 effect give @s minecraft:blindness 3 1 true
 tellraw @s {"text":"You fled to the last safe place to heal!","italic":true,"color":"gray"}
 
@@ -35,7 +39,5 @@ execute as @s[scores={Whiteout=25}] at @s run function johto:tools/tpwithsfx {sf
 
 #Heals Player's Pokemon
 pokeheal @s
-
-tag @s remove Whiteout
 
 #
