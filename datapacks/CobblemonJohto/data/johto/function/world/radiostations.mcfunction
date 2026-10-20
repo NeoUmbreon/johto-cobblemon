@@ -26,22 +26,10 @@ execute as @s[scores={RadioSelect=3}] run title @s actionbar {"text":"Radio: Pok
 #Swarms are post-game
 execute as @s[scores={RadioSelect=3,IP=0}] run return run tellraw @s {"text":"<Mary> We're reaching out to all you Pokémon fans out there! Here is the leading expert on Pokémon, Professor Oak, and of course myself, Mary!"}
 
-#Rolls for a Swarm species if rng=0 and player tunes into this station
-#SwarmActive score should prevent the rolling from going multiple times within a day. Resets with DailyCommands function
-execute as @s[scores={RadioSelect=3,IP=1..}] if entity @e[x=-864,y=69,z=-207,dy=3,tag=!SwarmActive] run scoreboard players set @e[x=-864,y=69,z=-207,dy=4,dz=2] rng 0
-execute as @s[scores={RadioSelect=3,IP=1..}] if entity @e[x=-864,y=69,z=-207,dy=3,tag=!SwarmActive] run scoreboard players add @e[x=-864,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 1
-execute as @s[scores={RadioSelect=3,IP=1..}] if entity @e[x=-864,y=69,z=-207,dy=3,tag=!SwarmActive] run scoreboard players add @e[x=-864,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 2
-execute as @s[scores={RadioSelect=3,IP=1..}] if entity @e[x=-864,y=69,z=-207,dy=3,tag=!SwarmActive] run scoreboard players add @e[x=-864,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 4
-execute as @s[scores={RadioSelect=3,IP=1..}] if entity @e[x=-864,y=69,z=-207,dy=3,tag=!SwarmActive] run scoreboard players add @e[x=-864,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 8
-execute as @s[scores={RadioSelect=3,IP=1..}] if entity @e[x=-864,y=69,z=-207,dy=3,tag=!SwarmActive] run scoreboard players add @e[x=-864,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 16
-execute as @s[scores={RadioSelect=3,IP=1..}] if entity @e[x=-864,y=69,z=-207,dy=3,tag=!SwarmActive] run scoreboard players add @e[x=-864,y=69,z=-207,dy=4,dz=2,sort=random,limit=1] rng 32
-
-#Ensures the armor stands have an equal value and reflect equal Pokemon and zones
-execute as @s[scores={RadioSelect=3,IP=1..}] run scoreboard players operation @e[x=-864,y=69,z=-207,dy=3] rng = @e[x=-864,y=69,z=-205,dy=3] rng
-
-execute as @s[scores={RadioSelect=3,IP=1..}] run tag @e[x=-864,y=69,z=-207,dy=4,dz=2] add SwarmActive
-execute as @s[scores={RadioSelect=3,IP=1..}] run function johto:triggers/radio/swarmspawns
-execute as @s[scores={RadioSelect=3,IP=1..},tag=!PokeTalkCooldown] run tellraw @s ["",{"text":"<Mary> This is breaking news! A bunch of "},{"selector":"@e[x=-864,y=69,z=-205,dy=3]"},{"text":" have decided to make an appearance at "},{"selector":"@e[x=-864,y=69,z=-207,dy=3]"},{"text":"! If you're a Trainer who's really wanted to find "},{"selector":"@e[x=-864,y=69,z=-205,dy=3]"},{"text":", hurry over to "},{"selector":"@e[x=-864,y=69,z=-207,dy=3]"},{"text":"!"}]
+#Rolls for a Swarm species if player tunes into this station
+#SwarmActive tag prevents the rolling from happening multiple times a day. Resets with DailyCommands function
+execute if entity @s[scores={RadioSelect=3,IP=1..}] as @e[x=-864,y=69,z=-207,dy=3,tag=!SwarmActive] run function johto:triggers/radio/swarmspawns
+execute as @s[scores={RadioSelect=3,IP=1..},tag=!PokeTalkCooldown] run tellraw @s ["<Mary> This is breaking news! A bunch of ",{"storage":"johto:swarm","nbt":"Species"}," have decided to make an appearance at ",{"storage":"johto:swarm","nbt":"Zone"},"! If you're a Trainer who's really wanted to find ",{"storage":"johto:swarm","nbt":"Species"},", hurry over to ",{"storage":"johto:swarm","nbt":"Zone"},"!"]
 execute as @s[scores={RadioSelect=3,IP=1..}] run tag @s add PokeTalkCooldown
 
 

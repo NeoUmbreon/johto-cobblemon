@@ -20,10 +20,6 @@ function johto:hms/cutregen
 execute as @a[tag=RockSmash] at @s as @e[tag=RockSmash,type=armor_stand,distance=40..150] run function johto:hms/rocksmashregen
 
 
-#Runs Swarm Spawns (changes up biomes on routes as needed)
-function johto:triggers/radio/swarmspawns
-
-
 #Spawns Unown or not based on how many of the ruin puzzles players have completed.
 execute if entity @e run fillbiome 214 37 -96 179 41 -145 minecraft:jungle
 execute if entity @e[x=-867,y=69,z=-210,dy=3,type=armor_stand,scores={PuzzleTrack=4..}] unless biome 214 37 -96 minecraft:end_barrens run fillbiome 214 37 -96 179 41 -145 minecraft:end_barrens
