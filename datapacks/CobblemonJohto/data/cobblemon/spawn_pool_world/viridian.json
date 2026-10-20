@@ -1,0 +1,94 @@
+{
+  "spawns": [
+    {
+      "id": "viridian-surf-0",
+      "presets": [
+        "surf",
+        "viridian"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 60
+    },
+    {
+      "id": "viridian-surf-1",
+      "presets": [
+        "surf",
+        "viridian"
+      ],
+      "pokemon": "poliwag",
+      "level": "5",
+      "weight": 30
+    },
+    {
+      "id": "viridian-surf-2",
+      "presets": [
+        "surf",
+        "viridian"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "10",
+      "weight": 10
+    },
+    {
+      "id": "viridian-old_rod-0",
+      "presets": [
+        "old_rod",
+        "viridian"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "viridian-old_rod-1",
+      "presets": [
+        "old_rod",
+        "viridian"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "viridian-good_rod-0",
+      "presets": [
+        "good_rod",
+        "viridian"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "viridian-good_rod-1",
+      "presets": [
+        "good_rod",
+        "viridian"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "viridian-super_rod-0",
+      "presets": [
+        "super_rod",
+        "viridian"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "viridian-super_rod-1",
+      "presets": [
+        "super_rod",
+        "viridian"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

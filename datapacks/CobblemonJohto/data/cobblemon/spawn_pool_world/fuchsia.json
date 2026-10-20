@@ -1,0 +1,84 @@
+{
+  "spawns": [
+    {
+      "id": "fuchsia-surf-0",
+      "presets": [
+        "surf",
+        "fuchsia"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "fuchsia-surf-1",
+      "presets": [
+        "surf",
+        "fuchsia"
+      ],
+      "pokemon": "magikarp",
+      "level": "15",
+      "weight": 30
+    },
+    {
+      "id": "fuchsia-surf-2",
+      "presets": [
+        "surf",
+        "fuchsia"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 10
+    },
+    {
+      "id": "fuchsia-old_rod-0",
+      "presets": [
+        "old_rod",
+        "fuchsia"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 100
+    },
+    {
+      "id": "fuchsia-good_rod-0",
+      "presets": [
+        "good_rod",
+        "fuchsia"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 90
+    },
+    {
+      "id": "fuchsia-good_rod-1",
+      "presets": [
+        "good_rod",
+        "fuchsia"
+      ],
+      "pokemon": "gyarados",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "fuchsia-super_rod-0",
+      "presets": [
+        "super_rod",
+        "fuchsia"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "fuchsia-super_rod-1",
+      "presets": [
+        "super_rod",
+        "fuchsia"
+      ],
+      "pokemon": "gyarados",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}

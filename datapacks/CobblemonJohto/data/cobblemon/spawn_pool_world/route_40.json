@@ -1,0 +1,138 @@
+{
+  "spawns": [
+    {
+      "id": "route_40-surf-0",
+      "presets": [
+        "surf",
+        "route_40"
+      ],
+      "pokemon": "tentacool",
+      "level": "15-25",
+      "weight": 60
+    },
+    {
+      "id": "route_40-surf-1",
+      "presets": [
+        "surf",
+        "route_40"
+      ],
+      "pokemon": "tentacool",
+      "level": "10-20",
+      "weight": 30
+    },
+    {
+      "id": "route_40-surf-2",
+      "presets": [
+        "surf",
+        "route_40"
+      ],
+      "pokemon": "tentacruel",
+      "level": "15-25",
+      "weight": 10
+    },
+    {
+      "id": "route_40-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_40"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_40-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_40"
+      ],
+      "pokemon": "krabby",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_40-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_40"
+      ],
+      "pokemon": "krabby",
+      "level": "20",
+      "weight": 50
+    },
+    {
+      "id": "route_40-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_40"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_40-good_rod-2",
+      "presets": [
+        "good_rod",
+        "route_40",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "route_40-good_rod-3",
+      "presets": [
+        "good_rod",
+        "route_40",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "route_40-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_40"
+      ],
+      "pokemon": "krabby",
+      "level": "40",
+      "weight": 60
+    },
+    {
+      "id": "route_40-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_40"
+      ],
+      "pokemon": "kingler",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "route_40-super_rod-2",
+      "presets": [
+        "super_rod",
+        "route_40",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "route_40-super_rod-3",
+      "presets": [
+        "super_rod",
+        "route_40",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}

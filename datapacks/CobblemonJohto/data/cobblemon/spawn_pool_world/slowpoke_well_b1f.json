@@ -1,0 +1,244 @@
+{
+  "spawns": [
+    {
+      "id": "slowpoke_well_b1f-land-0",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "zubat",
+      "level": "5",
+      "weight": 20
+    },
+    {
+      "id": "slowpoke_well_b1f-land-1",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "zubat",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "slowpoke_well_b1f-land-2",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "slowpoke",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "slowpoke_well_b1f-land-3",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "zubat",
+      "level": "8",
+      "weight": 5
+    },
+    {
+      "id": "slowpoke_well_b1f-land-4",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "slowpoke",
+      "level": "8",
+      "weight": 5
+    },
+    {
+      "id": "slowpoke_well_b1f-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "zubat",
+      "level": "7",
+      "weight": 20
+    },
+    {
+      "id": "slowpoke_well_b1f-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "zubat",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "slowpoke_well_b1f-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "zubat",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "slowpoke_well_b1f-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "makuhita",
+      "level": "7",
+      "weight": 20
+    },
+    {
+      "id": "slowpoke_well_b1f-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "absol",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "slowpoke_well_b1f-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "absol",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "slowpoke_well_b1f-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "chingling",
+      "level": "7",
+      "weight": 20
+    },
+    {
+      "id": "slowpoke_well_b1f-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "slowpoke_well_b1f-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "slowpoke_well_b1f-surf-0",
+      "presets": [
+        "surf",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "slowpoke",
+      "level": "10-20",
+      "weight": 60
+    },
+    {
+      "id": "slowpoke_well_b1f-surf-1",
+      "presets": [
+        "surf",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "slowpoke",
+      "level": "15-25",
+      "weight": 30
+    },
+    {
+      "id": "slowpoke_well_b1f-surf-2",
+      "presets": [
+        "surf",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "slowpoke",
+      "level": "5-15",
+      "weight": 10
+    },
+    {
+      "id": "slowpoke_well_b1f-old_rod-0",
+      "presets": [
+        "old_rod",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "slowpoke_well_b1f-old_rod-1",
+      "presets": [
+        "old_rod",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "slowpoke_well_b1f-good_rod-0",
+      "presets": [
+        "good_rod",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "slowpoke_well_b1f-good_rod-1",
+      "presets": [
+        "good_rod",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "slowpoke_well_b1f-super_rod-0",
+      "presets": [
+        "super_rod",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "goldeen",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "slowpoke_well_b1f-super_rod-1",
+      "presets": [
+        "super_rod",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "slowpoke_well_b1f-super_rod-2",
+      "presets": [
+        "super_rod",
+        "slowpoke_well_b1f"
+      ],
+      "pokemon": "seaking",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "spawns": [
+    {
+      "id": "route_48-land-0",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "tauros",
+      "level": "20",
+      "weight": 20
+    },
+    {
+      "id": "route_48-land-1",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "girafarig",
+      "level": "20",
+      "weight": 5
+    },
+    {
+      "id": "route_48-land-2",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "diglett",
+      "level": "20",
+      "weight": 4
+    },
+    {
+      "id": "route_48-land-3",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "growlithe",
+      "level": "21",
+      "weight": 2.5
+    },
+    {
+      "id": "route_48-land-4",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "vulpix",
+      "level": "21",
+      "weight": 2.5
+    },
+    {
+      "id": "route_48-land-5",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "growlithe",
+      "level": "22",
+      "weight": 2
+    },
+    {
+      "id": "route_48-land-6",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "vulpix",
+      "level": "22",
+      "weight": 2
+    },
+    {
+      "id": "route_48-land-7",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "hoppip",
+      "level": "22",
+      "weight": 1
+    },
+    {
+      "id": "route_48-land-8",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "tauros",
+      "level": "24",
+      "weight": 1
+    },
+    {
+      "id": "route_48-land-9",
+      "presets": [
+        "grass",
+        "route_48",
+        "morn_day"
+      ],
+      "pokemon": "farfetchd",
+      "level": "25",
+      "weight": 10
+    },
+    {
+      "id": "route_48-land-10",
+      "presets": [
+        "grass",
+        "route_48",
+        "morn_day"
+      ],
+      "pokemon": "farfetchd",
+      "level": "24",
+      "weight": 10
+    },
+    {
+      "id": "route_48-land-11",
+      "presets": [
+        "grass",
+        "route_48",
+        "nite"
+      ],
+      "pokemon": "growlithe",
+      "level": "25",
+      "weight": 10
+    },
+    {
+      "id": "route_48-land-12",
+      "presets": [
+        "grass",
+        "route_48",
+        "nite"
+      ],
+      "pokemon": "vulpix",
+      "level": "24",
+      "weight": 10
+    },
+    {
+      "id": "route_48-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "hoppip",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "route_48-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "fearow",
+      "level": "21",
+      "weight": 10
+    },
+    {
+      "id": "route_48-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "gloom",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "route_48-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "gloom",
+      "level": "24",
+      "weight": 10
+    },
+    {
+      "id": "route_48-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "plusle",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "route_48-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "plusle",
+      "level": "21",
+      "weight": 10
+    },
+    {
+      "id": "route_48-hoennsound_active-2",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "minun",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "route_48-hoennsound_active-3",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "minun",
+      "level": "24",
+      "weight": 10
+    },
+    {
+      "id": "route_48-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "shinx",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "route_48-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "shinx",
+      "level": "21",
+      "weight": 10
+    },
+    {
+      "id": "route_48-sinnohsound_active-2",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "shinx",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "route_48-sinnohsound_active-3",
+      "presets": [
+        "grass",
+        "route_48"
+      ],
+      "pokemon": "shinx",
+      "level": "24",
+      "weight": 10
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "spawns": [
+    {
+      "id": "route_41-surf-0",
+      "presets": [
+        "surf",
+        "route_41"
+      ],
+      "pokemon": "tentacool",
+      "level": "15-25",
+      "weight": 60
+    },
+    {
+      "id": "route_41-surf-1",
+      "presets": [
+        "surf",
+        "route_41"
+      ],
+      "pokemon": "tentacruel",
+      "level": "15-25",
+      "weight": 20
+    },
+    {
+      "id": "route_41-surf-2",
+      "presets": [
+        "surf",
+        "route_41"
+      ],
+      "pokemon": "tentacool",
+      "level": "10-20",
+      "weight": 15
+    },
+    {
+      "id": "route_41-surf-3",
+      "presets": [
+        "surf",
+        "route_41"
+      ],
+      "pokemon": "mantine",
+      "level": "15-25",
+      "weight": 5
+    },
+    {
+      "id": "route_41-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_41"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_41-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_41"
+      ],
+      "pokemon": "tentacool",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_41-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_41"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_41-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_41"
+      ],
+      "pokemon": "tentacool",
+      "level": "20",
+      "weight": 30
+    },
+    {
+      "id": "route_41-good_rod-2",
+      "presets": [
+        "good_rod",
+        "route_41"
+      ],
+      "pokemon": "chinchou",
+      "level": "20",
+      "weight": 20
+    },
+    {
+      "id": "route_41-good_rod-3",
+      "presets": [
+        "good_rod",
+        "route_41"
+      ],
+      "pokemon": "shellder",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "route_41-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_41"
+      ],
+      "pokemon": "chinchou",
+      "level": "40",
+      "weight": 40
+    },
+    {
+      "id": "route_41-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_41"
+      ],
+      "pokemon": "shellder",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "route_41-super_rod-2",
+      "presets": [
+        "super_rod",
+        "route_41"
+      ],
+      "pokemon": "tentacruel",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "route_41-super_rod-3",
+      "presets": [
+        "super_rod",
+        "route_41"
+      ],
+      "pokemon": "lanturn",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

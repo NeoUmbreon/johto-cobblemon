@@ -1,0 +1,204 @@
+{
+  "spawns": [
+    {
+      "id": "route_17-land-0",
+      "presets": [
+        "grass",
+        "route_17"
+      ],
+      "pokemon": "slugma",
+      "level": "29",
+      "weight": 5
+    },
+    {
+      "id": "route_17-land-1",
+      "presets": [
+        "grass",
+        "route_17"
+      ],
+      "pokemon": "muk",
+      "level": "32",
+      "weight": 5
+    },
+    {
+      "id": "route_17-land-2",
+      "presets": [
+        "grass",
+        "route_17",
+        "morn_day"
+      ],
+      "pokemon": "fearow",
+      "level": "28",
+      "weight": 20
+    },
+    {
+      "id": "route_17-land-3",
+      "presets": [
+        "grass",
+        "route_17",
+        "morn_nite"
+      ],
+      "pokemon": "grimer",
+      "level": "27",
+      "weight": 20
+    },
+    {
+      "id": "route_17-land-4",
+      "presets": [
+        "grass",
+        "route_17",
+        "morn_day"
+      ],
+      "pokemon": "fearow",
+      "level": "30",
+      "weight": 10
+    },
+    {
+      "id": "route_17-land-5",
+      "presets": [
+        "grass",
+        "route_17",
+        "day"
+      ],
+      "pokemon": "slugma",
+      "level": "27",
+      "weight": 20
+    },
+    {
+      "id": "route_17-land-6",
+      "presets": [
+        "grass",
+        "route_17",
+        "nite"
+      ],
+      "pokemon": "grimer",
+      "level": "28",
+      "weight": 20
+    },
+    {
+      "id": "route_17-land-7",
+      "presets": [
+        "grass",
+        "route_17",
+        "nite"
+      ],
+      "pokemon": "muk",
+      "level": "30",
+      "weight": 10
+    },
+    {
+      "id": "route_17-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_17"
+      ],
+      "pokemon": "grimer",
+      "level": "29",
+      "weight": 20
+    },
+    {
+      "id": "route_17-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_17",
+        "morn_day"
+      ],
+      "pokemon": "fearow",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "route_17-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_17",
+        "morn_nite"
+      ],
+      "pokemon": "grimer",
+      "level": "27",
+      "weight": 10
+    },
+    {
+      "id": "route_17-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_17",
+        "day"
+      ],
+      "pokemon": "slugma",
+      "level": "27",
+      "weight": 10
+    },
+    {
+      "id": "route_17-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_17",
+        "nite"
+      ],
+      "pokemon": "grimer",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "route_17-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_17"
+      ],
+      "pokemon": "minun",
+      "level": "29",
+      "weight": 20
+    },
+    {
+      "id": "route_17-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_17"
+      ],
+      "pokemon": "plusle",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "route_17-hoennsound_active-2",
+      "presets": [
+        "grass",
+        "route_17"
+      ],
+      "pokemon": "plusle",
+      "level": "27",
+      "weight": 10
+    },
+    {
+      "id": "route_17-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_17"
+      ],
+      "pokemon": "shinx",
+      "level": "29",
+      "weight": 20
+    },
+    {
+      "id": "route_17-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_17"
+      ],
+      "pokemon": "shinx",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "route_17-sinnohsound_active-2",
+      "presets": [
+        "grass",
+        "route_17"
+      ],
+      "pokemon": "shinx",
+      "level": "27",
+      "weight": 10
+    }
+  ]
+}

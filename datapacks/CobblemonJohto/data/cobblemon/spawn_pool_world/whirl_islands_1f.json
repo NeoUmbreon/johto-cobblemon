@@ -1,0 +1,264 @@
+{
+  "spawns": [
+    {
+      "id": "whirl_islands_1f-land-0",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "krabby",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "whirl_islands_1f-land-1",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "zubat",
+      "level": "23",
+      "weight": 20
+    },
+    {
+      "id": "whirl_islands_1f-land-2",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "seel",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "whirl_islands_1f-land-3",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "golbat",
+      "level": "23",
+      "weight": 5
+    },
+    {
+      "id": "whirl_islands_1f-land-4",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "seel",
+      "level": "24",
+      "weight": 5
+    },
+    {
+      "id": "whirl_islands_1f-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "krabby",
+      "level": "24",
+      "weight": 20
+    },
+    {
+      "id": "whirl_islands_1f-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "krabby",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "whirl_islands_1f-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "zubat",
+      "level": "23",
+      "weight": 10
+    },
+    {
+      "id": "whirl_islands_1f-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "makuhita",
+      "level": "24",
+      "weight": 20
+    },
+    {
+      "id": "whirl_islands_1f-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "absol",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "whirl_islands_1f-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "absol",
+      "level": "23",
+      "weight": 10
+    },
+    {
+      "id": "whirl_islands_1f-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "chingling",
+      "level": "24",
+      "weight": 20
+    },
+    {
+      "id": "whirl_islands_1f-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "whirl_islands_1f-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "23",
+      "weight": 10
+    },
+    {
+      "id": "whirl_islands_1f-surf-0",
+      "presets": [
+        "surf",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "tentacool",
+      "level": "15-25",
+      "weight": 60
+    },
+    {
+      "id": "whirl_islands_1f-surf-1",
+      "presets": [
+        "surf",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "horsea",
+      "level": "10-20",
+      "weight": 30
+    },
+    {
+      "id": "whirl_islands_1f-surf-2",
+      "presets": [
+        "surf",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "tentacruel",
+      "level": "15-25",
+      "weight": 10
+    },
+    {
+      "id": "whirl_islands_1f-old_rod-0",
+      "presets": [
+        "old_rod",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "whirl_islands_1f-old_rod-1",
+      "presets": [
+        "old_rod",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "krabby",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "whirl_islands_1f-good_rod-0",
+      "presets": [
+        "good_rod",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "krabby",
+      "level": "20",
+      "weight": 50
+    },
+    {
+      "id": "whirl_islands_1f-good_rod-1",
+      "presets": [
+        "good_rod",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "whirl_islands_1f-good_rod-2",
+      "presets": [
+        "good_rod",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "horsea",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "whirl_islands_1f-super_rod-0",
+      "presets": [
+        "super_rod",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "krabby",
+      "level": "40",
+      "weight": 40
+    },
+    {
+      "id": "whirl_islands_1f-super_rod-1",
+      "presets": [
+        "super_rod",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "horsea",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "whirl_islands_1f-super_rod-2",
+      "presets": [
+        "super_rod",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "kingler",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "whirl_islands_1f-super_rod-3",
+      "presets": [
+        "super_rod",
+        "whirl_islands_1f"
+      ],
+      "pokemon": "seadra",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

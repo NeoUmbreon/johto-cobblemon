@@ -1,0 +1,303 @@
+{
+  "spawns": [
+    {
+      "id": "route_37-land-0",
+      "presets": [
+        "grass",
+        "route_37"
+      ],
+      "pokemon": "stantler",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "route_37-land-1",
+      "presets": [
+        "grass",
+        "route_37"
+      ],
+      "pokemon": "growlithe",
+      "level": "14",
+      "weight": 5
+    },
+    {
+      "id": "route_37-land-2",
+      "presets": [
+        "grass",
+        "route_37"
+      ],
+      "pokemon": "vulpix",
+      "level": "14",
+      "weight": 5
+    },
+    {
+      "id": "route_37-land-3",
+      "presets": [
+        "grass",
+        "route_37",
+        "morn"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_37-land-4",
+      "presets": [
+        "grass",
+        "route_37",
+        "morn"
+      ],
+      "pokemon": "ledyba",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_37-land-5",
+      "presets": [
+        "grass",
+        "route_37",
+        "morn"
+      ],
+      "pokemon": "pidgey",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "route_37-land-6",
+      "presets": [
+        "grass",
+        "route_37",
+        "morn"
+      ],
+      "pokemon": "ledyba",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "route_37-land-7",
+      "presets": [
+        "grass",
+        "route_37",
+        "day"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_37-land-8",
+      "presets": [
+        "grass",
+        "route_37",
+        "day"
+      ],
+      "pokemon": "pidgeotto",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "route_37-land-9",
+      "presets": [
+        "grass",
+        "route_37",
+        "day"
+      ],
+      "pokemon": "growlithe",
+      "level": "15",
+      "weight": 2.5
+    },
+    {
+      "id": "route_37-land-10",
+      "presets": [
+        "grass",
+        "route_37",
+        "day"
+      ],
+      "pokemon": "vulpix",
+      "level": "15",
+      "weight": 2.5
+    },
+    {
+      "id": "route_37-land-11",
+      "presets": [
+        "grass",
+        "route_37",
+        "nite"
+      ],
+      "pokemon": "spinarak",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_37-land-12",
+      "presets": [
+        "grass",
+        "route_37",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_37-land-13",
+      "presets": [
+        "grass",
+        "route_37",
+        "nite"
+      ],
+      "pokemon": "spinarak",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "route_37-land-14",
+      "presets": [
+        "grass",
+        "route_37",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "route_37-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_37"
+      ],
+      "pokemon": "stantler",
+      "level": "15",
+      "weight": 10
+    },
+    {
+      "id": "route_37-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_37",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "route_37-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_37",
+        "morn"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_37-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_37",
+        "morn"
+      ],
+      "pokemon": "ledyba",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_37-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_37",
+        "day"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_37-sound_inactive-5",
+      "presets": [
+        "grass",
+        "route_37",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "route_37-sound_inactive-6",
+      "presets": [
+        "grass",
+        "route_37",
+        "nite"
+      ],
+      "pokemon": "spinarak",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_37-sound_inactive-7",
+      "presets": [
+        "grass",
+        "route_37",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_37-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_37"
+      ],
+      "pokemon": "minun",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "route_37-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_37"
+      ],
+      "pokemon": "plusle",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_37-hoennsound_active-2",
+      "presets": [
+        "grass",
+        "route_37"
+      ],
+      "pokemon": "plusle",
+      "level": "15",
+      "weight": 10
+    },
+    {
+      "id": "route_37-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_37"
+      ],
+      "pokemon": "shinx",
+      "level": "15",
+      "weight": 30
+    },
+    {
+      "id": "route_37-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_37"
+      ],
+      "pokemon": "shinx",
+      "level": "13",
+      "weight": 10
+    }
+  ]
+}

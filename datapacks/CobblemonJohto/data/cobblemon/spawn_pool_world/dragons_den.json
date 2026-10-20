@@ -1,0 +1,94 @@
+{
+  "spawns": [
+    {
+      "id": "dragons_den-surf-0",
+      "presets": [
+        "surf",
+        "dragons_den"
+      ],
+      "pokemon": "magikarp",
+      "level": "10-20",
+      "weight": 60
+    },
+    {
+      "id": "dragons_den-surf-1",
+      "presets": [
+        "surf",
+        "dragons_den"
+      ],
+      "pokemon": "magikarp",
+      "level": "5-15",
+      "weight": 30
+    },
+    {
+      "id": "dragons_den-surf-2",
+      "presets": [
+        "surf",
+        "dragons_den"
+      ],
+      "pokemon": "dratini",
+      "level": "5-15",
+      "weight": 10
+    },
+    {
+      "id": "dragons_den-old_rod-0",
+      "presets": [
+        "old_rod",
+        "dragons_den"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 100
+    },
+    {
+      "id": "dragons_den-good_rod-0",
+      "presets": [
+        "good_rod",
+        "dragons_den"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 90
+    },
+    {
+      "id": "dragons_den-good_rod-1",
+      "presets": [
+        "good_rod",
+        "dragons_den"
+      ],
+      "pokemon": "dratini",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "dragons_den-super_rod-0",
+      "presets": [
+        "super_rod",
+        "dragons_den"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 60
+    },
+    {
+      "id": "dragons_den-super_rod-1",
+      "presets": [
+        "super_rod",
+        "dragons_den"
+      ],
+      "pokemon": "dratini",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "dragons_den-super_rod-2",
+      "presets": [
+        "super_rod",
+        "dragons_den"
+      ],
+      "pokemon": "dragonair",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

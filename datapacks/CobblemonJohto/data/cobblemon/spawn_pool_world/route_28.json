@@ -1,0 +1,280 @@
+{
+  "spawns": [
+    {
+      "id": "route_28-land-0",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "tangela",
+      "level": "39",
+      "weight": 20
+    },
+    {
+      "id": "route_28-land-1",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "ponyta",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "route_28-land-2",
+      "presets": [
+        "grass",
+        "route_28",
+        "morn_day"
+      ],
+      "pokemon": "rapidash",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "route_28-land-3",
+      "presets": [
+        "grass",
+        "route_28",
+        "morn_day"
+      ],
+      "pokemon": "doduo",
+      "level": "41",
+      "weight": 5
+    },
+    {
+      "id": "route_28-land-4",
+      "presets": [
+        "grass",
+        "route_28",
+        "morn_day"
+      ],
+      "pokemon": "dodrio",
+      "level": "43",
+      "weight": 5
+    },
+    {
+      "id": "route_28-land-5",
+      "presets": [
+        "grass",
+        "route_28",
+        "nite"
+      ],
+      "pokemon": "sneasel",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "route_28-land-6",
+      "presets": [
+        "grass",
+        "route_28",
+        "nite"
+      ],
+      "pokemon": "rapidash",
+      "level": "41",
+      "weight": 5
+    },
+    {
+      "id": "route_28-land-7",
+      "presets": [
+        "grass",
+        "route_28",
+        "nite"
+      ],
+      "pokemon": "rapidash",
+      "level": "43",
+      "weight": 5
+    },
+    {
+      "id": "route_28-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "tangela",
+      "level": "39",
+      "weight": 10
+    },
+    {
+      "id": "route_28-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "ponyta",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "route_28-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "donphan",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "route_28-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "ursaring",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "route_28-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "linoone",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "route_28-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "whismur",
+      "level": "39",
+      "weight": 10
+    },
+    {
+      "id": "route_28-hoennsound_active-2",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "whismur",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "route_28-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "bidoof",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "route_28-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "buizel",
+      "level": "39",
+      "weight": 10
+    },
+    {
+      "id": "route_28-sinnohsound_active-2",
+      "presets": [
+        "grass",
+        "route_28"
+      ],
+      "pokemon": "buizel",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "route_28-surf-0",
+      "presets": [
+        "surf",
+        "route_28"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 60
+    },
+    {
+      "id": "route_28-surf-1",
+      "presets": [
+        "surf",
+        "route_28"
+      ],
+      "pokemon": "poliwag",
+      "level": "35",
+      "weight": 30
+    },
+    {
+      "id": "route_28-surf-2",
+      "presets": [
+        "surf",
+        "route_28"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "route_28-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_28"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_28-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_28"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_28-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_28"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "route_28-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_28"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_28-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_28"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "route_28-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_28"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

@@ -27,7 +27,7 @@ from pathlib import Path
 RODS = ("old_rod", "good_rod", "super_rod")
 RADIO_REGIONS = ("hoenn", "sinnoh")
 VERSION_KEYS = {"HEARTGOLD", "SOULSILVER"}
-TIME_KEYS = ("morn", "day", "nite")
+TIMES = ("morn", "day", "nite")
 
 # Expected SHA-256 hashes of the two pokeheartgold files this script reads.
 # Script raises on non-match.
@@ -67,8 +67,8 @@ def normalize_species(v):
         if VERSION_KEYS & v.keys():
             return {k: normalize_species(x) for k, x in v.items()}
         # Time dict (morn/day/nite): collapse to one species if all times agree
-        if all(k in v for k in TIME_KEYS):
-            vals = [v[k] for k in TIME_KEYS]
+        if all(k in v for k in TIMES):
+            vals = [v[k] for k in TIMES]
             if all(x == vals[0] for x in vals):
                 return normalize_species(vals[0])
         return {k: normalize_species(x) for k, x in v.items()}

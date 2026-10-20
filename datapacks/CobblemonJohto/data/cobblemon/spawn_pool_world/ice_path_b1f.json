@@ -1,0 +1,166 @@
+{
+  "spawns": [
+    {
+      "id": "ice_path_b1f-land-0",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "swinub",
+      "level": "21",
+      "weight": 20
+    },
+    {
+      "id": "ice_path_b1f-land-1",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "golbat",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "ice_path_b1f-land-2",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "swinub",
+      "level": "23",
+      "weight": 10
+    },
+    {
+      "id": "ice_path_b1f-land-3",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "jynx",
+      "level": "22",
+      "weight": 5
+    },
+    {
+      "id": "ice_path_b1f-land-4",
+      "presets": [
+        "indoor",
+        "ice_path_b1f",
+        "morn_nite"
+      ],
+      "pokemon": "zubat",
+      "level": "22",
+      "weight": 5
+    },
+    {
+      "id": "ice_path_b1f-land-5",
+      "presets": [
+        "indoor",
+        "ice_path_b1f",
+        "day"
+      ],
+      "pokemon": "jynx",
+      "level": "22",
+      "weight": 5
+    },
+    {
+      "id": "ice_path_b1f-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "swinub",
+      "level": "21",
+      "weight": 10
+    },
+    {
+      "id": "ice_path_b1f-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "golbat",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "ice_path_b1f-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "zubat",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "ice_path_b1f-sound_inactive-3",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "delibird",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "ice_path_b1f-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "makuhita",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "ice_path_b1f-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "absol",
+      "level": "21",
+      "weight": 10
+    },
+    {
+      "id": "ice_path_b1f-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "absol",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "ice_path_b1f-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "chingling",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "ice_path_b1f-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "21",
+      "weight": 10
+    },
+    {
+      "id": "ice_path_b1f-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "ice_path_b1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "22",
+      "weight": 10
+    }
+  ]
+}

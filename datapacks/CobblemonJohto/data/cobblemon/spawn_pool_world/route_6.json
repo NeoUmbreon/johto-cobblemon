@@ -1,0 +1,285 @@
+{
+  "spawns": [
+    {
+      "id": "route_6-land-0",
+      "presets": [
+        "grass",
+        "route_6"
+      ],
+      "pokemon": "magnemite",
+      "level": "15",
+      "weight": 10
+    },
+    {
+      "id": "route_6-land-1",
+      "presets": [
+        "grass",
+        "route_6"
+      ],
+      "pokemon": "abra",
+      "level": "12",
+      "weight": 5
+    },
+    {
+      "id": "route_6-land-2",
+      "presets": [
+        "grass",
+        "route_6"
+      ],
+      "pokemon": "abra",
+      "level": "14",
+      "weight": 5
+    },
+    {
+      "id": "route_6-land-3",
+      "presets": [
+        "grass",
+        "route_6",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_6-land-4",
+      "presets": [
+        "grass",
+        "route_6",
+        "morn_day"
+      ],
+      "pokemon": "bellsprout",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_6-land-5",
+      "presets": [
+        "grass",
+        "route_6",
+        "nite"
+      ],
+      "pokemon": "oddish",
+      "level": "13",
+      "weight": 30
+    },
+    {
+      "id": "route_6-land-6",
+      "presets": [
+        "grass",
+        "route_6",
+        "nite"
+      ],
+      "pokemon": "meowth",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_6-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_6",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_6-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_6",
+        "morn_day"
+      ],
+      "pokemon": "bellsprout",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_6-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_6",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "14",
+      "weight": 10
+    },
+    {
+      "id": "route_6-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_6",
+        "morn_day"
+      ],
+      "pokemon": "meowth",
+      "level": "14",
+      "weight": 10
+    },
+    {
+      "id": "route_6-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_6",
+        "nite"
+      ],
+      "pokemon": "bellsprout",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "route_6-sound_inactive-5",
+      "presets": [
+        "grass",
+        "route_6",
+        "nite"
+      ],
+      "pokemon": "oddish",
+      "level": "13",
+      "weight": 15
+    },
+    {
+      "id": "route_6-sound_inactive-6",
+      "presets": [
+        "grass",
+        "route_6",
+        "nite"
+      ],
+      "pokemon": "meowth",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_6-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_6"
+      ],
+      "pokemon": "whismur",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_6-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_6"
+      ],
+      "pokemon": "linoone",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "route_6-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_6"
+      ],
+      "pokemon": "buizel",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_6-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_6"
+      ],
+      "pokemon": "bidoof",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "route_6-surf-0",
+      "presets": [
+        "surf",
+        "route_6"
+      ],
+      "pokemon": "psyduck",
+      "level": "10",
+      "weight": 60
+    },
+    {
+      "id": "route_6-surf-1",
+      "presets": [
+        "surf",
+        "route_6"
+      ],
+      "pokemon": "psyduck",
+      "level": "5",
+      "weight": 30
+    },
+    {
+      "id": "route_6-surf-2",
+      "presets": [
+        "surf",
+        "route_6"
+      ],
+      "pokemon": "golduck",
+      "level": "10",
+      "weight": 10
+    },
+    {
+      "id": "route_6-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_6"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_6-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_6"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_6-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_6"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "route_6-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_6"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_6-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_6"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "route_6-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_6"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

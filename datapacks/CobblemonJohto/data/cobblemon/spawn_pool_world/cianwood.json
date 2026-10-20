@@ -1,0 +1,138 @@
+{
+  "spawns": [
+    {
+      "id": "cianwood-surf-0",
+      "presets": [
+        "surf",
+        "cianwood"
+      ],
+      "pokemon": "tentacool",
+      "level": "15-25",
+      "weight": 60
+    },
+    {
+      "id": "cianwood-surf-1",
+      "presets": [
+        "surf",
+        "cianwood"
+      ],
+      "pokemon": "tentacool",
+      "level": "10-20",
+      "weight": 30
+    },
+    {
+      "id": "cianwood-surf-2",
+      "presets": [
+        "surf",
+        "cianwood"
+      ],
+      "pokemon": "tentacruel",
+      "level": "15-25",
+      "weight": 10
+    },
+    {
+      "id": "cianwood-old_rod-0",
+      "presets": [
+        "old_rod",
+        "cianwood"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "cianwood-old_rod-1",
+      "presets": [
+        "old_rod",
+        "cianwood"
+      ],
+      "pokemon": "krabby",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "cianwood-good_rod-0",
+      "presets": [
+        "good_rod",
+        "cianwood"
+      ],
+      "pokemon": "krabby",
+      "level": "20",
+      "weight": 50
+    },
+    {
+      "id": "cianwood-good_rod-1",
+      "presets": [
+        "good_rod",
+        "cianwood"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "cianwood-good_rod-2",
+      "presets": [
+        "good_rod",
+        "cianwood",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cianwood-good_rod-3",
+      "presets": [
+        "good_rod",
+        "cianwood",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cianwood-super_rod-0",
+      "presets": [
+        "super_rod",
+        "cianwood"
+      ],
+      "pokemon": "krabby",
+      "level": "40",
+      "weight": 60
+    },
+    {
+      "id": "cianwood-super_rod-1",
+      "presets": [
+        "super_rod",
+        "cianwood"
+      ],
+      "pokemon": "kingler",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "cianwood-super_rod-2",
+      "presets": [
+        "super_rod",
+        "cianwood",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "cianwood-super_rod-3",
+      "presets": [
+        "super_rod",
+        "cianwood",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}

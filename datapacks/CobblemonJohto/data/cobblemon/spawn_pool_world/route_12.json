@@ -1,0 +1,154 @@
+{
+  "spawns": [
+    {
+      "id": "route_12-surf-0",
+      "presets": [
+        "surf",
+        "route_12"
+      ],
+      "pokemon": "tentacool",
+      "level": "25",
+      "weight": 60
+    },
+    {
+      "id": "route_12-surf-1",
+      "presets": [
+        "surf",
+        "route_12"
+      ],
+      "pokemon": "quagsire",
+      "level": "25",
+      "weight": 30
+    },
+    {
+      "id": "route_12-surf-2",
+      "presets": [
+        "surf",
+        "route_12"
+      ],
+      "pokemon": "tentacruel",
+      "level": "25",
+      "weight": 10
+    },
+    {
+      "id": "route_12-old_rod_swarm_inactive-0",
+      "presets": [
+        "old_rod",
+        "route_12"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_12-old_rod_swarm_active-0",
+      "presets": [
+        "old_rod",
+        "route_12"
+      ],
+      "pokemon": "relicanth",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_12-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_12"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 70
+    },
+    {
+      "id": "route_12-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_12"
+      ],
+      "pokemon": "tentacool",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_12-good_rod_swarm_inactive-0",
+      "presets": [
+        "good_rod",
+        "route_12"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_12-good_rod_swarm_inactive-1",
+      "presets": [
+        "good_rod",
+        "route_12"
+      ],
+      "pokemon": "tentacool",
+      "level": "20",
+      "weight": 25
+    },
+    {
+      "id": "route_12-good_rod_swarm_active-0",
+      "presets": [
+        "good_rod",
+        "route_12"
+      ],
+      "pokemon": "relicanth",
+      "level": "20",
+      "weight": 65
+    },
+    {
+      "id": "route_12-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_12"
+      ],
+      "pokemon": "tentacool",
+      "level": "20",
+      "weight": 35
+    },
+    {
+      "id": "route_12-super_rod_swarm_inactive-0",
+      "presets": [
+        "super_rod",
+        "route_12"
+      ],
+      "pokemon": "tentacool",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "route_12-super_rod_swarm_inactive-1",
+      "presets": [
+        "super_rod",
+        "route_12"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "route_12-super_rod_swarm_inactive-2",
+      "presets": [
+        "super_rod",
+        "route_12"
+      ],
+      "pokemon": "qwilfish",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "route_12-super_rod_swarm_active-0",
+      "presets": [
+        "super_rod",
+        "route_12"
+      ],
+      "pokemon": "relicanth",
+      "level": "40",
+      "weight": 100
+    }
+  ]
+}

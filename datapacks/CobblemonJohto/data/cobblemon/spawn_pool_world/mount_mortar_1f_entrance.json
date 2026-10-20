@@ -1,0 +1,274 @@
+{
+  "spawns": [
+    {
+      "id": "mount_mortar_1f_entrance-land-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "rattata",
+      "level": "14",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_entrance-land-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "geodude",
+      "level": "14",
+      "weight": 5
+    },
+    {
+      "id": "mount_mortar_1f_entrance-land-2",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "rattata",
+      "level": "16",
+      "weight": 4
+    },
+    {
+      "id": "mount_mortar_1f_entrance-land-3",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "marill",
+      "level": "15",
+      "weight": 1
+    },
+    {
+      "id": "mount_mortar_1f_entrance-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "machop",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_entrance-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "zubat",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_entrance-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "zubat",
+      "level": "15",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_entrance-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "makuhita",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_entrance-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "absol",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_entrance-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "absol",
+      "level": "15",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_entrance-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "chingling",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_entrance-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "bronzor",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_entrance-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "bronzor",
+      "level": "15",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_entrance-land_swarm_inactive-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "zubat",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_entrance-land_swarm_inactive-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "zubat",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_entrance-land_swarm_active-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "marill",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_entrance-land_swarm_active-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "marill",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_entrance-surf-0",
+      "presets": [
+        "surf",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "goldeen",
+      "level": "15-25",
+      "weight": 60
+    },
+    {
+      "id": "mount_mortar_1f_entrance-surf-1",
+      "presets": [
+        "surf",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "goldeen",
+      "level": "10-20",
+      "weight": 30
+    },
+    {
+      "id": "mount_mortar_1f_entrance-surf-2",
+      "presets": [
+        "surf",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "seaking",
+      "level": "15-25",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_entrance-old_rod-0",
+      "presets": [
+        "old_rod",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "mount_mortar_1f_entrance-old_rod-1",
+      "presets": [
+        "old_rod",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "mount_mortar_1f_entrance-good_rod-0",
+      "presets": [
+        "good_rod",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "mount_mortar_1f_entrance-good_rod-1",
+      "presets": [
+        "good_rod",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "mount_mortar_1f_entrance-super_rod-0",
+      "presets": [
+        "super_rod",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "goldeen",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "mount_mortar_1f_entrance-super_rod-1",
+      "presets": [
+        "super_rod",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_entrance-super_rod-2",
+      "presets": [
+        "super_rod",
+        "mount_mortar_1f_entrance"
+      ],
+      "pokemon": "seaking",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

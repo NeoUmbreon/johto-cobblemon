@@ -1,0 +1,234 @@
+{
+  "spawns": [
+    {
+      "id": "route_7-land-0",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "rattata",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "route_7-land-1",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "meowth",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "route_7-land-2",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "raticate",
+      "level": "19",
+      "weight": 10
+    },
+    {
+      "id": "route_7-land-3",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "persian",
+      "level": "19",
+      "weight": 2.5
+    },
+    {
+      "id": "route_7-land-4",
+      "presets": [
+        "grass",
+        "route_7",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "17",
+      "weight": 20
+    },
+    {
+      "id": "route_7-land-5",
+      "presets": [
+        "grass",
+        "route_7",
+        "morn"
+      ],
+      "pokemon": "rattata",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "route_7-land-6",
+      "presets": [
+        "grass",
+        "route_7",
+        "morn_day"
+      ],
+      "pokemon": "rattata",
+      "level": "19",
+      "weight": 2.5
+    },
+    {
+      "id": "route_7-land-7",
+      "presets": [
+        "grass",
+        "route_7",
+        "day"
+      ],
+      "pokemon": "growlithe",
+      "level": "15",
+      "weight": 2.5
+    },
+    {
+      "id": "route_7-land-8",
+      "presets": [
+        "grass",
+        "route_7",
+        "day"
+      ],
+      "pokemon": "vulpix",
+      "level": "15",
+      "weight": 2.5
+    },
+    {
+      "id": "route_7-land-9",
+      "presets": [
+        "grass",
+        "route_7",
+        "nite"
+      ],
+      "pokemon": "murkrow",
+      "level": "17",
+      "weight": 20
+    },
+    {
+      "id": "route_7-land-10",
+      "presets": [
+        "grass",
+        "route_7",
+        "nite"
+      ],
+      "pokemon": "houndour",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "route_7-land-11",
+      "presets": [
+        "grass",
+        "route_7",
+        "nite"
+      ],
+      "pokemon": "murkrow",
+      "level": "19",
+      "weight": 2.5
+    },
+    {
+      "id": "route_7-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "growlithe",
+      "level": "18",
+      "weight": 10
+    },
+    {
+      "id": "route_7-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "vulpix",
+      "level": "18",
+      "weight": 10
+    },
+    {
+      "id": "route_7-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "rattata",
+      "level": "17",
+      "weight": 5
+    },
+    {
+      "id": "route_7-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "meowth",
+      "level": "17",
+      "weight": 5
+    },
+    {
+      "id": "route_7-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_7",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "route_7-sound_inactive-5",
+      "presets": [
+        "grass",
+        "route_7",
+        "nite"
+      ],
+      "pokemon": "murkrow",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "route_7-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "plusle",
+      "level": "17",
+      "weight": 20
+    },
+    {
+      "id": "route_7-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "minun",
+      "level": "18",
+      "weight": 20
+    },
+    {
+      "id": "route_7-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "shinx",
+      "level": "17",
+      "weight": 20
+    },
+    {
+      "id": "route_7-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_7"
+      ],
+      "pokemon": "shinx",
+      "level": "18",
+      "weight": 20
+    }
+  ]
+}

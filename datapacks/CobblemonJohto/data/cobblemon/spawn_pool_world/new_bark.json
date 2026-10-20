@@ -1,0 +1,134 @@
+{
+  "spawns": [
+    {
+      "id": "new_bark-surf-0",
+      "presets": [
+        "surf",
+        "new_bark"
+      ],
+      "pokemon": "tentacool",
+      "level": "15-25",
+      "weight": 60
+    },
+    {
+      "id": "new_bark-surf-1",
+      "presets": [
+        "surf",
+        "new_bark"
+      ],
+      "pokemon": "tentacool",
+      "level": "10-20",
+      "weight": 30
+    },
+    {
+      "id": "new_bark-surf-2",
+      "presets": [
+        "surf",
+        "new_bark"
+      ],
+      "pokemon": "tentacruel",
+      "level": "15-25",
+      "weight": 10
+    },
+    {
+      "id": "new_bark-old_rod-0",
+      "presets": [
+        "old_rod",
+        "new_bark"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "new_bark-old_rod-1",
+      "presets": [
+        "old_rod",
+        "new_bark"
+      ],
+      "pokemon": "tentacool",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "new_bark-good_rod-0",
+      "presets": [
+        "good_rod",
+        "new_bark"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "new_bark-good_rod-1",
+      "presets": [
+        "good_rod",
+        "new_bark"
+      ],
+      "pokemon": "tentacool",
+      "level": "20",
+      "weight": 30
+    },
+    {
+      "id": "new_bark-good_rod-2",
+      "presets": [
+        "good_rod",
+        "new_bark"
+      ],
+      "pokemon": "chinchou",
+      "level": "20",
+      "weight": 20
+    },
+    {
+      "id": "new_bark-good_rod-3",
+      "presets": [
+        "good_rod",
+        "new_bark"
+      ],
+      "pokemon": "shellder",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "new_bark-super_rod-0",
+      "presets": [
+        "super_rod",
+        "new_bark"
+      ],
+      "pokemon": "chinchou",
+      "level": "40",
+      "weight": 40
+    },
+    {
+      "id": "new_bark-super_rod-1",
+      "presets": [
+        "super_rod",
+        "new_bark"
+      ],
+      "pokemon": "shellder",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "new_bark-super_rod-2",
+      "presets": [
+        "super_rod",
+        "new_bark"
+      ],
+      "pokemon": "tentacruel",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "new_bark-super_rod-3",
+      "presets": [
+        "super_rod",
+        "new_bark"
+      ],
+      "pokemon": "lanturn",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}
