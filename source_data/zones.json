@@ -18,9 +18,7 @@
   {
     "map": "D02R0102",
     "name": "MOUNT_MOON_SQUARE_ENTRANCE",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -34,9 +32,7 @@
   {
     "map": "D02R0104",
     "name": "MOUNT_MOON_SQUARE_CLEFAIRY_EVENT",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -130,9 +126,7 @@
   {
     "map": "D15R0103",
     "name": "SPROUT_TOWER_3F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -146,65 +140,49 @@
   {
     "map": "D17R0103",
     "name": "BELL_TOWER_3F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D17R0104",
     "name": "BELL_TOWER_4F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D17R0105",
     "name": "BELL_TOWER_5F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D17R0106",
     "name": "BELL_TOWER_6F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D17R0107",
     "name": "BELL_TOWER_7F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D17R0108",
     "name": "BELL_TOWER_8F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D17R0109",
     "name": "BELL_TOWER_9F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D17R0112",
     "name": "BELL_TOWER_10F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -234,9 +212,7 @@
   {
     "map": "D22R0102",
     "name": "NATIONAL_PARK_BUG_CATCHING_CONTEST",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -258,25 +234,19 @@
   {
     "map": "D24R0216",
     "name": "RUINS_OF_ALPH_UNDERGROUND_HALL_SINJOH_EVENT",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D24R0217",
     "name": "RUINS_OF_ALPH_HALL_ENTRANCE_SINJOH_EVENT",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D24R0218",
     "name": "RUINS_OF_ALPH_UNDERGROUND_HALL_SINJOH_EVENT_2",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -362,9 +332,7 @@
   {
     "map": "D39R0101",
     "name": "ICE_PATH_1F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -378,9 +346,7 @@
   {
     "map": "D39R0103",
     "name": "ICE_PATH_B2F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -419,9 +385,7 @@
   {
     "map": "D40R0106",
     "name": "WHIRL_ISLANDS_B3F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -435,25 +399,19 @@
   {
     "map": "D41R0102",
     "name": "MOUNT_SILVER_CAVE_UPPER_MOUNTAINSIDE",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D41R0103",
     "name": "MOUNT_SILVER_CAVE_LOWER_MOUNTAINSIDE",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D41R0104",
     "name": "MOUNT_SILVER_CAVE_EXPERT_BELT_CHAMBER",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -475,9 +433,7 @@
   {
     "map": "D41R0107",
     "name": "MOUNT_SILVER_CAVE_3F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -508,17 +464,13 @@
   {
     "map": "D43R0102",
     "name": "VICTORY_ROAD_2F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
     "map": "D43R0103",
     "name": "VICTORY_ROAD_3F",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
@@ -548,9 +500,7 @@
   {
     "map": "D47R0102",
     "name": "SAFARI_ZONE_ENTRANCE_EXTERIOR",
-    "coords": [
-      
-    ],
+    "coords": [],
     "landContext": "none"
   },
   {
