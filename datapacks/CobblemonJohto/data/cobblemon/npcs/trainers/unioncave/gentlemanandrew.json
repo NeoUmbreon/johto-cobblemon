@@ -1,5 +1,5 @@
 {
-    "resourceIdentifier": "cobblemon:gentleman",
+    "resourceIdentifier": "cobblemon:pokemaniac",
     "interaction": {
         "type": "dialogue",
         "dialogue": "cobblemon:gentlemanandrew_interaction"
