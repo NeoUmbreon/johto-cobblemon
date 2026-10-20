@@ -377,8 +377,8 @@
     "map": "D40R0104",
     "name": "WHIRL_ISLANDS_B2F",
     "coords": [
-      { "minX": 1195, "minY": 81, "minZ": 194, "maxX": 1272, "maxY": 93, "maxZ": 295 },
-      { "minX": 1222, "minY": 27, "minZ": 166, "maxX": 1268, "maxY": 39, "maxZ": 194 }
+      { "minX": 1222, "minY": 27, "minZ": 166, "maxX": 1269, "maxY": 93, "maxZ": 245 },
+      { "minX": 1222, "minY": 27, "minZ": 195, "maxX": 1269, "maxY": 80, "maxZ": 245 }
     ],
     "landContext": "indoor"
   },
@@ -448,8 +448,8 @@
     "map": "D42R0102",
     "name": "DARK_CAVE_ROUTE_31_SIDE",
     "coords": [
-      { "minX": -310, "minZ": -87, "maxX": -216, "maxZ": -12 },
-      { "minX": -408, "minZ": -183, "maxX": -311, "maxZ": -12 }
+      { "minX": -408, "minZ": -183, "maxX": -216, "maxZ": -12 },
+      { "minX": -310, "minZ": -183, "maxX": -216, "maxZ": -88 }
     ],
     "landContext": "indoor"
   },
@@ -747,8 +747,8 @@
     "map": "R32",
     "name": "ROUTE_32",
     "coords": [
-      { "minX": 81, "minZ": -311, "maxX": 139, "maxZ": -166 },
-      { "minX": 107, "minY": 60, "minZ": -649, "maxX": 195, "maxZ": -300 }
+      { "minX": 81, "minY": 60, "minZ": -649, "maxX": 195, "maxZ": -166 },
+      { "minX": 140, "minY": 60, "minZ": -299, "maxX": 195, "maxZ": -166 }
     ],
     "landContext": "grass"
   },
