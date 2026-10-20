@@ -1,0 +1,16 @@
+{
+  "condition": {
+    "minX": 81,
+    "minY": 60,
+    "minZ": -649,
+    "maxX": 195,
+    "maxZ": -166
+  },
+  "anticondition": {
+    "minX": 140,
+    "minY": 60,
+    "minZ": -299,
+    "maxX": 195,
+    "maxZ": -166
+  }
+}

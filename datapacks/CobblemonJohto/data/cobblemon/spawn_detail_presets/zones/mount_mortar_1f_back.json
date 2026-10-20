@@ -1,0 +1,10 @@
+{
+  "condition": {
+    "minX": -22,
+    "minY": 42,
+    "minZ": 302,
+    "maxX": 206,
+    "maxY": 66,
+    "maxZ": 493
+  }
+}
