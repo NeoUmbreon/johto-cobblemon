@@ -87,16 +87,12 @@ execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTra
 execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] as @s[scores={RadioSelect=7}] run title @s actionbar {"text":"Radio: Pokemon Music - Hoenn Sounds"}
 execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] as @s[scores={RadioSelect=7}] run tellraw @s[tag=!PokemonMusicTalk] ["",{"text":"\u266a\u266b\u266c "},{"text":"[Radio: Pokémon Music] ","color":"aqua"},{"text":"<DJ Ben> It's me, DJ Ben! Today's Wednesday, so chill out to Hoenn Sounds! ","italic":true},{"text":"\u266a\u266b\u266c"}]
 execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] as @s[scores={RadioSelect=7}] run tag @s add HoennSounds
-execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] as @s[scores={RadioSelect=7}] run tag @a remove Dialogue156
-execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] as @s[scores={RadioSelect=7}] run scoreboard players set @s[scores={TalkTime=0,DialogueTrigger=0},tag=!HoennSoundsCD] DialogueTrigger 156
 
 
 #Thursday - Sinnoh Sounds
 execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] as @s[scores={RadioSelect=7}] run title @s actionbar {"text":"Radio: Pokemon Music - Sinnoh Sounds"}
 execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] as @s[scores={RadioSelect=7}] run tellraw @s[tag=!PokemonMusicTalk] ["",{"text":"\u266a\u266b\u266c "},{"text":"[Radio: Pokémon Music] ","color":"aqua"},{"text":"<DJ Ben> It's me, DJ Ben! Today's Thursday, so chill out to Sinnoh Sounds! ","italic":true},{"text":"\u266a\u266b\u266c"}]
 execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] as @s[scores={RadioSelect=7}] run tag @s add SinnohSounds
-execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] as @s[scores={RadioSelect=7}] run tag @a remove Dialogue157
-execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] as @s[scores={RadioSelect=7}] run scoreboard players set @s[scores={TalkTime=0,DialogueTrigger=0},tag=!SinnohSoundsCD] DialogueTrigger 157
 
 
 execute as @s[scores={RadioSelect=7}] run tag @s add PokemonMusicTalk
