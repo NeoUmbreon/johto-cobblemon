@@ -227,7 +227,7 @@
     "map": "D24R0205",
     "name": "RUINS_OF_ALPH_UNDERGROUND_HALL",
     "coords": [
-      { "minX": 214, "minY": 38, "minZ": -145, "maxX": 179, "maxY": 41, "maxZ": -96 }
+      { "minX": 179, "minY": 38, "minZ": -145, "maxX": 214, "maxY": 41, "maxZ": -96 }
     ],
     "landContext": "indoor"
   },
@@ -507,7 +507,7 @@
     "map": "D48R0101",
     "name": "CLIFF_EDGE_GATE",
     "coords": [
-      { "minX": 1330, "minZ": -394, "maxX": 1309, "maxZ": -374 }
+      { "minX": 1309, "minZ": -394, "maxX": 1330, "maxZ": -374 }
     ],
     "landContext": "none"
   },
