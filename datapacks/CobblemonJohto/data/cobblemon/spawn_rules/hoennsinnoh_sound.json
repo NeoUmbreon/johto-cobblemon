@@ -4,13 +4,13 @@
   "components": [
     {
       "type": "filter",
-      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'hoennsound')",
-      "allow": "q.is_included(v.spawn_detail.id, 'hoennsound_active') ? v.spawnable_position.player.has_tag('HoennSound') : !v.spawnable_position.player.has_tag('HoennSound')"
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'sound_active')",
+      "allow": "( q.is_included(v.spawn_detail.id, 'hoenn') && v.spawnable_position.player.has_tag('HoennSound') ) || ( q.is_included(v.spawn_detail.id, 'sinnoh') && v.spawnable_position.player.has_tag('SinnohSound') )"
     },
     {
       "type": "filter",
-      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'sinnohsound')",
-      "allow": "q.is_included(v.spawn_detail.id, 'sinnohsound_active') ? v.spawnable_position.player.has_tag('SinnohSound') : !v.spawnable_position.player.has_tag('SinnohSound')"
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'sound_inactive')",
+      "allow": "!v.spawnable_position.player.has_tag('HoennSound') && !v.spawnable_position.player.has_tag('SinnohSound')"
     }
   ]
 }
