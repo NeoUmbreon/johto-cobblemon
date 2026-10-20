@@ -4,12 +4,6 @@
 #Invisible villager in Sinjoh Ruins Abra
 effect give @e[x=-1073,y=60,z=-216,distance=..2,type=minecraft:villager] minecraft:invisibility 10000 1 true
 
-#SinnohSoundsCD Reset
-tag @a[tag=SinnohSoundsCD] remove SinnohSoundsCD
-
-#HoennSoundsCD Reset
-tag @a[tag=HoennSoundsCD] remove HoennSoundsCD
-
 #Bike Shop Thanks Cooldown
 scoreboard players remove @a[scores={BicycleCD=1}] BicycleCD 1
 
