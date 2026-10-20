@@ -1,6 +1,9 @@
 #For the different radio stations besides the world music stations
 #Executes radio station effects
 
+tag @s remove HoennSounds
+tag @s remove SinnohSounds
+
 # Returns
 # Slots 3-7 - No Radio Card
 execute as @s[scores={RadioSelect=3..7},tag=!RadioCard] run return run title @s actionbar [{"text":"Station "},{"score":{"name":"@s","objective":"RadioSelect"}},{"text":": This station requires a Radio Card from Goldenrod to listen"}]
@@ -56,8 +59,6 @@ execute as @s[scores={RadioSelect=6}] run tag @s add BuenasPasswordDaily
 
 
 #Slot 7 - Pokemon Music
-execute as @s[scores={RadioSelect=7}] run tag @s remove HoennSounds
-execute as @s[scores={RadioSelect=7}] run tag @s remove SinnohSounds
 
 #Monday - Pokemon March
 execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=1}] as @s[scores={RadioSelect=7}] run title @s actionbar {"text":"Radio: Pokemon Music - Pokemon March"}
