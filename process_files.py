@@ -109,7 +109,7 @@ def load_excel_teams(valid_items, valid_moves, excel_file):
                 .replace("-", "_")
             )
 
-            if item not in valid_items:
+            if "minecraft:" not in item and item not in valid_items:
                 raise ValueError(f"Invalid item: {item}")
             else:
                 pokemon["helditem"] = item
