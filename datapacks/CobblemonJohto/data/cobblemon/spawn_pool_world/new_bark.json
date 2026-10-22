@@ -7,8 +7,8 @@
         "new_bark"
       ],
       "pokemon": "tentacool",
-      "level": "15-25",
-      "weight": 60
+      "level": "2-4",
+      "weight": 70
     },
     {
       "id": "new_bark-surf-1",
@@ -17,18 +17,8 @@
         "new_bark"
       ],
       "pokemon": "tentacool",
-      "level": "10-20",
+      "level": "2-3",
       "weight": 30
-    },
-    {
-      "id": "new_bark-surf-2",
-      "presets": [
-        "surf",
-        "new_bark"
-      ],
-      "pokemon": "tentacruel",
-      "level": "15-25",
-      "weight": 10
     },
     {
       "id": "new_bark-old_rod-0",

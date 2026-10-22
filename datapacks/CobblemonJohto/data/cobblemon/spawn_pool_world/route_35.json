@@ -159,38 +159,8 @@
         "route_35"
       ],
       "pokemon": "psyduck",
-      "level": "15-25",
-      "weight": 60
-    },
-    {
-      "id": "route_35-surf-1",
-      "presets": [
-        "surf",
-        "route_35"
-      ],
-      "pokemon": "psyduck",
-      "level": "10-20",
-      "weight": 30
-    },
-    {
-      "id": "route_35-surf-2",
-      "presets": [
-        "surf",
-        "route_35"
-      ],
-      "pokemon": "golduck",
-      "level": "15-25",
-      "weight": 9
-    },
-    {
-      "id": "route_35-surf-3",
-      "presets": [
-        "surf",
-        "route_35"
-      ],
-      "pokemon": "golduck",
-      "level": "31",
-      "weight": 1
+      "level": "11-14",
+      "weight": 100
     },
     {
       "id": "route_35-old_rod-0",

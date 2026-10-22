@@ -341,7 +341,7 @@
         "route_31"
       ],
       "pokemon": "poliwag",
-      "level": "15-25",
+      "level": "3-5",
       "weight": 60
     },
     {
@@ -351,7 +351,7 @@
         "route_31"
       ],
       "pokemon": "poliwag",
-      "level": "10-20",
+      "level": "3-4",
       "weight": 30
     },
     {
@@ -360,19 +360,9 @@
         "surf",
         "route_31"
       ],
-      "pokemon": "poliwhirl",
-      "level": "15-25",
-      "weight": 9
-    },
-    {
-      "id": "route_31-surf-3",
-      "presets": [
-        "surf",
-        "route_31"
-      ],
-      "pokemon": "poliwhirl",
-      "level": "32",
-      "weight": 1
+      "pokemon": "poliwag",
+      "level": "3",
+      "weight": 10
     },
     {
       "id": "route_31-old_rod-0",

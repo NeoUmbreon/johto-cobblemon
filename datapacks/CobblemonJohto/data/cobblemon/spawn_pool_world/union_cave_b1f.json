@@ -147,7 +147,7 @@
         "union_cave_b1f"
       ],
       "pokemon": "wooper",
-      "level": "10-20",
+      "level": "7-8",
       "weight": 60
     },
     {
@@ -156,8 +156,8 @@
         "surf",
         "union_cave_b1f"
       ],
-      "pokemon": "quagsire",
-      "level": "15-25",
+      "pokemon": "wooper",
+      "level": "8",
       "weight": 30
     },
     {
@@ -166,8 +166,8 @@
         "surf",
         "union_cave_b1f"
       ],
-      "pokemon": "quagsire",
-      "level": "10-20",
+      "pokemon": "wooper",
+      "level": "9",
       "weight": 10
     },
     {

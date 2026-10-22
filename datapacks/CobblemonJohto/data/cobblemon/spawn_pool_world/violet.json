@@ -7,7 +7,7 @@
         "violet"
       ],
       "pokemon": "poliwag",
-      "level": "15-25",
+      "level": "3-6",
       "weight": 60
     },
     {
@@ -17,7 +17,7 @@
         "violet"
       ],
       "pokemon": "poliwag",
-      "level": "10-20",
+      "level": "3-4",
       "weight": 30
     },
     {
@@ -26,8 +26,8 @@
         "surf",
         "violet"
       ],
-      "pokemon": "poliwhirl",
-      "level": "15-25",
+      "pokemon": "poliwag",
+      "level": "3",
       "weight": 10
     },
     {

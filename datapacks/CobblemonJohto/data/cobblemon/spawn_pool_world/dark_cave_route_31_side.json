@@ -177,7 +177,7 @@
         "dark_cave_route_31_side"
       ],
       "pokemon": "magikarp",
-      "level": "10-20",
+      "level": "3-5",
       "weight": 60
     },
     {
@@ -187,7 +187,7 @@
         "dark_cave_route_31_side"
       ],
       "pokemon": "magikarp",
-      "level": "5-15",
+      "level": "3-4",
       "weight": 30
     },
     {
@@ -197,7 +197,7 @@
         "dark_cave_route_31_side"
       ],
       "pokemon": "magikarp",
-      "level": "2-10",
+      "level": "3",
       "weight": 10
     },
     {

@@ -147,28 +147,8 @@
         "ruins_of_alph"
       ],
       "pokemon": "wooper",
-      "level": "10-20",
-      "weight": 60
-    },
-    {
-      "id": "ruins_of_alph-surf-1",
-      "presets": [
-        "surf",
-        "ruins_of_alph"
-      ],
-      "pokemon": "quagsire",
-      "level": "15-25",
-      "weight": 30
-    },
-    {
-      "id": "ruins_of_alph-surf-2",
-      "presets": [
-        "surf",
-        "ruins_of_alph"
-      ],
-      "pokemon": "quagsire",
-      "level": "10-20",
-      "weight": 10
+      "level": "4-6",
+      "weight": 100
     },
     {
       "id": "ruins_of_alph-old_rod-0",

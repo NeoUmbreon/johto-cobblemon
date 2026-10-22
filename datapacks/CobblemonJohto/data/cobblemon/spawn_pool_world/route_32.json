@@ -227,8 +227,8 @@
         "route_32"
       ],
       "pokemon": "tentacool",
-      "level": "10-20",
-      "weight": 60
+      "level": "4-6",
+      "weight": 70
     },
     {
       "id": "route_32-surf-1",
@@ -236,29 +236,9 @@
         "surf",
         "route_32"
       ],
-      "pokemon": "quagsire",
-      "level": "15-25",
+      "pokemon": "wooper",
+      "level": "5-6",
       "weight": 30
-    },
-    {
-      "id": "route_32-surf-2",
-      "presets": [
-        "surf",
-        "route_32"
-      ],
-      "pokemon": "tentacruel",
-      "level": "15-25",
-      "weight": 9
-    },
-    {
-      "id": "route_32-surf-3",
-      "presets": [
-        "surf",
-        "route_32"
-      ],
-      "pokemon": "tentacruel",
-      "level": "36",
-      "weight": 1
     },
     {
       "id": "route_32-old_rod_swarm_inactive-0",

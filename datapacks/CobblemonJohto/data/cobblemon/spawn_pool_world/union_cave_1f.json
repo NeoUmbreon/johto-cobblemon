@@ -147,8 +147,8 @@
         "union_cave_1f"
       ],
       "pokemon": "wooper",
-      "level": "10-20",
-      "weight": 60
+      "level": "5-6",
+      "weight": 85
     },
     {
       "id": "union_cave_1f-surf-1",
@@ -156,9 +156,9 @@
         "surf",
         "union_cave_1f"
       ],
-      "pokemon": "quagsire",
-      "level": "15-25",
-      "weight": 30
+      "pokemon": "wooper",
+      "level": "6",
+      "weight": 10
     },
     {
       "id": "union_cave_1f-surf-2",
@@ -166,9 +166,9 @@
         "surf",
         "union_cave_1f"
       ],
-      "pokemon": "quagsire",
-      "level": "10-20",
-      "weight": 10
+      "pokemon": "wooper",
+      "level": "7",
+      "weight": 5
     },
     {
       "id": "union_cave_1f-old_rod-0",
