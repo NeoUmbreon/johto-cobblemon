@@ -1,0 +1,16 @@
+{
+  "displayName": "Swarms",
+  "enabled": true,
+  "components": [
+    {
+      "type": "filter",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'swarm_active')",
+      "allow": "v.spawn_detail.pokemon.species == v.spawnable_position.world.server.data.swarm.species && v.spawnable_position.player.has_tag('Dialogue100')"
+    },
+    {
+      "type": "filter",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'swarm_inactive')",
+      "allow": "v.spawnable_position.world.server.data.swarm == 0 || !q.is_included(v.spawn_detail.id, v.spawnable_position.world.server.data.swarm.zone) || !v.spawnable_position.player.has_tag('Dialogue100')"
+    }
+  ]
+}

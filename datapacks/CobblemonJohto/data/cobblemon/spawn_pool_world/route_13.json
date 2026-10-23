@@ -1,0 +1,270 @@
+{
+  "spawns": [
+    {
+      "id": "route_13-land-0",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "chansey",
+      "level": "25",
+      "weight": 1
+    },
+    {
+      "id": "route_13-land-1",
+      "presets": [
+        "grass",
+        "route_13",
+        "morn_day"
+      ],
+      "pokemon": "hoppip",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "route_13-land-2",
+      "presets": [
+        "grass",
+        "route_13",
+        "morn_day"
+      ],
+      "pokemon": "hoppip",
+      "level": "24",
+      "weight": 9
+    },
+    {
+      "id": "route_13-land-3",
+      "presets": [
+        "grass",
+        "route_13",
+        "nite"
+      ],
+      "pokemon": "quagsire",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "route_13-land-4",
+      "presets": [
+        "grass",
+        "route_13",
+        "nite"
+      ],
+      "pokemon": "quagsire",
+      "level": "24",
+      "weight": 9
+    },
+    {
+      "id": "route_13-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "nidorina",
+      "level": "23",
+      "weight": 10
+    },
+    {
+      "id": "route_13-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "nidorino",
+      "level": "23",
+      "weight": 10
+    },
+    {
+      "id": "route_13-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_13",
+        "morn_day"
+      ],
+      "pokemon": "pidgeotto",
+      "level": "25",
+      "weight": 20
+    },
+    {
+      "id": "route_13-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_13",
+        "nite"
+      ],
+      "pokemon": "noctowl",
+      "level": "25",
+      "weight": 20
+    },
+    {
+      "id": "route_13-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "whismur",
+      "level": "23",
+      "weight": 20
+    },
+    {
+      "id": "route_13-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "linoone",
+      "level": "25",
+      "weight": 20
+    },
+    {
+      "id": "route_13-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "buizel",
+      "level": "23",
+      "weight": 20
+    },
+    {
+      "id": "route_13-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "bidoof",
+      "level": "25",
+      "weight": 20
+    },
+    {
+      "id": "route_13-land_swarm_inactive-0",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "nidorina",
+      "level": "23",
+      "weight": 20
+    },
+    {
+      "id": "route_13-land_swarm_inactive-1",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "nidorino",
+      "level": "23",
+      "weight": 20
+    },
+    {
+      "id": "route_13-land_swarm_active-0",
+      "presets": [
+        "grass",
+        "route_13"
+      ],
+      "pokemon": "chansey",
+      "level": "23",
+      "weight": 40
+    },
+    {
+      "id": "route_13-surf-0",
+      "presets": [
+        "surf",
+        "route_13"
+      ],
+      "pokemon": "tentacool",
+      "level": "25",
+      "weight": 60
+    },
+    {
+      "id": "route_13-surf-1",
+      "presets": [
+        "surf",
+        "route_13"
+      ],
+      "pokemon": "quagsire",
+      "level": "25",
+      "weight": 30
+    },
+    {
+      "id": "route_13-surf-2",
+      "presets": [
+        "surf",
+        "route_13"
+      ],
+      "pokemon": "tentacruel",
+      "level": "25",
+      "weight": 10
+    },
+    {
+      "id": "route_13-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_13"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_13-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_13"
+      ],
+      "pokemon": "tentacool",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_13-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_13"
+      ],
+      "pokemon": "tentacool",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "route_13-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_13"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_13-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_13"
+      ],
+      "pokemon": "tentacool",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "route_13-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_13"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "route_13-super_rod-2",
+      "presets": [
+        "super_rod",
+        "route_13"
+      ],
+      "pokemon": "qwilfish",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

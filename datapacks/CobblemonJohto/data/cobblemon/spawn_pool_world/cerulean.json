@@ -1,0 +1,104 @@
+{
+  "spawns": [
+    {
+      "id": "cerulean-surf-0",
+      "presets": [
+        "surf",
+        "cerulean"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 60
+    },
+    {
+      "id": "cerulean-surf-1",
+      "presets": [
+        "surf",
+        "cerulean"
+      ],
+      "pokemon": "goldeen",
+      "level": "5",
+      "weight": 30
+    },
+    {
+      "id": "cerulean-surf-2",
+      "presets": [
+        "surf",
+        "cerulean"
+      ],
+      "pokemon": "seaking",
+      "level": "10",
+      "weight": 10
+    },
+    {
+      "id": "cerulean-old_rod-0",
+      "presets": [
+        "old_rod",
+        "cerulean"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "cerulean-old_rod-1",
+      "presets": [
+        "old_rod",
+        "cerulean"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "cerulean-good_rod-0",
+      "presets": [
+        "good_rod",
+        "cerulean"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "cerulean-good_rod-1",
+      "presets": [
+        "good_rod",
+        "cerulean"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "cerulean-super_rod-0",
+      "presets": [
+        "super_rod",
+        "cerulean"
+      ],
+      "pokemon": "goldeen",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "cerulean-super_rod-1",
+      "presets": [
+        "super_rod",
+        "cerulean"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "cerulean-super_rod-2",
+      "presets": [
+        "super_rod",
+        "cerulean"
+      ],
+      "pokemon": "seaking",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

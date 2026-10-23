@@ -1,0 +1,214 @@
+{
+  "spawns": [
+    {
+      "id": "ruins_of_alph-land-0",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "natu",
+      "level": "20",
+      "weight": 20
+    },
+    {
+      "id": "ruins_of_alph-land-1",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "natu",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "ruins_of_alph-land-2",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "natu",
+      "level": "24",
+      "weight": 10
+    },
+    {
+      "id": "ruins_of_alph-land-3",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "smeargle",
+      "level": "20",
+      "weight": 5
+    },
+    {
+      "id": "ruins_of_alph-land-4",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "smeargle",
+      "level": "22",
+      "weight": 5
+    },
+    {
+      "id": "ruins_of_alph-sound_inactive-0",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "natu",
+      "level": "18",
+      "weight": 20
+    },
+    {
+      "id": "ruins_of_alph-sound_inactive-1",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "natu",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "ruins_of_alph-sound_inactive-2",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "natu",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "ruins_of_alph-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "linoone",
+      "level": "18",
+      "weight": 20
+    },
+    {
+      "id": "ruins_of_alph-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "whismur",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "ruins_of_alph-hoennsound_active-2",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "whismur",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "ruins_of_alph-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "bidoof",
+      "level": "18",
+      "weight": 20
+    },
+    {
+      "id": "ruins_of_alph-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "buizel",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "ruins_of_alph-sinnohsound_active-2",
+      "presets": [
+        "grass",
+        "ruins_of_alph"
+      ],
+      "pokemon": "buizel",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "ruins_of_alph-surf-0",
+      "presets": [
+        "surf",
+        "ruins_of_alph"
+      ],
+      "pokemon": "wooper",
+      "level": "4-6",
+      "weight": 100
+    },
+    {
+      "id": "ruins_of_alph-old_rod-0",
+      "presets": [
+        "old_rod",
+        "ruins_of_alph"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "ruins_of_alph-old_rod-1",
+      "presets": [
+        "old_rod",
+        "ruins_of_alph"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "ruins_of_alph-good_rod-0",
+      "presets": [
+        "good_rod",
+        "ruins_of_alph"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "ruins_of_alph-good_rod-1",
+      "presets": [
+        "good_rod",
+        "ruins_of_alph"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "ruins_of_alph-super_rod-0",
+      "presets": [
+        "super_rod",
+        "ruins_of_alph"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "ruins_of_alph-super_rod-1",
+      "presets": [
+        "super_rod",
+        "ruins_of_alph"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

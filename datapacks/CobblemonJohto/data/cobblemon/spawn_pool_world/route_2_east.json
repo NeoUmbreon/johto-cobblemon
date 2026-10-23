@@ -1,0 +1,472 @@
+{
+  "spawns": [
+    {
+      "id": "route_2_east-land-0",
+      "presets": [
+        "grass",
+        "route_2_east"
+      ],
+      "pokemon": "weedle",
+      "level": "4",
+      "weight": 0.5
+    },
+    {
+      "id": "route_2_east-land-1",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "3",
+      "weight": 20
+    },
+    {
+      "id": "route_2_east-land-2",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn_day"
+      ],
+      "pokemon": "caterpie",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_2_east-land-3",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn"
+      ],
+      "pokemon": "ledyba",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_2_east-land-4",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn"
+      ],
+      "pokemon": "beedrill",
+      "level": "7",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-land-5",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn_day"
+      ],
+      "pokemon": "butterfree",
+      "level": "7",
+      "weight": 2.5
+    },
+    {
+      "id": "route_2_east-land-6",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn_day"
+      ],
+      "pokemon": "butterfree",
+      "level": "8",
+      "weight": 2.5
+    },
+    {
+      "id": "route_2_east-land-7",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn"
+      ],
+      "pokemon": "pidgeotto",
+      "level": "7",
+      "weight": 2.5
+    },
+    {
+      "id": "route_2_east-land-8",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn"
+      ],
+      "pokemon": "ledian",
+      "level": "7",
+      "weight": 2.5
+    },
+    {
+      "id": "route_2_east-land-9",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn"
+      ],
+      "pokemon": "spinarak",
+      "level": "10",
+      "weight": 2
+    },
+    {
+      "id": "route_2_east-land-10",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn"
+      ],
+      "pokemon": "ledian",
+      "level": "10",
+      "weight": 2
+    },
+    {
+      "id": "route_2_east-land-11",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn_day"
+      ],
+      "pokemon": "caterpie",
+      "level": "4",
+      "weight": 0.5
+    },
+    {
+      "id": "route_2_east-land-12",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "day"
+      ],
+      "pokemon": "weedle",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_2_east-land-13",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "day"
+      ],
+      "pokemon": "pidgey",
+      "level": "7",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-land-14",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "day"
+      ],
+      "pokemon": "pidgeotto",
+      "level": "7",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-land-15",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "day"
+      ],
+      "pokemon": "pidgeotto",
+      "level": "10",
+      "weight": 2
+    },
+    {
+      "id": "route_2_east-land-16",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "day"
+      ],
+      "pokemon": "ledyba",
+      "level": "10",
+      "weight": 2
+    },
+    {
+      "id": "route_2_east-land-17",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "3",
+      "weight": 30
+    },
+    {
+      "id": "route_2_east-land-18",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "spinarak",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_2_east-land-19",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "noctowl",
+      "level": "7",
+      "weight": 9.5
+    },
+    {
+      "id": "route_2_east-land-20",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "noctowl",
+      "level": "8",
+      "weight": 2.5
+    },
+    {
+      "id": "route_2_east-land-21",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "ariados",
+      "level": "7",
+      "weight": 2.5
+    },
+    {
+      "id": "route_2_east-land-22",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "noctowl",
+      "level": "10",
+      "weight": 2
+    },
+    {
+      "id": "route_2_east-land-23",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "beedrill",
+      "level": "10",
+      "weight": 2
+    },
+    {
+      "id": "route_2_east-land-24",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "kakuna",
+      "level": "7",
+      "weight": 0.5
+    },
+    {
+      "id": "route_2_east-land-25",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "spinarak",
+      "level": "4",
+      "weight": 0.5
+    },
+    {
+      "id": "route_2_east-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn"
+      ],
+      "pokemon": "metapod",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "route_2_east-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn_day"
+      ],
+      "pokemon": "kakuna",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "route_2_east-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn_day"
+      ],
+      "pokemon": "caterpie",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn_day"
+      ],
+      "pokemon": "weedle",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn"
+      ],
+      "pokemon": "pidgey",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-sound_inactive-5",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "morn"
+      ],
+      "pokemon": "ledyba",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-sound_inactive-6",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "day"
+      ],
+      "pokemon": "pidgey",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_2_east-sound_inactive-7",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "day"
+      ],
+      "pokemon": "pidgey",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "route_2_east-sound_inactive-8",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "5",
+      "weight": 15
+    },
+    {
+      "id": "route_2_east-sound_inactive-9",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_2_east-sound_inactive-10",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "kakuna",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-sound_inactive-11",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "spinarak",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-sound_inactive-12",
+      "presets": [
+        "grass",
+        "route_2_east",
+        "nite"
+      ],
+      "pokemon": "weedle",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "route_2_east-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_2_east"
+      ],
+      "pokemon": "plusle",
+      "level": "3",
+      "weight": 20
+    },
+    {
+      "id": "route_2_east-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_2_east"
+      ],
+      "pokemon": "minun",
+      "level": "5",
+      "weight": 20
+    },
+    {
+      "id": "route_2_east-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_2_east"
+      ],
+      "pokemon": "shinx",
+      "level": "3",
+      "weight": 20
+    },
+    {
+      "id": "route_2_east-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_2_east"
+      ],
+      "pokemon": "shinx",
+      "level": "5",
+      "weight": 20
+    }
+  ]
+}

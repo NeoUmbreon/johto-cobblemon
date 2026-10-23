@@ -1,0 +1,230 @@
+{
+  "spawns": [
+    {
+      "id": "cliff_cave-land-0",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "golbat",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "cliff_cave-land-1",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "geodude",
+      "level": "19",
+      "weight": 20
+    },
+    {
+      "id": "cliff_cave-land-2",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "machoke",
+      "level": "22",
+      "weight": 4
+    },
+    {
+      "id": "cliff_cave-land-3",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "steelix",
+      "level": "23",
+      "weight": 2
+    },
+    {
+      "id": "cliff_cave-land-4",
+      "presets": [
+        "indoor",
+        "cliff_cave",
+        "morn_day"
+      ],
+      "pokemon": "wooper",
+      "level": "18",
+      "weight": 5
+    },
+    {
+      "id": "cliff_cave-land-5",
+      "presets": [
+        "indoor",
+        "cliff_cave",
+        "morn_day"
+      ],
+      "pokemon": "quagsire",
+      "level": "20",
+      "weight": 5
+    },
+    {
+      "id": "cliff_cave-land-6",
+      "presets": [
+        "indoor",
+        "cliff_cave",
+        "morn_day"
+      ],
+      "pokemon": "graveler",
+      "level": "20",
+      "weight": 4
+    },
+    {
+      "id": "cliff_cave-land-7",
+      "presets": [
+        "indoor",
+        "cliff_cave",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "18",
+      "weight": 5
+    },
+    {
+      "id": "cliff_cave-land-8",
+      "presets": [
+        "indoor",
+        "cliff_cave",
+        "nite"
+      ],
+      "pokemon": "misdreavus",
+      "level": "20",
+      "weight": 5
+    },
+    {
+      "id": "cliff_cave-land-9",
+      "presets": [
+        "indoor",
+        "cliff_cave",
+        "nite"
+      ],
+      "pokemon": "golbat",
+      "level": "20",
+      "weight": 4
+    },
+    {
+      "id": "cliff_cave-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "krabby",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "kingler",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "machop",
+      "level": "19",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-sound_inactive-3",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "onix",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "absol",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "absol",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "makuhita",
+      "level": "19",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-hoennsound_active-3",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "makuhita",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "bronzor",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "bronzor",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "chingling",
+      "level": "19",
+      "weight": 10
+    },
+    {
+      "id": "cliff_cave-sinnohsound_active-3",
+      "presets": [
+        "indoor",
+        "cliff_cave"
+      ],
+      "pokemon": "chingling",
+      "level": "20",
+      "weight": 10
+    }
+  ]
+}

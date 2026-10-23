@@ -1,0 +1,11 @@
+{
+    "spawnDetailType": "pokemon",
+    "bucket": "common",
+    "context": "grounded",
+    "condition": {
+        "neededNearbyBlocks": [
+            "minecraft:short_grass",
+            "minecraft:tall_grass"
+        ]
+    }
+}

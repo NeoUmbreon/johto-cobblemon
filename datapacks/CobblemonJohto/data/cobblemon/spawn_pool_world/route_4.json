@@ -1,0 +1,334 @@
+{
+  "spawns": [
+    {
+      "id": "route_4-land-0",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "spearow",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "route_4-land-1",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "rattata",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "route_4-land-2",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "jigglypuff",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "route_4-land-3",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "rattata",
+      "level": "10",
+      "weight": 2.5
+    },
+    {
+      "id": "route_4-land-4",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "arbok",
+      "level": "10",
+      "weight": 2.5
+    },
+    {
+      "id": "route_4-land-5",
+      "presets": [
+        "grass",
+        "route_4",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "route_4-land-6",
+      "presets": [
+        "grass",
+        "route_4",
+        "morn_day"
+      ],
+      "pokemon": "rattata",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "route_4-land-7",
+      "presets": [
+        "grass",
+        "route_4",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "8",
+      "weight": 5
+    },
+    {
+      "id": "route_4-land-8",
+      "presets": [
+        "grass",
+        "route_4",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "5",
+      "weight": 20
+    },
+    {
+      "id": "route_4-land-9",
+      "presets": [
+        "grass",
+        "route_4",
+        "nite"
+      ],
+      "pokemon": "rattata",
+      "level": "8",
+      "weight": 5
+    },
+    {
+      "id": "route_4-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "ekans",
+      "level": "8",
+      "weight": 10
+    },
+    {
+      "id": "route_4-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "spearow",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "route_4-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "rattata",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "route_4-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_4",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "8",
+      "weight": 10
+    },
+    {
+      "id": "route_4-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_4",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "route_4-sound_inactive-5",
+      "presets": [
+        "grass",
+        "route_4",
+        "morn_day"
+      ],
+      "pokemon": "rattata",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "route_4-sound_inactive-6",
+      "presets": [
+        "grass",
+        "route_4",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "route_4-sound_inactive-7",
+      "presets": [
+        "grass",
+        "route_4",
+        "nite"
+      ],
+      "pokemon": "rattata",
+      "level": "8",
+      "weight": 10
+    },
+    {
+      "id": "route_4-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "whismur",
+      "level": "5",
+      "weight": 20
+    },
+    {
+      "id": "route_4-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "linoone",
+      "level": "8",
+      "weight": 20
+    },
+    {
+      "id": "route_4-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "buizel",
+      "level": "5",
+      "weight": 20
+    },
+    {
+      "id": "route_4-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_4"
+      ],
+      "pokemon": "bidoof",
+      "level": "8",
+      "weight": 20
+    },
+    {
+      "id": "route_4-surf-0",
+      "presets": [
+        "surf",
+        "route_4"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 60
+    },
+    {
+      "id": "route_4-surf-1",
+      "presets": [
+        "surf",
+        "route_4"
+      ],
+      "pokemon": "goldeen",
+      "level": "5",
+      "weight": 30
+    },
+    {
+      "id": "route_4-surf-2",
+      "presets": [
+        "surf",
+        "route_4"
+      ],
+      "pokemon": "seaking",
+      "level": "10",
+      "weight": 10
+    },
+    {
+      "id": "route_4-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_4"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_4-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_4"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_4-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_4"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "route_4-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_4"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_4-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_4"
+      ],
+      "pokemon": "goldeen",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "route_4-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_4"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "route_4-super_rod-2",
+      "presets": [
+        "super_rod",
+        "route_4"
+      ],
+      "pokemon": "seaking",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

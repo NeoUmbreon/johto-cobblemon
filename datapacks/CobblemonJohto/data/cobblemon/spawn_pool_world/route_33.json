@@ -1,0 +1,214 @@
+{
+  "spawns": [
+    {
+      "id": "route_33-land-0",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "rattata",
+      "level": "7",
+      "weight": 10
+    },
+    {
+      "id": "route_33-land-1",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "ekans",
+      "level": "7",
+      "weight": 10
+    },
+    {
+      "id": "route_33-land-2",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "rattata",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "route_33-land-3",
+      "presets": [
+        "grass",
+        "route_33",
+        "morn_day"
+      ],
+      "pokemon": "hoppip",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "route_33-land-4",
+      "presets": [
+        "grass",
+        "route_33",
+        "morn_day"
+      ],
+      "pokemon": "hoppip",
+      "level": "8",
+      "weight": 5
+    },
+    {
+      "id": "route_33-land-5",
+      "presets": [
+        "grass",
+        "route_33",
+        "morn_nite"
+      ],
+      "pokemon": "zubat",
+      "level": "4",
+      "weight": 5
+    },
+    {
+      "id": "route_33-land-6",
+      "presets": [
+        "grass",
+        "route_33",
+        "day"
+      ],
+      "pokemon": "rattata",
+      "level": "4",
+      "weight": 5
+    },
+    {
+      "id": "route_33-land-7",
+      "presets": [
+        "grass",
+        "route_33",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "route_33-land-8",
+      "presets": [
+        "grass",
+        "route_33",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "8",
+      "weight": 5
+    },
+    {
+      "id": "route_33-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "rattata",
+      "level": "7",
+      "weight": 5
+    },
+    {
+      "id": "route_33-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "ekans",
+      "level": "7",
+      "weight": 5
+    },
+    {
+      "id": "route_33-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_33",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "route_33-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_33",
+        "morn_day"
+      ],
+      "pokemon": "hoppip",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "route_33-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_33",
+        "nite"
+      ],
+      "pokemon": "rattata",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "route_33-sound_inactive-5",
+      "presets": [
+        "grass",
+        "route_33",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "route_33-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "minun",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "route_33-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "plusle",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "route_33-hoennsound_active-2",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "plusle",
+      "level": "7",
+      "weight": 10
+    },
+    {
+      "id": "route_33-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "shinx",
+      "level": "6",
+      "weight": 30
+    },
+    {
+      "id": "route_33-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_33"
+      ],
+      "pokemon": "shinx",
+      "level": "7",
+      "weight": 10
+    }
+  ]
+}

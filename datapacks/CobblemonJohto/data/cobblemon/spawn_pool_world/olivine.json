@@ -1,0 +1,138 @@
+{
+  "spawns": [
+    {
+      "id": "olivine-surf-0",
+      "presets": [
+        "surf",
+        "olivine"
+      ],
+      "pokemon": "tentacool",
+      "level": "15-25",
+      "weight": 60
+    },
+    {
+      "id": "olivine-surf-1",
+      "presets": [
+        "surf",
+        "olivine"
+      ],
+      "pokemon": "tentacool",
+      "level": "10-20",
+      "weight": 30
+    },
+    {
+      "id": "olivine-surf-2",
+      "presets": [
+        "surf",
+        "olivine"
+      ],
+      "pokemon": "tentacruel",
+      "level": "15-25",
+      "weight": 10
+    },
+    {
+      "id": "olivine-old_rod-0",
+      "presets": [
+        "old_rod",
+        "olivine"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "olivine-old_rod-1",
+      "presets": [
+        "old_rod",
+        "olivine"
+      ],
+      "pokemon": "krabby",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "olivine-good_rod-0",
+      "presets": [
+        "good_rod",
+        "olivine"
+      ],
+      "pokemon": "krabby",
+      "level": "20",
+      "weight": 50
+    },
+    {
+      "id": "olivine-good_rod-1",
+      "presets": [
+        "good_rod",
+        "olivine"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "olivine-good_rod-2",
+      "presets": [
+        "good_rod",
+        "olivine",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "olivine-good_rod-3",
+      "presets": [
+        "good_rod",
+        "olivine",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "olivine-super_rod-0",
+      "presets": [
+        "super_rod",
+        "olivine"
+      ],
+      "pokemon": "krabby",
+      "level": "40",
+      "weight": 60
+    },
+    {
+      "id": "olivine-super_rod-1",
+      "presets": [
+        "super_rod",
+        "olivine"
+      ],
+      "pokemon": "kingler",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "olivine-super_rod-2",
+      "presets": [
+        "super_rod",
+        "olivine",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "olivine-super_rod-3",
+      "presets": [
+        "super_rod",
+        "olivine",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}

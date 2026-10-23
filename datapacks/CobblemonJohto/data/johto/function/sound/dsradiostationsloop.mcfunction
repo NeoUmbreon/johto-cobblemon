@@ -27,15 +27,15 @@ execute if score @s RadioSelect matches 6 run return run function johto:sound/pl
 
 # Slot 7 - Pokemon Music
 # Wednesday (3) - Hoenn Sounds
-execute if score @s RadioSelect matches 7 run execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run return run function johto:sound/playrecord {track:"ds/radio/route101", duration:1540}
+execute if score @s RadioSelect matches 7 run execute if score @s IP matches 1.. if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] run return run function johto:sound/playrecord {track:"ds/radio/route101", duration:1540}
 
 # Thursday (4) - Sinnoh Sounds
-execute if score @s RadioSelect matches 7 run execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] run return run function johto:sound/playrecord {track:"ds/radio/route201", duration:1340}
+execute if score @s RadioSelect matches 7 run execute if score @s IP matches 1.. if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=4}] run return run function johto:sound/playrecord {track:"ds/radio/route201", duration:1340}
 
-# Tuesday & Saturday (2 & 6) - Pokemon Lullaby
-execute if score @s RadioSelect matches 7 run execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=2..6}] unless entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=5}] run return run function johto:sound/playrecord {track:"ds/radio/pokemonlullaby", duration:1500}
+# Tuesday, Thursday, Saturday (2, 4, 6) - Pokemon Lullaby
+execute if score @s RadioSelect matches 7 run execute if entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=2..6}] unless entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=3}] unless entity @e[x=-799,y=64,z=-284,dy=3,type=armor_stand,scores={WeekdayTrack=5}] run return run function johto:sound/playrecord {track:"ds/radio/pokemonlullaby", duration:1500}
 
-# Monday, Friday, Sunday (1, 5, 7) - Pokemon March
+# Monday, Wednesday, Friday, Sunday (1, 3, 5, 7) - Pokemon March
 execute if score @s RadioSelect matches 7 run return run function johto:sound/playrecord {track:"ds/radio/pokemonmarch", duration:1100}
 
 

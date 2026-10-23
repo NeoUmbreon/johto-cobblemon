@@ -1,0 +1,463 @@
+{
+  "spawns": [
+    {
+      "id": "route_30-land-0",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "2",
+      "weight": 10
+    },
+    {
+      "id": "route_30-land-1",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn"
+      ],
+      "pokemon": "ledyba",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_30-land-2",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn_day"
+      ],
+      "pokemon": "caterpie",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_30-land-3",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn_day"
+      ],
+      "pokemon": "weedle",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_30-land-4",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn"
+      ],
+      "pokemon": "pidgey",
+      "level": "4",
+      "weight": 10
+    },
+    {
+      "id": "route_30-land-5",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn"
+      ],
+      "pokemon": "metapod",
+      "level": "4",
+      "weight": 5
+    },
+    {
+      "id": "route_30-land-6",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn"
+      ],
+      "pokemon": "kakuna",
+      "level": "4",
+      "weight": 5
+    },
+    {
+      "id": "route_30-land-7",
+      "presets": [
+        "grass",
+        "route_30",
+        "day"
+      ],
+      "pokemon": "pidgey",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_30-land-8",
+      "presets": [
+        "grass",
+        "route_30",
+        "day"
+      ],
+      "pokemon": "metapod",
+      "level": "4",
+      "weight": 7.5
+    },
+    {
+      "id": "route_30-land-9",
+      "presets": [
+        "grass",
+        "route_30",
+        "day"
+      ],
+      "pokemon": "kakuna",
+      "level": "4",
+      "weight": 7.5
+    },
+    {
+      "id": "route_30-land-10",
+      "presets": [
+        "grass",
+        "route_30",
+        "day"
+      ],
+      "pokemon": "caterpie",
+      "level": "4",
+      "weight": 2.5
+    },
+    {
+      "id": "route_30-land-11",
+      "presets": [
+        "grass",
+        "route_30",
+        "day"
+      ],
+      "pokemon": "weedle",
+      "level": "4",
+      "weight": 2.5
+    },
+    {
+      "id": "route_30-land-12",
+      "presets": [
+        "grass",
+        "route_30",
+        "nite"
+      ],
+      "pokemon": "rattata",
+      "level": "3",
+      "weight": 20
+    },
+    {
+      "id": "route_30-land-13",
+      "presets": [
+        "grass",
+        "route_30",
+        "nite"
+      ],
+      "pokemon": "spinarak",
+      "level": "2",
+      "weight": 10
+    },
+    {
+      "id": "route_30-land-14",
+      "presets": [
+        "grass",
+        "route_30",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_30-land-15",
+      "presets": [
+        "grass",
+        "route_30",
+        "nite"
+      ],
+      "pokemon": "rattata",
+      "level": "4",
+      "weight": 10
+    },
+    {
+      "id": "route_30-land-16",
+      "presets": [
+        "grass",
+        "route_30",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "4",
+      "weight": 10
+    },
+    {
+      "id": "route_30-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn"
+      ],
+      "pokemon": "caterpie",
+      "level": "4",
+      "weight": 10
+    },
+    {
+      "id": "route_30-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn"
+      ],
+      "pokemon": "weedle",
+      "level": "4",
+      "weight": 10
+    },
+    {
+      "id": "route_30-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "2",
+      "weight": 5
+    },
+    {
+      "id": "route_30-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn"
+      ],
+      "pokemon": "ledyba",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_30-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn_day"
+      ],
+      "pokemon": "caterpie",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_30-sound_inactive-5",
+      "presets": [
+        "grass",
+        "route_30",
+        "morn_day"
+      ],
+      "pokemon": "weedle",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_30-sound_inactive-6",
+      "presets": [
+        "grass",
+        "route_30",
+        "day"
+      ],
+      "pokemon": "pidgey",
+      "level": "4",
+      "weight": 20
+    },
+    {
+      "id": "route_30-sound_inactive-7",
+      "presets": [
+        "grass",
+        "route_30",
+        "day"
+      ],
+      "pokemon": "pidgey",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_30-sound_inactive-8",
+      "presets": [
+        "grass",
+        "route_30",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "4",
+      "weight": 20
+    },
+    {
+      "id": "route_30-sound_inactive-9",
+      "presets": [
+        "grass",
+        "route_30",
+        "nite"
+      ],
+      "pokemon": "rattata",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_30-sound_inactive-10",
+      "presets": [
+        "grass",
+        "route_30",
+        "nite"
+      ],
+      "pokemon": "spinarak",
+      "level": "2",
+      "weight": 5
+    },
+    {
+      "id": "route_30-sound_inactive-11",
+      "presets": [
+        "grass",
+        "route_30",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_30-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_30"
+      ],
+      "pokemon": "linoone",
+      "level": "4",
+      "weight": 20
+    },
+    {
+      "id": "route_30-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_30"
+      ],
+      "pokemon": "whismur",
+      "level": "3",
+      "weight": 15
+    },
+    {
+      "id": "route_30-hoennsound_active-2",
+      "presets": [
+        "grass",
+        "route_30"
+      ],
+      "pokemon": "whismur",
+      "level": "2",
+      "weight": 5
+    },
+    {
+      "id": "route_30-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_30"
+      ],
+      "pokemon": "bidoof",
+      "level": "4",
+      "weight": 20
+    },
+    {
+      "id": "route_30-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_30"
+      ],
+      "pokemon": "buizel",
+      "level": "3",
+      "weight": 15
+    },
+    {
+      "id": "route_30-sinnohsound_active-2",
+      "presets": [
+        "grass",
+        "route_30"
+      ],
+      "pokemon": "buizel",
+      "level": "2",
+      "weight": 5
+    },
+    {
+      "id": "route_30-surf-0",
+      "presets": [
+        "surf",
+        "route_30"
+      ],
+      "pokemon": "poliwag",
+      "level": "3-4",
+      "weight": 70
+    },
+    {
+      "id": "route_30-surf-1",
+      "presets": [
+        "surf",
+        "route_30"
+      ],
+      "pokemon": "poliwag",
+      "level": "2-3",
+      "weight": 30
+    },
+    {
+      "id": "route_30-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_30"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_30-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_30"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_30-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_30"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "route_30-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_30"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_30-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_30"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "route_30-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_30"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

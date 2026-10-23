@@ -119,41 +119,6 @@ execute as @s[scores={DialogueTrigger=142,TalkTime=45}] run fill -2903 64 -50 -2
 
 tag @s[scores={DialogueTrigger=142,TalkTime=45..}] add Dialogue142
 
-
-#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Hoenn Sounds
-#DialogueTrigger 156
-
-#Pokémon are Listening
-execute as @s[scores={DialogueTrigger=156,TalkTime=25}] run function johto:triggers/radio/hoennsounds
-
-#Rolls for a Pokemon and spawns on player
-execute as @s[scores={DialogueTrigger=156,TalkTime=43}] run function johto:triggers/radio/hoennsounds
-
-
-#Disables Dialogue if player stops listening to the music
-execute as @s[scores={DialogueTrigger=156,TalkTime=1..45,MusicCooldown=0}] run tag @s add EndDialogue
-
-
-tag @s[scores={DialogueTrigger=156,TalkTime=46..}] add Dialogue156
-
-
-#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Sinnoh Sounds
-#DialogueTrigger 156
-
-#Pokémon are Listening
-execute as @s[scores={DialogueTrigger=157,TalkTime=19}] run function johto:triggers/radio/sinnohsounds
-
-#Rolls for a Pokemon and spawns on player
-execute as @s[scores={DialogueTrigger=157,TalkTime=36}] run function johto:triggers/radio/sinnohsounds
-
-#Disables Dialogue if player stops listening to the music
-execute as @s[scores={DialogueTrigger=157,TalkTime=1..45,MusicCooldown=0}] run tag @s add EndDialogue
-
-tag @s[scores={DialogueTrigger=157,TalkTime=38..}] add Dialogue157
-
-
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Odd Egg Rolls
 #scoreboard players set @a[score_TalkTime=0] DialogueTrigger 200 {Inventory:[{id:"minecraft:egg"}]}

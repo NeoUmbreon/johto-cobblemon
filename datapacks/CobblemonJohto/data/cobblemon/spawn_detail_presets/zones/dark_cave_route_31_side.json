@@ -1,0 +1,14 @@
+{
+  "condition": {
+    "minX": -408,
+    "minZ": -183,
+    "maxX": -216,
+    "maxZ": -12
+  },
+  "anticondition": {
+    "minX": -310,
+    "minZ": -183,
+    "maxX": -216,
+    "maxZ": -88
+  }
+}

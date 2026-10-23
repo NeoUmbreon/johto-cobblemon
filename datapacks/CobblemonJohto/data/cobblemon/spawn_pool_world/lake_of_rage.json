@@ -1,0 +1,84 @@
+{
+  "spawns": [
+    {
+      "id": "lake_of_rage-surf-0",
+      "presets": [
+        "surf",
+        "lake_of_rage"
+      ],
+      "pokemon": "magikarp",
+      "level": "10-20",
+      "weight": 60
+    },
+    {
+      "id": "lake_of_rage-surf-1",
+      "presets": [
+        "surf",
+        "lake_of_rage"
+      ],
+      "pokemon": "magikarp",
+      "level": "5-15",
+      "weight": 30
+    },
+    {
+      "id": "lake_of_rage-surf-2",
+      "presets": [
+        "surf",
+        "lake_of_rage"
+      ],
+      "pokemon": "gyarados",
+      "level": "10-20",
+      "weight": 10
+    },
+    {
+      "id": "lake_of_rage-old_rod-0",
+      "presets": [
+        "old_rod",
+        "lake_of_rage"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 100
+    },
+    {
+      "id": "lake_of_rage-good_rod-0",
+      "presets": [
+        "good_rod",
+        "lake_of_rage"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 90
+    },
+    {
+      "id": "lake_of_rage-good_rod-1",
+      "presets": [
+        "good_rod",
+        "lake_of_rage"
+      ],
+      "pokemon": "gyarados",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "lake_of_rage-super_rod-0",
+      "presets": [
+        "super_rod",
+        "lake_of_rage"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "lake_of_rage-super_rod-1",
+      "presets": [
+        "super_rod",
+        "lake_of_rage"
+      ],
+      "pokemon": "gyarados",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}

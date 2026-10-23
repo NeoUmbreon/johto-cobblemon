@@ -1,0 +1,342 @@
+{
+  "spawns": [
+    {
+      "id": "cerulean_cave_2f-land-0",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "kadabra",
+      "level": "42",
+      "weight": 20
+    },
+    {
+      "id": "cerulean_cave_2f-land-1",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "parasect",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "cerulean_cave_2f-land-2",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "electrode",
+      "level": "41",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_2f-land-3",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "wobbuffet",
+      "level": "42",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_2f-land-4",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f",
+        "morn_day"
+      ],
+      "pokemon": "machoke",
+      "level": "41",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_2f-land-5",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f",
+        "morn_day"
+      ],
+      "pokemon": "machoke",
+      "level": "42",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_2f-land-6",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f",
+        "nite"
+      ],
+      "pokemon": "golbat",
+      "level": "41",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_2f-land-7",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f",
+        "nite"
+      ],
+      "pokemon": "golbat",
+      "level": "42",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_2f-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "golbat",
+      "level": "41",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "machoke",
+      "level": "39",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "magneton",
+      "level": "41",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-sound_inactive-3",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "ditto",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "absol",
+      "level": "41",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "absol",
+      "level": "39",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "makuhita",
+      "level": "41",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-hoennsound_active-3",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "makuhita",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "bronzor",
+      "level": "41",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "bronzor",
+      "level": "39",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "chingling",
+      "level": "41",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-sinnohsound_active-3",
+      "presets": [
+        "indoor",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "chingling",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-surf-0",
+      "presets": [
+        "surf",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "psyduck",
+      "level": "40",
+      "weight": 60
+    },
+    {
+      "id": "cerulean_cave_2f-surf-1",
+      "presets": [
+        "surf",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "psyduck",
+      "level": "35",
+      "weight": 30
+    },
+    {
+      "id": "cerulean_cave_2f-surf-2",
+      "presets": [
+        "surf",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "golduck",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-old_rod-0",
+      "presets": [
+        "old_rod",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 100
+    },
+    {
+      "id": "cerulean_cave_2f-good_rod-0",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 45
+    },
+    {
+      "id": "cerulean_cave_2f-good_rod-1",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 30
+    },
+    {
+      "id": "cerulean_cave_2f-good_rod-2",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 15
+    },
+    {
+      "id": "cerulean_cave_2f-good_rod-3",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_2f",
+        "morn_day"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-good_rod-4",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_2f",
+        "nite"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_2f-super_rod-0",
+      "presets": [
+        "super_rod",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 40
+    },
+    {
+      "id": "cerulean_cave_2f-super_rod-1",
+      "presets": [
+        "super_rod",
+        "cerulean_cave_2f"
+      ],
+      "pokemon": "gyarados",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "cerulean_cave_2f-super_rod-2",
+      "presets": [
+        "super_rod",
+        "cerulean_cave_2f",
+        "morn_day"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "cerulean_cave_2f-super_rod-3",
+      "presets": [
+        "super_rod",
+        "cerulean_cave_2f",
+        "nite"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}

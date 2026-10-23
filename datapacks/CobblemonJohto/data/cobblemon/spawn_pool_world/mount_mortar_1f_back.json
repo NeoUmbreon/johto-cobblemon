@@ -1,0 +1,124 @@
+{
+  "spawns": [
+    {
+      "id": "mount_mortar_1f_back-land-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "geodude",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_back-land-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "machop",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_back-land-2",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "rattata",
+      "level": "14",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_back-land-3",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "machop",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "mount_mortar_1f_back-land-4",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "zubat",
+      "level": "14",
+      "weight": 5
+    },
+    {
+      "id": "mount_mortar_1f_back-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "geodude",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_back-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "geodude",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_back-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "machop",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "mount_mortar_1f_back-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "absol",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_back-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "makuhita",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_back-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "bronzor",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "mount_mortar_1f_back-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "mount_mortar_1f_back"
+      ],
+      "pokemon": "chingling",
+      "level": "15",
+      "weight": 20
+    }
+  ]
+}

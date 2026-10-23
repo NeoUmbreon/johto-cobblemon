@@ -1,0 +1,204 @@
+{
+  "spawns": [
+    {
+      "id": "seafoam_islands_b1f-land-0",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "seel",
+      "level": "32",
+      "weight": 20
+    },
+    {
+      "id": "seafoam_islands_b1f-land-1",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "golbat",
+      "level": "34",
+      "weight": 20
+    },
+    {
+      "id": "seafoam_islands_b1f-land-2",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "zubat",
+      "level": "29",
+      "weight": 5
+    },
+    {
+      "id": "seafoam_islands_b1f-land-3",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "zubat",
+      "level": "28",
+      "weight": 5
+    },
+    {
+      "id": "seafoam_islands_b1f-land-4",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "golduck",
+      "level": "32",
+      "weight": 4
+    },
+    {
+      "id": "seafoam_islands_b1f-land-5",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "psyduck",
+      "level": "28",
+      "weight": 4
+    },
+    {
+      "id": "seafoam_islands_b1f-land-6",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "psyduck",
+      "level": "27",
+      "weight": 1
+    },
+    {
+      "id": "seafoam_islands_b1f-land-7",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "psyduck",
+      "level": "26",
+      "weight": 1
+    },
+    {
+      "id": "seafoam_islands_b1f-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "psyduck",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "seel",
+      "level": "34",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "golbat",
+      "level": "32",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-sound_inactive-3",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "golduck",
+      "level": "34",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "absol",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "absol",
+      "level": "34",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "makuhita",
+      "level": "32",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-hoennsound_active-3",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "makuhita",
+      "level": "34",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "34",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "chingling",
+      "level": "32",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b1f-sinnohsound_active-3",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b1f"
+      ],
+      "pokemon": "chingling",
+      "level": "34",
+      "weight": 10
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "spawns": [
+    {
+      "id": "cerulean_cave_b1f-land-0",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "kadabra",
+      "level": "46",
+      "weight": 20
+    },
+    {
+      "id": "cerulean_cave_b1f-land-1",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "parasect",
+      "level": "45",
+      "weight": 20
+    },
+    {
+      "id": "cerulean_cave_b1f-land-2",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "electrode",
+      "level": "46",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_b1f-land-3",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "magneton",
+      "level": "47",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_b1f-land-4",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "parasect",
+      "level": "47",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_b1f-land-5",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "wobbuffet",
+      "level": "49",
+      "weight": 5
+    },
+    {
+      "id": "cerulean_cave_b1f-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "golbat",
+      "level": "47",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "machoke",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "magneton",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-sound_inactive-3",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "ditto",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "makuhita",
+      "level": "45",
+      "weight": 20
+    },
+    {
+      "id": "cerulean_cave_b1f-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "absol",
+      "level": "47",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "absol",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "chingling",
+      "level": "45",
+      "weight": 20
+    },
+    {
+      "id": "cerulean_cave_b1f-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "47",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-surf-0",
+      "presets": [
+        "surf",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "psyduck",
+      "level": "40",
+      "weight": 60
+    },
+    {
+      "id": "cerulean_cave_b1f-surf-1",
+      "presets": [
+        "surf",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "psyduck",
+      "level": "35",
+      "weight": 30
+    },
+    {
+      "id": "cerulean_cave_b1f-surf-2",
+      "presets": [
+        "surf",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "golduck",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-old_rod-0",
+      "presets": [
+        "old_rod",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 100
+    },
+    {
+      "id": "cerulean_cave_b1f-good_rod-0",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 45
+    },
+    {
+      "id": "cerulean_cave_b1f-good_rod-1",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 30
+    },
+    {
+      "id": "cerulean_cave_b1f-good_rod-2",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 15
+    },
+    {
+      "id": "cerulean_cave_b1f-good_rod-3",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_b1f",
+        "morn_day"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-good_rod-4",
+      "presets": [
+        "good_rod",
+        "cerulean_cave_b1f",
+        "nite"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cerulean_cave_b1f-super_rod-0",
+      "presets": [
+        "super_rod",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 40
+    },
+    {
+      "id": "cerulean_cave_b1f-super_rod-1",
+      "presets": [
+        "super_rod",
+        "cerulean_cave_b1f"
+      ],
+      "pokemon": "gyarados",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "cerulean_cave_b1f-super_rod-2",
+      "presets": [
+        "super_rod",
+        "cerulean_cave_b1f",
+        "morn_day"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "cerulean_cave_b1f-super_rod-3",
+      "presets": [
+        "super_rod",
+        "cerulean_cave_b1f",
+        "nite"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}
