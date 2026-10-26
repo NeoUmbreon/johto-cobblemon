@@ -3,6 +3,7 @@ tellraw @s ["",{"text":"Starting adventure...","italic":true,"color":"gray"}]
 
 #Sets Gamerules for the world
 difficulty peaceful
+gamerule commandModificationBlockLimit 1000000
 gamerule randomTickSpeed 100
 gamerule doDaylightCycle true
 gamerule doFireTick false
