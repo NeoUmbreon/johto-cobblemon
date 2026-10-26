@@ -1,0 +1,94 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_plains-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "rattata",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_plains-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "raticate",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_plains-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs"
+      ],
+      "pokemon": "abra",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_plains-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "girafarig",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_plains-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "girafarig",
+      "level": "15-16",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_plains-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "stantler",
+      "level": "17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_plains-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "smeargle",
+      "level": "17",
+      "weight": 10
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_desert_block-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "fearow",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "marowak",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "fearow",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "lotad",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "spinda",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "trapinch",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "vibrava",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "cacnea",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "cacturne",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-9",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "hippopotas",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_desert_block-land-10",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "carnivine",
+      "level": "15-17",
+      "weight": 10
+    }
+  ]
+}

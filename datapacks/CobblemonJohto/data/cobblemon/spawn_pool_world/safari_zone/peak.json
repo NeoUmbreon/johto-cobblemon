@@ -1,0 +1,92 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_peak-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "peak",
+        "reroll_ivs"
+      ],
+      "pokemon": "geodude",
+      "level": "15-17",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_peak-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "peak",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "graveler",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_peak-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "peak",
+        "reroll_ivs"
+      ],
+      "pokemon": "magnemite",
+      "level": "15-16",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_peak-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "peak",
+        "reroll_ivs"
+      ],
+      "pokemon": "magneton",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_peak-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "peak",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "magneton",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_peak-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "peak",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "magmar",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_peak-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "peak",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "wobbuffet",
+      "level": "16-17",
+      "weight": 20
+    }
+  ]
+}

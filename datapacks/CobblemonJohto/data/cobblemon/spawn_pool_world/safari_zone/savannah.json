@@ -1,0 +1,108 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_savannah-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "nidoranf",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_savannah-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "nidorina",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_savannah-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "nidoranm",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_savannah-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "nidorino",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_savannah-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_savannah-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "golbat",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "rhyhorn",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "tauros",
+      "level": "15-17",
+      "weight": 30
+    }
+  ]
+}

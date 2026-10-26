@@ -1,0 +1,222 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_rocky_beach-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "slowpoke",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "slowbro",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_rocky_beach-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "doduo",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "krabby",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-surf-0",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "15-16",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-surf-1",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_rocky_beach-surf-2",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "15-16",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-surf-3",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "lapras",
+      "level": "15-16",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_rocky_beach-old_rod-0",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "krabby",
+      "level": "13-15",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-old_rod-1",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "goldeen",
+      "level": "13-15",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-old_rod-2",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "12-14",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_rocky_beach-good_rod-0",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "krabby",
+      "level": "22-25",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_rocky_beach-good_rod-1",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "goldeen",
+      "level": "22-23",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-good_rod-2",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "22-23",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach-super_rod-0",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "kingler",
+      "level": "38-39",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_rocky_beach-super_rod-1",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "goldeen",
+      "level": "35-38",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_rocky_beach-super_rod-2",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "seaking",
+      "level": "35-38",
+      "weight": 40
+    }
+  ]
+}

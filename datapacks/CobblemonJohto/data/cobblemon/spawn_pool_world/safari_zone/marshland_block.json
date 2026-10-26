@@ -1,0 +1,196 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_marshland_block-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "gloom",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "diglett",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "muk",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "jumpluff",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "shuckle",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "roselia",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "seviper",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "banette",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "croagunk",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-land-9",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "carnivine",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-surf-0",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "muk",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-surf-1",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "jumpluff",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-surf-2",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "quagsire",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland_block-old_rod-0",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "12-15",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_marshland_block-good_rod-0",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "gyarados",
+      "level": "22-25",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_marshland_block-super_rod-0",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "barboach",
+      "level": "35-38",
+      "weight": 20
+    }
+  ]
+}

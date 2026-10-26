@@ -43,8 +43,9 @@ def get_context(entry):
 def get_time_preset(entry):
     """Extract time preset"""
     presets = entry.get("presets", [])
-    if len(presets) >= 3:
-        return presets[2]
+    last_preset = presets[len(presets) - 1]
+    if last_preset in TIME_PRESETS:
+        return last_preset
     return None  # anytime
 
 
@@ -97,7 +98,7 @@ def main():
     parser.add_argument("--verbose", action="store_true", help="Print weight sum for each condition")
     args = parser.parse_args()
 
-    files = sorted(glob.glob("datapacks/CobblemonJohto/data/cobblemon/spawn_pool_world/*.json"))
+    files = sorted(glob.glob("datapacks/CobblemonJohto/data/cobblemon/spawn_pool_world/**/*.json", recursive=True))
     if args.zone:
         files = [f for f in files if os.path.splitext(os.path.basename(f))[0].lower() == args.zone.lower()]
 
@@ -111,17 +112,37 @@ def main():
             if ctx:
                 by_context[ctx].append(entry)
 
+        has_swarm = any("swarm_active" in e.get("id", "") or "swarm_inactive" in e.get("id", "") for e in spawns)
+        has_radio = any(
+            "sound_inactive" in e.get("id", "")
+            or "hoennsound_active" in e.get("id", "")
+            or "sinnohsound_active" in e.get("id", "")
+            for e in spawns
+        )
+
+        swarm_states = SWARM_STATES if has_swarm else [False]
+        radio_states = RADIO_STATES if has_radio else ["none"]
+
+        def expected_total(ctx):
+            if "_block.json" in os.path.basename(f): # safari zone block-specific constants
+                if ctx == "surf":
+                    return 30
+                if ctx in ("old_rod", "good_rod", "super_rod"):
+                    return 20
+            return 100
+
         file_failures = []
-        for time, swarm_state, radio_state, ctx in itertools.product(TIMES, SWARM_STATES, RADIO_STATES, CONTEXTS):
+        for time, swarm_state, radio_state, ctx in itertools.product(TIMES, swarm_states, radio_states, CONTEXTS):
             entries = by_context.get(ctx, [])
             if not entries:
                 continue
             active = [e for e in entries if entry_active(e, time, swarm_state, radio_state)]
             total = sum(e.get("weight", 0) for e in active)
-            if total != 100:
+            exp = expected_total(ctx)
+            if total != exp:
                 file_failures.append(
                     f"  {os.path.basename(f)}: time={time} swarm={swarm_state} "
-                    f"radio={radio_state} ctx={ctx}: sum={total} (expected 100), "
+                    f"radio={radio_state} ctx={ctx}: sum={total} (expected {exp}), "
                     f"{len(active)}/{len(entries)} entries active"
                 )
             if args.verbose:

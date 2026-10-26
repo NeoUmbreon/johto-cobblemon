@@ -1,0 +1,215 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_marshland-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "ekans",
+      "level": "15-16",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_marshland-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "arbok",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "oddish",
+      "level": "15-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_marshland-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "gloom",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_marshland-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "grimer",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_marshland-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "koffing",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_marshland-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "weezing",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_marshland-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "wooper",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_marshland-surf-0",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "15-17",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_marshland-surf-1",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "grimer",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_marshland-surf-2",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "wooper",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_marshland-old_rod-0",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "12-15",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_marshland-old_rod-1",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "12-15",
+      "weight": 60
+    },
+    {
+      "id": "safari_zone_marshland-good_rod-0",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "24-25",
+      "weight": 60
+    },
+    {
+      "id": "safari_zone_marshland-good_rod-1",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "24-25",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_marshland-super_rod-0",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "35-38",
+      "weight": 80
+    },
+    {
+      "id": "safari_zone_marshland-super_rod-1",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "marshland",
+        "reroll_ivs"
+      ],
+      "pokemon": "gyarados",
+      "level": "36-37",
+      "weight": 20
+    }
+  ]
+}

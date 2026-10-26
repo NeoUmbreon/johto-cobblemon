@@ -1,0 +1,93 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_mountain-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "rattata",
+      "level": "15-16",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_mountain-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "raticate",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_mountain-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "15-17",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_mountain-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "golbat",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_mountain-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "magneton",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "lickitung",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_mountain-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "larvitar",
+      "level": "17",
+      "weight": 10
+    }
+  ]
+}

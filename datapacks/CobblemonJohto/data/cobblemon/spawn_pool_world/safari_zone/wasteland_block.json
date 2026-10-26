@@ -1,0 +1,124 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_wasteland_block-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "golduck",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland_block-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "machoke",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland_block-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "bellsprout",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland_block-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "kingler",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland_block-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "breloom",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland_block-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "medicham",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland_block-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "manectric",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland_block-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "illumise",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland_block-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "solrock",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland_block-land-9",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "skorupi",
+      "level": "15-17",
+      "weight": 10
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_forest_block-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "lickitung",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest_block-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "mrmime",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest_block-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "electabuzz",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest_block-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "misdreavus",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest_block-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "surskit",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest_block-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "shuppet",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest_block-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "beldum",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest_block-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "bidoof",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest_block-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "budew",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest_block-land-9",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "bronzong",
+      "level": "15-17",
+      "weight": 10
+    }
+  ]
+}

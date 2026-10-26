@@ -1,0 +1,228 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_wetland-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_wetland-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "psyduck",
+      "level": "15-16",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_wetland-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "golduck",
+      "level": "17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_wetland-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "farfetchd",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_wetland-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "ditto",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wetland-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "sentret",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_wetland-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "wooper",
+      "level": "15-17",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_wetland-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "quagsire",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_wetland-surf-0",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "psyduck",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_wetland-surf-1",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "15-16",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_wetland-surf-2",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "wooper",
+      "level": "15-16",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_wetland-surf-3",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "quagsire",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_wetland-old_rod-0",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "12-15",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_wetland-old_rod-1",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "12-15",
+      "weight": 60
+    },
+    {
+      "id": "safari_zone_wetland-good_rod-0",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "22-24",
+      "weight": 70
+    },
+    {
+      "id": "safari_zone_wetland-good_rod-1",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "23-25",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_wetland-super_rod-0",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "35-37",
+      "weight": 50
+    },
+    {
+      "id": "safari_zone_wetland-super_rod-1",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "wetland",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "35-37",
+      "weight": 50
+    }
+  ]
+}
