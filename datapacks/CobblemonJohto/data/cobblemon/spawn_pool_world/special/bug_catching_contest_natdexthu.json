@@ -1,0 +1,124 @@
+{
+  "spawns": [
+    {
+      "id": "bug_catching_contest_natdexthu-0",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "wurmple",
+      "level": "24-36",
+      "weight": 20
+    },
+    {
+      "id": "bug_catching_contest_natdexthu-1",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "silcoon",
+      "level": "24-36",
+      "weight": 20
+    },
+    {
+      "id": "bug_catching_contest_natdexthu-2",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "nincada",
+      "level": "26-36",
+      "weight": 10
+    },
+    {
+      "id": "bug_catching_contest_natdexthu-3",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "volbeat",
+      "level": "26-36",
+      "weight": 10
+    },
+    {
+      "id": "bug_catching_contest_natdexthu-4",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "kricketot",
+      "level": "27-30",
+      "weight": 10
+    },
+    {
+      "id": "bug_catching_contest_natdexthu-5",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "kricketune",
+      "level": "27-30",
+      "weight": 10
+    },
+    {
+      "id": "bug_catching_contest_natdexthu-6",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "dustox",
+      "level": "25-32",
+      "weight": 5
+    },
+    {
+      "id": "bug_catching_contest_natdexthu-7",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "combee",
+      "level": "27-34",
+      "weight": 5
+    },
+    {
+      "id": "bug_catching_contest_natdexthu-8",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "scyther",
+      "level": "27-28",
+      "weight": 5
+    },
+    {
+      "id": "bug_catching_contest_natdexthu-9",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "pinsir",
+      "level": "27-28",
+      "weight": 5
+    }
+  ]
+}
