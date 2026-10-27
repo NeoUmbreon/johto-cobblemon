@@ -507,10 +507,6 @@ def generate_fishing(enc: dict, zone: dict, zone_name: str) -> list:
 
 def generate_for_map(enc: dict, zone: dict) -> dict:
     """Generate spawn entries for one map from its encounter and zone data."""
-    if zone.get("landContext") == "none" and zone.get("coords") and enc.get("land", {}).get("mons"):
-        raise ValueError(
-            f"{enc['map']} ({zone['name']}): landContext is 'none' but has land spawns and non-empty coords"
-        )
     hoenn = enc.get("hoenn") or []
     sinnoh = enc.get("sinnoh") or []
     has_sound = bool(hoenn or sinnoh)
@@ -548,6 +544,10 @@ def main() -> None:
             continue
         if not zone.get("coords"):
             continue
+        if zone.get("landContext") == "none" and zone.get("coords") and enc.get("land", {}).get("mons"):
+            raise ValueError(
+                f"{enc['map']} ({zone['name']}): landContext is 'none' but has land spawns and non-empty coords"
+            )
         if zone.get("landContext") == "none" and not enc.get("surf") and not enc.get("fishing"):
             continue
         result = generate_for_map(enc, zone)
