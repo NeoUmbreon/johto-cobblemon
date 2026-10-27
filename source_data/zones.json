@@ -133,7 +133,7 @@
     "map": "D17R0102",
     "name": "BELL_TOWER_2F",
     "coords": [
-      { "minX": 240, "minY": 70, "minZ": 297, "maxX": 273, "maxY": 112, "maxZ": 330 }
+      { "minX": 240, "minY": 70, "minZ": 297, "maxX": 273, "maxY": 145, "maxZ": 330 }
     ],
     "landContext": "indoor"
   },
@@ -189,9 +189,9 @@
     "map": "D18R0101",
     "name": "BURNED_TOWER_1F",
     "coords": [
-      { "minX": 432, "minY": 63, "minZ": 309, "maxX": 452, "maxY": 70, "maxZ": 329 }
+      { "minX": 432, "minY": 63, "minZ": 309, "maxX": 452, "maxY": 69, "maxZ": 329 }
     ],
-    "landContext": "indoor"
+    "landContext": "grounded"
   },
   {
     "map": "D18R0102",
@@ -199,7 +199,7 @@
     "coords": [
       { "minX": 432, "minY": 56, "minZ": 309, "maxX": 452, "maxY": 62, "maxZ": 329 }
     ],
-    "landContext": "indoor"
+    "landContext": "grounded"
   },
   {
     "map": "D22R0101",

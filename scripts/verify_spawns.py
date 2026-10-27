@@ -31,7 +31,7 @@ def get_context(entry):
     if not presets:
         return None
     first = presets[0]
-    if first in ("grass", "indoor"):
+    if first in ("grass", "indoor", "grounded"):
         return "land"
     if first == "surf":
         return "surf"
