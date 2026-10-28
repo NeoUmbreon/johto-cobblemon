@@ -1,20 +1,16 @@
 {
+    "initializationAction": [
+        "v.requested = 'bellsprout';",
+        "v.given = 'onix gender=male nick=Rocky helditem=cobblemon:persim_berry ability=sturdy nature=hasty ottype=NPC ot=Rudy hp_iv=25 attack_iv=20 defence_iv=25 special_attack_iv=15 special_defence_iv=15 speed_iv=15';",
+        "q.player.data.onix_trade ? q.dialogue.set_page('already_traded');"
+    ],
     "speakers": {
         "npc": {
-            "name": "Trader Rudy",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:schoolboy",
-                "isLeftSide": true
-            }
+            "name": "Rudy",
+            "face": "q.npc.face;"
         },
-        "player": {
-            "face": "q.player.face();",
-            "name": {
-                "type": "expression",
-                "expression": "q.player.username"
-            }
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -22,22 +18,17 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "I collect Pokemon. Do you have a Bellsprout? Want to trade it for my Onix?"
+                "I collect Pokémon.",
+                "Do you have a Bellsprout?"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Yes",
-                        "value": "yes",
-                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
-                        "action": "q.dialogue.set_page('confirmation');"
-                    },
-                    {
-                        "text": "No",
-                        "value": "no",
-                        "action": "q.dialogue.set_page('okbye');"
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -46,37 +37,54 @@
             "id": "confirmation",
             "speaker": "npc",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'Are you sure you want to trade your Bellsprout?';"
-                }
+                "Want to trade it for my Onix?"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "§b🔁 Trade 🔁§r",
-                        "value": "trade",
-                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
+                        "text": "Yes",
+                        "value": "yes",
                         "action": [
-                            "q.run_script('pt_trade_pkmn');",
-                            "q.dialogue.close();"
+                            "v.success = q.run_script('pt_trade_pkmn', v.requested, v.given);",
+                            "v.success ? { q.player.data.onix_trade = 1; q.player.save_data };",
+                            "v.success ? q.dialogue.set_page('trade') : q.dialogue.set_page('no_pokemon');"
                         ]
                     },
                     {
                         "text": "No",
                         "value": "no",
-                        "action": "q.dialogue.set_page('okbye');"
+                        "action": "q.dialogue.set_page('declined');"
                     }
                 ]
             }
         },
         {
-            "id": "okbye",
+            "id": "trade",
+            "speaker": "none",
+            "lines": [
+                "Rudy sent over Rocky.",
+                "Bye-bye, Bellsprout!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "after_trade",
             "speaker": "npc",
             "lines": [
-                "Alright, see you later!"
+                "Yay! I got myself a Bellsprout!",
+                "Thanks!"
             ],
             "input": {
                 "type": "option",
@@ -85,9 +93,62 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [
-                            "q.dialogue.close();"
-                        ]
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "no_pokemon",
+            "speaker": "npc",
+            "lines": [
+                "You don't have a Bellsprout?",
+                "What a letdown..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined",
+            "speaker": "npc",
+            "lines": [
+                "You don't want to trade? Aww..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "already_traded",
+            "speaker": "npc",
+            "lines": [
+                "Hi, how's my old Onix doing?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }

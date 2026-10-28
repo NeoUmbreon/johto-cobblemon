@@ -1,20 +1,16 @@
 {
+    "initializationAction": [
+        "v.requested = 'haunter';",
+        "v.given = 'xatu gender=male nick=Paul helditem=cobblemon:wacan_berry ability=synchronize nature=modest ottype=NPC ot=Mondo hp_iv=15 attack_iv=20 defence_iv=15 special_attack_iv=20 special_defence_iv=20 speed_iv=20';",
+        "q.player.data.xatu_trade ? q.dialogue.set_page('already_traded');"
+    ],
     "speakers": {
         "npc": {
-            "name": "Trader Mondo",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:pokemaniac",
-                "isLeftSide": true
-            }
+            "name": "Mondo",
+            "face": "q.npc.face;"
         },
-        "player": {
-            "face": "q.player.face();",
-            "name": {
-                "type": "expression",
-                "expression": "q.player.username"
-            }
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -22,22 +18,17 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "Hi, I'm looking for this Pokemon. If you have Haunter, would you trade it for my Xatu?"
+                "Aw...",
+                "If only I had a Haunter..."
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "Yes",
-                        "value": "yes",
-                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
-                        "action": "q.dialogue.set_page('confirmation');"
-                    },
-                    {
-                        "text": "No",
-                        "value": "no",
-                        "action": "q.dialogue.set_page('okbye');"
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -46,37 +37,71 @@
             "id": "confirmation",
             "speaker": "npc",
             "lines": [
-                {
-                    "type": "expression",
-                    "expression": "'Are you sure you want to trade your Haunter?';"
-                }
+                "If you have a Haunter, you will trade it for my Xatu, won't you?"
             ],
             "input": {
                 "type": "option",
                 "vertical": false,
                 "options": [
                     {
-                        "text": "§b🔁 Trade 🔁§r",
-                        "value": "trade",
-                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
+                        "text": "Yes",
+                        "value": "yes",
                         "action": [
-                            "q.run_script('pt_trade_pkmn');",
-                            "q.dialogue.close();"
+                            "v.success = q.run_script('pt_trade_pkmn', v.requested, v.given);",
+                            "v.success ? { q.player.data.xatu_trade = 1; q.player.save_data };",
+                            "v.success ? q.dialogue.set_page('trade') : q.dialogue.set_page('no_pokemon');"
                         ]
                     },
                     {
                         "text": "No",
                         "value": "no",
-                        "action": "q.dialogue.set_page('okbye');"
+                        "action": "q.dialogue.set_page('declined');"
                     }
                 ]
             }
         },
         {
-            "id": "okbye",
+            "id": "trade",
+            "speaker": "none",
+            "lines": [
+                "Mondo sent over Paul.",
+                "Bye-bye, Haunter!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "after_trade",
             "speaker": "npc",
             "lines": [
-                "Alright, see you later!"
+                "How wonderful! You made my day!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "after_trade2",
+            "speaker": "npc",
+            "lines": [
+                "Thanks to you, I have finally got the Pokémon I've been looking for... since forever!"
             ],
             "input": {
                 "type": "option",
@@ -85,9 +110,116 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [
-                            "q.dialogue.close();"
-                        ]
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "no_pokemon",
+            "speaker": "npc",
+            "lines": [
+                "It has to be a Haunter!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "no_pokemon2",
+            "speaker": "npc",
+            "lines": [
+                "HAUNTER!!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined",
+            "speaker": "npc",
+            "lines": [
+                "You'd never turn down a trade if you had a Haunter."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined2",
+            "speaker": "npc",
+            "lines": [
+                "That means you just don't have one.",
+                "That must be it..."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "already_traded",
+            "speaker": "npc",
+            "lines": [
+                "How do you like the cool Xatu I traded you?"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "already_traded2",
+            "speaker": "npc",
+            "lines": [
+                "It's so cool, because it used to be with cool me!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }

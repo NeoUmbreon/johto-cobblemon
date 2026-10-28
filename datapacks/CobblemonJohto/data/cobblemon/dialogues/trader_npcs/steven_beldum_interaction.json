@@ -1,20 +1,16 @@
 {
+    "initializationAction": [
+        "v.requested = 'forretress';",
+        "v.given = 'beldum nick=Iron helditem=cobblemon:dawn_stone ability=clearbody nature=brave ottype=NPC ot=Steven hp_iv=28 attack_iv=29 defence_iv=24 special_attack_iv=24 special_defence_iv=25 speed_iv=23';",
+        "q.player.data.beldum_trade ? q.dialogue.set_page('after_trade');"
+    ],
     "speakers": {
         "npc": {
             "name": "Steven",
-            "face": {
-                "type": "artificial",
-                "modelType": "npc",
-                "identifier": "cobblemon:steven",
-                "isLeftSide": true
-            }
+            "face": "q.npc.face;"
         },
-        "player": {
-            "face": "q.player.face();",
-            "name": {
-                "type": "expression",
-                "expression": "q.player.username"
-            }
+        "none": {
+            "name": " "
         }
     },
     "pages": [
@@ -22,7 +18,8 @@
             "id": "greeting",
             "speaker": "npc",
             "lines": [
-                "We meet again! Have you been to Hoenn before?"
+                "We meet again!",
+                "Have you been to Hoenn before?"
             ],
             "input": {
                 "type": "option",
@@ -31,7 +28,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page2');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -40,7 +37,7 @@
             "id": "page2",
             "speaker": "npc",
             "lines": [
-                "It's such a beautiful place, with the clearest ocean you can imagine. You should visit sometime."
+                "It's such a beautiful place, with the clearest ocean you can imagine."
             ],
             "input": {
                 "type": "option",
@@ -49,7 +46,25 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page3');"
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "page2",
+            "speaker": "npc",
+            "lines": [
+                "You should visit sometime."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -58,7 +73,8 @@
             "id": "page3",
             "speaker": "npc",
             "lines": [
-                "Hey! Why don't we trade Pokémon?"
+                "Hey!",
+                "Why don't we trade Pokémon?"
             ],
             "input": {
                 "type": "option",
@@ -67,7 +83,7 @@
                     {
                         "text": "Next",
                         "value": "next",
-                        "action": "q.dialogue.set_page('page4');"
+                        "action": "q.dialogue.next_page;"
                     }
                 ]
             }
@@ -76,7 +92,8 @@
             "id": "page4",
             "speaker": "npc",
             "lines": [
-                "I've been looking for Forretress. I can trade my Beldum for it."
+                "I've been looking for Forretress.",
+                "I can trade my Beldum for it."
             ],
             "input": {
                 "type": "option",
@@ -85,19 +102,18 @@
                     {
                         "text": "Yes",
                         "value": "yes",
-                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
-                        "action": "q.dialogue.set_page('confirmation');"
+                        "action": "q.dialogue.next_page;"
                     },
                     {
                         "text": "No",
                         "value": "no",
-                        "action": "q.dialogue.set_page('okbye');"
+                        "action": "q.dialogue.set_page('declined');"
                     }
                 ]
             }
         },
         {
-            "id": "confirmation",
+            "id": "page5",
             "speaker": "npc",
             "lines": [
                 "OK, let's trade!"
@@ -107,24 +123,93 @@
                 "vertical": false,
                 "options": [
                     {
-                        "text": "§b🔁 Trade 🔁§r",
-                        "value": "trade",
-                        "isSelectable": "q.player.party.count_by_properties(q.npc.config.trade_requested) >= 1",
+                        "text": "Ok",
+                        "value": "ok",
                         "action": [
-                            "q.run_script('pt_trade_pkmn');",
-                            "q.dialogue.close();"
+                            "v.success = q.run_script('pt_trade_pkmn', v.requested, v.given);",
+                            "v.success ? { q.player.data.beldum_trade = 1; q.player.save_data };",
+                            "v.success ? q.dialogue.set_page('trade') : q.dialogue.set_page('no_pokemon');"
                         ]
-                    },
-                    {
-                        "text": "No",
-                        "value": "no",
-                        "action": "q.dialogue.set_page('okbye');"
                     }
                 ]
             }
         },
         {
-            "id": "okbye",
+            "id": "trade",
+            "speaker": "none",
+            "lines": [
+                "Steven sent over Iron.",
+                "Bye-bye, Forretress!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "after_trade",
+            "speaker": "npc",
+            "lines": [
+                "You don't see Forretress in the Hoenn region."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Next",
+                        "value": "next",
+                        "action": "q.dialogue.next_page;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "after_trade2",
+            "speaker": "npc",
+            "lines": [
+                "It's my first time to actually see one.",
+                "Thank you so much!"
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "no_pokemon",
+            "speaker": "npc",
+            "lines": [
+                "... is what I would say, if you had one."
+            ],
+            "input": {
+                "type": "option",
+                "vertical": false,
+                "options": [
+                    {
+                        "text": "Close",
+                        "value": "close",
+                        "action": "q.dialogue.close;"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "declined",
             "speaker": "npc",
             "lines": [
                 "That's too bad."
@@ -136,9 +221,7 @@
                     {
                         "text": "Close",
                         "value": "close",
-                        "action": [
-                            "q.dialogue.close();"
-                        ]
+                        "action": "q.dialogue.close;"
                     }
                 ]
             }
