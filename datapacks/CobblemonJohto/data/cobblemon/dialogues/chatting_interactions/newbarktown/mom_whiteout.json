@@ -1,0 +1,220 @@
+{
+  "speakers": {
+    "npc": {
+      "name": "Mom",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:oldlady",
+        "isLeftSide": true
+      }
+    },
+    "none": {
+      "name": " "
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "escapeAction": [],
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "q.player.username + '!'"
+        },
+        "Welcome home."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.next_page;"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page2",
+      "speaker": "npc",
+      "escapeAction": [],
+      "lines": [
+        "It sounds like you had quite the experience out there."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.next_page;"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page3",
+      "speaker": "npc",
+      "escapeAction": [],
+      "lines": [
+        "Maybe you should take a quick rest so you can relax."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Ok",
+            "value": "ok",
+            "action": [
+              "q.player.add_effect('minecraft:blindness', 70, 1, false, false);",
+              "q.run_command('execute as '+q.player.username+' run function johto:sound/playlocalsfx {sfx:\"pokemonhealed\"}');",
+              "q.player.party.heal;",
+              "q.dialogue.next_page;"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page4",
+      "speaker": "none",
+      "lines": [
+        "...",
+        "..."
+      ],
+      "input": {
+        "type": "auto-continue",
+        "delay": 2.5,
+        "allowSkip": false,
+        "showTimer": false,
+        "action": "q.dialogue.next_page;"
+      }
+    },
+    {
+      "id": "page5",
+      "speaker": "npc",
+      "lines": [
+        "Oh, good! You and your Pokémon are looking great."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.dialogue.next_page;"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page6",
+      "speaker": "npc",
+      "lines": [
+        "Oh, yes, I heard from Professor Elm."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.dialogue.next_page;"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page7",
+      "speaker": "npc",
+      "lines": [
+        "He said that a Pokémon's energy is measured in HP (Hit Points)."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.dialogue.next_page;"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page8",
+      "speaker": "npc",
+      "lines": [
+        "If your Pokémon lose their HP, you can restore it at any Pokémon Center."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.dialogue.next_page;"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page9",
+      "speaker": "npc",
+      "lines": [
+        "If you're going to travel far away, the smart Trainer stocks up on Potions at the Pokémon Mart."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": [
+              "q.dialogue.next_page;"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "page10",
+      "speaker": "npc",
+      "lines": [
+        "Make me proud, honey!",
+        "Take care!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Close",
+            "value": "close",
+            "action": [
+              "q.dialogue.close;"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

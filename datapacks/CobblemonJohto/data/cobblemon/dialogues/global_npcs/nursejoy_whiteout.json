@@ -1,0 +1,42 @@
+{
+  "escapeAction": [],
+  "speakers": {
+    "npc": {
+      "name": " ",
+      "face": {
+        "type": "artificial",
+        "modelType": "npc",
+        "identifier": "cobblemon:nursejoy",
+        "isLeftSide": true
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": [
+        "First, let's restore your Pokémon to full health."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Ok",
+            "value": "ok",
+            "action": [
+              "for_each(t.entity, q.player.world.get_entities_around(q.player.x,q.player.y,q.player.z+2,0.5), { t.entity.is_npc ? { q.set_query('npc', t.entity); break }; });",
+              "v.healer = q.npc.find_nearby_block('cobblemon:healing_machine');",
+              "v.has_healer = v.healer != 0;",
+              "v.has_charge = v.has_healer && q.player.can_heal_at_healer(v.healer);",
+              "v.callback_dialogue = 'nursejoy_whiteout_healed';",
+              "q.npc.run_action_effect('pokecenter_heal');",
+              "q.dialogue.close;"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

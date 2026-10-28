@@ -1,0 +1,40 @@
+{
+  "timeline": [
+    {
+      "type": "fork",
+      "condition": "v.has_charge",
+      "ifTrue": [
+        {
+          "type": "molang",
+          "expressions": "q.npc.look_at_position(v.healer[0] + 0.5, v.healer[1] + 0.8, v.healer[2] + 0.5);"
+        },
+        {
+          "type": "animation",
+          "animation": ["punch_right"],
+          "entityCondition": "true"
+        },
+        {
+          "type": "molang",
+          "expressions": "q.player.put_pokemon_in_healer(v.healer);"
+        }
+      ],
+      "ifFalse": [
+        {
+          "type": "molang",
+          "expressions": [
+            "q.run_command('execute as '+q.player.username+' run function johto:sound/playlocalsfx {sfx:\"pokemonhealed\"}');",
+            "q.player.party.heal;"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 2.5
+    },
+    {
+      "type": "molang",
+      "expressions": "q.npc.run_dialogue(q.player, v.callback_dialogue);"
+    }
+  ]
+}

@@ -167,8 +167,9 @@ execute as @a[tag=!RadioOff] at @s run function johto:world/switchradiostation
 #-------------------------------------------------------------------------------------------------------------------------
 #Unlocks Fly spots by visiting respective Pokemon Centers, sets spawnpoint if player dies
 
-#Elm's Lab
-scoreboard players set @a[x=-679,y=64,z=-480,distance=..10] Whiteout 0
+#Home
+scoreboard players set @a[x=-724,y=64,z=-494,distance=..10] Whiteout 0
+spawnpoint @a[x=-724,y=64,z=-494,distance=..10] -724 64 -494
 
 scoreboard players set @a[x=-256,y=64,z=-489,distance=..5,scores={FlyCherrygrove=0}] FlyCherrygrove 1
 scoreboard players set @a[x=-256,y=64,z=-489,distance=..5] Whiteout 1
@@ -227,8 +228,6 @@ scoreboard players set @a[x=-1709,y=64,z=-895,distance=..5] Whiteout 13
 spawnpoint @a[x=-1709,y=64,z=-895,distance=..5] -1709 64 -896
 
 scoreboard players set @a[x=-1715,y=64,z=-321,distance=..15,scores={FlyPallet=0}] FlyPallet 1
-scoreboard players set @a[x=-1715,y=64,z=-321,distance=..15] Whiteout 14
-spawnpoint @a[x=-1715,y=64,z=-321,distance=..15] -1715 64 -321
 
 scoreboard players set @a[x=-1701,y=64,z=7,distance=..5,scores={FlyViridian=0}] FlyViridian 1
 scoreboard players set @a[x=-1701,y=64,z=7,distance=..5] Whiteout 15

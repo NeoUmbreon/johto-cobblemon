@@ -1,30 +1,65 @@
 {
-  "initializationAction": "c.npc.set_chatting();",
+  "initializationAction": "q.npc.set_chatting();",
   "speakers": {
     "npc": {
-      "name": {
-        "type": "expression",
-        "expression": "q.npc.name"
-      },
-      "face": "q.npc.face();"
+      "name": " ",
+      "face": "q.npc.face"
     }
   },
   "pages": [
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["Thank you for waiting. We hope to see you again!"],
+      "lines": [
+        "Thank you for waiting."
+      ],
       "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": "q.dialogue.close();"
-                    }
-                ]
-            }
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.next_page;"
+          }
+        ]
+      }
+    },
+    {
+      "id": "greeting2",
+      "speaker": "npc",
+      "lines": [
+        "We've restored your Pokémon to full health."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.next_page;"
+          }
+        ]
+      }
+    },
+    {
+      "id": "greeting3",
+      "speaker": "npc",
+      "lines": [
+        "Please, come back again any time!"
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Close",
+            "value": "close",
+            "action": "q.dialogue.close();"
+          }
+        ]
+      }
     }
   ]
 }

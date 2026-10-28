@@ -30,7 +30,8 @@ scoreboard players add @s Money 3000
 
 
 #Sets Spawnpoint
-spawnpoint @s -723 69 -485
+scoreboard players set @s Whiteout 0
+spawnpoint @s -724 64 -494
 
 #Gives all recipies so popups don't show with each item
 recipe give @s *

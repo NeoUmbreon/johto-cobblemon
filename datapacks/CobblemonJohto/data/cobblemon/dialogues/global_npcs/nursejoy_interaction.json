@@ -1,94 +1,56 @@
 {
   "initializationAction": [
-    "c.npc.set_chatting();",
-    "v.healer = c.npc.find_nearby_block('cobblemon:healing_machine');",
-    "v.has_healer = v.healer != 0;",
-    "v.full_health = c.player.is_party_at_full_health();",
-    "v.has_charge = v.has_healer == true && v.full_health == false && q.player.can_heal_at_healer(v.healer) == true;",
-    "v.landing_page = !v.has_healer ? 'no_healer' : (v.full_health ? 'full_health' : (v.has_charge ? 'has_charge' : 'no_charge'));"
+    "q.npc.set_chatting();"
   ],
   "speakers": {
     "npc": {
-      "name": "Nurse Joy",
-      "face": "q.npc.face();"
-    },
-    "player": {
-      "face": "q.player.face();",
-      "name": {
-        "type": "expression",
-        "expression": "q.player.username"
-      }
+      "name": " ",
+      "face": "q.npc.face"
     }
   },
   "pages": [
     {
       "id": "greeting",
       "speaker": "npc",
-      "lines": ["Hello, and welcome to the Pokémon Center. We restore your tired Pokémon to full health."],
+      "lines": [
+        "Hello, and welcome to the Pokémon Center."
+      ],
       "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Next",
-                        "value": "next",
-                        "action": "q.dialogue.set_page(v.landing_page);"
-                    }
-                ]
-            }
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.next_page;"
+          }
+        ]
+      }
     },
     {
-      "id": "no_healer",
+      "id": "greeting2",
       "speaker": "npc",
-      "lines": ["I would offer to heal your Pokémon, but I can't seem to find my healing machine...", "I'm sorry about that!"],
+      "lines": [
+        "We restore your tired Pokémon to full health."
+      ],
       "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": "q.dialogue.close();"
-                    }
-                ]
-            }
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Next",
+            "value": "next",
+            "action": "q.dialogue.next_page;"
+          }
+        ]
+      }
     },
     {
-      "id": "full_health",
+      "id": "greeting3",
       "speaker": "npc",
-      "lines": ["I would offer to heal your Pokémon for you, but your Pokémon are completely healthy!"],
-      "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": "q.dialogue.close();"
-                    }
-                ]
-            }
-    },
-    {
-      "id": "no_charge",
-      "speaker": "npc",
-      "lines": ["I'd like to heal your Pokémon but my machine is busy! Please come back later!"],
-      "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": "q.dialogue.close();"
-                    }
-                ]
-            }
-    },
-    {
-      "id": "has_charge",
-      "speaker": "npc",
-      "lines": ["Would you like to rest your Pokémon?"],
+      "lines": [
+        "Would you like to rest your Pokémon?"
+      ],
       "input": {
         "type": "option",
         "vertical": false,
@@ -96,11 +58,7 @@
           {
             "text": "Yes",
             "value": "yes",
-            "action": [
-              "v.callback_dialogue = 'nursejoy_healed';",
-              "c.npc.run_action_effect('npc_heal_player_pokemon');",
-              "q.dialogue.close();"
-            ]
+            "action": "q.dialogue.set_page('confirmed');"
           },
           {
             "text": "No",
@@ -111,20 +69,47 @@
       }
     },
     {
+      "id": "confirmed",
+      "speaker": "npc",
+      "lines": [
+        "OK, I'll take your Pokémon for a few seconds."
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Ok",
+            "value": "ok",
+            "action": [
+              "v.healer = q.npc.find_nearby_block('cobblemon:healing_machine');",
+              "v.has_healer = v.healer != 0;",
+              "v.has_charge = v.has_healer && q.player.can_heal_at_healer(v.healer);",
+              "v.callback_dialogue = 'nursejoy_healed';",
+              "q.npc.run_action_effect('pokecenter_heal');",
+              "q.dialogue.close();"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "okbye",
       "speaker": "npc",
-      "lines": ["Alright, see you later!"],
+      "lines": [
+        "Please, come back again any time!"
+      ],
       "input": {
-                "type": "option",
-                "vertical": false,
-                "options": [
-                    {
-                        "text": "Close",
-                        "value": "close",
-                        "action": "q.dialogue.close();"
-                    }
-                ]
-            }
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": "Close",
+            "value": "close",
+            "action": "q.dialogue.close();"
+          }
+        ]
+      }
     }
   ]
 }
