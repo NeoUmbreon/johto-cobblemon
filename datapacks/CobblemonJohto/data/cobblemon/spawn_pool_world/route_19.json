@@ -1,0 +1,148 @@
+{
+  "spawns": [
+    {
+      "id": "route_19-surf_swarm_inactive-0",
+      "presets": [
+        "surf",
+        "route_19"
+      ],
+      "pokemon": "tentacool",
+      "level": "35",
+      "weight": 60
+    },
+    {
+      "id": "route_19-surf_swarm_active-0",
+      "presets": [
+        "surf",
+        "route_19"
+      ],
+      "pokemon": "clamperl",
+      "level": "35",
+      "weight": 60
+    },
+    {
+      "id": "route_19-surf-0",
+      "presets": [
+        "surf",
+        "route_19"
+      ],
+      "pokemon": "tentacool",
+      "level": "30",
+      "weight": 30
+    },
+    {
+      "id": "route_19-surf-1",
+      "presets": [
+        "surf",
+        "route_19"
+      ],
+      "pokemon": "tentacruel",
+      "level": "35",
+      "weight": 10
+    },
+    {
+      "id": "route_19-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_19"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_19-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_19"
+      ],
+      "pokemon": "krabby",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_19-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_19"
+      ],
+      "pokemon": "krabby",
+      "level": "20",
+      "weight": 50
+    },
+    {
+      "id": "route_19-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_19"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_19-good_rod-2",
+      "presets": [
+        "good_rod",
+        "route_19",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "route_19-good_rod-3",
+      "presets": [
+        "good_rod",
+        "route_19",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "route_19-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_19"
+      ],
+      "pokemon": "krabby",
+      "level": "40",
+      "weight": 60
+    },
+    {
+      "id": "route_19-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_19"
+      ],
+      "pokemon": "kingler",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "route_19-super_rod-2",
+      "presets": [
+        "super_rod",
+        "route_19",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "route_19-super_rod-3",
+      "presets": [
+        "super_rod",
+        "route_19",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}

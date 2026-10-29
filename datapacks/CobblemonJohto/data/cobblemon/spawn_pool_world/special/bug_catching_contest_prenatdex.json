@@ -1,0 +1,124 @@
+{
+  "spawns": [
+    {
+      "id": "bug_catching_contest_prenatdex-0",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "caterpie",
+      "level": "7-18",
+      "weight": 20
+    },
+    {
+      "id": "bug_catching_contest_prenatdex-1",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "weedle",
+      "level": "7-18",
+      "weight": 20
+    },
+    {
+      "id": "bug_catching_contest_prenatdex-2",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "metapod",
+      "level": "9-18",
+      "weight": 10
+    },
+    {
+      "id": "bug_catching_contest_prenatdex-3",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "kakuna",
+      "level": "9-18",
+      "weight": 10
+    },
+    {
+      "id": "bug_catching_contest_prenatdex-4",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "butterfree",
+      "level": "12-15",
+      "weight": 10
+    },
+    {
+      "id": "bug_catching_contest_prenatdex-5",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "beedrill",
+      "level": "12-15",
+      "weight": 10
+    },
+    {
+      "id": "bug_catching_contest_prenatdex-6",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "venonat",
+      "level": "10-16",
+      "weight": 5
+    },
+    {
+      "id": "bug_catching_contest_prenatdex-7",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "paras",
+      "level": "10-17",
+      "weight": 5
+    },
+    {
+      "id": "bug_catching_contest_prenatdex-8",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "scyther",
+      "level": "13-14",
+      "weight": 5
+    },
+    {
+      "id": "bug_catching_contest_prenatdex-9",
+      "presets": [
+        "grass",
+        "national_park",
+        "reroll_ivs",
+        "bug_catching_contest"
+      ],
+      "pokemon": "pinsir",
+      "level": "13-14",
+      "weight": 5
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+    "spawnDetailType": "pokemon",
+    "bucket": "common",
+    "context": "surface",
+    "condition": {
+        "fluid": "#minecraft:water"
+    }
+}

@@ -1,0 +1,107 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_wasteland-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "fearow",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_wasteland-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "machop",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_wasteland-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs",
+        "morn"
+      ],
+      "pokemon": "machoke",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_wasteland-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs"
+      ],
+      "pokemon": "magnemite",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_wasteland-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs",
+        "morn"
+      ],
+      "pokemon": "onix",
+      "level": "15-16",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_wasteland-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs",
+        "day"
+      ],
+      "pokemon": "onix",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_wasteland-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "onix",
+      "level": "15-17",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_wasteland-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "wasteland",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "kangaskhan",
+      "level": "15-17",
+      "weight": 20
+    }
+  ]
+}

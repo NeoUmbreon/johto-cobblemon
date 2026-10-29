@@ -1,0 +1,331 @@
+{
+  "spawns": [
+    {
+      "id": "route_26-land-0",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "raticate",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "route_26-land-1",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "sandslash",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "route_26-land-2",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "doduo",
+      "level": "30",
+      "weight": 5
+    },
+    {
+      "id": "route_26-land-3",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "raticate",
+      "level": "30",
+      "weight": 5
+    },
+    {
+      "id": "route_26-land-4",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "arbok",
+      "level": "30",
+      "weight": 2.5
+    },
+    {
+      "id": "route_26-land-5",
+      "presets": [
+        "grass",
+        "route_26",
+        "morn_day"
+      ],
+      "pokemon": "doduo",
+      "level": "28",
+      "weight": 20
+    },
+    {
+      "id": "route_26-land-6",
+      "presets": [
+        "grass",
+        "route_26",
+        "morn_day"
+      ],
+      "pokemon": "doduo",
+      "level": "30",
+      "weight": 5
+    },
+    {
+      "id": "route_26-land-7",
+      "presets": [
+        "grass",
+        "route_26",
+        "morn_day"
+      ],
+      "pokemon": "dodrio",
+      "level": "30",
+      "weight": 2.5
+    },
+    {
+      "id": "route_26-land-8",
+      "presets": [
+        "grass",
+        "route_26",
+        "nite"
+      ],
+      "pokemon": "raticate",
+      "level": "28",
+      "weight": 20
+    },
+    {
+      "id": "route_26-land-9",
+      "presets": [
+        "grass",
+        "route_26",
+        "nite"
+      ],
+      "pokemon": "quagsire",
+      "level": "30",
+      "weight": 7.5
+    },
+    {
+      "id": "route_26-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "ponyta",
+      "level": "32",
+      "weight": 20
+    },
+    {
+      "id": "route_26-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "raticate",
+      "level": "28",
+      "weight": 5
+    },
+    {
+      "id": "route_26-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "sandslash",
+      "level": "28",
+      "weight": 5
+    },
+    {
+      "id": "route_26-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_26",
+        "morn_day"
+      ],
+      "pokemon": "doduo",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "route_26-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_26",
+        "nite"
+      ],
+      "pokemon": "raticate",
+      "level": "28",
+      "weight": 10
+    },
+    {
+      "id": "route_26-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "whismur",
+      "level": "28",
+      "weight": 20
+    },
+    {
+      "id": "route_26-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "linoone",
+      "level": "32",
+      "weight": 20
+    },
+    {
+      "id": "route_26-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "buizel",
+      "level": "28",
+      "weight": 20
+    },
+    {
+      "id": "route_26-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_26"
+      ],
+      "pokemon": "bidoof",
+      "level": "32",
+      "weight": 20
+    },
+    {
+      "id": "route_26-surf-0",
+      "presets": [
+        "surf",
+        "route_26"
+      ],
+      "pokemon": "tentacool",
+      "level": "30",
+      "weight": 60
+    },
+    {
+      "id": "route_26-surf-1",
+      "presets": [
+        "surf",
+        "route_26"
+      ],
+      "pokemon": "tentacool",
+      "level": "25",
+      "weight": 30
+    },
+    {
+      "id": "route_26-surf-2",
+      "presets": [
+        "surf",
+        "route_26"
+      ],
+      "pokemon": "tentacruel",
+      "level": "30",
+      "weight": 10
+    },
+    {
+      "id": "route_26-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_26"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_26-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_26"
+      ],
+      "pokemon": "tentacool",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_26-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_26"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_26-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_26"
+      ],
+      "pokemon": "tentacool",
+      "level": "20",
+      "weight": 30
+    },
+    {
+      "id": "route_26-good_rod-2",
+      "presets": [
+        "good_rod",
+        "route_26"
+      ],
+      "pokemon": "chinchou",
+      "level": "20",
+      "weight": 20
+    },
+    {
+      "id": "route_26-good_rod-3",
+      "presets": [
+        "good_rod",
+        "route_26"
+      ],
+      "pokemon": "shellder",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "route_26-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_26"
+      ],
+      "pokemon": "chinchou",
+      "level": "40",
+      "weight": 40
+    },
+    {
+      "id": "route_26-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_26"
+      ],
+      "pokemon": "shellder",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "route_26-super_rod-2",
+      "presets": [
+        "super_rod",
+        "route_26"
+      ],
+      "pokemon": "tentacruel",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "route_26-super_rod-3",
+      "presets": [
+        "super_rod",
+        "route_26"
+      ],
+      "pokemon": "lanturn",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

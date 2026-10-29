@@ -1,0 +1,198 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_meadow_block-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "raticate",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "geodude",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "clefairy",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "chansey",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "skiploom",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "wooper",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "seedot",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "nuzleaf",
+      "level": "15-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_meadow_block-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "nosepass",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-land-9",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "riolu",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-surf-0",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "skiploom",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-surf-1",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "masquerain",
+      "level": "15-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_meadow_block-old_rod-0",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "12-15",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_meadow_block-good_rod-0",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "22-25",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-good_rod-1",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "gyarados",
+      "level": "22-25",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow_block-super_rod-0",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "gyarados",
+      "level": "35-38",
+      "weight": 20
+    }
+  ]
+}

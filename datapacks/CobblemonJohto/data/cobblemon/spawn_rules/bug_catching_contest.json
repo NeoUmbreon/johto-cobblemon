@@ -1,0 +1,36 @@
+{
+  "displayName": "Bug Catching Contest",
+  "enabled": true,
+  "components": [
+    {
+      "type": "weight",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'national_park')",
+      "spawnablePositionSelector": "v.spawnable_position.world.server.data.bug_catching_contest != 0",
+      "weight": "0"
+    },
+    {
+      "type": "weight",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'bug_catching_contest_prenatdex')",
+      "spawnablePositionSelector": "v.spawnable_position.world.server.data.bug_catching_contest != 'prenatdex'",
+      "weight": "0"
+    },
+    {
+      "type": "weight",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'bug_catching_contest_natdextue')",
+      "spawnablePositionSelector": "v.spawnable_position.world.server.data.bug_catching_contest != 'natdextue'",
+      "weight": "0"
+    },
+    {
+      "type": "weight",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'bug_catching_contest_natdexthu')",
+      "spawnablePositionSelector": "v.spawnable_position.world.server.data.bug_catching_contest != 'natdexthu'",
+      "weight": "0"
+    },
+    {
+      "type": "weight",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'bug_catching_contest_natdexsat')",
+      "spawnablePositionSelector": "v.spawnable_position.world.server.data.bug_catching_contest != 'natdexsat'",
+      "weight": "0"
+    }
+  ]
+}

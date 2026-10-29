@@ -1,0 +1,144 @@
+{
+  "spawns": [
+    {
+      "id": "burned_tower_1f-land-0",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "rattata",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "burned_tower_1f-land-1",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "koffing",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "burned_tower_1f-land-2",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "zubat",
+      "level": "14",
+      "weight": 10
+    },
+    {
+      "id": "burned_tower_1f-land-3",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "koffing",
+      "level": "16",
+      "weight": 5
+    },
+    {
+      "id": "burned_tower_1f-land-4",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "raticate",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "burned_tower_1f-sound_inactive-0",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "rattata",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "burned_tower_1f-sound_inactive-1",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "rattata",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "burned_tower_1f-sound_inactive-2",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "koffing",
+      "level": "14",
+      "weight": 10
+    },
+    {
+      "id": "burned_tower_1f-hoennsound_active-0",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "spinda",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "burned_tower_1f-hoennsound_active-1",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "zigzagoon",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "burned_tower_1f-hoennsound_active-2",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "zigzagoon",
+      "level": "14",
+      "weight": 10
+    },
+    {
+      "id": "burned_tower_1f-sinnohsound_active-0",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "meditite",
+      "level": "15",
+      "weight": 20
+    },
+    {
+      "id": "burned_tower_1f-sinnohsound_active-1",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "chatot",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "burned_tower_1f-sinnohsound_active-2",
+      "presets": [
+        "grounded",
+        "burned_tower_1f"
+      ],
+      "pokemon": "chatot",
+      "level": "14",
+      "weight": 10
+    }
+  ]
+}

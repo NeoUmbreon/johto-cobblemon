@@ -1,0 +1,207 @@
+{
+  "spawns": [
+    {
+      "id": "route_5-land-0",
+      "presets": [
+        "grass",
+        "route_5"
+      ],
+      "pokemon": "abra",
+      "level": "12",
+      "weight": 5
+    },
+    {
+      "id": "route_5-land-1",
+      "presets": [
+        "grass",
+        "route_5"
+      ],
+      "pokemon": "abra",
+      "level": "14",
+      "weight": 5
+    },
+    {
+      "id": "route_5-land-2",
+      "presets": [
+        "grass",
+        "route_5",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_5-land-3",
+      "presets": [
+        "grass",
+        "route_5",
+        "morn_day"
+      ],
+      "pokemon": "bellsprout",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_5-land-4",
+      "presets": [
+        "grass",
+        "route_5",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "15",
+      "weight": 10
+    },
+    {
+      "id": "route_5-land-5",
+      "presets": [
+        "grass",
+        "route_5",
+        "nite"
+      ],
+      "pokemon": "oddish",
+      "level": "13",
+      "weight": 30
+    },
+    {
+      "id": "route_5-land-6",
+      "presets": [
+        "grass",
+        "route_5",
+        "nite"
+      ],
+      "pokemon": "meowth",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_5-land-7",
+      "presets": [
+        "grass",
+        "route_5",
+        "nite"
+      ],
+      "pokemon": "gloom",
+      "level": "15",
+      "weight": 10
+    },
+    {
+      "id": "route_5-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_5",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_5-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_5",
+        "morn_day"
+      ],
+      "pokemon": "bellsprout",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_5-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_5",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "14",
+      "weight": 10
+    },
+    {
+      "id": "route_5-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_5",
+        "morn_day"
+      ],
+      "pokemon": "meowth",
+      "level": "14",
+      "weight": 10
+    },
+    {
+      "id": "route_5-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_5",
+        "nite"
+      ],
+      "pokemon": "bellsprout",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "route_5-sound_inactive-5",
+      "presets": [
+        "grass",
+        "route_5",
+        "nite"
+      ],
+      "pokemon": "oddish",
+      "level": "13",
+      "weight": 15
+    },
+    {
+      "id": "route_5-sound_inactive-6",
+      "presets": [
+        "grass",
+        "route_5",
+        "nite"
+      ],
+      "pokemon": "meowth",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_5-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_5"
+      ],
+      "pokemon": "plusle",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_5-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_5"
+      ],
+      "pokemon": "minun",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "route_5-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_5"
+      ],
+      "pokemon": "shinx",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_5-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_5"
+      ],
+      "pokemon": "shinx",
+      "level": "14",
+      "weight": 20
+    }
+  ]
+}

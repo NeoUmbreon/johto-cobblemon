@@ -1,0 +1,1035 @@
+[
+  {
+    "map": "D01R0101",
+    "name": "DIGLETT_CAVE",
+    "coords": [
+      { "minX": -3068, "minY": 39, "minZ": 83, "maxX": -2962, "maxY": 67, "maxZ": 205 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D02R0101",
+    "name": "MOUNT_MOON",
+    "coords": [
+      { "minX": -2267, "minY": 22, "minZ": 767, "maxX": -2170, "maxY": 52, "maxZ": 842 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D02R0102",
+    "name": "MOUNT_MOON_SQUARE_ENTRANCE",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D02R0103",
+    "name": "MOUNT_MOON_SQUARE",
+    "coords": [
+      { "minX": -2447, "minY": 40, "minZ": 832, "maxX": -2303, "maxY": 80, "maxZ": 909 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "D02R0104",
+    "name": "MOUNT_MOON_SQUARE_CLEFAIRY_EVENT",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D03R0101",
+    "name": "CERULEAN_CAVE_1F",
+    "coords": [
+      { "minX": -2667, "minY": 62, "minZ": 822, "maxX": -2535, "maxY": 71, "maxZ": 897 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D03R0102",
+    "name": "CERULEAN_CAVE_2F",
+    "coords": [
+      { "minX": -2667, "minY": 72, "minZ": 822, "maxX": -2535, "maxY": 87, "maxZ": 897 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D03R0103",
+    "name": "CERULEAN_CAVE_B1F",
+    "coords": [
+      { "minX": -2667, "minY": 47, "minZ": 822, "maxX": -2535, "maxY": 61, "maxZ": 897 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D05R0101",
+    "name": "ROCK_TUNNEL_1F",
+    "coords": [
+      { "minX": -3401, "minY": 48, "minZ": 528, "maxX": -3191, "maxY": 54, "maxZ": 701 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D05R0102",
+    "name": "ROCK_TUNNEL_B1F",
+    "coords": [
+      { "minX": -3401, "minY": 28, "minZ": 528, "maxX": -3191, "maxY": 47, "maxZ": 701 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D11R0101",
+    "name": "SEAFOAM_ISLANDS_1F",
+    "coords": [
+      { "minX": -2128, "minY": 50, "minZ": -889, "maxX": -2022, "maxY": 57, "maxZ": -825 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D11R0102",
+    "name": "SEAFOAM_ISLANDS_B1F",
+    "coords": [
+      { "minX": -2128, "minY": 43, "minZ": -889, "maxX": -2022, "maxY": 49, "maxZ": -825 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D11R0103",
+    "name": "SEAFOAM_ISLANDS_B2F",
+    "coords": [
+      { "minX": -2128, "minY": 33, "minZ": -889, "maxX": -2022, "maxY": 42, "maxZ": -825 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D11R0104",
+    "name": "SEAFOAM_ISLANDS_B3F",
+    "coords": [
+      { "minX": -2128, "minY": 25, "minZ": -889, "maxX": -2022, "maxY": 32, "maxZ": -825 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D11R0105",
+    "name": "SEAFOAM_ISLANDS_B4F",
+    "coords": [
+      { "minX": -2128, "minY": 0, "minZ": -889, "maxX": -2022, "maxY": 24, "maxZ": -825 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D15R0102",
+    "name": "SPROUT_TOWER_2F",
+    "coords": [
+      { "minX": 45, "minY": 83, "minZ": 5, "maxX": 74, "maxY": 110, "maxZ": 34 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D15R0103",
+    "name": "SPROUT_TOWER_3F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D17R0102",
+    "name": "BELL_TOWER_2F",
+    "coords": [
+      { "minX": 240, "minY": 70, "minZ": 297, "maxX": 273, "maxY": 145, "maxZ": 330 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D17R0103",
+    "name": "BELL_TOWER_3F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D17R0104",
+    "name": "BELL_TOWER_4F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D17R0105",
+    "name": "BELL_TOWER_5F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D17R0106",
+    "name": "BELL_TOWER_6F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D17R0107",
+    "name": "BELL_TOWER_7F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D17R0108",
+    "name": "BELL_TOWER_8F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D17R0109",
+    "name": "BELL_TOWER_9F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D17R0112",
+    "name": "BELL_TOWER_10F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D18R0101",
+    "name": "BURNED_TOWER_1F",
+    "coords": [
+      { "minX": 432, "minY": 63, "minZ": 309, "maxX": 452, "maxY": 69, "maxZ": 329 }
+    ],
+    "landContext": "grounded"
+  },
+  {
+    "map": "D18R0102",
+    "name": "BURNED_TOWER_B1F",
+    "coords": [
+      { "minX": 432, "minY": 56, "minZ": 309, "maxX": 452, "maxY": 62, "maxZ": 329 }
+    ],
+    "landContext": "grounded"
+  },
+  {
+    "map": "D22R0101",
+    "name": "NATIONAL_PARK",
+    "coords": [
+      { "minX": 465, "minZ": -57, "maxX": 621, "maxZ": 135 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "D22R0102",
+    "name": "NATIONAL_PARK_BUG_CATCHING_CONTEST",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D24R0101",
+    "name": "RUINS_OF_ALPH",
+    "coords": [
+      { "minX": 171, "minY": 61, "minZ": -262, "maxX": 267, "maxY": 81, "maxZ": -102 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "D24R0205",
+    "name": "RUINS_OF_ALPH_UNDERGROUND_HALL",
+    "coords": [
+      { "minX": 179, "minY": 38, "minZ": -145, "maxX": 214, "maxY": 41, "maxZ": -96 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D24R0216",
+    "name": "RUINS_OF_ALPH_UNDERGROUND_HALL_SINJOH_EVENT",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D24R0217",
+    "name": "RUINS_OF_ALPH_HALL_ENTRANCE_SINJOH_EVENT",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D24R0218",
+    "name": "RUINS_OF_ALPH_UNDERGROUND_HALL_SINJOH_EVENT_2",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D25R0101",
+    "name": "UNION_CAVE_1F",
+    "coords": [
+      { "minX": 79, "minY": 40, "minZ": -880, "maxX": 225, "maxY": 55, "maxZ": -585 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D25R0102",
+    "name": "UNION_CAVE_B1F",
+    "coords": [
+      { "minX": 79, "minY": 26, "minZ": -880, "maxX": 225, "maxY": 39, "maxZ": -585 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D25R0103",
+    "name": "UNION_CAVE_B2F",
+    "coords": [
+      { "minX": 79, "minY": 10, "minZ": -880, "maxX": 225, "maxY": 25, "maxZ": -585 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D26R0102",
+    "name": "SLOWPOKE_WELL_B1F",
+    "coords": [
+      { "minX": 231, "minY": 36, "minZ": -731, "maxX": 327, "maxY": 54, "maxZ": -647 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D26R0103",
+    "name": "SLOWPOKE_WELL_B2F",
+    "coords": [
+      { "minX": 231, "minY": 16, "minZ": -731, "maxX": 327, "maxY": 35, "maxZ": -647 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D36R0101",
+    "name": "ILEX_FOREST",
+    "coords": [
+      { "minX": 538, "minZ": -778, "maxX": 688, "maxY": 67, "maxZ": -584 }
+    ],
+    "landContext": "grounded"
+  },
+  {
+    "map": "D38R0101",
+    "name": "MOUNT_MORTAR_1F_ENTRANCE",
+    "coords": [
+      { "minX": -22, "minY": 42, "minZ": 217, "maxX": 206, "maxY": 66, "maxZ": 301 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D38R0102",
+    "name": "MOUNT_MORTAR_1F_BACK",
+    "coords": [
+      { "minX": -22, "minY": 42, "minZ": 302, "maxX": 206, "maxY": 66, "maxZ": 493 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D38R0103",
+    "name": "MOUNT_MORTAR_2F",
+    "coords": [
+      { "minX": -22, "minY": 69, "minZ": 217, "maxX": 206, "maxY": 82, "maxZ": 565 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D38R0104",
+    "name": "MOUNT_MORTAR_B1F",
+    "coords": [
+      { "minX": -22, "minY": 27, "minZ": 217, "maxX": 206, "maxY": 42, "maxZ": 404 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D39R0101",
+    "name": "ICE_PATH_1F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D39R0102",
+    "name": "ICE_PATH_B1F",
+    "coords": [
+      { "minX": -872, "minY": 35, "minZ": 299, "maxX": -587, "maxY": 59, "maxZ": 469 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D39R0103",
+    "name": "ICE_PATH_B2F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D39R0104",
+    "name": "ICE_PATH_B3F",
+    "coords": [
+      { "minX": -872, "minY": 0, "minZ": 299, "maxX": -587, "maxY": 34, "maxZ": 469 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D40R0101",
+    "name": "WHIRL_ISLANDS_1F",
+    "coords": [
+      { "minX": 1127, "minY": 104, "minZ": 146, "maxX": 1323, "maxY": 117, "maxZ": 343 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D40R0102",
+    "name": "WHIRL_ISLANDS_B1F",
+    "coords": [
+      { "minX": 1127, "minY": 94, "minZ": 146, "maxX": 1323, "maxY": 103, "maxZ": 343 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D40R0104",
+    "name": "WHIRL_ISLANDS_B2F",
+    "coords": [
+      { "minX": 1222, "minY": 27, "minZ": 166, "maxX": 1269, "maxY": 93, "maxZ": 245 },
+      { "minX": 1222, "minY": 27, "minZ": 195, "maxX": 1269, "maxY": 80, "maxZ": 245 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D40R0106",
+    "name": "WHIRL_ISLANDS_B3F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D41R0101",
+    "name": "MOUNT_SILVER_CAVE_1F",
+    "coords": [
+      { "minX": -1014, "minY": 60, "minZ": 101, "maxX": -942, "maxY": 71, "maxZ": 233 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D41R0102",
+    "name": "MOUNT_SILVER_CAVE_UPPER_MOUNTAINSIDE",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D41R0103",
+    "name": "MOUNT_SILVER_CAVE_LOWER_MOUNTAINSIDE",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D41R0104",
+    "name": "MOUNT_SILVER_CAVE_EXPERT_BELT_CHAMBER",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D41R0105",
+    "name": "MOUNT_SILVER_CAVE_MOLTRES_CHAMBER",
+    "coords": [
+      { "minX": -1006, "minY": 99, "minZ": 245, "maxX": -924, "maxY": 131, "maxZ": 337 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D41R0106",
+    "name": "MOUNT_SILVER_CAVE_2F",
+    "coords": [
+      { "minX": -1039, "minY": 60, "minZ": 234, "maxX": -932, "maxY": 94, "maxZ": 364 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D41R0107",
+    "name": "MOUNT_SILVER_CAVE_3F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D42R0101",
+    "name": "DARK_CAVE_ROUTE_45_SIDE",
+    "coords": [
+      { "minX": -437, "minZ": -11, "maxX": -280, "maxZ": 128 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D42R0102",
+    "name": "DARK_CAVE_ROUTE_31_SIDE",
+    "coords": [
+      { "minX": -408, "minZ": -183, "maxX": -216, "maxZ": -12 },
+      { "minX": -310, "minZ": -183, "maxX": -216, "maxZ": -88 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D43R0101",
+    "name": "VICTORY_ROAD_1F",
+    "coords": [
+      { "minX": -1534, "minY": 1, "minZ": 366, "maxX": -1320, "maxY": 55, "maxZ": 546 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D43R0102",
+    "name": "VICTORY_ROAD_2F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D43R0103",
+    "name": "VICTORY_ROAD_3F",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D44R0102",
+    "name": "DRAGONS_DEN",
+    "coords": [
+      { "minX": -744, "minZ": 507, "maxX": -583, "maxZ": 654 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D45R0101",
+    "name": "TOHJO_FALLS",
+    "coords": [
+      { "minX": -977, "minZ": -482, "maxX": -859, "maxZ": -420 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "D46R0101",
+    "name": "VIRIDIAN_FOREST",
+    "coords": [
+      { "minX": -1707, "minZ": 290, "maxX": -1571, "maxZ": 448 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "D47R0102",
+    "name": "SAFARI_ZONE_ENTRANCE_EXTERIOR",
+    "coords": [],
+    "landContext": "none"
+  },
+  {
+    "map": "D48R0101",
+    "name": "CLIFF_EDGE_GATE",
+    "coords": [
+      { "minX": 1309, "minZ": -394, "maxX": 1330, "maxZ": -374 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "D50R0101",
+    "name": "CLIFF_CAVE",
+    "coords": [
+      { "minX": 1419, "minZ": -434, "maxX": 1429, "maxZ": -398 }
+    ],
+    "landContext": "indoor"
+  },
+  {
+    "map": "R01",
+    "name": "ROUTE_1",
+    "coords": [
+      { "minX": -1750, "minZ": -257, "maxX": -1637, "maxZ": -53 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R02",
+    "name": "ROUTE_2",
+    "coords": [
+      { "minX": -1682, "minZ": 484, "maxX": -1639, "maxZ": 530 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R02R0101",
+    "name": "ROUTE_2_EAST",
+    "coords": [
+      { "minX": -1700, "minZ": 231, "maxX": -1658, "maxZ": 265 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R03",
+    "name": "ROUTE_3",
+    "coords": [
+      { "minX": -2211, "minZ": 581, "maxX": -1961, "maxZ": 690 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R04",
+    "name": "ROUTE_4",
+    "coords": [
+      { "minX": -2654, "minZ": 685, "maxX": -2251, "maxZ": 768 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R05",
+    "name": "ROUTE_5",
+    "coords": [
+      { "minX": -2775, "minZ": 542, "maxX": -2724, "maxZ": 614 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R06",
+    "name": "ROUTE_6",
+    "coords": [
+      { "minX": -2816, "minZ": 52, "maxX": -2686, "maxZ": 235 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R07",
+    "name": "ROUTE_7",
+    "coords": [
+      { "minX": -2611, "minZ": 349, "maxX": -2570, "maxZ": 379 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R08",
+    "name": "ROUTE_8",
+    "coords": [
+      { "minX": -3103, "minZ": 293, "maxX": -3034, "maxZ": 344 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R09",
+    "name": "ROUTE_9",
+    "coords": [
+      { "minX": -3328, "minY": 60, "minZ": 683, "maxX": -2902, "maxZ": 781 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R10",
+    "name": "ROUTE_10",
+    "coords": [
+      { "minX": -3328, "minY": 60, "minZ": 533, "maxX": -3226, "maxZ": 626 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R11",
+    "name": "ROUTE_11",
+    "coords": [
+      { "minX": -3176, "minZ": -122, "maxX": -2921, "maxZ": -5 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R12",
+    "name": "ROUTE_12",
+    "coords": [
+      { "minX": -3352, "minZ": -261, "maxX": -3248, "maxZ": 272 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R13",
+    "name": "ROUTE_13",
+    "coords": [
+      { "minX": -3352, "minZ": -392, "maxX": -2902, "maxZ": -262 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R14",
+    "name": "ROUTE_14",
+    "coords": [
+      { "minX": -2931, "minZ": -427, "maxX": -2899, "maxZ": -389 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R15",
+    "name": "ROUTE_15",
+    "coords": [
+      { "minX": -2847, "minZ": -565, "maxX": -2610, "maxZ": -533 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R16R0301",
+    "name": "ROUTE_16_EAST",
+    "coords": [
+      { "minX": -2197, "minZ": 338, "maxX": -2145, "maxZ": 368 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R17",
+    "name": "ROUTE_17",
+    "coords": [
+      { "minX": -2100, "minZ": -389, "maxX": -1991, "maxZ": 247 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R18",
+    "name": "ROUTE_18",
+    "coords": [
+      { "minX": -2212, "minZ": -580, "maxX": -2182, "maxZ": -561 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R22",
+    "name": "ROUTE_22",
+    "coords": [
+      { "minX": -1565, "minZ": -1, "maxX": -1408, "maxZ": 72 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R24",
+    "name": "ROUTE_24",
+    "coords": [
+      { "minX": -2777, "minZ": 819, "maxX": -2707, "maxZ": 943 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R25",
+    "name": "ROUTE_25",
+    "coords": [
+      { "minX": -3114, "minZ": 955, "maxX": -2707, "maxZ": 1013 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R26",
+    "name": "ROUTE_26",
+    "coords": [
+      { "minX": -1314, "minZ": -549, "maxX": -1214, "maxZ": -8 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R27",
+    "name": "ROUTE_27",
+    "coords": [
+      { "minX": -1213, "minZ": -564, "maxX": -899, "maxZ": -492 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R28",
+    "name": "ROUTE_28",
+    "coords": [
+      { "minX": -1207, "minZ": 6, "maxX": -1061, "maxZ": 62 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R29",
+    "name": "ROUTE_29",
+    "coords": [
+      { "minX": -623, "minZ": -583, "maxX": -324, "maxZ": -477 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R30",
+    "name": "ROUTE_30",
+    "coords": [
+      { "minX": -263, "minZ": -458, "maxX": -137, "maxZ": -188 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R31",
+    "name": "ROUTE_31",
+    "coords": [
+      { "minX": -234, "minZ": -161, "maxX": -63, "maxZ": -77 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R32",
+    "name": "ROUTE_32",
+    "coords": [
+      { "minX": 81, "minY": 60, "minZ": -649, "maxX": 195, "maxZ": -166 },
+      { "minX": 140, "minY": 60, "minZ": -299, "maxX": 195, "maxZ": -166 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R33",
+    "name": "ROUTE_33",
+    "coords": [
+      { "minX": 104, "minZ": -774, "maxX": 194, "maxZ": -728 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R34",
+    "name": "ROUTE_34",
+    "coords": [
+      { "minX": 419, "minZ": -718, "maxX": 510, "maxZ": -491 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R35",
+    "name": "ROUTE_35",
+    "coords": [
+      { "minX": 429, "minZ": -246, "maxX": 533, "maxZ": -86 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R36",
+    "name": "ROUTE_36",
+    "coords": [
+      { "minX": 371, "minZ": -46, "maxX": 406, "maxZ": -27 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R37",
+    "name": "ROUTE_37",
+    "coords": [
+      { "minX": 313, "minZ": 29, "maxX": 400, "maxZ": 135 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R38",
+    "name": "ROUTE_38",
+    "coords": [
+      { "minX": 489, "minZ": 178, "maxX": 703, "maxZ": 292 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R39",
+    "name": "ROUTE_39",
+    "coords": [
+      { "minX": 776, "minZ": 121, "maxX": 798, "maxZ": 176 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R42",
+    "name": "ROUTE_42",
+    "coords": [
+      { "minX": -65, "minZ": 138, "maxX": 250, "maxZ": 215 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R43",
+    "name": "ROUTE_43",
+    "coords": [
+      { "minX": -224, "minZ": 303, "maxX": -79, "maxZ": 523 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R44",
+    "name": "ROUTE_44",
+    "coords": [
+      { "minX": -527, "minZ": 149, "maxX": -224, "maxZ": 229 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R45",
+    "name": "ROUTE_45",
+    "coords": [
+      { "minX": -650, "minZ": -357, "maxX": -535, "maxZ": 95 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R46",
+    "name": "ROUTE_46",
+    "coords": [
+      { "minX": -521, "minZ": -468, "maxX": -409, "maxZ": -289 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R47",
+    "name": "ROUTE_47",
+    "coords": [
+      { "minX": 1343, "minZ": -482, "maxX": 1667, "maxZ": -306 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "R48",
+    "name": "ROUTE_48",
+    "coords": [
+      { "minX": 1508, "minZ": -305, "maxX": 1682, "maxZ": -231 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "T01",
+    "name": "PALLET",
+    "coords": [
+      { "minX": -1767, "minZ": -351, "maxX": -1624, "maxZ": -335 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T02",
+    "name": "VIRIDIAN",
+    "coords": [
+      { "minX": -1665, "minZ": -22, "maxX": -1609, "maxZ": 56 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T04",
+    "name": "CERULEAN",
+    "coords": [
+      { "minX": -2738, "minZ": 731, "maxX": -2655, "maxZ": 818 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T06",
+    "name": "VERMILION",
+    "coords": [
+      { "minX": -2932, "minZ": -226, "maxX": -2647, "maxZ": 68 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T07",
+    "name": "CELADON",
+    "coords": [
+      { "minX": -2372, "minZ": 314, "maxX": -2339, "maxZ": 333 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T08",
+    "name": "FUCHSIA",
+    "coords": [
+      { "minX": -2498, "minZ": -593, "maxX": -2300, "maxZ": -474 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T09",
+    "name": "CINNABAR_ISLAND",
+    "coords": [
+      { "minX": -1767, "minZ": -969, "maxX": -1624, "maxZ": -810 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T20",
+    "name": "NEW_BARK",
+    "coords": [
+      { "minX": -896, "minZ": -548, "maxX": -754, "maxZ": -492 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T21",
+    "name": "CHERRYGROVE",
+    "coords": [
+      { "minX": -176, "minZ": -565, "maxX": -93, "maxZ": -494 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T22",
+    "name": "VIOLET",
+    "coords": [
+      { "minX": -6, "minZ": -64, "maxX": 139, "maxZ": 41 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T24",
+    "name": "CIANWOOD",
+    "coords": [
+      { "minX": 1163, "minZ": -520, "maxX": 1297, "maxZ": -228 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T26",
+    "name": "OLIVINE",
+    "coords": [
+      { "minX": 650, "minZ": -98, "maxX": 869, "maxZ": 0 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T27",
+    "name": "ECRUTEAK",
+    "coords": [
+      { "minX": 318, "minZ": 249, "maxX": 354, "maxZ": 276 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T29",
+    "name": "LAKE_OF_RAGE",
+    "coords": [
+      { "minX": -251, "minZ": 575, "maxX": -86, "maxZ": 724 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T30",
+    "name": "BLACKTHORN",
+    "coords": [
+      { "minX": -687, "minZ": 254, "maxX": -604, "maxZ": 324 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "T31",
+    "name": "MOUNT_SILVER",
+    "coords": [
+      { "minX": -1060, "minZ": 6, "maxX": -918, "maxZ": 78 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "W19",
+    "name": "ROUTE_19",
+    "coords": [
+      { "minX": -2479, "minZ": -969, "maxX": -2312, "maxZ": -685 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "W20",
+    "name": "ROUTE_20",
+    "coords": [
+      { "minX": -2311, "minY": 59, "minZ": -969, "maxX": -1768, "maxZ": -832 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "W21",
+    "name": "ROUTE_21",
+    "coords": [
+      { "minX": -1767, "minZ": -809, "maxX": -1624, "maxZ": -352 }
+    ],
+    "landContext": "grass"
+  },
+  {
+    "map": "W40",
+    "name": "ROUTE_40",
+    "coords": [
+      { "minX": 870, "minZ": -227, "maxX": 976, "maxZ": -41 }
+    ],
+    "landContext": "none"
+  },
+  {
+    "map": "W41",
+    "name": "ROUTE_41",
+    "coords": [
+      { "minX": 870, "minZ": -520, "maxX": 1162, "maxZ": -228 }
+    ],
+    "landContext": "none"
+  }
+]

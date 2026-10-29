@@ -1,0 +1,94 @@
+{
+  "spawns": [
+    {
+      "id": "blackthorn-surf-0",
+      "presets": [
+        "surf",
+        "blackthorn"
+      ],
+      "pokemon": "magikarp",
+      "level": "10-20",
+      "weight": 60
+    },
+    {
+      "id": "blackthorn-surf-1",
+      "presets": [
+        "surf",
+        "blackthorn"
+      ],
+      "pokemon": "magikarp",
+      "level": "5-15",
+      "weight": 30
+    },
+    {
+      "id": "blackthorn-surf-2",
+      "presets": [
+        "surf",
+        "blackthorn"
+      ],
+      "pokemon": "magikarp",
+      "level": "2-10",
+      "weight": 10
+    },
+    {
+      "id": "blackthorn-old_rod-0",
+      "presets": [
+        "old_rod",
+        "blackthorn"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "blackthorn-old_rod-1",
+      "presets": [
+        "old_rod",
+        "blackthorn"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "blackthorn-good_rod-0",
+      "presets": [
+        "good_rod",
+        "blackthorn"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "blackthorn-good_rod-1",
+      "presets": [
+        "good_rod",
+        "blackthorn"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "blackthorn-super_rod-0",
+      "presets": [
+        "super_rod",
+        "blackthorn"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "blackthorn-super_rod-1",
+      "presets": [
+        "super_rod",
+        "blackthorn"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

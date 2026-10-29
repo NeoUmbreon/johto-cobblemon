@@ -1,0 +1,438 @@
+{
+  "spawns": [
+    {
+      "id": "ilex_forest-land-0",
+      "presets": [
+        "grounded",
+        "ilex_forest"
+      ],
+      "pokemon": "zubat",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-land-1",
+      "presets": [
+        "grounded",
+        "ilex_forest"
+      ],
+      "pokemon": "paras",
+      "level": "6",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-land-2",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn_day"
+      ],
+      "pokemon": "caterpie",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-land-3",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn_day"
+      ],
+      "pokemon": "weedle",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-land-4",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn"
+      ],
+      "pokemon": "metapod",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-land-5",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn"
+      ],
+      "pokemon": "kakuna",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-land-6",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn_nite"
+      ],
+      "pokemon": "paras",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-land-7",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "day"
+      ],
+      "pokemon": "caterpie",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-land-8",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "day"
+      ],
+      "pokemon": "weedle",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-land-9",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "day"
+      ],
+      "pokemon": "metapod",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-land-10",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "day"
+      ],
+      "pokemon": "kakuna",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-land-11",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "nite"
+      ],
+      "pokemon": "oddish",
+      "level": "5",
+      "weight": 20
+    },
+    {
+      "id": "ilex_forest-land-12",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "nite"
+      ],
+      "pokemon": "oddish",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "ilex_forest-sound_inactive-0",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn"
+      ],
+      "pokemon": "caterpie",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-sound_inactive-1",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn"
+      ],
+      "pokemon": "weedle",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-sound_inactive-2",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn_day"
+      ],
+      "pokemon": "caterpie",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-sound_inactive-3",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn_day"
+      ],
+      "pokemon": "weedle",
+      "level": "5",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-sound_inactive-4",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn"
+      ],
+      "pokemon": "metapod",
+      "level": "6",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-sound_inactive-5",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "morn"
+      ],
+      "pokemon": "kakuna",
+      "level": "6",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-sound_inactive-6",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "day"
+      ],
+      "pokemon": "metapod",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-sound_inactive-7",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "day"
+      ],
+      "pokemon": "kakuna",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-sound_inactive-8",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "day"
+      ],
+      "pokemon": "caterpie",
+      "level": "6",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-sound_inactive-9",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "day"
+      ],
+      "pokemon": "weedle",
+      "level": "6",
+      "weight": 5
+    },
+    {
+      "id": "ilex_forest-sound_inactive-10",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "nite"
+      ],
+      "pokemon": "zubat",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "ilex_forest-sound_inactive-11",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "nite"
+      ],
+      "pokemon": "oddish",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-sound_inactive-12",
+      "presets": [
+        "grounded",
+        "ilex_forest",
+        "nite"
+      ],
+      "pokemon": "oddish",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-hoennsound_active-0",
+      "presets": [
+        "grounded",
+        "ilex_forest"
+      ],
+      "pokemon": "numel",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "ilex_forest-hoennsound_active-1",
+      "presets": [
+        "grounded",
+        "ilex_forest"
+      ],
+      "pokemon": "spoink",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-hoennsound_active-2",
+      "presets": [
+        "grounded",
+        "ilex_forest"
+      ],
+      "pokemon": "spoink",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-sinnohsound_active-0",
+      "presets": [
+        "grounded",
+        "ilex_forest"
+      ],
+      "pokemon": "carnivine",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "ilex_forest-sinnohsound_active-1",
+      "presets": [
+        "grounded",
+        "ilex_forest"
+      ],
+      "pokemon": "budew",
+      "level": "5",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-sinnohsound_active-2",
+      "presets": [
+        "grounded",
+        "ilex_forest"
+      ],
+      "pokemon": "budew",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-surf-0",
+      "presets": [
+        "surf",
+        "ilex_forest"
+      ],
+      "pokemon": "psyduck",
+      "level": "10-20",
+      "weight": 60
+    },
+    {
+      "id": "ilex_forest-surf-1",
+      "presets": [
+        "surf",
+        "ilex_forest"
+      ],
+      "pokemon": "psyduck",
+      "level": "5-15",
+      "weight": 30
+    },
+    {
+      "id": "ilex_forest-surf-2",
+      "presets": [
+        "surf",
+        "ilex_forest"
+      ],
+      "pokemon": "golduck",
+      "level": "10-20",
+      "weight": 10
+    },
+    {
+      "id": "ilex_forest-old_rod-0",
+      "presets": [
+        "old_rod",
+        "ilex_forest"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "ilex_forest-old_rod-1",
+      "presets": [
+        "old_rod",
+        "ilex_forest"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "ilex_forest-good_rod-0",
+      "presets": [
+        "good_rod",
+        "ilex_forest"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "ilex_forest-good_rod-1",
+      "presets": [
+        "good_rod",
+        "ilex_forest"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "ilex_forest-super_rod-0",
+      "presets": [
+        "super_rod",
+        "ilex_forest"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "ilex_forest-super_rod-1",
+      "presets": [
+        "super_rod",
+        "ilex_forest"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

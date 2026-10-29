@@ -1,0 +1,128 @@
+{
+  "spawns": [
+    {
+      "id": "cherrygrove-surf-0",
+      "presets": [
+        "surf",
+        "cherrygrove"
+      ],
+      "pokemon": "tentacool",
+      "level": "2-4",
+      "weight": 70
+    },
+    {
+      "id": "cherrygrove-surf-1",
+      "presets": [
+        "surf",
+        "cherrygrove"
+      ],
+      "pokemon": "tentacool",
+      "level": "2-3",
+      "weight": 30
+    },
+    {
+      "id": "cherrygrove-old_rod-0",
+      "presets": [
+        "old_rod",
+        "cherrygrove"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "cherrygrove-old_rod-1",
+      "presets": [
+        "old_rod",
+        "cherrygrove"
+      ],
+      "pokemon": "krabby",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "cherrygrove-good_rod-0",
+      "presets": [
+        "good_rod",
+        "cherrygrove"
+      ],
+      "pokemon": "krabby",
+      "level": "20",
+      "weight": 50
+    },
+    {
+      "id": "cherrygrove-good_rod-1",
+      "presets": [
+        "good_rod",
+        "cherrygrove"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "cherrygrove-good_rod-2",
+      "presets": [
+        "good_rod",
+        "cherrygrove",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cherrygrove-good_rod-3",
+      "presets": [
+        "good_rod",
+        "cherrygrove",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cherrygrove-super_rod-0",
+      "presets": [
+        "super_rod",
+        "cherrygrove"
+      ],
+      "pokemon": "krabby",
+      "level": "40",
+      "weight": 60
+    },
+    {
+      "id": "cherrygrove-super_rod-1",
+      "presets": [
+        "super_rod",
+        "cherrygrove"
+      ],
+      "pokemon": "kingler",
+      "level": "40",
+      "weight": 10
+    },
+    {
+      "id": "cherrygrove-super_rod-2",
+      "presets": [
+        "super_rod",
+        "cherrygrove",
+        "morn_day"
+      ],
+      "pokemon": "corsola",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "cherrygrove-super_rod-3",
+      "presets": [
+        "super_rod",
+        "cherrygrove",
+        "nite"
+      ],
+      "pokemon": "staryu",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}

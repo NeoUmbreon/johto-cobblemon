@@ -1,2 +1,3 @@
 build/
 data/molang/challengemode_trainers/
+__pycache__/

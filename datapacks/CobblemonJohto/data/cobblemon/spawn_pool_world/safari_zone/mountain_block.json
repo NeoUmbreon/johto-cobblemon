@@ -1,0 +1,124 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_mountain_block-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "magneton",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain_block-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "krabby",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain_block-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "larvitar",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain_block-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "meditite",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain_block-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "volbeat",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain_block-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "lunatone",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain_block-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "dusclops",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain_block-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "sealeo",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain_block-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "metang",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_mountain_block-land-9",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "mountain",
+        "reroll_ivs"
+      ],
+      "pokemon": "chingling",
+      "level": "15-17",
+      "weight": 10
+    }
+  ]
+}

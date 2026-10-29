@@ -1,0 +1,7 @@
+{
+  "condition": {
+    "biomes": [
+      "minecraft:river"
+    ]
+  }
+}

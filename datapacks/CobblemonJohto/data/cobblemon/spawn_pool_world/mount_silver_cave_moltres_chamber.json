@@ -1,0 +1,316 @@
+{
+  "spawns": [
+    {
+      "id": "mount_silver_cave_moltres_chamber-land-0",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "quagsire",
+      "level": "45",
+      "weight": 20
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-land-1",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "steelix",
+      "level": "48",
+      "weight": 20
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-land-2",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "golbat",
+      "level": "48",
+      "weight": 5
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-land-3",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "larvitar",
+      "level": "20",
+      "weight": 4
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-land-4",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "larvitar",
+      "level": "15",
+      "weight": 1
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-land-5",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber",
+        "morn_day"
+      ],
+      "pokemon": "quagsire",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-land-6",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber",
+        "nite"
+      ],
+      "pokemon": "misdreavus",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "quagsire",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "golduck",
+      "level": "48",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "donphan",
+      "level": "48",
+      "weight": 5
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sound_inactive-3",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "ursaring",
+      "level": "48",
+      "weight": 5
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sound_inactive-4",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "donphan",
+      "level": "47",
+      "weight": 5
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sound_inactive-5",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "ursaring",
+      "level": "47",
+      "weight": 5
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "absol",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "absol",
+      "level": "48",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "makuhita",
+      "level": "48",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-hoennsound_active-3",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "makuhita",
+      "level": "47",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "bronzor",
+      "level": "45",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "bronzor",
+      "level": "48",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "chingling",
+      "level": "48",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-sinnohsound_active-3",
+      "presets": [
+        "indoor",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "chingling",
+      "level": "47",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-surf-0",
+      "presets": [
+        "surf",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "seaking",
+      "level": "30-40",
+      "weight": 60
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-surf-1",
+      "presets": [
+        "surf",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "seaking",
+      "level": "35-45",
+      "weight": 30
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-surf-2",
+      "presets": [
+        "surf",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "goldeen",
+      "level": "30-40",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-old_rod-0",
+      "presets": [
+        "old_rod",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-old_rod-1",
+      "presets": [
+        "old_rod",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-good_rod-0",
+      "presets": [
+        "good_rod",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-good_rod-1",
+      "presets": [
+        "good_rod",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-super_rod-0",
+      "presets": [
+        "super_rod",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "goldeen",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-super_rod-1",
+      "presets": [
+        "super_rod",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "mount_silver_cave_moltres_chamber-super_rod-2",
+      "presets": [
+        "super_rod",
+        "mount_silver_cave_moltres_chamber"
+      ],
+      "pokemon": "seaking",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

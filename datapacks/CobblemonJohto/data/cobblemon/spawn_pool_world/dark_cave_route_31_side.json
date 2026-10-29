@@ -1,0 +1,274 @@
+{
+  "spawns": [
+    {
+      "id": "dark_cave_route_31_side-land-0",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "geodude",
+      "level": "4",
+      "weight": 10
+    },
+    {
+      "id": "dark_cave_route_31_side-land-1",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "zubat",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "dark_cave_route_31_side-land-2",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "zubat",
+      "level": "4",
+      "weight": 4
+    },
+    {
+      "id": "dark_cave_route_31_side-land-3",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "dunsparce",
+      "level": "4",
+      "weight": 1
+    },
+    {
+      "id": "dark_cave_route_31_side-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "geodude",
+      "level": "2",
+      "weight": 20
+    },
+    {
+      "id": "dark_cave_route_31_side-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "geodude",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "dark_cave_route_31_side-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "zubat",
+      "level": "2",
+      "weight": 10
+    },
+    {
+      "id": "dark_cave_route_31_side-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "makuhita",
+      "level": "2",
+      "weight": 20
+    },
+    {
+      "id": "dark_cave_route_31_side-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "absol",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "dark_cave_route_31_side-hoennsound_active-2",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "absol",
+      "level": "2",
+      "weight": 10
+    },
+    {
+      "id": "dark_cave_route_31_side-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "chingling",
+      "level": "2",
+      "weight": 20
+    },
+    {
+      "id": "dark_cave_route_31_side-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "bronzor",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "dark_cave_route_31_side-sinnohsound_active-2",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "bronzor",
+      "level": "2",
+      "weight": 10
+    },
+    {
+      "id": "dark_cave_route_31_side-land_swarm_inactive-0",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "geodude",
+      "level": "3",
+      "weight": 20
+    },
+    {
+      "id": "dark_cave_route_31_side-land_swarm_inactive-1",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "zubat",
+      "level": "2",
+      "weight": 20
+    },
+    {
+      "id": "dark_cave_route_31_side-land_swarm_active-0",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "dunsparce",
+      "level": "3",
+      "weight": 20
+    },
+    {
+      "id": "dark_cave_route_31_side-land_swarm_active-1",
+      "presets": [
+        "indoor",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "dunsparce",
+      "level": "2",
+      "weight": 20
+    },
+    {
+      "id": "dark_cave_route_31_side-surf-0",
+      "presets": [
+        "surf",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "magikarp",
+      "level": "3-5",
+      "weight": 60
+    },
+    {
+      "id": "dark_cave_route_31_side-surf-1",
+      "presets": [
+        "surf",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "magikarp",
+      "level": "3-4",
+      "weight": 30
+    },
+    {
+      "id": "dark_cave_route_31_side-surf-2",
+      "presets": [
+        "surf",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "magikarp",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "dark_cave_route_31_side-old_rod-0",
+      "presets": [
+        "old_rod",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "dark_cave_route_31_side-old_rod-1",
+      "presets": [
+        "old_rod",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "dark_cave_route_31_side-good_rod-0",
+      "presets": [
+        "good_rod",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "dark_cave_route_31_side-good_rod-1",
+      "presets": [
+        "good_rod",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "dark_cave_route_31_side-super_rod-0",
+      "presets": [
+        "super_rod",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "goldeen",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "dark_cave_route_31_side-super_rod-1",
+      "presets": [
+        "super_rod",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "dark_cave_route_31_side-super_rod-2",
+      "presets": [
+        "super_rod",
+        "dark_cave_route_31_side"
+      ],
+      "pokemon": "seaking",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "spawns": [
+    {
+      "id": "union_cave_1f-land-0",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "geodude",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "union_cave_1f-land-1",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "sandshrew",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "union_cave_1f-land-2",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "rattata",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "union_cave_1f-land-3",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "rattata",
+      "level": "4",
+      "weight": 10
+    },
+    {
+      "id": "union_cave_1f-land-4",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "zubat",
+      "level": "7",
+      "weight": 5
+    },
+    {
+      "id": "union_cave_1f-land-5",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "onix",
+      "level": "6",
+      "weight": 5
+    },
+    {
+      "id": "union_cave_1f-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "zubat",
+      "level": "5",
+      "weight": 20
+    },
+    {
+      "id": "union_cave_1f-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "geodude",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "union_cave_1f-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "sandshrew",
+      "level": "6",
+      "weight": 5
+    },
+    {
+      "id": "union_cave_1f-sound_inactive-3",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "rattata",
+      "level": "6",
+      "weight": 5
+    },
+    {
+      "id": "union_cave_1f-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "absol",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "union_cave_1f-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "makuhita",
+      "level": "5",
+      "weight": 20
+    },
+    {
+      "id": "union_cave_1f-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "bronzor",
+      "level": "6",
+      "weight": 20
+    },
+    {
+      "id": "union_cave_1f-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "union_cave_1f"
+      ],
+      "pokemon": "chingling",
+      "level": "5",
+      "weight": 20
+    },
+    {
+      "id": "union_cave_1f-surf-0",
+      "presets": [
+        "surf",
+        "union_cave_1f"
+      ],
+      "pokemon": "wooper",
+      "level": "5-6",
+      "weight": 85
+    },
+    {
+      "id": "union_cave_1f-surf-1",
+      "presets": [
+        "surf",
+        "union_cave_1f"
+      ],
+      "pokemon": "wooper",
+      "level": "6",
+      "weight": 10
+    },
+    {
+      "id": "union_cave_1f-surf-2",
+      "presets": [
+        "surf",
+        "union_cave_1f"
+      ],
+      "pokemon": "wooper",
+      "level": "7",
+      "weight": 5
+    },
+    {
+      "id": "union_cave_1f-old_rod-0",
+      "presets": [
+        "old_rod",
+        "union_cave_1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "union_cave_1f-old_rod-1",
+      "presets": [
+        "old_rod",
+        "union_cave_1f"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "union_cave_1f-good_rod-0",
+      "presets": [
+        "good_rod",
+        "union_cave_1f"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "union_cave_1f-good_rod-1",
+      "presets": [
+        "good_rod",
+        "union_cave_1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "union_cave_1f-super_rod-0",
+      "presets": [
+        "super_rod",
+        "union_cave_1f"
+      ],
+      "pokemon": "goldeen",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "union_cave_1f-super_rod-1",
+      "presets": [
+        "super_rod",
+        "union_cave_1f"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "union_cave_1f-super_rod-2",
+      "presets": [
+        "super_rod",
+        "union_cave_1f"
+      ],
+      "pokemon": "seaking",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

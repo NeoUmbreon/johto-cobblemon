@@ -1,0 +1,240 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_meadow-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "clefairy",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "jigglypuff",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_meadow-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "morn"
+      ],
+      "pokemon": "jigglypuff",
+      "level": "15-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_meadow-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "marill",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_meadow-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "hoppip",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_meadow-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "morn"
+      ],
+      "pokemon": "hoppip",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "skiploom",
+      "level": "17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_meadow-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "day"
+      ],
+      "pokemon": "sunkern",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_meadow-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "wooper",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_meadow-surf-0",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "15-17",
+      "weight": 50
+    },
+    {
+      "id": "safari_zone_meadow-surf-1",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "marill",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_meadow-surf-2",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "wooper",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_meadow-old_rod-0",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "12-15",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_meadow-old_rod-1",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "12-15",
+      "weight": 60
+    },
+    {
+      "id": "safari_zone_meadow-good_rod-0",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "22-24",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_meadow-good_rod-1",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "24-25",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_meadow-good_rod-2",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "22-24",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_meadow-super_rod-0",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwag",
+      "level": "35-36",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_meadow-super_rod-1",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "meadow",
+        "reroll_ivs"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "35-38",
+      "weight": 60
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "spawns": [
+    {
+      "id": "celadon-surf-0",
+      "presets": [
+        "surf",
+        "celadon"
+      ],
+      "pokemon": "grimer",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "celadon-surf-1",
+      "presets": [
+        "surf",
+        "celadon"
+      ],
+      "pokemon": "grimer",
+      "level": "15",
+      "weight": 30
+    },
+    {
+      "id": "celadon-surf-2",
+      "presets": [
+        "surf",
+        "celadon"
+      ],
+      "pokemon": "muk",
+      "level": "15",
+      "weight": 10
+    }
+  ]
+}

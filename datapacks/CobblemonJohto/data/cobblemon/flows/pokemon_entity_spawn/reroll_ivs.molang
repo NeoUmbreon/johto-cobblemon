@@ -1,0 +1,24 @@
+'Randomize IVs; if none = 31, reroll up to 3 additional times';
+'Used by wild Pokemon with the `reroll_ivs` aspect; ie, Safari Zone & Bug-Catching Contest';
+!q.pokemon_entity.has_aspect('reroll_ivs') ? return 0;
+
+t.stats = q.array('hp','atk','def','spa','spd','spe');
+t.ivs.0 = 0;
+
+loop(4, {
+    for_each(t.stat, t.stats, {
+        q.set_variable(t.ivs, t.stat, math.random_integer(0, 31));
+    });
+
+    for_each(t.stat, t.stats, {
+        q.get_variable(t.ivs, t.stat) == 31 ? { t.has_perfect_iv = true; break };
+    });
+
+    t.has_perfect_iv ? break;
+});
+
+for_each(t.stat, t.stats, {
+    q.pokemon.set_iv(t.stat, q.get_variable(t.ivs, t.stat));
+});
+
+q.pokemon.remove_aspects('reroll_ivs');

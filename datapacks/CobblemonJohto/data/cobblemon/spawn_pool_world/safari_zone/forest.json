@@ -1,0 +1,106 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_forest-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_forest-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "bellsprout",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_forest-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "bellsprout",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "gastly",
+      "level": "15-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_forest-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "haunter",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_forest-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "mrmime",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_forest-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs"
+      ],
+      "pokemon": "misdreavus",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_forest-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "forest",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "misdreavus",
+      "level": "15-17",
+      "weight": 20
+    }
+  ]
+}

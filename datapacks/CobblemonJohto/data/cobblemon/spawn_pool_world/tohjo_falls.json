@@ -1,0 +1,224 @@
+{
+  "spawns": [
+    {
+      "id": "tohjo_falls-land-0",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "zubat",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "tohjo_falls-land-1",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "raticate",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "tohjo_falls-land-2",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "slowpoke",
+      "level": "21",
+      "weight": 10
+    },
+    {
+      "id": "tohjo_falls-land-3",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "rattata",
+      "level": "20",
+      "weight": 5
+    },
+    {
+      "id": "tohjo_falls-land-4",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "slowpoke",
+      "level": "23",
+      "weight": 5
+    },
+    {
+      "id": "tohjo_falls-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "golbat",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "tohjo_falls-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "zubat",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "tohjo_falls-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "raticate",
+      "level": "22",
+      "weight": 10
+    },
+    {
+      "id": "tohjo_falls-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "absol",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "tohjo_falls-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "makuhita",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "tohjo_falls-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "bronzor",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "tohjo_falls-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "tohjo_falls"
+      ],
+      "pokemon": "chingling",
+      "level": "22",
+      "weight": 20
+    },
+    {
+      "id": "tohjo_falls-surf-0",
+      "presets": [
+        "surf",
+        "tohjo_falls"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "tohjo_falls-surf-1",
+      "presets": [
+        "surf",
+        "tohjo_falls"
+      ],
+      "pokemon": "slowpoke",
+      "level": "20",
+      "weight": 30
+    },
+    {
+      "id": "tohjo_falls-surf-2",
+      "presets": [
+        "surf",
+        "tohjo_falls"
+      ],
+      "pokemon": "seaking",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "tohjo_falls-old_rod-0",
+      "presets": [
+        "old_rod",
+        "tohjo_falls"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "tohjo_falls-old_rod-1",
+      "presets": [
+        "old_rod",
+        "tohjo_falls"
+      ],
+      "pokemon": "goldeen",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "tohjo_falls-good_rod-0",
+      "presets": [
+        "good_rod",
+        "tohjo_falls"
+      ],
+      "pokemon": "goldeen",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "tohjo_falls-good_rod-1",
+      "presets": [
+        "good_rod",
+        "tohjo_falls"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "tohjo_falls-super_rod-0",
+      "presets": [
+        "super_rod",
+        "tohjo_falls"
+      ],
+      "pokemon": "goldeen",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "tohjo_falls-super_rod-1",
+      "presets": [
+        "super_rod",
+        "tohjo_falls"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "tohjo_falls-super_rod-2",
+      "presets": [
+        "super_rod",
+        "tohjo_falls"
+      ],
+      "pokemon": "seaking",
+      "level": "40",
+      "weight": 10
+    }
+  ]
+}

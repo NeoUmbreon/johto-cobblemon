@@ -1,0 +1,96 @@
+{
+  "spawns": [
+    {
+      "id": "cliff_edge_gate-surf-0",
+      "presets": [
+        "surf",
+        "cliff_edge_gate"
+      ],
+      "pokemon": "wooper",
+      "level": "20-30",
+      "weight": 90
+    },
+    {
+      "id": "cliff_edge_gate-surf-1",
+      "presets": [
+        "surf",
+        "cliff_edge_gate"
+      ],
+      "pokemon": "quagsire",
+      "level": "30-40",
+      "weight": 10
+    },
+    {
+      "id": "cliff_edge_gate-old_rod-0",
+      "presets": [
+        "old_rod",
+        "cliff_edge_gate"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 100
+    },
+    {
+      "id": "cliff_edge_gate-good_rod-0",
+      "presets": [
+        "good_rod",
+        "cliff_edge_gate"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 85
+    },
+    {
+      "id": "cliff_edge_gate-good_rod-1",
+      "presets": [
+        "good_rod",
+        "cliff_edge_gate"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 5
+    },
+    {
+      "id": "cliff_edge_gate-good_rod-2",
+      "presets": [
+        "good_rod",
+        "cliff_edge_gate",
+        "morn_day"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cliff_edge_gate-good_rod-3",
+      "presets": [
+        "good_rod",
+        "cliff_edge_gate",
+        "nite"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "cliff_edge_gate-super_rod-0",
+      "presets": [
+        "super_rod",
+        "cliff_edge_gate"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 70
+    },
+    {
+      "id": "cliff_edge_gate-super_rod-1",
+      "presets": [
+        "super_rod",
+        "cliff_edge_gate"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 30
+    }
+  ]
+}

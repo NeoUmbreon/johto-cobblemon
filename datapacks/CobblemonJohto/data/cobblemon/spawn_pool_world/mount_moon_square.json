@@ -1,0 +1,74 @@
+{
+  "spawns": [
+    {
+      "id": "mount_moon_square-surf-0",
+      "presets": [
+        "surf",
+        "mount_moon_square"
+      ],
+      "pokemon": "poliwag",
+      "level": "35",
+      "weight": 60
+    },
+    {
+      "id": "mount_moon_square-surf-1",
+      "presets": [
+        "surf",
+        "mount_moon_square"
+      ],
+      "pokemon": "magikarp",
+      "level": "30",
+      "weight": 30
+    },
+    {
+      "id": "mount_moon_square-surf-2",
+      "presets": [
+        "surf",
+        "mount_moon_square"
+      ],
+      "pokemon": "magikarp",
+      "level": "35",
+      "weight": 10
+    },
+    {
+      "id": "mount_moon_square-old_rod-0",
+      "presets": [
+        "old_rod",
+        "mount_moon_square"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 100
+    },
+    {
+      "id": "mount_moon_square-good_rod-0",
+      "presets": [
+        "good_rod",
+        "mount_moon_square"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 70
+    },
+    {
+      "id": "mount_moon_square-good_rod-1",
+      "presets": [
+        "good_rod",
+        "mount_moon_square"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 30
+    },
+    {
+      "id": "mount_moon_square-super_rod-0",
+      "presets": [
+        "super_rod",
+        "mount_moon_square"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 100
+    }
+  ]
+}

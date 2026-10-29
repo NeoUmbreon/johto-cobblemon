@@ -1,0 +1,170 @@
+{
+  "spawns": [
+    {
+      "id": "route_46-land-0",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "geodude",
+      "level": "3",
+      "weight": 20
+    },
+    {
+      "id": "route_46-land-1",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "geodude",
+      "level": "2",
+      "weight": 10
+    },
+    {
+      "id": "route_46-land-2",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "rattata",
+      "level": "4",
+      "weight": 5
+    },
+    {
+      "id": "route_46-land-3",
+      "presets": [
+        "grass",
+        "route_46",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "2",
+      "weight": 20
+    },
+    {
+      "id": "route_46-land-4",
+      "presets": [
+        "grass",
+        "route_46",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_46-land-5",
+      "presets": [
+        "grass",
+        "route_46",
+        "nite"
+      ],
+      "pokemon": "rattata",
+      "level": "2",
+      "weight": 20
+    },
+    {
+      "id": "route_46-land-6",
+      "presets": [
+        "grass",
+        "route_46",
+        "nite"
+      ],
+      "pokemon": "geodude",
+      "level": "3",
+      "weight": 5
+    },
+    {
+      "id": "route_46-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "rattata",
+      "level": "2",
+      "weight": 20
+    },
+    {
+      "id": "route_46-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "geodude",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_46-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_46",
+        "morn_day"
+      ],
+      "pokemon": "spearow",
+      "level": "2",
+      "weight": 10
+    },
+    {
+      "id": "route_46-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_46",
+        "nite"
+      ],
+      "pokemon": "rattata",
+      "level": "2",
+      "weight": 10
+    },
+    {
+      "id": "route_46-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "minun",
+      "level": "2",
+      "weight": 20
+    },
+    {
+      "id": "route_46-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "plusle",
+      "level": "3",
+      "weight": 10
+    },
+    {
+      "id": "route_46-hoennsound_active-2",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "plusle",
+      "level": "2",
+      "weight": 10
+    },
+    {
+      "id": "route_46-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "shinx",
+      "level": "2",
+      "weight": 30
+    },
+    {
+      "id": "route_46-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_46"
+      ],
+      "pokemon": "shinx",
+      "level": "3",
+      "weight": 10
+    }
+  ]
+}

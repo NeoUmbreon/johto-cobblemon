@@ -1,0 +1,246 @@
+{
+  "spawns": [
+    {
+      "id": "route_36-land-0",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "nidoranm",
+      "level": "12",
+      "weight": 20
+    },
+    {
+      "id": "route_36-land-1",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "nidoranf",
+      "level": "12",
+      "weight": 20
+    },
+    {
+      "id": "route_36-land-2",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "growlithe",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_36-land-3",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "vulpix",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_36-land-4",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "stantler",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_36-land-5",
+      "presets": [
+        "grass",
+        "route_36",
+        "morn"
+      ],
+      "pokemon": "pidgey",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "route_36-land-6",
+      "presets": [
+        "grass",
+        "route_36",
+        "day"
+      ],
+      "pokemon": "growlithe",
+      "level": "15",
+      "weight": 2.5
+    },
+    {
+      "id": "route_36-land-7",
+      "presets": [
+        "grass",
+        "route_36",
+        "day"
+      ],
+      "pokemon": "vulpix",
+      "level": "15",
+      "weight": 2.5
+    },
+    {
+      "id": "route_36-land-8",
+      "presets": [
+        "grass",
+        "route_36",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "15",
+      "weight": 5
+    },
+    {
+      "id": "route_36-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "nidoranm",
+      "level": "12",
+      "weight": 5
+    },
+    {
+      "id": "route_36-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "nidoranf",
+      "level": "12",
+      "weight": 5
+    },
+    {
+      "id": "route_36-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_36",
+        "morn"
+      ],
+      "pokemon": "pidgey",
+      "level": "12",
+      "weight": 10
+    },
+    {
+      "id": "route_36-sound_inactive-3",
+      "presets": [
+        "grass",
+        "route_36",
+        "morn"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 10
+    },
+    {
+      "id": "route_36-sound_inactive-4",
+      "presets": [
+        "grass",
+        "route_36",
+        "morn"
+      ],
+      "pokemon": "nidoranf",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_36-sound_inactive-5",
+      "presets": [
+        "grass",
+        "route_36",
+        "morn"
+      ],
+      "pokemon": "nidoranm",
+      "level": "13",
+      "weight": 5
+    },
+    {
+      "id": "route_36-sound_inactive-6",
+      "presets": [
+        "grass",
+        "route_36",
+        "day"
+      ],
+      "pokemon": "pidgey",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_36-sound_inactive-7",
+      "presets": [
+        "grass",
+        "route_36",
+        "day_nite"
+      ],
+      "pokemon": "nidoranm",
+      "level": "12",
+      "weight": 5
+    },
+    {
+      "id": "route_36-sound_inactive-8",
+      "presets": [
+        "grass",
+        "route_36",
+        "day_nite"
+      ],
+      "pokemon": "nidoranf",
+      "level": "12",
+      "weight": 5
+    },
+    {
+      "id": "route_36-sound_inactive-9",
+      "presets": [
+        "grass",
+        "route_36",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_36-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "plusle",
+      "level": "12",
+      "weight": 20
+    },
+    {
+      "id": "route_36-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "minun",
+      "level": "13",
+      "weight": 20
+    },
+    {
+      "id": "route_36-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "shinx",
+      "level": "12",
+      "weight": 20
+    },
+    {
+      "id": "route_36-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_36"
+      ],
+      "pokemon": "shinx",
+      "level": "13",
+      "weight": 20
+    }
+  ]
+}

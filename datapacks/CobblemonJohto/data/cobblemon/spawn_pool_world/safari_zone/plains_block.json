@@ -1,0 +1,152 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_plains_block-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs"
+      ],
+      "pokemon": "ponyta",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "girafarig",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "stantler",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs"
+      ],
+      "pokemon": "houndoom",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "smeargle",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "stantler",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs"
+      ],
+      "pokemon": "zigzagoon",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs"
+      ],
+      "pokemon": "lotad",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs"
+      ],
+      "pokemon": "surskit",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-9",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs"
+      ],
+      "pokemon": "manectric",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-10",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs"
+      ],
+      "pokemon": "zangoose",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_plains_block-land-11",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "plains",
+        "reroll_ivs"
+      ],
+      "pokemon": "shinx",
+      "level": "15-17",
+      "weight": 10
+    }
+  ]
+}

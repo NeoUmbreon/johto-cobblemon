@@ -1,0 +1,278 @@
+{
+  "spawns": [
+    {
+      "id": "mount_silver-land-0",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "tangela",
+      "level": "41",
+      "weight": 20
+    },
+    {
+      "id": "mount_silver-land-1",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "ponyta",
+      "level": "42",
+      "weight": 20
+    },
+    {
+      "id": "mount_silver-land-2",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "rapidash",
+      "level": "44",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver-land-3",
+      "presets": [
+        "grass",
+        "mount_silver",
+        "morn_day"
+      ],
+      "pokemon": "doduo",
+      "level": "41",
+      "weight": 5
+    },
+    {
+      "id": "mount_silver-land-4",
+      "presets": [
+        "grass",
+        "mount_silver",
+        "morn_day"
+      ],
+      "pokemon": "dodrio",
+      "level": "43",
+      "weight": 5
+    },
+    {
+      "id": "mount_silver-land-5",
+      "presets": [
+        "grass",
+        "mount_silver",
+        "nite"
+      ],
+      "pokemon": "sneasel",
+      "level": "41",
+      "weight": 5
+    },
+    {
+      "id": "mount_silver-land-6",
+      "presets": [
+        "grass",
+        "mount_silver",
+        "nite"
+      ],
+      "pokemon": "sneasel",
+      "level": "43",
+      "weight": 5
+    },
+    {
+      "id": "mount_silver-sound_inactive-0",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "tangela",
+      "level": "41",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver-sound_inactive-1",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "ponyta",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver-sound_inactive-2",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "donphan",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver-sound_inactive-3",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "ursaring",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "linoone",
+      "level": "42",
+      "weight": 20
+    },
+    {
+      "id": "mount_silver-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "whismur",
+      "level": "41",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver-hoennsound_active-2",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "whismur",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "bidoof",
+      "level": "42",
+      "weight": 20
+    },
+    {
+      "id": "mount_silver-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "buizel",
+      "level": "41",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver-sinnohsound_active-2",
+      "presets": [
+        "grass",
+        "mount_silver"
+      ],
+      "pokemon": "buizel",
+      "level": "42",
+      "weight": 10
+    },
+    {
+      "id": "mount_silver-surf-0",
+      "presets": [
+        "surf",
+        "mount_silver"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "30-40",
+      "weight": 60
+    },
+    {
+      "id": "mount_silver-surf-1",
+      "presets": [
+        "surf",
+        "mount_silver"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "35-45",
+      "weight": 30
+    },
+    {
+      "id": "mount_silver-surf-2",
+      "presets": [
+        "surf",
+        "mount_silver"
+      ],
+      "pokemon": "poliwag",
+      "level": "30-40",
+      "weight": 9
+    },
+    {
+      "id": "mount_silver-surf-3",
+      "presets": [
+        "surf",
+        "mount_silver"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "48",
+      "weight": 1
+    },
+    {
+      "id": "mount_silver-old_rod-0",
+      "presets": [
+        "old_rod",
+        "mount_silver"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "mount_silver-old_rod-1",
+      "presets": [
+        "old_rod",
+        "mount_silver"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "mount_silver-good_rod-0",
+      "presets": [
+        "good_rod",
+        "mount_silver"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "mount_silver-good_rod-1",
+      "presets": [
+        "good_rod",
+        "mount_silver"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "mount_silver-super_rod-0",
+      "presets": [
+        "super_rod",
+        "mount_silver"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "mount_silver-super_rod-1",
+      "presets": [
+        "super_rod",
+        "mount_silver"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

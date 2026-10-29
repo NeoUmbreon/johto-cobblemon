@@ -1,0 +1,226 @@
+{
+  "spawns": [
+    {
+      "id": "route_35-land-0",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "abra",
+      "level": "10",
+      "weight": 10
+    },
+    {
+      "id": "route_35-land-1",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "ditto",
+      "level": "10",
+      "weight": 4
+    },
+    {
+      "id": "route_35-land-2",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "yanma",
+      "level": "12",
+      "weight": 1
+    },
+    {
+      "id": "route_35-land-3",
+      "presets": [
+        "grass",
+        "route_35",
+        "morn_day"
+      ],
+      "pokemon": "pidgey",
+      "level": "14",
+      "weight": 5
+    },
+    {
+      "id": "route_35-land-4",
+      "presets": [
+        "grass",
+        "route_35",
+        "nite"
+      ],
+      "pokemon": "hoothoot",
+      "level": "14",
+      "weight": 5
+    },
+    {
+      "id": "route_35-sound_inactive-0",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "drowzee",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "route_35-sound_inactive-1",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "nidoranm",
+      "level": "12",
+      "weight": 10
+    },
+    {
+      "id": "route_35-sound_inactive-2",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "nidoranf",
+      "level": "12",
+      "weight": 10
+    },
+    {
+      "id": "route_35-hoennsound_active-0",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "whismur",
+      "level": "12",
+      "weight": 20
+    },
+    {
+      "id": "route_35-hoennsound_active-1",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "linoone",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "route_35-sinnohsound_active-0",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "buizel",
+      "level": "12",
+      "weight": 20
+    },
+    {
+      "id": "route_35-sinnohsound_active-1",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "bidoof",
+      "level": "14",
+      "weight": 20
+    },
+    {
+      "id": "route_35-land_swarm_inactive-0",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "nidoranm",
+      "level": "12",
+      "weight": 20
+    },
+    {
+      "id": "route_35-land_swarm_inactive-1",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "nidoranf",
+      "level": "12",
+      "weight": 20
+    },
+    {
+      "id": "route_35-land_swarm_active-0",
+      "presets": [
+        "grass",
+        "route_35"
+      ],
+      "pokemon": "yanma",
+      "level": "12",
+      "weight": 40
+    },
+    {
+      "id": "route_35-surf-0",
+      "presets": [
+        "surf",
+        "route_35"
+      ],
+      "pokemon": "psyduck",
+      "level": "11-14",
+      "weight": 100
+    },
+    {
+      "id": "route_35-old_rod-0",
+      "presets": [
+        "old_rod",
+        "route_35"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "route_35-old_rod-1",
+      "presets": [
+        "old_rod",
+        "route_35"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "route_35-good_rod-0",
+      "presets": [
+        "good_rod",
+        "route_35"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "route_35-good_rod-1",
+      "presets": [
+        "good_rod",
+        "route_35"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "route_35-super_rod-0",
+      "presets": [
+        "super_rod",
+        "route_35"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "route_35-super_rod-1",
+      "presets": [
+        "super_rod",
+        "route_35"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

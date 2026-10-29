@@ -1,0 +1,67 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_desert-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "fearow",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_desert-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "sandshrew",
+      "level": "15-17",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_desert-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs"
+      ],
+      "pokemon": "sandslash",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_desert-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "cubone",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_desert-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "desert",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "marowak",
+      "level": "17",
+      "weight": 10
+    }
+  ]
+}

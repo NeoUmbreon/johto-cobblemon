@@ -1,0 +1,94 @@
+{
+  "spawns": [
+    {
+      "id": "ecruteak-surf-0",
+      "presets": [
+        "surf",
+        "ecruteak"
+      ],
+      "pokemon": "poliwag",
+      "level": "15-25",
+      "weight": 60
+    },
+    {
+      "id": "ecruteak-surf-1",
+      "presets": [
+        "surf",
+        "ecruteak"
+      ],
+      "pokemon": "poliwag",
+      "level": "10-20",
+      "weight": 30
+    },
+    {
+      "id": "ecruteak-surf-2",
+      "presets": [
+        "surf",
+        "ecruteak"
+      ],
+      "pokemon": "poliwhirl",
+      "level": "15-25",
+      "weight": 10
+    },
+    {
+      "id": "ecruteak-old_rod-0",
+      "presets": [
+        "old_rod",
+        "ecruteak"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "ecruteak-old_rod-1",
+      "presets": [
+        "old_rod",
+        "ecruteak"
+      ],
+      "pokemon": "poliwag",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "ecruteak-good_rod-0",
+      "presets": [
+        "good_rod",
+        "ecruteak"
+      ],
+      "pokemon": "poliwag",
+      "level": "20",
+      "weight": 60
+    },
+    {
+      "id": "ecruteak-good_rod-1",
+      "presets": [
+        "good_rod",
+        "ecruteak"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "ecruteak-super_rod-0",
+      "presets": [
+        "super_rod",
+        "ecruteak"
+      ],
+      "pokemon": "poliwag",
+      "level": "40",
+      "weight": 80
+    },
+    {
+      "id": "ecruteak-super_rod-1",
+      "presets": [
+        "super_rod",
+        "ecruteak"
+      ],
+      "pokemon": "magikarp",
+      "level": "40",
+      "weight": 20
+    }
+  ]
+}

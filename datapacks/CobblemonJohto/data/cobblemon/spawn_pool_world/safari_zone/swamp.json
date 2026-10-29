@@ -1,0 +1,201 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_swamp-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "jigglypuff",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_swamp-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs",
+        "morn_day"
+      ],
+      "pokemon": "paras",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_swamp-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "drowzee",
+      "level": "15-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_swamp-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "hypno",
+      "level": "16-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_swamp-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "sentret",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_swamp-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "murkrow",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_swamp-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs",
+        "nite"
+      ],
+      "pokemon": "murkrow",
+      "level": "15-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_swamp-surf-0",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "goldeen",
+      "level": "15-17",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_swamp-surf-1",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "15-17",
+      "weight": 60
+    },
+    {
+      "id": "safari_zone_swamp-old_rod-0",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "12-15",
+      "weight": 100
+    },
+    {
+      "id": "safari_zone_swamp-good_rod-0",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "goldeen",
+      "level": "22-24",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_swamp-good_rod-1",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "seaking",
+      "level": "24-25",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_swamp-good_rod-2",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "magikarp",
+      "level": "22-24",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_swamp-super_rod-0",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "goldeen",
+      "level": "35-37",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_swamp-super_rod-1",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "seaking",
+      "level": "35-37",
+      "weight": 40
+    },
+    {
+      "id": "safari_zone_swamp-super_rod-2",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "swamp",
+        "reroll_ivs"
+      ],
+      "pokemon": "dratini",
+      "level": "36-37",
+      "weight": 20
+    }
+  ]
+}

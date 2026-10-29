@@ -1,0 +1,294 @@
+{
+  "spawns": [
+    {
+      "id": "seafoam_islands_b4f-land-0",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "dewgong",
+      "level": "37",
+      "weight": 20
+    },
+    {
+      "id": "seafoam_islands_b4f-land-1",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "golbat",
+      "level": "40",
+      "weight": 20
+    },
+    {
+      "id": "seafoam_islands_b4f-land-2",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "golbat",
+      "level": "39",
+      "weight": 5
+    },
+    {
+      "id": "seafoam_islands_b4f-land-3",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "golbat",
+      "level": "38",
+      "weight": 5
+    },
+    {
+      "id": "seafoam_islands_b4f-land-4",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "golduck",
+      "level": "37",
+      "weight": 4
+    },
+    {
+      "id": "seafoam_islands_b4f-land-5",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "dewgong",
+      "level": "38",
+      "weight": 4
+    },
+    {
+      "id": "seafoam_islands_b4f-land-6",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "jynx",
+      "level": "40",
+      "weight": 2
+    },
+    {
+      "id": "seafoam_islands_b4f-sound_inactive-0",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "psyduck",
+      "level": "34",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b4f-sound_inactive-1",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "seel",
+      "level": "34",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b4f-sound_inactive-2",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "jynx",
+      "level": "38",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b4f-sound_inactive-3",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "golduck",
+      "level": "38",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b4f-hoennsound_active-0",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "absol",
+      "level": "34",
+      "weight": 20
+    },
+    {
+      "id": "seafoam_islands_b4f-hoennsound_active-1",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "makuhita",
+      "level": "38",
+      "weight": 20
+    },
+    {
+      "id": "seafoam_islands_b4f-sinnohsound_active-0",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "bronzor",
+      "level": "34",
+      "weight": 20
+    },
+    {
+      "id": "seafoam_islands_b4f-sinnohsound_active-1",
+      "presets": [
+        "indoor",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "chingling",
+      "level": "38",
+      "weight": 20
+    },
+    {
+      "id": "seafoam_islands_b4f-surf-0",
+      "presets": [
+        "surf",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "seel",
+      "level": "30-40",
+      "weight": 60
+    },
+    {
+      "id": "seafoam_islands_b4f-surf-1",
+      "presets": [
+        "surf",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "horsea",
+      "level": "30-40",
+      "weight": 30
+    },
+    {
+      "id": "seafoam_islands_b4f-surf-2",
+      "presets": [
+        "surf",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "slowbro",
+      "level": "35-45",
+      "weight": 6
+    },
+    {
+      "id": "seafoam_islands_b4f-surf-3",
+      "presets": [
+        "surf",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "slowbro",
+      "level": "50",
+      "weight": 4
+    },
+    {
+      "id": "seafoam_islands_b4f-old_rod-0",
+      "presets": [
+        "old_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "magikarp",
+      "level": "10",
+      "weight": 85
+    },
+    {
+      "id": "seafoam_islands_b4f-old_rod-1",
+      "presets": [
+        "old_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "krabby",
+      "level": "10",
+      "weight": 15
+    },
+    {
+      "id": "seafoam_islands_b4f-good_rod-0",
+      "presets": [
+        "good_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "magikarp",
+      "level": "20",
+      "weight": 40
+    },
+    {
+      "id": "seafoam_islands_b4f-good_rod-1",
+      "presets": [
+        "good_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "psyduck",
+      "level": "20",
+      "weight": 30
+    },
+    {
+      "id": "seafoam_islands_b4f-good_rod-2",
+      "presets": [
+        "good_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "krabby",
+      "level": "20",
+      "weight": 20
+    },
+    {
+      "id": "seafoam_islands_b4f-good_rod-3",
+      "presets": [
+        "good_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "horsea",
+      "level": "20",
+      "weight": 10
+    },
+    {
+      "id": "seafoam_islands_b4f-super_rod-0",
+      "presets": [
+        "super_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "gyarados",
+      "level": "40",
+      "weight": 40
+    },
+    {
+      "id": "seafoam_islands_b4f-super_rod-1",
+      "presets": [
+        "super_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "horsea",
+      "level": "40",
+      "weight": 30
+    },
+    {
+      "id": "seafoam_islands_b4f-super_rod-2",
+      "presets": [
+        "super_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "kingler",
+      "level": "40",
+      "weight": 15
+    },
+    {
+      "id": "seafoam_islands_b4f-super_rod-3",
+      "presets": [
+        "super_rod",
+        "seafoam_islands_b4f"
+      ],
+      "pokemon": "seadra",
+      "level": "40",
+      "weight": 15
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "displayName": "Hoenn/Sinnoh Sound",
+  "enabled": true,
+  "components": [
+    {
+      "type": "weight",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'hoennsound_active')",
+      "spawnablePositionSelector": "!v.spawnable_position.player.has_tag('HoennSounds')",
+      "weight": "0"
+    },
+    {
+      "type": "weight",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'sinnohsound_active')",
+      "spawnablePositionSelector": "!v.spawnable_position.player.has_tag('SinnohSounds')",
+      "weight": "0"
+    },
+    {
+      "type": "weight",
+      "spawnDetailSelector": "q.is_included(v.spawn_detail.id, 'sound_inactive')",
+      "spawnablePositionSelector": "v.spawnable_position.player.has_tag('HoennSounds') || v.spawnable_position.player.has_tag('SinnohSounds')",
+      "weight": "0"
+    }
+  ]
+}

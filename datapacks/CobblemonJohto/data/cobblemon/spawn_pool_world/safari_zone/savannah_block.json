@@ -1,0 +1,124 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_savannah_block-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "rhyhorn",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah_block-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "rhydon",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah_block-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "tauros",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah_block-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "houndour",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah_block-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "zigzagoon",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah_block-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "shroomish",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah_block-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "azurill",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah_block-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "torkoal",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah_block-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "cacturne",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_savannah_block-land-9",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "savannah",
+        "reroll_ivs"
+      ],
+      "pokemon": "luxio",
+      "level": "15-17",
+      "weight": 10
+    }
+  ]
+}

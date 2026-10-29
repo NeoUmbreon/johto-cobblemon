@@ -105,8 +105,8 @@ tag @a[tag=FishermanTalk2] remove FishermanTalk2
 
 
 #Resets any present Swarm Spawns
-tag @e[x=-864,y=69,z=-207,dy=4,dz=2] remove SwarmActive
-scoreboard players set @e[x=-864,y=69,z=-207,dy=4,dz=2] rng 0
+tag @e[x=-864,y=69,z=-207,dy=3] remove SwarmActive
+execute as @e[x=-864,y=69,z=-207,dy=3,type=armor_stand,limit=1] run runmolang "q.set_query('server',q.entity.world.server); q.server.data.swarm = 0; q.server.save_data;"
 tag @a remove PokeTalkCooldown
 
 execute as @a[scores={RadioSelect=3..8},tag=!RadioOff] at @s run function johto:world/radiostations

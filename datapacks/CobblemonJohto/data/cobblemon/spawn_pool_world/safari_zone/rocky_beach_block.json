@@ -1,0 +1,160 @@
+{
+  "spawns": [
+    {
+      "id": "safari_zone_rocky_beach_block-land-0",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "slowbro",
+      "level": "15-17",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-land-1",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "dodrio",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-land-2",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "kingler",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-land-3",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "mareep",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-land-4",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "aron",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-land-5",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "electrike",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-land-6",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "manectric",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-land-7",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "budew",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-land-8",
+      "presets": [
+        "grass",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "gible",
+      "level": "15-17",
+      "weight": 10
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-surf-0",
+      "presets": [
+        "surf",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "lapras",
+      "level": "15-17",
+      "weight": 30
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-old_rod-0",
+      "presets": [
+        "old_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "krabby",
+      "level": "12-15",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-good_rod-0",
+      "presets": [
+        "good_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "kingler",
+      "level": "22-25",
+      "weight": 20
+    },
+    {
+      "id": "safari_zone_rocky_beach_block-super_rod-0",
+      "presets": [
+        "super_rod",
+        "safari_zone",
+        "rocky_beach",
+        "reroll_ivs"
+      ],
+      "pokemon": "corphish",
+      "level": "35-38",
+      "weight": 20
+    }
+  ]
+}
