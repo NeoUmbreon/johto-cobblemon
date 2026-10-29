@@ -293,9 +293,9 @@
     "map": "D36R0101",
     "name": "ILEX_FOREST",
     "coords": [
-      { "minX": 538, "minZ": -778, "maxX": 688, "maxZ": -584 }
+      { "minX": 538, "minZ": -778, "maxX": 688, "maxY": 67, "maxZ": -584 }
     ],
-    "landContext": "indoor"
+    "landContext": "grounded"
   },
   {
     "map": "D38R0101",

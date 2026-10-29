@@ -3,7 +3,7 @@
     {
       "id": "ilex_forest-land-0",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest"
       ],
       "pokemon": "zubat",
@@ -13,7 +13,7 @@
     {
       "id": "ilex_forest-land-1",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest"
       ],
       "pokemon": "paras",
@@ -23,7 +23,7 @@
     {
       "id": "ilex_forest-land-2",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn_day"
       ],
@@ -34,7 +34,7 @@
     {
       "id": "ilex_forest-land-3",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn_day"
       ],
@@ -45,7 +45,7 @@
     {
       "id": "ilex_forest-land-4",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn"
       ],
@@ -56,7 +56,7 @@
     {
       "id": "ilex_forest-land-5",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn"
       ],
@@ -67,7 +67,7 @@
     {
       "id": "ilex_forest-land-6",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn_nite"
       ],
@@ -78,7 +78,7 @@
     {
       "id": "ilex_forest-land-7",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "day"
       ],
@@ -89,7 +89,7 @@
     {
       "id": "ilex_forest-land-8",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "day"
       ],
@@ -100,7 +100,7 @@
     {
       "id": "ilex_forest-land-9",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "day"
       ],
@@ -111,7 +111,7 @@
     {
       "id": "ilex_forest-land-10",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "day"
       ],
@@ -122,7 +122,7 @@
     {
       "id": "ilex_forest-land-11",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "nite"
       ],
@@ -133,7 +133,7 @@
     {
       "id": "ilex_forest-land-12",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "nite"
       ],
@@ -144,7 +144,7 @@
     {
       "id": "ilex_forest-sound_inactive-0",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn"
       ],
@@ -155,7 +155,7 @@
     {
       "id": "ilex_forest-sound_inactive-1",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn"
       ],
@@ -166,7 +166,7 @@
     {
       "id": "ilex_forest-sound_inactive-2",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn_day"
       ],
@@ -177,7 +177,7 @@
     {
       "id": "ilex_forest-sound_inactive-3",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn_day"
       ],
@@ -188,7 +188,7 @@
     {
       "id": "ilex_forest-sound_inactive-4",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn"
       ],
@@ -199,7 +199,7 @@
     {
       "id": "ilex_forest-sound_inactive-5",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "morn"
       ],
@@ -210,7 +210,7 @@
     {
       "id": "ilex_forest-sound_inactive-6",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "day"
       ],
@@ -221,7 +221,7 @@
     {
       "id": "ilex_forest-sound_inactive-7",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "day"
       ],
@@ -232,7 +232,7 @@
     {
       "id": "ilex_forest-sound_inactive-8",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "day"
       ],
@@ -243,7 +243,7 @@
     {
       "id": "ilex_forest-sound_inactive-9",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "day"
       ],
@@ -254,7 +254,7 @@
     {
       "id": "ilex_forest-sound_inactive-10",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "nite"
       ],
@@ -265,7 +265,7 @@
     {
       "id": "ilex_forest-sound_inactive-11",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "nite"
       ],
@@ -276,7 +276,7 @@
     {
       "id": "ilex_forest-sound_inactive-12",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest",
         "nite"
       ],
@@ -287,7 +287,7 @@
     {
       "id": "ilex_forest-hoennsound_active-0",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest"
       ],
       "pokemon": "numel",
@@ -297,7 +297,7 @@
     {
       "id": "ilex_forest-hoennsound_active-1",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest"
       ],
       "pokemon": "spoink",
@@ -307,7 +307,7 @@
     {
       "id": "ilex_forest-hoennsound_active-2",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest"
       ],
       "pokemon": "spoink",
@@ -317,7 +317,7 @@
     {
       "id": "ilex_forest-sinnohsound_active-0",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest"
       ],
       "pokemon": "carnivine",
@@ -327,7 +327,7 @@
     {
       "id": "ilex_forest-sinnohsound_active-1",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest"
       ],
       "pokemon": "budew",
@@ -337,7 +337,7 @@
     {
       "id": "ilex_forest-sinnohsound_active-2",
       "presets": [
-        "indoor",
+        "grounded",
         "ilex_forest"
       ],
       "pokemon": "budew",
